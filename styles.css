@@ -568,3 +568,432 @@ a.contact-value:hover {
     padding: 0 16px;
   }
 }
+
+/* ============================================
+   v0.3 — New shared styles for multi-page site
+   ============================================ */
+
+/* ===== Nav Active ===== */
+.nav-links a.active {
+  color: var(--accent-purple);
+}
+
+/* ===== Page Header (inner pages) ===== */
+.page-header {
+  padding: 56px 24px 40px;
+  text-align: center;
+}
+
+.page-header .section-label {
+  margin-bottom: 12px;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.6px;
+}
+
+.page-header p {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  max-width: 520px;
+  margin: 12px auto 0;
+  line-height: 1.6;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 22px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition),
+    border-color var(--transition), box-shadow var(--transition);
+}
+
+.btn-outline {
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: 1px solid var(--color-border);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent-purple);
+  color: var(--accent-purple);
+  box-shadow: var(--shadow-xs);
+}
+
+.btn-primary {
+  color: #fff;
+  background: var(--accent-purple);
+  border: 1px solid var(--accent-purple);
+}
+
+.btn-primary:hover {
+  background: #6b5de0;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ===== Home: Skills Preview ===== */
+.home-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.home-skill-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.home-skill-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.home-skill-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 14px;
+}
+
+.home-skill-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home-skill-list li {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  position: relative;
+  padding-left: 16px;
+}
+
+.home-skill-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-purple);
+  opacity: 0.5;
+}
+
+/* ===== Home: Selected Projects ===== */
+.home-project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.home-project-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.home-project-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.home-project-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.home-project-card p {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  flex: 1;
+  margin-bottom: 18px;
+}
+
+.home-project-card .btn {
+  align-self: flex-start;
+}
+
+/* ===== Home: Latest Thoughts ===== */
+.thoughts-preview {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  text-align: center;
+}
+
+.thoughts-preview p {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  margin-bottom: 20px;
+}
+
+/* ===== Project Detail Card (projects page) ===== */
+.project-detail-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  transition: box-shadow var(--transition);
+}
+
+.project-detail-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.project-detail-card + .project-detail-card {
+  margin-top: 20px;
+}
+
+.project-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.project-detail-header h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.project-detail-desc {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.project-detail-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px 0;
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+  margin-bottom: 24px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.meta-value {
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.project-detail-highlights h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.project-detail-highlights ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-detail-highlights li {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  padding-left: 18px;
+  position: relative;
+}
+
+.project-detail-highlights li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent-purple);
+  font-size: 13px;
+}
+
+/* ===== Blog Categories ===== */
+.blog-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.blog-category-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.blog-category-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.blog-category-card .cat-icon {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+.blog-category-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.blog-category-card p {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.blog-placeholder {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--color-text-muted);
+}
+
+.blog-placeholder p {
+  font-size: 15px;
+}
+
+/* ===== Knowledge ===== */
+.knowledge-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.knowledge-feature-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  transition: box-shadow var(--transition);
+}
+
+.knowledge-feature-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.knowledge-feature-card .feat-icon {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+.knowledge-feature-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.knowledge-feature-card p {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.knowledge-note {
+  margin-top: 40px;
+  text-align: center;
+  padding: 28px;
+  background: var(--accent-purple-bg);
+  border-radius: var(--radius-lg);
+}
+
+.knowledge-note p {
+  font-size: 14px;
+  color: var(--accent-purple);
+  font-weight: 500;
+}
+
+/* ===== v0.3 Responsive Additions ===== */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 40px 20px 32px;
+  }
+
+  .page-header h1 {
+    font-size: 28px;
+  }
+
+  .home-skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail-card {
+    padding: 24px 20px;
+  }
+
+  .project-detail-meta {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .blog-categories {
+    grid-template-columns: 1fr;
+  }
+
+  .knowledge-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 24px;
+  }
+
+  .home-project-card {
+    padding: 20px;
+  }
+
+  .thoughts-preview {
+    padding: 24px 20px;
+  }
+}
