@@ -3,109 +3,216 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jingtine — Personal Homepage</title>
+  <meta name="description" content="Jingtine — 南京大学软件工程学生，专注 AI Agent、软件工程与产品创新。">
+  <title>Jingtine — Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
 
-    <!-- Hero / 首页介绍 -->
-    <header class="hero">
-      <div class="hero-badge">NJU</div>
-      <h1 class="hero-name">Hi, I'm <span class="highlight">Jingtine</span></h1>
-      <p class="hero-subtitle">
-        南京大学学生 &nbsp;|&nbsp; AI Agent &nbsp;|&nbsp; 软件工程 &nbsp;|&nbsp; 智能开发
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Jingtine</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-greeting">Hi, I'm</p>
+      <h1 class="hero-name">Jingtine</h1>
+      <p class="hero-identity">
+        南京大学 &middot; 软件工程（商业创新班）&middot; 工商管理双学位
       </p>
+      <div class="hero-tags">
+        <span class="hero-tag">Software Engineering</span>
+        <span class="hero-tag tag-accent">AI Agent</span>
+        <span class="hero-tag">Product Innovation</span>
+      </div>
       <p class="hero-desc">
-        致力于探索人工智能与软件工程的交叉领域，<br>
-        构建更智能、更高效的下一代开发工具。
+        关注 AI 与软件工程的交叉领域，探索智能开发与产品创新的更多可能。
       </p>
-      <div class="hero-scroll">
-        <span>了解更多</span>
-        <div class="scroll-arrow"></div>
-      </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- About Me -->
-    <section class="section" id="about">
-      <div class="section-tag">About Me</div>
-      <h2 class="section-title">关于我</h2>
-      <div class="about-grid">
-        <div class="about-card">
-          <div class="card-icon">🏫</div>
-          <h3>教育背景</h3>
-          <p>南京大学在读学生，主修计算机科学与技术方向，拥有扎实的算法与编程基础。</p>
-        </div>
-        <div class="about-card">
-          <div class="card-icon">💡</div>
-          <h3>技术热情</h3>
-          <p>关注 AI Agent 与智能软件开发，热衷探索大语言模型在工程实践中的应用。</p>
-        </div>
-        <div class="about-card">
-          <div class="card-icon">🎯</div>
-          <h3>目标愿景</h3>
-          <p>致力于构建从需求理解到代码交付的端到端智能开发系统，提升软件工程效率。</p>
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="section-label">About</div>
+    <h2 class="section-title">关于我</h2>
+
+    <div class="about-text">
+      <p>
+        我是南京大学软件工程专业（商业创新班）的学生，同时修读工商管理双学位。
+        我对 AI Agent、软件架构设计和产品创新充满热情，致力于将技术能力与商业思维结合，
+        构建有价值、可落地的软件产品。
+      </p>
+    </div>
+
+    <div class="edu-cards">
+      <div class="edu-card">
+        <div class="edu-icon">&#9900;</div>
+        <div class="edu-info">
+          <span class="edu-school">南京大学</span>
+          <span class="edu-major">软件工程（商业创新班）</span>
+          <span class="edu-desc">系统学习软件设计、架构、开发与工程管理</span>
         </div>
       </div>
-    </section>
-
-    <!-- Research Interests -->
-    <section class="section" id="research">
-      <div class="section-tag">Research</div>
-      <h2 class="section-title">研究方向</h2>
-      <div class="research-list">
-        <div class="research-item">
-          <div class="research-index">01</div>
-          <div class="research-body">
-            <h3>AI Agent</h3>
-            <p>研究自主代理的推理、规划与工具调用能力，探索基于大语言模型的智能体架构设计与多 Agent 协作机制。</p>
-          </div>
-        </div>
-        <div class="research-item">
-          <div class="research-index">02</div>
-          <div class="research-body">
-            <h3>软件工程</h3>
-            <p>关注现代软件开发方法学，涵盖需求工程、架构设计、持续集成与交付、代码质量保障等方面。</p>
-          </div>
-        </div>
-        <div class="research-item">
-          <div class="research-index">03</div>
-          <div class="research-body">
-            <h3>智能开发</h3>
-            <p>将 AI 技术应用于软件开发生命周期，构建智能编码助手、自动化测试与缺陷检测工具。</p>
-          </div>
+      <div class="edu-card">
+        <div class="edu-icon edu-icon-blue">&#9883;</div>
+        <div class="edu-info">
+          <span class="edu-school">双学位</span>
+          <span class="edu-major">工商管理</span>
+          <span class="edu-desc">培养商业分析、产品策略与创新创业能力</span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section class="section" id="contact">
-      <div class="section-tag">Contact</div>
-      <h2 class="section-title">联系我</h2>
-      <div class="contact-card">
-        <p class="contact-intro">如果你对我的研究方向感兴趣，欢迎随时交流与合作。</p>
-        <ul class="contact-list">
-          <li>
-            <span class="contact-label">Email</span>
-            <span class="contact-value">jingtine@nju.edu.cn</span>
-          </li>
-          <li>
-            <span class="contact-label">GitHub</span>
-            <span class="contact-value">github.com/jingtine</span>
-          </li>
-          <li>
-            <span class="contact-label">学校</span>
-            <span class="contact-value">南京大学</span>
-          </li>
-        </ul>
+  <!-- Skills -->
+  <section class="section" id="skills">
+    <div class="section-label">Skills</div>
+    <h2 class="section-title">技术能力</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-header">
+          <span class="skill-dot"></span>
+          <h3>软件工程</h3>
+        </div>
+        <p class="skill-desc">扎实的工程基础，熟悉现代软件开发全流程。</p>
+        <div class="skill-tags">
+          <span>Python</span><span>TypeScript</span><span>Java</span>
+          <span>React</span><span>Node.js</span><span>Git</span>
+          <span>Docker</span><span>CI/CD</span><span>数据库设计</span>
+        </div>
       </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <p>&copy; 2026 Jingtine. All rights reserved.</p>
-    </footer>
+      <div class="skill-card">
+        <div class="skill-header">
+          <span class="skill-dot dot-purple"></span>
+          <h3>AI Agent</h3>
+        </div>
+        <p class="skill-desc">深入探索大语言模型与自主 Agent 的工程实践。</p>
+        <div class="skill-tags">
+          <span>LangChain</span><span>RAG</span><span>Prompt Engineering</span>
+          <span>Agent 框架</span><span>LLM 应用</span><span>工具调用</span>
+          <span>向量检索</span><span>多 Agent 协作</span>
+        </div>
+      </div>
 
-  </div>
+      <div class="skill-card">
+        <div class="skill-header">
+          <span class="skill-dot dot-blue"></span>
+          <h3>产品创新</h3>
+        </div>
+        <p class="skill-desc">结合商业思维与技术能力，推动产品从想法到落地。</p>
+        <div class="skill-tags">
+          <span>需求分析</span><span>产品设计</span><span>商业分析</span>
+          <span>用户研究</span><span>MVP 设计</span><span>项目管理</span>
+          <span>数据分析</span><span>市场调研</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="section-label">Projects</div>
+    <h2 class="section-title">项目作品</h2>
+
+    <div class="project-list">
+      <article class="project-card">
+        <div class="project-top">
+          <h3 class="project-name">NoteWhale</h3>
+          <span class="project-status">开发中</span>
+        </div>
+        <p class="project-desc">
+          面向知识管理的智能笔记应用，结合 AI 实现笔记自动分类、智能关联
+          与语义检索，帮助用户高效构建个人知识体系。
+        </p>
+        <div class="project-tags">
+          <span>AI</span><span>知识管理</span><span>全栈开发</span><span>RAG</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <h3 class="project-name">AI Agent 实践</h3>
+        </div>
+        <p class="project-desc">
+          基于大语言模型的自主 Agent 实践项目，探索推理、规划与工具调用的
+          工程落地，构建面向特定场景的智能助手。
+        </p>
+        <div class="project-tags">
+          <span>LLM</span><span>Agent</span><span>LangChain</span><span>工具调用</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <h3 class="project-name">软件开发实践</h3>
+        </div>
+        <p class="project-desc">
+          全栈 Web 应用开发实践，涵盖前后端设计、数据库建模、API
+          设计与持续部署，注重代码质量与工程规范。
+        </p>
+        <div class="project-tags">
+          <span>全栈</span><span>Web 开发</span><span>REST API</span><span>部署运维</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <h3 class="project-name">产品创新项目</h3>
+        </div>
+        <p class="project-desc">
+          从用户需求出发的产品创新实践，结合商业分析完成产品机会识别、
+          MVP 设计与迭代验证，培养端到端产品思维。
+        </p>
+        <div class="project-tags">
+          <span>产品设计</span><span>商业分析</span><span>用户研究</span><span>MVP</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">联系我</h2>
+
+    <div class="contact-card">
+      <p class="contact-intro">
+        如果你对我的项目或研究方向感兴趣，欢迎随时交流。
+      </p>
+      <div class="contact-list">
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <a href="mailto:jingtine@nju.edu.cn" class="contact-value">jingtine@nju.edu.cn</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">GitHub</span>
+          <a href="https://github.com/jingtine" class="contact-value" target="_blank" rel="noopener">github.com/jingtine</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">学校</span>
+          <span class="contact-value">南京大学</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Jingtine</p>
+  </footer>
+
 </body>
 </html>
