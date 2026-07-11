@@ -853,53 +853,44 @@ a.contact-value:hover {
   font-size: 13px;
 }
 
-/* ===== Blog Categories ===== */
-.blog-categories {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+/* ===== Blog Tag Nav ===== */
+.blog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
   margin-bottom: 40px;
 }
 
-.blog-category-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 32px 24px;
-  text-align: center;
-  transition: box-shadow var(--transition), transform var(--transition);
-}
-
-.blog-category-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-}
-
-.blog-category-card .cat-icon {
-  font-size: 28px;
-  margin-bottom: 14px;
-}
-
-.blog-category-card h3 {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--color-text);
-  margin-bottom: 6px;
-}
-
-.blog-category-card p {
+.blog-tag {
+  display: inline-block;
+  padding: 6px 18px;
   font-size: 13px;
-  color: var(--color-text-muted);
+  font-weight: 500;
+  font-family: var(--font-sans);
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition),
+    border-color var(--transition);
 }
 
-.blog-placeholder {
-  text-align: center;
-  padding: 48px 24px;
-  color: var(--color-text-muted);
+.blog-tag:hover {
+  border-color: var(--accent-purple);
+  color: var(--accent-purple);
 }
 
-.blog-placeholder p {
-  font-size: 15px;
+.blog-tag-active {
+  color: #fff;
+  background: var(--accent-purple);
+  border-color: var(--accent-purple);
+}
+
+.blog-tag-active:hover {
+  color: #fff;
+  background: #6b5de0;
 }
 
 /* ===== Knowledge ===== */
@@ -1072,21 +1063,6 @@ a.contact-value:hover {
   line-height: 1.5;
 }
 
-/* ===== Category Active ===== */
-.blog-categories .blog-category-card {
-  cursor: pointer;
-}
-
-.blog-categories .blog-category-card.category-active {
-  border-color: var(--accent-purple);
-  background: var(--accent-purple-bg);
-}
-
-.blog-categories .blog-category-card.category-active h3,
-.blog-categories .blog-category-card.category-active p {
-  color: var(--accent-purple);
-}
-
 /* ===== Article Detail ===== */
 .article-detail {
   max-width: 720px;
@@ -1218,10 +1194,6 @@ a.contact-value:hover {
   .project-detail-meta {
     grid-template-columns: 1fr;
     gap: 14px;
-  }
-
-  .blog-categories {
-    grid-template-columns: 1fr;
   }
 
   .knowledge-features {

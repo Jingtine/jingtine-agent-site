@@ -31,27 +31,11 @@
   </div>
 
   <section class="section">
-    <div class="blog-categories" id="blog-categories">
-      <div class="blog-category-card" data-category="">
-        <div class="cat-icon">&#9776;</div>
-        <h3>All</h3>
-        <p>全部文章</p>
-      </div>
-      <div class="blog-category-card" data-category="ai-agent">
-        <div class="cat-icon">&#9881;</div>
-        <h3>AI Agent</h3>
-        <p>LLM 应用、Agent 架构、RAG 实践</p>
-      </div>
-      <div class="blog-category-card" data-category="software-engineering">
-        <div class="cat-icon">&#9883;</div>
-        <h3>Software Engineering</h3>
-        <p>架构设计、工程实践、技术选型</p>
-      </div>
-      <div class="blog-category-card" data-category="product-thinking">
-        <div class="cat-icon">&#9681;</div>
-        <h3>Product Thinking</h3>
-        <p>产品设计、商业分析、创新方法</p>
-      </div>
+    <div class="blog-tags" id="blog-tags">
+      <button class="blog-tag blog-tag-active" data-category="">All</button>
+      <button class="blog-tag" data-category="ai-agent">AI Agent</button>
+      <button class="blog-tag" data-category="software-engineering">Software Engineering</button>
+      <button class="blog-tag" data-category="product-thinking">Product Thinking</button>
     </div>
 
     <div class="article-list" id="article-list"></div>
@@ -79,20 +63,20 @@
       }
 
       function setActiveCategory(category) {
-        var cards = document.querySelectorAll('#blog-categories .blog-category-card');
-        for (var i = 0; i < cards.length; i++) {
-          var cat = cards[i].getAttribute('data-category');
+        var tags = document.querySelectorAll('#blog-tags .blog-tag');
+        for (var i = 0; i < tags.length; i++) {
+          var cat = tags[i].getAttribute('data-category');
           if (cat === category) {
-            cards[i].classList.add('category-active');
+            tags[i].classList.add('blog-tag-active');
           } else {
-            cards[i].classList.remove('category-active');
+            tags[i].classList.remove('blog-tag-active');
           }
         }
       }
 
-      var cards = document.querySelectorAll('#blog-categories .blog-category-card');
-      for (var i = 0; i < cards.length; i++) {
-        cards[i].addEventListener('click', function () {
+      var tags = document.querySelectorAll('#blog-tags .blog-tag');
+      for (var i = 0; i < tags.length; i++) {
+        tags[i].addEventListener('click', function () {
           var cat = this.getAttribute('data-category');
           currentCategory = cat;
           renderList(cat);
