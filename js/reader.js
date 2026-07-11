@@ -12,7 +12,6 @@
  */
 (function () {
   var allItems = [];
-  var currentCategory = '';
   var currentSource = '';
 
   var DATA_URL = 'public/data/rss-items.json';
@@ -29,7 +28,6 @@
     .then(function (data) {
       allItems = data.items || [];
       initSourceFilter();
-      setupCategoryFilter();
       render();
     })
     .catch(function () {
@@ -88,30 +86,10 @@
     }
   }
 
-  // ── Category filter ────────────────────────────────────
-  function setupCategoryFilter() {
-    var tags = document.querySelectorAll('#reader-category-tags .blog-tag');
-    for (var i = 0; i < tags.length; i++) {
-      tags[i].addEventListener('click', function () {
-        currentCategory = this.getAttribute('data-category');
-        for (var j = 0; j < tags.length; j++) {
-          tags[j].classList.remove('blog-tag-active');
-        }
-        this.classList.add('blog-tag-active');
-        render();
-      });
-    }
-  }
-
-  // ── Render ─────────────────────────────────────────────
+  // ── Source filter ──────────────────────────────────── ─────────────────────────────────────────────
   function render() {
     var filtered = allItems;
 
-    if (currentCategory) {
-      filtered = filtered.filter(function (item) {
-        return item.category === currentCategory;
-      });
-    }
     if (currentSource) {
       filtered = filtered.filter(function (item) {
         return item.source && item.source.id === currentSource;

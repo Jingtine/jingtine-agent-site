@@ -30,24 +30,13 @@
   <div class="page-header">
     <div class="section-label">Blog</div>
     <h1>文章与思考</h1>
-    <p>记录 AI Agent 学习、软件工程实践与产品设计心得。</p>
+    <p>记录 AI Agent 学习、软件工程实践与产品设计心得。 <a href="/jingtine-agent-site/feed.xml" class="subscribe-link" style="display:inline-flex;vertical-align:middle;margin-left:8px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+        RSS
+      </a></p>
   </div>
 
   <section class="section">
-    <div class="blog-subscribe">
-      <a href="/jingtine-agent-site/feed.xml" class="subscribe-link">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
-        RSS
-      </a>
-    </div>
-
-    <div class="blog-tags" id="blog-tags">
-      <button class="blog-tag blog-tag-active" data-category="">All</button>
-      <button class="blog-tag" data-category="ai-agent">AI Agent</button>
-      <button class="blog-tag" data-category="software-engineering">Software Engineering</button>
-      <button class="blog-tag" data-category="product-thinking">Product Thinking</button>
-    </div>
-
     <div class="article-list" id="article-list"></div>
   </section>
 
@@ -62,43 +51,9 @@
 
   <script src="js/blog.js"></script>
   <script>
-    (function () {
-      var allArticles = [];
-      var currentCategory = getParam('category') || '';
-
-      loadArticleIndex().then(function (articles) {
-        allArticles = articles;
-        renderList(currentCategory);
-        setActiveCategory(currentCategory);
-      });
-
-      function renderList(category) {
-        var filtered = filterByCategory(allArticles, category);
-        renderArticleList('article-list', filtered);
-      }
-
-      function setActiveCategory(category) {
-        var tags = document.querySelectorAll('#blog-tags .blog-tag');
-        for (var i = 0; i < tags.length; i++) {
-          var cat = tags[i].getAttribute('data-category');
-          if (cat === category) {
-            tags[i].classList.add('blog-tag-active');
-          } else {
-            tags[i].classList.remove('blog-tag-active');
-          }
-        }
-      }
-
-      var tags = document.querySelectorAll('#blog-tags .blog-tag');
-      for (var i = 0; i < tags.length; i++) {
-        tags[i].addEventListener('click', function () {
-          var cat = this.getAttribute('data-category');
-          currentCategory = cat;
-          renderList(cat);
-          setActiveCategory(cat);
-        });
-      }
-    })();
+    loadArticleIndex().then(function (articles) {
+      renderArticleList('article-list', articles);
+    });
   </script>
 
 </body>
