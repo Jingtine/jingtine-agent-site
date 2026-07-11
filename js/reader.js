@@ -1,6 +1,9 @@
 /**
  * reader.js — RSS Reader page logic
  *
+ * Reuses Blog's CSS classes (blog-tag, article-card, etc.)
+ * No reader-specific visual components.
+ *
  * SECURITY: All external feed data is untrusted.
  * - Titles, descriptions, source names use textContent only
  * - No innerHTML for external content
@@ -27,12 +30,12 @@
       var list = document.getElementById('reader-list');
       list.textContent = '';
       var p = document.createElement('p');
-      p.className = 'reader-empty';
+      p.setAttribute('style', 'text-align:center;color:var(--color-text-muted);padding:24px;');
       p.textContent = 'Failed to load articles.';
       list.appendChild(p);
     });
 
-  // ── Source filter (dynamic) ───────────────────────────
+  // ── Source filter (dynamic, uses blog-tag classes) ────
   function initSourceFilter() {
     var sources = {};
     var order = [];
@@ -48,48 +51,47 @@
     container.textContent = '';
 
     // "All" button
-    container.appendChild(createTagButton('All', '', 'reader-tag-active'));
+    var allBtn = document.createElement('button');
+    allBtn.className = 'blog-tag blog-tag-active';
+    allBtn.setAttribute('data-source', '');
+    allBtn.textContent = 'All';
+    container.appendChild(allBtn);
 
     // One button per source
     for (var j = 0; j < order.length; j++) {
       var sid = order[j];
-      container.appendChild(createTagButton(sources[sid], sid, 'reader-tag'));
+      var btn = document.createElement('button');
+      btn.className = 'blog-tag';
+      btn.setAttribute('data-source', sid);
+      btn.textContent = sources[sid];
+      container.appendChild(btn);
     }
 
     // Click handlers
-    var tags = container.querySelectorAll('.reader-tag');
+    var tags = container.querySelectorAll('.blog-tag');
     for (var k = 0; k < tags.length; k++) {
       tags[k].addEventListener('click', function () {
         currentSource = this.getAttribute('data-source');
-        // Update active states
-        var all = container.querySelectorAll('.reader-tag');
+        var all = container.querySelectorAll('.blog-tag');
         for (var m = 0; m < all.length; m++) {
-          all[m].classList.remove('reader-tag-active');
+          all[m].classList.remove('blog-tag-active');
         }
-        this.classList.add('reader-tag-active');
+        this.classList.add('blog-tag-active');
         render();
       });
     }
   }
 
-  function createTagButton(label, sourceId, className) {
-    var btn = document.createElement('button');
-    btn.className = className;
-    btn.setAttribute('data-source', sourceId);
-    btn.textContent = label;
-    return btn;
-  }
-
   // ── Category filter ────────────────────────────────────
   function setupCategoryFilter() {
-    var tags = document.querySelectorAll('#reader-category-tags .reader-tag');
+    var tags = document.querySelectorAll('#reader-category-tags .blog-tag');
     for (var i = 0; i < tags.length; i++) {
       tags[i].addEventListener('click', function () {
         currentCategory = this.getAttribute('data-category');
         for (var j = 0; j < tags.length; j++) {
-          tags[j].classList.remove('reader-tag-active');
+          tags[j].classList.remove('blog-tag-active');
         }
-        this.classList.add('reader-tag-active');
+        this.classList.add('blog-tag-active');
         render();
       });
     }
@@ -110,7 +112,6 @@
       });
     }
 
-    renderStats(filtered.length, allItems.length);
     renderList(filtered);
   }
 
@@ -120,7 +121,7 @@
 
     if (items.length === 0) {
       var p = document.createElement('p');
-      p.className = 'reader-empty';
+      p.setAttribute('style', 'text-align:center;color:var(--color-text-muted);padding:24px;');
       p.textContent = 'No articles found.';
       container.appendChild(p);
       return;
@@ -134,7 +135,7 @@
     }
   }
 
-  // ── Secure card creation ───────────────────────────────
+  // ── Secure card creation (reuses article-card classes) ─
   function createCard(item) {
     // Validate link — must be https
     if (!item.link || item.link.indexOf('https://') !== 0) {
@@ -142,23 +143,23 @@
     }
 
     var card = document.createElement('a');
-    card.className = 'reader-card';
+    card.className = 'article-card';
     card.href = item.link;
     card.target = '_blank';
     card.rel = 'noopener noreferrer';
 
     // Header: source + date
     var header = document.createElement('div');
-    header.className = 'reader-card-header';
+    header.className = 'article-card-header';
 
     var source = document.createElement('span');
-    source.className = 'reader-source';
+    source.className = 'article-category';
     source.textContent = (item.source && item.source.name)
       ? item.source.name
       : 'Unknown';
 
     var date = document.createElement('span');
-    date.className = 'reader-date';
+    date.className = 'article-date';
     date.textContent = formatDate(item.pubDate);
 
     header.appendChild(source);
@@ -188,10 +189,5 @@
     var m = String(d.getMonth() + 1).padStart(2, '0');
     var day = String(d.getDate()).padStart(2, '0');
     return y + '-' + m + '-' + day;
-  }
-
-  function renderStats(count, total) {
-    var el = document.getElementById('reader-stats');
-    el.textContent = count + ' / ' + total + ' articles';
   }
 })();

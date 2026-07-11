@@ -32,25 +32,17 @@
   </div>
 
   <section class="section">
-    <div class="reader-filters">
-      <div class="reader-filter-row">
-        <span class="reader-filter-label">Category</span>
-        <div class="reader-tags" id="reader-category-tags">
-          <button class="reader-tag reader-tag-active" data-category="">All</button>
-          <button class="reader-tag" data-category="ai-agent">AI Agent</button>
-          <button class="reader-tag" data-category="software-engineering">Software Engineering</button>
-          <button class="reader-tag" data-category="product-thinking">Product Thinking</button>
-        </div>
-      </div>
-      <div class="reader-filter-row">
-        <span class="reader-filter-label">Source</span>
-        <div class="reader-tags" id="reader-source-tags"></div>
-      </div>
+    <div class="blog-tags" id="reader-category-tags">
+      <button class="blog-tag blog-tag-active" data-category="">All</button>
+      <button class="blog-tag" data-category="ai-agent">AI Agent</button>
+      <button class="blog-tag" data-category="software-engineering">Software Engineering</button>
+      <button class="blog-tag" data-category="product-thinking">Product Thinking</button>
     </div>
 
-    <div class="reader-stats" id="reader-stats"></div>
-    <div class="reader-list" id="reader-list">
-      <p class="reader-empty">Loading articles...</p>
+    <div class="blog-tags" id="reader-source-tags"></div>
+
+    <div class="article-list" id="reader-list">
+      <p style="text-align:center;color:var(--color-text-muted);padding:24px;">Loading articles...</p>
     </div>
   </section>
 
