@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jingtine's Blog</title>
+    <link>https://jingtine.github.io/jingtine-agent-site</link>
+    <description>Thoughts on AI Agent, Software Engineering, and Product Thinking</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 11 Jul 2026 10:19:17 -0000</lastBuildDate>
+    <atom:link href="https://jingtine.github.io/jingtine-agent-site/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Hello World</title>
+      <link>https://jingtine.github.io/jingtine-agent-site/article.html?slug=hello-world</link>
+      <description>第一篇博客文章，关于这个网站的诞生与愿景。</description>
+      <pubDate>Thu, 09 Jul 2026 16:00:00 -0000</pubDate>
+      <category>AI Agent</category>
+      <guid isPermaLink="true">https://jingtine.github.io/jingtine-agent-site/article.html?slug=hello-world</guid>
+    </item>
+    <item>
+      <title>Building My First AI Agent</title>
+      <link>https://jingtine.github.io/jingtine-agent-site/article.html?slug=building-agent</link>
+      <description>从零构建一个自主 Agent 的实践记录与思考。</description>
+      <pubDate>Sat, 04 Jul 2026 16:00:00 -0000</pubDate>
+      <category>AI Agent</category>
+      <guid isPermaLink="true">https://jingtine.github.io/jingtine-agent-site/article.html?slug=building-agent</guid>
+    </item>
+    <item>
+      <title>Why Software Engineering Matters for AI</title>
+      <link>https://jingtine.github.io/jingtine-agent-site/article.html?slug=why-se-matters</link>
+      <description>软件工程实践如何影响 AI 项目的质量与可维护性。</description>
+      <pubDate>Sat, 27 Jun 2026 16:00:00 -0000</pubDate>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://jingtine.github.io/jingtine-agent-site/article.html?slug=why-se-matters</guid>
+    </item>
+    <item>
+      <title>Product Thinking for Engineers</title>
+      <link>https://jingtine.github.io/jingtine-agent-site/article.html?slug=product-thinking-101</link>
+      <description>工程师如何培养产品思维，从技术视角走向用户视角。</description>
+      <pubDate>Fri, 19 Jun 2026 16:00:00 -0000</pubDate>
+      <category>Product Thinking</category>
+      <guid isPermaLink="true">https://jingtine.github.io/jingtine-agent-site/article.html?slug=product-thinking-101</guid>
+    </item>
+  </channel>
+</rss>
