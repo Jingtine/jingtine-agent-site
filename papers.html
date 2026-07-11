@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0;url=wiki.html">
-  <title>Wiki — Jingtine</title>
+  <meta name="description" content="Jingtine's research — recent papers from arXiv on AI Agent, Software Engineering, and more.">
+  <title>Research — Jingtine</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,25 +17,22 @@
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="blog.html">Blog</a>
-        <a href="papers.html">Research</a>
-        <a href="wiki.html" class="active">Wiki</a>
+        <a href="papers.html" class="active">Research</a>
+        <a href="wiki.html">Wiki</a>
         <a href="reader.html">Reader</a>
       </div>
     </div>
   </nav>
 
   <div class="page-header">
-    <div class="section-label">Wiki</div>
-    <h1>Wiki</h1>
-    <p>This page has moved.</p>
+    <div class="section-label">Research</div>
+    <h1>Research Papers</h1>
+    <p>Recent papers from arXiv on AI Agent and Software Engineering.</p>
   </div>
 
   <section class="section">
-    <div class="contact-card">
-      <p class="contact-intro">
-        The Wiki page has moved to a new URL.
-      </p>
-      <a href="wiki.html" class="btn btn-outline">Go to Wiki &rarr;</a>
+    <div class="article-list" id="papers-list">
+      <p style="text-align:center;color:var(--color-text-muted);padding:24px;">Loading papers...</p>
     </div>
   </section>
 
@@ -47,6 +44,8 @@
     </div>
     <p>&copy; 2026 Jingtine</p>
   </footer>
+
+  <script src="js/papers.js"></script>
 
 </body>
 </html>

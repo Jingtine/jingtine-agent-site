@@ -26,8 +26,9 @@ BASE_PATH = "jingtine-agent-site"
 
 REQUIRED_HTML = [
     "index.html", "about.html", "projects.html", "blog.html",
-    "knowledge.html", "library.html", "reader.html", "contact.html",
+    "papers.html", "wiki.html", "reader.html",
     "article.html",
+    "knowledge.html", "library.html", "contact.html",
 ]
 
 FEED_XML = os.path.join(PROJECT_DIR, "feed.xml")
@@ -36,6 +37,9 @@ RSS_ITEMS_JSON = os.path.join(PROJECT_DIR, "public", "data", "rss-items.json")
 OPML_XML = os.path.join(PROJECT_DIR, "subscriptions.opml")
 
 RSS_REQUIRED_FIELDS = ["id", "title", "link", "description", "pubDate", "source", "category"]
+
+PAPERS_JSON = os.path.join(PROJECT_DIR, "public", "data", "papers.json")
+PAPER_REQUIRED_FIELDS = ["id", "title", "authors", "published", "summary", "url", "source"]
 
 PASS = "[PASS]"
 FAIL = "[FAIL]"
@@ -251,6 +255,57 @@ def check_opml():
         return False
 
 
+def check_papers_json():
+    """Check 8: papers.json is valid JSON with required fields."""
+    if not os.path.exists(PAPERS_JSON):
+        p(f"{PASS} papers.json:        file not found (skip)")
+        return True
+
+    try:
+        with open(PAPERS_JSON, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except json.JSONDecodeError as e:
+        p(f"{FAIL} papers.json:        JSON parse error: {e}")
+        return False
+
+    papers = data.get("papers", [])
+    total = data.get("total", 0)
+
+    if total != len(papers):
+        p(f"{FAIL} papers.json:        total={total} but array has {len(papers)} items")
+        return False
+
+    complete = 0
+    incomplete = []
+    for i, paper in enumerate(papers):
+        missing = []
+        for field in PAPER_REQUIRED_FIELDS:
+            if field not in paper or not paper[field]:
+                missing.append(field)
+            elif field == "url":
+                if not isinstance(paper["url"], str) or not paper["url"].startswith("https://"):
+                    missing.append("url (not https)")
+        if missing:
+            incomplete.append((i, missing))
+        else:
+            complete += 1
+
+    if incomplete:
+        p(f"{FAIL} papers.json:        {complete}/{len(papers)} complete")
+        for idx, missing in incomplete:
+            p(f"  {CROSS} paper[{idx}] missing: {', '.join(missing)}")
+        return False
+
+    # Check no duplicate ids
+    ids = [p.get("id") for p in papers]
+    if len(ids) != len(set(ids)):
+        p(f"{FAIL} papers.json:        duplicate IDs detected")
+        return False
+
+    p(f"{PASS} papers.json:        valid JSON, {len(papers)} papers")
+    return True
+
+
 # ── Main ────────────────────────────────────────────────────────
 
 def main():
@@ -289,6 +344,9 @@ def main():
 
     # Check 7
     results.append(check_opml())
+
+    # Check 8
+    results.append(check_papers_json())
 
     # Summary
     passed = sum(1 for r in results if r)
