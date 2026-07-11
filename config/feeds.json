@@ -5,7 +5,8 @@
     "url": "https://hnrss.org/frontpage",
     "category": "ai-agent",
     "enabled": true,
-    "public": true
+    "public": true,
+    "description": "Technology news from Hacker News"
   },
   {
     "id": "simonw-blog",
@@ -13,7 +14,8 @@
     "url": "https://simonwillison.net/atom/everything/",
     "category": "ai-agent",
     "enabled": true,
-    "public": true
+    "public": true,
+    "description": "LLM, AI Engineering and Tools"
   },
   {
     "id": "wasi-reader",
@@ -21,6 +23,7 @@
     "url": "https://rss.aishort.top/?type=wasi",
     "category": "ai-agent",
     "enabled": true,
-    "public": true
+    "public": true,
+    "description": "\u7cbe\u9009 AI \u8d44\u8baf\u805a\u5408"
   }
 ]

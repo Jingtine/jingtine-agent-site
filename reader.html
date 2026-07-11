@@ -21,7 +21,6 @@
         <a href="wiki.html">Wiki</a>
         <a href="reader.html" class="active">Reader</a>
         <a href="assistant.html">Assistant</a>
-        <a href="status.html">Status</a>
       </div>
     </div>
   </nav>
@@ -34,14 +33,27 @@
 
   <!-- Source list view -->
   <section class="section" id="reader-source-view">
+    <!-- Stats bar -->
+    <div class="contact-card" style="padding:16px 24px;margin-bottom:20px;display:flex;justify-content:center;gap:32px;flex-wrap:wrap;">
+      <span style="font-size:13px;color:var(--color-text-muted);" id="stats-sources"></span>
+      <span style="font-size:13px;color:var(--color-text-muted);" id="stats-articles"></span>
+      <span style="font-size:13px;color:var(--color-text-muted);" id="stats-updated"></span>
+    </div>
+
+    <!-- Search -->
+    <div style="margin-bottom:20px;">
+      <input type="text" id="source-search" placeholder="Search sources..."
+        style="width:100%;max-width:360px;padding:8px 14px;font-size:14px;font-family:var(--font-sans);border:1px solid var(--color-border);border-radius:var(--radius-sm);background:var(--color-surface);color:var(--color-text);outline:none;">
+    </div>
+
     <div class="home-skills-grid" id="source-cards">
       <p style="text-align:center;color:var(--color-text-muted);padding:24px;grid-column:1/-1;">Loading sources...</p>
     </div>
   </section>
 
-  <!-- Article list view (per source) -->
+  <!-- Article list view -->
   <section class="section" id="reader-article-view" style="display:none;">
-    <button class="btn btn-outline" id="reader-back" style="margin-bottom:16px;">&larr; Back to Sources</button>
+    <button class="btn btn-outline" id="reader-back" style="margin-bottom:16px;">&larr; All Sources</button>
     <div style="margin-bottom:20px;">
       <span class="section-label" id="reader-source-name"></span>
       <p style="font-size:13px;color:var(--color-text-muted);margin-top:4px;" id="reader-source-stats"></p>
@@ -56,6 +68,7 @@
       <a href="https://github.com/jingtine" target="_blank" rel="noopener">GitHub</a>
       <a href="mailto:251250208@smail.nju.edu.cn">Email</a>
       <a href="feed.xml">RSS</a>
+      <a href="status.html">Status</a>
     </div>
     <p>&copy; 2026 Jingtine</p>
   </footer>
