@@ -41,6 +41,9 @@ RSS_REQUIRED_FIELDS = ["id", "title", "link", "description", "pubDate", "source"
 PAPERS_JSON = os.path.join(PROJECT_DIR, "public", "data", "papers.json")
 PAPER_REQUIRED_FIELDS = ["id", "title", "authors", "published", "summary", "url", "source"]
 
+WIKI_JSON = os.path.join(PROJECT_DIR, "public", "data", "wiki.json")
+WIKI_REQUIRED_FIELDS = ["id", "title", "category", "tags", "updated", "summary", "links", "path"]
+
 PASS = "[PASS]"
 FAIL = "[FAIL]"
 CROSS = "x"
@@ -306,6 +309,53 @@ def check_papers_json():
     return True
 
 
+def check_wiki_json():
+    """Check 9: wiki.json is valid JSON with required fields."""
+    if not os.path.exists(WIKI_JSON):
+        p(f"{PASS} wiki.json:          file not found (skip)")
+        return True
+
+    try:
+        with open(WIKI_JSON, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except json.JSONDecodeError as e:
+        p(f"{FAIL} wiki.json:          JSON parse error: {e}")
+        return False
+
+    pages = data.get("pages", [])
+    total = data.get("total", 0)
+
+    if total != len(pages):
+        p(f"{FAIL} wiki.json:          total={total} but array has {len(pages)} items")
+        return False
+
+    complete = 0
+    incomplete = []
+    ids_seen = set()
+    for i, page in enumerate(pages):
+        missing = []
+        for field in WIKI_REQUIRED_FIELDS:
+            if field not in page or (field != "tags" and field != "links" and not page.get(field)):
+                missing.append(field)
+        if missing:
+            incomplete.append((i, missing))
+        else:
+            complete += 1
+        pid = page.get("id", "")
+        if pid in ids_seen:
+            incomplete.append((i, [f"duplicate id: {pid}"]))
+        ids_seen.add(pid)
+
+    if incomplete:
+        p(f"{FAIL} wiki.json:          {complete}/{len(pages)} complete")
+        for idx, missing in incomplete:
+            p(f"  {CROSS} page[{idx}]: {', '.join(missing)}")
+        return False
+
+    p(f"{PASS} wiki.json:          valid JSON, {len(pages)} pages")
+    return True
+
+
 # ── Main ────────────────────────────────────────────────────────
 
 def main():
@@ -347,6 +397,9 @@ def main():
 
     # Check 8
     results.append(check_papers_json())
+
+    # Check 9
+    results.append(check_wiki_json())
 
     # Summary
     passed = sum(1 for r in results if r)
