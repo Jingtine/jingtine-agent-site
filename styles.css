@@ -893,6 +893,35 @@ a.contact-value:hover {
   background: #6b5de0;
 }
 
+/* ===== Blog Subscribe ===== */
+.blog-subscribe {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.subscribe-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.subscribe-link:hover {
+  color: var(--accent-purple);
+  border-color: var(--accent-purple);
+}
+
 /* ===== Knowledge ===== */
 .knowledge-features {
   display: grid;
