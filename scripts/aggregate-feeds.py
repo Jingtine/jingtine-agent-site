@@ -10,6 +10,7 @@ single schema, deduplicates, and sorts by date descending.
 Zero dependencies — Python stdlib only.
 """
 import hashlib
+import html
 import json
 import os
 import re
@@ -86,16 +87,33 @@ def parse_date(raw):
 # ── HTML stripping ─────────────────────────────────────────────
 
 HTML_TAG_RE = re.compile(r"<[^>]*>")
+MULTI_SPACE_RE = re.compile(r"\s+")
+DESC_MAX_LEN = 280
+
+
+def clean_description(text):
+    """Decode HTML entities, strip tags, normalize whitespace, truncate."""
+    if not text:
+        return ""
+    # 1. HTML entity decode
+    t = html.unescape(text)
+    # 2. Remove all HTML tags
+    t = HTML_TAG_RE.sub("", t)
+    # 3. Convert \u00A0 to space
+    t = t.replace("\u00A0", " ")
+    # 4. Collapse consecutive whitespace
+    t = MULTI_SPACE_RE.sub(" ", t)
+    # 5. Trim
+    t = t.strip()
+    # 6. Truncate with ellipsis
+    if len(t) > DESC_MAX_LEN:
+        t = t[:DESC_MAX_LEN].rstrip() + "\u2026"
+    return t
 
 
 def strip_html(text):
-    """Remove HTML tags and decode common entities."""
-    if not text:
-        return ""
-    text = HTML_TAG_RE.sub("", text)
-    text = text.replace("&amp;", "&").replace("&lt;", "<").replace("&gt;", ">")
-    text = text.replace("&quot;", '"').replace("&#39;", "'").replace("&apos;", "'")
-    return text.strip()
+    """Legacy alias for clean_description (used by _parse_entry)."""
+    return clean_description(text)
 
 
 # ── HTTPS check ────────────────────────────────────────────────

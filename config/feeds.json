@@ -21,7 +21,7 @@
     "id": "wasi-reader",
     "name": "\u74e6\u65af\u9605\u8bfb",
     "url": "https://rss.aishort.top/?type=wasi",
-    "category": "ai-agent",
+    "category": "ai-news",
     "enabled": true,
     "public": true,
     "description": "\u7cbe\u9009 AI \u8d44\u8baf\u805a\u5408"

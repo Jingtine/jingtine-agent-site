@@ -194,6 +194,7 @@
   // ── Helpers ───────────────────────────────────────────
   var CATEGORY_MAP = {
     'ai-agent': 'AI Agent',
+    'ai-news': 'AI News',
     'software-engineering': 'Software Engineering',
     'product-thinking': 'Product Thinking'
   };
