@@ -1,0 +1,26 @@
+[
+  {
+    "id": "hn-frontpage",
+    "name": "Hacker News",
+    "url": "https://hnrss.org/frontpage",
+    "category": "ai-agent",
+    "enabled": true,
+    "public": true
+  },
+  {
+    "id": "simonw-blog",
+    "name": "Simon Willison's Weblog",
+    "url": "https://simonwillison.net/atom/everything/",
+    "category": "ai-agent",
+    "enabled": true,
+    "public": true
+  },
+  {
+    "id": "github-trending",
+    "name": "GitHub Trending",
+    "url": "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml",
+    "category": "software-engineering",
+    "enabled": false,
+    "public": false
+  }
+]

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>Jingtine RSS Subscriptions</title>
+    <dateCreated>2026-07-11T20:20:57.552817+08:00</dateCreated>
+  </head>
+  <body>
+    <outline text="Hacker News" title="Hacker News" type="rss" xmlUrl="https://hnrss.org/frontpage" />
+    <outline text="Simon Willison's Weblog" title="Simon Willison's Weblog" type="atom" xmlUrl="https://simonwillison.net/atom/everything/" />
+  </body>
+</opml>
