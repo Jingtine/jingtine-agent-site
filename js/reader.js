@@ -1,7 +1,7 @@
 /**
  * reader.js — RSS Reader page logic
  *
- * Reuses Blog's CSS classes (blog-tag, article-card, etc.)
+ * Reuses Blog's CSS classes (blog-tag, article-card, btn, etc.)
  * No reader-specific visual components.
  *
  * SECURITY: All external feed data is untrusted.
@@ -16,6 +16,12 @@
   var currentSource = '';
 
   var DATA_URL = 'public/data/rss-items.json';
+
+  var CATEGORY_MAP = {
+    'ai-agent': 'AI Agent',
+    'software-engineering': 'Software Engineering',
+    'product-thinking': 'Product Thinking'
+  };
 
   // ── Init ──────────────────────────────────────────────
   fetch(DATA_URL)
@@ -135,47 +141,69 @@
     }
   }
 
-  // ── Secure card creation (reuses article-card classes) ─
+  // ── Secure card creation (reuses article-card + btn) ─
   function createCard(item) {
     // Validate link — must be https
     if (!item.link || item.link.indexOf('https://') !== 0) {
       return null;
     }
 
-    var card = document.createElement('a');
+    var card = document.createElement('div');
     card.className = 'article-card';
-    card.href = item.link;
-    card.target = '_blank';
-    card.rel = 'noopener noreferrer';
 
-    // Header: source + date
+    // Header: category badge + date
     var header = document.createElement('div');
     header.className = 'article-card-header';
 
-    var source = document.createElement('span');
-    source.className = 'article-category';
-    source.textContent = (item.source && item.source.name)
-      ? item.source.name
-      : 'Unknown';
+    var cat = document.createElement('span');
+    cat.className = 'article-category';
+    cat.textContent = CATEGORY_MAP[item.category] || item.category || '';
 
     var date = document.createElement('span');
     date.className = 'article-date';
     date.textContent = formatDate(item.pubDate);
 
-    header.appendChild(source);
+    header.appendChild(cat);
     header.appendChild(date);
 
     // Title
     var title = document.createElement('h3');
     title.textContent = item.title || '';
 
-    // Description
+    // Summary
     var desc = document.createElement('p');
     desc.textContent = item.description || '';
+
+    // Footer: source + read original button
+    var footer = document.createElement('div');
+    footer.setAttribute(
+      'style',
+      'display:flex;align-items:center;justify-content:space-between;margin-top:14px;'
+    );
+
+    var source = document.createElement('span');
+    source.setAttribute(
+      'style',
+      'font-size:12px;color:var(--color-text-muted);'
+    );
+    source.textContent = (item.source && item.source.name)
+      ? item.source.name
+      : 'Unknown';
+
+    var btn = document.createElement('a');
+    btn.className = 'btn btn-outline';
+    btn.href = item.link;
+    btn.target = '_blank';
+    btn.rel = 'noopener noreferrer';
+    btn.textContent = 'Read Original \u2192';
+
+    footer.appendChild(source);
+    footer.appendChild(btn);
 
     card.appendChild(header);
     card.appendChild(title);
     card.appendChild(desc);
+    card.appendChild(footer);
 
     return card;
   }
