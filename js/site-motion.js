@@ -46,6 +46,7 @@
 
   function scanAndObserve(container) {
     var root = container || document;
+    if (!root || !root.querySelectorAll) return;
     // Page header elements
     var pageHeader = root.querySelector ? root.querySelector('.page-header') : null;
     if (pageHeader) {
@@ -58,10 +59,10 @@
     }
 
     // Section labels and titles
-    var labels = (root.querySelectorAll || root.querySelectorAll.bind(root))('.section-label');
-    var titles = (root.querySelectorAll || root.querySelectorAll.bind(root))('.section-title');
-    if (labels) { for (var i = 0; i < labels.length; i++) { if (!labels[i].classList.contains('revealed')) observeReveal(labels[i]); } }
-    if (titles) { for (var j = 0; j < titles.length; j++) { if (!titles[j].classList.contains('revealed')) observeReveal(titles[j]); } }
+    var labels = root.querySelectorAll('.section-label');
+    var titles = root.querySelectorAll('.section-title');
+    for (var i = 0; i < labels.length; i++) { if (!labels[i].classList.contains('revealed')) observeReveal(labels[i]); }
+    for (var j = 0; j < titles.length; j++) { if (!titles[j].classList.contains('revealed')) observeReveal(titles[j]); }
 
     // Cards
     var cardTypes = [
@@ -70,9 +71,8 @@
       '.blog-category-card'
     ];
     for (var k = 0; k < cardTypes.length; k++) {
-      var cards = (root.querySelectorAll || root.querySelectorAll.bind(root))(cardTypes[k]);
-      if (cards) {
-        for (var m = 0; m < cards.length; m++) {
+      var cards = root.querySelectorAll(cardTypes[k]);
+      for (var m = 0; m < cards.length; m++) {
           if (!cards[m].classList.contains('revealed')) observeReveal(cards[m], m);
         }
       }
@@ -83,6 +83,7 @@
   window.SiteMotion = {
     revealNewElements: function (container) {
       if (reduced) return;
+      if (!container) return;
       if (!revealObserver) setupRevealObserver();
       scanAndObserve(container);
     }
