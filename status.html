@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0;url=papers.html">
-  <title>Research — Jingtine</title>
+  <meta name="description" content="Website status dashboard — build, content, quality, services.">
+  <title>Status — Jingtine</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,27 +17,24 @@
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="blog.html">Blog</a>
-        <a href="papers.html" class="active">Research</a>
+        <a href="papers.html">Research</a>
         <a href="wiki.html">Wiki</a>
         <a href="reader.html">Reader</a>
         <a href="assistant.html">Assistant</a>
-        <a href="status.html">Status</a>
+        <a href="status.html" class="active">Status</a>
       </div>
     </div>
   </nav>
 
   <div class="page-header">
-    <div class="section-label">Research</div>
-    <h1>Research</h1>
-    <p>This page has moved.</p>
+    <div class="section-label">Status</div>
+    <h1>Website Status</h1>
+    <p>Build, content, quality, and service health overview.</p>
   </div>
 
   <section class="section">
-    <div class="contact-card">
-      <p class="contact-intro">
-        The Research page has moved to a new URL.
-      </p>
-      <a href="papers.html" class="btn btn-outline">Go to Research &rarr;</a>
+    <div class="home-skills-grid" id="status-cards">
+      <p style="text-align:center;color:var(--color-text-muted);padding:24px;grid-column:1/-1;">Loading status...</p>
     </div>
   </section>
 
@@ -49,6 +46,8 @@
     </div>
     <p>&copy; 2026 Jingtine</p>
   </footer>
+
+  <script src="js/status.js"></script>
 
 </body>
 </html>

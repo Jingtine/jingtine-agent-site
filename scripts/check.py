@@ -26,7 +26,7 @@ BASE_PATH = "jingtine-agent-site"
 
 REQUIRED_HTML = [
     "index.html", "about.html", "projects.html", "blog.html",
-    "papers.html", "wiki.html", "reader.html", "assistant.html",
+    "papers.html", "wiki.html", "reader.html", "assistant.html", "status.html",
     "article.html",
     "knowledge.html", "library.html", "contact.html",
 ]
@@ -43,6 +43,8 @@ PAPER_REQUIRED_FIELDS = ["id", "title", "authors", "published", "summary", "url"
 
 WIKI_JSON = os.path.join(PROJECT_DIR, "public", "data", "wiki.json")
 WIKI_REQUIRED_FIELDS = ["id", "title", "category", "tags", "updated", "summary", "links", "path"]
+
+STATUS_JSON = os.path.join(PROJECT_DIR, "public", "data", "status.json")
 
 PASS = "[PASS]"
 FAIL = "[FAIL]"
@@ -383,6 +385,25 @@ def check_assistant():
     return True
 
 
+def check_status_json():
+    """Check 11: status.json is valid."""
+    if not os.path.exists(STATUS_JSON):
+        p(f"{PASS} status.json:        file not found (skip)")
+        return True
+    try:
+        with open(STATUS_JSON, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except json.JSONDecodeError as e:
+        p(f"{FAIL} status.json:        JSON parse error: {e}")
+        return False
+    for key in ["version", "build", "content", "quality", "services", "status"]:
+        if key not in data:
+            p(f"{FAIL} status.json:        missing key: {key}")
+            return False
+    p(f"{PASS} status.json:        valid JSON, status={data.get('status', '?')}")
+    return True
+
+
 # ── Main ────────────────────────────────────────────────────────
 
 def main():
@@ -430,6 +451,9 @@ def main():
 
     # Check 10
     results.append(check_assistant())
+
+    # Check 11
+    results.append(check_status_json())
 
     # Summary
     passed = sum(1 for r in results if r)

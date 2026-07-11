@@ -1,0 +1,45 @@
+{
+  "version": "0.10.0",
+  "generated": "2026-07-11T23:35:47.754611+08:00",
+  "build": {
+    "version": "0.10.0",
+    "generated": "2026-07-11 23:35"
+  },
+  "content": {
+    "blogArticles": 4,
+    "researchPapers": 40,
+    "wikiPages": 9
+  },
+  "quality": {
+    "result": "10/10 passed",
+    "passing": true,
+    "lastValidation": "2026-07-11 23:35"
+  },
+  "services": {
+    "blog": {
+      "name": "Blog",
+      "enabled": true
+    },
+    "research": {
+      "name": "Research",
+      "enabled": true
+    },
+    "wiki": {
+      "name": "Wiki",
+      "enabled": true
+    },
+    "reader": {
+      "name": "RSS Reader",
+      "enabled": true
+    },
+    "assistant": {
+      "name": "AI Assistant",
+      "enabled": true
+    },
+    "status": {
+      "name": "Status Dashboard",
+      "enabled": true
+    }
+  },
+  "status": "passing"
+}
