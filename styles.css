@@ -241,9 +241,13 @@ body {
 .hero-desc {
   font-size: 17px;
   color: var(--color-text-secondary);
-  line-height: 1.8;
-  max-width: 480px;
+  line-height: 1.7;
+  max-width: 860px;
+  width: min(92vw, 860px);
   margin: 0 auto;
+  text-wrap: balance;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 /* ===== Section Common ===== */
@@ -617,6 +621,11 @@ a.contact-value:hover {
 
   .hero-desc {
     font-size: 15px;
+    width: 92%;
+    max-width: none;
+    word-break: normal;
+    overflow-wrap: anywhere;
+    text-wrap: auto;
   }
 
   .hero-avatar-wrap {
