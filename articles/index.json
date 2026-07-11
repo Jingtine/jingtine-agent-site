@@ -9,21 +9,21 @@
   {
     "slug": "building-agent",
     "title": "Building My First AI Agent",
-    "date": "2026-07-05",
+    "date": "2026-07-11",
     "category": "ai-agent",
     "summary": "从零构建一个自主 Agent 的实践记录与思考。"
   },
   {
     "slug": "why-se-matters",
     "title": "Why Software Engineering Matters for AI",
-    "date": "2026-06-28",
+    "date": "2026-07-11",
     "category": "software-engineering",
     "summary": "软件工程实践如何影响 AI 项目的质量与可维护性。"
   },
   {
     "slug": "product-thinking-101",
     "title": "Product Thinking for Engineers",
-    "date": "2026-06-20",
+    "date": "2026-07-12",
     "category": "product-thinking",
     "summary": "工程师如何培养产品思维，从技术视角走向用户视角。"
   }
