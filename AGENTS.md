@@ -19,13 +19,16 @@ my-agent-site/
 ├── *.html              # Pages (index, about, projects, blog, etc.)
 ├── styles.css          # Global stylesheet (shared by all pages)
 ├── articles/           # Markdown blog articles + index.json metadata
-├── js/                 # Client-side JS (blog.js, reader.js, marked.min.js)
+├── js/                 # Client-side JS (blog.js, reader.js, marked.min.js, site-motion.js)
 ├── config/             # Data source configuration (feeds.json, allowlist.json)
-├── public/data/        # Generated data output (rss-items.json)
+├── public/data/        # Generated data output (rss-items.json, papers.json, wiki.json, status.json)
 ├── scripts/            # Build and check scripts (Python, stdlib only)
 ├── assets/images/      # Static image assets
+├── content/            # Wiki Markdown pages (content/wiki/) + templates (content/templates/)
+├── .opencode/          # Custom agent skills
 ├── feed.xml            # RSS feed for own blog (generated)
-└── subscriptions.opml  # OPML export of public feed subscriptions
+├── subscriptions.opml  # OPML export of public feed subscriptions
+└── .gitignore          # OS + editor ignore rules
 ```
 
 ## Security Rules

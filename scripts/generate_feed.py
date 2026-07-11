@@ -1,6 +1,6 @@
-"""generate-feed.py — Generate feed.xml from articles/index.json.
+"""generate_feed.py — Generate feed.xml from articles/index.json.
 
-Usage:  python scripts/generate-feed.py
+Usage:  python scripts/generate_feed.py
 Output: feed.xml (in project root)
 
 RSS 2.0 compliant. Uses only Python stdlib, zero dependencies.
