@@ -26,7 +26,7 @@ BASE_PATH = "jingtine-agent-site"
 
 REQUIRED_HTML = [
     "index.html", "about.html", "projects.html", "blog.html",
-    "papers.html", "wiki.html", "reader.html",
+    "papers.html", "wiki.html", "reader.html", "assistant.html",
     "article.html",
     "knowledge.html", "library.html", "contact.html",
 ]
@@ -356,6 +356,33 @@ def check_wiki_json():
     return True
 
 
+def check_assistant():
+    """Check 10: Assistant page and scripts exist."""
+    js_path = os.path.join(PROJECT_DIR, "js", "assistant.js")
+    if not os.path.exists(js_path):
+        p(f"{FAIL} assistant:          js/assistant.js not found")
+        return False
+
+    # Verify wiki.json is readable by assistant
+    if os.path.exists(WIKI_JSON):
+        try:
+            with open(WIKI_JSON, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            pages = data.get("pages", [])
+            if not pages:
+                p(f"{FAIL} assistant:          wiki.json has 0 pages (assistant has no data)")
+                return False
+        except Exception:
+            p(f"{FAIL} assistant:          wiki.json not readable")
+            return False
+    else:
+        p(f"{FAIL} assistant:          wiki.json not found (assistant has no data)")
+        return False
+
+    p(f"{PASS} assistant:          page + script ok, wiki.json readable")
+    return True
+
+
 # ── Main ────────────────────────────────────────────────────────
 
 def main():
@@ -400,6 +427,9 @@ def main():
 
     # Check 9
     results.append(check_wiki_json())
+
+    # Check 10
+    results.append(check_assistant())
 
     # Summary
     passed = sum(1 for r in results if r)
