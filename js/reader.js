@@ -1,8 +1,7 @@
 /**
- * reader.js — RSS Reader page logic
+ * reader.js — RSS Reader: source list + per-source article view
  *
- * Reuses Blog's CSS classes (blog-tag, article-card, btn, etc.)
- * No reader-specific visual components.
+ * Reuses Blog's CSS classes (article-card, home-skill-card, btn, etc.)
  *
  * SECURITY: All external feed data is untrusted.
  * - Titles, descriptions, source names use textContent only
@@ -12,116 +11,117 @@
  */
 (function () {
   var allItems = [];
-  var currentSource = '';
+  var sourceMap = {};
 
   var DATA_URL = 'public/data/rss-items.json';
-
-  var CATEGORY_MAP = {
-    'ai-agent': 'AI Agent',
-    'software-engineering': 'Software Engineering',
-    'product-thinking': 'Product Thinking'
-  };
 
   // ── Init ──────────────────────────────────────────────
   fetch(DATA_URL)
     .then(function (res) { return res.json(); })
     .then(function (data) {
       allItems = data.items || [];
-      initSourceFilter();
-      render();
+      buildSourceMap();
+      renderSourceList();
     })
     .catch(function () {
-      var list = document.getElementById('reader-list');
-      list.textContent = '';
-      var p = document.createElement('p');
-      p.setAttribute('style', 'text-align:center;color:var(--color-text-muted);padding:24px;');
-      p.textContent = 'Failed to load articles.';
-      list.appendChild(p);
+      showEmpty('Failed to load data.', 'source-cards');
     });
 
-  // ── Source filter (dynamic, uses blog-tag classes) ────
-  function initSourceFilter() {
-    var sources = {};
-    var order = [];
+  function buildSourceMap() {
     for (var i = 0; i < allItems.length; i++) {
       var src = allItems[i].source;
-      if (src && src.id && !sources[src.id]) {
-        sources[src.id] = src.name;
-        order.push(src.id);
+      if (!src || !src.id) continue;
+      if (!sourceMap[src.id]) {
+        sourceMap[src.id] = { id: src.id, name: src.name, items: [] };
       }
-    }
-
-    var container = document.getElementById('reader-source-tags');
-    container.textContent = '';
-
-    // "All" button
-    var allBtn = document.createElement('button');
-    allBtn.className = 'blog-tag blog-tag-active';
-    allBtn.setAttribute('data-source', '');
-    allBtn.textContent = 'All';
-    container.appendChild(allBtn);
-
-    // One button per source
-    for (var j = 0; j < order.length; j++) {
-      var sid = order[j];
-      var btn = document.createElement('button');
-      btn.className = 'blog-tag';
-      btn.setAttribute('data-source', sid);
-      btn.textContent = sources[sid];
-      container.appendChild(btn);
-    }
-
-    // Click handlers
-    var tags = container.querySelectorAll('.blog-tag');
-    for (var k = 0; k < tags.length; k++) {
-      tags[k].addEventListener('click', function () {
-        currentSource = this.getAttribute('data-source');
-        var all = container.querySelectorAll('.blog-tag');
-        for (var m = 0; m < all.length; m++) {
-          all[m].classList.remove('blog-tag-active');
-        }
-        this.classList.add('blog-tag-active');
-        render();
-      });
+      sourceMap[src.id].items.push(allItems[i]);
     }
   }
 
-  // ── Source filter ──────────────────────────────────── ─────────────────────────────────────────────
-  function render() {
-    var filtered = allItems;
+  // ── View 1: Source List ────────────────────────────────
+  function renderSourceList() {
+    document.getElementById('reader-source-view').style.display = 'block';
+    document.getElementById('reader-article-view').style.display = 'none';
 
-    if (currentSource) {
-      filtered = filtered.filter(function (item) {
-        return item.source && item.source.id === currentSource;
-      });
-    }
-
-    renderList(filtered);
-  }
-
-  function renderList(items) {
-    var container = document.getElementById('reader-list');
+    var container = document.getElementById('source-cards');
     container.textContent = '';
 
-    if (items.length === 0) {
-      var p = document.createElement('p');
-      p.setAttribute('style', 'text-align:center;color:var(--color-text-muted);padding:24px;');
-      p.textContent = 'No articles found.';
-      container.appendChild(p);
+    var keys = Object.keys(sourceMap);
+    if (keys.length === 0) {
+      showEmpty('No sources found.', 'source-cards');
       return;
     }
 
-    for (var i = 0; i < items.length; i++) {
-      var card = createCard(items[i]);
-      if (card) {
-        container.appendChild(card);
-      }
+    // Sort by most recent article per source
+    keys.sort(function (a, b) {
+      var da = sourceMap[a].items[0] ? sourceMap[a].items[0].pubDate : '';
+      var db = sourceMap[b].items[0] ? sourceMap[b].items[0].pubDate : '';
+      return db.localeCompare(da);
+    });
+
+    for (var i = 0; i < keys.length; i++) {
+      var src = sourceMap[keys[i]];
+      var card = createSourceCard(src);
+      container.appendChild(card);
     }
   }
 
-  // ── Secure card creation (reuses article-card + btn) ─
-  function createCard(item) {
-    // Validate link — must be https
+  function createSourceCard(src) {
+    var card = document.createElement('div');
+    card.className = 'home-skill-card';
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', function () {
+      showArticleList(src);
+    });
+
+    var title = document.createElement('h3');
+    title.textContent = src.name;
+
+    var meta = document.createElement('p');
+    meta.setAttribute('style', 'font-size:13px;color:var(--color-text-muted);margin-bottom:14px;line-height:1.5;');
+    meta.textContent = src.items.length + ' articles';
+
+    // Latest update date
+    if (src.items.length > 0 && src.items[0].pubDate) {
+      meta.textContent += ' | Latest: ' + formatDate(src.items[0].pubDate);
+    }
+
+    var btn = document.createElement('span');
+    btn.className = 'btn btn-outline';
+    btn.textContent = 'View Articles \u2192';
+    btn.setAttribute('style', 'margin-top:auto;');
+
+    card.appendChild(title);
+    card.appendChild(meta);
+    card.appendChild(btn);
+    return card;
+  }
+
+  // ── View 2: Article List ──────────────────────────────
+  function showArticleList(src) {
+    document.getElementById('reader-source-view').style.display = 'none';
+    document.getElementById('reader-article-view').style.display = 'block';
+    window.scrollTo(0, 0);
+
+    document.getElementById('reader-source-name').textContent = src.name;
+    document.getElementById('reader-source-stats').textContent = src.items.length + ' articles';
+
+    var container = document.getElementById('reader-list');
+    container.textContent = '';
+
+    if (src.items.length === 0) {
+      showEmpty('No articles found.', 'reader-list');
+      return;
+    }
+
+    for (var i = 0; i < src.items.length; i++) {
+      var card = createArticleCard(src.items[i]);
+      if (card) container.appendChild(card);
+    }
+  }
+
+  // ── Secure article card ───────────────────────────────
+  function createArticleCard(item) {
     if (!item.link || item.link.indexOf('https://') !== 0) {
       return null;
     }
@@ -135,7 +135,8 @@
 
     var cat = document.createElement('span');
     cat.className = 'article-category';
-    cat.textContent = CATEGORY_MAP[item.category] || item.category || '';
+    var catLabel = CATEGORY_MAP[item.category] || item.category || '';
+    cat.textContent = catLabel;
 
     var date = document.createElement('span');
     date.className = 'article-date';
@@ -152,21 +153,9 @@
     var desc = document.createElement('p');
     desc.textContent = item.description || '';
 
-    // Footer: source + read original button
+    // Footer: read original button
     var footer = document.createElement('div');
-    footer.setAttribute(
-      'style',
-      'display:flex;align-items:center;justify-content:space-between;margin-top:14px;'
-    );
-
-    var source = document.createElement('span');
-    source.setAttribute(
-      'style',
-      'font-size:12px;color:var(--color-text-muted);'
-    );
-    source.textContent = (item.source && item.source.name)
-      ? item.source.name
-      : 'Unknown';
+    footer.setAttribute('style', 'display:flex;justify-content:flex-end;margin-top:14px;');
 
     var btn = document.createElement('a');
     btn.className = 'btn btn-outline';
@@ -175,7 +164,6 @@
     btn.rel = 'noopener noreferrer';
     btn.textContent = 'Read Original \u2192';
 
-    footer.appendChild(source);
     footer.appendChild(btn);
 
     card.appendChild(header);
@@ -187,6 +175,12 @@
   }
 
   // ── Helpers ───────────────────────────────────────────
+  var CATEGORY_MAP = {
+    'ai-agent': 'AI Agent',
+    'software-engineering': 'Software Engineering',
+    'product-thinking': 'Product Thinking'
+  };
+
   function formatDate(dateStr) {
     if (!dateStr) return '';
     var d = new Date(dateStr);
@@ -196,4 +190,19 @@
     var day = String(d.getDate()).padStart(2, '0');
     return y + '-' + m + '-' + day;
   }
+
+  function showEmpty(msg, id) {
+    var el = document.getElementById(id);
+    el.textContent = '';
+    var p = document.createElement('p');
+    p.setAttribute('style', 'text-align:center;color:var(--color-text-muted);padding:24px;grid-column:1/-1;');
+    p.textContent = msg;
+    el.appendChild(p);
+  }
+
+  // Back button
+  document.getElementById('reader-back').addEventListener('click', function () {
+    renderSourceList();
+    window.scrollTo(0, 0);
+  });
 })();

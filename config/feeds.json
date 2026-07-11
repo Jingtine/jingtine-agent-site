@@ -16,11 +16,11 @@
     "public": true
   },
   {
-    "id": "github-trending",
-    "name": "GitHub Trending",
-    "url": "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml",
-    "category": "software-engineering",
-    "enabled": false,
-    "public": false
+    "id": "wasi-reader",
+    "name": "\u74e6\u65af\u9605\u8bfb",
+    "url": "https://rss.aishort.top/?type=wasi",
+    "category": "ai-agent",
+    "enabled": true,
+    "public": true
   }
 ]

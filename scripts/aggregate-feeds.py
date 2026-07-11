@@ -282,6 +282,15 @@ def generate_opml(feeds_config, feed_formats, output_path):
     return count
 
 
+# ── HTTPS upgrade ────────────────────────────────────────────────
+
+def _upgrade_https(link):
+    """Upgrade http:// to https:// for links."""
+    if link.startswith("http://"):
+        return "https://" + link[7:]
+    return link
+
+
 # ── Main ───────────────────────────────────────────────────────
 
 def main():
@@ -335,8 +344,9 @@ def main():
         elif fmt == "Atom 1.0":
             atom_count += 1
 
-        # Annotate with source metadata
+        # Annotate with source metadata and upgrade HTTP to HTTPS
         for item in items:
+            item["link"] = _upgrade_https(item.get("link", ""))
             item["source"] = {"id": fid, "name": name}
             item["category"] = category
 

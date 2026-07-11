@@ -29,12 +29,23 @@
   <div class="page-header">
     <div class="section-label">Reader</div>
     <h1>RSS Reader</h1>
-    <p>Aggregated articles from curated sources.</p>
+    <p>Curated subscription sources.</p>
   </div>
 
-  <section class="section">
-    <div class="blog-tags" id="reader-source-tags"></div>
+  <!-- Source list view -->
+  <section class="section" id="reader-source-view">
+    <div class="home-skills-grid" id="source-cards">
+      <p style="text-align:center;color:var(--color-text-muted);padding:24px;grid-column:1/-1;">Loading sources...</p>
+    </div>
+  </section>
 
+  <!-- Article list view (per source) -->
+  <section class="section" id="reader-article-view" style="display:none;">
+    <button class="btn btn-outline" id="reader-back" style="margin-bottom:16px;">&larr; Back to Sources</button>
+    <div style="margin-bottom:20px;">
+      <span class="section-label" id="reader-source-name"></span>
+      <p style="font-size:13px;color:var(--color-text-muted);margin-top:4px;" id="reader-source-stats"></p>
+    </div>
     <div class="article-list" id="reader-list">
       <p style="text-align:center;color:var(--color-text-muted);padding:24px;">Loading articles...</p>
     </div>

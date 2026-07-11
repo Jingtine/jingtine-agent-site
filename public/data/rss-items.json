@@ -1,12 +1,204 @@
 {
-  "generated": "2026-07-11T20:20:57.551449+08:00",
-  "total": 50,
+  "generated": "2026-07-12T00:16:42.643947+08:00",
+  "total": 60,
   "items": [
     {
+      "id": "b6751349536e",
+      "title": "We scaled PgBouncer to 4x throughput",
+      "link": "https://clickhouse.com/blog/pgbouncer-clickhouse-managed-postgres",
+      "description": "Article URL: https://clickhouse.com/blog/pgbouncer-clickhouse-managed-postgres\nComments URL: https://news.ycombinator.com/item?id=48872874\nPoints: 30\n# Comments: 2",
+      "pubDate": "2026-07-11T23:28:02+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "7d4528f516f2",
+      "title": "大量猫咪后肢瘫痪，闯祸的是猫粮吗？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MTg1MjI3MzY2MQ==&mid=2652367694&idx=1&sn=a79b458939b704fc225551bfc1440f30&chksm=5c4ba4a74a9ac4ae0b00d217de86bb823c469d586d73f1f7ea58bdc8611da6f9a2996e22ff86",
+      "description": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最近有媒体报道，许多网友反映自己家的小猫后腿瘫痪，只能靠前腿拖着身体爬行，甚至开始大小便失禁，而动物医院往往无法明确病因。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好在，大多数小猫在更换猫粮后情况好转。网友们发现，患病小猫食用的猫粮集中在几个品牌。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这让不少养猫人开始怀疑，问题是不是出在猫粮上——难道是猫粮有毒吗？&nbsp;&nbsp;&nbsp;&n",
+      "pubDate": "2026-07-11T22:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "2d335529865d",
+      "title": "饱和攻击：全美体育如何打爆“USA250”概念｜CASE",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA4MjQzNDYyMQ==&mid=2650507996&idx=1&sn=1e1ba93159ef5f2b018b37d2dbb81fe1&chksm=86f7aa0b10c1327bc7b28e78c003f7c5f756b14cbe6edc677c8c4f42dec0c336a80ea4cee57e",
+      "description": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了祝贺美国独立250周年，国际足联送上了一份特殊的“贺礼”。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7月5日国际足联宣布，对在与波黑队比赛中被红牌罚下的美国队球员福拉林·巴洛贡（Folarin Balogun）作出禁赛一场的处罚，并暂缓一年执行。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;体育数据平台Opta指出，自1970年世界杯引入红黄牌规则以来，此前从未有球员在吃到红牌的情况下能继续出",
+      "pubDate": "2026-07-11T22:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "20fb0e32be2f",
+      "title": "王忠民：未来可以记账，可以定义为一种交易的商品",
+      "link": "https://mp.weixin.qq.com/s?__biz=MTI3NTQ1MTY0MQ==&mid=2650671209&idx=1&sn=8103d0360d81f206d0f0a869b193aad6&chksm=7d76f514bfe40d4bf48a2738e5665480446859c23365b83a45e2369ea9cab8803f19f9e5f57a",
+      "description": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所有企业家如果瞄准未来的技术、产业和服务，一定会产生当下最有成长性、盈利率、市值最大化的公司。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文｜《中国企业家》记者 胡楠楠编辑｜米娜图片来源｜中企图库7月10日~11日，由《中国企业家》杂志社主办的2026《中国企业家》未来之星年会在广州海珠举行。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在11日上午的开幕演讲环节，深圳市金融稳定发展研究院理事长，全",
+      "pubDate": "2026-07-11T22:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "f54b6e7bb881",
+      "title": "Speculations Concerning the First Ultraintelligent Machine (1965) [pdf]",
+      "link": "https://languagelog.ldc.upenn.edu/myl/Good1964.pdf",
+      "description": "Article URL: https://languagelog.ldc.upenn.edu/myl/Good1964.pdf\nComments URL: https://news.ycombinator.com/item?id=48871932\nPoints: 41\n# Comments: 22",
+      "pubDate": "2026-07-11T21:33:17+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "a22826d6b102",
+      "title": "FCC approves test of space mirror to light night sky",
+      "link": "https://theconversation.com/the-u-s-just-approved-a-giant-space-mirror-to-test-sunlight-on-demand-low-earth-orbit-is-getting-weird-283482",
+      "description": "https://www.nytimes.com/2026/07/10/climate/fcc-space-mirror....https://www.pcmag.com/news/fcc-approves-reflect-orbitals-gia...\n\nComments URL: https://news.ycombinator.com/item?id=48871367\nPoints: 63\n# Comments: 69",
+      "pubDate": "2026-07-11T20:12:34+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "07bd4dfc101f",
+      "title": "今年最期待的 AI 手机，要来了",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjgzMTAwODI0MA==&mid=2652457143&idx=1&sn=f71890f735c124de3d95df6fcf415c4a&chksm=9ab9c39f12b0ac750ee866e7b27b24c73f93c02e53a91edde9d3a35ffa48edc84765dcdd1315",
+      "description": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7 月的好消息接踵而至。前有三星发布广告预热今年的阔折叠，后有谷歌发函、号称「Android 样板间」的 Pixel 系列又要更新了。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图｜PhoneArena前几日，谷歌向媒体发送了 2026 年 Made by Google 硬件发布会的邀请函，活动正式定档 8 月 12 日在纽约举行。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图｜Google按照正",
+      "pubDate": "2026-07-11T20:04:27+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "3430e6feeae6",
+      "title": "经济和市场综述 - 20260711",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg4NzY3NzIwOA==&mid=2247497228&idx=1&sn=e743a2bd94c23a889ddbbd9306dfeb4a&chksm=ceca9b2135687611e45c7330e97cd03fefe4cb8417a302db28c2b84ba953ca620f7f2658bcd6",
+      "description": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我都不记得上一次讨论市场和经济是什么时候了，我自己今年在四月份战争结束之后做了一波铜的反弹，然后五月中旬发现宏观开始有些逆风就休息了差不多两个月。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果要说的话，四月份之后没有选择美股而是铜是一个遗憾甚至错误，然后错过了五月份六月份半导体的行情也是遗憾。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我自己觉得七月底是另一个可能的节点，二季度美股的财报，我估计",
+      "pubDate": "2026-07-11T20:04:27+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "42a79fed5b20",
+      "title": "从产品竞争到价值叙事，消费品增长逻辑变了",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA5MzU0MTAzMw==&mid=2651896368&idx=1&sn=3a9f46c7da4f12912be781b678bb87e4&chksm=8a074a9f9046a9dab9565894ca5296359371c7dce1df7741231e37b8c8d9c5052fd18c10114c",
+      "description": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作者丨赵波校审丨葛畅 排版丨殷传家很多品牌今天遇到的增长问题，表面看是流量变贵、渠道分散、价格内卷、用户难留，但更深一层看，是品牌叙事失效了。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;过去，品牌只要回答三个问题就够了：我是谁？我卖什么？&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我凭什么更好？今天，这三个问题已经不够。消费者还在问更多问题。&nbsp;&nbsp;&nbsp;&nbsp;&nbs",
+      "pubDate": "2026-07-11T20:04:27+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "38414b748b7a",
+      "title": "宁夏银行，下场卖房",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI4OTcxMDA0MQ==&mid=2247546782&idx=1&sn=2a2a2cebc6fa8e8c91685bb8620aae06&chksm=eda1198f6cd5227b2409fff67efee1d1cb3a039cf8bc4b522ebf1ac3194f2e3a7475815adbda",
+      "description": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宁夏银行开始亲自下场卖房了。7月2日，宁夏银行官方公众号推文，宣布其“京东官方资产店铺已正式上线，银行直供房产线上即可选购”，封面图是醒目的红底金字的“好消息”。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;进入宁夏银行的官方资产店铺，可以看到上到挂牌价9200万的酒店、2700万的商业用房，下到9万元的小商铺，另外还有价值不等的住宅楼等产品正在售卖。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“这",
+      "pubDate": "2026-07-11T20:04:27+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "d2422f2f9b08",
+      "title": "多机构预测上半年GDP增速超4.5%，下半年关键看出口和房地产",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5MjEyODE4MA==&mid=2653348322&idx=1&sn=9598ffb473cd5cde5e5132de8fe2d092&chksm=bc6d5c40b5127422e7df817e017b599176afebae4f3a5275dd825001202078b0d6de1b003935",
+      "description": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7月15日，国家统计局将公布上半年经济数据。在外部环境复杂多变、内需修复仍需进一步巩固的背景下，这份中国经济上半年“成绩单”备受市场关注。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从目前已披露的机构预测来看，二季度经济增速大概率较一季度有所回落。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;多家研究机构预计，二季度GDP同比增长4.2%～4.5%，上半年GDP增速则有望保持在4.5%～4.7%区间",
+      "pubDate": "2026-07-11T20:04:27+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "e228c764c855",
+      "title": "一边限制移民，一边引进印度人，日本在打什么算盘？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5MjEyODE4MA==&mid=2653348322&idx=3&sn=ed13dc8d8a60303ec9908696dcddcc76&chksm=bce7184ec45faeba68d98941759da7d654496a1ddc13544327035faa7596871a49763d0d2a8d",
+      "description": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日本再一次邀请印度人才赴日。7月初，日本首相高市早苗访问印度期间，和印度总理莫迪发表的一份声明草案显示，日本在2030年前拟邀请500名印度高技能人才赴日。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;△高市早苗会见莫迪 图源：视觉中国500人这个数量并不算多，但是日本和印度不断加强合作的一个缩影。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;近年来，在日印度人数量一直在增长。日本统计局和外务省数据显",
+      "pubDate": "2026-07-11T20:04:27+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "52e7c192c54d",
+      "title": "半年净利预增超9倍，股价却两月跌近四成！“电解液龙头”天赐材料正陷行业集体焦虑？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5MjEyODE4MA==&mid=2653348322&idx=4&sn=123ba58eace6d06380171bfa34a8c0e3&chksm=bce64682781d1b6bb84aff977d67028de95879d2f21cc72de98d959ab6fe8e468b83e7c72c88",
+      "description": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7月9日晚间，“电解液龙头”天赐材料（002709.SZ）披露2026年半年度业绩预告：预计上半年归母净利润27亿—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30亿元，同比增幅907.84%—1019.82%；扣非归母净利润26.5亿—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;29.5亿元，同比增长1029.57%—1157.44%。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
+      "pubDate": "2026-07-11T20:04:27+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "051782cf9c50",
+      "title": "Your code is fast – if you're lucky",
+      "link": "https://tiki.li/blog/lucky_code.html",
+      "description": "Article URL: https://tiki.li/blog/lucky_code.html\nComments URL: https://news.ycombinator.com/item?id=48870799\nPoints: 105\n# Comments: 65",
+      "pubDate": "2026-07-11T18:50:10+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "8269cb6b471d",
+      "title": "Show HN: Richest people in the world by wealth creation instead of ownership",
+      "link": "https://anti-forbes-list.vercel.app",
+      "description": "Article URL: https://anti-forbes-list.vercel.app\nComments URL: https://news.ycombinator.com/item?id=48870472\nPoints: 37\n# Comments: 32",
+      "pubDate": "2026-07-11T17:54:14+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "d25a187a89eb",
+      "title": "Ghost Font: A font that humans can read but AI cannot",
+      "link": "https://www.mixfont.com/ghost-font",
+      "description": "Article URL: https://www.mixfont.com/ghost-font\nComments URL: https://news.ycombinator.com/item?id=48870381\nPoints: 90\n# Comments: 80",
+      "pubDate": "2026-07-11T17:36:53+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
       "id": "12f5e9933c02",
-      "title": "Almost $1B Later, the US Still Can't Make a Medical Glove",
+      "title": "Why it's so difficult to produce American-made medical gloves",
       "link": "https://www.bloomberg.com/news/features/2026-07-07/why-it-s-so-difficult-to-produce-100-american-made-medical-gloves",
-      "description": "Article URL: https://www.bloomberg.com/news/features/2026-07-07/why-it-s-so-difficult-to-produce-100-american-made-medical-gloves\nComments URL: https://news.ycombinator.com/item?id=48870258\nPoints: 66\n# Comments: 45",
+      "description": "https://archive.ph/wtC7m\n\nComments URL: https://news.ycombinator.com/item?id=48870258\nPoints: 81\n# Comments: 83",
       "pubDate": "2026-07-11T17:16:10+08:00",
       "source": {
         "id": "hn-frontpage",
@@ -18,7 +210,7 @@
       "id": "08bb41db9a42",
       "title": "The vintage beauty of Soviet control rooms (2018)",
       "link": "https://designyoutrust.com/2018/01/vintage-beauty-soviet-control-rooms/",
-      "description": "Article URL: https://designyoutrust.com/2018/01/vintage-beauty-soviet-control-rooms/\nComments URL: https://news.ycombinator.com/item?id=48868996\nPoints: 126\n# Comments: 42",
+      "description": "Article URL: https://designyoutrust.com/2018/01/vintage-beauty-soviet-control-rooms/\nComments URL: https://news.ycombinator.com/item?id=48868996\nPoints: 170\n# Comments: 58",
       "pubDate": "2026-07-11T13:19:41+08:00",
       "source": {
         "id": "hn-frontpage",
@@ -30,7 +222,7 @@
       "id": "77d7ff9dffda",
       "title": "Einstein's relativity rules chemical bonds in heavy elements, new research shows",
       "link": "https://www.brown.edu/news/2026-07-09/chemical-bonds-relativity",
-      "description": "https://www.science.org/doi/10.1126/science.aei1285\n\nComments URL: https://news.ycombinator.com/item?id=48866134\nPoints: 284\n# Comments: 110",
+      "description": "https://www.science.org/doi/10.1126/science.aei1285\n\nComments URL: https://news.ycombinator.com/item?id=48866134\nPoints: 332\n# Comments: 142",
       "pubDate": "2026-07-11T06:30:44+08:00",
       "source": {
         "id": "hn-frontpage",
@@ -54,7 +246,7 @@
       "id": "ba0dc24cfcb7",
       "title": "Apple sues OpenAI, accuses ex-employees of stealing trade secrets",
       "link": "https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/",
-      "description": "https://www.macrumors.com/2026/07/10/apple-sues-openai/\n\nComments URL: https://news.ycombinator.com/item?id=48865019\nPoints: 1179\n# Comments: 611",
+      "description": "https://www.macrumors.com/2026/07/10/apple-sues-openai/\n\nComments URL: https://news.ycombinator.com/item?id=48865019\nPoints: 1358\n# Comments: 739",
       "pubDate": "2026-07-11T04:47:09+08:00",
       "source": {
         "id": "hn-frontpage",
@@ -66,44 +258,8 @@
       "id": "990b9963a2e2",
       "title": "An update on residential proxies and the scraper situation",
       "link": "https://lwn.net/SubscriberLink/1080822/990a8a5e2d379085/",
-      "description": "Article URL: https://lwn.net/SubscriberLink/1080822/990a8a5e2d379085/\nComments URL: https://news.ycombinator.com/item?id=48864252\nPoints: 224\n# Comments: 233",
+      "description": "Article URL: https://lwn.net/SubscriberLink/1080822/990a8a5e2d379085/\nComments URL: https://news.ycombinator.com/item?id=48864252\nPoints: 268\n# Comments: 286",
       "pubDate": "2026-07-11T03:38:34+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "66bbdd7828c6",
-      "title": "GPT-5.6 Sol Ultra produces proof of the Cycle Double Cover Conjecture [pdf]",
-      "link": "https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf",
-      "description": "https://x.com/__eknight__/status/2075643450196971805, https://xcancel.com/__eknight__/status/2075643450196971805Prompt: https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98...\n\nComments URL: https://news.ycombinator.com/item?id=48863490\nPoints: 472\n# Comments: 380",
-      "pubDate": "2026-07-11T02:29:19+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "3bdd4de3beb1",
-      "title": "New York City to ban deceptive subscription practices",
-      "link": "https://www.theguardian.com/us-news/2026/jul/10/new-york-city-deceptive-subscriptions-ban",
-      "description": "https://www.nyc.gov/mayors-office/news/2026/07/mayor-mamdani...\n\nComments URL: https://news.ycombinator.com/item?id=48863464\nPoints: 549\n# Comments: 266",
-      "pubDate": "2026-07-11T02:26:24+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "97eeb5c77e1c",
-      "title": "War Atlas: An interactive cartography of every named war in human history",
-      "link": "https://waratlas.org",
-      "description": "Article URL: https://waratlas.org\nComments URL: https://news.ycombinator.com/item?id=48863080\nPoints: 165\n# Comments: 68",
-      "pubDate": "2026-07-11T01:52:48+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -114,7 +270,7 @@
       "id": "ec728a5c2214",
       "title": "SpaceX wants to launch 100k more Starlink satellites for 100x the bandwidth",
       "link": "https://www.zdnet.com/home-and-office/networking/spacex-wants-to-launch-100000-more-starlink-satellites/",
-      "description": "Article URL: https://www.zdnet.com/home-and-office/networking/spacex-wants-to-launch-100000-more-starlink-satellites/\nComments URL: https://news.ycombinator.com/item?id=48863064\nPoints: 207\n# Comments: 683",
+      "description": "Article URL: https://www.zdnet.com/home-and-office/networking/spacex-wants-to-launch-100000-more-starlink-satellites/\nComments URL: https://news.ycombinator.com/item?id=48863064\nPoints: 248\n# Comments: 886",
       "pubDate": "2026-07-11T01:51:07+08:00",
       "source": {
         "id": "hn-frontpage",
@@ -138,7 +294,7 @@
       "id": "592fa46ff108",
       "title": "The tech of 'Terminator 2' – an oral history (2017)",
       "link": "https://vfxblog.com/2017/08/23/the-tech-of-terminator-2-an-oral-history/",
-      "description": "Article URL: https://vfxblog.com/2017/08/23/the-tech-of-terminator-2-an-oral-history/\nComments URL: https://news.ycombinator.com/item?id=48862365\nPoints: 222\n# Comments: 78",
+      "description": "Article URL: https://vfxblog.com/2017/08/23/the-tech-of-terminator-2-an-oral-history/\nComments URL: https://news.ycombinator.com/item?id=48862365\nPoints: 243\n# Comments: 83",
       "pubDate": "2026-07-11T00:48:41+08:00",
       "source": {
         "id": "hn-frontpage",
@@ -150,7 +306,7 @@
       "id": "4080afe13876",
       "title": "Snails' teeth beats spider silk as nature's strongest material (2015)",
       "link": "https://www.smithsonianmag.com/smart-news/spider-silk-loses-top-spot-natures-strongest-material-snails-teeth-180954346/",
-      "description": "Article URL: https://www.smithsonianmag.com/smart-news/spider-silk-loses-top-spot-natures-strongest-material-snails-teeth-180954346/\nComments URL: https://news.ycombinator.com/item?id=48862252\nPoints: 197\n# Comments: 153",
+      "description": "Article URL: https://www.smithsonianmag.com/smart-news/spider-silk-loses-top-spot-natures-strongest-material-snails-teeth-180954346/\nComments URL: https://news.ycombinator.com/item?id=48862252\nPoints: 216\n# Comments: 162",
       "pubDate": "2026-07-11T00:37:52+08:00",
       "source": {
         "id": "hn-frontpage",
@@ -162,32 +318,8 @@
       "id": "39404e835ddc",
       "title": "QuadRF can spot drones and see WiFi through my wall",
       "link": "https://www.jeffgeerling.com/blog/2026/quadrf-can-spot-drones-and-see-wifi-through-my-wall/",
-      "description": "Article URL: https://www.jeffgeerling.com/blog/2026/quadrf-can-spot-drones-and-see-wifi-through-my-wall/\nComments URL: https://news.ycombinator.com/item?id=48861717\nPoints: 620\n# Comments: 202",
+      "description": "Article URL: https://www.jeffgeerling.com/blog/2026/quadrf-can-spot-drones-and-see-wifi-through-my-wall/\nComments URL: https://news.ycombinator.com/item?id=48861717\nPoints: 669\n# Comments: 217",
       "pubDate": "2026-07-10T23:59:53+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "33c3dc4f0bf6",
-      "title": "A love letter to flashcards",
-      "link": "https://lesleylai.info/en/flashcards/",
-      "description": "Article URL: https://lesleylai.info/en/flashcards/\nComments URL: https://news.ycombinator.com/item?id=48861319\nPoints: 159\n# Comments: 98",
-      "pubDate": "2026-07-10T23:30:44+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "84088ef657dd",
-      "title": "Computation as a universal and fundamental concept",
-      "link": "https://ergo.org/courses/computation-as-a-universal-and-fundamental-concept",
-      "description": "Article URL: https://ergo.org/courses/computation-as-a-universal-and-fundamental-concept\nComments URL: https://news.ycombinator.com/item?id=48861213\nPoints: 139\n# Comments: 99",
-      "pubDate": "2026-07-10T23:23:42+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -198,7 +330,7 @@
       "id": "39dc6b106e22",
       "title": "After 7 years in production, Scarf has reluctantly moved away from Haskell",
       "link": "https://avi.press/posts/2026-07-10-after-7-years-in-production-scarf-has-reluctantly-moved-away-from-haskell.html",
-      "description": "Article URL: https://avi.press/posts/2026-07-10-after-7-years-in-production-scarf-has-reluctantly-moved-away-from-haskell.html\nComments URL: https://news.ycombinator.com/item?id=48859673\nPoints: 161\n# Comments: 193",
+      "description": "Article URL: https://avi.press/posts/2026-07-10-after-7-years-in-production-scarf-has-reluctantly-moved-away-from-haskell.html\nComments URL: https://news.ycombinator.com/item?id=48859673\nPoints: 195\n# Comments: 232",
       "pubDate": "2026-07-10T21:30:41+08:00",
       "source": {
         "id": "hn-frontpage",
@@ -222,7 +354,7 @@
       "id": "ae95130ff5f8",
       "title": "Late Bronze Age Collapse",
       "link": "https://acoup.blog/2026/01/30/collections-the-late-bronze-age-collapse-a-very-brief-introduction/",
-      "description": "Article URL: https://acoup.blog/2026/01/30/collections-the-late-bronze-age-collapse-a-very-brief-introduction/\nComments URL: https://news.ycombinator.com/item?id=48858737\nPoints: 381\n# Comments: 265",
+      "description": "Article URL: https://acoup.blog/2026/01/30/collections-the-late-bronze-age-collapse-a-very-brief-introduction/\nComments URL: https://news.ycombinator.com/item?id=48858737\nPoints: 401\n# Comments: 282",
       "pubDate": "2026-07-10T19:59:55+08:00",
       "source": {
         "id": "hn-frontpage",
@@ -234,7 +366,7 @@
       "id": "f7707651119d",
       "title": "Good Tools Are Invisible",
       "link": "https://www.gingerbill.org/article/2026/07/10/good-tools-are-invisible/",
-      "description": "Article URL: https://www.gingerbill.org/article/2026/07/10/good-tools-are-invisible/\nComments URL: https://news.ycombinator.com/item?id=48858121\nPoints: 461\n# Comments: 214",
+      "description": "Article URL: https://www.gingerbill.org/article/2026/07/10/good-tools-are-invisible/\nComments URL: https://news.ycombinator.com/item?id=48858121\nPoints: 503\n# Comments: 227",
       "pubDate": "2026-07-10T18:32:41+08:00",
       "source": {
         "id": "hn-frontpage",
@@ -263,18 +395,6 @@
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "13a2da05b83b",
-      "title": "Wildcard (YC W25) Is Hiring a Founding Engineer",
-      "link": "https://www.ycombinator.com/companies/wildcard/jobs/ZSLVaaU-founding-engineer",
-      "description": "Article URL: https://www.ycombinator.com/companies/wildcard/jobs/ZSLVaaU-founding-engineer\nComments URL: https://news.ycombinator.com/item?id=48849011\nPoints: 0\n# Comments: 0",
-      "pubDate": "2026-07-10T01:00:37+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
       },
       "category": "ai-agent"
     },

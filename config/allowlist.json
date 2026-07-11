@@ -2,6 +2,7 @@
   "description": "Approved feed sources for RSS aggregation.",
   "feeds": [
     "hn-frontpage",
-    "simonw-blog"
+    "simonw-blog",
+    "wasi-reader"
   ]
 }
