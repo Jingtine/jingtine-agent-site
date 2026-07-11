@@ -67,6 +67,7 @@ function renderArticleList(containerId, articles, limit) {
       '</a>';
   }
   container.innerHTML = html;
+  if (window.SiteMotion) window.SiteMotion.revealNewElements(container);
 }
 
 /**

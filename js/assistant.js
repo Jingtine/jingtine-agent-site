@@ -254,5 +254,6 @@
       card.appendChild(summary);
       list.appendChild(card);
     }
+    if (window.SiteMotion) window.SiteMotion.revealNewElements(list);
   }
 })();

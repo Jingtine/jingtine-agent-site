@@ -40,6 +40,7 @@
         container.appendChild(card);
       }
     }
+    if (window.SiteMotion) window.SiteMotion.revealNewElements(container);
   }
 
   function createCard(paper) {

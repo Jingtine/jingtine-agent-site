@@ -78,6 +78,8 @@
       container.appendChild(card);
     }
 
+    if (window.SiteMotion) window.SiteMotion.revealNewElements(container);
+
     // Search handler
     var search = document.getElementById('source-search');
     search.value = '';
@@ -136,6 +138,7 @@
       var card = createArticleCard(src.items[i]);
       if (card) container.appendChild(card);
     }
+    if (window.SiteMotion) window.SiteMotion.revealNewElements(container);
   }
 
   function createArticleCard(item) {

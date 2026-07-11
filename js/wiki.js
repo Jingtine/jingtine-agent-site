@@ -226,8 +226,9 @@
               if (allPages[k].id === pid || allPages[k].id.endsWith('/' + pid)) {
                 showDetail(allPages[k]);
                 return;
-              }
-            }
+    }
+    if (window.SiteMotion) window.SiteMotion.revealNewElements(container);
+  }
           });
           frag.appendChild(span);
           lastIdx = match.index + match[0].length;

@@ -33,6 +33,7 @@
     grid.appendChild(createCard('Quality', [['Result', data.quality.result || ''], ['Last Validated', data.quality.lastValidation || '']]));
     grid.appendChild(createServicesCard(data.services));
     container.appendChild(grid);
+    if (window.SiteMotion) window.SiteMotion.revealNewElements(container);
   }
 
   function createOverview(data) {
