@@ -104,14 +104,21 @@
     <div class="section-label">Blog</div>
     <h2 class="section-title">Latest Thoughts</h2>
     <div class="thoughts-preview">
-      <p>Writing about AI Agent, Software Engineering, and Product Thinking.</p>
-      <a href="blog.html" class="btn btn-outline">Visit Blog &rarr;</a>
+      <div class="article-list" id="latest-posts"></div>
+      <a href="blog.html" class="btn btn-outline" style="margin-top: 20px;">Visit Blog &rarr;</a>
     </div>
   </section>
 
   <footer class="footer">
     <p>&copy; 2026 Jingtine</p>
   </footer>
+
+  <script src="js/blog.js"></script>
+  <script>
+    loadArticleIndex().then(function (articles) {
+      renderArticleList('latest-posts', articles, 2);
+    });
+  </script>
 
 </body>
 </html>
