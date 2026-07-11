@@ -788,9 +788,16 @@ a.contact-value:hover {
   margin-bottom: 24px;
 }
 
+.project-subtitle {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--accent-purple);
+  margin-bottom: 16px;
+}
+
 .project-detail-meta {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px 0;
   border-top: 1px solid var(--color-border-light);
