@@ -182,8 +182,8 @@
       .then(function (res) { return res.text(); })
       .then(function (md) {
         body.innerHTML = marked.parse(md);
-        // Render wiki links as links to other pages
         renderWikiLinks(body, page);
+        if (window.SiteMotion) window.SiteMotion.revealNewElements(body);
       })
       .catch(function () {
         body.innerHTML = '<p style="text-align:center;color:var(--color-text-muted);padding:24px;">Failed to load page.</p>';
@@ -226,10 +226,8 @@
               if (allPages[k].id === pid || allPages[k].id.endsWith('/' + pid)) {
                 showDetail(allPages[k]);
                 return;
-    }
-    if (window.SiteMotion) window.SiteMotion.revealNewElements(container);
-  }
-          });
+              }
+            });
           frag.appendChild(span);
           lastIdx = match.index + match[0].length;
         }
