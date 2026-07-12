@@ -76,7 +76,6 @@
           if (!cards[m].classList.contains('revealed')) observeReveal(cards[m], m);
         }
       }
-    }
   }
 
   // ── Public API ─────────────────────────────────────────

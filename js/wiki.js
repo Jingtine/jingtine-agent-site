@@ -10,14 +10,24 @@
 
   // ── Init ──────────────────────────────────────────────
   fetch('public/data/wiki.json')
-    .then(function (res) { return res.json(); })
+    .then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    })
     .then(function (data) {
-      allPages = data.pages || [];
+      var pages = Array.isArray(data) ? data : (data && data.pages) || [];
+      if (!Array.isArray(pages)) throw new Error('wiki.json: pages is not an array');
+      allPages = pages;
       setupCategoryFilter();
       setupSearch();
-      renderList(allPages);
+      if (allPages.length === 0) {
+        showEmpty('No wiki pages yet.');
+      } else {
+        renderList(allPages);
+      }
     })
-    .catch(function () {
+    .catch(function (error) {
+      console.error('Failed to load wiki:', error);
       showEmpty('Failed to load wiki.');
     });
 
@@ -101,9 +111,10 @@
   // ── Card list ─────────────────────────────────────────
   function renderList(pages) {
     var container = document.getElementById('wiki-article-list');
+    if (!container) return;
     container.textContent = '';
 
-    if (pages.length === 0) {
+    if (!pages || pages.length === 0) {
       showEmpty('No pages found.');
       return;
     }
@@ -111,6 +122,12 @@
     for (var i = 0; i < pages.length; i++) {
       var card = createCard(pages[i]);
       if (card) container.appendChild(card);
+    }
+
+    try {
+      if (window.SiteMotion) window.SiteMotion.revealNewElements(container);
+    } catch (motionError) {
+      console.warn('Motion enhancement failed:', motionError);
     }
   }
 
@@ -183,9 +200,14 @@
       .then(function (md) {
         body.innerHTML = marked.parse(md);
         renderWikiLinks(body, page);
-        if (window.SiteMotion) window.SiteMotion.revealNewElements(body);
+        try {
+          if (window.SiteMotion) window.SiteMotion.revealNewElements(body);
+        } catch (motionError) {
+          console.warn('Motion enhancement failed:', motionError);
+        }
       })
-      .catch(function () {
+      .catch(function (error) {
+        console.error('Failed to load wiki page:', error);
         body.innerHTML = '<p style="text-align:center;color:var(--color-text-muted);padding:24px;">Failed to load page.</p>';
       });
   }
@@ -227,7 +249,8 @@
                 showDetail(allPages[k]);
                 return;
               }
-            });
+            }
+          });
           frag.appendChild(span);
           lastIdx = match.index + match[0].length;
         }
