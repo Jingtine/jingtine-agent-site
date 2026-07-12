@@ -46,6 +46,7 @@
 html {
   scroll-behavior: smooth;
   overflow-y: auto;
+  background: var(--color-bg);
 }
 
 /* ===== Custom Scrollbar ===== */
@@ -79,7 +80,7 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background: var(--color-bg);
+  background: transparent;
   color: var(--color-text);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -141,6 +142,7 @@ body {
 }
 
 .hero-bg {
+  display: none;
   position: absolute;
   top: -180px;
   right: -120px;
@@ -1396,5 +1398,144 @@ a.contact-value:hover {
 
   .thoughts-preview {
     padding: 24px 20px;
+  }
+}
+
+/* ============================================
+   Global Fixed Background System
+   - Purple & blue orbs (body::before / body::after)
+   - Sparse meteor layer (DOM injected by site-motion.js)
+   - Fixed to viewport; page content scrolls above
+   ============================================ */
+
+/* Purple orb — top-right */
+body::before {
+  content: "";
+  position: fixed;
+  top: -160px;
+  right: -140px;
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(
+    circle,
+    rgba(196, 181, 253, 0.30) 0%,
+    rgba(147, 197, 253, 0.12) 42%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(110px);
+  z-index: -1;
+  pointer-events: none;
+  will-change: transform, opacity;
+  animation: orbDriftPurple 22s ease-in-out infinite;
+}
+
+/* Blue orb — bottom-left */
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -180px;
+  left: -120px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(
+    circle,
+    rgba(147, 197, 253, 0.22) 0%,
+    rgba(196, 181, 253, 0.08) 45%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+  pointer-events: none;
+  will-change: transform, opacity;
+  animation: orbDriftBlue 18s ease-in-out infinite;
+}
+
+@keyframes orbDriftPurple {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50%      { transform: translate3d(22px, -16px, 0) scale(1.025); }
+}
+
+@keyframes orbDriftBlue {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50%      { transform: translate3d(-18px, 14px, 0) scale(1.03); }
+}
+
+/* Meteor layer — injected by site-motion.js */
+.meteor-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.meteor {
+  position: absolute;
+  top: 8%;
+  left: 95%;
+  width: 130px;
+  height: 1.5px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(196, 181, 253, 0.40) 35%,
+    rgba(255, 255, 255, 0.85) 100%
+  );
+  border-radius: 999px;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.meteor-1 { animation: meteorFall 26s ease-in 4s infinite; }
+.meteor-2 { animation: meteorFall 33s ease-in 12s infinite; }
+.meteor-3 { animation: meteorFall 29s ease-in 19s infinite; }
+
+@keyframes meteorFall {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(135deg);
+    opacity: 0;
+  }
+  2% {
+    opacity: 0.8;
+  }
+  6% {
+    transform: translate3d(-120vw, 80vh, 0) rotate(135deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(-120vw, 80vh, 0) rotate(135deg);
+    opacity: 0;
+  }
+}
+
+/* ===== Reduced Motion: static background, no meteors ===== */
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after {
+    animation: none;
+  }
+  .meteor-layer {
+    display: none;
+  }
+}
+
+/* ===== Responsive: calm background on mobile ===== */
+@media (max-width: 768px) {
+  body::before {
+    width: 360px;
+    height: 360px;
+    filter: blur(80px);
+    opacity: 0.7;
+  }
+  body::after {
+    width: 320px;
+    height: 320px;
+    filter: blur(90px);
+    opacity: 0.6;
+  }
+  .meteor-layer {
+    display: none;
   }
 }

@@ -88,12 +88,11 @@
     }
   };
 
-  // ── Homepage hero parallax ─────────────────────────────
-  var isHome = document.querySelector('.hero-bg') && document.querySelector('.hero-content');
+  // ── Homepage hero parallax (foreground only; background is global & fixed) ──
+  var isHome = document.querySelector('.hero-content');
 
   if (isHome && !reduced) {
     var hero = document.querySelector('.hero');
-    var heroBg = document.querySelector('.hero-bg');
     var heroContent = document.querySelector('.hero-content');
     var heroHeight;
 
@@ -101,10 +100,6 @@
       heroHeight = hero.offsetHeight;
       var scrollY = window.pageYOffset;
       var progress = Math.min(scrollY / (heroHeight || 1), 1);
-
-      if (heroBg) {
-        heroBg.style.transform = 'translateY(' + (scrollY * 0.03) + 'px)';
-      }
 
       var y = Math.min(scrollY * 0.2, 60);
       var opacity = 1 - progress * 0.55;
@@ -127,6 +122,17 @@
 
     updateHero();
   }
+
+  // ── Global meteor layer (fixed background decoration) ──
+  var meteorLayer = document.createElement('div');
+  meteorLayer.className = 'meteor-layer';
+  meteorLayer.setAttribute('aria-hidden', 'true');
+  for (var mi = 1; mi <= 3; mi++) {
+    var meteor = document.createElement('div');
+    meteor.className = 'meteor meteor-' + mi;
+    meteorLayer.appendChild(meteor);
+  }
+  document.body.appendChild(meteorLayer);
 
   // ── Init ───────────────────────────────────────────────
   if (!reduced) {
