@@ -9,3 +9,11 @@ Desktop.ini
 *.swp
 *.swo
 *~
+
+# Debug artifacts
+artifacts/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
