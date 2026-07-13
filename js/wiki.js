@@ -257,7 +257,7 @@
     fetch(page.path)
       .then(function (res) { return res.text(); })
       .then(function (md) {
-        body.innerHTML = marked.parse(md);
+        body.innerHTML = marked.parse(cleanMarkdown(md));
         renderWikiLinks(body, page);
         try {
           if (window.SiteMotion) window.SiteMotion.revealNewElements(body);
@@ -327,6 +327,10 @@
   });
 
   // ── Helpers ──────────────────────────────────────────
+  function cleanMarkdown(md) {
+    return md.replace(/^---[\s\S]*?---\n?/m, '');
+  }
+
   function showEmpty(msg) {
     var container = document.getElementById('wiki-article-list');
     container.textContent = '';
