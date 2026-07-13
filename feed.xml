@@ -5,21 +5,61 @@
     <link>https://jingtine.github.io/jingtine-agent-site</link>
     <description>Thoughts on AI Agent, Software Engineering, and Product Thinking</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 11 Jul 2026 10:19:17 -0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 11:42:16 -0000</lastBuildDate>
     <atom:link href="https://jingtine.github.io/jingtine-agent-site/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Hello World</title>
-      <link>https://jingtine.github.io/jingtine-agent-site/article.html?slug=hello-world</link>
-      <description>第一篇博客文章，关于这个网站的诞生与愿景。</description>
-      <pubDate>Thu, 09 Jul 2026 16:00:00 -0000</pubDate>
-      <category>AI Agent</category>
-      <guid isPermaLink="true">https://jingtine.github.io/jingtine-agent-site/article.html?slug=hello-world</guid>
+      <title>Building NoteWhale: Why I Started</title>
+      <link>https://jingtine.github.io/jingtine-agent-site/article.html?slug=notewhale-why-started</link>
+      <description>从学生痛点出发，构建一个 AI 驱动的知识管理平台。</description>
+      <pubDate>Sun, 12 Jul 2026 16:00:00 -0000</pubDate>
+      <category>Product Thinking</category>
+      <guid isPermaLink="true">https://jingtine.github.io/jingtine-agent-site/article.html?slug=notewhale-why-started</guid>
+    </item>
+    <item>
+      <title>Building My Digital Garden</title>
+      <link>https://jingtine.github.io/jingtine-agent-site/article.html?slug=building-digital-garden</link>
+      <description>为什么我选择构建数字花园而不是传统作品集。</description>
+      <pubDate>Sun, 12 Jul 2026 16:00:00 -0000</pubDate>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://jingtine.github.io/jingtine-agent-site/article.html?slug=building-digital-garden</guid>
+    </item>
+    <item>
+      <title>From UI to Product</title>
+      <link>https://jingtine.github.io/jingtine-agent-site/article.html?slug=from-ui-to-product</link>
+      <description>从 UI 打磨到产品思维，设计个人网站过程中的反思。</description>
+      <pubDate>Sun, 12 Jul 2026 16:00:00 -0000</pubDate>
+      <category>Product Thinking</category>
+      <guid isPermaLink="true">https://jingtine.github.io/jingtine-agent-site/article.html?slug=from-ui-to-product</guid>
+    </item>
+    <item>
+      <title>Product Thinking for Engineers</title>
+      <link>https://jingtine.github.io/jingtine-agent-site/article.html?slug=product-thinking-101</link>
+      <description>工程师如何培养产品思维，从技术视角走向用户视角。</description>
+      <pubDate>Sat, 11 Jul 2026 16:00:00 -0000</pubDate>
+      <category>Product Thinking</category>
+      <guid isPermaLink="true">https://jingtine.github.io/jingtine-agent-site/article.html?slug=product-thinking-101</guid>
+    </item>
+    <item>
+      <title>My OpenCode + Superpowers Workflow</title>
+      <link>https://jingtine.github.io/jingtine-agent-site/article.html?slug=opencode-superpowers-workflow</link>
+      <description>使用 OpenCode 和 Superpowers 技能系统规划后再编码的工作流。</description>
+      <pubDate>Sat, 11 Jul 2026 16:00:00 -0000</pubDate>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://jingtine.github.io/jingtine-agent-site/article.html?slug=opencode-superpowers-workflow</guid>
+    </item>
+    <item>
+      <title>GitHub Pages Development Notes</title>
+      <link>https://jingtine.github.io/jingtine-agent-site/article.html?slug=github-pages-dev-notes</link>
+      <description>在 GitHub Pages 上部署静态站点的技术笔记：Hash 路由、Markdown 服务、缓存与 NoJekyll。</description>
+      <pubDate>Sat, 11 Jul 2026 16:00:00 -0000</pubDate>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://jingtine.github.io/jingtine-agent-site/article.html?slug=github-pages-dev-notes</guid>
     </item>
     <item>
       <title>Building My First AI Agent</title>
       <link>https://jingtine.github.io/jingtine-agent-site/article.html?slug=building-agent</link>
       <description>从零构建一个自主 Agent 的实践记录与思考。</description>
-      <pubDate>Sat, 04 Jul 2026 16:00:00 -0000</pubDate>
+      <pubDate>Fri, 10 Jul 2026 16:00:00 -0000</pubDate>
       <category>AI Agent</category>
       <guid isPermaLink="true">https://jingtine.github.io/jingtine-agent-site/article.html?slug=building-agent</guid>
     </item>
@@ -27,17 +67,17 @@
       <title>Why Software Engineering Matters for AI</title>
       <link>https://jingtine.github.io/jingtine-agent-site/article.html?slug=why-se-matters</link>
       <description>软件工程实践如何影响 AI 项目的质量与可维护性。</description>
-      <pubDate>Sat, 27 Jun 2026 16:00:00 -0000</pubDate>
+      <pubDate>Fri, 10 Jul 2026 16:00:00 -0000</pubDate>
       <category>Software Engineering</category>
       <guid isPermaLink="true">https://jingtine.github.io/jingtine-agent-site/article.html?slug=why-se-matters</guid>
     </item>
     <item>
-      <title>Product Thinking for Engineers</title>
-      <link>https://jingtine.github.io/jingtine-agent-site/article.html?slug=product-thinking-101</link>
-      <description>工程师如何培养产品思维，从技术视角走向用户视角。</description>
-      <pubDate>Fri, 19 Jun 2026 16:00:00 -0000</pubDate>
-      <category>Product Thinking</category>
-      <guid isPermaLink="true">https://jingtine.github.io/jingtine-agent-site/article.html?slug=product-thinking-101</guid>
+      <title>Hello World</title>
+      <link>https://jingtine.github.io/jingtine-agent-site/article.html?slug=hello-world</link>
+      <description>第一篇博客文章，关于这个网站的诞生与愿景。</description>
+      <pubDate>Thu, 09 Jul 2026 16:00:00 -0000</pubDate>
+      <category>AI Agent</category>
+      <guid isPermaLink="true">https://jingtine.github.io/jingtine-agent-site/article.html?slug=hello-world</guid>
     </item>
   </channel>
 </rss>

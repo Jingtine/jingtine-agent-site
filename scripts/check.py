@@ -60,6 +60,13 @@ def p(msg):
     print(msg)
 
 
+def strip_code_blocks(md):
+    """Remove fenced code blocks and inline code from Markdown text."""
+    md = re.sub(r'```[\s\S]*?```', '', md)
+    md = re.sub(r'`[^`]*`', '', md)
+    return md
+
+
 def resolve_link(href, html_path):
     """Resolve a link href to a local file path, or None if external/skip."""
     if not href:
@@ -501,6 +508,7 @@ def check_blog_wiki_links():
             fpath = os.path.join(articles_dir, fname)
             with open(fpath, "r", encoding="utf-8") as f:
                 md = f.read()
+            md = strip_code_blocks(md)
             matches = wiki_link_pattern.findall(md)
             if matches:
                 found_articles.append(fname)
@@ -615,6 +623,105 @@ def check_wiki_related_blog():
     return passed
 
 
+def check_blog_content():
+    """Check 15: Blog content completeness and metadata."""
+    passed = True
+
+    if not os.path.exists(ARTICLES_JSON):
+        p(f"{FAIL} Blog content:       articles/index.json not found")
+        return False
+
+    with open(ARTICLES_JSON, "r", encoding="utf-8") as f:
+        articles = json.load(f)
+
+    if len(articles) < 9:
+        p(f"{FAIL} Blog content:       {len(articles)} articles (expected >= 9)")
+        passed = False
+
+    required_fields = ["slug", "title", "date", "category", "summary"]
+    incomplete = []
+    for i, a in enumerate(articles):
+        missing = [f for f in required_fields if f not in a or not a.get(f)]
+        if missing:
+            incomplete.append((i, missing))
+
+    if incomplete:
+        p(f"{FAIL} Blog content:       metadata incomplete")
+        for idx, missing in incomplete:
+            p(f"  {CROSS} article[{idx}] missing: {', '.join(missing)}")
+        passed = False
+
+    articles_dir = os.path.join(PROJECT_DIR, "articles")
+    missing_md = []
+    for a in articles:
+        slug = a.get("slug", "")
+        md_path = os.path.join(articles_dir, slug + ".md")
+        if not os.path.exists(md_path):
+            missing_md.append(slug)
+
+    if missing_md:
+        p(f"{FAIL} Blog content:       missing .md files: {', '.join(missing_md)}")
+        passed = False
+
+    if os.path.exists(WIKI_JSON):
+        with open(WIKI_JSON, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        pages = data.get("pages", [])
+        wiki_ids = set()
+        wiki_slugs = set()
+        wiki_titles_lower = set()
+        for page in pages:
+            wiki_ids.add(page.get("id", ""))
+            wiki_slugs.add(page.get("id", "").split("/")[-1])
+            wiki_titles_lower.add(page.get("title", "").lower())
+
+        wiki_link_pattern = re.compile(r'\[\[([^\]]+)\]\]')
+        unresolved = set()
+        article_count_with_wiki = 0
+
+        for a in articles:
+            slug = a.get("slug", "")
+            md_path = os.path.join(articles_dir, slug + ".md")
+            if not os.path.exists(md_path):
+                continue
+            with open(md_path, "r", encoding="utf-8") as f:
+                md = f.read()
+            md = strip_code_blocks(md)
+            matches = wiki_link_pattern.findall(md)
+            if matches:
+                article_count_with_wiki += 1
+            for m in matches:
+                ref = m.strip()
+                ref_lower = ref.lower()
+                if ref in wiki_ids or ref in wiki_slugs or ref_lower in wiki_titles_lower:
+                    continue
+                unresolved.add(ref)
+
+        if unresolved:
+            p(f"{FAIL} Blog content:       unresolved wiki refs: {', '.join(sorted(unresolved))}")
+            passed = False
+
+        if article_count_with_wiki < 2:
+            p(f"{FAIL} Blog content:       only {article_count_with_wiki} articles have wiki links (expected >= 2)")
+            passed = False
+
+    slugs = [a.get("slug", "") for a in articles]
+    if len(slugs) != len(set(slugs)):
+        p(f"{FAIL} Blog content:       duplicate article slugs")
+        passed = False
+
+    if os.path.exists(FEED_XML):
+        tree = ET.parse(FEED_XML)
+        feed_items = tree.findall(".//item")
+        if len(feed_items) != len(articles):
+            p(f"{FAIL} Blog content:       feed.xml has {len(feed_items)} items {NEQ} {len(articles)} articles")
+            passed = False
+
+    if passed:
+        p(f"{PASS} Blog content:       {len(articles)} articles, metadata ok, wiki refs ok")
+    return passed
+
+
 # ── Main ────────────────────────────────────────────────────────
 
 def main():
@@ -674,6 +781,9 @@ def main():
 
     # Check 14
     results.append(check_wiki_related_blog())
+
+    # Check 15
+    results.append(check_blog_content())
 
     # Summary
     passed = sum(1 for r in results if r)
