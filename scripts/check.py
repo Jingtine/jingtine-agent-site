@@ -722,6 +722,50 @@ def check_blog_content():
     return passed
 
 
+def check_wiki_content():
+    """Check 16: Wiki page content completeness."""
+    wiki_dir = os.path.join(PROJECT_DIR, "content", "wiki")
+    required_sections = [
+        "## Overview", "## Core Concepts", "## How It Works",
+        "## Advantages", "## Limitations", "## Example",
+        "## Related Blogs", "## Related Projects", "## Further Reading",
+    ]
+    passed = True
+    total_pages = 0
+    incomplete = []
+
+    if not os.path.isdir(wiki_dir):
+        p(f"{FAIL} Wiki content:       content/wiki/ not found")
+        return False
+
+    for root, dirs, files in os.walk(wiki_dir):
+        for fname in sorted(files):
+            if not fname.endswith(".md"):
+                continue
+            total_pages += 1
+            fpath = os.path.join(root, fname)
+            with open(fpath, "r", encoding="utf-8") as f:
+                content = f.read()
+            missing = [s for s in required_sections if s not in content]
+            if missing:
+                rel = os.path.relpath(fpath, PROJECT_DIR).replace("\\", "/")
+                incomplete.append((rel, missing))
+
+    if total_pages < 30:
+        p(f"{FAIL} Wiki content:       {total_pages} pages (expected >= 30)")
+        passed = False
+
+    if incomplete:
+        p(f"{FAIL} Wiki content:       {len(incomplete)} page(s) missing sections")
+        for rel, missing in incomplete:
+            p(f"  {CROSS} {rel}: missing {', '.join(missing)}")
+        passed = False
+
+    if passed:
+        p(f"{PASS} Wiki content:       {total_pages} pages, all sections present")
+    return passed
+
+
 # ── Main ────────────────────────────────────────────────────────
 
 def main():
@@ -784,6 +828,9 @@ def main():
 
     # Check 15
     results.append(check_blog_content())
+
+    # Check 16
+    results.append(check_wiki_content())
 
     # Summary
     passed = sum(1 for r in results if r)

@@ -1,23 +1,24 @@
 {
-  "generated": "2026-07-11T23:27:07.079823",
-  "total": 9,
+  "generated": "2026-07-13T20:12:26.318112",
+  "total": 30,
   "pages": [
     {
-      "id": "AI/rag-pipeline",
-      "title": "RAG Pipeline",
+      "id": "AI/agent-memory",
+      "title": "Agent Memory",
       "category": "AI",
       "tags": [
-        "rag",
-        "retrieval",
-        "embedding"
+        "memory",
+        "context",
+        "agent",
+        "persistence"
       ],
-      "updated": "2026-07-05",
-      "summary": "Retrieval-Augmented Generation pipeline design and implementation.",
+      "updated": "2026-07-13",
+      "summary": "How AI agents store and retrieve information across interactions.",
       "links": [
         "agent-overview",
-        "llm-basics"
+        "rag-pipeline"
       ],
-      "path": "content/wiki/AI/rag-pipeline.md"
+      "path": "content/wiki/AI/agent-memory.md"
     },
     {
       "id": "AI/agent-overview",
@@ -28,13 +29,50 @@
         "llm",
         "reasoning"
       ],
-      "updated": "2026-07-01",
+      "updated": "2026-07-13",
       "summary": "An overview of AI agents, their architecture, and key concepts.",
       "links": [
         "llm-basics",
-        "rag-pipeline"
+        "rag-pipeline",
+        "tool-calling",
+        "planning"
       ],
       "path": "content/wiki/AI/agent-overview.md"
+    },
+    {
+      "id": "AI/embedding",
+      "title": "Embedding",
+      "category": "AI",
+      "tags": [
+        "embedding",
+        "vector",
+        "representation"
+      ],
+      "updated": "2026-07-13",
+      "summary": "Vector representations of text for semantic similarity.",
+      "links": [
+        "rag-pipeline",
+        "vector-database"
+      ],
+      "path": "content/wiki/AI/embedding.md"
+    },
+    {
+      "id": "AI/evaluation",
+      "title": "Evaluation",
+      "category": "AI",
+      "tags": [
+        "evaluation",
+        "metrics",
+        "testing",
+        "llm"
+      ],
+      "updated": "2026-07-13",
+      "summary": "Methods and metrics for evaluating LLM and agent performance.",
+      "links": [
+        "agent-overview",
+        "rag-pipeline"
+      ],
+      "path": "content/wiki/AI/evaluation.md"
     },
     {
       "id": "AI/llm-basics",
@@ -45,45 +83,139 @@
         "transformer",
         "gpt"
       ],
-      "updated": "2026-06-20",
+      "updated": "2026-07-13",
       "summary": "Foundational concepts of large language models and transformer architecture.",
       "links": [
         "agent-overview",
-        "rag-pipeline"
+        "rag-pipeline",
+        "prompt-engineering"
       ],
       "path": "content/wiki/AI/llm-basics.md"
     },
     {
-      "id": "Software/clean-architecture",
-      "title": "Clean Architecture",
-      "category": "Software",
+      "id": "AI/planning",
+      "title": "Planning",
+      "category": "AI",
       "tags": [
-        "architecture",
-        "design",
-        "solid"
+        "planning",
+        "reasoning",
+        "decomposition",
+        "agent"
       ],
-      "updated": "2026-06-15",
-      "summary": "Principles of clean architecture for maintainable software systems.",
+      "updated": "2026-07-13",
+      "summary": "How AI agents decompose complex tasks into executable steps.",
       "links": [
-        "design-patterns"
+        "agent-overview",
+        "tool-calling"
       ],
-      "path": "content/wiki/Software/clean-architecture.md"
+      "path": "content/wiki/AI/planning.md"
     },
     {
-      "id": "Product/product-thinking",
-      "title": "Product Thinking",
+      "id": "AI/prompt-engineering",
+      "title": "Prompt Engineering",
+      "category": "AI",
+      "tags": [
+        "prompt",
+        "llm",
+        "instruction"
+      ],
+      "updated": "2026-07-13",
+      "summary": "Techniques for designing effective prompts for large language models.",
+      "links": [
+        "llm-basics",
+        "agent-overview"
+      ],
+      "path": "content/wiki/AI/prompt-engineering.md"
+    },
+    {
+      "id": "AI/rag-pipeline",
+      "title": "RAG Pipeline",
+      "category": "AI",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embedding"
+      ],
+      "updated": "2026-07-13",
+      "summary": "Retrieval-Augmented Generation pipeline design and implementation.",
+      "links": [
+        "embedding",
+        "vector-database",
+        "llm-basics"
+      ],
+      "path": "content/wiki/AI/rag-pipeline.md"
+    },
+    {
+      "id": "AI/tool-calling",
+      "title": "Tool Calling",
+      "category": "AI",
+      "tags": [
+        "tool",
+        "function",
+        "agent",
+        "api"
+      ],
+      "updated": "2026-07-13",
+      "summary": "Enabling LLMs to invoke external tools and APIs.",
+      "links": [
+        "agent-overview",
+        "planning"
+      ],
+      "path": "content/wiki/AI/tool-calling.md"
+    },
+    {
+      "id": "AI/vector-database",
+      "title": "Vector Database",
+      "category": "AI",
+      "tags": [
+        "vector",
+        "database",
+        "similarity",
+        "search"
+      ],
+      "updated": "2026-07-13",
+      "summary": "Databases optimized for storing and querying high-dimensional vectors.",
+      "links": [
+        "embedding",
+        "rag-pipeline"
+      ],
+      "path": "content/wiki/AI/vector-database.md"
+    },
+    {
+      "id": "Product/design-thinking",
+      "title": "Design Thinking",
       "category": "Product",
       "tags": [
-        "product",
         "design",
-        "thinking"
+        "thinking",
+        "innovation",
+        "process"
       ],
-      "updated": "2026-06-10",
-      "summary": "Introduction to product thinking for engineers and builders.",
+      "updated": "2026-07-13",
+      "summary": "A human-centered approach to innovation and problem-solving.",
       "links": [
-        "mvp-design"
+        "product-thinking",
+        "user-journey"
       ],
-      "path": "content/wiki/Product/product-thinking.md"
+      "path": "content/wiki/Product/design-thinking.md"
+    },
+    {
+      "id": "Product/information-architecture",
+      "title": "Information Architecture",
+      "category": "Product",
+      "tags": [
+        "ia",
+        "structure",
+        "navigation",
+        "ux"
+      ],
+      "updated": "2026-07-13",
+      "summary": "Organizing and structuring content for findability and usability.",
+      "links": [
+        "product-thinking",
+        "user-journey"
+      ],
+      "path": "content/wiki/Product/information-architecture.md"
     },
     {
       "id": "Product/mvp-design",
@@ -94,12 +226,137 @@
         "mvp",
         "lean"
       ],
-      "updated": "2026-06-05",
+      "updated": "2026-07-13",
       "summary": "Principles and practices for designing effective minimum viable products.",
       "links": [
-        "product-thinking"
+        "product-thinking",
+        "user-journey"
       ],
       "path": "content/wiki/Product/mvp-design.md"
+    },
+    {
+      "id": "Product/product-metrics",
+      "title": "Product Metrics",
+      "category": "Product",
+      "tags": [
+        "metrics",
+        "analytics",
+        "kpi",
+        "data"
+      ],
+      "updated": "2026-07-13",
+      "summary": "Key performance indicators and metrics for measuring product success.",
+      "links": [
+        "product-thinking",
+        "mvp-design"
+      ],
+      "path": "content/wiki/Product/product-metrics.md"
+    },
+    {
+      "id": "Product/product-thinking",
+      "title": "Product Thinking",
+      "category": "Product",
+      "tags": [
+        "product",
+        "design",
+        "thinking"
+      ],
+      "updated": "2026-07-13",
+      "summary": "Introduction to product thinking for engineers and builders.",
+      "links": [
+        "mvp-design",
+        "design-thinking",
+        "product-metrics"
+      ],
+      "path": "content/wiki/Product/product-thinking.md"
+    },
+    {
+      "id": "Product/user-journey",
+      "title": "User Journey",
+      "category": "Product",
+      "tags": [
+        "journey",
+        "ux",
+        "mapping",
+        "persona"
+      ],
+      "updated": "2026-07-13",
+      "summary": "Mapping the steps a user takes to achieve a goal with a product.",
+      "links": [
+        "product-thinking",
+        "mvp-design"
+      ],
+      "path": "content/wiki/Product/user-journey.md"
+    },
+    {
+      "id": "Software/caching",
+      "title": "Caching",
+      "category": "Software",
+      "tags": [
+        "caching",
+        "performance",
+        "optimization"
+      ],
+      "updated": "2026-07-13",
+      "summary": "Strategies for storing and reusing computed results to improve performance.",
+      "links": [
+        "rest-api",
+        "deployment"
+      ],
+      "path": "content/wiki/Software/caching.md"
+    },
+    {
+      "id": "Software/ci-cd",
+      "title": "CI/CD",
+      "category": "Software",
+      "tags": [
+        "ci",
+        "cd",
+        "automation",
+        "pipeline"
+      ],
+      "updated": "2026-07-13",
+      "summary": "Continuous integration and continuous delivery practices for software projects.",
+      "links": [
+        "testing",
+        "git-workflow",
+        "deployment"
+      ],
+      "path": "content/wiki/Software/ci-cd.md"
+    },
+    {
+      "id": "Software/clean-architecture",
+      "title": "Clean Architecture",
+      "category": "Software",
+      "tags": [
+        "architecture",
+        "design",
+        "solid"
+      ],
+      "updated": "2026-07-13",
+      "summary": "Principles of clean architecture for maintainable software systems.",
+      "links": [
+        "design-patterns",
+        "testing"
+      ],
+      "path": "content/wiki/Software/clean-architecture.md"
+    },
+    {
+      "id": "Software/deployment",
+      "title": "Deployment",
+      "category": "Software",
+      "tags": [
+        "deployment",
+        "hosting",
+        "release"
+      ],
+      "updated": "2026-07-13",
+      "summary": "Strategies and practices for deploying software to production.",
+      "links": [
+        "ci-cd",
+        "caching"
+      ],
+      "path": "content/wiki/Software/deployment.md"
     },
     {
       "id": "Software/design-patterns",
@@ -110,12 +367,83 @@
         "oop",
         "engineering"
       ],
-      "updated": "2026-05-28",
+      "updated": "2026-07-13",
       "summary": "Common software design patterns and their practical applications.",
       "links": [
-        "clean-architecture"
+        "clean-architecture",
+        "git-workflow"
       ],
       "path": "content/wiki/Software/design-patterns.md"
+    },
+    {
+      "id": "Software/git-workflow",
+      "title": "Git Workflow",
+      "category": "Software",
+      "tags": [
+        "git",
+        "version-control",
+        "branching"
+      ],
+      "updated": "2026-07-13",
+      "summary": "Version control workflows for collaborative software development.",
+      "links": [
+        "ci-cd",
+        "testing"
+      ],
+      "path": "content/wiki/Software/git-workflow.md"
+    },
+    {
+      "id": "Software/rest-api",
+      "title": "REST API",
+      "category": "Software",
+      "tags": [
+        "api",
+        "rest",
+        "http",
+        "interface"
+      ],
+      "updated": "2026-07-13",
+      "summary": "Principles and practices for designing RESTful APIs.",
+      "links": [
+        "caching",
+        "deployment"
+      ],
+      "path": "content/wiki/Software/rest-api.md"
+    },
+    {
+      "id": "Software/testing",
+      "title": "Testing",
+      "category": "Software",
+      "tags": [
+        "testing",
+        "quality",
+        "automation"
+      ],
+      "updated": "2026-07-13",
+      "summary": "Software testing methodologies and practices for ensuring code quality.",
+      "links": [
+        "ci-cd",
+        "git-workflow"
+      ],
+      "path": "content/wiki/Software/testing.md"
+    },
+    {
+      "id": "Study/active-recall",
+      "title": "Active Recall",
+      "category": "Study",
+      "tags": [
+        "learning",
+        "memory",
+        "recall",
+        "study"
+      ],
+      "updated": "2026-07-13",
+      "summary": "A learning technique that strengthens memory through active retrieval practice.",
+      "links": [
+        "knowledge-management",
+        "second-brain"
+      ],
+      "path": "content/wiki/Study/active-recall.md"
     },
     {
       "id": "Study/computer-networks",
@@ -126,12 +454,50 @@
         "tcpip",
         "osi"
       ],
-      "updated": "2026-05-20",
+      "updated": "2026-07-13",
       "summary": "Study notes on computer networking fundamentals.",
       "links": [
         "operating-systems"
       ],
       "path": "content/wiki/Study/computer-networks.md"
+    },
+    {
+      "id": "Study/digital-garden",
+      "title": "Digital Garden",
+      "category": "Study",
+      "tags": [
+        "garden",
+        "knowledge",
+        "network",
+        "notes"
+      ],
+      "updated": "2026-07-13",
+      "summary": "A personal knowledge management approach emphasizing interconnected, growing notes.",
+      "links": [
+        "wikilinks",
+        "knowledge-management",
+        "second-brain"
+      ],
+      "path": "content/wiki/Study/digital-garden.md"
+    },
+    {
+      "id": "Study/knowledge-management",
+      "title": "Knowledge Management",
+      "category": "Study",
+      "tags": [
+        "knowledge",
+        "management",
+        "organization",
+        "pkm"
+      ],
+      "updated": "2026-07-13",
+      "summary": "Systems and practices for capturing, organizing, and retrieving knowledge.",
+      "links": [
+        "digital-garden",
+        "second-brain",
+        "active-recall"
+      ],
+      "path": "content/wiki/Study/knowledge-management.md"
     },
     {
       "id": "Study/operating-systems",
@@ -142,12 +508,31 @@
         "processes",
         "memory"
       ],
-      "updated": "2026-05-15",
+      "updated": "2026-07-13",
       "summary": "Study notes on operating system concepts and internals.",
       "links": [
         "computer-networks"
       ],
       "path": "content/wiki/Study/operating-systems.md"
+    },
+    {
+      "id": "Study/second-brain",
+      "title": "Second Brain",
+      "category": "Study",
+      "tags": [
+        "second-brain",
+        "pkm",
+        "productivity",
+        "notes"
+      ],
+      "updated": "2026-07-13",
+      "summary": "A personal knowledge system that offloads information processing from biological memory.",
+      "links": [
+        "digital-garden",
+        "knowledge-management",
+        "active-recall"
+      ],
+      "path": "content/wiki/Study/second-brain.md"
     }
   ]
 }
