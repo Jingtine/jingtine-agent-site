@@ -88,39 +88,145 @@
     }
   };
 
-  // ── Homepage hero parallax (foreground only; background is global & fixed) ──
+  // ── Homepage hero intro transition ────────────────────
   var isHome = document.querySelector('.hero-content');
 
   if (isHome && !reduced) {
-    var hero = document.querySelector('.hero');
-    var heroContent = document.querySelector('.hero-content');
-    var heroHeight;
+    var avatarStage = document.querySelector('.hero-avatar-stage');
+    var avatarWrap = document.querySelector('.hero-avatar-wrap');
+    var decoLayer = document.querySelector('.hero-intro-deco');
+    var greeting = document.querySelector('.hero-greeting');
+    var nameEl = document.querySelector('.hero-name');
+    var identity = document.querySelector('.hero-identity');
+    var tags = document.querySelector('.hero-tags');
+    var desc = document.querySelector('.hero-desc');
 
-    function updateHero() {
-      heroHeight = hero.offsetHeight;
-      var scrollY = window.pageYOffset;
-      var progress = Math.min(scrollY / (heroHeight || 1), 1);
+    var isMobile = window.matchMedia('(max-width: 768px)').matches;
+    var TRANSITION_DIST = isMobile ? 260 : 360;
+    var INITIAL_SCALE = isMobile ? 1.58 : 1.5;
+    var cachedInitialTY = 0;
 
-      var y = Math.min(scrollY * 0.2, 60);
-      var opacity = 1 - progress * 0.55;
-      var scale = 1 - progress * 0.025;
-
-      heroContent.style.transform = 'translateY(-' + y + 'px) scale(' + scale.toFixed(3) + ')';
-      heroContent.style.opacity = Math.max(opacity.toFixed(2), 0.4);
+    function computeInitialTY() {
+      if (!avatarStage) return;
+      var rect = avatarStage.getBoundingClientRect();
+      var normalCenter = rect.top + rect.height / 2;
+      var targetCenter = window.innerHeight * 0.35;
+      cachedInitialTY = Math.max(targetCenter - normalCenter, 0);
     }
 
+    function rangeProgress(p, start, end) {
+      return Math.min(Math.max((p - start) / (end - start), 0), 1);
+    }
+
+    function applyIntroState(progress) {
+      var avatarScale = INITIAL_SCALE + (1 - INITIAL_SCALE) * progress;
+      var avatarTY = cachedInitialTY * (1 - progress);
+      avatarWrap.style.transform = 'translate3d(0,' + avatarTY.toFixed(2) + 'px,0) scale(' + avatarScale.toFixed(4) + ')';
+
+      var decoOpacity = Math.max(1 - progress / 0.75, 0);
+      var decoScale = 1 + (1 - progress) * 0.15;
+      if (decoLayer) {
+        decoLayer.style.opacity = decoOpacity.toFixed(3);
+        decoLayer.style.transform = 'translate(-50%, -50%) scale(' + decoScale.toFixed(3) + ')';
+        decoLayer.style.visibility = decoOpacity > 0 ? 'visible' : 'hidden';
+      }
+
+      var greetingP = rangeProgress(progress, 0.15, 0.40);
+      var nameP = rangeProgress(progress, 0.15, 0.40);
+      var identityP = rangeProgress(progress, 0.30, 0.60);
+      var tagsP = rangeProgress(progress, 0.45, 0.75);
+      var descP = rangeProgress(progress, 0.60, 0.90);
+
+      if (greeting) {
+        greeting.style.opacity = (0.2 + 0.8 * greetingP).toFixed(3);
+        greeting.style.transform = 'translateY(' + (30 * (1 - greetingP)).toFixed(1) + 'px)';
+      }
+      if (nameEl) {
+        nameEl.style.opacity = (0.5 + 0.5 * nameP).toFixed(3);
+        nameEl.style.transform = 'translateY(' + (25 * (1 - nameP)).toFixed(1) + 'px)';
+      }
+      if (identity) {
+        identity.style.opacity = (0.15 + 0.85 * identityP).toFixed(3);
+        identity.style.transform = 'translateY(' + (35 * (1 - identityP)).toFixed(1) + 'px)';
+      }
+      if (tags) {
+        tags.style.opacity = (0.15 + 0.85 * tagsP).toFixed(3);
+        tags.style.transform = 'translateY(' + (35 * (1 - tagsP)).toFixed(1) + 'px)';
+      }
+      if (desc) {
+        desc.style.opacity = (0.15 + 0.85 * descP).toFixed(3);
+        desc.style.transform = 'translateY(' + (40 * (1 - descP)).toFixed(1) + 'px)';
+      }
+    }
+
+    function applyFinalState() {
+      avatarWrap.style.transform = '';
+      if (decoLayer) {
+        decoLayer.style.opacity = '0';
+        decoLayer.style.transform = '';
+        decoLayer.style.visibility = 'hidden';
+      }
+      if (greeting) { greeting.style.opacity = ''; greeting.style.transform = ''; }
+      if (nameEl) { nameEl.style.opacity = ''; nameEl.style.transform = ''; }
+      if (identity) { identity.style.opacity = ''; identity.style.transform = ''; }
+      if (tags) { tags.style.opacity = ''; tags.style.transform = ''; }
+      if (desc) { desc.style.opacity = ''; desc.style.transform = ''; }
+    }
+
+    function updateIntro() {
+      var scrollY = window.pageYOffset;
+      if (scrollY >= TRANSITION_DIST) {
+        applyFinalState();
+        document.documentElement.classList.remove('hero-intro');
+        return;
+      }
+      if (!document.documentElement.classList.contains('hero-intro')) {
+        document.documentElement.classList.add('hero-intro');
+      }
+      if (decoLayer) decoLayer.style.visibility = 'visible';
+      var progress = Math.min(scrollY / TRANSITION_DIST, 1);
+      applyIntroState(progress);
+    }
+
+    // Cancel CSS fallback animations — JS is taking over
+    var introEls = [avatarWrap, decoLayer, greeting, nameEl, identity, tags, desc];
+    for (var i = 0; i < introEls.length; i++) {
+      if (introEls[i]) introEls[i].style.animation = 'none';
+    }
+
+    // Compute initial position from real layout (getBoundingClientRect allowed here, not in scroll frame)
+    computeInitialTY();
+
+    // Apply state immediately for current scrollY (handles refresh at mid-scroll)
+    updateIntro();
+
+    // Scroll handler (passive + RAF)
     var ticking = false;
     window.addEventListener('scroll', function () {
       if (!ticking) {
         requestAnimationFrame(function () {
-          updateHero();
+          updateIntro();
           ticking = false;
         });
         ticking = true;
       }
     }, { passive: true });
 
-    updateHero();
+    // Resize handler (throttled with RAF)
+    var resizeTicking = false;
+    window.addEventListener('resize', function () {
+      if (!resizeTicking) {
+        requestAnimationFrame(function () {
+          isMobile = window.matchMedia('(max-width: 768px)').matches;
+          TRANSITION_DIST = isMobile ? 260 : 360;
+          INITIAL_SCALE = isMobile ? 1.58 : 1.5;
+          computeInitialTY();
+          updateIntro();
+          resizeTicking = false;
+        });
+        resizeTicking = true;
+      }
+    }, { passive: true });
   }
 
   // ── Global meteor layer (fixed background decoration) ──
