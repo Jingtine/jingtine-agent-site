@@ -106,6 +106,9 @@
     var identity = document.querySelector('.hero-identity');
     var tags = document.querySelector('.hero-tags');
     var desc = document.querySelector('.hero-desc');
+    var waveformWrap = document.querySelector('.hero-waveform-wrap');
+    var waveformEl = document.querySelector('.hero-waveform');
+    var pulseWrap = document.querySelector('.hero-waveform-pulse-wrap');
 
     var isMobile = window.matchMedia('(max-width: 768px)').matches;
     var INTRO_DIST = isMobile ? 260 : 360;
@@ -117,23 +120,42 @@
     var initialContentTY = 0;
     var handledFinal = false;
 
+    var BAR_COUNT = isMobile ? 36 : 48;
+    var BAR_BASE_RADIUS = isMobile ? 90 : 115;
+    var BAR_MIN_HEIGHT = isMobile ? 6 : 8;
+    var BAR_MAX_HEIGHT = isMobile ? 16 : 22;
+
     // ── Particle presets (deterministic, reproducible) ──
     var PARTICLE_PRESETS = [
-      { angle: 15,  radius: 110, size: 5, opacity: 0.50, duration: 7.0, delay: 0.0 },
-      { angle: 55,  radius: 130, size: 4, opacity: 0.40, duration: 8.0, delay: 1.5 },
-      { angle: 95,  radius: 100, size: 6, opacity: 0.45, duration: 7.5, delay: 0.8 },
-      { angle: 135, radius: 140, size: 3, opacity: 0.35, duration: 9.0, delay: 2.5 },
-      { angle: 175, radius: 120, size: 5, opacity: 0.45, duration: 7.2, delay: 1.0 },
-      { angle: 215, radius: 135, size: 4, opacity: 0.40, duration: 8.5, delay: 2.0 },
-      { angle: 255, radius: 105, size: 6, opacity: 0.50, duration: 6.8, delay: 0.3 },
-      { angle: 295, radius: 125, size: 3, opacity: 0.35, duration: 8.8, delay: 2.2 },
-      { angle: 335, radius: 115, size: 5, opacity: 0.45, duration: 7.8, delay: 1.2 },
-      { angle: 355, radius: 130, size: 4, opacity: 0.40, duration: 8.2, delay: 2.8 }
+      { angle: 7,   radius: 88, size: 5, opacity: 0.50, duration: 7.0, delay: 0.0 },
+      { angle: 22,  radius: 135, size: 4, opacity: 0.30, duration: 10.5, delay: 3.5 },
+      { angle: 37,  radius: 86, size: 5, opacity: 0.42, duration: 8.1, delay: 1.9 },
+      { angle: 52,  radius: 150, size: 3, opacity: 0.28, duration: 11.0, delay: 5.0 },
+      { angle: 67,  radius: 82, size: 6, opacity: 0.44, duration: 7.3, delay: 2.6 },
+      { angle: 82,  radius: 140, size: 4, opacity: 0.26, duration: 10.8, delay: 4.1 },
+      { angle: 97,  radius: 94, size: 5, opacity: 0.46, duration: 7.5, delay: 1.1 },
+      { angle: 112, radius: 155, size: 3, opacity: 0.24, duration: 11.5, delay: 6.2 },
+      { angle: 127, radius: 78, size: 6, opacity: 0.48, duration: 6.9, delay: 0.4 },
+      { angle: 142, radius: 145, size: 4, opacity: 0.28, duration: 10.2, delay: 3.2 },
+      { angle: 157, radius: 90, size: 5, opacity: 0.44, duration: 7.7, delay: 1.3 },
+      { angle: 172, radius: 160, size: 3, opacity: 0.22, duration: 12.0, delay: 7.0 },
+      { angle: 187, radius: 84, size: 6, opacity: 0.46, duration: 7.2, delay: 0.6 },
+      { angle: 202, radius: 138, size: 4, opacity: 0.30, duration: 10.0, delay: 3.8 },
+      { angle: 217, radius: 92, size: 5, opacity: 0.42, duration: 7.9, delay: 1.7 },
+      { angle: 232, radius: 152, size: 3, opacity: 0.25, duration: 11.2, delay: 5.5 },
+      { angle: 247, radius: 80, size: 6, opacity: 0.48, duration: 6.7, delay: 0.2 },
+      { angle: 262, radius: 132, size: 5, opacity: 0.32, duration: 9.8, delay: 4.5 },
+      { angle: 277, radius: 88, size: 4, opacity: 0.44, duration: 7.4, delay: 1.5 },
+      { angle: 292, radius: 148, size: 3, opacity: 0.26, duration: 11.0, delay: 6.0 },
+      { angle: 307, radius: 96, size: 5, opacity: 0.40, duration: 8.0, delay: 2.0 },
+      { angle: 322, radius: 142, size: 4, opacity: 0.28, duration: 10.5, delay: 4.8 },
+      { angle: 337, radius: 86, size: 6, opacity: 0.44, duration: 7.3, delay: 0.7 },
+      { angle: 352, radius: 156, size: 3, opacity: 0.22, duration: 12.5, delay: 7.5 }
     ];
 
     function createParticles() {
       if (!particlesLayer) return;
-      var count = isMobile ? 6 : PARTICLE_PRESETS.length;
+      var count = isMobile ? 12 : PARTICLE_PRESETS.length;
       var radiusScale = isMobile ? 0.8 : 1.0;
       for (var i = 0; i < count; i++) {
         var p = PARTICLE_PRESETS[i];
@@ -154,6 +176,25 @@
         el.style.setProperty('--fx', fx + 'px');
         el.style.setProperty('--fy', fy + 'px');
         particlesLayer.appendChild(el);
+      }
+    }
+
+    function createWaveform() {
+      if (!waveformEl) return;
+      for (var i = 0; i < BAR_COUNT; i++) {
+        var angle = (i / BAR_COUNT) * 360;
+        var rad = angle * Math.PI / 180;
+        var cx = Math.cos(rad) * BAR_BASE_RADIUS;
+        var cy = Math.sin(rad) * BAR_BASE_RADIUS;
+        var bar = document.createElement('div');
+        bar.className = 'waveform-bar';
+        bar.style.setProperty('--angle', angle + 'deg');
+        bar.style.setProperty('--bar-height', BAR_MAX_HEIGHT + 'px');
+        bar.style.setProperty('--dur', (4.5 + (i % 4) * 1.0) + 's');
+        bar.style.setProperty('--delay', (Math.sin(i * 1.7) * 2.0).toFixed(1) + 's');
+        bar.style.left = 'calc(50% + ' + cx.toFixed(1) + 'px - 1.5px)';
+        bar.style.top = 'calc(50% + ' + cy.toFixed(1) + 'px - var(--bar-height))';
+        waveformEl.appendChild(bar);
       }
     }
 
@@ -239,6 +280,22 @@
         scrollHint.style.opacity = hOp.toFixed(3);
         scrollHint.style.visibility = hOp > 0.001 ? 'visible' : 'hidden';
       }
+
+      // Waveform: exit 0.00→0.78
+      var wfP = rangeProgress(progress, 0.00, 0.78);
+      var wfOp = 1 - wfP;
+      if (waveformWrap) {
+        waveformWrap.style.opacity = wfOp.toFixed(3);
+        waveformWrap.style.visibility = wfOp > 0.001 ? 'visible' : 'hidden';
+      }
+
+      // Pulse: exit 0.00→0.68
+      var ppP = rangeProgress(progress, 0.00, 0.68);
+      var ppOp = 1 - ppP;
+      if (pulseWrap) {
+        pulseWrap.style.opacity = ppOp.toFixed(3);
+        pulseWrap.style.visibility = ppOp > 0.001 ? 'visible' : 'hidden';
+      }
     }
 
     function applyFinalState() {
@@ -257,7 +314,7 @@
         if (textEls[i]) textEls[i].style.opacity = '';
       }
       // Hide and clear all decoration wrappers
-      var decoEls = [particlesLayer, ringWrap, innerGlowWrap, outerGlowWrap, scrollHint];
+      var decoEls = [particlesLayer, ringWrap, innerGlowWrap, outerGlowWrap, scrollHint, waveformWrap, pulseWrap];
       for (var j = 0; j < decoEls.length; j++) {
         if (decoEls[j]) {
           decoEls[j].style.opacity = '0';
@@ -286,6 +343,7 @@
 
     // Generate particles once at init
     createParticles();
+    createWaveform();
 
     // Cancel CSS fallback animations — JS is taking over
     var introEls = [avatarWrap, decoLayer, scrollHint, greeting, nameEl, identity, tags, desc];
