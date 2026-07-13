@@ -255,7 +255,10 @@
     body.innerHTML = '<p style="text-align:center;color:var(--color-text-muted);padding:24px;">Loading...</p>';
 
     fetch(page.path)
-      .then(function (res) { return res.text(); })
+      .then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.text();
+      })
       .then(function (md) {
         body.innerHTML = marked.parse(cleanMarkdown(md));
         renderWikiLinks(body, page);

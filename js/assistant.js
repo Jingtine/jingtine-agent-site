@@ -97,13 +97,17 @@
     for (var i = 0; i < pages.length; i++) {
       (function (page, idx) {
         fetch(page.path)
-          .then(function (res) { return res.text(); })
+          .then(function (res) {
+            if (!res.ok) throw new Error('HTTP ' + res.status + ': ' + page.path);
+            return res.text();
+          })
           .then(function (md) {
             page._content = cleanMarkdown(md);
             loaded++;
             checkDone();
           })
-          .catch(function () {
+          .catch(function (err) {
+            console.error('Failed to load page ' + (page.id || page.path) + ':', err.message);
             page._content = page.summary || '';
             loaded++;
             failed++;
