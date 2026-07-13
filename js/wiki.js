@@ -254,6 +254,9 @@
     body.textContent = '';
     body.innerHTML = '<p style="text-align:center;color:var(--color-text-muted);padding:24px;">Loading...</p>';
 
+    var oldRelated = document.getElementById('wiki-related-articles');
+    if (oldRelated) oldRelated.remove();
+
     fetch(page.path)
       .then(function (res) {
         if (!res.ok) throw new Error('HTTP ' + res.status);
@@ -267,6 +270,7 @@
         } catch (motionError) {
           console.warn('Motion enhancement failed:', motionError);
         }
+        loadRelatedArticles(page, detail);
       })
       .catch(function (error) {
         console.error('Failed to load wiki page:', error);
@@ -332,6 +336,138 @@
   // ── Helpers ──────────────────────────────────────────
   function cleanMarkdown(md) {
     return md.replace(/^---[\s\S]*?---\n?/m, '');
+  }
+
+  // ── Related Blog Articles ───────────────────────────
+  var articleIndexCache = null;
+  var articleIndexLoaded = false;
+
+  function loadArticleIndex() {
+    if (articleIndexLoaded) return Promise.resolve(articleIndexCache);
+    articleIndexLoaded = true;
+    return fetch('articles/index.json')
+      .then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      })
+      .then(function (articles) {
+        articleIndexCache = articles;
+        return articles;
+      })
+      .catch(function (err) {
+        console.warn('Failed to load articles/index.json:', err.message);
+        articleIndexCache = [];
+        return [];
+      });
+  }
+
+  var markdownCache = {};
+
+  function loadArticleMarkdown(slug) {
+    if (markdownCache[slug]) return Promise.resolve(markdownCache[slug]);
+    return fetch('articles/' + slug + '.md')
+      .then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.text();
+      })
+      .then(function (md) {
+        markdownCache[slug] = md;
+        return md;
+      })
+      .catch(function (err) {
+        console.warn('Failed to load article markdown: ' + slug, err.message);
+        return null;
+      });
+  }
+
+  function stripCodeBlocks(md) {
+    md = md.replace(/```[\s\S]*?```/g, '');
+    md = md.replace(/`[^`]*`/g, '');
+    return md;
+  }
+
+  function loadRelatedArticles(targetPage, detailContainer) {
+    loadArticleIndex().then(function (articles) {
+      if (!articles || articles.length === 0) return;
+
+      var promises = articles.map(function (article) {
+        return loadArticleMarkdown(article.slug).then(function (md) {
+          if (!md) return null;
+          var stripped = stripCodeBlocks(md);
+          var regex = /\[\[([^\]]+)\]\]/g;
+          var match;
+          while ((match = regex.exec(stripped)) !== null) {
+            var page = resolveWikiReference(match[1].trim(), allPages);
+            if (page && page.id === targetPage.id) {
+              return article;
+            }
+          }
+          return null;
+        });
+      });
+
+      Promise.all(promises).then(function (results) {
+        var related = results.filter(function (a) { return a !== null; });
+        if (related.length === 0) return;
+
+        var section = document.createElement('div');
+        section.id = 'wiki-related-articles';
+        section.setAttribute('style', 'margin-top:48px;');
+
+        var heading = document.createElement('h3');
+        heading.textContent = 'Related Blog Articles';
+        heading.setAttribute('style', 'font-size:18px;font-weight:600;color:var(--color-text);margin-bottom:16px;');
+        section.appendChild(heading);
+
+        var list = document.createElement('div');
+        list.className = 'article-list';
+
+        for (var i = 0; i < related.length; i++) {
+          list.appendChild(createRelatedCard(related[i]));
+        }
+
+        section.appendChild(list);
+        detailContainer.appendChild(section);
+
+        try {
+          if (window.SiteMotion) window.SiteMotion.revealNewElements(section);
+        } catch (motionError) {
+          console.warn('Motion enhancement failed:', motionError);
+        }
+      });
+    });
+  }
+
+  function createRelatedCard(article) {
+    var card = document.createElement('a');
+    card.className = 'article-card';
+    card.href = 'article.html?slug=' + encodeURIComponent(article.slug);
+
+    var header = document.createElement('div');
+    header.className = 'article-card-header';
+
+    var cat = document.createElement('span');
+    cat.className = 'article-category';
+    cat.textContent = (typeof CATEGORY_MAP !== 'undefined' && CATEGORY_MAP[article.category]) || article.category || '';
+
+    var date = document.createElement('span');
+    date.className = 'article-date';
+    date.textContent = (typeof formatDate !== 'undefined') ? formatDate(article.date) : article.date;
+
+    header.appendChild(cat);
+    header.appendChild(date);
+
+    var title = document.createElement('h3');
+    title.textContent = article.title || '';
+
+    var summary = document.createElement('p');
+    summary.textContent = article.summary || '';
+
+    card.appendChild(header);
+    card.appendChild(title);
+    card.appendChild(summary);
+
+    return card;
   }
 
   function showEmpty(msg) {

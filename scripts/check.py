@@ -539,6 +539,82 @@ def check_blog_wiki_links():
     return passed
 
 
+def check_wiki_related_blog():
+    """Check 14: Wiki detail page shows related blog articles."""
+    wiki_js = os.path.join(PROJECT_DIR, "js", "wiki.js")
+    passed = True
+
+    if not os.path.exists(wiki_js):
+        p(f"{FAIL} Wiki related blog:   js/wiki.js not found")
+        return False
+
+    with open(wiki_js, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    if "articles/index.json" not in content:
+        p(f"{FAIL} Wiki related blog:   wiki.js does not read articles/index.json")
+        passed = False
+
+    if "article.html?slug=" not in content:
+        p(f"{FAIL} Wiki related blog:   wiki.js does not generate article.html?slug= links")
+        passed = False
+
+    if "[[" not in content or "]]" not in content:
+        p(f"{FAIL} Wiki related blog:   wiki.js does not scan for [[...]] patterns")
+        passed = False
+
+    pilot_article = os.path.join(PROJECT_DIR, "articles", "building-agent.md")
+    if os.path.exists(pilot_article):
+        with open(pilot_article, "r", encoding="utf-8") as f:
+            md = f.read()
+        wiki_link_pattern = re.compile(r'\[\[([^\]]+)\]\]')
+        matches = wiki_link_pattern.findall(md)
+
+        if len(matches) < 3:
+            p(f"{FAIL} Wiki related blog:   pilot article has {len(matches)} wiki links (expected >= 3)")
+            passed = False
+        else:
+            if os.path.exists(WIKI_JSON):
+                with open(WIKI_JSON, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                pages = data.get("pages", [])
+                wiki_ids = set()
+                wiki_slugs = set()
+                wiki_titles_lower = set()
+                for page in pages:
+                    wiki_ids.add(page.get("id", ""))
+                    wiki_slugs.add(page.get("id", "").split("/")[-1])
+                    wiki_titles_lower.add(page.get("title", "").lower())
+
+                unresolved = []
+                for ref in matches:
+                    ref = ref.strip()
+                    ref_lower = ref.lower()
+                    if ref in wiki_ids or ref in wiki_slugs or ref_lower in wiki_titles_lower:
+                        continue
+                    unresolved.append(ref)
+
+                if unresolved:
+                    p(f"{FAIL} Wiki related blog:   unresolved references in pilot: {', '.join(unresolved)}")
+                    passed = False
+
+    if os.path.exists(ARTICLES_JSON):
+        with open(ARTICLES_JSON, "r", encoding="utf-8") as f:
+            articles = json.load(f)
+        slugs = [a.get("slug", "") for a in articles]
+        empty = [i for i, s in enumerate(slugs) if not s]
+        if empty:
+            p(f"{FAIL} Wiki related blog:   empty article slug at index {empty}")
+            passed = False
+        if len(slugs) != len(set(slugs)):
+            p(f"{FAIL} Wiki related blog:   duplicate article slugs")
+            passed = False
+
+    if passed:
+        p(f"{PASS} Wiki related blog:   related articles configured")
+    return passed
+
+
 # ── Main ────────────────────────────────────────────────────────
 
 def main():
@@ -595,6 +671,9 @@ def main():
 
     # Check 13
     results.append(check_blog_wiki_links())
+
+    # Check 14
+    results.append(check_wiki_related_blog())
 
     # Summary
     passed = sum(1 for r in results if r)
