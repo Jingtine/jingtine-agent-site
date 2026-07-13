@@ -404,6 +404,70 @@ def check_status_json():
     return True
 
 
+def check_wiki_hash_routing():
+    """Check 12: Wiki hash routing for shareable URLs."""
+    wiki_js = os.path.join(PROJECT_DIR, "js", "wiki.js")
+    assistant_js = os.path.join(PROJECT_DIR, "js", "assistant.js")
+    passed = True
+
+    # 1. wiki.js contains hash routing
+    if os.path.exists(wiki_js):
+        with open(wiki_js, "r", encoding="utf-8") as f:
+            content = f.read()
+        if "hashchange" not in content and "location.hash" not in content:
+            p(f"{FAIL} Wiki hash routing:  no hash routing in wiki.js")
+            passed = False
+    else:
+        p(f"{FAIL} Wiki hash routing:  wiki.js not found")
+        return False
+
+    # 2. wiki.js uses encodeURIComponent for hash generation
+    if "encodeURIComponent" not in content:
+        p(f"{FAIL} Wiki hash routing:  no encodeURIComponent in wiki.js")
+        passed = False
+
+    # 3. assistant.js links to wiki.html# with page id
+    if os.path.exists(assistant_js):
+        with open(assistant_js, "r", encoding="utf-8") as f:
+            acontent = f.read()
+        if "wiki.html#" not in acontent:
+            p(f"{FAIL} Wiki hash routing:  no wiki.html# links in assistant.js")
+            passed = False
+    else:
+        p(f"{FAIL} Wiki hash routing:  assistant.js not found")
+        passed = False
+
+    # 4. wiki.json page ids are non-empty, unique, hash-safe
+    if os.path.exists(WIKI_JSON):
+        with open(WIKI_JSON, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        pages = data.get("pages", [])
+        ids_seen = set()
+        ids_ok = True
+        for page in pages:
+            pid = page.get("id", "")
+            if not pid:
+                p(f"  {CROSS} wiki.json: empty page id")
+                ids_ok = False
+            if "#" in pid:
+                p(f"  {CROSS} wiki.json: page id contains '#': {pid}")
+                ids_ok = False
+            if pid in ids_seen:
+                p(f"  {CROSS} wiki.json: duplicate page id: {pid}")
+                ids_ok = False
+            ids_seen.add(pid)
+        if not ids_ok:
+            p(f"{FAIL} Wiki hash routing:  invalid page ids in wiki.json")
+            passed = False
+    else:
+        p(f"{FAIL} Wiki hash routing:  wiki.json not found")
+        passed = False
+
+    if passed:
+        p(f"{PASS} Wiki hash routing:  hash routing ok")
+    return passed
+
+
 # ── Main ────────────────────────────────────────────────────────
 
 def main():
@@ -454,6 +518,9 @@ def main():
 
     # Check 11
     results.append(check_status_json())
+
+    # Check 12
+    results.append(check_wiki_hash_routing())
 
     # Summary
     passed = sum(1 for r in results if r)

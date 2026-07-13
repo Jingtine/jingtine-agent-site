@@ -230,7 +230,7 @@
       card.style.cursor = 'pointer';
       card.addEventListener('click', function (s) {
         return function () {
-          window.open('wiki.html', '_blank');
+          window.open('wiki.html#' + encodeURIComponent(s.id), '_blank');
         };
       }(sources[i]));
 

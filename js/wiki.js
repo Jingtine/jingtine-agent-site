@@ -8,6 +8,60 @@
   var allPages = [];
   var currentCategory = '';
 
+  // ── Hash routing ──────────────────────────────────────
+  window.addEventListener('hashchange', function () {
+    if (allPages.length === 0) return;
+    syncViewFromHash();
+  });
+
+  function getPageIdFromHash() {
+    var hash = location.hash;
+    if (!hash || hash === '#') return null;
+    return decodeURIComponent(hash.slice(1));
+  }
+
+  function getPageById(id) {
+    for (var i = 0; i < allPages.length; i++) {
+      if (allPages[i].id === id) return allPages[i];
+    }
+    return null;
+  }
+
+  function openPageById(id) {
+    location.hash = encodeURIComponent(id);
+  }
+
+  function syncViewFromHash() {
+    var id = getPageIdFromHash();
+    if (id) {
+      var page = getPageById(id);
+      if (page) {
+        showDetail(page);
+        return;
+      }
+      console.warn('Wiki page not found: ' + id);
+      showList();
+      var container = document.getElementById('wiki-article-list');
+      var msg = document.createElement('div');
+      msg.setAttribute('style', 'text-align:center;color:var(--color-text-muted);padding:8px;font-size:13px;');
+      msg.textContent = '"' + id + '" not found. Showing all pages.';
+      if (container.firstChild) {
+        container.insertBefore(msg, container.firstChild);
+      } else {
+        container.appendChild(msg);
+      }
+      return;
+    }
+    showList();
+  }
+
+  function showList() {
+    document.getElementById('wiki-detail-view').style.display = 'none';
+    document.getElementById('wiki-list-view').style.display = 'block';
+    window.scrollTo(0, 0);
+    filterAndRender();
+  }
+
   // ── Init ──────────────────────────────────────────────
   fetch('public/data/wiki.json')
     .then(function (res) {
@@ -23,7 +77,7 @@
       if (allPages.length === 0) {
         showEmpty('No wiki pages yet.');
       } else {
-        renderList(allPages);
+        syncViewFromHash();
       }
     })
     .catch(function (error) {
@@ -136,7 +190,7 @@
     card.className = 'article-card';
     card.style.cursor = 'pointer';
     card.addEventListener('click', function () {
-      showDetail(page);
+      openPageById(page.id);
     });
 
     // Header: category badge + updated date
@@ -246,7 +300,7 @@
             var pid = this.getAttribute('data-page');
             for (var k = 0; k < allPages.length; k++) {
               if (allPages[k].id === pid || allPages[k].id.endsWith('/' + pid)) {
-                showDetail(allPages[k]);
+                openPageById(allPages[k].id);
                 return;
               }
             }
@@ -264,9 +318,7 @@
 
   // ── Back button ───────────────────────────────────────
   document.getElementById('wiki-back').addEventListener('click', function () {
-    document.getElementById('wiki-detail-view').style.display = 'none';
-    document.getElementById('wiki-list-view').style.display = 'block';
-    window.scrollTo(0, 0);
+    location.hash = '';
   });
 
   // ── Helpers ──────────────────────────────────────────
