@@ -7,6 +7,7 @@
 (function () {
   var allPages = [];
   var currentCategory = '';
+  var listInitialized = false;
 
   // ── Hash routing ──────────────────────────────────────
   window.addEventListener('hashchange', function () {
@@ -59,7 +60,10 @@
     document.getElementById('wiki-detail-view').style.display = 'none';
     document.getElementById('wiki-list-view').style.display = 'block';
     window.scrollTo(0, 0);
-    filterAndRender();
+    if (!listInitialized) {
+      listInitialized = true;
+      filterAndRender();
+    }
   }
 
   // ── Init ──────────────────────────────────────────────
@@ -164,6 +168,7 @@
 
   // ── Card list ─────────────────────────────────────────
   function renderList(pages) {
+    listInitialized = true;
     var container = document.getElementById('wiki-article-list');
     if (!container) return;
     container.textContent = '';
