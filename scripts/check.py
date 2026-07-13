@@ -7,6 +7,7 @@ Zero dependencies — Python stdlib only.
 """
 import json
 import os
+import re
 import sys
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
@@ -468,6 +469,76 @@ def check_wiki_hash_routing():
     return passed
 
 
+def check_blog_wiki_links():
+    """Check 13: Blog articles support [[Wiki Link]] syntax."""
+    blog_js = os.path.join(PROJECT_DIR, "js", "blog.js")
+    passed = True
+
+    if not os.path.exists(blog_js):
+        p(f"{FAIL} Blog wiki links:    js/blog.js not found")
+        return False
+
+    with open(blog_js, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    if "wiki.json" not in content:
+        p(f"{FAIL} Blog wiki links:    blog.js does not read wiki.json")
+        passed = False
+
+    if "wiki.html#" not in content:
+        p(f"{FAIL} Blog wiki links:    blog.js does not generate wiki.html# links")
+        passed = False
+
+    articles_dir = os.path.join(PROJECT_DIR, "articles")
+    wiki_link_pattern = re.compile(r'\[\[([^\]]+)\]\]')
+    found_articles = []
+    referenced_slugs = set()
+
+    if os.path.isdir(articles_dir):
+        for fname in os.listdir(articles_dir):
+            if not fname.endswith(".md"):
+                continue
+            fpath = os.path.join(articles_dir, fname)
+            with open(fpath, "r", encoding="utf-8") as f:
+                md = f.read()
+            matches = wiki_link_pattern.findall(md)
+            if matches:
+                found_articles.append(fname)
+                for m in matches:
+                    referenced_slugs.add(m.strip())
+
+    if not found_articles:
+        p(f"{FAIL} Blog wiki links:    no articles contain [[...]] syntax")
+        passed = False
+    else:
+        if os.path.exists(WIKI_JSON):
+            with open(WIKI_JSON, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            pages = data.get("pages", [])
+            wiki_ids = set()
+            wiki_slugs = set()
+            wiki_titles_lower = set()
+            for page in pages:
+                wiki_ids.add(page.get("id", ""))
+                wiki_slugs.add(page.get("id", "").split("/")[-1])
+                wiki_titles_lower.add(page.get("title", "").lower())
+
+            unresolved = []
+            for ref in referenced_slugs:
+                ref_lower = ref.lower()
+                if ref in wiki_ids or ref in wiki_slugs or ref_lower in wiki_titles_lower:
+                    continue
+                unresolved.append(ref)
+
+            if unresolved:
+                p(f"{FAIL} Blog wiki links:    unresolved references: {', '.join(unresolved)}")
+                passed = False
+
+    if passed:
+        p(f"{PASS} Blog wiki links:    {len(found_articles)} article(s) with wiki links")
+    return passed
+
+
 # ── Main ────────────────────────────────────────────────────────
 
 def main():
@@ -521,6 +592,9 @@ def main():
 
     # Check 12
     results.append(check_wiki_hash_routing())
+
+    # Check 13
+    results.append(check_blog_wiki_links())
 
     # Summary
     passed = sum(1 for r in results if r)
