@@ -17,3 +17,12 @@ artifacts/
 __pycache__/
 *.pyc
 *.pyo
+
+# Agent workflow scratch
+.superpowers/
+
+# Planning documents (internal workflow artifacts)
+docs/
+
+# Logs
+*.log
