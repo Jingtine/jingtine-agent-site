@@ -145,6 +145,7 @@ footer {
 .hero-intro-section {
   position: relative;
   min-height: calc(100vh - var(--nav-height));
+  transition: min-height 0.4s ease;
 }
 
 .hero-intro-stage {
@@ -397,23 +398,38 @@ html.hero-intro-active .hero-intro-deco {
   height: 0;
 }
 
-.waveform-bar {
+.waveform-slot {
   position: absolute;
-  width: 4px;
-  border-radius: 6px;
-  background: rgba(196, 181, 253, 0.35);
-  transform-origin: center bottom;
-  transform: rotate(var(--angle, 0deg));
-  height: var(--bar-height, 22px);
-  animation: bar-fluctuate var(--dur, 6s) ease-in-out infinite var(--delay, 0s);
+  width: 0; height: 0;
+  transform: rotate(calc(var(--angle, 0deg) + 90deg));
 }
 
-@keyframes bar-fluctuate {
-  0%, 100% { transform: rotate(var(--angle)) scaleY(0.40); }
-  18%      { transform: rotate(var(--angle)) scaleY(0.95); }
-  38%      { transform: rotate(var(--angle)) scaleY(1.00); }
-  55%      { transform: rotate(var(--angle)) scaleY(0.55); }
-  78%      { transform: rotate(var(--angle)) scaleY(0.90); }
+.waveform-pulse {
+  position: absolute;
+  left: 50%; bottom: 0;
+  width: 3px; height: var(--bar-max, 22px);
+  transform: translateX(-50%);
+  transform-origin: center bottom;
+  animation: bar-pulse 16s linear infinite;
+}
+
+@keyframes bar-pulse {
+  0%, 100% { transform: translateX(-50%) scaleY(0.92); }
+  8%       { transform: translateX(-50%) scaleY(1.18); }
+  16%      { transform: translateX(-50%) scaleY(0.92); }
+}
+
+.waveform-breathe {
+  width: 100%; height: 100%;
+  background: rgba(196, 181, 253, 0.35);
+  border-radius: 999px;
+  transform-origin: center bottom;
+  animation: bar-breathe var(--dur, 7s) ease-in-out infinite var(--delay, 0s);
+}
+
+@keyframes bar-breathe {
+  0%, 100% { transform: scaleY(0.40); opacity: 0.80; }
+  50%      { transform: scaleY(1.00); opacity: 1.0; }
 }
 
 /* ── Energy Pulse ── */
@@ -989,9 +1005,8 @@ a.contact-value:hover {
     font-weight: 600;
   }
 
-  .waveform-bar {
-    width: 3px;
-    border-radius: 4px;
+  .waveform-pulse {
+    width: 2px;
   }
   .hero-waveform-pulse {
     width: 210px;

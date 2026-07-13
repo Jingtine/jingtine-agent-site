@@ -181,20 +181,30 @@
 
     function createWaveform() {
       if (!waveformEl) return;
+      waveformEl.style.setProperty('--bar-max', BAR_MAX_HEIGHT + 'px');
       for (var i = 0; i < BAR_COUNT; i++) {
-        var angle = (i / BAR_COUNT) * 360;
-        var rad = angle * Math.PI / 180;
-        var cx = Math.cos(rad) * BAR_BASE_RADIUS;
-        var cy = Math.sin(rad) * BAR_BASE_RADIUS;
-        var bar = document.createElement('div');
-        bar.className = 'waveform-bar';
-        bar.style.setProperty('--angle', angle + 'deg');
-        bar.style.setProperty('--bar-height', BAR_MAX_HEIGHT + 'px');
-        bar.style.setProperty('--dur', (4.5 + (i % 4) * 1.0) + 's');
-        bar.style.setProperty('--delay', (Math.sin(i * 1.7) * 2.0).toFixed(1) + 's');
-        bar.style.left = 'calc(50% + ' + cx.toFixed(1) + 'px - 1.5px)';
-        bar.style.top = 'calc(50% + ' + cy.toFixed(1) + 'px - var(--bar-height))';
-        waveformEl.appendChild(bar);
+        var angleDeg = (i / BAR_COUNT) * 360;
+        var angleRad = angleDeg * Math.PI / 180;
+        var cx = Math.cos(angleRad) * BAR_BASE_RADIUS;
+        var cy = Math.sin(angleRad) * BAR_BASE_RADIUS;
+        // slot: position on circle + rotate to point outward
+        var slot = document.createElement('div');
+        slot.className = 'waveform-slot';
+        slot.style.setProperty('--angle', angleDeg + 'deg');
+        slot.style.left = 'calc(50% + ' + cx.toFixed(1) + 'px)';
+        slot.style.top = 'calc(50% + ' + cy.toFixed(1) + 'px)';
+        // pulse: 16s unified animation-delay per bar index
+        var pulse = document.createElement('div');
+        pulse.className = 'waveform-pulse';
+        pulse.style.animationDelay = (i / BAR_COUNT * -16).toFixed(1) + 's';
+        // breathe: individual duration + delay
+        var breathe = document.createElement('div');
+        breathe.className = 'waveform-breathe';
+        breathe.style.setProperty('--dur', (4.5 + (i % 4) * 1.0) + 's');
+        breathe.style.setProperty('--delay', (Math.sin(i * 1.7) * 2.0).toFixed(1) + 's');
+        pulse.appendChild(breathe);
+        slot.appendChild(pulse);
+        waveformEl.appendChild(slot);
       }
     }
 
@@ -321,8 +331,8 @@
           decoEls[j].style.visibility = 'hidden';
         }
       }
-      // Remove intro class
-      document.documentElement.classList.remove('hero-intro-active');
+      // Collapse section height so Skills is not pushed down
+      document.querySelector('.hero-intro-section').style.setProperty('--intro-distance', '0px');
       handledFinal = true;
     }
 
@@ -334,6 +344,7 @@
       }
       if (handledFinal && scrollY < INTRO_DIST) {
         handledFinal = false;
+        document.querySelector('.hero-intro-section').style.setProperty('--intro-distance', '');
       }
       if (scrollY >= INTRO_DIST) return;
       var rawProgress = Math.min(scrollY / INTRO_DIST, 1);
