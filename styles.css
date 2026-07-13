@@ -65,12 +65,24 @@ body {
 }
 
 body {
+  position: relative;
+  isolation: isolate;
   font-family: var(--font-sans);
   background: transparent;
   color: var(--color-text);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Content layer (above fixed background decorations) ===== */
+nav,
+.page-header,
+.hero,
+.section,
+footer {
+  position: relative;
+  z-index: 1;
 }
 
 /* ===== Navigation ===== */
@@ -1410,7 +1422,7 @@ body::before {
   );
   border-radius: 50%;
   filter: blur(110px);
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
   will-change: transform, opacity;
   animation: orbDriftPurple 22s ease-in-out infinite;
@@ -1432,7 +1444,7 @@ body::after {
   );
   border-radius: 50%;
   filter: blur(120px);
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
   will-change: transform, opacity;
   animation: orbDriftBlue 18s ease-in-out infinite;
@@ -1452,7 +1464,7 @@ body::after {
 .meteor-layer {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
   overflow: hidden;
 }
