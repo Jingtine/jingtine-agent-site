@@ -135,7 +135,7 @@ footer {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 64px 24px 48px;
+  padding: 40px 24px 48px;
   text-align: center;
   min-height: calc(100vh - 56px);
 }
@@ -169,7 +169,7 @@ footer {
   .hero-avatar-stage {
     position: relative;
     display: inline-block;
-    margin-bottom: 14px;
+    margin-bottom: 28px;
   }
 
   .hero-avatar-wrap {
@@ -263,6 +263,8 @@ footer {
 }
 
 /* ===== Hero Intro Transition ===== */
+
+/* Decoration container — hidden by default, visible when hero-intro active */
 .hero-intro-deco {
   position: absolute;
   top: 50%;
@@ -272,62 +274,134 @@ footer {
   z-index: 0;
   width: 280px;
   height: 280px;
+  opacity: 0;
 }
 
+html.hero-intro .hero-intro-deco {
+  opacity: 1;
+}
+
+/* Wrapper layer — fills deco container, JS controls opacity/transform/visibility */
+.hero-intro-glow-outer-wrap,
+.hero-intro-glow-inner-wrap,
+.hero-intro-ring-wrap,
+.hero-intro-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Glow ── */
 .hero-intro-glow {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(196, 181, 253, 0.22) 0%,
-    rgba(147, 197, 253, 0.10) 45%,
-    transparent 70%
-  );
 }
 
+.hero-intro-glow-outer {
+  width: 93%;
+  height: 93%;
+  background: radial-gradient(
+    circle,
+    rgba(196, 181, 253, 0.10) 0%,
+    rgba(147, 197, 253, 0.05) 45%,
+    transparent 70%
+  );
+  filter: blur(16px);
+  animation: glow-breathe 5s ease-in-out infinite;
+}
+
+.hero-intro-glow-inner {
+  width: 74%;
+  height: 74%;
+  background: radial-gradient(
+    circle,
+    rgba(196, 181, 253, 0.15) 0%,
+    rgba(147, 197, 253, 0.07) 50%,
+    transparent 75%
+  );
+  filter: blur(6px);
+  animation: glow-breathe 5s ease-in-out infinite 0.5s;
+}
+
+@keyframes glow-breathe {
+  0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.9; transform: translate(-50%, -50%) scale(1.05); }
+}
+
+/* ── Orbital Ring ── */
 .hero-intro-ring {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   width: 75%;
   height: 75%;
   border-radius: 50%;
-  border: 1px solid rgba(196, 181, 253, 0.15);
+  border: 1px solid rgba(196, 181, 253, 0.06);
+  animation: ring-rotate 38s linear infinite;
 }
 
+.hero-intro-ring-dot {
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  margin-left: -2px;
+  border-radius: 50%;
+  background: rgba(124, 111, 247, 0.25);
+}
+
+@keyframes ring-rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ── Particles ── */
 .hero-intro-particle {
   position: absolute;
-  width: 6px;
-  height: 6px;
   border-radius: 50%;
   background: rgba(196, 181, 253, 0.5);
+  opacity: var(--p-opacity, 0.45);
+  animation: particle-float 7s ease-in-out infinite;
 }
 
-.particle-1 { top: 15%; left: 20%; animation: particle-float-1 4s ease-in-out infinite; }
-.particle-2 { top: 25%; right: 15%; animation: particle-float-2 5s ease-in-out infinite; }
-.particle-3 { bottom: 20%; left: 25%; animation: particle-float-3 4.5s ease-in-out infinite; }
-.particle-4 { bottom: 30%; right: 20%; animation: particle-float-1 5.5s ease-in-out infinite; }
-
-@keyframes particle-float-1 {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(8px, -12px); }
-}
-@keyframes particle-float-2 {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(-10px, -8px); }
-}
-@keyframes particle-float-3 {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(6px, 10px); }
+@keyframes particle-float {
+  0%, 100% { transform: translate(0, 0); opacity: var(--p-opacity, 0.45); }
+  50% { transform: translate(var(--fx, 0px), var(--fy, -3px)); opacity: calc(var(--p-opacity, 0.45) * 0.7); }
 }
 
-/* Initial intro state — applied by inline <head> script */
+/* ── Scroll Hint ── */
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  pointer-events: none;
+  font-size: 10px;
+  color: var(--color-text-muted);
+  letter-spacing: 1px;
+  opacity: 0;
+}
+
+.hero-scroll-hint-arrow {
+  font-size: 11px;
+  animation: hint-bounce 2.5s ease-in-out infinite;
+}
+
+@keyframes hint-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
+/* ── Initial intro state (html.hero-intro) ── */
 html.hero-intro .hero-avatar-wrap {
   transform: translate3d(0, var(--intro-ty, 120px), 0) scale(var(--intro-scale, 1.5));
   will-change: transform;
@@ -335,40 +409,52 @@ html.hero-intro .hero-avatar-wrap {
 
 html.hero-intro .hero-intro-deco {
   opacity: 1;
-  will-change: opacity, transform;
 }
 
 html.hero-intro .hero-greeting {
-  opacity: 0.2;
-  transform: translateY(30px);
+  opacity: 0.25;
+  transform: translateY(16px);
   will-change: opacity, transform;
 }
 
 html.hero-intro .hero-name {
-  opacity: 0.5;
-  transform: translateY(25px);
+  opacity: 0.6;
+  transform: translateY(12px) scale(1.22);
+  letter-spacing: 0.5px;
+  font-weight: 600;
   will-change: opacity, transform;
 }
 
 html.hero-intro .hero-identity {
-  opacity: 0.15;
-  transform: translateY(35px);
+  opacity: 0.2;
+  transform: translateY(20px);
   will-change: opacity, transform;
 }
 
 html.hero-intro .hero-tags {
-  opacity: 0.15;
-  transform: translateY(35px);
+  opacity: 0.2;
+  transform: translateY(20px);
   will-change: opacity, transform;
 }
 
 html.hero-intro .hero-desc {
-  opacity: 0.15;
-  transform: translateY(40px);
+  opacity: 0.2;
+  transform: translateY(24px);
   will-change: opacity, transform;
 }
 
-/* Fallback: if JS fails to load, restore normal Hero after 2s */
+html.hero-intro .hero-intro-glow-outer-wrap,
+html.hero-intro .hero-intro-glow-inner-wrap,
+html.hero-intro .hero-intro-ring-wrap,
+html.hero-intro .hero-intro-particles {
+  will-change: opacity, transform;
+}
+
+html.hero-intro .hero-scroll-hint {
+  opacity: 0.6;
+}
+
+/* ── Fallback: if JS fails, restore normal Hero after 2s ── */
 @keyframes hero-intro-fallback {
   to { opacity: 1; transform: none; }
 }
@@ -393,7 +479,8 @@ html.hero-intro .hero-avatar-wrap {
   animation: hero-intro-fallback-avatar 0.6s 2s forwards;
 }
 
-html.hero-intro .hero-intro-deco {
+html.hero-intro .hero-intro-deco,
+html.hero-intro .hero-scroll-hint {
   animation: hero-intro-fallback-deco 0.6s 2s forwards;
 }
 
@@ -759,12 +846,14 @@ a.contact-value:hover {
   html.hero-intro .hero-name,
   html.hero-intro .hero-identity,
   html.hero-intro .hero-tags,
-  html.hero-intro .hero-desc {
+  html.hero-intro .hero-desc,
+  html.hero-intro .hero-scroll-hint {
     transform: none !important;
     opacity: 1 !important;
     animation: none !important;
   }
-  html.hero-intro .hero-intro-deco {
+  html.hero-intro .hero-intro-deco,
+  html.hero-intro .hero-scroll-hint {
     display: none !important;
   }
 }
@@ -803,13 +892,14 @@ a.contact-value:hover {
     height: 220px;
   }
 
-  .hero-intro-particle.particle-3,
-  .hero-intro-particle.particle-4 {
-    display: none;
+  html.hero-intro .hero-avatar-wrap {
+    transform: translate3d(0, var(--intro-ty, 80px), 0) scale(var(--intro-scale, 1.5));
   }
 
-  html.hero-intro .hero-avatar-wrap {
-    transform: translate3d(0, var(--intro-ty, 80px), 0) scale(var(--intro-scale, 1.58));
+  html.hero-intro .hero-name {
+    transform: translateY(12px) scale(1.18);
+    letter-spacing: 0.5px;
+    font-weight: 600;
   }
 
   .section {

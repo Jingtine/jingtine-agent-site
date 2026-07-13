@@ -12,7 +12,7 @@
       }
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=20260713-2">
+  <link rel="stylesheet" href="styles.css?v=20260713-4">
 </head>
 <body>
 
@@ -38,12 +38,18 @@
     <div class="hero-content">
       <div class="hero-avatar-stage">
         <div class="hero-intro-deco" aria-hidden="true">
-          <div class="hero-intro-glow"></div>
-          <div class="hero-intro-ring"></div>
-          <div class="hero-intro-particle particle-1"></div>
-          <div class="hero-intro-particle particle-2"></div>
-          <div class="hero-intro-particle particle-3"></div>
-          <div class="hero-intro-particle particle-4"></div>
+          <div class="hero-intro-glow-outer-wrap">
+            <div class="hero-intro-glow hero-intro-glow-outer"></div>
+          </div>
+          <div class="hero-intro-glow-inner-wrap">
+            <div class="hero-intro-glow hero-intro-glow-inner"></div>
+          </div>
+          <div class="hero-intro-ring-wrap">
+            <div class="hero-intro-ring">
+              <div class="hero-intro-ring-dot"></div>
+            </div>
+          </div>
+          <div class="hero-intro-particles"></div>
         </div>
         <div class="hero-avatar-wrap">
           <img src="assets/images/figure.jpg" alt="Jingtine avatar" class="hero-avatar">
@@ -62,6 +68,10 @@
       <p class="hero-desc">
         结合软件工程、AI Agent 与产品创新，探索技术如何创造真实价值。
       </p>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span class="hero-scroll-hint-text">Explore</span>
+      <span class="hero-scroll-hint-arrow">&darr;</span>
     </div>
   </header>
 
@@ -141,7 +151,7 @@
   </footer>
 
   <script src="js/blog.js"></script>
-  <script src="js/site-motion.js?v=20260713-2"></script>
+  <script src="js/site-motion.js?v=20260713-4"></script>
   <script>
     loadArticleIndex().then(function (articles) {
       renderArticleList('latest-posts', articles, 2);
