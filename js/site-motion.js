@@ -408,6 +408,41 @@
   }
   document.body.appendChild(meteorLayer);
 
+  // ── Silver floating particle layer (global background) ──
+  var silverLayer = document.createElement('div');
+  silverLayer.className = 'silver-particle-layer';
+  silverLayer.setAttribute('aria-hidden', 'true');
+  var PARTICLE_COUNT = 24;
+  for (var si = 0; si < PARTICLE_COUNT; si++) {
+    var particle = document.createElement('div');
+    particle.className = 'silver-particle';
+    var size = (2 + Math.random() * 3).toFixed(1);
+    var topPos = (5 + Math.random() * 90).toFixed(1);
+    var leftPos = (5 + Math.random() * 90).toFixed(1);
+    var opacity = (0.15 + Math.random() * 0.30).toFixed(2);
+    var duration = (12 + Math.random() * 10).toFixed(1);
+    var delay = (Math.random() * 16).toFixed(1);
+    var floatDist = -(40 + Math.random() * 80).toFixed(1);
+    var sx1 = ((Math.random() - 0.5) * 18).toFixed(1);
+    var sx2 = ((Math.random() - 0.5) * 24).toFixed(1);
+    var sx3 = ((Math.random() - 0.5) * 20).toFixed(1);
+    var sx4 = ((Math.random() - 0.5) * 14).toFixed(1);
+    particle.style.width = size + 'px';
+    particle.style.height = size + 'px';
+    particle.style.top = topPos + '%';
+    particle.style.left = leftPos + '%';
+    particle.style.setProperty('--so', opacity);
+    particle.style.setProperty('--sd', duration + 's');
+    particle.style.setProperty('--sdelay', delay + 's');
+    particle.style.setProperty('--sy', floatDist + 'px');
+    particle.style.setProperty('--sx1', sx1 + 'px');
+    particle.style.setProperty('--sx2', sx2 + 'px');
+    particle.style.setProperty('--sx3', sx3 + 'px');
+    particle.style.setProperty('--sx4', sx4 + 'px');
+    silverLayer.appendChild(particle);
+  }
+  document.body.appendChild(silverLayer);
+
   // ── Init ───────────────────────────────────────────────
   if (!reduced) {
     setupRevealObserver();
