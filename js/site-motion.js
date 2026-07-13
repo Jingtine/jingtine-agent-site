@@ -88,11 +88,12 @@
     }
   };
 
-  // ── Homepage hero intro transition ──────────────────────────────────────────
-  var isHome = document.querySelector('.hero-content');
+  // ── Homepage hero intro transition (sticky-stage) ─────────────────────────
+  var isHome = document.querySelector('.hero-intro-section');
 
   if (isHome && !reduced) {
-    var avatarStage = document.querySelector('.hero-avatar-stage');
+    var stage = document.getElementById('hero-intro-stage');
+    var content = document.getElementById('hero-intro-content');
     var avatarWrap = document.querySelector('.hero-avatar-wrap');
     var decoLayer = document.querySelector('.hero-intro-deco');
     var outerGlowWrap = document.querySelector('.hero-intro-glow-outer-wrap');
@@ -107,12 +108,14 @@
     var desc = document.querySelector('.hero-desc');
 
     var isMobile = window.matchMedia('(max-width: 768px)').matches;
-    var TRANSITION_DIST = isMobile ? 260 : 360;
+    var INTRO_DIST = isMobile ? 260 : 360;
     var AVATAR_INITIAL_SCALE = 1.5;
     var NAME_INITIAL_SCALE = isMobile ? 1.18 : 1.22;
     var NAME_INITIAL_OPACITY = 0.6;
-    var PARALLAX_PX = 12;
-    var cachedInitialTY = 0;
+    var TARGET_CENTER = 0.35;
+
+    var initialContentTY = 0;
+    var handledFinal = false;
 
     // ── Particle presets (deterministic, reproducible) ──
     var PARTICLE_PRESETS = [
@@ -154,12 +157,14 @@
       }
     }
 
-    function computeInitialTY() {
-      if (!avatarStage) return;
-      var rect = avatarStage.getBoundingClientRect();
-      var normalCenter = rect.top + rect.height / 2;
-      var targetCenter = window.innerHeight * 0.30;
-      cachedInitialTY = Math.max(targetCenter - normalCenter, 0);
+    function computeInitialContentTY() {
+      if (!stage || !avatarWrap) return;
+      var stageH = stage.offsetHeight;
+      var avatarRect = avatarWrap.getBoundingClientRect();
+      var stageRect = stage.getBoundingClientRect();
+      var avatarCenterInStage = avatarRect.top + avatarRect.height / 2 - stageRect.top;
+      var targetCenter = stageH * TARGET_CENTER;
+      initialContentTY = Math.max(targetCenter - avatarCenterInStage, 0);
     }
 
     function rangeProgress(p, start, end) {
@@ -167,131 +172,114 @@
     }
 
     function applyIntroState(progress) {
-      // Avatar: full speed (1.0×)
-      var avatarScale = AVATAR_INITIAL_SCALE + (1 - AVATAR_INITIAL_SCALE) * progress;
-      var avatarTY = cachedInitialTY * (1 - progress);
-      avatarWrap.style.transform = 'translate3d(0,' + avatarTY.toFixed(2) + 'px,0) scale(' + avatarScale.toFixed(4) + ')';
+      // ── Content: single translateY from centered → normal ──
+      var contentTY = initialContentTY * (1 - progress);
+      content.style.transform = 'translateY(' + contentTY.toFixed(2) + 'px)';
 
-      // Name: scale 1.22→1, opacity 0.6→1, TY 12→0, letter-spacing 0.5→-1, font-weight 600→700, over 0.08→0.55
+      // ── Avatar: only scale (no translateY) ──
+      var avatarScale = AVATAR_INITIAL_SCALE + (1 - AVATAR_INITIAL_SCALE) * progress;
+      avatarWrap.style.transform = 'scale(' + avatarScale.toFixed(4) + ')';
+
+      // ── Name: scale + opacity + typography (no translateY) ──
       var nameP = rangeProgress(progress, 0.08, 0.55);
       var nameScale = NAME_INITIAL_SCALE + (1 - NAME_INITIAL_SCALE) * nameP;
       var nameOpacity = NAME_INITIAL_OPACITY + (1 - NAME_INITIAL_OPACITY) * nameP;
-      var nameTY = 12 * (1 - nameP);
       var nameSpacing = 0.5 + (-1.0 - 0.5) * nameP;
       var nameWeight = 600 + (700 - 600) * nameP;
-      nameEl.style.transform = 'translateY(' + nameTY.toFixed(1) + 'px) scale(' + nameScale.toFixed(4) + ')';
+      nameEl.style.transform = 'scale(' + nameScale.toFixed(4) + ')';
       nameEl.style.opacity = nameOpacity.toFixed(3);
       nameEl.style.letterSpacing = nameSpacing.toFixed(2) + 'px';
       nameEl.style.fontWeight = Math.round(nameWeight).toString();
 
-      // Greeting: 0.05→0.35
-      var greetingP = rangeProgress(progress, 0.05, 0.35);
-      greeting.style.opacity = (0.25 + 0.75 * greetingP).toFixed(3);
-      greeting.style.transform = 'translateY(' + (16 * (1 - greetingP)).toFixed(1) + 'px)';
+      // ── Text: opacity only ──
+      var greetP = rangeProgress(progress, 0.05, 0.35);
+      greeting.style.opacity = (0.25 + 0.75 * greetP).toFixed(3);
 
-      // Identity: 0.20→0.55
-      var identityP = rangeProgress(progress, 0.20, 0.55);
-      identity.style.opacity = (0.2 + 0.8 * identityP).toFixed(3);
-      identity.style.transform = 'translateY(' + (20 * (1 - identityP)).toFixed(1) + 'px)';
+      var identP = rangeProgress(progress, 0.20, 0.55);
+      identity.style.opacity = (0.2 + 0.8 * identP).toFixed(3);
 
-      // Tags: 0.35→0.70
       var tagsP = rangeProgress(progress, 0.35, 0.70);
       tags.style.opacity = (0.2 + 0.8 * tagsP).toFixed(3);
-      tags.style.transform = 'translateY(' + (20 * (1 - tagsP)).toFixed(1) + 'px)';
 
-      // Desc: 0.50→0.85
       var descP = rangeProgress(progress, 0.50, 0.85);
       desc.style.opacity = (0.2 + 0.8 * descP).toFixed(3);
-      desc.style.transform = 'translateY(' + (24 * (1 - descP)).toFixed(1) + 'px)';
 
-      // Particles: exit 0.00→0.65, parallax 0.5×
-      var particlesP = rangeProgress(progress, 0.00, 0.65);
-      var particlesOpacity = 1 - particlesP;
-      var particlesTY = -PARALLAX_PX * progress * 0.5;
+      // ── Decoration exit (opacity only, no parallax transform) ──
+      var pP = rangeProgress(progress, 0.00, 0.65);
+      var pOp = 1 - pP;
       if (particlesLayer) {
-        particlesLayer.style.opacity = particlesOpacity.toFixed(3);
-        particlesLayer.style.transform = 'translateY(' + particlesTY.toFixed(1) + 'px)';
-        particlesLayer.style.visibility = particlesOpacity > 0.001 ? 'visible' : 'hidden';
+        particlesLayer.style.opacity = pOp.toFixed(3);
+        particlesLayer.style.visibility = pOp > 0.001 ? 'visible' : 'hidden';
       }
 
-      // Ring: exit 0.05→0.75, parallax 0.7×
-      var ringP = rangeProgress(progress, 0.05, 0.75);
-      var ringOpacity = 1 - ringP;
-      var ringTY = -PARALLAX_PX * progress * 0.7;
+      var rP = rangeProgress(progress, 0.05, 0.75);
+      var rOp = 1 - rP;
       if (ringWrap) {
-        ringWrap.style.opacity = ringOpacity.toFixed(3);
-        ringWrap.style.transform = 'translateY(' + ringTY.toFixed(1) + 'px)';
-        ringWrap.style.visibility = ringOpacity > 0.001 ? 'visible' : 'hidden';
+        ringWrap.style.opacity = rOp.toFixed(3);
+        ringWrap.style.visibility = rOp > 0.001 ? 'visible' : 'hidden';
       }
 
-      // Inner glow: exit 0.00→0.85, parallax 0.3×
-      var innerGlowP = rangeProgress(progress, 0.00, 0.85);
-      var innerGlowOpacity = 1 - innerGlowP;
-      var innerGlowTY = -PARALLAX_PX * progress * 0.3;
+      var igP = rangeProgress(progress, 0.00, 0.85);
+      var igOp = 1 - igP;
       if (innerGlowWrap) {
-        innerGlowWrap.style.opacity = innerGlowOpacity.toFixed(3);
-        innerGlowWrap.style.transform = 'translateY(' + innerGlowTY.toFixed(1) + 'px)';
-        innerGlowWrap.style.visibility = innerGlowOpacity > 0.001 ? 'visible' : 'hidden';
+        innerGlowWrap.style.opacity = igOp.toFixed(3);
+        innerGlowWrap.style.visibility = igOp > 0.001 ? 'visible' : 'hidden';
       }
 
-      // Outer glow: exit 0.00→1.00, parallax 0.3×
-      var outerGlowP = rangeProgress(progress, 0.00, 1.00);
-      var outerGlowOpacity = 1 - outerGlowP;
-      var outerGlowTY = -PARALLAX_PX * progress * 0.3;
+      var ogP = rangeProgress(progress, 0.00, 1.00);
+      var ogOp = 1 - ogP;
       if (outerGlowWrap) {
-        outerGlowWrap.style.opacity = outerGlowOpacity.toFixed(3);
-        outerGlowWrap.style.transform = 'translateY(' + outerGlowTY.toFixed(1) + 'px)';
-        outerGlowWrap.style.visibility = outerGlowOpacity > 0.001 ? 'visible' : 'hidden';
+        outerGlowWrap.style.opacity = ogOp.toFixed(3);
+        outerGlowWrap.style.visibility = ogOp > 0.001 ? 'visible' : 'hidden';
       }
 
-      // Scroll hint: exit 0.00→0.08, max opacity 0.6
-      var hintP = rangeProgress(progress, 0.00, 0.08);
-      var hintOpacity = 0.6 * (1 - hintP);
+      var hP = rangeProgress(progress, 0.00, 0.08);
+      var hOp = 0.6 * (1 - hP);
       if (scrollHint) {
-        scrollHint.style.opacity = hintOpacity.toFixed(3);
-        scrollHint.style.visibility = hintOpacity > 0.001 ? 'visible' : 'hidden';
+        scrollHint.style.opacity = hOp.toFixed(3);
+        scrollHint.style.visibility = hOp > 0.001 ? 'visible' : 'hidden';
       }
     }
 
     function applyFinalState() {
-      // Clear text element inline styles
-      var textEls = [greeting, nameEl, identity, tags, desc];
-      for (var i = 0; i < textEls.length; i++) {
-        if (textEls[i]) {
-          textEls[i].style.opacity = '';
-          textEls[i].style.transform = '';
-        }
-      }
-      // Clear name typography inline styles
-      if (nameEl) {
-        nameEl.style.letterSpacing = '';
-        nameEl.style.fontWeight = '';
-      }
+      // Clear content transform
+      content.style.transform = '';
       // Clear avatar inline styles
       avatarWrap.style.transform = '';
-      // Hide all decoration wrappers + clear transform
+      // Clear name inline styles
+      nameEl.style.transform = '';
+      nameEl.style.opacity = '';
+      nameEl.style.letterSpacing = '';
+      nameEl.style.fontWeight = '';
+      // Clear text opacity
+      var textEls = [greeting, identity, tags, desc];
+      for (var i = 0; i < textEls.length; i++) {
+        if (textEls[i]) textEls[i].style.opacity = '';
+      }
+      // Hide and clear all decoration wrappers
       var decoEls = [particlesLayer, ringWrap, innerGlowWrap, outerGlowWrap, scrollHint];
       for (var j = 0; j < decoEls.length; j++) {
         if (decoEls[j]) {
           decoEls[j].style.opacity = '0';
           decoEls[j].style.visibility = 'hidden';
-          decoEls[j].style.transform = '';
         }
       }
-      // Remove hero-intro class
-      document.documentElement.classList.remove('hero-intro');
+      // Remove intro class
+      document.documentElement.classList.remove('hero-intro-active');
+      handledFinal = true;
     }
 
     function updateIntro() {
       var scrollY = window.pageYOffset;
-      if (scrollY >= TRANSITION_DIST) {
+      if (scrollY >= INTRO_DIST && !handledFinal) {
         applyFinalState();
         return;
       }
-      if (!document.documentElement.classList.contains('hero-intro')) {
-        document.documentElement.classList.add('hero-intro');
+      if (handledFinal && scrollY < INTRO_DIST) {
+        handledFinal = false;
       }
-      var rawProgress = Math.min(scrollY / TRANSITION_DIST, 1);
+      if (scrollY >= INTRO_DIST) return;
+      var rawProgress = Math.min(scrollY / INTRO_DIST, 1);
       var progress = 1 - Math.pow(1 - rawProgress, 2);
       applyIntroState(progress);
     }
@@ -305,10 +293,10 @@
       if (introEls[i]) introEls[i].style.animation = 'none';
     }
 
-    // Compute initial position from real layout (getBoundingClientRect at init only)
-    computeInitialTY();
+    // Compute initial content offset (getBoundingClientRect at init only)
+    computeInitialContentTY();
 
-    // Apply state immediately for current scrollY (handles refresh at mid-scroll)
+    // Apply state immediately
     updateIntro();
 
     // Scroll handler (passive + RAF)
@@ -329,9 +317,9 @@
       if (!resizeTicking) {
         requestAnimationFrame(function () {
           isMobile = window.matchMedia('(max-width: 768px)').matches;
-          TRANSITION_DIST = isMobile ? 260 : 360;
+          INTRO_DIST = isMobile ? 260 : 360;
           NAME_INITIAL_SCALE = isMobile ? 1.18 : 1.22;
-          computeInitialTY();
+          computeInitialContentTY();
           updateIntro();
           resizeTicking = false;
         });

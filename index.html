@@ -8,11 +8,11 @@
   <script>
     (function () {
       if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        document.documentElement.classList.add('hero-intro');
+        document.documentElement.classList.add('hero-intro-active');
       }
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=20260713-4">
+  <link rel="stylesheet" href="styles.css?v=20260713-5">
 </head>
 <body>
 
@@ -33,41 +33,42 @@
   </nav>
 
   <!-- Hero -->
-  <header class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <div class="hero-avatar-stage">
-        <div class="hero-intro-deco" aria-hidden="true">
-          <div class="hero-intro-glow-outer-wrap">
-            <div class="hero-intro-glow hero-intro-glow-outer"></div>
-          </div>
-          <div class="hero-intro-glow-inner-wrap">
-            <div class="hero-intro-glow hero-intro-glow-inner"></div>
-          </div>
-          <div class="hero-intro-ring-wrap">
-            <div class="hero-intro-ring">
-              <div class="hero-intro-ring-dot"></div>
+  <header class="hero hero-intro-section">
+    <div class="hero-intro-stage" id="hero-intro-stage">
+      <div class="hero-content" id="hero-intro-content">
+        <div class="hero-avatar-stage">
+          <div class="hero-intro-deco" aria-hidden="true">
+            <div class="hero-intro-glow-outer-wrap">
+              <div class="hero-intro-glow hero-intro-glow-outer"></div>
             </div>
+            <div class="hero-intro-glow-inner-wrap">
+              <div class="hero-intro-glow hero-intro-glow-inner"></div>
+            </div>
+            <div class="hero-intro-ring-wrap">
+              <div class="hero-intro-ring">
+                <div class="hero-intro-ring-dot"></div>
+              </div>
+            </div>
+            <div class="hero-intro-particles"></div>
           </div>
-          <div class="hero-intro-particles"></div>
+          <div class="hero-avatar-wrap">
+            <img src="assets/images/figure.jpg" alt="Jingtine avatar" class="hero-avatar">
+          </div>
         </div>
-        <div class="hero-avatar-wrap">
-          <img src="assets/images/figure.jpg" alt="Jingtine avatar" class="hero-avatar">
+        <p class="hero-greeting">Hi, I'm</p>
+        <h1 class="hero-name">Jingtine</h1>
+        <p class="hero-identity">
+          Software Engineering Student &middot; Business Innovation Explorer
+        </p>
+        <div class="hero-tags">
+          <span class="hero-tag">Software Engineering</span>
+          <span class="hero-tag tag-accent">AI Agent</span>
+          <span class="hero-tag">Product Innovation</span>
         </div>
+        <p class="hero-desc">
+          结合软件工程、AI Agent 与产品创新，探索技术如何创造真实价值。
+        </p>
       </div>
-      <p class="hero-greeting">Hi, I'm</p>
-      <h1 class="hero-name">Jingtine</h1>
-      <p class="hero-identity">
-        Software Engineering Student &middot; Business Innovation Explorer
-      </p>
-      <div class="hero-tags">
-        <span class="hero-tag">Software Engineering</span>
-        <span class="hero-tag tag-accent">AI Agent</span>
-        <span class="hero-tag">Product Innovation</span>
-      </div>
-      <p class="hero-desc">
-        结合软件工程、AI Agent 与产品创新，探索技术如何创造真实价值。
-      </p>
     </div>
     <div class="hero-scroll-hint" aria-hidden="true">
       <span class="hero-scroll-hint-text">Explore</span>
@@ -151,7 +152,7 @@
   </footer>
 
   <script src="js/blog.js"></script>
-  <script src="js/site-motion.js?v=20260713-4"></script>
+  <script src="js/site-motion.js?v=20260713-5"></script>
   <script>
     loadArticleIndex().then(function (articles) {
       renderArticleList('latest-posts', articles, 2);
