@@ -43,3 +43,10 @@ skills-lock.json
 # Agent skill installations (reproducible via npx skills add)
 .agents/
 .opencode/skills/
+
+# Presentation tooling (local only)
+package.json
+agent-site-presentation-script.md
+agent-site-presentation.html
+scripts/merge-clips.js
+scripts/record-slides.js
