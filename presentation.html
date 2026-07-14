@@ -66,6 +66,8 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 .shot-full{display:flex;flex-direction:column;align-items:center;padding-top:50px}
 .shot-full img{max-width:92%;max-height:780px;object-fit:contain;border-radius:16px;box-shadow:0 3px 50px rgba(0,0,0,0.04)}
 .shot-full .cap{font-size:17px;color:var(--m);margin-top:18px}
+.shot-full .tag{grid-column:3/11;justify-self:center}
+.shot-full img{grid-column:2/12;margin-top:20px}
 
 /* split */
 .split{flex-direction:row;align-items:center;gap:90px}
@@ -226,10 +228,12 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 
 <!-- S3: Hero - Homepage -->
 <section class="slide shot-full">
-  <div class="tag">HERO</div>
-  <img src="assets/screenshots/homepage-full.png" class="g-hero" alt="Homepage" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-  <div class="cap" style="display:none">[ homepage-full.png ]</div>
-  <div class="muted" style="margin-top:12px">Zero Framework · Pure Native · Fully Functional</div>
+  <div class="slide-grid">
+    <div class="tag" style="grid-column:3/11">HERO</div>
+    <img src="assets/screenshots/homepage-full.png" class="g-hero" alt="Homepage" style="grid-column:2/12" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <div class="cap" style="display:none">[ homepage-full.png ]</div>
+  </div>
+  <div class="caption">Zero Framework · Pure Native · Fully Functional</div>
   <div class="num">03 / 16</div>
 </section>
 
