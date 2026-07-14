@@ -44,8 +44,10 @@ skills-lock.json
 .agents/
 .opencode/skills/
 
+# Test output artifacts
+test-results/
+
 # Presentation tooling (local only)
-package.json
 agent-site-presentation-script.md
 agent-site-presentation.html
 scripts/merge-clips.js

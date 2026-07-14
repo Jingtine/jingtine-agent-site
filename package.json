@@ -1,0 +1,18 @@
+{
+  "name": "jingtine-agent-site",
+  "private": true,
+  "scripts": {
+    "test": "npx playwright test",
+    "test:impl": "npx playwright test tests/e2e/impl.spec.js --reporter=list",
+    "test:req": "npx playwright test tests/e2e/requirements.spec.js --reporter=list",
+    "test:headed": "npx playwright test --headed",
+    "build": "python scripts/generate_feed.py"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "playwright": "^1.61.1"
+  }
+}
