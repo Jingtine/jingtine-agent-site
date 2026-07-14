@@ -26,3 +26,20 @@ docs/
 
 # Logs
 *.log
+
+# Node / npm
+node_modules/
+package-lock.json
+
+# Video output (large binaries)
+videos/
+
+# Slide preview scratch
+.frontend-slides/
+
+# Skills lockfile (auto-generated)
+skills-lock.json
+
+# Agent skill installations (reproducible via npx skills add)
+.agents/
+.opencode/skills/
