@@ -23,7 +23,7 @@
 html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:var(--fb);-webkit-font-smoothing:antialiased}
 .view{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0f172a}
 .stage{width:1920px;height:1080px;background:var(--bg);flex-shrink:0;position:relative}
-.slide{position:absolute;inset:0;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .7s cubic-bezier(.16,1,.3,1),visibility .7s cubic-bezier(.16,1,.3,1);display:flex;padding:80px 100px}
+.slide{position:absolute;inset:0;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .7s cubic-bezier(.16,1,.3,1),visibility .7s cubic-bezier(.16,1,.3,1);display:block;padding:0}
 .slide.on{opacity:1;visibility:visible;pointer-events:auto}
 @media(prefers-reduced-motion:reduce){.slide{transition:none}}
 
@@ -43,6 +43,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 .muted{font-size:16px;color:var(--m);letter-spacing:0.5px}
 .num{position:absolute;right:var(--slide-x);bottom:48px;font-family:var(--fm);font-size:13px;color:var(--m);letter-spacing:3px;opacity:0.6}
 .caption{position:absolute;left:var(--slide-x);bottom:48px;font-size:var(--ts-caption);color:var(--m);letter-spacing:0.5px}
+.story .slide-grid,.layer-stack .slide-grid,.cards-3 .slide-grid,.tl .slide-grid,.loop .slide-grid,.cmp .slide-grid,.l3 .slide-grid,.pipe .slide-grid,.hm .slide-grid,.jv .slide-grid,.kpi .slide-grid{align-content:start}
 
 .orb{position:absolute;border-radius:50%;pointer-events:none;animation:of 20s ease-in-out infinite}
 .o1{width:500px;height:500px;top:-140px;right:-60px;background:radial-gradient(circle,rgba(37,99,235,0.07),rgba(6,182,212,0.03),transparent 65%)}
@@ -50,19 +51,19 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 @keyframes of{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(12px,-8px) scale(1.02)}66%{transform:translate(-8px,6px) scale(0.99)}}
 
 /* cover */
-.cover{flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-top:0}
+.cover{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-top:0}
 .cover .h1{font-size:72px;margin-bottom:30px;font-weight:300}.cover .h1 span{color:var(--b);font-weight:400}
 .cover .q{font-size:26px;color:var(--d);font-weight:300;margin-bottom:24px;max-width:800px}
 .cover .sl{font-size:17px;color:var(--m);margin-bottom:72px;letter-spacing:1px}
 .cover .muted{margin-top:0;font-size:17px}
 
 /* story */
-.story{flex-direction:row;align-items:center;gap:100px}
+.story{}
 .story .l{flex:1;max-width:900px}
 .story .r{width:2px;height:400px;background:linear-gradient(to bottom,var(--c),rgba(37,99,235,0.3));border-radius:1px;flex-shrink:0;opacity:0.5}
 
 /* shot */
-.shot-full{flex-direction:column;align-items:center;padding-top:50px}
+.shot-full{display:flex;flex-direction:column;align-items:center;padding-top:50px}
 .shot-full img{max-width:92%;max-height:780px;object-fit:contain;border-radius:16px;box-shadow:0 3px 50px rgba(0,0,0,0.04)}
 .shot-full .cap{font-size:17px;color:var(--m);margin-top:18px}
 
@@ -73,14 +74,14 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 .split img{max-width:100%;max-height:780px;object-fit:contain;border-radius:16px;box-shadow:0 2px 36px rgba(0,0,0,0.04)}
 
 /* layers — floating architectural planes */
-.layer-stack{flex-direction:column;align-items:center;padding-top:50px}
+.layer-stack{}
 .layer-row{display:flex;align-items:center;gap:32px;width:1060px;padding:26px 42px;border-radius:18px;margin-bottom:10px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 24px rgba(0,0,0,0.02)}
 .layer-row .n{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:400;font-size:24px;flex-shrink:0}
 .layer-row .lb{font-size:29px;font-weight:400;color:var(--t);letter-spacing:-0.3px}
 .layer-row .ld{font-size:18px;color:var(--d)}
 
 /* cards */
-.cards-3{flex-direction:column;align-items:center;padding-top:40px}
+.cards-3{}
 .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;width:100%;max-width:1480px}
 .scard{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:18px;padding:38px 44px;box-shadow:0 1px 20px rgba(0,0,0,0.03)}
 .scard .d{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:10px;vertical-align:middle}
@@ -94,7 +95,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 .pcard .pde{font-size:16px;color:var(--d)}
 
 /* timeline */
-.tl{flex-direction:column;align-items:center;padding-top:50px}
+.tl{}
 .tl-ideas{display:flex;gap:36px;justify-content:center;margin-bottom:4px}
 .tl-node{text-align:center;min-width:130px}
 .tl-node .tdot{width:10px;height:10px;border-radius:50%;background:var(--c);margin:0 auto 10px;opacity:0.7}
@@ -104,7 +105,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 .tl-impls .ti{min-width:130px;text-align:center;font-size:15px;color:var(--d);line-height:1.6}
 
 /* loop — circular */
-.loop{flex-direction:column;align-items:center;padding-top:40px}
+.loop{}
 .loop-main{position:relative;width:720px;height:560px;margin-top:20px}
 .loop-c{position:absolute;top:50%;left:50%;width:260px;height:260px;margin:-130px 0 0 -130px;border-radius:50%;background:rgba(37,99,235,0.04);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2}
 .loop-c .lb{font-size:34px;font-weight:400;color:var(--b);letter-spacing:-0.3px}
@@ -116,7 +117,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 .loop-side.db{top:380px;right:-160px;background:rgba(6,182,212,0.04);color:var(--c)}
 
 /* compare */
-.cmp{flex-direction:column;align-items:center;padding-top:40px}
+.cmp{}
 .cmp-row{display:flex;gap:48px;width:100%;max-width:1480px;margin-top:20px}
 .cmp-side{flex:1;border-radius:20px;padding:40px 44px}
 .cmp-bad{background:rgba(148,163,184,0.04);box-shadow:inset 0 0 0 1px rgba(148,163,184,0.12)}
@@ -129,7 +130,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 .cmp-tag{font-size:17px;text-align:center;margin-top:28px;font-weight:400}
 
 /* 3 columns */
-.l3{flex-direction:column;align-items:center;padding-top:40px}
+.l3{}
 .l3-row{display:flex;gap:36px;width:100%;max-width:1480px;margin-top:20px}
 .l3-col{flex:1;border-radius:20px;padding:44px 38px}
 .l3-col .bar{height:3px;border-radius:2px;margin-bottom:22px;width:32px}
@@ -137,7 +138,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 .l3-col p{font-size:21px;color:var(--d);line-height:2}
 
 /* pipeline */
-.pipe{flex-direction:column;align-items:center;padding-top:40px}
+.pipe{}
 .pipe-row{display:flex;align-items:center;gap:14px;justify-content:center;margin:12px 0}
 .pipe-n{padding:20px 34px;border-radius:16px;font-size:20px;font-weight:400;color:var(--t);background:var(--glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);text-align:center;box-shadow:0 1px 8px rgba(0,0,0,0.02)}
 .pipe-n.hi{background:rgba(6,182,212,0.06);color:var(--c);font-size:22px;padding:24px 40px}
@@ -147,7 +148,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 .pipe-box img{max-width:100%;max-height:280px;object-fit:contain;border-radius:8px}
 
 /* heatmap */
-.hm{flex-direction:column;align-items:center;padding-top:40px}
+.hm{}
 .hm-body{display:flex;gap:48px;align-items:flex-start;margin-top:20px}
 .hm-flow{flex:0 0 220px;font-size:21px;line-height:2.8;color:var(--t);font-weight:300}
 .hm-flow .ar{color:var(--m);font-size:15px;opacity:0.4}
@@ -159,7 +160,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 .hm-total{font-size:20px;font-weight:400;color:var(--c);min-width:28px;text-align:center}
 
 /* journey */
-.jv{flex-direction:column;align-items:center;padding-top:40px}
+.jv{}
 .jv-list{position:relative;margin-top:20px}
 .jv-line{position:absolute;left:10px;top:8px;width:1.5px;height:calc(100% - 16px);background:linear-gradient(to bottom,var(--m),var(--b),var(--c));opacity:0.4}
 .jv-item{display:flex;align-items:center;gap:20px;padding:7px 0;position:relative;z-index:1}
@@ -167,7 +168,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 .jv-label{font-size:23px;font-weight:400;letter-spacing:-0.2px}
 
 /* KPI */
-.kpi{flex-direction:column;align-items:center;padding-top:30px}
+.kpi{}
 .kpi-img{max-width:84%;max-height:420px;object-fit:contain;border-radius:14px;box-shadow:0 2px 30px rgba(0,0,0,0.04);margin-bottom:28px}
 .kpi-row{display:flex;gap:40px}
 .kpi-card{text-align:left;padding:0 40px;min-width:180px}
@@ -175,7 +176,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 .kpi-lb{font-size:16px;color:var(--d);margin-top:6px;letter-spacing:0.5px}
 
 /* end */
-.end{flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:20px}
+.end{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:20px}
 .end-q{font-size:30px;color:var(--t);font-weight:300;max-width:700px;line-height:1.5}
 .end-a{font-size:56px;color:var(--b);font-weight:300;line-height:1.35;letter-spacing:-0.5px}
 .end-sub{font-size:22px;color:var(--d);font-weight:300}
@@ -211,7 +212,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 <!-- S2: Why -->
 <section class="slide story">
   <div class="orb o1" style="opacity:0.3"></div>
-  <div class="l">
+  <div class="slide-grid">
     <div class="tag">WHY THIS PROJECT</div>
     <div class="h1" style="margin-bottom:36px">Can AI build software<br>like an engineer?</div>
     <p class="p">传统个人网站开发需要同时处理设计、编码、测试、部署。每个环节的决策都需要开发者的经验和判断。</p>
@@ -220,7 +221,6 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
     <p class="p" style="margin-top:8px">一个 100% 由 Agent 构建、100% 可验证的个人技术平台。</p>
     <p class="muted" style="margin-top:36px">这不是概念验证 — 这是可运行的工程产物</p>
   </div>
-  <div class="r"></div>
   <div class="num">02 / 16</div>
 </section>
 
@@ -236,14 +236,16 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 <!-- S4: Architecture — floating planes -->
 <section class="slide layer-stack">
   <div class="orb o2" style="opacity:0.3;left:70%"></div>
-  <div class="tag" style="align-self:flex-start;margin-left:380px">ARCHITECTURE</div>
-  <div class="h2" style="margin-bottom:24px">Five Software Layers</div>
-  <div class="layer-row" style="background:rgba(255,255,255,0.9);transform:scale(1.06);box-shadow:0 2px 32px rgba(0,0,0,0.04);z-index:5;position:relative"><div class="n" style="background:var(--b)">5</div><div><div class="lb">Experience</div><div class="ld">HTML + CSS + vanilla JS · 6 层动效</div></div></div>
-  <div class="layer-row" style="background:rgba(255,255,255,0.78);transform:scale(0.98);box-shadow:0 1px 24px rgba(0,0,0,0.03);z-index:4;position:relative"><div class="n" style="background:#4b7eeb">4</div><div><div class="lb">Deployment</div><div class="ld">GitHub Pages · 提交即上线</div></div></div>
-  <div class="layer-row" style="background:rgba(255,255,255,0.65);transform:scale(0.91);box-shadow:0 1px 16px rgba(0,0,0,0.02);z-index:3;position:relative"><div class="n" style="background:#3b82c4">3</div><div><div class="lb">Generation</div><div class="ld">JSON 数据集 · RSS Feed · Wiki 索引</div></div></div>
-  <div class="layer-row" style="background:rgba(255,255,255,0.52);transform:scale(0.84);z-index:2;position:relative"><div class="n" style="background:rgba(37,99,235,0.5)">2</div><div><div class="lb">Automation</div><div class="ld">Python stdlib · 零依赖 · CI 集成</div></div></div>
-  <div class="layer-row" style="background:rgba(255,255,255,0.38);transform:scale(0.77);z-index:1;position:relative"><div class="n" style="background:rgba(37,99,235,0.3)">1</div><div><div class="lb">Knowledge</div><div class="ld">Markdown · 外部 RSS · arXiv 论文</div></div></div>
-  <div class="muted" style="margin-top:28px">所有脚本 Python 标准库 · 零 pip 依赖</div>
+  <div class="slide-grid">
+    <div class="tag">ARCHITECTURE</div>
+    <div class="h2" style="margin-bottom:24px">Five Software Layers</div>
+    <div class="layer-row" style="background:rgba(255,255,255,0.9);transform:scale(1.06);z-index:5;position:relative"><div class="n" style="background:var(--b)">5</div><div><div class="lb">Experience</div><div class="ld">HTML + CSS + vanilla JS · 6 层动效</div></div></div>
+    <div class="layer-row" style="background:rgba(255,255,255,0.78);transform:scale(0.98);z-index:4;position:relative"><div class="n" style="background:#4b7eeb">4</div><div><div class="lb">Deployment</div><div class="ld">GitHub Pages · 提交即上线</div></div></div>
+    <div class="layer-row" style="background:rgba(255,255,255,0.65);transform:scale(0.91);z-index:3;position:relative"><div class="n" style="background:#3b82c4">3</div><div><div class="lb">Generation</div><div class="ld">JSON 数据集 · RSS Feed · Wiki 索引</div></div></div>
+    <div class="layer-row" style="background:rgba(255,255,255,0.52);transform:scale(0.84);z-index:2;position:relative"><div class="n" style="background:rgba(37,99,235,0.5)">2</div><div><div class="lb">Automation</div><div class="ld">Python stdlib · 零依赖 · CI 集成</div></div></div>
+    <div class="layer-row" style="background:rgba(255,255,255,0.38);transform:scale(0.77);z-index:1;position:relative"><div class="n" style="background:rgba(37,99,235,0.3)">1</div><div><div class="lb">Knowledge</div><div class="ld">Markdown · 外部 RSS · arXiv 论文</div></div></div>
+  </div>
+  <div class="caption">所有脚本 Python 标准库 · 零 pip 依赖</div>
   <div class="num">04 / 16</div>
 </section>
 
@@ -265,8 +267,9 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 
 <!-- S6: Skills & Projects -->
 <section class="slide cards-3">
-  <div class="tag" style="align-self:flex-start;margin-left:50px">WHAT'S INSIDE</div>
-  <div class="card-grid">
+  <div class="slide-grid">
+    <div class="tag">WHAT'S INSIDE</div>
+    <div class="card-grid">
     <div class="scard"><span class="d" style="background:var(--b)"></span><h3>Software Engineering</h3><div class="tags"><span style="background:rgba(37,99,235,0.06);color:var(--b)">Full-stack</span><span style="background:rgba(37,99,235,0.06);color:var(--b)">Architecture</span><span style="background:rgba(37,99,235,0.06);color:var(--b)">CI/CD</span></div></div>
     <div class="scard"><span class="d" style="background:var(--p)"></span><h3>AI Agent</h3><div class="tags"><span style="background:rgba(99,102,241,0.06);color:var(--p)">RAG</span><span style="background:rgba(99,102,241,0.06);color:var(--p)">Multi-Agent</span><span style="background:rgba(99,102,241,0.06);color:var(--p)">Prompt Eng</span></div></div>
     <div class="scard"><span class="d" style="background:var(--c)"></span><h3>Product Innovation</h3><div class="tags"><span style="background:rgba(6,182,212,0.06);color:var(--c)">Design</span><span style="background:rgba(6,182,212,0.06);color:var(--c)">PM</span><span style="background:rgba(6,182,212,0.06);color:var(--c)">Strategy</span></div></div>
@@ -276,14 +279,16 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
     <div class="pcard"><div class="pd" style="background:var(--p)">街</div><div><div class="pn">街像</div><div class="pde">街拍摄影社区</div></div></div>
     <div class="pcard"><div class="pd" style="background:var(--c)">A</div><div><div class="pn">AI Agent Studio</div><div class="pde">Agent 开发平台</div></div></div>
   </div>
+  </div>
   <div class="num">06 / 16</div>
 </section>
 
 <!-- S7: Journey -->
 <section class="slide tl">
-  <div class="tag" style="align-self:flex-start;margin-left:60px">BUILDING JOURNEY</div>
-  <div class="h2" style="margin-bottom:12px">15 Steps · Engineering Evolution</div>
-  <div class="tl-ideas">
+  <div class="slide-grid">
+    <div class="tag">BUILDING JOURNEY</div>
+    <div class="h2" style="margin-bottom:12px">15 Steps · Engineering Evolution</div>
+    <div class="tl-ideas">
     <div class="tl-node"><div class="tdot"></div><div class="tl">Idea</div></div><div class="tl-node"><div class="tdot"></div><div class="tl">Prototype</div></div>
     <div class="tl-node"><div class="tdot"></div><div class="tl">Foundation</div></div><div class="tl-node"><div class="tdot"></div><div class="tl">Knowledge</div></div>
     <div class="tl-node"><div class="tdot"></div><div class="tl">Automation</div></div><div class="tl-node"><div class="tdot" style="background:var(--p)"></div><div class="tl" style="color:var(--p)">AI Collab</div></div>
@@ -294,14 +299,16 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
     <div class="ti">Home<br>About</div><div class="ti">Blog</div><div class="ti">RSS<br>Papers</div><div class="ti">Wiki</div>
     <div class="ti">Quality<br>Check</div><div class="ti">Multi-Agent<br>Testing</div><div class="ti">24h Agent<br>Assistant</div>
   </div>
-  <div class="muted" style="margin-top:28px">15 步迭代 · 每一步引入一种 Agent 工程技术</div>
+  </div>
+  <div class="caption">15 步迭代 · 每一步引入一种 Agent 工程技术</div>
   <div class="num">07 / 16</div>
 </section>
 
 <!-- S8: Engineering Loop — circular -->
 <section class="slide loop">
-  <div class="tag" style="align-self:flex-start;margin-left:60px">AI ENGINEERING LOOP</div>
-  <div class="h2">Specification at the Center</div>
+  <div class="slide-grid">
+    <div class="tag">AI ENGINEERING LOOP</div>
+    <div class="h2">Specification at the Center</div>
   <div class="loop-main">
     <div class="loop-c"><div class="lb">Specification</div><div class="ls">AGENTS.md</div></div>
     <div class="loop-n p">Planning</div>
@@ -311,23 +318,27 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
     <div class="loop-side sd">Subagent Dispatch</div>
     <div class="loop-side db">Systematic Debugging</div>
   </div>
-  <div class="muted" style="margin-top:20px">Specification First · AI Second · Engineering Always</div>
+  </div>
+  <div class="caption">Specification First · AI Second · Engineering Always</div>
   <div class="num">08 / 16</div>
 </section>
 
 <!-- S9: Hero - AGENTS.md -->
 <section class="slide shot-full">
-  <div class="tag">HERO</div>
-  <img src="assets/screenshots/agents-md.png" alt="AGENTS.md" style="max-height:600px" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-  <div class="cap" style="display:none">[ agents-md.png ]</div>
-  <div class="muted" style="margin-top:12px;font-style:italic">Agent 每次对话启动时自动加载 — 输出始终对齐架构预期</div>
+  <div class="slide-grid">
+    <div class="tag" style="grid-column:3/11">HERO</div>
+    <img src="assets/screenshots/agents-md.png" class="g-hero" alt="AGENTS.md" style="grid-column:2/12;max-height:600px" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <div class="cap" style="display:none">[ agents-md.png ]</div>
+  </div>
+  <div class="caption" style="font-style:italic">Agent 每次对话启动时自动加载 — 输出始终对齐架构预期</div>
   <div class="num">09 / 16</div>
 </section>
 
 <!-- S10: Comparison -->
 <section class="slide cmp">
-  <div class="tag" style="align-self:flex-start;margin-left:60px">PROMPT-ONLY vs SPECIFICATION-DRIVEN</div>
-  <div class="h2" style="margin-bottom:8px">给 AI 下指令 → 给 AI 定义边界</div>
+  <div class="slide-grid">
+    <div class="tag">PROMPT-ONLY vs SPECIFICATION-DRIVEN</div>
+    <div class="h2" style="margin-bottom:8px">给 AI 下指令 → 给 AI 定义边界</div>
   <div class="cmp-row">
     <div class="cmp-side cmp-bad">
       <h3>Prompt-Only</h3>
@@ -340,27 +351,31 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
       <div class="cmp-tag" style="color:var(--b)">可控 · 可复现 · 可验证</div>
     </div>
   </div>
-  <div class="muted" style="margin-top:22px">方法论升级：从给 AI 下指令，到给 AI 定义边界</div>
+  </div>
+  <div class="caption">方法论升级：从给 AI 下指令，到给 AI 定义边界</div>
   <div class="num">10 / 16</div>
 </section>
 
 <!-- S11: Three Layers -->
 <section class="slide l3">
-  <div class="tag" style="align-self:flex-start;margin-left:60px">THREE LAYERS</div>
-  <div class="h2">规范如何层层递进</div>
+  <div class="slide-grid">
+    <div class="tag">THREE LAYERS</div>
+    <div class="h2">规范如何层层递进</div>
   <div class="l3-row">
     <div class="l3-col" style="background:rgba(255,255,255,0.85);box-shadow:0 1px 24px rgba(0,0,0,0.04)"><div class="bar" style="background:var(--b)"></div><h3>技术约束</h3><p>纯原生 · 零框架<br>Python stdlib only<br>GitHub Pages 部署</p></div>
     <div class="l3-col" style="background:rgba(255,255,255,0.70);box-shadow:0 1px 16px rgba(0,0,0,0.03)"><div class="bar" style="background:var(--b);opacity:0.6"></div><h3>设计约束</h3><p>CSS 自定义变量<br>共享组件类<br>跨页面一致性</p></div>
     <div class="l3-col" style="background:rgba(255,255,255,0.55);box-shadow:0 1px 8px rgba(0,0,0,0.02)"><div class="bar" style="background:var(--c)"></div><h3>质量约束</h3><p>check.py 门禁<br>8 项自动化检查<br>0 失败方可合并</p></div>
   </div>
-  <div class="muted" style="margin-top:28px">三层约束层层递进 · 消除决策噪声</div>
+  </div>
+  <div class="caption">三层约束层层递进 · 消除决策噪声</div>
   <div class="num">11 / 16</div>
 </section>
 
 <!-- S12: Quality Lifecycle -->
 <section class="slide pipe">
-  <div class="tag" style="align-self:flex-start;margin-left:60px">QUALITY LIFECYCLE</div>
-  <div class="h2" style="margin-bottom:12px">从代码到上线的全生命周期</div>
+  <div class="slide-grid">
+    <div class="tag">QUALITY LIFECYCLE</div>
+    <div class="h2" style="margin-bottom:12px">从代码到上线的全生命周期</div>
   <div class="pipe-row">
     <div class="pipe-n">Write Code</div><div class="pipe-ar">→</div>
     <div class="pipe-n">Commit</div><div class="pipe-ar">→</div>
@@ -393,13 +408,15 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
   ALL CHECKS PASSED
 ========================================</pre>
   </div>
+  </div>
   <div class="num">12 / 16</div>
 </section>
 
 <!-- S13: Verification — heatmap -->
 <section class="slide hm">
-  <div class="tag" style="align-self:flex-start;margin-left:60px">VERIFICATION</div>
-  <div class="h2">14 功能点 · 44 条用例 · 全量通过</div>
+  <div class="slide-grid">
+    <div class="tag">VERIFICATION</div>
+    <div class="h2">14 功能点 · 44 条用例 · 全量通过</div>
   <div class="hm-body">
     <div class="hm-flow">功能点<br>需求点<br><span class="ar">↓</span><br>用例表<br><span class="ar">↓</span><br>Playwright<br>自动化</div>
     <div class="hm-grid">
@@ -416,14 +433,16 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
       </div>
     </div>
   </div>
-  <div class="muted" style="margin-top:20px">44 条全量通过 &nbsp;|&nbsp; 白盒 32 + 黑盒 12</div>
+  </div>
+  <div class="caption">44 条全量通过 &nbsp;|&nbsp; 白盒 32 + 黑盒 12</div>
   <div class="num">13 / 16</div>
 </section>
 
 <!-- S14: Evolution -->
 <section class="slide jv">
-  <div class="tag" style="align-self:flex-start;margin-left:60px">EVOLUTION</div>
-  <div class="h2" style="margin-bottom:24px">从传统开发到 AI-Native Engineering</div>
+  <div class="slide-grid">
+    <div class="tag">EVOLUTION</div>
+    <div class="h2" style="margin-bottom:24px">从传统开发到 AI-Native Engineering</div>
   <div class="jv-list">
     <div class="jv-line"></div>
     <div class="jv-item"><div class="jv-dot" style="background:var(--c)"></div><span class="jv-label" style="color:var(--c)">AI Native Engineering</span></div>
@@ -433,22 +452,25 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
     <div class="jv-item"><div class="jv-dot" style="background:var(--b);opacity:0.3"></div><span class="jv-label" style="color:var(--b);opacity:0.4">AI Assisted</span></div>
     <div class="jv-item"><div class="jv-dot" style="background:var(--m);opacity:0.4"></div><span class="jv-label" style="color:var(--m)">Traditional Development</span></div>
   </div>
-  <div class="muted" style="margin-top:28px">Specification First · AI Second · Engineering Always</div>
+  </div>
+  <div class="caption">Specification First · AI Second · Engineering Always</div>
   <div class="num">14 / 16</div>
 </section>
 
 <!-- S15: Results KPI -->
 <section class="slide kpi">
-  <div class="tag">RESULTS</div>
-  <img src="assets/screenshots/site-full.gif" class="kpi-img" alt="Site" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-  <div class="cap" style="display:none">[ site-full.gif ]</div>
-  <div class="kpi-row">
+  <div class="slide-grid">
+    <div class="tag">RESULTS</div>
+    <img src="assets/screenshots/site-full.gif" class="kpi-img" alt="Site" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <div class="cap" style="display:none">[ site-full.gif ]</div>
+    <div class="kpi-row">
     <div class="kpi-card"><div class="kpi-num">10</div><div class="kpi-lb">Pages</div></div>
     <div class="kpi-card"><div class="kpi-num">44</div><div class="kpi-lb">Tests</div></div>
     <div class="kpi-card"><div class="kpi-num">100%</div><div class="kpi-lb">Passed</div></div>
     <div class="kpi-card"><div class="kpi-num" style="color:var(--c)">0</div><div class="kpi-lb">Framework</div></div>
   </div>
-  <div class="muted" style="margin-top:28px">Specification First · AI Second · Engineering Always</div>
+  </div>
+  <div class="caption">Specification First · AI Second · Engineering Always</div>
   <div class="num">15 / 16</div>
 </section>
 
