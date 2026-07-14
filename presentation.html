@@ -75,7 +75,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 
 /* layers — floating architectural planes */
 .layer-stack{}
-.layer-row{display:flex;align-items:center;gap:32px;width:1060px;padding:26px 42px;border-radius:18px;margin-bottom:10px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 24px rgba(0,0,0,0.02)}
+.layer-row{display:flex;align-items:center;gap:32px;padding:26px 42px;border-radius:var(--card-radius);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:var(--card-shadow)}
 .layer-row .n{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:400;font-size:24px;flex-shrink:0}
 .layer-row .lb{font-size:29px;font-weight:400;color:var(--t);letter-spacing:-0.3px}
 .layer-row .ld{font-size:18px;color:var(--d)}
@@ -83,13 +83,13 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 /* cards */
 .cards-3{}
 .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;width:100%;max-width:1480px}
-.scard{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:18px;padding:38px 44px;box-shadow:0 1px 20px rgba(0,0,0,0.03)}
+.scard{background:var(--card-glass);backdrop-filter:blur(var(--card-blur));-webkit-backdrop-filter:blur(var(--card-blur));border-radius:var(--card-radius);padding:var(--card-py) var(--card-px);box-shadow:var(--card-shadow)}
 .scard .d{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:10px;vertical-align:middle}
 .scard h3{display:inline;font-size:28px;font-weight:400;color:var(--t);letter-spacing:-0.2px}
 .scard .tags{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px}
 .scard .tags span{padding:6px 17px;border-radius:12px;font-size:15px;font-weight:400}
 .pgrid{display:flex;flex-direction:column;gap:14px;width:100%;max-width:1400px;margin-top:28px}
-.pcard{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:16px;padding:22px 32px;display:flex;align-items:center;gap:20px;box-shadow:0 1px 12px rgba(0,0,0,0.02)}
+.pcard{background:var(--card-glass);backdrop-filter:blur(var(--card-blur));-webkit-backdrop-filter:blur(var(--card-blur));border-radius:var(--card-radius);padding:22px 32px;display:flex;align-items:center;gap:20px;box-shadow:var(--card-shadow)}
 .pcard .pd{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:400;font-size:18px;flex-shrink:0;opacity:0.85}
 .pcard .pn{font-size:25px;font-weight:400;color:var(--t);letter-spacing:-0.2px}
 .pcard .pde{font-size:16px;color:var(--d)}
@@ -110,7 +110,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 .loop-c{position:absolute;top:50%;left:50%;width:260px;height:260px;margin:-130px 0 0 -130px;border-radius:50%;background:rgba(37,99,235,0.04);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2}
 .loop-c .lb{font-size:34px;font-weight:400;color:var(--b);letter-spacing:-0.3px}
 .loop-c .ls{font-size:15px;color:var(--d);margin-top:4px}
-.loop-n{position:absolute;background:var(--glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:14px;padding:18px 36px;font-size:20px;font-weight:400;color:var(--t);text-align:center;box-shadow:0 1px 12px rgba(0,0,0,0.03)}
+.loop-n{position:absolute;background:var(--card-glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:14px;padding:18px 36px;font-size:20px;font-weight:400;color:var(--t);text-align:center;box-shadow:var(--card-shadow)}
 .loop-n.p{top:10px;left:50%;margin-left:-90px}.loop-n.e{top:50%;right:10px;margin-top:-30px}.loop-n.v{bottom:10px;left:50%;margin-left:-100px}.loop-n.i{top:50%;left:10px;margin-top:-30px}
 .loop-side{position:absolute;font-size:15px;font-weight:400;padding:12px 22px;border-radius:10px;box-shadow:0 1px 8px rgba(0,0,0,0.02)}
 .loop-side.sd{top:120px;left:-160px;background:rgba(99,102,241,0.04);color:var(--p)}
@@ -119,7 +119,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 /* compare */
 .cmp{}
 .cmp-row{display:flex;gap:48px;width:100%;max-width:1480px;margin-top:20px}
-.cmp-side{flex:1;border-radius:20px;padding:40px 44px}
+.cmp-side{border-radius:20px;padding:48px 52px}
 .cmp-bad{background:rgba(148,163,184,0.04);box-shadow:inset 0 0 0 1px rgba(148,163,184,0.12)}
 .cmp-good{background:rgba(37,99,235,0.02);box-shadow:inset 0 0 0 1px rgba(37,99,235,0.08)}
 .cmp-side h3{font-size:28px;font-weight:400;margin-bottom:28px;letter-spacing:-0.2px}
@@ -132,7 +132,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 /* 3 columns */
 .l3{}
 .l3-row{display:flex;gap:36px;width:100%;max-width:1480px;margin-top:20px}
-.l3-col{flex:1;border-radius:20px;padding:44px 38px}
+.l3-col{border-radius:20px;padding:52px 44px}
 .l3-col .bar{height:3px;border-radius:2px;margin-bottom:22px;width:32px}
 .l3-col h3{font-size:30px;font-weight:400;color:var(--t);margin-bottom:18px;letter-spacing:-0.2px}
 .l3-col p{font-size:21px;color:var(--d);line-height:2}
@@ -140,10 +140,10 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 /* pipeline */
 .pipe{}
 .pipe-row{display:flex;align-items:center;gap:14px;justify-content:center;margin:12px 0}
-.pipe-n{padding:20px 34px;border-radius:16px;font-size:20px;font-weight:400;color:var(--t);background:var(--glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);text-align:center;box-shadow:0 1px 8px rgba(0,0,0,0.02)}
+.pipe-n{padding:20px 34px;border-radius:16px;font-size:20px;font-weight:400;color:var(--t);background:var(--card-glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);text-align:center;box-shadow:var(--card-shadow)}
 .pipe-n.hi{background:rgba(6,182,212,0.06);color:var(--c);font-size:22px;padding:24px 40px}
 .pipe-ar{font-size:20px;color:var(--m);opacity:0.5}
-.pipe-box{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:16px;padding:24px 36px;width:78%;max-width:1180px;margin-top:16px;box-shadow:0 1px 16px rgba(0,0,0,0.02)}
+.pipe-box{background:var(--card-glass);backdrop-filter:blur(var(--card-blur));-webkit-backdrop-filter:blur(var(--card-blur));border-radius:var(--card-radius);padding:24px 36px;margin-top:16px;box-shadow:var(--card-shadow)}
 .pipe-box pre{font-size:12px;color:var(--d);font-family:var(--fm);line-height:1.6;white-space:pre-wrap;opacity:0.7}
 .pipe-box img{max-width:100%;max-height:280px;object-fit:contain;border-radius:8px}
 
@@ -152,7 +152,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 .hm-body{display:flex;gap:48px;align-items:flex-start;margin-top:20px}
 .hm-flow{flex:0 0 220px;font-size:21px;line-height:2.8;color:var(--t);font-weight:300}
 .hm-flow .ar{color:var(--m);font-size:15px;opacity:0.4}
-.hm-grid{flex:1;background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:18px;padding:32px 38px;box-shadow:0 1px 20px rgba(0,0,0,0.03)}
+.hm-grid{background:var(--card-glass);backdrop-filter:blur(var(--card-blur));-webkit-backdrop-filter:blur(var(--card-blur));border-radius:var(--card-radius);padding:32px 38px;box-shadow:var(--card-shadow)}
 .hm-row{display:flex;align-items:center;gap:16px;margin-bottom:10px}
 .hm-label{min-width:108px;font-size:16px;color:var(--t);text-align:right;font-weight:400}
 .hm-cells{display:flex;gap:5px}
@@ -227,7 +227,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 <!-- S3: Hero - Homepage -->
 <section class="slide shot-full">
   <div class="tag">HERO</div>
-  <img src="assets/screenshots/homepage-full.png" alt="Homepage" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+  <img src="assets/screenshots/homepage-full.png" class="g-hero" alt="Homepage" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
   <div class="cap" style="display:none">[ homepage-full.png ]</div>
   <div class="muted" style="margin-top:12px">Zero Framework · Pure Native · Fully Functional</div>
   <div class="num">03 / 16</div>
@@ -239,11 +239,11 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
   <div class="slide-grid">
     <div class="tag">ARCHITECTURE</div>
     <div class="h2" style="margin-bottom:24px">Five Software Layers</div>
-    <div class="layer-row" style="background:rgba(255,255,255,0.9);transform:scale(1.06);z-index:5;position:relative"><div class="n" style="background:var(--b)">5</div><div><div class="lb">Experience</div><div class="ld">HTML + CSS + vanilla JS · 6 层动效</div></div></div>
-    <div class="layer-row" style="background:rgba(255,255,255,0.78);transform:scale(0.98);z-index:4;position:relative"><div class="n" style="background:#4b7eeb">4</div><div><div class="lb">Deployment</div><div class="ld">GitHub Pages · 提交即上线</div></div></div>
-    <div class="layer-row" style="background:rgba(255,255,255,0.65);transform:scale(0.91);z-index:3;position:relative"><div class="n" style="background:#3b82c4">3</div><div><div class="lb">Generation</div><div class="ld">JSON 数据集 · RSS Feed · Wiki 索引</div></div></div>
-    <div class="layer-row" style="background:rgba(255,255,255,0.52);transform:scale(0.84);z-index:2;position:relative"><div class="n" style="background:rgba(37,99,235,0.5)">2</div><div><div class="lb">Automation</div><div class="ld">Python stdlib · 零依赖 · CI 集成</div></div></div>
-    <div class="layer-row" style="background:rgba(255,255,255,0.38);transform:scale(0.77);z-index:1;position:relative"><div class="n" style="background:rgba(37,99,235,0.3)">1</div><div><div class="lb">Knowledge</div><div class="ld">Markdown · 外部 RSS · arXiv 论文</div></div></div>
+    <div class="layer-row g-panel" style="background:rgba(255,255,255,0.9);transform:scale(1.06);z-index:5;position:relative"><div class="n" style="background:var(--b)">5</div><div><div class="lb">Experience</div><div class="ld">HTML + CSS + vanilla JS · 6 层动效</div></div></div>
+    <div class="layer-row g-panel" style="background:rgba(255,255,255,0.78);transform:scale(0.98);z-index:4;position:relative"><div class="n" style="background:#4b7eeb">4</div><div><div class="lb">Deployment</div><div class="ld">GitHub Pages · 提交即上线</div></div></div>
+    <div class="layer-row g-panel" style="background:rgba(255,255,255,0.65);transform:scale(0.91);z-index:3;position:relative"><div class="n" style="background:#3b82c4">3</div><div><div class="lb">Generation</div><div class="ld">JSON 数据集 · RSS Feed · Wiki 索引</div></div></div>
+    <div class="layer-row g-panel" style="background:rgba(255,255,255,0.52);transform:scale(0.84);z-index:2;position:relative"><div class="n" style="background:rgba(37,99,235,0.5)">2</div><div><div class="lb">Automation</div><div class="ld">Python stdlib · 零依赖 · CI 集成</div></div></div>
+    <div class="layer-row g-panel" style="background:rgba(255,255,255,0.38);transform:scale(0.77);z-index:1;position:relative"><div class="n" style="background:rgba(37,99,235,0.3)">1</div><div><div class="lb">Knowledge</div><div class="ld">Markdown · 外部 RSS · arXiv 论文</div></div></div>
   </div>
   <div class="caption">所有脚本 Python 标准库 · 零 pip 依赖</div>
   <div class="num">04 / 16</div>
@@ -252,7 +252,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 <!-- S5: Hero Design -->
 <section class="slide split">
   <div class="sl">
-    <img src="assets/screenshots/hero-closeup.gif" alt="Hero" style="max-height:680px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <img src="assets/screenshots/hero-closeup.gif" class="g-hero" alt="Hero" style="max-height:680px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
     <div style="display:none;width:720px;height:480px;background:var(--glass);border-radius:14px;align-items:center;justify-content:center;color:var(--d);font-size:16px">[ hero-closeup.gif ]</div>
   </div>
   <div class="sr">
@@ -270,14 +270,14 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
   <div class="slide-grid">
     <div class="tag">WHAT'S INSIDE</div>
     <div class="card-grid">
-    <div class="scard"><span class="d" style="background:var(--b)"></span><h3>Software Engineering</h3><div class="tags"><span style="background:rgba(37,99,235,0.06);color:var(--b)">Full-stack</span><span style="background:rgba(37,99,235,0.06);color:var(--b)">Architecture</span><span style="background:rgba(37,99,235,0.06);color:var(--b)">CI/CD</span></div></div>
-    <div class="scard"><span class="d" style="background:var(--p)"></span><h3>AI Agent</h3><div class="tags"><span style="background:rgba(99,102,241,0.06);color:var(--p)">RAG</span><span style="background:rgba(99,102,241,0.06);color:var(--p)">Multi-Agent</span><span style="background:rgba(99,102,241,0.06);color:var(--p)">Prompt Eng</span></div></div>
-    <div class="scard"><span class="d" style="background:var(--c)"></span><h3>Product Innovation</h3><div class="tags"><span style="background:rgba(6,182,212,0.06);color:var(--c)">Design</span><span style="background:rgba(6,182,212,0.06);color:var(--c)">PM</span><span style="background:rgba(6,182,212,0.06);color:var(--c)">Strategy</span></div></div>
+    <div class="scard g-panel"><span class="d" style="background:var(--b)"></span><h3>Software Engineering</h3><div class="tags"><span style="background:rgba(37,99,235,0.06);color:var(--b)">Full-stack</span><span style="background:rgba(37,99,235,0.06);color:var(--b)">Architecture</span><span style="background:rgba(37,99,235,0.06);color:var(--b)">CI/CD</span></div></div>
+    <div class="scard g-panel"><span class="d" style="background:var(--p)"></span><h3>AI Agent</h3><div class="tags"><span style="background:rgba(99,102,241,0.06);color:var(--p)">RAG</span><span style="background:rgba(99,102,241,0.06);color:var(--p)">Multi-Agent</span><span style="background:rgba(99,102,241,0.06);color:var(--p)">Prompt Eng</span></div></div>
+    <div class="scard g-panel"><span class="d" style="background:var(--c)"></span><h3>Product Innovation</h3><div class="tags"><span style="background:rgba(6,182,212,0.06);color:var(--c)">Design</span><span style="background:rgba(6,182,212,0.06);color:var(--c)">PM</span><span style="background:rgba(6,182,212,0.06);color:var(--c)">Strategy</span></div></div>
   </div>
   <div class="pgrid">
-    <div class="pcard"><div class="pd" style="background:var(--b)">N</div><div><div class="pn">NoteWhale</div><div class="pde">AI 笔记工具</div></div></div>
-    <div class="pcard"><div class="pd" style="background:var(--p)">街</div><div><div class="pn">街像</div><div class="pde">街拍摄影社区</div></div></div>
-    <div class="pcard"><div class="pd" style="background:var(--c)">A</div><div><div class="pn">AI Agent Studio</div><div class="pde">Agent 开发平台</div></div></div>
+    <div class="pcard g-panel"><div class="pd" style="background:var(--b)">N</div><div><div class="pn">NoteWhale</div><div class="pde">AI 笔记工具</div></div></div>
+    <div class="pcard g-panel"><div class="pd" style="background:var(--p)">街</div><div><div class="pn">街像</div><div class="pde">街拍摄影社区</div></div></div>
+    <div class="pcard g-panel"><div class="pd" style="background:var(--c)">A</div><div><div class="pn">AI Agent Studio</div><div class="pde">Agent 开发平台</div></div></div>
   </div>
   </div>
   <div class="num">06 / 16</div>
@@ -311,10 +311,10 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
     <div class="h2">Specification at the Center</div>
   <div class="loop-main">
     <div class="loop-c"><div class="lb">Specification</div><div class="ls">AGENTS.md</div></div>
-    <div class="loop-n p">Planning</div>
-    <div class="loop-n e">Execution</div>
-    <div class="loop-n v">Verification</div>
-    <div class="loop-n i">Iteration</div>
+    <div class="loop-n p g-panel">Planning</div>
+    <div class="loop-n e g-panel">Execution</div>
+    <div class="loop-n v g-panel">Verification</div>
+    <div class="loop-n i g-panel">Iteration</div>
     <div class="loop-side sd">Subagent Dispatch</div>
     <div class="loop-side db">Systematic Debugging</div>
   </div>
@@ -340,12 +340,12 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
     <div class="tag">PROMPT-ONLY vs SPECIFICATION-DRIVEN</div>
     <div class="h2" style="margin-bottom:8px">给 AI 下指令 → 给 AI 定义边界</div>
   <div class="cmp-row">
-    <div class="cmp-side cmp-bad">
+    <div class="cmp-side cmp-bad g-panel">
       <h3>Prompt-Only</h3>
       <ul><li>每次对话重复粘贴约束</li><li>Agent 自由发挥</li><li>代码风格不一致</li><li>可能引入框架和外部依赖</li></ul>
       <div class="cmp-tag" style="color:var(--m)">不可控 · 不可复现</div>
     </div>
-    <div class="cmp-side cmp-good">
+    <div class="cmp-side cmp-good g-panel">
       <h3>Specification-Driven</h3>
       <ul><li>AGENTS.md 定义一切约束</li><li>Agent 每次启动自动加载</li><li>风格始终符合项目约定</li><li>check.py 自动验证</li></ul>
       <div class="cmp-tag" style="color:var(--b)">可控 · 可复现 · 可验证</div>
@@ -362,9 +362,9 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
     <div class="tag">THREE LAYERS</div>
     <div class="h2">规范如何层层递进</div>
   <div class="l3-row">
-    <div class="l3-col" style="background:rgba(255,255,255,0.85);box-shadow:0 1px 24px rgba(0,0,0,0.04)"><div class="bar" style="background:var(--b)"></div><h3>技术约束</h3><p>纯原生 · 零框架<br>Python stdlib only<br>GitHub Pages 部署</p></div>
-    <div class="l3-col" style="background:rgba(255,255,255,0.70);box-shadow:0 1px 16px rgba(0,0,0,0.03)"><div class="bar" style="background:var(--b);opacity:0.6"></div><h3>设计约束</h3><p>CSS 自定义变量<br>共享组件类<br>跨页面一致性</p></div>
-    <div class="l3-col" style="background:rgba(255,255,255,0.55);box-shadow:0 1px 8px rgba(0,0,0,0.02)"><div class="bar" style="background:var(--c)"></div><h3>质量约束</h3><p>check.py 门禁<br>8 项自动化检查<br>0 失败方可合并</p></div>
+    <div class="l3-col g-panel" style="background:rgba(255,255,255,0.85);box-shadow:0 1px 24px rgba(0,0,0,0.04)"><div class="bar" style="background:var(--b)"></div><h3>技术约束</h3><p>纯原生 · 零框架<br>Python stdlib only<br>GitHub Pages 部署</p></div>
+    <div class="l3-col g-panel" style="background:rgba(255,255,255,0.70);box-shadow:0 1px 16px rgba(0,0,0,0.03)"><div class="bar" style="background:var(--b);opacity:0.6"></div><h3>设计约束</h3><p>CSS 自定义变量<br>共享组件类<br>跨页面一致性</p></div>
+    <div class="l3-col g-panel" style="background:rgba(255,255,255,0.55);box-shadow:0 1px 8px rgba(0,0,0,0.02)"><div class="bar" style="background:var(--c)"></div><h3>质量约束</h3><p>check.py 门禁<br>8 项自动化检查<br>0 失败方可合并</p></div>
   </div>
   </div>
   <div class="caption">三层约束层层递进 · 消除决策噪声</div>
@@ -377,16 +377,16 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
     <div class="tag">QUALITY LIFECYCLE</div>
     <div class="h2" style="margin-bottom:12px">从代码到上线的全生命周期</div>
   <div class="pipe-row">
-    <div class="pipe-n">Write Code</div><div class="pipe-ar">→</div>
-    <div class="pipe-n">Commit</div><div class="pipe-ar">→</div>
-    <div class="pipe-n hi">check.py</div><div class="pipe-ar">→</div>
-    <div class="pipe-n">8 Checks</div><div class="pipe-ar">→</div>
-    <div class="pipe-n">GitHub Pages</div><div class="pipe-ar">→</div>
-    <div class="pipe-n" style="color:#10b981">● Live</div>
+    <div class="pipe-n g-panel">Write Code</div><div class="pipe-ar">→</div>
+    <div class="pipe-n g-panel">Commit</div><div class="pipe-ar">→</div>
+    <div class="pipe-n hi g-panel">check.py</div><div class="pipe-ar">→</div>
+    <div class="pipe-n g-panel">8 Checks</div><div class="pipe-ar">→</div>
+    <div class="pipe-n g-panel">GitHub Pages</div><div class="pipe-ar">→</div>
+    <div class="pipe-n g-panel" style="color:#10b981">● Live</div>
   </div>
-  <div class="pipe-box">
+  <div class="pipe-box g-panel">
     <div class="muted" style="margin-bottom:10px;font-family:var(--fm);opacity:0.5">$ python scripts/check.py</div>
-    <img src="assets/screenshots/check-py-output.png" alt="check.py" style="max-height:260px" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <img src="assets/screenshots/check-py-output.png" class="g-hero" alt="check.py" style="max-height:260px" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
     <pre style="display:none;font-size:10px;color:var(--d);font-family:var(--fm);line-height:1.6;opacity:0.6">[PASS] HTML pages:        13/13 found
 [PASS] Internal links:    188/188 valid
 [PASS] feed.xml:          valid XML, 9 items
@@ -419,7 +419,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
     <div class="h2">14 功能点 · 44 条用例 · 全量通过</div>
   <div class="hm-body">
     <div class="hm-flow">功能点<br>需求点<br><span class="ar">↓</span><br>用例表<br><span class="ar">↓</span><br>Playwright<br>自动化</div>
-    <div class="hm-grid">
+    <div class="hm-grid g-panel">
       <div class="hm-row"><span class="hm-label">首页展示</span><div class="hm-cells"><span class="hm-cell" style="background:var(--b)">5</span><span class="hm-cell" style="background:var(--b);opacity:0.3">2</span></div><span class="hm-total">7</span></div>
       <div class="hm-row"><span class="hm-label">导航栏</span><div class="hm-cells"><span class="hm-cell" style="background:var(--b);opacity:0.85">4</span><span class="hm-cell" style="background:var(--b);opacity:0.25">2</span></div><span class="hm-total">6</span></div>
       <div class="hm-row"><span class="hm-label">博客系统</span><div class="hm-cells"><span class="hm-cell" style="background:var(--b)">5</span><span class="hm-cell" style="background:var(--b);opacity:0.3">2</span></div><span class="hm-total">7</span></div>
@@ -461,9 +461,9 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 <section class="slide kpi">
   <div class="slide-grid">
     <div class="tag">RESULTS</div>
-    <img src="assets/screenshots/site-full.gif" class="kpi-img" alt="Site" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <img src="assets/screenshots/site-full.gif" class="kpi-img g-hero" alt="Site" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
     <div class="cap" style="display:none">[ site-full.gif ]</div>
-    <div class="kpi-row">
+    <div class="kpi-row g-metric">
     <div class="kpi-card"><div class="kpi-num">10</div><div class="kpi-lb">Pages</div></div>
     <div class="kpi-card"><div class="kpi-num">44</div><div class="kpi-lb">Tests</div></div>
     <div class="kpi-card"><div class="kpi-num">100%</div><div class="kpi-lb">Passed</div></div>
