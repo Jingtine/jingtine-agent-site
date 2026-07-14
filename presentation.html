@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building an AI-Native Software Engineering Workflow</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --b:#2563eb;--p:#6366f1;--c:#06b6d4;--bg:#f0f4ff;--card:rgba(255,255,255,0.82);
+  --t:#0f172a;--d:#64748b;--m:#94a3b8;--s:#dbeafe;
+  --fd:'Noto Serif SC','STSongti-SC',serif;--fb:'Noto Serif SC','DengXian',sans-serif;--fm:'JetBrains Mono','Consolas',monospace
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:var(--fb);-webkit-font-smoothing:antialiased}
+.view{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0f172a}
+.stage{width:1920px;height:1080px;background:var(--bg);flex-shrink:0;position:relative}
+.slide{position:absolute;inset:0;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .5s ease,visibility .5s ease;display:flex;padding:60px 80px}
+.slide.on{opacity:1;visibility:visible;pointer-events:auto}
+@media(prefers-reduced-motion:reduce){.slide{transition:none}}
+
+/* ── common ── */
+.tag{display:inline-block;padding:5px 16px;border-radius:12px;background:var(--s);color:var(--b);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.h1{font-size:50px;font-weight:700;color:var(--t);line-height:1.15;letter-spacing:-0.5px}
+.h2{font-size:40px;font-weight:700;color:var(--t);line-height:1.2}
+.h3{font-size:32px;font-weight:700;color:var(--t)}
+.p{font-size:22px;color:var(--d);line-height:1.7}
+.p-sm{font-size:18px;color:var(--d);line-height:1.65}
+.muted{font-size:15px;color:var(--m)}
+.glass{background:var(--card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(37,99,235,0.12);border-radius:18px;padding:32px 40px}
+.accent-line{width:40px;height:3px;border-radius:2px;margin-bottom:12px}
+.num{position:absolute;bottom:30px;right:50px;font-family:var(--fm);font-size:14px;color:var(--m);letter-spacing:2px}
+
+/* ── orbs ── */
+.orb{position:absolute;border-radius:50%;pointer-events:none;animation:of 14s ease-in-out infinite}
+.o1{width:600px;height:600px;top:-180px;right:-80px;background:radial-gradient(circle,rgba(37,99,235,0.10),rgba(99,102,241,0.04),transparent 65%)}
+.o2{width:400px;height:400px;bottom:-100px;left:-60px;background:radial-gradient(circle,rgba(99,102,241,0.07),rgba(37,99,235,0.02),transparent 65%);animation-delay:-7s}
+@keyframes of{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(16px,-10px) scale(1.03)}66%{transform:translate(-10px,8px) scale(0.98)}}
+
+/* ── cover ── */
+.cover{flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.cover .h1{font-size:54px;margin-bottom:18px}.cover .h1 span{color:var(--b)}
+.cover .q{font-size:24px;color:var(--d);font-weight:300;margin-bottom:14px}
+.cover .sl{font-size:17px;color:var(--m);margin-bottom:50px}
+
+/* ── story ── */
+.story{flex-direction:row;align-items:center;gap:70px}
+.story .l{flex:1;max-width:840px}
+.story .r{width:4px;height:400px;background:linear-gradient(to bottom,var(--c),var(--b));border-radius:2px;flex-shrink:0}
+
+/* ── shot ── */
+.shot-full{flex-direction:column;align-items:center;padding-top:40px}
+.shot-full img{max-width:90%;max-height:620px;object-fit:contain;border-radius:12px;box-shadow:0 6px 40px rgba(37,99,235,0.07);border:1px solid rgba(37,99,235,0.1)}
+.shot-full .cap{font-size:16px;color:var(--m);margin-top:14px;font-style:italic}
+
+/* ── split ── */
+.split{flex-direction:row;align-items:center;gap:60px}
+.split .sl{flex:1;display:flex;align-items:center;justify-content:center}
+.split .sr{flex:1}
+.split img{max-width:100%;max-height:650px;object-fit:contain;border-radius:12px;border:1px solid rgba(37,99,235,0.1)}
+
+/* ── layers (slide 4) ── */
+.layer-stack{flex-direction:column;align-items:center;padding-top:30px}
+.layer-row{display:flex;align-items:center;gap:20px;width:1000px;padding:18px 30px;border-radius:14px;margin-bottom:10px}
+.layer-row .n{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:22px;flex-shrink:0}
+.layer-row .lb{font-size:26px;font-weight:700;color:var(--t)}
+.layer-row .ld{font-size:16px;color:var(--d)}
+
+/* ── grid ── */
+.cards-3{flex-direction:column;align-items:center;padding-top:30px}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;width:100%;max-width:1500px}
+.scard{background:var(--card);border:1px solid rgba(37,99,235,0.12);border-radius:14px;padding:28px 30px}
+.scard .d{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:10px;vertical-align:middle}
+.scard h3{display:inline;font-size:24px;font-weight:700;color:var(--t)}
+.scard .tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+.scard .tags span{padding:5px 14px;border-radius:10px;font-size:13px;font-weight:600}
+.pgrid{display:flex;flex-direction:column;gap:14px;width:100%;max-width:1400px;margin-top:24px}
+.pcard{background:var(--card);border:1px solid rgba(37,99,235,0.1);border-radius:14px;padding:20px 28px;display:flex;align-items:center;gap:18px}
+.pcard .pd{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px;flex-shrink:0}
+.pcard .pn{font-size:22px;font-weight:700;color:var(--t)}
+.pcard .pde{font-size:15px;color:var(--d)}
+
+/* ── timeline ── */
+.tl{flex-direction:column;align-items:center;padding-top:40px}
+.tl-ideas{display:flex;gap:30px;justify-content:center;margin-bottom:6px}
+.tl-node{text-align:center;min-width:140px}
+.tl-node .tdot{width:12px;height:12px;border-radius:50%;background:var(--c);margin:0 auto 8px}
+.tl-node .tl{font-size:17px;font-weight:700;color:var(--t)}
+.tl-line{width:88%;height:2px;background:rgba(37,99,235,0.18);margin:6px 0}
+.tl-impls{display:flex;gap:30px;justify-content:center}
+.tl-impls .ti{min-width:140px;text-align:center;font-size:14px;color:var(--d);line-height:1.5}
+
+/* ── loop ── */
+.loop{flex-direction:column;align-items:center;padding-top:30px}
+.loop-body{display:flex;align-items:center;gap:50px;margin-top:10px}
+.loop-side{display:flex;flex-direction:column;gap:20px}
+.loop-s{background:var(--card);border:1px solid rgba(37,99,235,0.12);border-radius:12px;padding:18px 28px;font-size:18px;color:var(--t);text-align:center}
+.loop-nodes{display:flex;flex-direction:column;gap:16px}
+.loop-n{background:var(--card);border:1px solid rgba(37,99,235,0.12);border-radius:12px;padding:16px 32px;font-size:22px;font-weight:700;color:var(--t);text-align:center}
+.loop-c{width:200px;height:200px;border-radius:50%;background:rgba(99,102,241,0.06);border:2px solid rgba(99,102,241,0.18);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.loop-c .lb{font-size:26px;font-weight:700;color:var(--p)}
+.loop-c .ls{font-size:14px;color:var(--d);margin-top:4px}
+
+/* ── compare ── */
+.cmp{flex-direction:column;align-items:center;padding-top:30px}
+.cmp-row{display:flex;gap:40px;width:100%;max-width:1500px;margin-top:14px}
+.cmp-side{flex:1;border-radius:16px;padding:36px 36px}
+.cmp-bad{background:rgba(148,163,184,0.06);border:1px solid rgba(148,163,184,0.22)}
+.cmp-good{background:rgba(37,99,235,0.04);border:1px solid rgba(37,99,235,0.16)}
+.cmp-side h3{font-size:26px;font-weight:700;margin-bottom:22px}
+.cmp-bad h3{color:var(--m)}.cmp-good h3{color:var(--b)}
+.cmp-side ul{list-style:none;font-size:19px;line-height:2.3;color:var(--d)}
+.cmp-side ul li::before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:12px}
+.cmp-bad li::before{background:var(--m)}.cmp-good li::before{background:var(--b)}
+.cmp-tag{font-size:16px;text-align:center;margin-top:24px;font-weight:700}
+
+/* ── 3 columns ── */
+.l3{flex-direction:column;align-items:center;padding-top:35px}
+.l3-row{display:flex;gap:32px;width:100%;max-width:1500px;margin-top:14px}
+.l3-col{flex:1;border-radius:16px;padding:40px 32px}
+.l3-col .bar{height:4px;border-radius:2px;margin-bottom:18px}
+.l3-col h3{font-size:28px;font-weight:700;color:var(--t);margin-bottom:16px}
+.l3-col p{font-size:19px;color:var(--d);line-height:1.8}
+
+/* ── pipeline ── */
+.pipe{flex-direction:column;align-items:center;padding-top:35px}
+.pipe-row{display:flex;align-items:center;gap:10px;justify-content:center;margin:10px 0}
+.pipe-n{padding:14px 24px;border-radius:12px;font-size:18px;font-weight:700;color:var(--t);border:1px solid rgba(37,99,235,0.15);background:var(--card);text-align:center}
+.pipe-n.hi{background:rgba(6,182,212,0.08);border-color:rgba(6,182,212,0.3);color:var(--c);font-size:24px;padding:22px 36px}
+.pipe-ar{font-size:22px;color:var(--m)}
+.pipe-box{background:var(--card);border:1px solid rgba(37,99,235,0.1);border-radius:14px;padding:22px 32px;width:80%;max-width:1200px;margin-top:10px}
+.pipe-box pre{font-size:11px;color:var(--d);font-family:var(--fm);line-height:1.55;white-space:pre-wrap}
+.pipe-box img{max-width:100%;max-height:300px;object-fit:contain;border-radius:6px}
+
+/* ── heatmap ── */
+.hm{flex-direction:column;align-items:center;padding-top:30px}
+.hm-body{display:flex;gap:40px;align-items:flex-start;margin-top:10px}
+.hm-flow{flex:0 0 240px;font-size:20px;line-height:2.5;color:var(--t)}
+.hm-flow .ar{color:var(--m);font-size:16px}
+.hm-grid{flex:1;background:var(--card);border:1px solid rgba(37,99,235,0.1);border-radius:14px;padding:28px 32px}
+.hm-row{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+.hm-label{min-width:100px;font-size:15px;color:var(--t);text-align:right}
+.hm-cells{display:flex;gap:6px}
+.hm-cell{width:50px;height:34px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff}
+.hm-total{font-size:18px;font-weight:700;color:var(--c);min-width:28px;text-align:center}
+
+/* ── journey ── */
+.jv{flex-direction:column;align-items:center;padding-top:25px}
+.jv-list{position:relative;margin-top:10px}
+.jv-line{position:absolute;left:10px;top:8px;width:2px;height:calc(100% - 16px);background:linear-gradient(to bottom,var(--m),var(--b),var(--p),var(--c))}
+.jv-item{display:flex;align-items:center;gap:16px;padding:6px 0;position:relative;z-index:1}
+.jv-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.jv-label{font-size:22px;font-weight:700}
+
+/* ── KPI ── */
+.kpi{flex-direction:column;align-items:center;padding-top:20px}
+.kpi-img{max-width:85%;max-height:400px;object-fit:contain;border-radius:12px;border:1px solid rgba(37,99,235,0.1);margin-bottom:20px}
+.kpi-row{display:flex;gap:32px}
+.kpi-card{background:var(--card);border:1px solid rgba(37,99,235,0.12);border-radius:16px;padding:28px 38px;text-align:center;min-width:170px}
+.kpi-num{font-size:72px;font-weight:300;color:var(--t);line-height:1}
+.kpi-lb{font-size:15px;color:var(--d);margin-top:8px}
+
+/* ── end ── */
+.end{flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:16px}
+.end-q{font-size:28px;color:var(--t);font-weight:300}
+.end-a{font-size:46px;color:var(--b);font-weight:700;line-height:1.3}
+.end-sub{font-size:20px;color:var(--d)}
+.end-links{font-size:15px;color:var(--m)}
+.end-links a{color:var(--b);text-decoration:none}
+.end-qrs{display:flex;gap:20px}
+.end-qrs img{width:90px;height:90px;border-radius:8px}
+
+/* ── nav ── */
+.nav{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;z-index:100;background:rgba(15,23,42,0.85);backdrop-filter:blur(12px);padding:8px 18px;border-radius:20px;border:1px solid rgba(255,255,255,0.08)}
+.nav button{background:none;border:none;font-size:18px;cursor:pointer;color:var(--m);padding:6px 12px;border-radius:8px;transition:all .2s}
+.nav button:hover{color:#fff;background:rgba(255,255,255,0.08)}
+.nav .pg{font-size:14px;color:var(--m);font-family:var(--fm);min-width:80px;text-align:center}
+.nav-hint{position:fixed;bottom:68px;left:50%;transform:translateX(-50%);font-size:12px;color:rgba(255,255,255,0.18);pointer-events:none;z-index:99}
+</style>
+</head>
+<body>
+
+<div class="view">
+<div class="stage" id="stage">
+
+<!-- S1 -->
+<section class="slide on cover">
+  <div class="orb o1"></div><div class="orb o2"></div>
+  <div class="tag">AI-NATIVE SOFTWARE ENGINEERING</div>
+  <div class="h1">Building an AI-Native<br><span>Software Engineering Workflow</span></div>
+  <div class="q">What if AI could engineer software — not just generate code?</div>
+  <div class="sl">Specification First. AI Second. Engineering Always.</div>
+  <div class="muted">Jingtine · NJU 软件工程</div>
+  <div class="num">01 / 16</div>
+</section>
+
+<!-- S2 -->
+<section class="slide story">
+  <div class="orb o1" style="opacity:0.4"></div>
+  <div class="l">
+    <div class="tag">WHY THIS PROJECT?</div>
+    <div class="h1" style="margin-bottom:28px">Can AI build software<br>like an engineer?</div>
+    <p class="p">传统个人网站开发需要同时处理设计、编码、测试、部署。每个环节的决策都需要开发者的经验和判断。</p>
+    <p class="p" style="color:var(--t);font-weight:500;margin-top:14px">如果让 AI Agent 承担这些决策，用规范约束它的行为，用测试验证它的输出，会发生什么？</p>
+    <p class="p" style="font-size:28px;color:var(--b);font-weight:700;margin-top:18px">10 页面 · 4 脚本 · 8 规则 · 44 测试</p>
+    <p class="p" style="margin-top:8px">一个 100% 由 Agent 构建、100% 可验证的个人技术平台。</p>
+    <p class="muted" style="margin-top:30px">这不是概念验证 — 这是可运行的工程产物</p>
+  </div>
+  <div class="r"></div>
+  <div class="num">02 / 16</div>
+</section>
+
+<!-- S3 -->
+<section class="slide shot-full">
+  <div class="tag">HERO SLIDE · 网站全貌</div>
+  <img src="assets/screenshots/homepage-full.png" alt="Homepage" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+  <div class="cap" style="display:none">[ 请将 homepage-full.png 放入 assets/screenshots/ ]</div>
+  <div class="muted" style="margin-top:10px">Zero Framework · Pure Native · Fully Functional</div>
+  <div class="num">03 / 16</div>
+</section>
+
+<!-- S4 -->
+<section class="slide layer-stack">
+  <div class="orb o2" style="opacity:0.4;left:60%"></div>
+  <div class="tag" style="align-self:flex-start;margin-left:350px">ARCHITECTURE</div>
+  <div class="h2" style="margin-bottom:20px">Five Software Layers</div>
+  <div class="layer-row" style="background:rgba(255,255,255,0.92);border:1px solid rgba(37,99,235,0.12)"><div class="n" style="background:var(--b)">5</div><div><div class="lb">Experience</div><div class="ld">HTML + CSS + vanilla JS · 6 层动效</div></div></div>
+  <div class="layer-row" style="background:rgba(255,255,255,0.78);border:1px solid rgba(37,99,235,0.09)"><div class="n" style="background:var(--p)">4</div><div><div class="lb">Deployment</div><div class="ld">GitHub Pages · 提交即上线</div></div></div>
+  <div class="layer-row" style="background:rgba(255,255,255,0.65);border:1px solid rgba(37,99,235,0.06)"><div class="n" style="background:var(--c)">3</div><div><div class="lb">Generation</div><div class="ld">JSON 数据集 · RSS Feed · Wiki 索引</div></div></div>
+  <div class="layer-row" style="background:rgba(255,255,255,0.52);border:1px solid rgba(37,99,235,0.04)"><div class="n" style="background:rgba(37,99,235,0.65)">2</div><div><div class="lb">Automation</div><div class="ld">Python stdlib · 零依赖 · CI 集成</div></div></div>
+  <div class="layer-row" style="background:rgba(255,255,255,0.40);border:1px solid rgba(37,99,235,0.02)"><div class="n" style="background:rgba(37,99,235,0.4)">1</div><div><div class="lb">Knowledge</div><div class="ld">Markdown · 外部 RSS · arXiv 论文</div></div></div>
+  <div class="muted" style="margin-top:18px">所有脚本 Python 标准库 · 零 pip 依赖</div>
+  <div class="num">04 / 16</div>
+</section>
+
+<!-- S5 -->
+<section class="slide split">
+  <div class="sl">
+    <img src="assets/screenshots/hero-closeup.gif" alt="Hero" style="max-height:680px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div style="display:none;width:750px;height:500px;background:var(--card);border:1px solid rgba(37,99,235,0.1);border-radius:12px;align-items:center;justify-content:center;color:var(--d);font-size:18px">[ hero-closeup.gif ]</div>
+  </div>
+  <div class="sr">
+    <div class="tag">HERO SLIDE · DESIGN PHILOSOPHY</div>
+    <div class="h2" style="margin-bottom:28px">动效不是装饰<br>是叙事的一部分</div>
+    <div style="margin-bottom:22px"><div class="accent-line" style="background:var(--b)"></div><div class="h3" style="font-size:26px">Entrance is Narrative</div><div class="p-sm" style="margin-top:6px">页面加载即开始讲述，第一印象建立专业感</div></div>
+    <div style="margin-bottom:22px"><div class="accent-line" style="background:var(--p)"></div><div class="h3" style="font-size:26px">Background is Alive</div><div class="p-sm" style="margin-top:6px">低频动效营造呼吸感，不争夺注意力</div></div>
+    <div style="margin-bottom:22px"><div class="accent-line" style="background:var(--c)"></div><div class="h3" style="font-size:26px">Motion Respects User</div><div class="p-sm" style="margin-top:6px">prefers-reduced-motion 自动降级</div></div>
+  </div>
+  <div class="num">05 / 16</div>
+</section>
+
+<!-- S6 -->
+<section class="slide cards-3">
+  <div class="tag" style="align-self:flex-start;margin-left:50px">WHAT'S INSIDE?</div>
+  <div class="card-grid">
+    <div class="scard"><span class="d" style="background:var(--b)"></span><h3>Software Engineering</h3><div class="tags"><span style="background:rgba(37,99,235,0.08);color:var(--b)">Full-stack</span><span style="background:rgba(37,99,235,0.08);color:var(--b)">Architecture</span><span style="background:rgba(37,99,235,0.08);color:var(--b)">CI/CD</span></div></div>
+    <div class="scard"><span class="d" style="background:var(--p)"></span><h3>AI Agent</h3><div class="tags"><span style="background:rgba(99,102,241,0.08);color:var(--p)">RAG</span><span style="background:rgba(99,102,241,0.08);color:var(--p)">Multi-Agent</span><span style="background:rgba(99,102,241,0.08);color:var(--p)">Prompt Eng</span></div></div>
+    <div class="scard"><span class="d" style="background:var(--c)"></span><h3>Product Innovation</h3><div class="tags"><span style="background:rgba(6,182,212,0.08);color:var(--c)">Design</span><span style="background:rgba(6,182,212,0.08);color:var(--c)">PM</span><span style="background:rgba(6,182,212,0.08);color:var(--c)">Strategy</span></div></div>
+  </div>
+  <div class="pgrid">
+    <div class="pcard"><div class="pd" style="background:var(--b)">N</div><div><div class="pn">NoteWhale</div><div class="pde">AI 笔记工具</div></div></div>
+    <div class="pcard"><div class="pd" style="background:var(--p)">街</div><div><div class="pn">街像</div><div class="pde">街拍摄影社区</div></div></div>
+    <div class="pcard"><div class="pd" style="background:var(--c)">A</div><div><div class="pn">AI Agent Studio</div><div class="pde">Agent 开发平台</div></div></div>
+  </div>
+  <div class="num">06 / 16</div>
+</section>
+
+<!-- S7 -->
+<section class="slide tl">
+  <div class="tag" style="align-self:flex-start;margin-left:50px">BUILDING JOURNEY</div>
+  <div class="h2" style="margin-bottom:10px">15 Steps · Engineering Evolution</div>
+  <div class="tl-ideas">
+    <div class="tl-node"><div class="tdot"></div><div class="tl">Idea</div></div>
+    <div class="tl-node"><div class="tdot"></div><div class="tl">Prototype</div></div>
+    <div class="tl-node"><div class="tdot"></div><div class="tl">Foundation</div></div>
+    <div class="tl-node"><div class="tdot"></div><div class="tl">Knowledge</div></div>
+    <div class="tl-node"><div class="tdot"></div><div class="tl">Automation</div></div>
+    <div class="tl-node"><div class="tdot" style="background:var(--p)"></div><div class="tl" style="color:var(--p)">AI Collab</div></div>
+    <div class="tl-node"><div class="tdot" style="background:var(--c);width:16px;height:16px;margin-left:-2px"></div><div class="tl" style="color:var(--c)">Evolution</div></div>
+  </div>
+  <div class="tl-line"></div>
+  <div class="tl-impls">
+    <div class="ti">Home<br>About</div><div class="ti">Blog</div><div class="ti">RSS<br>Papers</div><div class="ti">Wiki</div>
+    <div class="ti">Quality<br>Check</div><div class="ti">Multi-Agent<br>Testing</div><div class="ti">24h Agent<br>Assistant</div>
+  </div>
+  <div class="muted" style="margin-top:24px">15 步迭代 · 每一步引入一种 Agent 工程技术</div>
+  <div class="num">07 / 16</div>
+</section>
+
+<!-- S8 -->
+<section class="slide loop">
+  <div class="tag" style="align-self:flex-start;margin-left:50px">AI ENGINEERING LOOP</div>
+  <div class="h2">Specification at the Center of Everything</div>
+  <div class="loop-body">
+    <div class="loop-side">
+      <div class="loop-s" style="border-color:rgba(99,102,241,0.22);color:var(--p)">Subagent<br>Dispatch</div>
+      <div class="loop-s" style="border-color:rgba(6,182,212,0.22);color:var(--c)">Systematic<br>Debugging</div>
+    </div>
+    <div class="loop-nodes">
+      <div class="loop-n">Planning</div>
+      <div class="loop-n">Execution</div>
+      <div class="loop-n">Verification</div>
+      <div class="loop-n">Iteration</div>
+    </div>
+    <div class="loop-c"><div class="lb">Specification</div><div class="ls">AGENTS.md</div></div>
+  </div>
+  <div class="muted" style="margin-top:16px">Specification First. AI Second. Engineering Always.</div>
+  <div class="num">08 / 16</div>
+</section>
+
+<!-- S9 -->
+<section class="slide shot-full">
+  <div class="tag">HERO SLIDE · AGENTS.md</div>
+  <img src="assets/screenshots/agents-md.png" alt="AGENTS.md" style="max-height:550px" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+  <div class="cap" style="display:none">[ 请将 agents-md.png 放入 assets/screenshots/ ]</div>
+  <div class="muted" style="margin-top:10px;font-style:italic">Agent 每次对话启动时自动加载 — 输出始终对齐架构预期</div>
+  <div class="num">09 / 16</div>
+</section>
+
+<!-- S10 -->
+<section class="slide cmp">
+  <div class="tag" style="align-self:flex-start;margin-left:50px">PROMPT-ONLY vs SPECIFICATION-DRIVEN</div>
+  <div class="h2" style="margin-bottom:10px">给 AI 下指令 → 给 AI 定义边界</div>
+  <div class="cmp-row">
+    <div class="cmp-side cmp-bad">
+      <h3>Prompt-Only</h3>
+      <ul><li>每次对话重复粘贴约束</li><li>Agent 自由发挥</li><li>代码风格不一致</li><li>可能引入框架和外部依赖</li></ul>
+      <div class="cmp-tag" style="color:var(--m)">不可控 · 不可复现</div>
+    </div>
+    <div class="cmp-side cmp-good">
+      <h3>Specification-Driven</h3>
+      <ul><li>AGENTS.md 定义一切约束</li><li>Agent 每次启动自动加载</li><li>风格始终符合项目约定</li><li>check.py 自动验证</li></ul>
+      <div class="cmp-tag" style="color:var(--b)">可控 · 可复现 · 可验证</div>
+    </div>
+  </div>
+  <div class="muted" style="margin-top:18px">方法论升级：从给 AI 下指令，到给 AI 定义边界</div>
+  <div class="num">10 / 16</div>
+</section>
+
+<!-- S11 -->
+<section class="slide l3">
+  <div class="tag" style="align-self:flex-start;margin-left:50px">THREE LAYERS OF CONSTRAINT</div>
+  <div class="h2">规范如何层层递进</div>
+  <div class="l3-row">
+    <div class="l3-col" style="background:rgba(255,255,255,0.92);border:1px solid rgba(37,99,235,0.14)"><div class="bar" style="background:var(--b)"></div><h3>技术约束</h3><p>纯原生 · 零框架<br>Python stdlib only<br>GitHub Pages 部署</p></div>
+    <div class="l3-col" style="background:rgba(255,255,255,0.80);border:1px solid rgba(99,102,241,0.11)"><div class="bar" style="background:var(--p)"></div><h3>设计约束</h3><p>CSS 自定义变量<br>共享组件类<br>跨页面一致性</p></div>
+    <div class="l3-col" style="background:rgba(255,255,255,0.70);border:1px solid rgba(6,182,212,0.09)"><div class="bar" style="background:var(--c)"></div><h3>质量约束</h3><p>check.py 门禁<br>8 项自动化检查<br>0 失败方可合并</p></div>
+  </div>
+  <div class="muted" style="margin-top:22px">三层约束层层递进 · 消除决策噪声</div>
+  <div class="num">11 / 16</div>
+</section>
+
+<!-- S12 -->
+<section class="slide pipe">
+  <div class="tag" style="align-self:flex-start;margin-left:50px">QUALITY LIFECYCLE</div>
+  <div class="h2" style="margin-bottom:8px">从代码到上线的全生命周期</div>
+  <div class="pipe-row">
+    <div class="pipe-n">Write Code</div><div class="pipe-ar">→</div>
+    <div class="pipe-n">Commit</div><div class="pipe-ar">→</div>
+    <div class="pipe-n hi">check.py</div><div class="pipe-ar">→</div>
+    <div class="pipe-n">8 Checks</div><div class="pipe-ar">→</div>
+    <div class="pipe-n">GitHub Pages</div><div class="pipe-ar">→</div>
+    <div class="pipe-n" style="border-color:rgba(16,185,129,0.3);color:#10b981">● Live</div>
+  </div>
+  <div class="pipe-box">
+    <div class="muted" style="margin-bottom:8px;font-family:var(--fm)">$ python scripts/check.py</div>
+    <img src="assets/screenshots/check-py-output.png" alt="check.py" style="max-height:280px" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <pre style="display:none;font-size:10px;color:var(--d);font-family:var(--fm);line-height:1.5">[PASS] HTML pages:        13/13 found
+[PASS] Internal links:    188/188 valid
+[PASS] feed.xml:          valid XML, 9 items
+[PASS] Feed item count:   9 items = 9 articles
+[PASS] rss-items.json:    valid JSON, 60 items
+[PASS] RSS item fields:   60/60 complete
+[PASS] subscriptions.opml: valid XML, 3 outlines
+[PASS] papers.json:        valid JSON, 40 papers
+[PASS] wiki.json:          valid JSON, 30 pages
+[PASS] assistant:          page + script ok
+[PASS] status.json:        valid JSON, status=passing
+[PASS] Wiki hash routing:  hash routing ok
+[PASS] Blog wiki links:    6 article(s) with wiki links
+[PASS] Wiki related blog:   related articles configured
+[PASS] Blog content:       9 articles, metadata ok
+[PASS] Wiki content:       30 pages, all sections present
+
+═══════════════════════════════════
+  ALL CHECKS PASSED
+═══════════════════════════════════</pre>
+  </div>
+  <div class="num">12 / 16</div>
+</section>
+
+<!-- S13 -->
+<section class="slide hm">
+  <div class="tag" style="align-self:flex-start;margin-left:50px">VERIFICATION</div>
+  <div class="h2">14 功能点 · 44 条用例 · 全量通过</div>
+  <div class="hm-body">
+    <div class="hm-flow">功能点/需求点<br><span class="ar">↓</span><br>用例表<br><span class="ar">↓</span><br>Playwright<br>自动化</div>
+    <div class="hm-grid">
+      <div class="hm-row"><span class="hm-label">首页展示</span><div class="hm-cells"><span class="hm-cell" style="background:var(--b)">5</span><span class="hm-cell" style="background:var(--b);opacity:0.4">2</span></div><span class="hm-total">7</span></div>
+      <div class="hm-row"><span class="hm-label">导航栏</span><div class="hm-cells"><span class="hm-cell" style="background:var(--b);opacity:0.9">4</span><span class="hm-cell" style="background:var(--b);opacity:0.4">2</span></div><span class="hm-total">6</span></div>
+      <div class="hm-row"><span class="hm-label">博客系统</span><div class="hm-cells"><span class="hm-cell" style="background:var(--b)">5</span><span class="hm-cell" style="background:var(--b);opacity:0.4">2</span></div><span class="hm-total">7</span></div>
+      <div class="hm-row"><span class="hm-label">RSS Feed</span><div class="hm-cells"><span class="hm-cell" style="background:var(--b)">5</span><span class="hm-cell" style="background:var(--b);opacity:0.4">2</span></div><span class="hm-total">7</span></div>
+      <div class="hm-row"><span class="hm-label">RSS 阅读器</span><div class="hm-cells"><span class="hm-cell" style="background:var(--p)">6</span><span class="hm-cell" style="background:var(--p);opacity:0.4">2</span></div><span class="hm-total">8</span></div>
+      <div class="hm-row"><span class="hm-label">知识库</span><div class="hm-cells"><span class="hm-cell" style="background:var(--p)">7</span><span class="hm-cell" style="background:var(--p);opacity:0.4">2</span></div><span class="hm-total">9</span></div>
+      <div style="display:flex;gap:12px;margin-top:12px;font-size:12px;color:var(--d);align-items:center">
+        <span style="display:inline-block;width:12px;height:12px;background:var(--b);border-radius:3px"></span>白盒
+        <span style="display:inline-block;width:12px;height:12px;background:var(--b);border-radius:3px;opacity:0.4"></span>黑盒
+        <span style="margin-left:12px">颜色深浅 = 覆盖密度</span>
+      </div>
+    </div>
+  </div>
+  <div class="muted" style="margin-top:16px">14 功能点 · 44 条用例 · 全量通过 &nbsp;|&nbsp; 白盒 32 + 黑盒 12</div>
+  <div class="num">13 / 16</div>
+</section>
+
+<!-- S14 -->
+<section class="slide jv">
+  <div class="tag" style="align-self:flex-start;margin-left:50px">EVOLUTION</div>
+  <div class="h2" style="margin-bottom:14px">从传统开发到 AI-Native Engineering</div>
+  <div class="jv-list">
+    <div class="jv-line"></div>
+    <div class="jv-item"><div class="jv-dot" style="background:var(--c)"></div><span class="jv-label" style="color:var(--c)">AI Native Engineering</span></div>
+    <div class="jv-item"><div class="jv-dot" style="background:var(--b)"></div><span class="jv-label" style="color:var(--b)">Continuous Verification</span></div>
+    <div class="jv-item"><div class="jv-dot" style="background:var(--p)"></div><span class="jv-label" style="color:var(--p)">Agent Collaboration</span></div>
+    <div class="jv-item"><div class="jv-dot" style="background:var(--b);opacity:0.6"></div><span class="jv-label" style="color:var(--b);opacity:0.7">Specification Driven</span></div>
+    <div class="jv-item"><div class="jv-dot" style="background:var(--b);opacity:0.4"></div><span class="jv-label" style="color:var(--b);opacity:0.5">AI Assisted</span></div>
+    <div class="jv-item"><div class="jv-dot" style="background:var(--m)"></div><span class="jv-label" style="color:var(--m)">Traditional Development</span></div>
+  </div>
+  <div class="muted" style="margin-top:16px">Specification First. AI Second. Engineering Always.</div>
+  <div class="num">14 / 16</div>
+</section>
+
+<!-- S15 -->
+<section class="slide kpi">
+  <div class="tag">HERO SLIDE · RESULTS</div>
+  <img src="assets/screenshots/site-full.gif" class="kpi-img" alt="Site" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+  <div class="cap" style="display:none">[ 请将 site-full.gif 放入 assets/screenshots/ ]</div>
+  <div class="kpi-row">
+    <div class="kpi-card"><div class="kpi-num">10</div><div class="kpi-lb">Pages</div></div>
+    <div class="kpi-card"><div class="kpi-num">44</div><div class="kpi-lb">Tests</div></div>
+    <div class="kpi-card"><div class="kpi-num">100%</div><div class="kpi-lb">Passed</div></div>
+    <div class="kpi-card" style="border-color:rgba(6,182,212,0.22)"><div class="kpi-num" style="color:var(--c)">0</div><div class="kpi-lb">Framework</div></div>
+  </div>
+  <div class="muted" style="margin-top:16px">Specification First. AI Second. Engineering Always.</div>
+  <div class="num">15 / 16</div>
+</section>
+
+<!-- S16 -->
+<section class="slide end">
+  <div class="orb o1" style="opacity:0.25"></div>
+  <div class="end-q">What if AI could engineer software — not just generate code?</div>
+  <div class="end-a">It can.<br>If it follows engineering.</div>
+  <div class="end-sub">Building Products with AI, Not Just Using AI.</div>
+  <div class="end-links">
+    <a href="https://github.com/Jingtine/jingtine-agent-site" target="_blank" rel="noopener noreferrer">github.com/Jingtine/jingtine-agent-site</a>
+    &nbsp;|&nbsp;
+    <a href="https://jingtine.github.io/jingtine-agent-site" target="_blank" rel="noopener noreferrer">jingtine.github.io/jingtine-agent-site</a>
+  </div>
+  <div class="end-qrs">
+    <img src="assets/screenshots/github-qr.png" alt="QR" onerror="this.style.display='none'">
+    <img src="assets/screenshots/live-qr.png" alt="QR" onerror="this.style.display='none'">
+  </div>
+  <div class="muted" style="margin-top:4px">Jingtine · NJU Software Engineering · 2026</div>
+  <div class="num">16 / 16</div>
+</section>
+
+</div></div>
+
+<nav class="nav">
+  <button onclick="prev()">←</button>
+  <span class="pg" id="pg">01 / 16</span>
+  <button onclick="next()">→</button>
+</nav>
+<div class="nav-hint">← → 切换幻灯片 &nbsp;|&nbsp; F 全屏 &nbsp;|&nbsp; 点击左右半屏翻页</div>
+
+<script>
+(function(){
+  var slides=document.querySelectorAll('.slide'),stage=document.getElementById('stage');
+  var cur=0,total=slides.length;
+  function show(i){
+    slides.forEach(function(s,j){s.classList.toggle('on',j===i)});
+    document.getElementById('pg').textContent=String(i+1).padStart(2,'0')+' / '+String(total).padStart(2,'0');
+  }
+  function fit(){stage.style.transform='scale('+Math.min(window.innerWidth/1920,window.innerHeight/1080)+')'}
+  window.prev=function(){cur=(cur-1+total)%total;show(cur)}
+  window.next=function(){cur=(cur+1)%total;show(cur)}
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'||e.key==='ArrowDown'||e.key===' '){e.preventDefault();next()}
+    if(e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();prev()}
+    if(e.key==='f'||e.key==='F'){e.preventDefault();document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}
+    if(e.key==='Home'){e.preventDefault();cur=0;show(cur)}
+    if(e.key==='End'){e.preventDefault();cur=total-1;show(cur)}
+  });
+  document.querySelector('.view').addEventListener('click',function(e){
+    if(e.target.closest('.nav')||e.target.closest('a'))return;
+    e.clientX>window.innerWidth/2?next():prev()
+  });
+  window.addEventListener('resize',fit);fit();show(0)
+})();
+</script>
+</body>
+</html>

@@ -52,3 +52,11 @@ agent-site-presentation-script.md
 agent-site-presentation.html
 scripts/merge-clips.js
 scripts/record-slides.js
+
+# PPTX generation (unstable raw-XML approach)
+scripts/generate_pptx.py
+Jingtine-Agent-Site.pptx
+Jingtine-Agent-Site-v2.pptx
+
+# Large binary screenshots for local presentation
+assets/screenshots/
