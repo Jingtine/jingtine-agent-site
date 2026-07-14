@@ -76,7 +76,9 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 .split img{max-width:100%;max-height:780px;object-fit:contain;border-radius:16px;box-shadow:0 2px 36px rgba(0,0,0,0.04)}
 
 /* layers — floating architectural planes */
-.layer-stack{}
+.layer-stack .tag{grid-column:1/7}
+.layer-stack .h2{grid-column:1/7;margin-bottom:24px}
+.layer-stack .layer-row{grid-column:7/13;margin-bottom:10px}
 .layer-row{display:flex;align-items:center;gap:32px;padding:26px 42px;border-radius:var(--card-radius);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:var(--card-shadow)}
 .layer-row .n{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:400;font-size:24px;flex-shrink:0}
 .layer-row .lb{font-size:29px;font-weight:400;color:var(--t);letter-spacing:-0.3px}
@@ -97,18 +99,20 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 .pcard .pde{font-size:16px;color:var(--d)}
 
 /* timeline */
-.tl{}
-.tl-ideas{display:flex;gap:36px;justify-content:center;margin-bottom:4px}
+.tl .tag{grid-column:1/7}
+.tl .h2{grid-column:1/13;margin-bottom:12px}
+.tl-ideas{display:flex;gap:36px;justify-content:center;margin-bottom:4px;grid-column:1/13}
 .tl-node{text-align:center;min-width:130px}
 .tl-node .tdot{width:10px;height:10px;border-radius:50%;background:var(--c);margin:0 auto 10px;opacity:0.7}
 .tl-node .tl{font-size:19px;font-weight:400;color:var(--t);letter-spacing:-0.2px}
-.tl-line{width:86%;height:1px;background:rgba(37,99,235,0.1);margin:4px 0}
-.tl-impls{display:flex;gap:36px;justify-content:center}
+.tl-line{grid-column:1/13;width:86%;height:1px;background:linear-gradient(to right,var(--m),var(--b),var(--c));opacity:0.3;margin:4px auto}
+.tl-impls{display:flex;gap:36px;justify-content:center;grid-column:1/13}
 .tl-impls .ti{min-width:130px;text-align:center;font-size:15px;color:var(--d);line-height:1.6}
 
 /* loop — circular */
-.loop{}
-.loop-main{position:relative;width:720px;height:560px;margin-top:20px}
+.loop .tag{grid-column:1/7}
+.loop .h2{grid-column:1/7;margin-bottom:20px}
+.loop-main{grid-column:3/11;position:relative;width:100%;height:560px;margin-top:10px}
 .loop-c{position:absolute;top:50%;left:50%;width:260px;height:260px;margin:-130px 0 0 -130px;border-radius:50%;background:rgba(37,99,235,0.04);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2}
 .loop-c .lb{font-size:34px;font-weight:400;color:var(--b);letter-spacing:-0.3px}
 .loop-c .ls{font-size:15px;color:var(--d);margin-top:4px}
@@ -140,18 +144,20 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 .l3-col p{font-size:21px;color:var(--d);line-height:2}
 
 /* pipeline */
-.pipe{}
-.pipe-row{display:flex;align-items:center;gap:14px;justify-content:center;margin:12px 0}
+.pipe .tag{grid-column:1/7}
+.pipe .h2{grid-column:1/13;margin-bottom:12px}
+.pipe-row{display:flex;align-items:center;gap:14px;justify-content:center;margin:12px 0;grid-column:1/13}
 .pipe-n{padding:20px 34px;border-radius:16px;font-size:20px;font-weight:400;color:var(--t);background:var(--card-glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);text-align:center;box-shadow:var(--card-shadow)}
 .pipe-n.hi{background:rgba(6,182,212,0.06);color:var(--c);font-size:22px;padding:24px 40px}
 .pipe-ar{font-size:20px;color:var(--m);opacity:0.5}
-.pipe-box{background:var(--card-glass);backdrop-filter:blur(var(--card-blur));-webkit-backdrop-filter:blur(var(--card-blur));border-radius:var(--card-radius);padding:24px 36px;margin-top:16px;box-shadow:var(--card-shadow)}
+.pipe-box{grid-column:1/13;background:var(--card-glass);backdrop-filter:blur(var(--card-blur));-webkit-backdrop-filter:blur(var(--card-blur));border-radius:var(--card-radius);padding:24px 36px;margin-top:16px;box-shadow:var(--card-shadow)}
 .pipe-box pre{font-size:12px;color:var(--d);font-family:var(--fm);line-height:1.6;white-space:pre-wrap;opacity:0.7}
 .pipe-box img{max-width:100%;max-height:280px;object-fit:contain;border-radius:8px}
 
 /* heatmap */
-.hm{}
-.hm-body{display:flex;gap:48px;align-items:flex-start;margin-top:20px}
+.hm .tag{grid-column:1/7}
+.hm .h2{grid-column:1/13;margin-bottom:20px}
+.hm-body{grid-column:1/13;display:grid;grid-template-columns:220px 1fr;gap:48px;align-items:flex-start;margin-top:20px}
 .hm-flow{flex:0 0 220px;font-size:21px;line-height:2.8;color:var(--t);font-weight:300}
 .hm-flow .ar{color:var(--m);font-size:15px;opacity:0.4}
 .hm-grid{background:var(--card-glass);backdrop-filter:blur(var(--card-blur));-webkit-backdrop-filter:blur(var(--card-blur));border-radius:var(--card-radius);padding:32px 38px;box-shadow:var(--card-shadow)}
@@ -162,8 +168,9 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 .hm-total{font-size:20px;font-weight:400;color:var(--c);min-width:28px;text-align:center}
 
 /* journey */
-.jv{}
-.jv-list{position:relative;margin-top:20px}
+.jv .tag{grid-column:1/7}
+.jv .h2{grid-column:1/13;margin-bottom:24px}
+.jv-list{grid-column:2/13;position:relative;margin-top:20px;padding-left:20px}
 .jv-line{position:absolute;left:10px;top:8px;width:1.5px;height:calc(100% - 16px);background:linear-gradient(to bottom,var(--m),var(--b),var(--c));opacity:0.4}
 .jv-item{display:flex;align-items:center;gap:20px;padding:7px 0;position:relative;z-index:1}
 .jv-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
@@ -241,13 +248,13 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 <section class="slide layer-stack">
   <div class="orb o2" style="opacity:0.3;left:70%"></div>
   <div class="slide-grid">
-    <div class="tag">ARCHITECTURE</div>
-    <div class="h2" style="margin-bottom:24px">Five Software Layers</div>
-    <div class="layer-row g-panel" style="background:rgba(255,255,255,0.9);transform:scale(1.06);z-index:5;position:relative"><div class="n" style="background:var(--b)">5</div><div><div class="lb">Experience</div><div class="ld">HTML + CSS + vanilla JS · 6 层动效</div></div></div>
-    <div class="layer-row g-panel" style="background:rgba(255,255,255,0.78);transform:scale(0.98);z-index:4;position:relative"><div class="n" style="background:#4b7eeb">4</div><div><div class="lb">Deployment</div><div class="ld">GitHub Pages · 提交即上线</div></div></div>
-    <div class="layer-row g-panel" style="background:rgba(255,255,255,0.65);transform:scale(0.91);z-index:3;position:relative"><div class="n" style="background:#3b82c4">3</div><div><div class="lb">Generation</div><div class="ld">JSON 数据集 · RSS Feed · Wiki 索引</div></div></div>
-    <div class="layer-row g-panel" style="background:rgba(255,255,255,0.52);transform:scale(0.84);z-index:2;position:relative"><div class="n" style="background:rgba(37,99,235,0.5)">2</div><div><div class="lb">Automation</div><div class="ld">Python stdlib · 零依赖 · CI 集成</div></div></div>
-    <div class="layer-row g-panel" style="background:rgba(255,255,255,0.38);transform:scale(0.77);z-index:1;position:relative"><div class="n" style="background:rgba(37,99,235,0.3)">1</div><div><div class="lb">Knowledge</div><div class="ld">Markdown · 外部 RSS · arXiv 论文</div></div></div>
+    <div class="tag" style="grid-column:1/7">ARCHITECTURE</div>
+    <div class="h2" style="grid-column:1/7;margin-bottom:24px">Five Software Layers</div>
+    <div class="layer-row g-panel" style="grid-column:7/13;background:rgba(255,255,255,0.9);transform:scale(1.06);z-index:5;position:relative"><div class="n" style="background:var(--b)">5</div><div><div class="lb">Experience</div><div class="ld">HTML + CSS + vanilla JS · 6 层动效</div></div></div>
+    <div class="layer-row g-panel" style="grid-column:7/13;background:rgba(255,255,255,0.78);transform:scale(0.98);z-index:4;position:relative"><div class="n" style="background:#4b7eeb">4</div><div><div class="lb">Deployment</div><div class="ld">GitHub Pages · 提交即上线</div></div></div>
+    <div class="layer-row g-panel" style="grid-column:7/13;background:rgba(255,255,255,0.65);transform:scale(0.91);z-index:3;position:relative"><div class="n" style="background:#3b82c4">3</div><div><div class="lb">Generation</div><div class="ld">JSON 数据集 · RSS Feed · Wiki 索引</div></div></div>
+    <div class="layer-row g-panel" style="grid-column:7/13;background:rgba(255,255,255,0.52);transform:scale(0.84);z-index:2;position:relative"><div class="n" style="background:rgba(37,99,235,0.5)">2</div><div><div class="lb">Automation</div><div class="ld">Python stdlib · 零依赖 · CI 集成</div></div></div>
+    <div class="layer-row g-panel" style="grid-column:7/13;background:rgba(255,255,255,0.38);transform:scale(0.77);z-index:1;position:relative"><div class="n" style="background:rgba(37,99,235,0.3)">1</div><div><div class="lb">Knowledge</div><div class="ld">Markdown · 外部 RSS · arXiv 论文</div></div></div>
   </div>
   <div class="caption">所有脚本 Python 标准库 · 零 pip 依赖</div>
   <div class="num">04 / 16</div>
@@ -290,16 +297,16 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 <!-- S7: Journey -->
 <section class="slide tl">
   <div class="slide-grid">
-    <div class="tag">BUILDING JOURNEY</div>
-    <div class="h2" style="margin-bottom:12px">15 Steps · Engineering Evolution</div>
-    <div class="tl-ideas">
+    <div class="tag" style="grid-column:1/7">BUILDING JOURNEY</div>
+    <div class="h2" style="grid-column:1/13;margin-bottom:12px">15 Steps · Engineering Evolution</div>
+    <div class="tl-ideas" style="grid-column:1/13">
     <div class="tl-node"><div class="tdot"></div><div class="tl">Idea</div></div><div class="tl-node"><div class="tdot"></div><div class="tl">Prototype</div></div>
     <div class="tl-node"><div class="tdot"></div><div class="tl">Foundation</div></div><div class="tl-node"><div class="tdot"></div><div class="tl">Knowledge</div></div>
     <div class="tl-node"><div class="tdot"></div><div class="tl">Automation</div></div><div class="tl-node"><div class="tdot" style="background:var(--p)"></div><div class="tl" style="color:var(--p)">AI Collab</div></div>
     <div class="tl-node"><div class="tdot" style="background:var(--c);width:14px;height:14px;margin-left:-1px"></div><div class="tl" style="color:var(--c)">Evolution</div></div>
   </div>
-  <div class="tl-line"></div>
-  <div class="tl-impls">
+  <div class="tl-line" style="grid-column:1/13"></div>
+  <div class="tl-impls" style="grid-column:1/13">
     <div class="ti">Home<br>About</div><div class="ti">Blog</div><div class="ti">RSS<br>Papers</div><div class="ti">Wiki</div>
     <div class="ti">Quality<br>Check</div><div class="ti">Multi-Agent<br>Testing</div><div class="ti">24h Agent<br>Assistant</div>
   </div>
@@ -311,9 +318,9 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 <!-- S8: Engineering Loop — circular -->
 <section class="slide loop">
   <div class="slide-grid">
-    <div class="tag">AI ENGINEERING LOOP</div>
-    <div class="h2">Specification at the Center</div>
-  <div class="loop-main">
+    <div class="tag" style="grid-column:1/7">AI ENGINEERING LOOP</div>
+    <div class="h2" style="grid-column:1/7;margin-bottom:20px">Specification at the Center</div>
+  <div class="loop-main" style="grid-column:3/11">
     <div class="loop-c"><div class="lb">Specification</div><div class="ls">AGENTS.md</div></div>
     <div class="loop-n p g-panel">Planning</div>
     <div class="loop-n e g-panel">Execution</div>
@@ -378,9 +385,9 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 <!-- S12: Quality Lifecycle -->
 <section class="slide pipe">
   <div class="slide-grid">
-    <div class="tag">QUALITY LIFECYCLE</div>
-    <div class="h2" style="margin-bottom:12px">从代码到上线的全生命周期</div>
-  <div class="pipe-row">
+    <div class="tag" style="grid-column:1/7">QUALITY LIFECYCLE</div>
+    <div class="h2" style="grid-column:1/13;margin-bottom:12px">从代码到上线的全生命周期</div>
+  <div class="pipe-row" style="grid-column:1/13">
     <div class="pipe-n g-panel">Write Code</div><div class="pipe-ar">→</div>
     <div class="pipe-n g-panel">Commit</div><div class="pipe-ar">→</div>
     <div class="pipe-n hi g-panel">check.py</div><div class="pipe-ar">→</div>
@@ -388,7 +395,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
     <div class="pipe-n g-panel">GitHub Pages</div><div class="pipe-ar">→</div>
     <div class="pipe-n g-panel" style="color:#10b981">● Live</div>
   </div>
-  <div class="pipe-box g-panel">
+  <div class="pipe-box g-panel" style="grid-column:1/13">
     <div class="muted" style="margin-bottom:10px;font-family:var(--fm);opacity:0.5">$ python scripts/check.py</div>
     <img src="assets/screenshots/check-py-output.png" class="g-hero" alt="check.py" style="max-height:260px" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
     <pre style="display:none;font-size:10px;color:var(--d);font-family:var(--fm);line-height:1.6;opacity:0.6">[PASS] HTML pages:        13/13 found
@@ -419,9 +426,9 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 <!-- S13: Verification — heatmap -->
 <section class="slide hm">
   <div class="slide-grid">
-    <div class="tag">VERIFICATION</div>
-    <div class="h2">14 功能点 · 44 条用例 · 全量通过</div>
-  <div class="hm-body">
+    <div class="tag" style="grid-column:1/7">VERIFICATION</div>
+    <div class="h2" style="grid-column:1/13;margin-bottom:20px">14 功能点 · 44 条用例 · 全量通过</div>
+  <div class="hm-body" style="grid-column:1/13">
     <div class="hm-flow">功能点<br>需求点<br><span class="ar">↓</span><br>用例表<br><span class="ar">↓</span><br>Playwright<br>自动化</div>
     <div class="hm-grid g-panel">
       <div class="hm-row"><span class="hm-label">首页展示</span><div class="hm-cells"><span class="hm-cell" style="background:var(--b)">5</span><span class="hm-cell" style="background:var(--b);opacity:0.3">2</span></div><span class="hm-total">7</span></div>
@@ -445,9 +452,9 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0f172a;font-family:
 <!-- S14: Evolution -->
 <section class="slide jv">
   <div class="slide-grid">
-    <div class="tag">EVOLUTION</div>
-    <div class="h2" style="margin-bottom:24px">从传统开发到 AI-Native Engineering</div>
-  <div class="jv-list">
+    <div class="tag" style="grid-column:1/7">EVOLUTION</div>
+    <div class="h2" style="grid-column:1/13;margin-bottom:24px">从传统开发到 AI-Native Engineering</div>
+  <div class="jv-list" style="grid-column:2/13">
     <div class="jv-line"></div>
     <div class="jv-item"><div class="jv-dot" style="background:var(--c)"></div><span class="jv-label" style="color:var(--c)">AI Native Engineering</span></div>
     <div class="jv-item"><div class="jv-dot" style="background:var(--b)"></div><span class="jv-label" style="color:var(--b)">Continuous Verification</span></div>
