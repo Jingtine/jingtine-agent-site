@@ -1,0 +1,44 @@
+name: Refresh RSS Feeds
+
+on:
+  schedule:
+    # 0:00 Beijing time (UTC+8) = 16:00 UTC previous day
+    - cron: '0 16 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-feeds
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Aggregate feeds
+        run: python scripts/aggregate-feeds.py
+
+      - name: Quality check
+        run: python scripts/check.py
+
+      - name: Regenerate status
+        run: python scripts/generate_status.py
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: nightly refresh of RSS feeds and status"
+          file_pattern: |
+            public/data/rss-items.json
+            public/data/status.json
+            subscriptions.opml

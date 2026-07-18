@@ -1,13 +1,13 @@
 {
-  "generated": "2026-07-12T00:39:36.748009+08:00",
+  "generated": "2026-07-18T18:58:10.481865+08:00",
   "total": 60,
   "items": [
     {
-      "id": "dfdb20890501",
-      "title": "Tropical forests facing increasing risks of exposure to critical temp thresholds",
-      "link": "https://www.pnas.org/doi/10.1073/pnas.2528622123",
-      "description": "Article URL: https://www.pnas.org/doi/10.1073/pnas.2528622123 Comments URL: https://news.ycombinator.com/item?id=48872973 Points: 11 # Comments: 0",
-      "pubDate": "2026-07-11T23:38:46+08:00",
+      "id": "f94a24159d41",
+      "title": "LG monitors silently install software through Windows Update without consent",
+      "link": "https://videocardz.com/newz/lg-monitors-silently-install-software-through-windows-update-without-user-consent",
+      "description": "Article URL: https://videocardz.com/newz/lg-monitors-silently-install-software-through-windows-update-without-user-consent Comments URL: https://news.ycombinator.com/item?id=48956688 Points: 5 # Comments: 0",
+      "pubDate": "2026-07-18T18:21:19+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -15,11 +15,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "b6751349536e",
-      "title": "We scaled PgBouncer to 4x throughput",
-      "link": "https://clickhouse.com/blog/pgbouncer-clickhouse-managed-postgres",
-      "description": "Article URL: https://clickhouse.com/blog/pgbouncer-clickhouse-managed-postgres Comments URL: https://news.ycombinator.com/item?id=48872874 Points: 55 # Comments: 4",
-      "pubDate": "2026-07-11T23:28:02+08:00",
+      "id": "e3690f4f28ff",
+      "title": "Qubes OS Security in the Public Record",
+      "link": "https://arxiv.org/abs/2607.14587",
+      "description": "Article URL: https://arxiv.org/abs/2607.14587 Comments URL: https://news.ycombinator.com/item?id=48956307 Points: 8 # Comments: 0",
+      "pubDate": "2026-07-18T16:50:07+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -27,11 +27,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "a69037451521",
-      "title": "The early History of the Singular Value Decomposition (1993) [pdf]",
-      "link": "https://www.math.ucdavis.edu/~saito/courses/229A/stewart-svd.pdf",
-      "description": "Article URL: https://www.math.ucdavis.edu/~saito/courses/229A/stewart-svd.pdf Comments URL: https://news.ycombinator.com/item?id=48872858 Points: 16 # Comments: 0",
-      "pubDate": "2026-07-11T23:26:12+08:00",
+      "id": "063708cf8c9e",
+      "title": "The Computer at the Bottom of a Canal",
+      "link": "https://negroniventurestudios.com/2026/07/18/the-computer-at-the-bottom-of-a-canal/",
+      "description": "Article URL: https://negroniventurestudios.com/2026/07/18/the-computer-at-the-bottom-of-a-canal/ Comments URL: https://news.ycombinator.com/item?id=48956231 Points: 9 # Comments: 1",
+      "pubDate": "2026-07-18T16:33:31+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -39,11 +39,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "7d4528f516f2",
-      "title": "大量猫咪后肢瘫痪，闯祸的是猫粮吗？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MTg1MjI3MzY2MQ==&mid=2652367694&idx=1&sn=a79b458939b704fc225551bfc1440f30&chksm=5c4ba4a74a9ac4ae0b00d217de86bb823c469d586d73f1f7ea58bdc8611da6f9a2996e22ff86",
-      "description": "最近有媒体报道，许多网友反映自己家的小猫后腿瘫痪，只能靠前腿拖着身体爬行，甚至开始大小便失禁，而动物医院往往无法明确病因。 好在，大多数小猫在更换猫粮后情况好转。网友们发现，患病小猫食用的猫粮集中在几个品牌。 这让不少养猫人开始怀疑，问题是不是出在猫粮上——难道是猫粮有毒吗？ 相关报道丨微博/北京商报可能不是有毒，而是缺营养目前还没有权威信息表明猫粮和猫咪瘫痪的关系，我们只能根据病例情况推测一下。 患病猫基本情况：已公开病例主要集中在2～8岁的成年猫。 症状：最开始是走路不稳、后腿打滑、跳跃困难；数周后发展为双侧后肢瘫痪，部分猫甚至全身瘫痪、尿失禁、排便…",
-      "pubDate": "2026-07-11T22:02:23+08:00",
+      "id": "6ffcfe8cc857",
+      "title": "WAIC观察笔记｜一场热气腾腾的流水席，三层关于机器人的新感受",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NjQyMjE1NA==&mid=2650744804&idx=1&sn=e7ad3e8a10940021f1edaed65e9921f8&chksm=bf2d66d27743600f6f646722c4bb5507a427b2c168e7a53277a7b65050a344c3bfe60e5e2d30",
+      "description": "从完成一个动作，到接过一段工作。7月17日，下午五点，结束了第一天的WAIC流水席直播。 走出会场的时候，我、罗老师和其他同事一起往地铁站走，满大街都是参加这次WAIC、挂着胸牌的朋友，地铁站入口处挤满了人。 身边的每个人都一脸兴奋，谈论着今天的见闻，还不时有人走上来跟我们打招呼，说他们白天一边逛展，一边看我和罗老师的直播。 回到酒店，当我打开电脑，开始写这篇观察笔记的时候，虽然很累，但还是迫不及待想跟你分享一下。 01 鸟枪换炮：我们摆了个流水席17号，是世界人工智能大会第一天，1100多家企业参展，10万平方米的展馆。 我们在这个场子里，干了一件跟所…",
+      "pubDate": "2026-07-18T16:02:24+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -51,11 +51,11 @@
       "category": "ai-news"
     },
     {
-      "id": "2d335529865d",
-      "title": "饱和攻击：全美体育如何打爆“USA250”概念｜CASE",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzA4MjQzNDYyMQ==&mid=2650507996&idx=1&sn=1e1ba93159ef5f2b018b37d2dbb81fe1&chksm=86f7aa0b10c1327bc7b28e78c003f7c5f756b14cbe6edc677c8c4f42dec0c336a80ea4cee57e",
-      "description": "为了祝贺美国独立250周年，国际足联送上了一份特殊的“贺礼”。 7月5日国际足联宣布，对在与波黑队比赛中被红牌罚下的美国队球员福拉林·巴洛贡（Folarin Balogun）作出禁赛一场的处罚，并暂缓一年执行。 体育数据平台Opta指出，自1970年世界杯引入红黄牌规则以来，此前从未有球员在吃到红牌的情况下能继续出战球队的下一场世界杯正赛。 毫无疑问，巴洛贡就是那个“幸运儿”。消息传出后，比利时足协在赛前第一时间发表官方声明，表示对国际足联的这一决定“感到震惊”，随后还正式致函国际足联，提出上诉申请。 不过美国方面倒是对这份礼物颇为满意，总统特朗普就在社…",
-      "pubDate": "2026-07-11T22:02:23+08:00",
+      "id": "72e248cd5721",
+      "title": "“韩国最好的夏天”：120万人爆仓，巨亏940万亿",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzUzNDY0NzQwMQ==&mid=2248174441&idx=1&sn=7ef0cce30727516c49c04ba993491598&chksm=f8633204a526d0c7f3a5ab577516b3f6e3d0fc1e01d0316d1ef192fc71e9af0b784903eabf42",
+      "description": "文/金错刀频道从“史上最强牛市”到全线崩盘，需要多长时间？ 韩国股市的答案是：不到一个月。2026年初，韩国半导体行业的造富神话迅速传遍全网。 半导体巨头SK海力士宣布，给每名员工发放超过1.36亿韩元的年终奖，折合人民币66万元。 而根据业绩预测，今年的平均年终奖，折合成人民币大约是610万。 泼天富贵下，海力士员工一夜飞升，迅速超过医生和律师，成了韩国相亲市场的香饽饽。 在韩国二手交易网站上，甚至有人把海力士员工服挂上主页，商品介绍只写着4个字：“相亲战袍”。 随着三星电子和SK海力士一路暴涨，越来越多韩国散户开始冲进股市，重仓两家公司。 有人掏空积…",
+      "pubDate": "2026-07-18T16:02:24+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -63,11 +63,11 @@
       "category": "ai-news"
     },
     {
-      "id": "20fb0e32be2f",
-      "title": "王忠民：未来可以记账，可以定义为一种交易的商品",
-      "link": "https://mp.weixin.qq.com/s?__biz=MTI3NTQ1MTY0MQ==&mid=2650671209&idx=1&sn=8103d0360d81f206d0f0a869b193aad6&chksm=7d76f514bfe40d4bf48a2738e5665480446859c23365b83a45e2369ea9cab8803f19f9e5f57a",
-      "description": "所有企业家如果瞄准未来的技术、产业和服务，一定会产生当下最有成长性、盈利率、市值最大化的公司。 文｜《中国企业家》记者 胡楠楠编辑｜米娜图片来源｜中企图库7月10日~11日，由《中国企业家》杂志社主办的2026《中国企业家》未来之星年会在广州海珠举行。 在11日上午的开幕演讲环节，深圳市金融稳定发展研究院理事长，全国社会保障基金理事会原副理事长王忠民发表了演讲。 演讲的精彩观点如下： 1.所有企业家如果瞄准未来的技术、产业和服务，一定会产生当下最有成长性、盈利率、市值最大化的公司。 2.未来可以记账，未来可以定义为一种交易的商品，未来可以用交易化的方式让…",
-      "pubDate": "2026-07-11T22:02:23+08:00",
+      "id": "f3264801d3e2",
+      "title": "锂矿日进斗金、整车血流成河：汽车业上半年业绩“冰火两重天”",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzIyMzYyOTk2OA==&mid=2247616883&idx=1&sn=871f035318444a518c22ebe63a441edc&chksm=e959af1654698255221ec6e125d383545fdb19b58573ace0cd922d89d4f38bd38e31e740b58b",
+      "description": "上游赚得盆满钵满、中游大面积失血、下游夹缝中求生，成为2026年上半年汽车产业链业绩图谱的真实写照。 这背后折射出的是中国汽车产业从“整车为王”向“资源+技术双轮驱动”转型的深层阵痛。 这场利润再分配，正在改写中国汽车产业的底层商业逻辑。 作者：王帅国封图：图虫创意2026年上半年，中国汽车产业链经历了一场前所未见的利润大迁徙：上游有锂矿企业净利润暴涨高达30倍，下游有整车厂出现约40亿元的亏损。 截至7月15日，江淮汽车、广汽集团、赛力斯、北汽蓝谷四家上市整车企业披露的半年度业绩预告显示，四家合计归母净利润预亏区间达80.7亿元至90.8亿元。 其中，…",
+      "pubDate": "2026-07-18T16:02:24+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -75,47 +75,11 @@
       "category": "ai-news"
     },
     {
-      "id": "485bf01a8c20",
-      "title": "Show HN: Learn by rebuilding Redis, Git, a database from scratch",
-      "link": "https://shipthatcode.com",
-      "description": "Article URL: https://shipthatcode.com Comments URL: https://news.ycombinator.com/item?id=48871973 Points: 4 # Comments: 2",
-      "pubDate": "2026-07-11T21:40:27+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "f54b6e7bb881",
-      "title": "Speculations Concerning the First Ultraintelligent Machine (1965) [pdf]",
-      "link": "https://languagelog.ldc.upenn.edu/myl/Good1964.pdf",
-      "description": "Article URL: https://languagelog.ldc.upenn.edu/myl/Good1964.pdf Comments URL: https://news.ycombinator.com/item?id=48871932 Points: 56 # Comments: 27",
-      "pubDate": "2026-07-11T21:33:17+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "a22826d6b102",
-      "title": "FCC approves test of space mirror to light night sky",
-      "link": "https://theconversation.com/the-u-s-just-approved-a-giant-space-mirror-to-test-sunlight-on-demand-low-earth-orbit-is-getting-weird-283482",
-      "description": "https://www.nytimes.com/2026/07/10/climate/fcc-space-mirror....https://www.pcmag.com/news/fcc-approves-reflect-orbitals-gia... Comments URL: https://news.ycombinator.com/item?id=48871367 Points: 76 # Comments: 81",
-      "pubDate": "2026-07-11T20:12:34+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "07bd4dfc101f",
-      "title": "今年最期待的 AI 手机，要来了",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjgzMTAwODI0MA==&mid=2652457143&idx=1&sn=f71890f735c124de3d95df6fcf415c4a&chksm=9ab9c39f12b0ac750ee866e7b27b24c73f93c02e53a91edde9d3a35ffa48edc84765dcdd1315",
-      "description": "7 月的好消息接踵而至。前有三星发布广告预热今年的阔折叠，后有谷歌发函、号称「Android 样板间」的 Pixel 系列又要更新了。 图｜PhoneArena前几日，谷歌向媒体发送了 2026 年 Made by Google 硬件发布会的邀请函，活动正式定档 8 月 12 日在纽约举行。 图｜Google按照正常节奏，我们预计将会在活动上见到 Pixel 11 系列的四款新机型，以及下一代 Pixel Watch 5。 口碑稳中向好的 Pixel a 系列与 Pixel Buds 则暂时没有什么消息，更可能到明年春季才会上新：图｜Engadget只是…",
-      "pubDate": "2026-07-11T20:04:27+08:00",
+      "id": "ce84b02d14dc",
+      "title": "前世界首富，融了678亿造火箭",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzkwMjUxNTkwNQ==&mid=2247634872&idx=1&sn=483f81e633def8f36e6b681eede67f94&chksm=c1fe5c31b8e1b0a6c483ad5c81becb829206ec2a04fb999e0b4750912797448c606f3e507b3b",
+      "description": "将投中网设为“星标⭐”，第一时间收获最新推送最值钱的火箭诞生了。 作者 张雪本文字数3421手搓量丨99% AI含量丨1%“非常糟糕的一天”。 5月28日，前世界首富贝索斯在社交媒体上如此发帖。 原因源于他独自掌权二十余年的蓝色起源，这一天一枚新格伦火箭在卡纳维拉尔角进行静态点火测试时爆炸，不仅火箭本身被摧毁，连蓝色起源唯一的轨道发射台也遭到了破坏。 尽管发射台的重建工作已经启动，但这个意外不仅会拖慢火箭的发射进度，也造成了巨大的财务损失，有消息称该发射台的投资成本超过了10亿美元。 之后不久，SpaceX登陆美股，受到了华尔街的热烈追捧，尽管截至发稿已…",
+      "pubDate": "2026-07-18T16:02:24+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -123,11 +87,11 @@
       "category": "ai-news"
     },
     {
-      "id": "3430e6feeae6",
-      "title": "经济和市场综述 - 20260711",
-      "link": "https://mp.weixin.qq.com/s?__biz=Mzg4NzY3NzIwOA==&mid=2247497228&idx=1&sn=e743a2bd94c23a889ddbbd9306dfeb4a&chksm=ceca9b2135687611e45c7330e97cd03fefe4cb8417a302db28c2b84ba953ca620f7f2658bcd6",
-      "description": "我都不记得上一次讨论市场和经济是什么时候了，我自己今年在四月份战争结束之后做了一波铜的反弹，然后五月中旬发现宏观开始有些逆风就休息了差不多两个月。 如果要说的话，四月份之后没有选择美股而是铜是一个遗憾甚至错误，然后错过了五月份六月份半导体的行情也是遗憾。 我自己觉得七月底是另一个可能的节点，二季度美股的财报，我估计财报本身是不错的，但大家会想听听业绩会上的表态和口风。 到今天为止，市场依然计价了30%左右在7月份加息的概率，Warsh不可能无止境去打太极，中国的zzj会议也是同一个时刻。 包括存储巨头的上市。所以我觉得是时候重新整理一下思路。 中国股票市…",
-      "pubDate": "2026-07-11T20:04:27+08:00",
+      "id": "4a49ac039e78",
+      "title": "今年最火爆的三部短剧，没有一个是“正经团队”",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5ODMzMDMyMw==&mid=2654905696&idx=1&sn=26e6142a708bb460b603700368b83ab9&chksm=bcd787db54a16f9260d471f76f998fd99f54867fe38b44a55001613f4a7d3e52081f6eb9c2e2",
+      "description": "今年优质野生创作者的密集涌现，可能会推动平台资源、品牌投放向这类创作者进一步倾斜。 而对野生创作者而言，成熟的商业变现渠道是好事也是关键，它能推动小团队在创作中投入更多精力和成本，来不断摸索并突破创作的上限。 作者 | 叶橙子编辑 | Felicia题图 |CFP过去，如果说一部影视、游戏作品是由草台班子做的，多少带着讽刺意味，但今年说这句话，不仅在描述事实，甚至是一种褒奖。 今年以来，已有多部来自非专业创作者的影视、游戏作品爆火，遍地开花。 6月，真人影视互动游戏《盛世天下·女帝篇》上线，仅5天时间销量便突破100万份，网上相关剧情讨论无数，其导演知竹…",
+      "pubDate": "2026-07-18T16:02:24+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -135,11 +99,11 @@
       "category": "ai-news"
     },
     {
-      "id": "42a79fed5b20",
-      "title": "从产品竞争到价值叙事，消费品增长逻辑变了",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzA5MzU0MTAzMw==&mid=2651896368&idx=1&sn=3a9f46c7da4f12912be781b678bb87e4&chksm=8a074a9f9046a9dab9565894ca5296359371c7dce1df7741231e37b8c8d9c5052fd18c10114c",
-      "description": "作者丨赵波校审丨葛畅 排版丨殷传家很多品牌今天遇到的增长问题，表面看是流量变贵、渠道分散、价格内卷、用户难留，但更深一层看，是品牌叙事失效了。 过去，品牌只要回答三个问题就够了：我是谁？我卖什么？ 我凭什么更好？今天，这三个问题已经不够。消费者还在问更多问题。 这个产品适合我什么场景？它能不能表达我的生活方式？ 它能不能被别人看见、理解、认同？它是否代表某种我愿意相信的价值？ 我为什么要持续选择它？说到底，消费品竞争已经从单纯的产品竞争，进入到了意义竞争。 第三消费时代，品牌卖的已经不只是产品，还在帮消费者完成一种自我解释：我为什么这样吃、这样喝、这样生…",
-      "pubDate": "2026-07-11T20:04:27+08:00",
+      "id": "de853e4538f8",
+      "title": "FOMC Preview - 以及市场回顾和展望：20260718",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg4NzY3NzIwOA==&mid=2247497285&idx=1&sn=372539ac88835b10dd32330cc2a522e3&chksm=ce68821d1bf3b757216946a20705e057b5b65b918580e0cebbb80d76b62f7892183204619a39",
+      "description": "这篇文章里面的大部分图片我都放在了网页上，你可以点击最下面的阅读原文跳转，也可以去我们官网Kp-research.cn上找到跟踪研究，打开下拉菜单就可以看到。 我觉得以后这种模式会比较好，公众号是文字的分享，数据我把它放在网页上大家也可以下载，之后网页上也会有AI Agent负责回答。 这一周市场足够精彩，闲话少说我们直接进入正题，从利率和汇率开始，到FOMC的展望，到黄金和铜包括商品整体的看法，最后我也会聊聊对于市场整体的一些思考。 最后这部分我其实不是专家，没人能完整了解所有市场，但我曾经也经历过这种惨烈的下跌，我觉得有时候从不同角度讨论市场会有帮助…",
+      "pubDate": "2026-07-18T16:02:24+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -147,11 +111,11 @@
       "category": "ai-news"
     },
     {
-      "id": "38414b748b7a",
-      "title": "宁夏银行，下场卖房",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzI4OTcxMDA0MQ==&mid=2247546782&idx=1&sn=2a2a2cebc6fa8e8c91685bb8620aae06&chksm=eda1198f6cd5227b2409fff67efee1d1cb3a039cf8bc4b522ebf1ac3194f2e3a7475815adbda",
-      "description": "宁夏银行开始亲自下场卖房了。7月2日，宁夏银行官方公众号推文，宣布其“京东官方资产店铺已正式上线，银行直供房产线上即可选购”，封面图是醒目的红底金字的“好消息”。 进入宁夏银行的官方资产店铺，可以看到上到挂牌价9200万的酒店、2700万的商业用房，下到9万元的小商铺，另外还有价值不等的住宅楼等产品正在售卖。 “这是我们自己过了户的房子，自己卖，没有任何纠纷。” 《凤凰WEEKLY财经》致电互联网拍卖平台宁夏银行北京路支行名下财产处置页面朱先生电话，对方回应道。 “不能全相信对方的说法。”康德顾问团法律专家、上海市光明律师事务所付永生律师认为，由于上述房…",
-      "pubDate": "2026-07-11T20:04:27+08:00",
+      "id": "b3bb332fbd3d",
+      "title": "科创板史上最大IPO遭遇科技股“猛回调”",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTExMjYwMA==&mid=2670389358&idx=2&sn=9cee4d227159bf4b3ac4df3a7488a9d4&chksm=bd584edee8f613e0dcb3e17985c84e3318b0bfabbdef6da646ec0ed7e689f7d93f301938e645",
+      "description": "若长鑫科技上市后遭遇存储行业周期下行，参与战略配售跟投的机构在24个月锁定期内的纸面浮盈同样可能回吐，“落袋才算数”。 作者：郑晨烨封图：记者拍摄合肥新桥国际机场以东约10公里有一个新桥科创示范区。 2016年，总投资1500亿元的DRAM（动态随机存取存储器）存储芯片制造项目在此落地，这是当时安徽省单体投资最大的工业项目。 2026年7月16日，有附近居民告诉经济观察报记者，最早这个项目连名字都没有，周围人只知道一个代号——506工厂。 当时这个项目所在的蜀山区长岗一带还是大片农田。十年之后，这里成为合肥的一处高新产业聚集区。 当年那个连名字都没有的项…",
+      "pubDate": "2026-07-18T16:02:24+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -159,11 +123,23 @@
       "category": "ai-news"
     },
     {
-      "id": "d2422f2f9b08",
-      "title": "多机构预测上半年GDP增速超4.5%，下半年关键看出口和房地产",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5MjEyODE4MA==&mid=2653348322&idx=1&sn=9598ffb473cd5cde5e5132de8fe2d092&chksm=bc6d5c40b5127422e7df817e017b599176afebae4f3a5275dd825001202078b0d6de1b003935",
-      "description": "7月15日，国家统计局将公布上半年经济数据。在外部环境复杂多变、内需修复仍需进一步巩固的背景下，这份中国经济上半年“成绩单”备受市场关注。 从目前已披露的机构预测来看，二季度经济增速大概率较一季度有所回落。 多家研究机构预计，二季度GDP同比增长4.2%～4.5%，上半年GDP增速则有望保持在4.5%～4.7%区间。 △图源：图虫今年我国经济增长目标设定为4.5%～5%。 若上半年增速落在4.5%左右，下半年经济需要保持怎样的增长力度，全年目标才能顺利实现？ 多家机构认为，随着逆周期调节力度加大，财政政策进一步发力、重大项目建设提速，以及促消费、稳投资等…",
-      "pubDate": "2026-07-11T20:04:27+08:00",
+      "id": "34ee91dbf71c",
+      "title": "Show HN: Find someone in the dark – light them or light yourself? (Three.js)",
+      "link": "https://github.com/skorotkiewicz/signal-in-the-dark",
+      "description": "Article URL: https://github.com/skorotkiewicz/signal-in-the-dark Comments URL: https://news.ycombinator.com/item?id=48955740 Points: 10 # Comments: 1",
+      "pubDate": "2026-07-18T14:32:24+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "ea42dadd9bbf",
+      "title": "A股又现天价离婚案",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg5MzEyNzEwNQ==&mid=2247830526&idx=1&sn=9a15c17cbe11211c0a864facad80659b&chksm=c156b3c1509b5f7db1661b24f02ce47d9030b225085154116ff5ec6f6d8e4e412d0557cda825",
+      "description": "A股再现天价离婚。7月17日晚间，科创板探针卡龙头强一股份公告称，公司实控人、董事长周明与配偶蒋春兰完成离婚手续，周明将自身所持半数股权分割至蒋春兰名下，对应市值逼近60亿元。 根据公告披露的分割细则，本次股权划转分为直接持股与平台间接持股两部分：周明将本人直接持有的1356.9万股，叠加通过知强合一、众强行一、新沂强一三家员工平台间接持有的36万股、4万股、10万股，合计1407万股股份分割给蒋春兰，占公司总股本比例10.86%。 分割前，周明个人合计持股21.72%，蒋春兰未持有公司任何股份；过户完成后二人各持10.86%，实控人婚前核心股权近乎对半…",
+      "pubDate": "2026-07-18T14:02:22+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -171,11 +147,11 @@
       "category": "ai-news"
     },
     {
-      "id": "e228c764c855",
-      "title": "一边限制移民，一边引进印度人，日本在打什么算盘？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5MjEyODE4MA==&mid=2653348322&idx=3&sn=ed13dc8d8a60303ec9908696dcddcc76&chksm=bce7184ec45faeba68d98941759da7d654496a1ddc13544327035faa7596871a49763d0d2a8d",
-      "description": "日本再一次邀请印度人才赴日。7月初，日本首相高市早苗访问印度期间，和印度总理莫迪发表的一份声明草案显示，日本在2030年前拟邀请500名印度高技能人才赴日。 △高市早苗会见莫迪 图源：视觉中国500人这个数量并不算多，但是日本和印度不断加强合作的一个缩影。 近年来，在日印度人数量一直在增长。日本统计局和外务省数据显示，2015年，在日本的印度人数仅为26244人，其中多数为IT专业人士及其家属。 近年来随着日本扩大接收海外人才，截至2025年，在日本的印度籍人数已飙升至56686人，增幅达116%，相当于十年内翻了一倍。 在这当中，大约四分之一是印度技术…",
-      "pubDate": "2026-07-11T20:04:27+08:00",
+      "id": "cc6ee21a287a",
+      "title": "10万美元一个月，特朗普开始卖“Alpha”了",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzk4ODI1MjE0NA==&mid=2247505272&idx=1&sn=a55896e6124d74a5ebef62b91c9a81c4&chksm=c4da10d5dbaeba7632071ee7f67097c9802db34c4121d36f3fc5005f6a07b608a9c52065cdce",
+      "description": "彭博终端？二道贩子而已！总统卖的才是一手信息源。作者：Azuma；编辑：郝方舟出品 | Odaily星球日报（ID：o-daily）特朗普又双叒叕整出了超越大众认知的“骚操作”。 英国《金融时报》报道表示，特朗普媒体与科技集团（TMTG）正在探索将 Truth Social 平台上的实时信息流商业化，计划向机构客户提供低延迟数据服务，报价高达每月 10 万美元。 购买这一服务的机构，将能够比普通用户更快获取特朗普最新发布的帖子，用于追踪政策信号、市场情绪以及政治事件的潜在影响。 时间差，才是市场上最值钱的东西对于关注美国市场的投资者来说，Truth So…",
+      "pubDate": "2026-07-18T14:02:22+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -183,11 +159,11 @@
       "category": "ai-news"
     },
     {
-      "id": "52e7c192c54d",
-      "title": "半年净利预增超9倍，股价却两月跌近四成！“电解液龙头”天赐材料正陷行业集体焦虑？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5MjEyODE4MA==&mid=2653348322&idx=4&sn=123ba58eace6d06380171bfa34a8c0e3&chksm=bce64682781d1b6bb84aff977d67028de95879d2f21cc72de98d959ab6fe8e468b83e7c72c88",
-      "description": "7月9日晚间，“电解液龙头”天赐材料（002709.SZ）披露2026年半年度业绩预告：预计上半年归母净利润27亿— 30亿元，同比增幅907.84%—1019.82%；扣非归母净利润26.5亿— 29.5亿元，同比增长1029.57%—1157.44%。 而在2025年上半年，天赐材料的归母净利润仅为2.68亿元，同比增长12.79%；扣非归母净利润为2.35亿元，同比增长26.01%。 天赐材料成立于2000年，2014年登陆深交所，主营锂离子电池材料与日化材料及特种化学品两大板块，其中锂电材料收入占比超九成。 它生产的锂离子电池材料主要为锂离子电池…",
-      "pubDate": "2026-07-11T20:04:27+08:00",
+      "id": "2525d7d390c5",
+      "title": "从WAIC看AI人才市场：模型之外，哪些人正在变得更值钱？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzU5MDcyOTYwMQ==&mid=2247629658&idx=1&sn=0e936aeaa6f0fa13f5b9e552dbdf2974&chksm=ff05fd38a352e167b85ac9fd40f2b3cb5fa29e99b63d718e21101800fa14abeefd56a14a60fb",
+      "description": "今年逛世界人工智能大会，一个很直观的感受是：AI开始“长出手脚”了。 展馆里，能接任务、调工具的智能体越来越多，机器人不只会走路、跳舞，还在尝试进入工厂和服务场景；大模型也在被装进手机、汽车和各种智能终端。 相比又一个更聪明的模型问世，今年大家更关心的是，这些技术到底应该怎么用？ 热闹的展台背后，其实藏着一个与职场人关系更直接的问题：当AI长出手脚后，什么样的人更容易找工作？ 为了找到这个问题的答案，猎聘大数据研究院发布《2026人工智能行业人才供需趋势洞察》。 招聘数据里的变化，恰好为大会上的技术热潮提供了另一个观察角度：AI人才市场，已经悄悄变了。…",
+      "pubDate": "2026-07-18T14:02:22+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -195,11 +171,35 @@
       "category": "ai-news"
     },
     {
-      "id": "051782cf9c50",
-      "title": "Your code is fast – if you're lucky",
-      "link": "https://tiki.li/blog/lucky_code.html",
-      "description": "Article URL: https://tiki.li/blog/lucky_code.html Comments URL: https://news.ycombinator.com/item?id=48870799 Points: 109 # Comments: 74",
-      "pubDate": "2026-07-11T18:50:10+08:00",
+      "id": "efd351343b07",
+      "title": "Claude make Fable 5 permanent",
+      "link": "https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/#atom-everything",
+      "description": "Claude make Fable 5 permanent An update from the @claudeai account on Twitter: Beginning July 20, Claude Fable 5 will be included in all Max and Team Premium plans, at 50% of limits. Pro and Team Standard users will continue to have access to Fable via usage credits, and will rec…",
+      "pubDate": "2026-07-18T14:00:13+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "8d4229547b88",
+      "title": "nascheme/quixote",
+      "link": "https://simonwillison.net/2026/Jul/18/quixote/#atom-everything",
+      "description": "nascheme/quixote A certain vintage if Python web nerd might be delighted to learn that the most recent commit to the Quixote web framework was six hours ago. The oldest commit in that repo is from 21 years ago, and that was the initial import of Quixote 2.4 from Subversion into G…",
+      "pubDate": "2026-07-18T13:27:49+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "780611b41e71",
+      "title": "Show HN: IKEA Complexity Index",
+      "link": "https://ikea.greg.technology/",
+      "description": "Article URL: https://ikea.greg.technology/ Comments URL: https://news.ycombinator.com/item?id=48955042 Points: 56 # Comments: 27",
+      "pubDate": "2026-07-18T11:51:42+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -207,11 +207,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "d25a187a89eb",
-      "title": "Ghost Font: A font that humans can read but AI cannot",
-      "link": "https://www.mixfont.com/ghost-font",
-      "description": "Article URL: https://www.mixfont.com/ghost-font Comments URL: https://news.ycombinator.com/item?id=48870381 Points: 111 # Comments: 90",
-      "pubDate": "2026-07-11T17:36:53+08:00",
+      "id": "0392ac25abc7",
+      "title": "Regressive JPEGs",
+      "link": "https://maurycyz.com/projects/bad_jpeg/",
+      "description": "Article URL: https://maurycyz.com/projects/bad_jpeg/ Comments URL: https://news.ycombinator.com/item?id=48954851 Points: 378 # Comments: 36",
+      "pubDate": "2026-07-18T11:14:20+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -219,11 +219,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "12f5e9933c02",
-      "title": "Why it's so difficult to produce American-made medical gloves",
-      "link": "https://www.bloomberg.com/news/features/2026-07-07/why-it-s-so-difficult-to-produce-100-american-made-medical-gloves",
-      "description": "https://archive.ph/wtC7m Comments URL: https://news.ycombinator.com/item?id=48870258 Points: 86 # Comments: 95",
-      "pubDate": "2026-07-11T17:16:10+08:00",
+      "id": "1fba913c34e0",
+      "title": "I started a “dirt notebook”",
+      "link": "https://pinewind.bearblog.dev/i-started-a-dirt-notebook/",
+      "description": "Article URL: https://pinewind.bearblog.dev/i-started-a-dirt-notebook/ Comments URL: https://news.ycombinator.com/item?id=48954149 Points: 70 # Comments: 58",
+      "pubDate": "2026-07-18T09:12:13+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -231,11 +231,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "08bb41db9a42",
-      "title": "The vintage beauty of Soviet control rooms (2018)",
-      "link": "https://designyoutrust.com/2018/01/vintage-beauty-soviet-control-rooms/",
-      "description": "Article URL: https://designyoutrust.com/2018/01/vintage-beauty-soviet-control-rooms/ Comments URL: https://news.ycombinator.com/item?id=48868996 Points: 176 # Comments: 60",
-      "pubDate": "2026-07-11T13:19:41+08:00",
+      "id": "1eda1d709754",
+      "title": "DrDroid (YC W23) Is Hiring",
+      "link": "https://www.ycombinator.com/companies/drdroid/jobs/w45QcNV-product-engineer-assignment-mandatory",
+      "description": "Article URL: https://www.ycombinator.com/companies/drdroid/jobs/w45QcNV-product-engineer-assignment-mandatory Comments URL: https://news.ycombinator.com/item?id=48954074 Points: 0 # Comments: 0",
+      "pubDate": "2026-07-18T09:01:08+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -243,11 +243,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "77d7ff9dffda",
-      "title": "Einstein's relativity rules chemical bonds in heavy elements, new research shows",
-      "link": "https://www.brown.edu/news/2026-07-09/chemical-bonds-relativity",
-      "description": "https://www.science.org/doi/10.1126/science.aei1285 Comments URL: https://news.ycombinator.com/item?id=48866134 Points: 339 # Comments: 148",
-      "pubDate": "2026-07-11T06:30:44+08:00",
+      "id": "d945e0e90a72",
+      "title": "Stenchill: 3D Printable Solder Paste Stencil Generator",
+      "link": "https://www.stenchill.com/en/",
+      "description": "Article URL: https://www.stenchill.com/en/ Comments URL: https://news.ycombinator.com/item?id=48953981 Points: 59 # Comments: 17",
+      "pubDate": "2026-07-18T08:48:37+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -255,11 +255,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "3f63d27733ec",
-      "title": "Moss (YC F25) Is Hiring",
-      "link": "https://www.ycombinator.com/companies/moss/jobs/52LnqLQ-software-engineer-sdk",
-      "description": "Article URL: https://www.ycombinator.com/companies/moss/jobs/52LnqLQ-software-engineer-sdk Comments URL: https://news.ycombinator.com/item?id=48865332 Points: 0 # Comments: 0",
-      "pubDate": "2026-07-11T05:11:18+08:00",
+      "id": "77fb79c6b65a",
+      "title": "TP-Link Kasa cameras leaked home GPS via unauthenticated UDP for 6 years",
+      "link": "https://github.com/BadChemical/IoT-Vulnerability-Research-Public/blob/main/TP-Link_Kasa_EC71/Kasa_EC71.md",
+      "description": "Article URL: https://github.com/BadChemical/IoT-Vulnerability-Research-Public/blob/main/TP-Link_Kasa_EC71/Kasa_EC71.md Comments URL: https://news.ycombinator.com/item?id=48952565 Points: 141 # Comments: 42",
+      "pubDate": "2026-07-18T05:42:43+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -267,11 +267,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "ba0dc24cfcb7",
-      "title": "Apple sues OpenAI, accuses ex-employees of stealing trade secrets",
-      "link": "https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/",
-      "description": "https://www.macrumors.com/2026/07/10/apple-sues-openai/ Comments URL: https://news.ycombinator.com/item?id=48865019 Points: 1390 # Comments: 753",
-      "pubDate": "2026-07-11T04:47:09+08:00",
+      "id": "6f3f5ea97a6a",
+      "title": "Open Book Touch: open-source e-reader",
+      "link": "https://www.crowdsupply.com/oddly-specific-objects/open-book-touch",
+      "description": "Article URL: https://www.crowdsupply.com/oddly-specific-objects/open-book-touch Comments URL: https://news.ycombinator.com/item?id=48952135 Points: 122 # Comments: 40",
+      "pubDate": "2026-07-18T04:47:57+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -279,11 +279,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "990b9963a2e2",
-      "title": "An update on residential proxies and the scraper situation",
-      "link": "https://lwn.net/SubscriberLink/1080822/990a8a5e2d379085/",
-      "description": "Article URL: https://lwn.net/SubscriberLink/1080822/990a8a5e2d379085/ Comments URL: https://news.ycombinator.com/item?id=48864252 Points: 275 # Comments: 291",
-      "pubDate": "2026-07-11T03:38:34+08:00",
+      "id": "b875888f022a",
+      "title": "Topcoat: The full full-stack framework for Rust",
+      "link": "https://github.com/tokio-rs/topcoat",
+      "description": "Article URL: https://github.com/tokio-rs/topcoat Comments URL: https://news.ycombinator.com/item?id=48952067 Points: 87 # Comments: 40",
+      "pubDate": "2026-07-18T04:41:43+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -291,14 +291,398 @@
       "category": "ai-agent"
     },
     {
-      "id": "ec728a5c2214",
-      "title": "SpaceX wants to launch 100k more Starlink satellites for 100x the bandwidth",
-      "link": "https://www.zdnet.com/home-and-office/networking/spacex-wants-to-launch-100000-more-starlink-satellites/",
-      "description": "Article URL: https://www.zdnet.com/home-and-office/networking/spacex-wants-to-launch-100000-more-starlink-satellites/ Comments URL: https://news.ycombinator.com/item?id=48863064 Points: 255 # Comments: 916",
-      "pubDate": "2026-07-11T01:51:07+08:00",
+      "id": "52ed2a275062",
+      "title": "Static search trees: 40x faster than binary search (2024)",
+      "link": "https://curiouscoding.nl/posts/static-search-tree/",
+      "description": "Article URL: https://curiouscoding.nl/posts/static-search-tree/ Comments URL: https://news.ycombinator.com/item?id=48951898 Points: 132 # Comments: 6",
+      "pubDate": "2026-07-18T04:24:55+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "f24084883227",
+      "title": "Painting the sides of railroad rails white to reduce derailment",
+      "link": "https://www.up.com/news/safety/Tracking-Rail-Heat-260608",
+      "description": "Article URL: https://www.up.com/news/safety/Tracking-Rail-Heat-260608 Comments URL: https://news.ycombinator.com/item?id=48951780 Points: 104 # Comments: 53",
+      "pubDate": "2026-07-18T04:12:59+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "a7644ea90b1a",
+      "title": "The Zilog Z80 has turned 50",
+      "link": "https://goliath32.com/blog/z80.html",
+      "description": "Article URL: https://goliath32.com/blog/z80.html Comments URL: https://news.ycombinator.com/item?id=48951461 Points: 230 # Comments: 86",
+      "pubDate": "2026-07-18T03:41:02+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "0c36ea918cc8",
+      "title": "Show HN: A zoomable timeline of 4M Wikipedia events",
+      "link": "https://app.everything.diena.co/",
+      "description": "I'm building a journal app in Kotlin Multiplatform and for this purpose I have created a zoomable timeline interface.This is a side-project where I reuse the timeline interface to display 4 million events imported from Wikipedia / Wikidata, scored using PageRank. There is more in…",
+      "pubDate": "2026-07-18T02:37:33+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "170820a84633",
+      "title": "Lego building instructions through time",
+      "link": "https://www.lego.com/en-us/history/articles/d-lego-building-instructions-through-time",
+      "description": "Article URL: https://www.lego.com/en-us/history/articles/d-lego-building-instructions-through-time Comments URL: https://news.ycombinator.com/item?id=48950518 Points: 129 # Comments: 32",
+      "pubDate": "2026-07-18T02:21:14+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "34111744bc3b",
+      "title": "Learning a few things about running SQLite",
+      "link": "https://jvns.ca/blog/2026/07/17/learning-about-running-sqlite/",
+      "description": "Article URL: https://jvns.ca/blog/2026/07/17/learning-about-running-sqlite/ Comments URL: https://news.ycombinator.com/item?id=48950122 Points: 261 # Comments: 68",
+      "pubDate": "2026-07-18T01:45:41+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "1fde6b194534",
+      "title": "Thanks HN for 15 years of support and helping me find my life's work",
+      "link": "https://news.ycombinator.com/item?id=48949551",
+      "description": "Tomorrow is the 15th anniversary of the first day of the Recurse Center (https://www.recurse.com/)My cofounders and I did YC all the way back in the Summer of 2010, with the initial idea of building \"OkCupid for jobs.\" That idea quickly fizzled, and we spent the better part of a…",
+      "pubDate": "2026-07-18T00:57:27+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "14270184fe75",
+      "title": "The state of open source AI",
+      "link": "https://stateofopensource.ai/",
+      "description": "Article URL: https://stateofopensource.ai/ Comments URL: https://news.ycombinator.com/item?id=48947825 Points: 449 # Comments: 323",
+      "pubDate": "2026-07-17T22:31:10+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "3293d2845978",
+      "title": "Quoting Kimi K3",
+      "link": "https://simonwillison.net/2026/Jul/17/kimi-k3/#atom-everything",
+      "description": "Is there something I can actually help you with today? — Kimi K3, after refusing to leak its system prompt Tags: kimi, ai-personality, generative-ai, ai, llms",
+      "pubDate": "2026-07-17T21:43:53+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "1371fbba18fd",
+      "title": "LLM cliché highlighter",
+      "link": "https://simonwillison.net/2026/Jul/17/llm-cliche-highlighter/#atom-everything",
+      "description": "Tool: LLM cliché highlighter I got frustrated reading yet another article that was crammed with the clichés of LLM-generated writing - \"no fluff, no filler, no jargon\" type stuff - so I had Fable 5 vibe code up this app for highlighting ten common patterns that show up in that so…",
+      "pubDate": "2026-07-17T20:11:11+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "18ae4ad2083a",
+      "title": "Spot birds not golf",
+      "link": "https://simonwillison.net/2026/Jul/17/spot-birds-not-golf/#atom-everything",
+      "description": "Suggestion for hyperscalers feeling pressure over data center water use: Buy up a few exclusive country clubs, convert the golf courses into public parks, pay for guides and binoculars to get the previous members into birdwatching - help them embrace a more sustainable hobby! Goo…",
+      "pubDate": "2026-07-17T10:58:07+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "be555f9c5139",
+      "title": "Firefox in WebAssembly",
+      "link": "https://simonwillison.net/2026/Jul/16/firefox-in-webassembly/#atom-everything",
+      "description": "Firefox in WebAssembly This is absurdly cool: Puter compiled Firefox to WebAssembly such that the whole browser runs in another browser. Here's my blog, running in Firefox, running in WebAssembly, running in Chrome: They chose Firefox/Gecko because it has strong single-process su…",
+      "pubDate": "2026-07-17T07:34:16+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "7e3dbb6d4944",
+      "title": "Kimi K3, and what we can still learn from the pelican benchmark",
+      "link": "https://simonwillison.net/2026/Jul/16/kimi-k3/#atom-everything",
+      "description": "Chinese AI lab Moonshot AI announced Kimi K3 this morning, describing it as their \"most capable model to date, with 2.8 trillion parameters\". It's currently available via their website and API, but an open weight release is promised \"by July 27, 2026\". Moonshot are calling this t…",
+      "pubDate": "2026-07-17T04:19:30+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "d8ca3e3a6045",
+      "title": "Quoting Thibault Sottiaux",
+      "link": "https://simonwillison.net/2026/Jul/16/bad-codex-bug/#atom-everything",
+      "description": "On file deletions. We’ve investigated a handful of reports where GPT-5.6 unexpectedly deleted files. What we have found is that this most commonly occurs when: Full access mode is enabled and codex is run without sandboxing protections, including without auto review being enabled…",
+      "pubDate": "2026-07-17T01:45:59+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "81a3e497914a",
+      "title": "Inkling: Our open-weights model",
+      "link": "https://simonwillison.net/2026/Jul/16/inkling/#atom-everything",
+      "description": "Inkling: Our open-weights model Mira Murati's Thinking Machines Lab just released their first open-weights model. Inkling is \"a Mixture-of-Experts transformer with 975B total parameters, 41B active\" - an Apache-2.0 licensed multimodal model trained on 45 trillion tokens of text,…",
+      "pubDate": "2026-07-16T23:35:25+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "309289caeb35",
+      "title": "Mermaid to ASCII art (mermaid-ascii)",
+      "link": "https://simonwillison.net/2026/Jul/16/mermaid-ascii/#atom-everything",
+      "description": "Tool: Mermaid to ASCII art (mermaid-ascii) After building the Mermaid to ASCII tool based on Grok Build's Rust code I learned that there's an older, more fully-featured Go library called AlexanderGrooff/mermaid-ascii that implements a similar pattern, so I had Claude Fable 5 comp…",
+      "pubDate": "2026-07-16T22:57:39+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "46c8dc21ff90",
+      "title": "Quoting Linus Torvalds",
+      "link": "https://simonwillison.net/2026/Jul/16/linus-torvalds/#atom-everything",
+      "description": "I realize that some people really dislike AI, but this is an area where I'm willing to absolutely put my foot down as the top-level maintainer. Linux is not one of those anti-AI projects, and if somebody has issues with that, they can do the open-source thing and fork it. Or just…",
+      "pubDate": "2026-07-16T21:26:10+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "9a7004640b9b",
+      "title": "Mermaid to Unicode box art (grok-mermaid)",
+      "link": "https://simonwillison.net/2026/Jul/16/grok-mermaid/#atom-everything",
+      "description": "Tool: Mermaid to Unicode box art (grok-mermaid) While exploring the codebase for the newly open-sourced Grok CLI coding agent I came across xai-grok-markdown/src/mermaid.rs, a \"self-contained terminal renderer for Mermaid diagrams\" written in Rust. I figured it would be fun to tr…",
+      "pubDate": "2026-07-16T08:33:18+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "4e35d41720a1",
+      "title": "xai-org/grok-build, now open source",
+      "link": "https://simonwillison.net/2026/Jul/15/grok-build/#atom-everything",
+      "description": "xai-org/grok-build, now open source xAI's grok CLI tool faced severe community backlash yesterday when it became apparent that running the command in a directory could upload that entire directory to xAI's Google Cloud buckets. One user reported running it in their home directory…",
+      "pubDate": "2026-07-16T07:59:30+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "5201cdda51e2",
+      "title": "How I tricked Claude into leaking your deepest, darkest secrets",
+      "link": "https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/#atom-everything",
+      "description": "How I tricked Claude into leaking your deepest, darkest secrets I've been impressed by the way the Claude web_fetch tool is designed to avoid data exfiltration attacks. Ayush Paul found a hole in that design. To recap: regular Claude chat is at risk of lethal trifecta attacks, be…",
+      "pubDate": "2026-07-15T22:21:54+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "c9bbf8c8b069",
+      "title": "Quoting GitHub Changelog",
+      "link": "https://simonwillison.net/2026/Jul/14/github-changeling/#atom-everything",
+      "description": "Dependabot now waits until a new release has been available on its registry for at least three days before opening a version update pull request. This cooldown is now the default and requires no configuration. — GitHub Changelog, embracing dependency cooldowns Tags: dependency-co…",
+      "pubDate": "2026-07-15T06:43:35+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "60255d1736e2",
+      "title": "simonw/pedalican",
+      "link": "https://simonwillison.net/2026/Jul/14/pedalican/#atom-everything",
+      "description": "simonw/pedalican Clearly I wasn't paying attention when these were first announced back in May, but today I accidentally activated a \"pet\" in Codex Desktop - a little animated robot, reminiscent of Clippy - and then learned you can create your own. So I did, and now I have a cute…",
+      "pubDate": "2026-07-15T06:29:45+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "62fc607a04bf",
+      "title": "lobste.rs is now running on SQLite",
+      "link": "https://simonwillison.net/2026/Jul/14/lobsters-sqlite/#atom-everything",
+      "description": "lobste.rs is now running on SQLite Community site Lobsters has been planning a migration away from MariaDB since August 2018 - originally targeting PostgreSQL, but last year they decided to investigate SQLite instead. This weekend they completed the migration, and now consider it…",
+      "pubDate": "2026-07-15T03:44:11+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "3a7c85312127",
+      "title": "Quoting Armin Ronacher",
+      "link": "https://simonwillison.net/2026/Jul/14/armin-ronacher/#atom-everything",
+      "description": "The shared language of a software project is not English or Python but it is the common understanding of what its concepts mean, where the boundaries are, which invariants matter, who owns what, and why the system has the shape it does. This language is rarely written down in one…",
+      "pubDate": "2026-07-15T02:04:23+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "3b7b0f5c6148",
+      "title": "datasette 1.0a37",
+      "link": "https://simonwillison.net/2026/Jul/14/datasette/#atom-everything",
+      "description": "Release: datasette 1.0a37 A minor release. Performance and documentation improvements to the permissions system, plus I reverted a cosmetic API change which caused almost every existing plugin test suite to break. Tags: datasette",
+      "pubDate": "2026-07-15T00:31:41+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "86da57583a02",
+      "title": "Using uvx in GitHub Actions in a cache-friendly way",
+      "link": "https://simonwillison.net/2026/Jul/14/uvx-github-actions-cache/#atom-everything",
+      "description": "TIL: Using uvx in GitHub Actions in a cache-friendly way I finally found a cache-friendly recipe for using uvx tool-name in GitHub Actions workflows that I like. The trick is setting a UV_EXCLUDE_NEWER: \"2026-07-12\" environment variable at the start of the workflow and then using…",
+      "pubDate": "2026-07-14T08:56:20+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "083d0cae653d",
+      "title": "DOOMQL",
+      "link": "https://simonwillison.net/2026/Jul/13/doomql/#atom-everything",
+      "description": "DOOMQL Peter Gostev built this using GPT-5.6 Sol. This is a lot of fun: DOOMQL started with a deliberately unreasonable question: what if SQLite were the game engine, not merely the place where a game stores data? The result is a small, original Doom-like game in which SQL owns m…",
+      "pubDate": "2026-07-14T06:34:41+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "d20bc9f9cdd1",
+      "title": "datasette code-frequency chart on GitHub",
+      "link": "https://simonwillison.net/2026/Jul/13/datasette-code-frequency/#atom-everything",
+      "description": "datasette code-frequency chart on GitHub Out of curiosity I decided to see if I could find a useful illustration of the impact of coding agents and Opus 4.5 class models on my own output. The best I've found so far is this GitHub chart of frequency of code changes to my Datasette…",
+      "pubDate": "2026-07-14T05:45:27+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "2546e8c5277b",
+      "title": "Directly Responsible Individuals (DRI)",
+      "link": "https://simonwillison.net/2026/Jul/12/directly-responsible-individuals/#atom-everything",
+      "description": "Directly Responsible Individuals (DRI) I went looking for a definition of \"Directly Responsible Individuals\" and the best I found was in the GitLab handbook. Apparently the term originated at Apple, where it's used to describe the person who is \"ultimately accountable for the suc…",
+      "pubDate": "2026-07-13T07:57:14+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "b626f9f50c91",
+      "title": "shot-scraper 1.11",
+      "link": "https://simonwillison.net/2026/Jul/12/shot-scraper/#atom-everything",
+      "description": "Release: shot-scraper 1.11 Some minor improvements, mainly around command option consistency and making the server: mechanism used by both shot-scraper video and shot-scraper multi work if the server takes longer than a second to start serving traffic. server: processes used by s…",
+      "pubDate": "2026-07-13T07:46:52+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "abbfea7aa078",
+      "title": "Fable gets another bump",
+      "link": "https://simonwillison.net/2026/Jul/12/bump/#atom-everything",
+      "description": "One of the consequences of GPT-5.6 Sol being clearly a Fable/Mythos class model is that Anthropic have, once again, bumped the date that Fable stops being available in their Claude Max plans: We're extending Claude Fable 5 access on all paid plans, as well as keeping Claude Code’…",
+      "pubDate": "2026-07-13T05:20:07+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "61cb7400ca6e",
+      "title": "sqlite-utils 4.1.1",
+      "link": "https://simonwillison.net/2026/Jul/12/sqlite-utils/#atom-everything",
+      "description": "Release: sqlite-utils 4.1.1 Mainly a fix for an edge case that regular Claude chat spotted while experimenting with the 4.1 release to answer a question about ON DELETE. table.transform() now raises a TransactionError if called while a transaction is open with PRAGMA foreign_keys…",
+      "pubDate": "2026-07-13T04:55:30+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "97e8fb8081fe",
+      "title": "sqlite-utils 4.1",
+      "link": "https://simonwillison.net/2026/Jul/11/sqlite-utils/#atom-everything",
+      "description": "Release: sqlite-utils 4.1 The first dot-release since 4.0 a few days ago, introducing a number of minor new features. sqlite-utils insert and sqlite-utils upsert now accept a --code option for providing a block of Python code (or a path to a .py file) that defines a rows() functi…",
+      "pubDate": "2026-07-12T07:50:20+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
       },
       "category": "ai-agent"
     },
@@ -311,66 +695,6 @@
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "592fa46ff108",
-      "title": "The tech of 'Terminator 2' – an oral history (2017)",
-      "link": "https://vfxblog.com/2017/08/23/the-tech-of-terminator-2-an-oral-history/",
-      "description": "Article URL: https://vfxblog.com/2017/08/23/the-tech-of-terminator-2-an-oral-history/ Comments URL: https://news.ycombinator.com/item?id=48862365 Points: 243 # Comments: 84",
-      "pubDate": "2026-07-11T00:48:41+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "39404e835ddc",
-      "title": "QuadRF can spot drones and see WiFi through my wall",
-      "link": "https://www.jeffgeerling.com/blog/2026/quadrf-can-spot-drones-and-see-wifi-through-my-wall/",
-      "description": "Article URL: https://www.jeffgeerling.com/blog/2026/quadrf-can-spot-drones-and-see-wifi-through-my-wall/ Comments URL: https://news.ycombinator.com/item?id=48861717 Points: 676 # Comments: 217",
-      "pubDate": "2026-07-10T23:59:53+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "39dc6b106e22",
-      "title": "After 7 years in production, Scarf has reluctantly moved away from Haskell",
-      "link": "https://avi.press/posts/2026-07-10-after-7-years-in-production-scarf-has-reluctantly-moved-away-from-haskell.html",
-      "description": "Article URL: https://avi.press/posts/2026-07-10-after-7-years-in-production-scarf-has-reluctantly-moved-away-from-haskell.html Comments URL: https://news.ycombinator.com/item?id=48859673 Points: 201 # Comments: 234",
-      "pubDate": "2026-07-10T21:30:41+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "02ab392f7d87",
-      "title": "Laylo (YC S20) Is Hiring a Head of Finance",
-      "link": "https://www.ycombinator.com/companies/laylo/jobs/qce41D2-head-of-finance",
-      "description": "Article URL: https://www.ycombinator.com/companies/laylo/jobs/qce41D2-head-of-finance Comments URL: https://news.ycombinator.com/item?id=48858745 Points: 0 # Comments: 0",
-      "pubDate": "2026-07-10T20:00:36+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "ae95130ff5f8",
-      "title": "Late Bronze Age Collapse",
-      "link": "https://acoup.blog/2026/01/30/collections-the-late-bronze-age-collapse-a-very-brief-introduction/",
-      "description": "Article URL: https://acoup.blog/2026/01/30/collections-the-late-bronze-age-collapse-a-very-brief-introduction/ Comments URL: https://news.ycombinator.com/item?id=48858737 Points: 404 # Comments: 283",
-      "pubDate": "2026-07-10T19:59:55+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
       },
       "category": "ai-agent"
     },
@@ -392,330 +716,6 @@
       "link": "https://simonwillison.net/2026/Jul/9/gpt-5-6/#atom-everything",
       "description": "OpenAI's latest flagship model hit general availability this morning, and comes in three sizes: Luna, Terra, and Sol (from smallest to largest). The new models are priced per 1M input/output tokens as Luna $1/$6, Terra $2.50/$15, Sol $5/$30. For comparison, the Claude Opus series…",
       "pubDate": "2026-07-10T03:46:38+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "32d550e225dd",
-      "title": "Introducing Muse Spark 1.1",
-      "link": "https://simonwillison.net/2026/Jul/9/muse-spark-1-1/#atom-everything",
-      "description": "Introducing Muse Spark 1.1 Following Muse Spark in April, here's Muse Spark 1.1 - the first Spark model to offer an API. Meta claim significant improvements in agentic tool calling and computer use. There are a lot more details are in the Muse Spark 1.1 Evaluation Report. The \"At…",
-      "pubDate": "2026-07-10T00:24:09+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "84f3ec33fcb0",
-      "title": "llm-meta-ai 0.1",
-      "link": "https://simonwillison.net/2026/Jul/9/llm-meta-ai/#atom-everything",
-      "description": "Release: llm-meta-ai 0.1 Let's LLM run prompts against the new muse-spark-1.1 model. Tags: llm, meta",
-      "pubDate": "2026-07-10T00:12:20+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "903087bd5201",
-      "title": "llm 0.31.1",
-      "link": "https://simonwillison.net/2026/Jul/9/llm/#atom-everything",
-      "description": "Release: llm 0.31.1 Fix for a bug with OpenAI Chat Completion endpoints where a tool call with empty arguments could result in a JSON error from some providers. #1521 This bug came up when I was testing llm-meta-ai. Tags: llm",
-      "pubDate": "2026-07-10T00:06:15+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "f159d9ad3657",
-      "title": "Rewriting Bun in Rust",
-      "link": "https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/#atom-everything",
-      "description": "Rewriting Bun in Rust Jarred Sumner has been promising this blog post (since May 9th) about his Zig to Rust rewrite of Bun for significantly longer than it took him to finish the rewrite. Honestly, it was worth the wait. This is a detailed description of an extremely sophisticate…",
-      "pubDate": "2026-07-09T07:57:21+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "66b741ba9c91",
-      "title": "Introducing GPT‑Live",
-      "link": "https://simonwillison.net/2026/Jul/8/introducing-gptlive/#atom-everything",
-      "description": "Introducing GPT‑Live OpenAI finally upgraded the model used by ChatGPT voice mode! I've had preview access for a few weeks in the iPhone app, and the new model is very impressive. It also has the ability to spin off harder tasks to GPT-5.5: For questions that require web search,…",
-      "pubDate": "2026-07-09T07:20:48+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "f4006669ac44",
-      "title": "Quoting Kenton Varda",
-      "link": "https://simonwillison.net/2026/Jul/8/kenton-varda/#atom-everything",
-      "description": "I just declared a moratorium against AI-written change descriptions (e.g. PR and commit messages, also issues/tickets) from my team. AI was writing change descriptions that were worse than useless to me as I tried to review PRs: outlining details of the code that could easily be…",
-      "pubDate": "2026-07-09T04:03:34+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "baab745c8278",
-      "title": "sqlite-utils 4.0, now with database schema migrations",
-      "link": "https://simonwillison.net/2026/Jul/7/sqlite-utils-4/#atom-everything",
-      "description": "This morning I released sqlite-utils 4.0, the 124th release of that project and the first major version bump since 3.0 in November 2020. In addition to some small but significant breaking changes (described in this upgrade guide), this version introduces three major features: dat…",
-      "pubDate": "2026-07-08T03:32:57+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "bc0c94d89463",
-      "title": "sqlite-migrate 0.2",
-      "link": "https://simonwillison.net/2026/Jul/7/sqlite-migrate/#atom-everything",
-      "description": "Release: sqlite-migrate 0.2 The version that retires the library, instead implementing a compatibility shim against the new sqlite-utils 4.0 dependency. Tags: sqlite-utils",
-      "pubDate": "2026-07-08T00:33:55+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "43bff7e579fb",
-      "title": "github-code Web Component",
-      "link": "https://simonwillison.net/2026/Jul/7/github-code-component/#atom-everything",
-      "description": "Tool: github-code Web Component An experimental Web Component built using GPT-5.5 and the following prompt: let's build a Web Component for embedding code from GitHub It takes URLs like that, converts them to https://raw.githubusercontent.com/simonw/sqlite-ast/437c759129154f05296…",
-      "pubDate": "2026-07-08T00:18:16+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "6f16a33ecae8",
-      "title": "sqlite-utils 4.0",
-      "link": "https://simonwillison.net/2026/Jul/7/sqlite-utils/#atom-everything",
-      "description": "Release: sqlite-utils 4.0 See sqlite-utils 4.0, now with database schema migrations for details. Tags: sqlite-utils",
-      "pubDate": "2026-07-07T23:42:43+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "7fd48dfe7dd4",
-      "title": "sqlite-utils 4.0rc4",
-      "link": "https://simonwillison.net/2026/Jul/7/sqlite-utils-2/#atom-everything",
-      "description": "Release: sqlite-utils 4.0rc4 The last RC before the 4.0 stable release. Mainly implements feedback from a detailed review by Claude Fable 5. Tags: sqlite-utils, claude-mythos-fable",
-      "pubDate": "2026-07-07T13:36:15+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "7d7bc23d2ad3",
-      "title": "tencent/Hy3",
-      "link": "https://simonwillison.net/2026/Jul/6/hy3/#atom-everything",
-      "description": "tencent/Hy3 New Apache 2.0 licensed model from Tencent in China: Hy3 is a 295B-parameter Mixture-of-Experts (MoE) model with 21B active parameters and 3.8B MTP layer parameters, developed by the Tencent Hy Team. Following the Hy3 Preview launch in late April, we gathered feedback…",
-      "pubDate": "2026-07-07T07:57:35+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "1eb6e47c95e4",
-      "title": "sqlite-utils 4.0rc3",
-      "link": "https://simonwillison.net/2026/Jul/6/sqlite-utils/#atom-everything",
-      "description": "Release: sqlite-utils 4.0rc3 I hoped to release sqlite-utils 4.0 stable this weekend, but as I worked through the backlog of issues and PRs with a combination of Claude Fable 5 and GPT-5.5 the changelog since rc2 kept getting bigger. The biggest new feature is support for introsp…",
-      "pubDate": "2026-07-06T13:40:08+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "ef10e0f5c9ba",
-      "title": "sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)",
-      "link": "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything",
-      "description": "I wrote about the sqlite-utils 4.0rc1 release a couple of weeks ago. Since we only have Claude Fable on our Max subscriptions for a few more days, I decided to see if it could help me get to a 4.0 stable release that I felt truly comfortable about, since I try to keep to SemVer a…",
-      "pubDate": "2026-07-05T09:00:48+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "1888c3f9b8d8",
-      "title": "sqlite-utils 4.0rc2",
-      "link": "https://simonwillison.net/2026/Jul/5/sqlite-utils/#atom-everything",
-      "description": "Release: sqlite-utils 4.0rc2 See sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25).",
-      "pubDate": "2026-07-05T08:47:38+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "ec4a208082d2",
-      "title": "Building a World Map with only 500 bytes",
-      "link": "https://simonwillison.net/2026/Jul/4/building-a-world-map-with-only-500-bytes/#atom-everything",
-      "description": "Building a World Map with only 500 bytes Iwo Kadziela (assisted by Codex) figured out a way to generate a credible ASCII world map using 445 bytes of data: The key trick is to use deflate compression, which is then wired together using this neat snippet of JavaScript. I didn't kn…",
-      "pubDate": "2026-07-05T07:09:02+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "8ee24b1ad01c",
-      "title": "Better Models: Worse Tools",
-      "link": "https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything",
-      "description": "Better Models: Worse Tools Armin reports on a weird problem he ran into while hacking on Pi: The short version is that newer Claude models sometimes call Pi’s edit tool with extra, invented fields in the nested edits[] array. And not Haiku or some small model: Opus 4.8. The edit…",
-      "pubDate": "2026-07-05T06:53:52+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "beea18396340",
-      "title": "Open Source AI Gap Map",
-      "link": "https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/#atom-everything",
-      "description": "Open Source AI Gap Map Current AI is \"a global partnership building a public option for AI\", founded as a non-profit at the AI Action Summit in Paris in February 2025 and backed by serious capital ($400m already committed). They launched their Gap Map a couple of days ago - an at…",
-      "pubDate": "2026-07-04T06:04:31+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "dd9f2c7429b0",
-      "title": "Quoting Josh W. Comeau",
-      "link": "https://simonwillison.net/2026/Jul/3/josh-w-comeau/#atom-everything",
-      "description": "I just launched my third course, Whimsical Animations, and so far, it’s on track to sell roughly ⅓ as many copies as a typical course launch. It’s a similar story with my two existing courses. Sales are down significantly from last year. There are likely a lot of reasons for this…",
-      "pubDate": "2026-07-04T05:25:52+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "eefcaed436a9",
-      "title": "Fable's judgement",
-      "link": "https://simonwillison.net/2026/Jul/3/judgement/#atom-everything",
-      "description": "One of the most interesting tips I got from the Fireside Chat I hosted with Cat Wu and Thariq Shihipar from the Claude Code team at AIE on Wednesday was to let Fable (and to a certain extent Opus) use their own judgement rather than dictating how they should work. The example the…",
-      "pubDate": "2026-07-04T02:51:06+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "631dfdc403b9",
-      "title": "June 2026 newsletter",
-      "link": "https://simonwillison.net/2026/Jul/3/june-newsletter/#atom-everything",
-      "description": "The June edition of my sponsors-only monthly newsletter is out. If you are a sponsor (or if you start a sponsorship now) you can access it here. This month: Claude Fable 5, GPT-5.6, and US export restrictions GLM-5.2 is the new best open weights model Tokenmaxxing is so over Data…",
-      "pubDate": "2026-07-03T22:50:50+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "aa700a0b090c",
-      "title": "llm-coding-agent 0.1a0",
-      "link": "https://simonwillison.net/2026/Jul/2/llm-coding-agent/#atom-everything",
-      "description": "Release: llm-coding-agent 0.1a0 Another Fable 5 experiment. Now that my LLM library has evolved into more of an agent framework it's time to see what a simple coding agent would look like built on it. I started a new Python library using my python-lib-template-repository GitHub t…",
-      "pubDate": "2026-07-03T03:33:12+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "a5c875c2d122",
-      "title": "Using DSPy to evaluate and improve Datasette Agent's SQL system prompts",
-      "link": "https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/#atom-everything",
-      "description": "Research: Using DSPy to evaluate and improve Datasette Agent's SQL system prompts One of this morning's AIE keynotes covered dspy, which reminded me I've been meaning to see if it could help me improve the system prompt used by Datasette Agent - so I fired off an asynchronous res…",
-      "pubDate": "2026-07-03T02:25:00+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "6c43649d4228",
-      "title": "Understand to participate",
-      "link": "https://simonwillison.net/2026/Jul/2/understand-to-participate/#atom-everything",
-      "description": "I saw Geoffrey Litt speak at AIE yesterday, and one framing he used particularly resonated with me: Understand to participate Geoffrey was talking about the challenge of collaborating with coding agents as they construct increasingly large and sophisticated changes, and the need…",
-      "pubDate": "2026-07-03T01:07:14+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "2acafbd6a645",
-      "title": "Quoting Anthropic",
-      "link": "https://simonwillison.net/2026/Jun/30/anthropic/#atom-everything",
-      "description": "We’ve received notice that the Department of Commerce has lifted export controls on Claude Fable 5 and Mythos 5. We'll begin restoring access tomorrow, and will share an update soon. — Anthropic, on Twitter Tags: anthropic, claude, generative-ai, claude-mythos-fable, ai, llms",
-      "pubDate": "2026-07-01T07:58:15+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "9e61dd70a472",
-      "title": "Nano Banana 2 Lite",
-      "link": "https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/#atom-everything",
-      "description": "Nano Banana 2 Lite Also known as Gemini 3.1 Flash Lite Image (gemini-3.1-flash-lite-image in their API), this is the \"fastest and cheapest Gemini image model, engineered for velocity and scale\". I used AI studio to run this prompt: Do a where's Waldo style image but it's where is…",
-      "pubDate": "2026-07-01T06:15:35+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "36f5f67c86fa",
-      "title": "What's new in Claude Sonnet 5",
-      "link": "https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything",
-      "description": "What's new in Claude Sonnet 5 Claude Sonnet 5 came out this morning. I always head straight for the \"what's new\" developer docs because they tend to have more actionable information than the official announcement post. Anthropic say of Sonnet 5 that \"its performance is close to t…",
-      "pubDate": "2026-07-01T05:23:02+08:00",
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
