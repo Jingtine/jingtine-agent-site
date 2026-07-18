@@ -28,6 +28,9 @@ jobs:
       - name: Aggregate feeds
         run: python scripts/aggregate-feeds.py
 
+      - name: Collect arXiv papers
+        run: python scripts/collect_papers.py
+
       - name: Quality check
         run: python scripts/check.py
 
@@ -37,8 +40,9 @@ jobs:
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: nightly refresh of RSS feeds and status"
+          commit_message: "chore: nightly refresh of RSS feeds, papers, and status"
           file_pattern: |
             public/data/rss-items.json
+            public/data/papers.json
             public/data/status.json
             subscriptions.opml

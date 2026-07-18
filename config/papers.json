@@ -1,0 +1,62 @@
+{
+  "topics": [
+    {
+      "id": "llm-agent",
+      "query": "LLM agent",
+      "categories": ["cs.AI", "cs.CL"]
+    },
+    {
+      "id": "se-ai",
+      "query": "code generation LLM",
+      "categories": ["cs.SE", "cs.AI"]
+    },
+    {
+      "id": "rag",
+      "query": "retrieval augmented generation",
+      "categories": ["cs.CL", "cs.IR"]
+    },
+    {
+      "id": "multi-agent",
+      "query": "multi-agent system LLM",
+      "categories": ["cs.MA", "cs.AI"]
+    },
+    {
+      "id": "human-ai",
+      "query": "human-AI collaboration",
+      "categories": ["cs.HC"]
+    }
+  ],
+  "filters": {
+    "require_any": [
+      "agent",
+      "LLM",
+      "large language model",
+      "RAG",
+      "retrieval-augmented",
+      "retrieval augmented",
+      "tool use",
+      "tool-use",
+      "multi-agent",
+      "multiagent",
+      "code generation",
+      "program repair",
+      "prompt",
+      "instruction tuning",
+      "RLHF",
+      "reasoning",
+      "agentic"
+    ],
+    "exclude_any": [
+      "credit card",
+      "consumption",
+      "wireless sensor network",
+      "ad hoc network",
+      "packet",
+      "congestion control",
+      "hardware benchmark"
+    ],
+    "min_score": 3
+  },
+  "max_per_topic": 8,
+  "max_total": 40
+}

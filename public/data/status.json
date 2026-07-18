@@ -1,19 +1,19 @@
 {
   "version": "0.10.0",
-  "generated": "2026-07-18T18:58:13.754035+08:00",
+  "generated": "2026-07-18T23:37:57.336139+08:00",
   "build": {
     "version": "0.10.0",
-    "generated": "2026-07-18 18:58"
+    "generated": "2026-07-18 23:37"
   },
   "content": {
     "blogArticles": 9,
-    "researchPapers": 40,
+    "researchPapers": 37,
     "wikiPages": 30
   },
   "quality": {
     "result": "10/10 passed",
     "passing": true,
-    "lastValidation": "2026-07-18 18:58"
+    "lastValidation": "2026-07-18 23:37"
   },
   "services": {
     "blog": {

@@ -1,656 +1,900 @@
 {
-  "fetched": "2026-07-11T23:08:00.100973+08:00",
-  "total": 40,
+  "fetched": "2026-07-18T23:37:03.480440+08:00",
+  "total": 37,
   "papers": [
     {
-      "id": "2607.08768v1",
-      "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
+      "id": "2607.14512v1",
+      "title": "RetroAgent: Harnessing LLMs to Search Over Structured Memory for Agentic Retrosynthesis Planning",
       "authors": [
-        "Zhekai Chen",
-        "Chengqi Duan",
-        "Kaiyue Sun",
-        "Bohao Li",
-        "Yuqing Wang",
-        "Manyuan Zhang",
-        "Xihui Liu"
+        "Yanqiao Zhu",
+        "Jingru Gan",
+        "Xiaoqi Sun",
+        "Fang Sun",
+        "Yidan Shi",
+        "Md Mofijul Islam",
+        "Chao Shang",
+        "Wenhao Gao",
+        "Connor W. Coley",
+        "Yizhou Sun",
+        "Wei Wang"
       ],
-      "published": "2026-07-09",
-      "summary": "The rapid development of large language models and multimodal large language models has accelerated the emergence of proactive agents capable of operating everyday tools and assisting users in real-world environments. However, existing benchmarks struggle to evaluate such agents effectively, as they often rely on sandboxed environments and single-turn evaluation paradigms. Moreover, their scenario-based task taxonomies mix multiple model capabilities within the same task category, making it diff",
-      "url": "https://arxiv.org/abs/2607.08768v1",
-      "source": "arXiv"
+      "published": "2026-07-16",
+      "summary": "Multi-step retrosynthesis planning seeks to decompose a target molecule into commercially available building blocks through a sequence of feasible reactions. The vast combinatorial search space makes this task challenging even for expert chemists. Traditional methods combine tree search with offline-trained value networks that score candidates in isolation, without reasoning about complete multi-step routes. Recent work leverages Large Language Models (LLMs) for this task, but relies on simple i",
+      "url": "https://arxiv.org/abs/2607.14512v1",
+      "source": "arXiv",
+      "topic": "llm-agent",
+      "score": 9,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "large language model",
+        "RAG",
+        "reasoning",
+        "agentic"
+      ]
     },
     {
-      "id": "2607.08766v1",
-      "title": "OPSD-V: On-Policy Self-Distillation for Post-Training Few-Step Autoregressive Video Generators",
+      "id": "2502.01714v1",
+      "title": "Position: Towards a Responsible LLM-empowered Multi-Agent Systems",
       "authors": [
-        "Hongyu Liu",
-        "Chun Wang",
-        "Feng Gao",
-        "Xuanhua He",
-        "Yue Ma",
-        "Ziyu Wan",
-        "Yong Zhang",
-        "Xiaoming Wei",
-        "Qifeng Chen"
+        "Jinwei Hu",
+        "Yi Dong",
+        "Shuang Ao",
+        "Zhuoyun Li",
+        "Boxuan Wang",
+        "Lokesh Singh",
+        "Guangliang Cheng",
+        "Sarvapali D. Ramchurn",
+        "Xiaowei Huang"
       ],
-      "published": "2026-07-09",
-      "summary": "We propose OPSD-V, an on-policy self-distillation paradigm for post-training few-step autoregressive (AR) video diffusion models. Existing few-step AR video generators can produce long videos with low latency, but still suffer from error accumulation and weakened motion dynamics during long autoregressive rollout. OPSD-V reduces long-horizon degradation while preserving the original few-step inference path. The key idea is to introduce real long-video data as temporal context during training and",
-      "url": "https://arxiv.org/abs/2607.08766v1",
-      "source": "arXiv"
+      "published": "2025-02-03",
+      "summary": "The rise of Agent AI and Large Language Model-powered Multi-Agent Systems (LLM-MAS) has underscored the need for responsible and dependable system operation. Tools like LangChain and Retrieval-Augmented Generation have expanded LLM capabilities, enabling deeper integration into MAS through enhanced knowledge retrieval and reasoning. However, these advancements introduce critical challenges: LLM agents exhibit inherent unpredictability, and uncertainties in their outputs can compound across inter",
+      "url": "https://arxiv.org/abs/2502.01714v1",
+      "source": "arXiv",
+      "topic": "multi-agent",
+      "score": 9,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "large language model",
+        "retrieval-augmented",
+        "multi-agent",
+        "reasoning"
+      ]
     },
     {
-      "id": "2607.08759v1",
-      "title": "Measuring Consumption with Credit Card Data: Benchmarking and Beyond",
+      "id": "2607.14277v1",
+      "title": "Multi-Head Latent Control: A Unified Interface for LLM Agent Decision Making",
       "authors": [
-        "Aditya Aladangady",
-        "Ricardo Duque Gabriel",
-        "Carlo Wix"
+        "Amirhosein Ghasemabadi",
+        "Ruichen Chen",
+        "Bahador Rashidi",
+        "Di Niu"
       ],
-      "published": "2026-07-09",
-      "summary": "We introduce a novel monthly county-level consumption dataset constructed from spending data on over 350 million credit cards in the Federal Reserve's Y-14M reports, covering over 3,000 U.S. counties since 2014. We first show that the data closely approximate traditional consumption measures, explaining 92 percent of the variation in monthly adjusted personal consumption expenditures (PCE) growth at the national level and capturing meaningful cross-sectional variation in annual adjusted PCE grow",
-      "url": "https://arxiv.org/abs/2607.08759v1",
-      "source": "arXiv"
+      "published": "2026-07-15",
+      "summary": "Large language models are increasingly deployed as agents, but reliable agentic behavior requires more than next-token prediction. At inference time, it is preferred that an agent can decide whether to proceed with its current reasoning, defer to a stronger model, request additional information, invoke external tools, or abstain under the given setup. Existing approaches address these decisions through prompt-level routing, external orchestration, or task-specific fine-tuning, which primarily re",
+      "url": "https://arxiv.org/abs/2607.14277v1",
+      "source": "arXiv",
+      "topic": "llm-agent",
+      "score": 8,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "large language model",
+        "prompt",
+        "reasoning",
+        "agentic"
+      ]
     },
     {
-      "id": "2607.08758v1",
-      "title": "Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation",
+      "id": "2607.14165v1",
+      "title": "Towards Reliable AI-Assisted Analog Design: Template-Constrained LLM Agents for SAR ADC Generation",
       "authors": [
-        "Yifan Zhou",
-        "Qihao Yang",
-        "Yan Li",
-        "Donggang Li",
-        "Xiru Hu",
-        "Hokin Deng",
-        "Ziyang Gong",
-        "Xuanyi Zhou",
-        "Huacan Wang",
-        "Xiangchao Yan",
-        "Wanghan Xu",
-        "Wenlong Zhang",
-        "Shaofeng Zhang",
-        "Yue Zhou",
-        "Yifan Yang",
-        "Zhihang Zhong",
-        "Xue Yang"
+        "Dimple Vijay Kochar",
+        "Hae-Seung Lee",
+        "Anantha P. Chandrakasan"
       ],
-      "published": "2026-07-09",
-      "summary": "Scientific ideas rarely start from a blank page. They inherit mechanisms, repair known limitations, and recombine pieces of earlier work, much like biological genomes. Current benchmarks still say little about whether AI systems can follow this inheritance structure. We present IdeaGene-Bench (IG-Bench), a benchmark for scientific lineage reasoning and lineage-grounded idea generation. IG-Bench is organized around the IdeaGene framework: each paper or proposal is represented as a set of minimal,",
-      "url": "https://arxiv.org/abs/2607.08758v1",
-      "source": "arXiv"
+      "published": "2026-07-15",
+      "summary": "While Large Language Models (LLMs) have demonstrated significant capability in software code generation, their application to analog Electronic Design Automation (EDA) is bottlenecked. Owing to limited circuit topology understanding and data, directly prompting LLMs and multimodal models leads to hallucinations and failure to produce schematics capable of passing rigorous SPICE simulations, as we show in our work. Instead, we propose an end-to-end, multi-step LLM agentic framework ATLAS, capable",
+      "url": "https://arxiv.org/abs/2607.14165v1",
+      "source": "arXiv",
+      "topic": "llm-agent",
+      "score": 8,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "large language model",
+        "code generation",
+        "prompt",
+        "agentic"
+      ]
     },
     {
-      "id": "2607.08755v1",
-      "title": "DegenDetector: Symbolic Recovery of Parameter Degeneracies in Bayesian Posteriors",
+      "id": "2607.10463v1",
+      "title": "GRASP: GRanularity-Aware Search Policy for Agentic RAG",
       "authors": [
-        "Chaipat Tirapongprasert",
-        "Matthew Ho"
+        "Varun Gandhi",
+        "Jaewook Lee",
+        "Shantanu Todmal",
+        "Franck Dernoncourt",
+        "Ryan Rossi",
+        "Zichao Wang",
+        "Andrew Lan"
       ],
-      "published": "2026-07-09",
-      "summary": "We introduce DegenDetector, a framework for identifying and characterizing parameter degeneracies in posterior distributions as closed-form symbolic equations. By combining mutual information screening with alternating symbolic regression, we facilitate automated and interpretable identification of degenerate relationships without domain-specific input. While standard tools such as corner plots can indicate that correlations exist, they do not reveal the underlying functional form. DegenDetector",
-      "url": "https://arxiv.org/abs/2607.08755v1",
-      "source": "arXiv"
+      "published": "2026-07-11",
+      "summary": "Agentic retrieval-augmented generation (RAG) extends static RAG by allowing language models to iteratively reason, generate search queries, retrieve evidence, and predict answers. However, it remains challenging for models to decide when to retrieve, whether to use lexical matching or semantic similarity, and how to control context granularity to prevent irrelevant tokens from interfering with agent reasoning. In this paper, we introduce GRASP, a reinforcement learning (RL) framework for trainin",
+      "url": "https://arxiv.org/abs/2607.10463v1",
+      "source": "arXiv",
+      "topic": "rag",
+      "score": 8,
+      "matched_terms": [
+        "agent",
+        "RAG",
+        "retrieval-augmented",
+        "reasoning",
+        "agentic"
+      ]
     },
     {
-      "id": "2607.08748v1",
-      "title": "Using AI-based Learning Assistants in Higher Education: A Large-Scale Descriptive Analysis",
+      "id": "2601.11658v1",
+      "title": "Towards AGI A Pragmatic Approach Towards Self Evolving Agent",
       "authors": [
-        "Kristina Schaaff",
-        "Quintus Stierstorfer",
-        "Valerie Heckel"
+        "Indrajit Kar",
+        "Sammy Zonunpuia",
+        "Zonunfeli Ralte"
       ],
-      "published": "2026-07-09",
-      "summary": "In this study, we present a large-scale descriptive analysis of the use of an AI-based learning assistant (Syntea) in higher education. Based on objective log data from 77,543 students enrolled in distance studies, we examine usage patterns across gender, age group, study cluster, degree, and study mode. To date, existing research on educational chatbots has largely relied on comparatively small samples and self-reported survey data, while large-scale evidence on actual usage behavior remains li",
-      "url": "https://arxiv.org/abs/2607.08748v1",
-      "source": "arXiv"
+      "published": "2026-01-15",
+      "summary": "Large Language Model (LLM) based agents are powerful yet fundamentally static after deployment, lacking the ability to autonomously expand capabilities, generate new tools, or evolve their reasoning. This work introduces a hierarchical self-evolving multi-agent framework that integrates a Base LLM, an operational SLM agent, a Code-Generation LLM, and a Teacher-LLM to enable continuous adaptation. The workflow begins with the agent attempting a task using reasoning and existing tools; if unsucces",
+      "url": "https://arxiv.org/abs/2601.11658v1",
+      "source": "arXiv",
+      "topic": "se-ai",
+      "score": 8,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "large language model",
+        "RAG",
+        "multi-agent",
+        "reasoning"
+      ]
     },
     {
-      "id": "2607.08716v1",
-      "title": "Remember When It Matters: Proactive Memory Agent for Long-Horizon Agents",
+      "id": "2510.04311v1",
+      "title": "On the Importance of Task Complexity in Evaluating LLM-Based Multi-Agent Systems",
       "authors": [
-        "Yifan Wu",
-        "Lizhu Zhang",
-        "Yuhang Zhou",
-        "Mingyi Wang",
-        "Bo Peng",
-        "Serena Li",
-        "Xiangjun Fan",
-        "Zhuokai Zhao"
+        "Bohan Tang",
+        "Huidong Liang",
+        "Keyue Jiang",
+        "Xiaowen Dong"
       ],
-      "published": "2026-07-09",
-      "summary": "In long-horizon tasks, decision-relevant state is often scattered across an expanding trajectory, while the action agent must surface it and act. As trajectories grow, task requirements, environment facts, prior attempts, diagnoses, and open subgoals can be buried in the context window or pushed beyond it, failing to influence decisions when needed. We call this failure mode \"behavioral state decay\". We study memory as an active intervention mechanism rather than passive retrieval. A separate me",
-      "url": "https://arxiv.org/abs/2607.08716v1",
-      "source": "arXiv"
+      "published": "2025-10-05",
+      "summary": "Large language model multi-agent systems (LLM-MAS) offer a promising paradigm for harnessing collective intelligence to achieve more advanced forms of AI behaviour. While recent studies suggest that LLM-MAS can outperform LLM single-agent systems (LLM-SAS) on certain tasks, the lack of systematic experimental designs limits the strength and generality of these conclusions. We argue that a principled understanding of task complexity, such as the degree of sequential reasoning required and the bre",
+      "url": "https://arxiv.org/abs/2510.04311v1",
+      "source": "arXiv",
+      "topic": "multi-agent",
+      "score": 8,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "large language model",
+        "multi-agent",
+        "reasoning"
+      ]
     },
     {
-      "id": "2607.08706v1",
-      "title": "Directional AI Advice: Experimental Evidence from Healthcare",
+      "id": "2607.15095v1",
+      "title": "Digital Pantheon: Simulating and Auditing Coalition Formation with LLM Agents",
       "authors": [
-        "Yuyu Chen",
-        "Hongbin Li",
-        "Lingsheng Meng",
-        "Xinyao Qiu",
-        "Qingxu Yang"
+        "Dylan Van Mulders",
+        "Matthias Bogaert",
+        "Dirk Van den Poel"
       ],
-      "published": "2026-07-09",
-      "summary": "Generative AI is fast becoming the first place people turn for expert advice. The advice it provides can be directional rather than neutral, shaped in part by the choices of its designers and regulators. When clients consult AI before meeting an expert, they carry this directional advice into a relationship that once rested on the expert's judgment alone. We study its consequences in healthcare through a large-scale preregistered field experiment at a Chinese hospital, where we randomize patient",
-      "url": "https://arxiv.org/abs/2607.08706v1",
-      "source": "arXiv"
+      "published": "2026-07-16",
+      "summary": "The formation of political coalitions is a complex negotiation driven by both concrete policy objectives and deep-seated ideological convictions. While Large Language Models (LLMs) open new avenues for computational political science, the neutrality and helpfulness biases instilled by Reinforcement Learning from Human Feedback (RLHF) prevent them from sustaining steadfast partisan behaviour. We present a multi-agent framework that reconciles factual grounding with ideological alignment by combin",
+      "url": "https://arxiv.org/abs/2607.15095v1",
+      "source": "arXiv",
+      "topic": "llm-agent",
+      "score": 7,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "large language model",
+        "multi-agent",
+        "RLHF"
+      ]
     },
     {
-      "id": "2607.08705v1",
-      "title": "HumanForge: A Human-Centric Deepfake Video Benchmark with Multi-Agent Forgery Rationales",
+      "id": "2607.11159v1",
+      "title": "NGM-RAG: Neural Graph Matching based Retrieval-Augmented Generation",
       "authors": [
-        "Wenbo Xu",
-        "Zhimin Chen",
-        "Xiaojie Liang",
-        "Hengrui Liu",
-        "Wei Lu"
+        "Guo Chen",
+        "Ziwen Li",
+        "Maolin Zheng",
+        "Hao Gao",
+        "Junjie Huang",
+        "Tao Jia"
       ],
-      "published": "2026-07-09",
-      "summary": "Rapid advancements in video diffusion models and temporal editing tools have enabled the generation of highly realistic human-centric videos, posing unprecedented challenges to digital content forensics. Existing benchmarks primarily focus on either face-swapping or global text-to-video synthesis, overlooking the crucial dimensions of human-object or human-human interactions and multi-modal alignment. To address these limitations, we introduce HumanForge, a unified, large-scale, and multi-paradi",
-      "url": "https://arxiv.org/abs/2607.08705v1",
-      "source": "arXiv"
+      "published": "2026-07-13",
+      "summary": "Retrieval-Augmented Generation (RAG) significantly enhances the ability of Large Language Models (LLMs) to provide accurate and contextually relevant answers by dynamically integrating external databases. However, traditional RAG methods are primarily constrained by their reliance on text-based retrieval strategies, which often struggle with complex questions requiring multi-hop reasoning. To address this limitation, we introduce Neural Graph Matching based Retrieval-Augmented Generation (NGM-RA",
+      "url": "https://arxiv.org/abs/2607.11159v1",
+      "source": "arXiv",
+      "topic": "rag",
+      "score": 7,
+      "matched_terms": [
+        "LLM",
+        "large language model",
+        "RAG",
+        "retrieval-augmented",
+        "reasoning"
+      ]
     },
     {
-      "id": "2607.08703v1",
-      "title": "MPFlow: Learning Budgeted Max-Flow Optimization on the Lightning Network with Deep Graph Reinforcement Learning",
+      "id": "2607.07380v1",
+      "title": "Interpretable Uncertainty for Adaptive Retrieval and Reasoning in Question Answering",
       "authors": [
-        "Harrison Rush",
-        "Vincent Davis",
-        "Simone Antonelli",
-        "Vikash Singh",
-        "Jesse Shrader",
-        "Emanuele Rossi"
+        "Ritajit Dey",
+        "Iadh Ounis",
+        "Graham McDonald"
       ],
-      "published": "2026-07-09",
-      "summary": "We address liquidity placement in the Bitcoin Lightning Network (LN): given a fixed budget, which channels should a node open to maximize its routing capacity? We cast this as a budget-constrained combinatorial optimization problem on graphs, selecting $k$ edge additions that maximize $s$--$t$ max-flow, a theory-grounded measure of routing capacity, and solve it with graph reinforcement learning. Our lightweight agent combines a message-passing policy network with proximal policy optimization (P",
-      "url": "https://arxiv.org/abs/2607.08703v1",
-      "source": "arXiv"
+      "published": "2026-07-08",
+      "summary": "Large language models (LLMs) achieve a strong performance in question answering (QA), but remain prone to hallucinations and suffer from limited transparency. Retrieval-augmented generation (RAG) can improve factuality, yet decisions about when and how to retrieve from external resources are typically based on opaque policies or computationally inefficient multi-step prompting procedures. We propose an uncertainty-aware framework for adaptive QA based on explicit signals derived from LLM interna",
+      "url": "https://arxiv.org/abs/2607.07380v1",
+      "source": "arXiv",
+      "topic": "rag",
+      "score": 7,
+      "matched_terms": [
+        "LLM",
+        "large language model",
+        "RAG",
+        "retrieval-augmented",
+        "prompt",
+        "reasoning"
+      ]
     },
     {
-      "id": "2607.08754v1",
-      "title": "SLORR: Simple and Efficient In-Training Low-Rank Regularization",
+      "id": "2607.05456v1",
+      "title": "Prompt-to-Paper: Agentic AI System for Bioinformatics",
       "authors": [
-        "David González-Martínez",
-        "Shiwei Liu"
+        "Ramsha Kamran",
+        "Maheera Amjad",
+        "Zartasha Mustansar",
+        "Arsalan Shaukat",
+        "Salma Sherbaz",
+        "Muhammad U. S. Khan"
       ],
-      "published": "2026-07-09",
-      "summary": "Low-rank factorization is widely used to compress neural networks, but modern models are often not naturally amenable to aggressive factorization without significant accuracy loss. Existing training-time low-rank regularizers can improve compressibility, but they often require SVDs of large weight matrices, modify the model architecture (introducing additional trainable parameters), or rely on stateful cached quantities. To address these limitations, we introduce SLORR, a simple, stateless, and ",
-      "url": "https://arxiv.org/abs/2607.08754v1",
-      "source": "arXiv"
+      "published": "2026-07-05",
+      "summary": "While recent advances in large language models have enabled end-to-end automated manuscript generation, existing systems suffer from three critical deficiencies: (i) generated claims are not deterministically grounded in verifiable literature, (ii) experimental results are frequently fabricated rather than executed, and (iii) there exists no standardized, multi-dimensional framework to assess whether AI-generated manuscripts meet the quality and rigor required for real-world publication. We pres",
+      "url": "https://arxiv.org/abs/2607.05456v1",
+      "source": "arXiv",
+      "topic": "rag",
+      "score": 7,
+      "matched_terms": [
+        "agent",
+        "large language model",
+        "prompt",
+        "agentic"
+      ]
     },
     {
-      "id": "2607.08740v1",
-      "title": "Workflow as Knowledge: Semantic Persistence for LLM-Mediated Workflows",
+      "id": "2606.08596v1",
+      "title": "Distilling LLM Reasoning into an Interpretable Policy Tree for Human-AI Collaboration",
       "authors": [
-        "Emanuele Quinto",
-        "Carlo Andrea Rozzi",
-        "Francesco Zanitti"
+        "Beiwen Zhang",
+        "Yongheng Liang",
+        "Guowei Zou",
+        "Haitao Wang",
+        "Hejun Wu"
       ],
-      "published": "2026-07-09",
-      "summary": "Large language model (LLM) applications increasingly use explicit workflows for tool use, retrieval, branching, checkpointing, and human approval. Existing workflow systems already address many execution concerns. This paper proposes a Lisp-inspired but language-independent conceptual model: symbolic forms, object identity, and live-image thinking are used as explanatory lenses, not implementation commitments. In this model, workflow definitions, workflow instances, inference records, context sn",
-      "url": "https://arxiv.org/abs/2607.08740v1",
-      "source": "arXiv"
+      "published": "2026-06-07",
+      "summary": "Constructing efficient and reliable policies to assist humans is indispensable for human-AI collaboration. Existing methods mainly follow two lines of work. Most prior work relies on multi-agent reinforcement learning (MARL) to learn black-box policies, which limits interpretability and raises safety concerns. Recent methods query large language models (LLMs) at each decision step, causing slow responses and high inference costs. We propose Collaboration Policy Tree (Co-pi-tree), a closed-loop m",
+      "url": "https://arxiv.org/abs/2606.08596v1",
+      "source": "arXiv",
+      "topic": "human-ai",
+      "score": 7,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "large language model",
+        "multi-agent",
+        "reasoning"
+      ]
     },
     {
-      "id": "2607.08734v1",
-      "title": "The Illusion of Equivalency: Statistical Characterization of Quantization Effects in LLMs",
+      "id": "2606.02282v1",
+      "title": "POIROT: Interrogating Agents for Failure Detection in Multi-Agent Systems",
       "authors": [
-        "Baha Rababah",
-        "Cuneyt Gurcan Akcora",
-        "Carson K. Leung"
+        "Iñaki Dellibarda Varela",
+        "R. Sendra-Arranz",
+        "Pablo Romero-Sorozabal",
+        "J. M. Valverde-García",
+        "Annemarie F. Laudanski",
+        "Álvaro Gutiérrez",
+        "Eduardo Rocon",
+        "Manuel Cebrian"
       ],
-      "published": "2026-07-09",
-      "summary": "Post-training quantization is widely used to deploy large language models in resource-constrained settings, yet its evaluation relies almost exclusively on accuracy and perplexity. We show that these metrics fail to capture behavioral changes induced by quantization. We introduce correctness agreement, a decision-level metric that measures overlap in correct predictions between a base model and its quantized variants, independent of absolute accuracy. Across multiple models and quantization sche",
-      "url": "https://arxiv.org/abs/2607.08734v1",
-      "source": "arXiv"
+      "published": "2026-06-01",
+      "summary": "Orchestrating Large Language Models into Multi-Agent Systems (LLM-MAS) has unlocked remarkable reasoning capabilities, yet emergent failures and hallucinations that resist characterisation block their deployment in safety-critical domains -- a gap made legally untenable by emerging AI regulation. Existing evaluation paradigms share a common flaw: centralised judgment creates single points of failure and demands domain-specific expertise. Here we present POIROT, a protocol that repurposes a syste",
+      "url": "https://arxiv.org/abs/2606.02282v1",
+      "source": "arXiv",
+      "topic": "multi-agent",
+      "score": 7,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "large language model",
+        "multi-agent",
+        "reasoning"
+      ]
     },
     {
-      "id": "2607.08733v1",
-      "title": "Super Weights in LLMs and the Failure of Selective Training",
+      "id": "2605.09076v2",
+      "title": "Robust Multi-Agent LLMs under Byzantine Faults",
       "authors": [
-        "Shreyas Subramanian",
-        "Adewale Akinfaderin",
-        "Akarsha Sehwag"
+        "Haejoon Lee",
+        "Vincent-Daniel Yun",
+        "Dimitra Panagou",
+        "Sai Praneeth Karimireddy"
       ],
-      "published": "2026-07-09",
-      "summary": "Recent work identified Super Weights, individual parameters whose removal degrades model performance by orders of magnitude. We show that this degradation due to pruning Super Weights does not universally apply to all LLMs. Furthermore, if these parameters are so important, Super Weight-aware training should be effective. We show the opposite. Training Super Weights in isolation (100 to 8,192 parameters) drops accuracy to random-guessing levels on both OLMo-1B and OLMo-7B, and expanding to local",
-      "url": "https://arxiv.org/abs/2607.08733v1",
-      "source": "arXiv"
+      "published": "2026-05-09",
+      "summary": "Large language model (LLM) agents increasingly collaborate over peer-to-peer networks to improve their reliability. However, these same interactions can also become a source of vulnerability, as unreliable or Byzantine agents may sway neighboring agents toward incorrect conclusions and degrade overall system performance. Existing methods rely on leader-based coordination or self-reported confidence, both of which are susceptible to adversarial manipulation. We study decentralized LLM multi-agent",
+      "url": "https://arxiv.org/abs/2605.09076v2",
+      "source": "arXiv",
+      "topic": "multi-agent",
+      "score": 7,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "large language model",
+        "multi-agent"
+      ]
     },
     {
-      "id": "2607.08731v1",
-      "title": "Validity of LLMs as data annotators: AMALIA on authority",
+      "id": "2605.05703v2",
+      "title": "Active Learning for Communication Structure Optimization in LLM-Based Multi-Agent Systems",
       "authors": [
-        "Manuel Pita"
+        "Huchen Yang",
+        "Xinghao Dong",
+        "Dan Negrut",
+        "Jin-Long Wu"
       ],
-      "published": "2026-07-09",
-      "summary": "A national language model offers a linguistic community its own instrument for measuring what its citizens say and value. Portugal's AMALIA, a publicly funded 9B-parameter model for European Portuguese, appears competitive on agreement alone: asked to code the moral foundation of authority, it agrees with trained human coders to within six F1 points of open models eight to thirteen times its size. Yet agreement is reliability, not validity. For theoretical constructs that must be inferred rather",
-      "url": "https://arxiv.org/abs/2607.08731v1",
-      "source": "arXiv"
+      "published": "2026-05-07",
+      "summary": "Optimizing the communication structure of large language model based multi-agent systems (LLM-MAS) has been shown to improve downstream performance and reduce token usage. Existing methods typically rely on randomly sampled training tasks. However, tasks may differ substantially in difficulty and domain, and thus they are not equally informative for updating communication structure, making optimization under limited training budgets often unstable and highly sensitive to the particular training ",
+      "url": "https://arxiv.org/abs/2605.05703v2",
+      "source": "arXiv",
+      "topic": "multi-agent",
+      "score": 7,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "large language model",
+        "multi-agent"
+      ]
     },
     {
-      "id": "2607.08767v1",
-      "title": "Plaquette: A hardware-aware design platform for fault-tolerant quantum computers",
+      "id": "2603.04474v2",
+      "title": "From Spark to Fire: Modeling and Mitigating Error Cascades in LLM-Based Multi-Agent Collaboration",
       "authors": [
-        "Raul Conchello Vendrell",
-        "Carlos Díaz López",
-        "Ish Dhand",
-        "Kshitij Kapoor",
-        "Davide Laureti",
-        "Marcello Massaro",
-        "Pranjal Nayak",
-        "Ivan Ogloblin",
-        "Martin B. Plenio",
-        "Shreya Prasanna Kumar",
-        "Matteo Santandrea",
-        "Varun Seshadri",
-        "Antal Száva",
-        "Trevor Vincent",
-        "Raphael Weber"
+        "Yizhe Xie",
+        "Congcong Zhu",
+        "Xinyue Zhang",
+        "Tianqing Zhu",
+        "Dayong Ye",
+        "Minfeng Qi",
+        "Huajie Chen",
+        "Wanlei Zhou"
       ],
-      "published": "2026-07-09",
-      "summary": "Hardware teams building fault-tolerant quantum computers (FTQCs) must decide which imperfections to suppress, and that decision requires the logical performance of the architecture under the device's actual noise. Hardware noise often departs from the stochastic Pauli models used by scalable stabilizer simulators: superconducting transmons leak out of the computational subspace, neutral atoms scatter through intermediate states, trapped ions heat as their motional modes absorb phonons, and misca",
-      "url": "https://arxiv.org/abs/2607.08767v1",
-      "source": "arXiv"
+      "published": "2026-03-04",
+      "summary": "Large Language Model-based Multi-Agent Systems (LLM-MAS) are increasingly applied to complex collaborative scenarios. However, their collaborative mechanisms may cause minor inaccuracies to gradually solidify into system-level false consensus through iteration. Such risks are difficult to trace since errors can propagate and amplify through message dependencies. Existing protections often rely on single-agent validation or require modifications to the collaboration architecture, which can weaken",
+      "url": "https://arxiv.org/abs/2603.04474v2",
+      "source": "arXiv",
+      "topic": "multi-agent",
+      "score": 7,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "large language model",
+        "multi-agent"
+      ]
     },
     {
-      "id": "2607.08736v1",
-      "title": "Sculptable Mesh Structures for Room-Scale Form-Finding",
+      "id": "2601.04694v1",
+      "title": "ResMAS: Resilience Optimization in LLM-based Multi-agent Systems",
       "authors": [
-        "Jesse T. Gonzalez",
-        "Yanzhen Zhang",
-        "Dian Zhu",
-        "Alice Yu",
-        "Sapna Tayal",
-        "Nazm Furniturewala",
-        "Ziying Qi",
-        "Somin Ella Moon",
-        "Leyi Han",
-        "Alexandra Ion",
-        "Scott E. Hudson"
+        "Zhilun Zhou",
+        "Zihan Liu",
+        "Jiahe Liu",
+        "Qingyu Shao",
+        "Yihan Wang",
+        "Kun Shao",
+        "Depeng Jin",
+        "Fengli Xu"
       ],
-      "published": "2026-07-09",
-      "summary": "It can be hard to design a physical structure entirely within the confines of a computer monitor. To better capture the interplay between real-world objects and a designer's work-in-progress, practitioners will often go through a sequence of low-fidelity prototypes (paper, clay, foam) before arriving at a form that satisfies both functional and aesthetic concerns. While necessary, this model-making process can be quite time-consuming, particularly at larger scales, and the resulting geometry can",
-      "url": "https://arxiv.org/abs/2607.08736v1",
-      "source": "arXiv"
+      "published": "2026-01-08",
+      "summary": "Large Language Model-based Multi-Agent Systems (LLM-based MAS), where multiple LLM agents collaborate to solve complex tasks, have shown impressive performance in many areas. However, MAS are typically distributed across different devices or environments, making them vulnerable to perturbations such as agent failures. While existing works have studied the adversarial attacks and corresponding defense strategies, they mainly focus on reactively detecting and mitigating attacks after they occur ra",
+      "url": "https://arxiv.org/abs/2601.04694v1",
+      "source": "arXiv",
+      "topic": "multi-agent",
+      "score": 7,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "large language model",
+        "multi-agent"
+      ]
     },
     {
-      "id": "2607.08717v1",
-      "title": "Deep Learning for Joint Narrowband Interference Cancellation and Soft Demodulation in OFDM Systems",
+      "id": "2511.13233v1",
+      "title": "LLM-based Multi-Agent System for Simulating Strategic and Goal-Oriented Data Marketplaces",
       "authors": [
-        "Emmanouil Kavvousanos",
-        "Francky Catthoor",
-        "Vassilis Paliouras"
+        "Jun Sashihara",
+        "Yukihisa Fujita",
+        "Kota Nakamura",
+        "Masahiro Kuwahara",
+        "Teruaki Hayashi"
       ],
-      "published": "2026-07-09",
-      "summary": "Narrowband interference (NBI) severely degrades orthogonal frequency-division multiplexing (OFDM) systems by corrupting subcarriers and rendering classical soft demodulation ineffective. Conventional compressed-sensing (CS) mitigation exhibits high sequential latency and leaves structured, non-Gaussian residuals that cause log-likelihood ratio (LLR) unreliability, decoder saturation, and severe error floors when employing classical Gaussian demappers. We resolve this pipeline mismatch using a un",
-      "url": "https://arxiv.org/abs/2607.08717v1",
-      "source": "arXiv"
+      "published": "2025-11-17",
+      "summary": "Data marketplaces, which mediate the purchase and exchange of data from third parties, have attracted growing attention for reducing the cost and effort of data collection while enabling the trading of diverse datasets. However, a systematic understanding of the interactions between market participants, data, and regulations remains limited. To address this gap, we propose a Large Language Model-based Multi-Agent System (LLM-MAS) for data marketplaces. In our framework, buyer and seller agents p",
+      "url": "https://arxiv.org/abs/2511.13233v1",
+      "source": "arXiv",
+      "topic": "multi-agent",
+      "score": 7,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "large language model",
+        "multi-agent"
+      ]
     },
     {
-      "id": "2607.08714v1",
-      "title": "Multimodal Digital Biomarker for Asthma: Complementary Roles of Vocal, Clinical and Demographic Factors",
+      "id": "2410.02958v2",
+      "title": "AutoML-Agent: A Multi-Agent LLM Framework for Full-Pipeline AutoML",
       "authors": [
-        "Vladimir Despotovic",
-        "Milena Despotovic",
-        "Abir Elbeji",
-        "Petr V. Nazarov",
-        "Guy Fagherazzi"
+        "Patara Trirat",
+        "Wonyong Jeong",
+        "Sung Ju Hwang"
       ],
-      "published": "2026-07-09",
-      "summary": "Asthma affects over 260 million people worldwide, yet diagnosis remains dependent on spirometry and specialist assessment, limiting accessibility in primary care and low-resource settings. Vocal biomarkers offer a promising non-invasive alternative, but prior studies have largely focused on acoustic features without integrating clinical context. We present a multimodal Mixture-of-Experts framework for asthma detection that adaptively combines acoustic embeddings from sustained vowel phonation an",
-      "url": "https://arxiv.org/abs/2607.08714v1",
-      "source": "arXiv"
+      "published": "2024-10-03",
+      "summary": "Automated machine learning (AutoML) accelerates AI development by automating tasks in the development pipeline, such as optimal model search and hyperparameter tuning. Existing AutoML systems often require technical expertise to set up complex tools, which is in general time-consuming and requires a large amount of human effort. Therefore, recent works have started exploiting large language models (LLM) to lessen such burden and increase the usability of AutoML frameworks via a natural language ",
+      "url": "https://arxiv.org/abs/2410.02958v2",
+      "source": "arXiv",
+      "topic": "se-ai",
+      "score": 7,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "large language model",
+        "multi-agent"
+      ]
     },
     {
-      "id": "2607.08713v1",
-      "title": "Approaching Carnot Efficiency at Finite Power in an Experimentally Feasible Quantum Heat Engine",
+      "id": "2607.14171v1",
+      "title": "Branching Policy Optimization: Sandbox-Native Language Agent Reinforcement Learning",
       "authors": [
-        "Shogo Toma",
-        "Atsushi Noguchi",
-        "Ken Funo",
-        "Hiroyasu Tajima"
+        "Bowei He",
+        "Yankai Chen",
+        "Xiaokun Zhang",
+        "Xue Liu"
       ],
-      "published": "2026-07-09",
-      "summary": "Whether a heat engine can approach Carnot efficiency while maintaining finite power is a fundamental question in finite-time thermodynamics. For classical Markovian heat engines with local interactions, the power-efficiency trade-off forbids an asymptotic approach to Carnot efficiency at finite power. In quantum systems, by contrast, degeneracy, symmetry, and collective jumps have been theoretically predicted to enable such an asymptotic attainment by enhancing activity. It has remained open, ho",
-      "url": "https://arxiv.org/abs/2607.08713v1",
-      "source": "arXiv"
+      "published": "2026-07-15",
+      "summary": "Reinforcement learning has emerged as the dominant paradigm for training large language model (LLM) agents that interact with executable sandboxes. State-of-the-art algorithms such as PPO, RLOO, and GRPO inherit their rollout topology from RLHF: for each prompt, N independent trajectories are sampled from the initial state, and an advantage is computed by subtracting a group baseline. This design ignores a defining property of agent sandboxes. They are deterministic, snapshottable, and resumable",
+      "url": "https://arxiv.org/abs/2607.14171v1",
+      "source": "arXiv",
+      "topic": "llm-agent",
+      "score": 6,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "large language model",
+        "prompt",
+        "RLHF"
+      ]
     },
     {
-      "id": "2607.08691v1",
-      "title": "ProjAgent: Procedural Similarity Retrieval for Repository-Level Code Generation",
+      "id": "2607.13591v1",
+      "title": "Memory as a Controlled Process: Learned Adaptive Memory Management for LLM Agents",
       "authors": [
-        "QiHong Chen",
-        "Aaron Imani",
-        "Iftekhar Ahmed"
+        "Eric Hanchen Jiang",
+        "Zhi Zhang",
+        "Yuchen Wu",
+        "Levina Li",
+        "Dong Liu",
+        "Xiao Liang",
+        "Rui Sun",
+        "Yubei Li",
+        "Edward Sun",
+        "Haozheng Luo",
+        "Zhaolu Kang",
+        "Aylin Caliskan",
+        "Kai-Wei Chang",
+        "Ying Nian Wu"
       ],
-      "published": "2026-07-09",
-      "summary": "Repository-level code generation requires implementing target functions while accounting for complex cross-file dependencies and project-specific conventions. Existing retrieval methods predominantly rely on lexical, structural, or semantic similarity, often overlooking repository functions that implement similar procedural logic despite differing in identifiers or application domains. We propose ProjAgent, a repository-level code generation system that introduces procedural similarity as an exp",
-      "url": "https://arxiv.org/abs/2607.08691v1",
-      "source": "arXiv"
+      "published": "2026-07-15",
+      "summary": "Large Language Model (LLM) agents increasingly rely on external memory systems to accumulate experience across tasks. Yet nearly all existing approaches, from graph-structured memories to reflective insight stores, access memory through fixed, hand-designed heuristics. We argue that this static view of memory is a core bottleneck for agentic learning because optimal memory behavior is fundamentally context-dependent. The early stages of the tasks, benefit from minimal retrieval because memory is",
+      "url": "https://arxiv.org/abs/2607.13591v1",
+      "source": "arXiv",
+      "topic": "llm-agent",
+      "score": 6,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "large language model",
+        "agentic"
+      ]
     },
     {
-      "id": "2607.08666v1",
-      "title": "TRM-Raft: A Byzantine-Resistant Raft Consensus via Integrated Trust and Reputation Model",
+      "id": "2607.13034v1",
+      "title": "Do AI Agents Know When a Task Is Simple? Toward Complexity-Aware Reasoning and Execution",
       "authors": [
-        "Jie Zhang",
-        "Xubo Fan",
-        "Xiaohong Li",
-        "Zhiyong Feng"
+        "Junjie Yin",
+        "Xinyu Feng"
       ],
-      "published": "2026-07-09",
-      "summary": "Internetware envisions autonomous software entities collaborating over the open Internet. Raft consensus is widely adopted for its simplicity and performance in distributed coordination, e.g., service registries and blockchains. However, Raft assumes crash faults only, making it vulnerable to Byzantine behaviors like election forgery and log tampering. Existing BFT protocols incur high overhead, while ad-hoc hardening lacks unified defense. We propose \\textbf{TRM-Raft}, a Byzantine-resistant enh",
-      "url": "https://arxiv.org/abs/2607.08666v1",
-      "source": "arXiv"
+      "published": "2026-07-14",
+      "summary": "Large language model (LLM) agents increasingly automate multi-step engineering and informatics workflows, yet they rarely ask how much effort a task actually requires. They often follow a maximum-context-first strategy--re-reading files and dependencies they have already seen--turning a one-line edit into a small code-base audit. We argue the missing capability is task-aware execution-scope estimation: judging a task's difficulty, the information it truly needs, and the shortest reliable path be",
+      "url": "https://arxiv.org/abs/2607.13034v1",
+      "source": "arXiv",
+      "topic": "llm-agent",
+      "score": 6,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "large language model",
+        "reasoning"
+      ]
     },
     {
-      "id": "2607.08634v1",
-      "title": "Triangulene-based diradicals as a blueprint for molecular quantum platforms with optical addressability and long spin coherence times",
+      "id": "2607.12406v1",
+      "title": "Isolation as a First-Class Principle for LLM-Agent System Safety: Concepts, Taxonomy, Challenges and Future Directions",
       "authors": [
-        "Arup Sarkar",
-        "Cathal Hogan",
-        "Conor Ryan",
-        "Lorenzo A. Mariano",
-        "Alessandro Lunghi"
+        "Huihao Jing",
+        "Wenbin Hu",
+        "Shaojin Chen",
+        "Haochen Shi",
+        "Sirui Zhang",
+        "Hanyu Yang",
+        "Changxuan Fan",
+        "Zhongwei Xie",
+        "Hongyu Luo",
+        "Wun Yu Chan",
+        "Wei Fan",
+        "Haoran Li",
+        "Yangqiu Song"
       ],
-      "published": "2026-07-09",
-      "summary": "The identification of molecules that combine long spin coherence times and efficient spin-optical interfaces, ideally at room temperature, is pivotal towards the development of molecular quantum technology. By means of advanced first-principles methods, we here unravel the electronic structure for triangulene (1), its aza-cation derivative (2), and the crystal of 2,6,10-tri-tert-butyl-4,8,12-trimesityl-triangulene (3), and show that these organic diradicals possess a triplet ground state well se",
-      "url": "https://arxiv.org/abs/2607.08634v1",
-      "source": "arXiv"
+      "published": "2026-07-14",
+      "summary": "The capability of LLM agents to function as the ``brain'' of a system fundamentally expands the scope of analysis beyond a standalone model. Consequently, safety is no longer only about input--output content alignment. It also concerns system behavior and real-world execution outcomes. However, the current literature is fragmented across attack types, applications, and benchmarks. This makes it hard to explain why failures such as prompt injection, tool misuse, and memory poisoning often share t",
+      "url": "https://arxiv.org/abs/2607.12406v1",
+      "source": "arXiv",
+      "topic": "llm-agent",
+      "score": 6,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "RAG",
+        "prompt"
+      ]
     },
     {
-      "id": "2607.08624v1",
-      "title": "Parasitic MIMO Beamforming for Multi-Active Multi-Parasitic Antenna Arrays with Binary Control",
+      "id": "2607.11683v1",
+      "title": "RAGU: A Multi-Step GraphRAG Engine with a Compact Domain-Adapted LLM",
       "authors": [
-        "Taejun Lee",
-        "Byunghyun Lee",
-        "Thomas E. Roth",
-        "David J. Love"
+        "Mikhail Komarov",
+        "Ivan Bondarenko",
+        "Stanislav Shtuka",
+        "Oleg Sedukhin",
+        "Roman Shuvalov",
+        "Yana Dementyeva",
+        "Matvey Solovyov",
+        "Nikolay O. Nikitin"
       ],
-      "published": "2026-07-09",
-      "summary": "In 6G, MIMO dimensions continue to scale, yet the increased cost, power consumption, and hardware complexity associated with growing RF chains limit practical deployment. Parasitic antennas offer a promising alternative that can add spatial degrees of freedom and array gain without a proportional increase in RF chains. From a communication perspective, prior work on parasitic antennas has primarily focused on adjusting continuous reactance values using varactors, but such varactor-based tuning h",
-      "url": "https://arxiv.org/abs/2607.08624v1",
-      "source": "arXiv"
+      "published": "2026-07-13",
+      "summary": "Graph retrieval-augmented generation (GraphRAG) enhances large language models with structured knowledge, yet existing systems construct knowledge graphs in a single extraction pass, producing noisy entities and brittle retrieval. RAGU, an open-source modular GraphRAG engine, addresses this by separating extraction from consolidation: entities and relations pass through two-stage typed extraction, DBSCAN-backed deduplication, LLM summarization, and Leiden community detection. A key insight motiv",
+      "url": "https://arxiv.org/abs/2607.11683v1",
+      "source": "arXiv",
+      "topic": "rag",
+      "score": 6,
+      "matched_terms": [
+        "LLM",
+        "large language model",
+        "RAG",
+        "retrieval-augmented"
+      ]
     },
     {
-      "id": "2607.08721v1",
-      "title": "Thermal Sunyaev-Zel'dovich Measurements of Locally Bright Galaxies with ACT DR6: Radio Source Contamination and Excess Compton-y Signal",
+      "id": "2607.11464v1",
+      "title": "FAIR GraphRAG: A Retrieval-Augmented Generation Approach for Semantic Data Analysis",
       "authors": [
-        "Nicholas Battaglia",
-        "Jean-Baptiste Melin",
-        "J. Colin Hill",
-        "James Bartlett"
+        "Marlena Flüh",
+        "Soo-Yon Kim",
+        "Carolin Victoria Schneider",
+        "Sandra Geisler"
       ],
-      "published": "2026-07-09",
-      "summary": "The Planck collaboration found a remarkable power-law relation between stellar mass and the thermal Sunyaev-Zeldovich (tSZ) signal for the Locally Bright Galaxy (LBG) sample, spanning over a decade in stellar mass. We re-examine this measurement using the Atacama Cosmology Telescope (ACT) DR6 component-separated Compton-$y$ maps, which provide lower noise and higher angular resolution than Planck, on a footprint spanning one-third of the sky. We recover a consistent power-law scaling between the",
-      "url": "https://arxiv.org/abs/2607.08721v1",
-      "source": "arXiv"
+      "published": "2026-07-13",
+      "summary": "Retrieval-Augmented Generation (RAG) addresses the limitations of Large Language Models (LLMs) when providing responses to domain-specific questions. Graph-based RAG approaches, such as GraphRAG, enhance retrieval by capturing semantic relationships within knowledge graphs (KGs). While the FAIR principles (Findability, Accessibility, Interoperability, and Reusability) are becoming prevalent for scientific data management, especially in complex domains such as medicine, existing RAG approaches la",
+      "url": "https://arxiv.org/abs/2607.11464v1",
+      "source": "arXiv",
+      "topic": "rag",
+      "score": 6,
+      "matched_terms": [
+        "LLM",
+        "large language model",
+        "RAG",
+        "retrieval-augmented"
+      ]
     },
     {
-      "id": "2607.08695v1",
-      "title": "Artificial Persons",
+      "id": "2607.10316v1",
+      "title": "SVD-RAG: Efficient Tree-Organized Retrieval-Augmented Generation via Singular Value Decomposition",
       "authors": [
-        "Ned Howells-Whitaker",
-        "Seth Lazar"
+        "Zhihui Sun"
       ],
-      "published": "2026-07-09",
-      "summary": "Both advocates and skeptics of the moral status of AI systems have generally taken the question to turn on AI sentience. We present an alternative approach. On Rawls' political conception of the person (PCP), possession of the two moral power -- the capacities for a sense of justice and a conception of the good -- is the \"necessary and sufficient condition for being counted a full and equal member of society in questions of political justice\". We argue that neither moral power requires sentience",
-      "url": "https://arxiv.org/abs/2607.08695v1",
-      "source": "arXiv"
+      "published": "2026-07-11",
+      "summary": "Retrieval-Augmented Generation (RAG) systems enhance large language models by retrieving relevant documents from external knowledge bases. Recent work by Sarthi et al. (2024) introduced RAPTOR, which organizes documents into hierarchical tree structures for efficient retrieval, but requires expensive LLM-based abstractive summarization at each internal node -- making large-scale deployment prohibitively costly. We present SVD-RAG, the first method to apply Singular Value Decomposition (SVD) on d",
+      "url": "https://arxiv.org/abs/2607.10316v1",
+      "source": "arXiv",
+      "topic": "rag",
+      "score": 6,
+      "matched_terms": [
+        "LLM",
+        "large language model",
+        "RAG",
+        "retrieval-augmented"
+      ]
     },
     {
-      "id": "2607.08662v1",
-      "title": "WebSwarm: Recursive Multi-Agent Orchestration for Deep-and-Wide Web Search",
+      "id": "2509.10572v2",
+      "title": "Quality Assessment of Tabular Data using Large Language Models and Code Generation",
       "authors": [
-        "Xiaoshuai Song",
-        "Liancheng Zhang",
-        "Kangzhi Zhao",
-        "Yutao Zhu",
-        "Zhongyuan Wang",
-        "Guanting Dong",
-        "Jinghan Yang",
-        "Han Li",
-        "Kun Gai",
-        "Ji-Rong Wen",
-        "Zhicheng Dou"
+        "Ashlesha Akella",
+        "Akshar Kaul",
+        "Krishnasuri Narayanam",
+        "Sameep Mehta"
       ],
-      "published": "2026-07-09",
-      "summary": "Large language model (LLM)-based web search agents are transforming information seeking from simple factoid question answering into complex, deep-and-wide search and research-oriented tasks. A single ReAct-style agent is constrained by one long trajectory and limited context, making it difficult to handle depth and coverage simultaneously. Existing multi-agent systems improve search coverage through parallel execution and aggregation, but still exhibit clear limitations in recursive depth, colla",
-      "url": "https://arxiv.org/abs/2607.08662v1",
-      "source": "arXiv"
+      "published": "2025-09-11",
+      "summary": "Reliable data quality is crucial for downstream analysis of tabular datasets, yet rule-based validation often struggles with inefficiency, human intervention, and high computational costs. We present a three-stage framework that combines statistical inliner detection with LLM-driven rule and code generation. After filtering data samples through traditional clustering, we iteratively prompt LLMs to produce semantically valid quality rules and synthesize their executable validators through code-ge",
+      "url": "https://arxiv.org/abs/2509.10572v2",
+      "source": "arXiv",
+      "topic": "se-ai",
+      "score": 6,
+      "matched_terms": [
+        "LLM",
+        "large language model",
+        "code generation",
+        "prompt"
+      ]
     },
     {
-      "id": "2607.08595v1",
-      "title": "Federated Deep Learning for Privacy-Preserving Cardiovascular Disease Risk Prediction",
+      "id": "2504.20799v2",
+      "title": "Hallucination by Code Generation LLMs: Taxonomy, Benchmarks, Mitigation, and Challenges",
       "authors": [
-        "Hyunho Mo",
-        "Djura Smits",
-        "Mahlet A. Birhanu",
-        "Maarten J. G. Leening",
-        "Daniel Bos",
-        "Pim van der Harst",
-        "Esther E. Bron"
+        "Yunseo Lee",
+        "John Youngeun Song",
+        "Dongsun Kim",
+        "Jindae Kim",
+        "Mijung Kim",
+        "Jaechang Nam"
       ],
-      "published": "2026-07-09",
-      "summary": "Cardiovascular disease risk prediction models often rely on data from a single institution or centrally pooled datasets. Extending these models across institutions could be limited by privacy regulations and constraints on sharing patient-level data. Federated learning enables collaborative model development without transferring sensitive patient data, but its application in healthcare remains challenging because datasets often differ in size, population characteristics, and outcome definitions.",
-      "url": "https://arxiv.org/abs/2607.08595v1",
-      "source": "arXiv"
+      "published": "2025-04-29",
+      "summary": "Recent technical breakthroughs in large language models (LLMs) have enabled them to fluently generate source code. Software developers often leverage both general-purpose and code-specialized LLMs to revise existing code or even generate a whole function from scratch. These capabilities are also beneficial in no-code or low-code contexts, in which one can write programs without a technical background. However, due to their internal design, LLMs are prone to generating hallucinations, which are i",
+      "url": "https://arxiv.org/abs/2504.20799v2",
+      "source": "arXiv",
+      "topic": "se-ai",
+      "score": 6,
+      "matched_terms": [
+        "LLM",
+        "large language model",
+        "RAG",
+        "code generation"
+      ]
     },
     {
-      "id": "2607.08495v1",
-      "title": "The Context Access Divide: Interaction-Level Architecture as a Complementary Dimension of Agentic Inequality",
+      "id": "2407.21227v3",
+      "title": "TaskEval: Assessing Difficulty of Code Generation Tasks for Large Language Models",
       "authors": [
-        "Masahiro Fujita"
+        "Florian Tambon",
+        "Amin Nikanjam",
+        "Cyrine Zid",
+        "Foutse Khomh",
+        "Giuliano Antoniol"
       ],
-      "published": "2026-07-09",
-      "summary": "Sharp et al. (2025) introduce \"agentic inequality\" as a framework for analyzing disparities in access to AI agents across three dimensions: availability, quality, and quantity. These person- and organization-level dimensions characterize who can access agents and at what capability, but do not address a structurally important divide operating at a finer level: the individual interaction. Two users with nominally equivalent agent access may experience qualitatively different AI utility depending ",
-      "url": "https://arxiv.org/abs/2607.08495v1",
-      "source": "arXiv"
+      "published": "2024-07-30",
+      "summary": "Large Language Models (LLMs) excel in code-related tasks like code generation, but benchmark evaluations often overlook task characteristics, such as difficulty. Moreover, benchmarks are usually built using tasks described with a single prompt, despite the formulation of prompts having a profound impact on the outcome. This paper introduces a generalist approach, TaskEval, a framework using diverse prompts and Item Response Theory (IRT) to efficiently assess LLMs' capabilities and benchmark task",
+      "url": "https://arxiv.org/abs/2407.21227v3",
+      "source": "arXiv",
+      "topic": "se-ai",
+      "score": 6,
+      "matched_terms": [
+        "LLM",
+        "large language model",
+        "code generation",
+        "prompt"
+      ]
     },
     {
-      "id": "2607.08466v1",
-      "title": "Search for strong lensing of gravitational waves in the binary black hole events from O1-O4a",
+      "id": "2606.28090v1",
+      "title": "Typing Behavior in Human-LLM Interaction: Keystroke Dynamics Reveal Cognitive Effort During Prompting",
       "authors": [
-        "Ankur Barsode",
-        "Koustav N. Maity",
-        "Parameswaran Ajith"
+        "Laura Schütz",
+        "Yousri Cherif",
+        "Clara Sayffaerth",
+        "Thomas Weber",
+        "Francesco Chiossi"
       ],
-      "published": "2026-07-09",
-      "summary": "A small fraction of the gravitational waves (GWs) currently observable by LIGO, Virgo, and KAGRA (LVK) may be strongly lensed by intervening galaxies and galaxy clusters, potentially producing multiple copies of the same signal. We search for lensed pairs of binary black hole signals detected during the O1-O4a observing runs. We include the events identified by the LVK Collaboration, as well as additional events found by external groups (IAS and OGC). Our search is based on Posterior Overlap 2.0",
-      "url": "https://arxiv.org/abs/2607.08466v1",
-      "source": "arXiv"
+      "published": "2026-06-26",
+      "summary": "As Large Language Models (LLMs) become increasingly integrated into daily routines, understanding how users interact with these systems is crucial for effective human-AI collaboration. This work investigates keystroke dynamics as a behavioral measure of user mental effort and perceived output usefulness in human-LLM interaction. We conducted a user study (N = 36) to examine how task difficulty (easy vs. hard) and device type (desktop vs. mobile) influence typing behavior and workload (NASA-TLX) ",
+      "url": "https://arxiv.org/abs/2606.28090v1",
+      "source": "arXiv",
+      "topic": "human-ai",
+      "score": 5,
+      "matched_terms": [
+        "LLM",
+        "large language model",
+        "prompt"
+      ]
     },
     {
-      "id": "2607.08395v1",
-      "title": "Token-Flow Firewall: Semantic Runtime Auditing for Persistent AI Agents",
+      "id": "2606.10956v1",
+      "title": "Mind the Gap: Can Frontier LLMs Pass a Standardized Office Proficiency Exam?",
       "authors": [
-        "Puji Wang",
-        "Yingchen Zhang",
-        "Ruqing Zhang",
-        "Jiafeng Guo",
-        "Xueqi Cheng"
+        "Tengchao Lv",
+        "Dongdong Zhang",
+        "Jiayu Ding",
+        "Yilin Jia",
+        "Yuzhong Zhao",
+        "Yupan Huang",
+        "Wenshan Wu",
+        "Xiangyang Zhou",
+        "Shaohan Huang",
+        "Nan Yang",
+        "Li Dong",
+        "Lei Cui",
+        "Furu Wei"
       ],
-      "published": "2026-07-09",
-      "summary": "Persistent AI agents extend large language models (LLMs) beyond single-turn interaction into long-lived software systems. Unlike traditional chat assistants, unsafe content in these agents can propagate through persistent state, reusable skills, and tool-mediated interactions, creating a substantially larger semantic attack surface. We observe that most security-critical interactions in such agents are transmitted through natural-language token flows, including memory updates, tool arguments, re",
-      "url": "https://arxiv.org/abs/2607.08395v1",
-      "source": "arXiv"
+      "published": "2026-06-09",
+      "summary": "The deployment of Large Language Model (LLM) agents for computer automation is accelerating, yet their ability to navigate complex, professional-grade productivity software is largely untested. We argue that Office automation is an ideal environment for benchmarking document-automation capability, as it requires long-horizon planning and reasoning, precise parameter configuration, and multi-application integration. To quantify this capability, we introduce an evaluation based on China's National",
+      "url": "https://arxiv.org/abs/2606.10956v1",
+      "source": "arXiv",
+      "topic": "se-ai",
+      "score": 5,
+      "matched_terms": [
+        "agent",
+        "LLM",
+        "large language model",
+        "reasoning"
+      ]
     },
     {
-      "id": "2607.08368v1",
-      "title": "FedOPAL: One-Shot Federated Learning via Analytic Visual Prompt Tuning",
+      "id": "2603.17174v1",
+      "title": "Detecting Data Poisoning in Code Generation LLMs via Black-Box, Vulnerability-Oriented Scanning",
       "authors": [
-        "Lingyu Qiu",
-        "Daniela Annunziata",
-        "Stefano Izzo",
-        "Fabio Giampaolo",
-        "Francesco Piccialli"
+        "Shenao Yan",
+        "Shimaa Ahmed",
+        "Shan Jin",
+        "Sunpreet S. Arora",
+        "Yiwei Cai",
+        "Yizhen Wang",
+        "Yuan Hong"
       ],
-      "published": "2026-07-09",
-      "summary": "With the widespread deployment of basic models in edge intelligence, communication bandwidth has become a core bottleneck restricting the scalability of federated learning. Although one-shot federated learning alleviates this problem by minimizing communication rounds, existing iterative fine-tuning or knowledge distillation methods still face challenges such as high server-side computational costs and hyperparameter sensitivity. Analytical federated learning achieves efficient gradientfree aggr",
-      "url": "https://arxiv.org/abs/2607.08368v1",
-      "source": "arXiv"
+      "published": "2026-03-17",
+      "summary": "Code generation large language models (LLMs) are increasingly integrated into modern software development workflows. Recent work has shown that these models are vulnerable to backdoor and poisoning attacks that induce the generation of insecure code, yet effective defenses remain limited. Existing scanning approaches rely on token-level generation consistency to invert attack targets, which is ineffective for source code where identical semantics can appear in diverse syntactic forms. We present",
+      "url": "https://arxiv.org/abs/2603.17174v1",
+      "source": "arXiv",
+      "topic": "se-ai",
+      "score": 5,
+      "matched_terms": [
+        "LLM",
+        "large language model",
+        "code generation"
+      ]
     },
     {
-      "id": "2607.08331v1",
-      "title": "ArtMine: Discovering and Formalizing Artistic Processes",
+      "id": "2510.13914v1",
+      "title": "A11YN: aligning LLMs for accessible web UI code generation",
       "authors": [
-        "Kaustubh Kumar",
-        "Ashutosh Ranjan",
-        "Vivek Srivastava",
-        "Blessin Varkey",
-        "Shirish Karande"
+        "Janghan Yoon",
+        "Jaegwan Cho",
+        "Junhyeok Kim",
+        "Jiwan Chung",
+        "Jaehyun Jeon",
+        "Youngjae Yu"
       ],
-      "published": "2026-07-09",
-      "summary": "Understanding how artworks are created requires reasoning about the iterative decisions, material operations, and contextual influences that shape artistic production. While recent generative AI systems can synthesize artworks with high fidelity, they primarily model distributions over finished artifacts rather than the creative processes underlying their creation. In practice, artistic workflows are only partially documented through fragmented sources such as archival records, preparatory studi",
-      "url": "https://arxiv.org/abs/2607.08331v1",
-      "source": "arXiv"
+      "published": "2025-10-15",
+      "summary": "Large language models (LLMs) have recently demonstrated strong capabilities in generating functional and aesthetic web interfaces directly from instructions. However, these models often replicate accessibility flaws from their training data, resulting in interfaces that exclude users with diverse needs and contexts. To address this gap, we introduce A11yn, the first method that aligns code-generating LLMs to reliably produce accessibility-compliant web UIs. A11yn optimizes a novel reward functio",
+      "url": "https://arxiv.org/abs/2510.13914v1",
+      "source": "arXiv",
+      "topic": "se-ai",
+      "score": 5,
+      "matched_terms": [
+        "LLM",
+        "large language model",
+        "code generation"
+      ]
     },
     {
-      "id": "2607.08771v1",
-      "title": "ZipDepth: Bringing Lightweight Zero-Shot Monocular Depth Anywhere, on Any Device",
+      "id": "2607.10871v1",
+      "title": "Toward Contemplative LLM: A Modular Framework for Evaluating and Enhancing LLM Alignment in Mental Health",
       "authors": [
-        "Fabio Tosi",
-        "Luca Bartolomei",
-        "Matteo Poggi",
-        "Stefano Mattoccia"
+        "Asher Sprigler",
+        "Yang-Yang Feng",
+        "Iftach Amir",
+        "Jonathan E. Bogard",
+        "Todd S Braver",
+        "Yi Ding",
+        "David Kinney",
+        "Yixue Zhao"
       ],
-      "published": "2026-07-09",
-      "summary": "Monocular depth estimation has seen remarkable progress through foundation models achieving robust zero-shot generalization, yet their computational demands place them far beyond the reach of embedded and mobile platforms. Lightweight alternatives exist, but have been developed almost exclusively within single-domain, self-supervised paradigms, failing silently under domain shift. We present ZipDepth, a compact monocular depth network that bridges this gap by combining an efficient reparameteriz",
-      "url": "https://arxiv.org/abs/2607.08771v1",
-      "source": "arXiv"
+      "published": "2026-07-12",
+      "summary": "Contemplative traditions have long guided ethical behavior and prosocial interaction, and recent work suggests that contemplative principles (e.g., mindfulness, compassion, non-dual reasoning) may offer a promising paradigm for aligning large language models (LLMs), improving cooperation and reducing ethical violations in LLM outputs. However, as new models, evaluation metrics, and benchmarks emerge rapidly, it remains challenging to systematically assess whether and how contemplative principles",
+      "url": "https://arxiv.org/abs/2607.10871v1",
+      "source": "arXiv",
+      "topic": "human-ai",
+      "score": 4,
+      "matched_terms": [
+        "LLM",
+        "large language model",
+        "reasoning"
+      ]
     },
     {
-      "id": "2607.08753v1",
-      "title": "Finding Simple Proofs for First-Order Optimization",
+      "id": "2606.12805v1",
+      "title": "Exploring How Agent Voice Accents Shape Human-AI Collaboration in K-12 Group Learning",
       "authors": [
-        "Daniel Berg Thomsen",
-        "Manu Upadhyaya",
-        "Baptiste Goujaud",
-        "Aymeric Dieuleveut",
-        "Adrien Taylor"
+        "Prerna Ravi",
+        "Carúmey Stevens",
+        "Ben Hurt",
+        "Brandon Hanks",
+        "Grace Lin",
+        "Emma Anderson"
       ],
-      "published": "2026-07-09",
-      "summary": "Progress in mathematics often requires more than a certificate of truth: it requires proof structures that are transparent, checkable, and reusable. Automated systems can increasingly certify that a result is true; what they typically return, however, is a dense certificate rather than an interpretable, reusable proof structure. Recent work on performance estimation problems has shown that performance bounds and complexity analyses of first-order optimization methods can be discovered by searchi",
-      "url": "https://arxiv.org/abs/2607.08753v1",
-      "source": "arXiv"
+      "published": "2026-06-11",
+      "summary": "Collaboration is widely recognized as a cornerstone of 21st-century education, yet teachers still encounter persistent challenges in fostering productive peer interaction. LLM conversational peer agents introduce new possibilities for mediating in-person group work, raising questions about how persona design, particularly their voice characteristics, shapes learners' perceptions, trust, and interactional dynamics. While prior work has examined agent accent effects in one-to-one settings, little ",
+      "url": "https://arxiv.org/abs/2606.12805v1",
+      "source": "arXiv",
+      "topic": "human-ai",
+      "score": 3,
+      "matched_terms": [
+        "agent",
+        "LLM"
+      ]
     },
     {
-      "id": "2607.08673v1",
-      "title": "Inverse Transfer and Coherence in Rotating Stratified Flow with Clouds and Phase Transitions",
+      "id": "2606.12587v1",
+      "title": "Strategic Decision Support for AI Agents",
       "authors": [
-        "Yeyu Zhang",
-        "Yingshuo Peng",
-        "Leslie M. Smith"
+        "Shayan Kiyani",
+        "Sima Noorani",
+        "George Pappas",
+        "Hamed Hassani"
       ],
-      "published": "2026-07-09",
-      "summary": "Inverse energy transfer to large-scale coherent structures in idealized models of geophysical flows has been of interest for over four decades. Extensive knowledge exists regarding inverse transfer in rotating and stratified dry dynamics, characterized by the Rossby number and a single dry Froude number. The current study includes effects of water and phase changes, with dynamics characterized by the Rossby number and two Froude numbers for unsaturated and saturated environments. Using numerical",
-      "url": "https://arxiv.org/abs/2607.08673v1",
-      "source": "arXiv"
+      "published": "2026-06-10",
+      "summary": "Traditionally, decision support studies how humans use machine learning models to make better decisions. In modern agentic systems, this division of roles is increasingly reversed: AI agents act on behalf of users, while humans and tools becomes support mechanisms around them. This role reversal brings reliability concerns to the forefront, since agentic errors can be consequential and agent behavior must remain aligned with human goals and constraints. Departing from the classical view of decis",
+      "url": "https://arxiv.org/abs/2606.12587v1",
+      "source": "arXiv",
+      "topic": "human-ai",
+      "score": 3,
+      "matched_terms": [
+        "agent",
+        "agentic"
+      ]
     },
     {
-      "id": "2607.08665v1",
-      "title": "Resample or Reroute? Budget-Aware Test-Time Model Selection for Large Language Models",
+      "id": "2605.29928v2",
+      "title": "Label Over Logic? How Source Cues Bias Human Fallacy Judgments More Than LLMs",
       "authors": [
-        "Teng-Ruei Chen"
+        "Mahjabin Nahar",
+        "Nafis Irtiza Tripto",
+        "Aiping Xiong",
+        "Ting-Hao 'Kenneth' Huang",
+        "Dongwon Lee"
       ],
-      "published": "2026-07-09",
-      "summary": "Routing among large language models (LLMs) trades response quality against serving cost, motivated by the reported gap between deployed routers and a per-instance oracle. Recent analysis shows that test-time resampling can recover per-instance selection headroom that no single-commit router captures; however, that guarantee holds only under an idealized oracle equipped with correctness labels and an unconstrained budget, neither of which a deployed system has. To the best of our knowledge, no pr",
-      "url": "https://arxiv.org/abs/2607.08665v1",
-      "source": "arXiv"
-    },
-    {
-      "id": "2607.08657v1",
-      "title": "VAPOLA -- A multi-year, multi-band polarization survey of AGN and Sgr A* at mm wavelengths with ALMA I. Survey Overview and Science-Ready Archival Products",
-      "authors": [
-        "Alejandro Mus",
-        "Ciriaco Goddi",
-        "Douglas Carlos",
-        "Vincenzo Galluzzi",
-        "Ezequiel Albentosa-Ruiz",
-        "Ivan Martí-Vidal",
-        "Hugo Messias",
-        "Kazi L. J. Rygl",
-        "Geoffrey B. Crew",
-        "Lynn D. Matthews",
-        "Elisabetta Liuzzo",
-        "Nicola Marchili",
-        "Raphael P. Rolim",
-        "Mariafelicia De Laurentis",
-        "Rocco Lico",
-        "Cristiano Urban"
-      ],
-      "published": "2026-07-09",
-      "summary": "The Atacama Large Millimeter/submillimeter Array (ALMA) is the most sensitive interferometric array at millimeter and submillimeter wavelengths. Through the ALMA Phasing System (APS), it can participate in global Very Long Baseline Interferometry (VLBI) arrays, enhancing their sensitivity and resolution. However, processing and analzing the ALMA data obtained in APS mode during VLBI observations remains a complex task, requiring specialized expertise and time-consuming calibration and imaging pr",
-      "url": "https://arxiv.org/abs/2607.08657v1",
-      "source": "arXiv"
-    },
-    {
-      "id": "2607.08641v1",
-      "title": "Steering Neural Network Training through Interpretable Constraints Based on Partial Dependence",
-      "authors": [
-        "Yann Claes",
-        "Pierre Geurts",
-        "Vân Anh Huynh-Thu"
-      ],
-      "published": "2026-07-09",
-      "summary": "Over the last few years, there has been an increased interest in making machine learning models more interpretable. Although a great deal of effort goes into developing techniques for interpreting the interactions learned by a given model, fewer studies focus on assessing the quality of such explanations. Even fewer focus on how to adjust the model to produce explanations faithful to prior knowledge, a process known as explanation-guided learning. Furthermore, most approaches in this area focus ",
-      "url": "https://arxiv.org/abs/2607.08641v1",
-      "source": "arXiv"
-    },
-    {
-      "id": "2607.08602v1",
-      "title": "Towards Precision Therapy in Hepatocellular Carcinoma: A Clinical-Reasoning LLM for Risk Stratification and Treatment Guidance",
-      "authors": [
-        "Peng Cui",
-        "Jitao Wang",
-        "Siyan Xue",
-        "Yao Huang",
-        "Haoming Xia",
-        "Dong Li",
-        "Dengxiang Liu",
-        "Weilin Wang",
-        "Liping Liu",
-        "Leida Zhang",
-        "Yunfu Cui",
-        "Tao Peng",
-        "Daolin Ji",
-        "Haitao Zhao",
-        "Wei Zhang",
-        "Xiaojuan Wang",
-        "Weijie Ma",
-        "Zongren Ding",
-        "Jinlong Li",
-        "Yuan Ding",
-        "Jiajing Zhao",
-        "Zhiyu Chen",
-        "Chengkun Yang",
-        "Ziyue Huang",
-        "Jiaqi Liu",
-        "Fusheng Liu",
-        "Yang Zhou",
-        "Xiaojuan Wang",
-        "Zhongquan Sun",
-        "Shiyun Bao",
-        "Xiaojun Wang",
-        "Ming Yang",
-        "Guangxin Li",
-        "Bin Shu",
-        "Yong Liao",
-        "Hongxuan Li",
-        "Yao Tang",
-        "Shizhong Yang",
-        "Yongyi Zeng",
-        "Yufeng Yuan",
-        "Yinpeng Dong",
-        "Jihui Hao",
-        "Jun Zhu",
-        "Jiahong Dong"
-      ],
-      "published": "2026-07-09",
-      "summary": "Hepatocellular carcinoma (HCC) is a common malignancy and a leading cause of cancer-related mortality. Current guidelines and staging systems provide coarse categories, but often miss within-stage heterogeneity and the clinical context in electronic medical records (EMRs). We present HCC-STAR (Hepatocellular Carcinoma Staging, Treatment And pRognosis), a clinically aligned large language model that reads routine EMR narratives and jointly outputs risk score-based staging, ranked guideline-consis",
-      "url": "https://arxiv.org/abs/2607.08602v1",
-      "source": "arXiv"
+      "published": "2026-05-28",
+      "summary": "As AI-generated and AI-assisted content floods online spaces, source labels attached to such content can distort human reasoning judgments, with downstream consequences for moderation, evaluation, and decision-making. Whether LLMs share this vulnerability, or offer more source-agnostic evaluation, remains an open question with direct implications for human-AI collaboration. We examine this issue using logical fallacies as a controlled setting to isolate source-label effects on reasoning quality,",
+      "url": "https://arxiv.org/abs/2605.29928v2",
+      "source": "arXiv",
+      "topic": "human-ai",
+      "score": 3,
+      "matched_terms": [
+        "LLM",
+        "reasoning"
+      ]
     }
   ]
 }

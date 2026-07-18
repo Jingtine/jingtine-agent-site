@@ -41,6 +41,8 @@ RSS_REQUIRED_FIELDS = ["id", "title", "link", "description", "pubDate", "source"
 
 PAPERS_JSON = os.path.join(PROJECT_DIR, "public", "data", "papers.json")
 PAPER_REQUIRED_FIELDS = ["id", "title", "authors", "published", "summary", "url", "source"]
+PAPER_SCORED_FIELDS = ["topic", "score", "matched_terms"]
+PAPER_MIN_SCORE = 3
 
 WIKI_JSON = os.path.join(PROJECT_DIR, "public", "data", "wiki.json")
 WIKI_REQUIRED_FIELDS = ["id", "title", "category", "tags", "updated", "summary", "links", "path"]
@@ -298,6 +300,16 @@ def check_papers_json():
             elif field == "url":
                 if not isinstance(paper["url"], str) or not paper["url"].startswith("https://"):
                     missing.append("url (not https)")
+        # Scored fields (added by the scoped collect_papers.py pipeline)
+        for field in PAPER_SCORED_FIELDS:
+            if field not in paper or not paper[field]:
+                missing.append(field)
+            elif field == "score" and not isinstance(paper.get("score"), int):
+                missing.append("score (not int)")
+            elif field == "score" and paper.get("score", 0) < PAPER_MIN_SCORE:
+                missing.append(f"score (<{PAPER_MIN_SCORE})")
+            elif field == "matched_terms" and not isinstance(paper.get("matched_terms"), list):
+                missing.append("matched_terms (not list)")
         if missing:
             incomplete.append((i, missing))
         else:
@@ -315,7 +327,7 @@ def check_papers_json():
         p(f"{FAIL} papers.json:        duplicate IDs detected")
         return False
 
-    p(f"{PASS} papers.json:        valid JSON, {len(papers)} papers")
+    p(f"{PASS} papers.json:        valid JSON, {len(papers)} papers (scored)")
     return True
 
 
