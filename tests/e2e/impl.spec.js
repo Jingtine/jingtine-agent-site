@@ -1,4 +1,7 @@
 const { test, expect } = require('@playwright/test');
+const path = require('path');
+
+const REPO_ROOT = path.resolve(__dirname, '..', '..');
 
 const PAGES = [
   { name: 'index', path: '/index.html', title: 'Jingtine' },
@@ -326,7 +329,7 @@ test.describe('TC16 — 移动端窄屏不溢出', () => {
    ================================================================ */
 test('TC17 — check.py 质量检查可执行', async () => {
   const { execSync } = require('child_process');
-  const result = execSync('python scripts/check.py', { encoding: 'utf-8', cwd: process.cwd() });
+  const result = execSync('python scripts/check.py', { encoding: 'utf-8', cwd: REPO_ROOT });
   expect(result).toContain('check');
   // Note: exitCode is checked implicitly by execSync not throwing
 });

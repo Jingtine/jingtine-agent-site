@@ -3,8 +3,8 @@
   "private": true,
   "scripts": {
     "test": "npx playwright test",
-    "test:impl": "npx playwright test tests/e2e/impl.spec.js --reporter=list",
-    "test:req": "npx playwright test tests/e2e/requirements.spec.js --reporter=list",
+    "test:impl": "npx playwright test e2e/impl.spec.js --reporter=list",
+    "test:req": "npx playwright test e2e/requirements.spec.js --reporter=list",
     "test:headed": "npx playwright test --headed",
     "build": "python scripts/generate_feed.py"
   },

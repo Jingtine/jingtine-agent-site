@@ -3,7 +3,7 @@ const { defineConfig, devices } = require('@playwright/test');
 const path = require('path');
 
 module.exports = defineConfig({
-  testDir: './tests/e2e',
+  testDir: './e2e',
   timeout: 30000,
   retries: 0,
   reporter: 'list',
@@ -17,7 +17,7 @@ module.exports = defineConfig({
     command: `python -m http.server 8081`,
     url: 'http://127.0.0.1:8081',
     reuseExistingServer: false,
-    cwd: path.resolve(__dirname),
+    cwd: path.resolve(__dirname, '..'),
   },
   projects: [
     {
