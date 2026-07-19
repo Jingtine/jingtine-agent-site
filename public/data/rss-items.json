@@ -1,13 +1,13 @@
 {
-  "generated": "2026-07-19T00:58:59.710242+08:00",
+  "generated": "2026-07-20T00:59:14.320815+08:00",
   "total": 60,
   "items": [
     {
-      "id": "0e5a935e1be9",
-      "title": "Heresy",
-      "link": "https://paulgraham.com/heresy.html",
-      "description": "Article URL: https://paulgraham.com/heresy.html Comments URL: https://news.ycombinator.com/item?id=48959575 Points: 5 # Comments: 1",
-      "pubDate": "2026-07-19T00:31:42+08:00",
+      "id": "d414df336276",
+      "title": "C64 Basic Dungeon Crawler: Goblin Attack (C64 Basic Part 8)",
+      "link": "https://retrogamecoders.com/c64-basic-dungeon-part8/",
+      "description": "Article URL: https://retrogamecoders.com/c64-basic-dungeon-part8/ Comments URL: https://news.ycombinator.com/item?id=48968949 Points: 4 # Comments: 0",
+      "pubDate": "2026-07-19T23:20:22+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -15,11 +15,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "44eac32597e1",
-      "title": "Young adults are poor despite every metric which suggests otherwise",
-      "link": "https://xcancel.com/i/article/2077113148524417439",
-      "description": "Article URL: https://xcancel.com/i/article/2077113148524417439 Comments URL: https://news.ycombinator.com/item?id=48959473 Points: 11 # Comments: 12",
-      "pubDate": "2026-07-19T00:20:35+08:00",
+      "id": "ca2822dd45c3",
+      "title": "Terence McKenna's Mega Bad Trip",
+      "link": "https://psychedelics.community/cultural-icons/terence-mckennas-mega-bad-trip",
+      "description": "Article URL: https://psychedelics.community/cultural-icons/terence-mckennas-mega-bad-trip Comments URL: https://news.ycombinator.com/item?id=48968515 Points: 6 # Comments: 0",
+      "pubDate": "2026-07-19T22:30:31+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -27,11 +27,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "bbff2f3c36b5",
-      "title": "Setting up your spare Mac for Claude Code to control, a step-by-step guide",
-      "link": "https://ykdojo.github.io/claude-controls-mac/",
-      "description": "Article URL: https://ykdojo.github.io/claude-controls-mac/ Comments URL: https://news.ycombinator.com/item?id=48959392 Points: 21 # Comments: 3",
-      "pubDate": "2026-07-19T00:12:08+08:00",
+      "id": "9fe7bc588b75",
+      "title": "Clever hacker fits 537,000 domains in a $5 ESP32 ad-blocking dongle",
+      "link": "https://www.tomshardware.com/networking/clever-hacker-fits-537-000-domains-in-a-tiny-usd5-esp32-ad-blocking-dongle-firmware-uses-only-around-50kb-of-ram-and-can-answer-blocked-lookups-in-10-milliseconds",
+      "description": "Article URL: https://www.tomshardware.com/networking/clever-hacker-fits-537-000-domains-in-a-tiny-usd5-esp32-ad-blocking-dongle-firmware-uses-only-around-50kb-of-ram-and-can-answer-blocked-lookups-in-10-milliseconds Comments URL: https://news.ycombinator.com/item?id=48968348 Poin…",
+      "pubDate": "2026-07-19T22:07:07+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -39,23 +39,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "a2a94c79de23",
-      "title": "Fake food delivery site for the dopamine",
-      "link": "https://old.reddit.com/r/BingeEatingDisorder/comments/1uzr3ui/fake_food_delivery_site_for_the_dopamine/",
-      "description": "Article URL: https://old.reddit.com/r/BingeEatingDisorder/comments/1uzr3ui/fake_food_delivery_site_for_the_dopamine/ Comments URL: https://news.ycombinator.com/item?id=48959355 Points: 14 # Comments: 3",
-      "pubDate": "2026-07-19T00:08:38+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "56a6af044d46",
-      "title": "不签卖身契、不追求奖杯，美国这所足球学校凭什么吸引付费家庭？｜前线",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzA4MjQzNDYyMQ==&mid=2650508133&idx=1&sn=1f148fb3d2c5a4604a21a169fd9d500d&chksm=86e9d33fd9a1719422d73e879d44d3480e5769636704947f5e0c22a36db711642d7f69550f03",
-      "description": "写在前面：2026年美加墨世界杯正在进行。借着在前方报道世界杯的机会，懒熊体育对美国足球进行了深入探访。 我们走进美国职业足球大联盟（MLS）总部，采访联盟管理者；探访青训俱乐部、足球学校，与青训教练、足校和青训俱乐部老板、孩子家长等不同群体交流，希望借此为大家呈现一个更加真实、立体的美国足球发展状况—— 他们到底是不是许多人眼里的足球荒漠？也许足球在美国的影响力距离橄榄球、篮球和棒球仍有不小差距，但不可否认的是，在浓厚的体育文化和成熟的职业体育体系支撑下，美国足球已经驶入发展的快车道。 同时，我们也希望「美国足球五部曲」这组系列报道能为正在探索足球发展…",
-      "pubDate": "2026-07-19T00:04:31+08:00",
+      "id": "1f5a35535180",
+      "title": "复盘2000泡沫破裂的四大信号",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA5MTk5OTY4Mw==&mid=2649662615&idx=1&sn=9c440f2c36e955d89b4919d1fdf20dc9&chksm=89f3d9829b69a412556fe480fcb78189db1bdb3b3b14347ca6877039bc3bcaba340e1e4bd3bb",
+      "description": "最后的冲刺1/4实体经济泡沫与股市泡沫一直在等时机写一篇2000年科网泡沫破裂前后的复盘文章，现在虽然略早一点，但这种文章，宁可早发，也不能发晚了。 股灾有两种，一种是实体经济本身并没有问题，金融市场的危机影响实体经济，最典型的是2008年的金融危机，是由于次贷危机处理不当，引发了金融机构的连锁反应，最终导致信用风险，金融市场对实体经济的融资功能丧失；第二种是实体经济的问题传导到金融市场，引发股灾，七十年代的两次石油危机，2020年的疫情，2022年通胀和对抗通胀的货币政策，都对并没有泡沫的股市产生了比较大的影响。 而2000年科网泡沫的股灾两者兼有，1…",
+      "pubDate": "2026-07-19T22:02:27+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -63,11 +51,11 @@
       "category": "ai-news"
     },
     {
-      "id": "90b95eab2463",
-      "title": "这届赚爽了，2030世界杯美国版权已朝20亿美元狂飙｜B面世界杯",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzA4MjQzNDYyMQ==&mid=2650508133&idx=2&sn=b73ab4940c475d6b049bde81277601f0&chksm=86aebab72f010864763767029ca3c26678b7ceb615cf6d79beb94e33eceea1c51341555e9452",
-      "description": "2026年世界杯尚未结束，下一周期的美国转播权争夺已经提上日程。 据CNBC报道，FIFA预计将在未来三个月内与美国市场的潜在合作伙伴展开讨论，并且该地区的英语和西班牙语版权很可能会合并出售。 Netflix、迪士尼和Alphabet旗下YouTube均对2030年、2034年世界杯的美国媒体版权表达了兴趣。 部分媒体公司正按照每届15亿至20亿美元准备预算。 科技巨头亚马逊和苹果公司也可能成为潜在竞标者。这意味着，2030年世界杯的美国版权价格，可能比2026年英语和西班牙语版权的合计成本10.85亿美元高出近一倍。 自2018年世界杯以来，美国市场的…",
-      "pubDate": "2026-07-19T00:04:31+08:00",
+      "id": "e4d424302e96",
+      "title": "把“大疆”塞进手机，但荣耀Robot Phone真正想卖的不是云台",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzkxNjczMzUzNQ==&mid=2247580579&idx=1&sn=e0a09265b4922c876fdcbb220653da8c&chksm=c0ab2ca2f53fa4914ecb4a2b9b836aca4de5c859b6986e2e249fd04e376b6bc94cbaaa118c26",
+      "description": "作者|苏涵这是一款让人眼前一亮，却也引发争议的新产品。7月18日，在2026世界人工智能大会上，荣耀正式宣布全球首款Robot Phone开启预约。 这款被定义为“机器人手机”的新产品，最大的不同并不是又多了一项AI能力，而是在机身顶部加入了一套四自由度机械云台，让手机第一次拥有了动作表达和物理执行能力。 消息发布后，围绕Robot Phone的讨论迅速出现了两种截然不同的声音。 支持者认为，这是具身智能第一次真正进入消费电子产品，意味着AI终端的竞争开始从数字世界走向物理世界；质疑者则认为，一部手机真的需要一套机械云台吗？ 它究竟是在解决真实需求，还是…",
+      "pubDate": "2026-07-19T22:02:27+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -75,11 +63,11 @@
       "category": "ai-news"
     },
     {
-      "id": "50e81c507a83",
-      "title": "7岁开公司？9岁拍电影？90后家长正在培养“AI神童”",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTYwOTM0Nw==&mid=2650561282&idx=1&sn=f362c10a0489c41c8f35bb377b44adf6&chksm=be260df31d68686d5c4768b8998aee960f9ecd2a757d0e216fb42bab77ea2564bd1c5f8371a6",
-      "description": "酷玩实验室原创作品最近这段时间，人类和AI的战争，已经从残酷变成诡异了。 不过，哪怕在诡异这个赛道上，“小孩AI”也堪称一骑绝尘，我愿称之为AI圈的不可名状之物。 特别是最近暑假到来，全世界都在发AI研学的小广告。 昨天我刚在某书上看见一个AI研学营的广子：“7-13岁孩子，一天做一部AI电影。” 我发给我干AI漫剧的朋友，她只看了一眼，就在被窝里哭了三天三夜，恨不得立马退位让贤，滚回老家种田。 还有更夸张的，“10岁儿童，6天开一家AI公司，从0到1孵化创业项目。” 勤勤恳恳写策划案的创业公司小老板们，可能会在屏幕前缓缓扣出一个“？”。 而家长们，只是…",
-      "pubDate": "2026-07-19T00:04:31+08:00",
+      "id": "4a4d586332cf",
+      "title": "世界杯决赛，有多少阿根廷人躲在厕所？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5ODc5MDM2MA==&mid=2651805983&idx=1&sn=75b0028f03e0e2bda5ce4734d0a3a34a&chksm=bc4fe76bc432511335cb981356929ab4a449996f20e0910f720d5aae22bd042a11b251522085",
+      "description": "世界杯期间，一位布宜诺斯艾利斯青年走进厨房打算拿瓶啤酒，在冰箱冷冻室里的速冻豌豆，和放了一年都舍不得扔的碎牛肉之间，通常会夹着一张照片。 照片上可能是哈里·凯恩或者姆巴佩，也可能是任何一个即将对阵阿根廷的核心球员。 在阿根廷，每个人都对类似的场景习以为常，坚信通过冰块，能够冻结对手的发挥。 他们一直试图在绝对的混乱中，找到一种确定的因果律，这在当地被称作—— “Cábala”。假设国家队的比赛进行到下半场，一位阿根廷人走向了卫生间。 在他拉屎的那一秒，梅西进球了。那接下来的每场比赛，一旦比分陷入焦灼，他都会自觉地进入那个不到两平米、散发着廉价洁厕灵味道的…",
+      "pubDate": "2026-07-19T22:02:27+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -87,11 +75,11 @@
       "category": "ai-news"
     },
     {
-      "id": "53ad893ddb18",
-      "title": "Our Approach to Bioresilience: Isomorphic Labs and Google DeepMind",
-      "link": "https://deepmind.google/blog/our-approach-to-bioresilience/",
-      "description": "Article URL: https://deepmind.google/blog/our-approach-to-bioresilience/ Comments URL: https://news.ycombinator.com/item?id=48959297 Points: 8 # Comments: 1",
-      "pubDate": "2026-07-19T00:02:45+08:00",
+      "id": "92ea8ba2792f",
+      "title": "Bananas sprout in Rayleigh Garden UK after 15 years",
+      "link": "https://www.bbc.com/news/articles/cvg8edqq5g5o",
+      "description": "Article URL: https://www.bbc.com/news/articles/cvg8edqq5g5o Comments URL: https://news.ycombinator.com/item?id=48968063 Points: 48 # Comments: 23",
+      "pubDate": "2026-07-19T21:29:29+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -99,95 +87,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "3bbef4aea646",
-      "title": "Gleam Is Now on Tangled",
-      "link": "https://tangled.org/gleam.run/gleam",
-      "description": "Article URL: https://tangled.org/gleam.run/gleam Comments URL: https://news.ycombinator.com/item?id=48959143 Points: 55 # Comments: 23",
-      "pubDate": "2026-07-18T23:44:04+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "798d1cf9091e",
-      "title": "The Fermi Paradox, Percolation, and Inbreeding",
-      "link": "https://reactormag.com/the-fermi-paradox-percolation-and-inbreeding/",
-      "description": "Article URL: https://reactormag.com/the-fermi-paradox-percolation-and-inbreeding/ Comments URL: https://news.ycombinator.com/item?id=48959102 Points: 8 # Comments: 3",
-      "pubDate": "2026-07-18T23:38:36+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "187dd8dd7d8c",
-      "title": "If You Build It, They Will Come",
-      "link": "https://www.benlandautaylor.com/p/if-you-build-it-they-will-come",
-      "description": "Article URL: https://www.benlandautaylor.com/p/if-you-build-it-they-will-come Comments URL: https://news.ycombinator.com/item?id=48959090 Points: 7 # Comments: 0",
-      "pubDate": "2026-07-18T23:37:01+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "597d862ddb28",
-      "title": "Elixir-lang.org has a new design",
-      "link": "https://elixir-lang.org/",
-      "description": "Article URL: https://elixir-lang.org/ Comments URL: https://news.ycombinator.com/item?id=48959042 Points: 28 # Comments: 9",
-      "pubDate": "2026-07-18T23:32:04+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "3eb0d46e2466",
-      "title": "Show HN: Q3Edit – Edit and play Quake 3 maps in the browser",
-      "link": "https://q3edit.com",
-      "description": "I've been building a level editor for Quake 3 that runs entirely in the browser: Radiant-style layout, brush and patch editing, CSG, terrain sculpting, and entity editing. It opens and saves .map file and you can play the maps you build directly in the browser using a webassembly…",
-      "pubDate": "2026-07-18T23:12:40+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "db389a4182a7",
-      "title": "British runner Josh Kerr breaks world record for mile which stood for 27 years",
-      "link": "https://news.sky.com/story/british-runner-josh-kerr-breaks-world-record-for-mile-which-had-stood-for-27-years-13564688",
-      "description": "Article URL: https://news.sky.com/story/british-runner-josh-kerr-breaks-world-record-for-mile-which-had-stood-for-27-years-13564688 Comments URL: https://news.ycombinator.com/item?id=48958814 Points: 37 # Comments: 26",
-      "pubDate": "2026-07-18T23:08:32+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "c8f644df980c",
-      "title": "EU ban on destruction of unsold clothes and shoes enters into application",
-      "link": "https://environment.ec.europa.eu/news/ban-destruction-unsold-clothes-and-shoes-enters-application-2026-07-17_en",
-      "description": "Article URL: https://environment.ec.europa.eu/news/ban-destruction-unsold-clothes-and-shoes-enters-application-2026-07-17_en Comments URL: https://news.ycombinator.com/item?id=48958269 Points: 125 # Comments: 98",
-      "pubDate": "2026-07-18T22:04:42+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "fbcdf6f17d17",
-      "title": "焦了，麻了，燃尽了",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzA3OTI2OTI5NA==&mid=2656331254&idx=1&sn=dde096cedab4d7ff3410d6c0b8bd73bb&chksm=85e0a92eb79d73b10051ee2409ffc54465f16b4147b3d526e665ef23925e8555757d07976078",
-      "description": "长期征集日子很难，生活不容易，每个人都有自己的苦，有苦说不出的感觉，受苦的人最懂。 和吃苦相比，有苦难言，无人问津，可能比苦本身还难受。 重生之后，叶檀老师变了很多，变得能吃苦，吃自己的苦，吃别人的苦。 她说，有苦我们一起分担。每周六，叶檀老师都会亲自回复，并在公众号上发出，有苦难言的朋友，如果你也想和叶檀老师倾诉，把你的故事，发送到邮箱yetanbusiness@163.com，叶檀老师看到，一定会回复。 记住，这世界还有人，关心你，在乎你，理解你。文/叶檀财经团队 炎夏气温快高到40度，心态也发生了改变。 动不动就感觉累，做啥都提不起劲，倦怠感似乎成…",
-      "pubDate": "2026-07-18T22:02:22+08:00",
+      "id": "1df57e5690e3",
+      "title": "坍塌之后：重建AI交易的四条线索",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA3NzQzNzQ0MA==&mid=2650170632&idx=1&sn=8b4e1ddde0801ea055002bb781cfd853&chksm=8641fb941d34a1e3b112651ec267ae2b2c87f39de2f04b74cb64197b4cecfe575c9cb4bb5459",
+      "description": "（题图：纽约雪落之日，1958，David Vestal）在流动性和信心一道如雪片般坍塌的时刻，跟市场辩论是没有意义的。 最好的做法只有顺势而为、承认自己认知的有限和能力的平庸。 在这个时代，注意力经济找到了融资和传播渠道的杠杆，高波市场摆动的幅度和斜率确实是前所未见。 而当市场迅速进入到一个极度恐慌和冰冻态的时候，或许也是时候再理一理基本面的逻辑。 我们现在面临的首要问题是：流动性的坍塌是否意味着一切的结束？ 确实，历史经验表明，市场总是先于基本面见顶，这意味市场信号优先于一切基本面分析和管理层评论。 因而，对待基本面没有重大变化下的市场剧烈崩盘，需要…",
+      "pubDate": "2026-07-19T20:03:25+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -195,11 +99,23 @@
       "category": "ai-news"
     },
     {
-      "id": "6452fee6de74",
-      "title": "GPT-5.6 used a prompt to close a 30-year gap in convex optimization",
-      "link": "https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/",
-      "description": "Article URL: https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/ Comments URL: https://news.ycombinator.com/item?id=48957779 Points: 261 # Comments: 140",
-      "pubDate": "2026-07-18T21:00:52+08:00",
+      "id": "a3172cca7448",
+      "title": "多家券商周末紧急“心理按摩”",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg5MzEyNzEwNQ==&mid=2247830841&idx=1&sn=af53c0b655a21861fd58a01402c7c154&chksm=c1a584cdd60f82aa9783e38f356453ea83cf8b934bc053a24043c21a24757016b26ee1bbde6c",
+      "description": "7月17日，市场集体调整，上证指数跌3.05%失守3800点，创业板指跌7.15%，科创50跌超7%，全市场超5000只个股下跌，200只个股跌停，成交额放量至2.67万亿元。 这并非孤立的一天。将时间拉长，上证指数自6月下旬高点已累计回撤超7%，创业板指和科创50的回撤更是分别达到19%和16%。 从上半年\"结构型分化\"中一骑绝尘的科技牛市，到如今全场普跌、避险资产同步失守，投资者的信心正经历剧烈冲刷。 财联社记者梳理发现，已有中信建投、华泰证券、申万宏源、平安证券、东方财富、国信证券多家连夜发布策略解读、投资者公开信，一边拆解本轮调整的核心诱因，一边…",
+      "pubDate": "2026-07-19T20:03:25+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "8e7ff08d008c",
+      "title": "Minecraft: Java Edition now uses SDL3",
+      "link": "https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-4",
+      "description": "Article URL: https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-4 Comments URL: https://news.ycombinator.com/item?id=48967256 Points: 155 # Comments: 102",
+      "pubDate": "2026-07-19T19:48:18+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -207,83 +123,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "9abf8116b0cb",
-      "title": "“猴茅”跌停，“猴热”退烧，一场炒作的“猴戏”终于散场",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5MjEyODE4MA==&mid=2653348502&idx=5&sn=271351ccaafe7b0892a985ec084b1494&chksm=bc9781cc5dbab7354b356f1206e4b51a4b3a2c0516d9742e0ea4e7b3a896b9739ef0cf5d4dc1",
-      "description": "“股民像猴一样被耍得团团转”“国内还有两亿多只猴！”实验猴价格高企，股民们对近期资本市场上诡异的“猴市”行情频频吐槽。 近期，实验猴价格走高引发行业广泛关注，资本市场上则出现“炒猴热”，与实验猴相关的概念股出现大幅波动。 “猴茅”昭衍新药（603127.SH；06127.HK）A股股价在7月10日-7月16日5个交易日中，有4个交易日大幅上涨，其中2个交易日涨停。 然而，到7月17日狂欢终止，昭衍新药开盘后迅速跌停。 被“猴炒”起来的，是整个CRO概念板块。东方财富CRO板块（BK0899）在历经7月14日-7月16日连续上涨后，7月17日大幅收跌9.7…",
-      "pubDate": "2026-07-18T20:03:32+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "7e6388336965",
-      "title": "世界人工智能合作组织在上海成立，全球求解AI治理的“人机边界”｜WAIC焦点",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5MjM2MzEyNQ==&mid=2651609873&idx=2&sn=1c764c0ff0dd20413ac383a6869f6f81&chksm=bc4edd9951f2338700945f0cc1ee3d41e4350e7eadfe2de831d6d0d59b7510e24f501ed8a9f0",
-      "description": "慢、难、缺、深，AI治理的四道考题作者／ IT时报 潘少颖编辑／ 王昕 孙妍今天的AI能流利描述“杯子掉在地上会碎”，却未感受过一只杯子的真实重量；今天的AI能写代码、做PPT，却没办法帮床上的老人翻身…… 技术若要真正造福人类，就不能只停留在虚拟世界的“纸上谈兵”，必须真实回应每一个来自现实世界普通而真实的需求。 技术高速跃进的另一面，是人机边界、价值取舍、全球均衡发展等一系列时代拷问摆在全人类面前。 当机器开始思考，人类如何与之相处？当算法参与决策，安全如何保障？ 当技术挑战伦理，治理如何跟上？当鸿沟不断拉大，普惠如何实现？ 这四重时代之问，成为20…",
-      "pubDate": "2026-07-18T20:03:32+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "f94963b42d9d",
-      "title": "H股回A前夕，协作机器人第一股上演股权「罗生门」",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzI4OTcxMDA0MQ==&mid=2247546869&idx=1&sn=b303c469f6136ee30c96c33859e5b673&chksm=ed2370cd1752bf4050ffbd4a65a2f69bffd022e67830ce28b377441fb4e528dcce59fc94da49",
-      "description": "距离创业板上市委审议会议仅剩5天，越疆（2432.HK）的“H回A”进程突生变数。 7月17日凌晨，越疆联合创始人、原常务副总裁兼COO宋涛，在微信公众号“宋涛机器人”上公开发文表示，越疆科技及公司创始人、董事长刘培超在A股招股说明书中存在“重大股权瑕疵及隐瞒”：越疆科技员工持股平台“越疆合伙”存在47.28%的股权登记差异。 《凤凰WEEKLY财经》针对争议点联系宋涛，对方拒绝接受采访。 同日，越疆科技回应表示：文章指控不属实且存在严重误导性。 目前，公司生产经营一切正常，创业板上市各项准备工作正按计划有序推进。 “我们将继续严格履行信息披露义务，后续…",
-      "pubDate": "2026-07-18T20:03:32+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "a53df0b2c1cd",
-      "title": "人均40+的杭州拌川，模仿者遍地开花？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzIxMzEyMzcwMw==&mid=2652586268&idx=1&sn=7f096077fea80ce97c595c7d6cf46ec7&chksm=8d75873cf3bc58fb60c66bd8c71bc3c76b78872c7e7e2b416939be7881f1c9d0e22d7a740ded",
-      "description": "总第 4677 期作者 | 餐饮老板内参 内参君杭州拌川，开始发力最近，北京朝阳合生汇，出现了两家“杭州拌川”新店。 一家是低调开业的【椿芽·鲜牛肉杭州拌川】，椿芽在业内小有名气，是2025年的现象级“神店”品牌，北京首店在合生汇B2层的香蕉美食广场。 值得注意的是，这个刚刚升级的香蕉美食广场，已经容纳了19家品牌，覆盖正餐、快餐、茶饮、烘焙等品牌，除了椿芽，还有井梅、阿元来了、贵贵山等地方风味门店，还有椿芽斜对面即将业的“排队王”牛new。 特别巧的是，在距离椿芽不远处有一家【春苗·杭州鲜牛肉拌川】，据了解，这两个品牌毫无关联，只不过恰好都是主打杭州拌…",
-      "pubDate": "2026-07-18T20:03:32+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "7e52c3bf1154",
-      "title": "肯德基卖西瓜、德克士卖菠萝，头部快餐集体“摆水果摊”？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzIxMzEyMzcwMw==&mid=2652586268&idx=2&sn=c6bcbcba2b7dd7d0cfc671bb48bfc08b&chksm=8ddd1ab76130cff575aaaf263a2605872812b92f6d6fe1c426a40fead969a91a23092ddef498",
-      "description": "作者 | 餐饮老板内参 内参君肯德基卖西瓜、德克士卖菠萝头部连锁快餐集体“摆水果摊”了？ 这个夏天，最会卖水果的，可能不是水果店，而是两家洋快餐。 一个卖西瓜，一个送菠萝。肯德基和德克士，不约而同把门店变成了“水果摊”。 近日，肯德基上线了“香焗纸包鸡送西瓜”活动。34.9元，一份香焗纸包鸡，再加一个约3斤重的小西瓜，一起打包带走。 这次活动全国限量8万个西瓜，如果拿到的西瓜品质不好，可以更换成2杯大杯桂花酸梅汤。 不过，消费者需要在肯德基App下单，而且只有参与活动的门店才能领取，想抢瓜，最好提前确认附近门店有没有货。 上海的玩法更直接。除了套餐之外，…",
-      "pubDate": "2026-07-18T20:03:32+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "c40e9457f1c4",
-      "title": "SK海力士崛起史：一个荒诞又狗血的财阀故事，如何卡住全球AI的脖子",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzA4NjUwNTI0OA==&mid=2247498757&idx=1&sn=e12eda245847d3b170d1f0ee0293a5b6&chksm=9eef6881441e5ce5ccf4150b978d943eb9c869fdf1390960b946eef10eb633fbf5afea0ffa7f",
-      "description": "在刚刚过去的7月10日，韩国存储芯片巨头SK海力士正式登陆纽约纳斯达克交易所进行ADR挂牌，当日股价大涨 12.76%，盘中最高涨幅一度超过19%。 此次IPO共融资265亿美元，刷新了阿里巴巴保持十余年的海外企业赴美融资纪录，也成为了美国历史上第二大股票发行，这也使得SK海力士的总市值超过1万亿美元。 当你成为卡住全世界AI脖子的公司，再怎么风光都不过分。 韩国媒体曾报道，现在只要穿着SK海力士的工服，不管是去相亲还是去奢侈品门店，在韩国得到的都是VIP待遇。 存储价格的暴涨，已经蔓延到了下游的消费电子。手机、平板、笔记本、游戏机，都在涨价。 涨价的疯…",
-      "pubDate": "2026-07-18T20:03:32+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "c92bddbeb729",
-      "title": "What AI did to stackoverflow in a graph",
-      "link": "https://data.stackexchange.com/stackoverflow/query/1953768#graph",
-      "description": "Article URL: https://data.stackexchange.com/stackoverflow/query/1953768#graph Comments URL: https://news.ycombinator.com/item?id=48956949 Points: 224 # Comments: 260",
-      "pubDate": "2026-07-18T19:12:46+08:00",
+      "id": "3dbe095878bc",
+      "title": "I joined the IndieWeb, here's what I learned",
+      "link": "https://en.andros.dev/blog/0b8e451e/i-joined-the-indieweb-heres-what-i-learned/",
+      "description": "Article URL: https://en.andros.dev/blog/0b8e451e/i-joined-the-indieweb-heres-what-i-learned/ Comments URL: https://news.ycombinator.com/item?id=48966984 Points: 70 # Comments: 39",
+      "pubDate": "2026-07-19T19:14:38+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -291,11 +135,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "30b464672fa1",
-      "title": "Fable 5 vs. GPT-5.6 Sol on an NP-Hard Problem: Does /goal help?",
-      "link": "https://charlesazam.com/blog/fable-5-gpt-5-6-sol-goal/",
-      "description": "Article URL: https://charlesazam.com/blog/fable-5-gpt-5-6-sol-goal/ Comments URL: https://news.ycombinator.com/item?id=48956879 Points: 136 # Comments: 58",
-      "pubDate": "2026-07-18T19:00:29+08:00",
+      "id": "8400f2a50ade",
+      "title": "The death and rebirth of my home server",
+      "link": "https://sgt.hootr.club/blog/home-server-rebirth/",
+      "description": "Article URL: https://sgt.hootr.club/blog/home-server-rebirth/ Comments URL: https://news.ycombinator.com/item?id=48966769 Points: 76 # Comments: 42",
+      "pubDate": "2026-07-19T18:44:31+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -303,11 +147,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "f94a24159d41",
-      "title": "LG monitors silently install software through Windows Update without consent",
-      "link": "https://videocardz.com/newz/lg-monitors-silently-install-software-through-windows-update-without-user-consent",
-      "description": "Article URL: https://videocardz.com/newz/lg-monitors-silently-install-software-through-windows-update-without-user-consent Comments URL: https://news.ycombinator.com/item?id=48956688 Points: 663 # Comments: 339",
-      "pubDate": "2026-07-18T18:21:19+08:00",
+      "id": "8d304728ca8f",
+      "title": "What I learned selling 2,500 MIDI recorders: Hardware is not so hard",
+      "link": "https://chipweinberger.com/articles/20260719-hardware-is-not-so-hard",
+      "description": "Article URL: https://chipweinberger.com/articles/20260719-hardware-is-not-so-hard Comments URL: https://news.ycombinator.com/item?id=48966713 Points: 248 # Comments: 115",
+      "pubDate": "2026-07-19T18:34:58+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -315,11 +159,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "e3690f4f28ff",
-      "title": "Qubes OS Security in the Public Record",
-      "link": "https://arxiv.org/abs/2607.14587",
-      "description": "Article URL: https://arxiv.org/abs/2607.14587 Comments URL: https://news.ycombinator.com/item?id=48956307 Points: 52 # Comments: 9",
-      "pubDate": "2026-07-18T16:50:07+08:00",
+      "id": "3ca5a0f1a0fa",
+      "title": "Claude Code uses Bun written in Rust now",
+      "link": "https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/",
+      "description": "Article URL: https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/ Comments URL: https://news.ycombinator.com/item?id=48966569 Points: 194 # Comments: 289",
+      "pubDate": "2026-07-19T18:03:23+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -327,14 +171,230 @@
       "category": "ai-agent"
     },
     {
-      "id": "063708cf8c9e",
-      "title": "The Computer at the Bottom of a Canal",
-      "link": "https://negroniventurestudios.com/2026/07/18/the-computer-at-the-bottom-of-a-canal/",
-      "description": "Article URL: https://negroniventurestudios.com/2026/07/18/the-computer-at-the-bottom-of-a-canal/ Comments URL: https://news.ycombinator.com/item?id=48956231 Points: 97 # Comments: 21",
-      "pubDate": "2026-07-18T16:33:31+08:00",
+      "id": "49af455039e8",
+      "title": "多方猛攻AI入口｜WAIC现场",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mjc1NjM3MjY2MA==&mid=2691570930&idx=1&sn=65c6e463996d76532e6782ff44f190e1&chksm=a85dd8946c8e4ffc4eee7be384336a5f3d2c89fbf120fff42f8a338dc4f63c0e384c840240d7",
+      "description": "文｜顾翎羽编辑｜徐青阳任何一个走进2026世界人工智能大会（WAIC）的观众，都很难忽视三件事：人多、天气热，以及展台所展示终端的雷同—— 比如，算力厂商沐曦和大模型厂商阶跃星辰的展台上都摆着车；阿里千问和科大讯飞——两家以大模型为主要赛道的厂商——将巨大的AI眼镜放在展台入口；而走不了几步，就能看到一台正在做咖啡或泡茶的机器人。 两年前，WAIC的焦点是百模大战与参数比拼；一年前，行业还在为算力焦虑和应用难产争论不休。 今年最拥挤的展台，则属于那些试图长出眼睛、耳朵和手脚的物理设备。 据大会官方统计，本届WAIC期间有超过300款产品全球首发，其中消费…",
+      "pubDate": "2026-07-19T18:02:28+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "55a2b455bcfb",
+      "title": "在WAIC 2026暴走三天后，我发现今年最火的AI，都不在电脑里了",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5MjAyNDUyMA==&mid=2651097860&idx=1&sn=27a791dcaaed525e1511659d6202f982&chksm=bc2ab18c883c721cf983a95e1fee9be33c7fb89df951e94b6a0960d2f55da5be0e967e10bf51",
+      "description": "7 月的上海，一张 168 元的 WAIC 单日票被黄牛炒到 1300 元，三日通票喊出 3000 元。 我们在北门排了半小时队才进馆，而这只是热身。展馆里人最多的两个地方，根本不用看导览图，一个是 H1 馆的 AI 手机展台，另一个是 H3 的机器人馆。 阶跃星辰刚发布的 STEPX Neo 样机被人群围在中间。 另一边，努比亚与豆包合作的第二代 AI 手机 NaviX Ultra 也在大会上公开亮相。 大家挤在几块手机屏幕前，想知道 AI 到底能不能替自己操作手机，AI 手机会被谁先做出来。 H3 馆的人流同样密集，累计有 200 多家机器人公司把这…",
+      "pubDate": "2026-07-19T18:02:28+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "ea3c8657db46",
+      "title": "“能不能对员工好点！”盒马被曝三伏天员工集体在店外“扒盒饭”：体感40℃，官方称调整优化",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA4NTc3MDYyOQ==&mid=2651591255&idx=1&sn=b50cbbb014a1ccbdad69f04d452fa8c8&chksm=855c27c3b7bdb33d97c923fb5de42f586912527db1f067fe64abb01bea53be66ebd2f8a37212",
+      "description": "文 |《BUG》栏目 张俊“体感40度的高温，盒马你能不能对员工好点？！” 近日，江西南昌一盒马店开业，盒马官方账号发文“美食陆续出锅中”，而与之形成反差的是，一群盒马员工蹲坐在室外吃着盒饭，有路过的网友拍图并留言“体感温度绝对有40度！”，众人认为盒马缺乏对员工的人文关怀，甚至质疑有克扣员工之嫌。 今日该事件登上热搜。盒马官方向《BUG》栏目回应称，目前已优化错峰就餐安排，确保每位员工享有舒适的休息环境。 不只是员工关怀不足。今年以来盒马已经多次爆发食品安全事件，这也与盒马宣称累计投入超2亿元加码食品安全治理的口号形成反差。 专家认为，系列事件的根源是…",
+      "pubDate": "2026-07-19T18:02:28+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "c4da28a5c7a4",
+      "title": "实习生，月入12万",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI5ODk1NjY1MA==&mid=2247732056&idx=1&sn=2f8c25c6e035d6d65f91649ca051e06e&chksm=edec5fcb256d4156a6ca6db0ff37c61280cb87db914819c0b8930e5f2918ad09f99813dc1e82",
+      "description": "一抹缩影。作者/余梦莹 报道/投资界PEdaily “待遇太恐怖了。”起因是本周一则微博热搜：一位清华姚班同学晒出offer，实习工资为每天5500元，税前。 按一个月工作22天计算，月薪超过12万元。尽管该薪资针对的是清华姚班等少数学生，但仍然可以一窥AI人才的争抢火爆。 AI造富浪潮席卷而来，这当中，人才成为最重要的王牌，往往能改变潮水的方向。 DeepSeek实习生日薪5500元首轮融资500亿元，DeepSeek壕起来了。 但如果对照人才背景，这份实习生日薪可能并不算夸张。 清华姚班，2005年由图灵奖得主姚期智院士一手创办，初衷就是培养全世界最…",
+      "pubDate": "2026-07-19T18:02:28+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "5517c69ebf69",
+      "title": "过去一年 , 本土代理公司变化最多的一年",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5MDAyMTA2MA==&mid=2650650170&idx=1&sn=842638db6a3a2f2266bfc07a1dcf7d27&chksm=bf5a597d14722e50aec954709e12c092d1ec6ac69757b9c96a04c35f7aa471e5c9b3c2cbcad7",
+      "description": "从「代理公司会不会消失？」到「新形态公司的开始涌现」；从「做品牌还有用吗？」到「作业方式创新，谋求多元化可能」…… 过去一年，可能是本土代理公司变化最多，甚至是最彻底的一年。 这一年的代理公司大多不再焦虑行业结构性变化对自身的影响，而是主动突破组织边界，谋求全新竞争力，这给行业带来新的可能，也催生了不少新物种。 未来，各家代理公司的差异化程度会更高，大家能力差不多的情况会越来越少。 但面对科技时代，这足够吗？大家还能怎么做？翻开2026年TopAgency年度合辑，或许我们能找到一些出路和解法。 客户和代理公司，谁拥有真正的话语权？当下环境的变化很大一个…",
+      "pubDate": "2026-07-19T18:02:28+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "5ae030bf07aa",
+      "title": "Qwen 3.8",
+      "link": "https://twitter.com/Alibaba_Qwen/status/2078759124914098291",
+      "description": "https://www.qwencloud.com/pricing/token-plan Comments URL: https://news.ycombinator.com/item?id=48966120 Points: 477 # Comments: 347",
+      "pubDate": "2026-07-19T16:44:57+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "cb1c81d6f7f1",
+      "title": "The Mighty Big Array of Finn Jensen LA8YB",
+      "link": "https://la0by.darc.de/LA8YB_EME_MBA.htm",
+      "description": "Article URL: https://la0by.darc.de/LA8YB_EME_MBA.htm Comments URL: https://news.ycombinator.com/item?id=48965914 Points: 26 # Comments: 6",
+      "pubDate": "2026-07-19T16:05:46+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "88e8bbbae35d",
+      "title": "Ollama: All Aboard Open Models",
+      "link": "https://ollama.com/blog/all-aboard-open-models",
+      "description": "Article URL: https://ollama.com/blog/all-aboard-open-models Comments URL: https://news.ycombinator.com/item?id=48965880 Points: 45 # Comments: 20",
+      "pubDate": "2026-07-19T15:59:44+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "d1255b05e88d",
+      "title": "OpenAI reduces Codex Model Context Size from 372k to 272k",
+      "link": "https://github.com/openai/codex/pull/33972/files",
+      "description": "Article URL: https://github.com/openai/codex/pull/33972/files Comments URL: https://news.ycombinator.com/item?id=48965850 Points: 172 # Comments: 82",
+      "pubDate": "2026-07-19T15:54:39+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "0248ee3e41a3",
+      "title": "The Art of Insight in Science and Engineering – Mastering Complexity(2014) [pdf]",
+      "link": "https://ocw.mit.edu/courses/res-6-011-the-art-of-insight-in-science-and-engineering-mastering-complexity-fall-2014/3bca850386a3005c22134fa62fb3bad5_MITRES_6-011F14_art_insfin.pdf",
+      "description": "Article URL: https://ocw.mit.edu/courses/res-6-011-the-art-of-insight-in-science-and-engineering-mastering-complexity-fall-2014/3bca850386a3005c22134fa62fb3bad5_MITRES_6-011F14_art_insfin.pdf Comments URL: https://news.ycombinator.com/item?id=48965719 Points: 41 # Comments: 3",
+      "pubDate": "2026-07-19T15:27:37+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "2e49f38dd9c7",
+      "title": "Scrying the AMD GFX1250 LLVM Tea Leaves",
+      "link": "https://chipsandcheese.com/p/scrying-the-amd-gfx1250-llvm-tea",
+      "description": "Article URL: https://chipsandcheese.com/p/scrying-the-amd-gfx1250-llvm-tea Comments URL: https://news.ycombinator.com/item?id=48965161 Points: 51 # Comments: 1",
+      "pubDate": "2026-07-19T13:07:08+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "746ff2a79bb8",
+      "title": "AI Mania Is Eviscerating Global Decision-Making",
+      "link": "https://simonwillison.net/2026/Jul/19/ai-mania/#atom-everything",
+      "description": "AI Mania Is Eviscerating Global Decision-Making Here's an entertaining perspective from Nik Suresh on the AI mania that is overwhelming the large companies that he consults with. It's crammed with spicy anecdotes from anonymous sources. In one extreme case, I have seen an executi…",
+      "pubDate": "2026-07-19T13:06:21+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "eb24893336d6",
+      "title": "Claude Code uses Bun written in Rust now",
+      "link": "https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/#atom-everything",
+      "description": "In Rewriting Bun in Rust Jarred Sumner made the following claim: Claude Code v2.1.181 (released June 17th) and later use the Rust port of Bun. Startup got 10% faster on Linux but otherwise, barely anyone noticed. Boring is good. I decided to have a poke at my own Claude Code inst…",
+      "pubDate": "2026-07-19T11:54:09+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "0ad5fdc83ea2",
+      "title": "Better and Cheaper Than IPTV",
+      "link": "https://github.com/stupside/castor",
+      "description": "Article URL: https://github.com/stupside/castor Comments URL: https://news.ycombinator.com/item?id=48964015 Points: 268 # Comments: 89",
+      "pubDate": "2026-07-19T08:59:55+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "71d61e0fd00c",
+      "title": "Transcribe.cpp",
+      "link": "https://workshop.cjpais.com/projects/transcribe-cpp",
+      "description": "Article URL: https://workshop.cjpais.com/projects/transcribe-cpp Comments URL: https://news.ycombinator.com/item?id=48963879 Points: 652 # Comments: 138",
+      "pubDate": "2026-07-19T08:38:26+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "e4b958abbc08",
+      "title": "Codex Resets",
+      "link": "https://codex-resets.com/",
+      "description": "Article URL: https://codex-resets.com/ Comments URL: https://news.ycombinator.com/item?id=48963465 Points: 250 # Comments: 166",
+      "pubDate": "2026-07-19T07:24:26+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "95d774cf512d",
+      "title": "Classic Amiga titles, free to download",
+      "link": "https://amigafreeware.downer.tech/",
+      "description": "Article URL: https://amigafreeware.downer.tech/ Comments URL: https://news.ycombinator.com/item?id=48962838 Points: 159 # Comments: 21",
+      "pubDate": "2026-07-19T05:55:27+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "f5773fd593cf",
+      "title": "Hardcore IndieWeb: Run your own website 100% independently for only $0.01/day",
+      "link": "https://www.neatnik.net/hardcore-indieweb",
+      "description": "Article URL: https://www.neatnik.net/hardcore-indieweb Comments URL: https://news.ycombinator.com/item?id=48962758 Points: 217 # Comments: 175",
+      "pubDate": "2026-07-19T05:45:12+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "b38b4ea43037",
+      "title": "SQLite Query Explainer",
+      "link": "https://simonwillison.net/2026/Jul/18/sqlite-query-explainer/#atom-everything",
+      "description": "Tool: SQLite Query Explainer Julia Evan's, in Learning a few things about running SQLite: Maybe one day I’ll learn to read a query plan. Big same.... which inspired me to have Fable build this interactive explain tool, which runs SQLite in Python in Pyodide in Web Assembly in the…",
+      "pubDate": "2026-07-19T01:19:10+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
       },
       "category": "ai-agent"
     },
@@ -359,30 +419,6 @@
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "0392ac25abc7",
-      "title": "Regressive JPEGs",
-      "link": "https://maurycyz.com/projects/bad_jpeg/",
-      "description": "Article URL: https://maurycyz.com/projects/bad_jpeg/ Comments URL: https://news.ycombinator.com/item?id=48954851 Points: 550 # Comments: 54",
-      "pubDate": "2026-07-18T11:14:20+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "1eda1d709754",
-      "title": "DrDroid (YC W23) Is Hiring",
-      "link": "https://www.ycombinator.com/companies/drdroid/jobs/w45QcNV-product-engineer-assignment-mandatory",
-      "description": "Article URL: https://www.ycombinator.com/companies/drdroid/jobs/w45QcNV-product-engineer-assignment-mandatory Comments URL: https://news.ycombinator.com/item?id=48954074 Points: 0 # Comments: 0",
-      "pubDate": "2026-07-18T09:01:08+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
       },
       "category": "ai-agent"
     },
@@ -680,42 +716,6 @@
       "link": "https://simonwillison.net/2026/Jul/11/sqlite-utils/#atom-everything",
       "description": "Release: sqlite-utils 4.1 The first dot-release since 4.0 a few days ago, introducing a number of minor new features. sqlite-utils insert and sqlite-utils upsert now accept a --code option for providing a block of Python code (or a path to a .py file) that defines a rows() functi…",
       "pubDate": "2026-07-12T07:50:20+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "a1a78491d4be",
-      "title": "Quoting Nilay Patel",
-      "link": "https://simonwillison.net/2026/Jul/10/nilay-patel/#atom-everything",
-      "description": "The reality is to make augmented reality glasses, you need to put a camera next to your eyes that is continuously recording everything you see and processing that to put information over it. There is not another way around it. And there's certainly not a chip that can fit in the…",
-      "pubDate": "2026-07-11T01:05:26+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "d175f5f47bd8",
-      "title": "Quoting OpenAI",
-      "link": "https://simonwillison.net/2026/Jul/10/openai/#atom-everything",
-      "description": "[...] Work on web and mobile runs in the cloud. Work in the desktop app can also use local files and desktop apps with your permission. At launch, cloud Work conversations do not appear in desktop Work; desktop Work threads and local files remain on that computer. — OpenAI, tryin…",
-      "pubDate": "2026-07-10T09:05:57+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "6786dc227c1f",
-      "title": "The new GPT-5.6 family: Luna, Terra, Sol",
-      "link": "https://simonwillison.net/2026/Jul/9/gpt-5-6/#atom-everything",
-      "description": "OpenAI's latest flagship model hit general availability this morning, and comes in three sizes: Luna, Terra, and Sol (from smallest to largest). The new models are priced per 1M input/output tokens as Luna $1/$6, Terra $2.50/$15, Sol $5/$30. For comparison, the Claude Opus series…",
-      "pubDate": "2026-07-10T03:46:38+08:00",
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
