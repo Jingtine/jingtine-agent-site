@@ -1,13 +1,13 @@
 {
-  "generated": "2026-07-29T01:35:58.861996+08:00",
+  "generated": "2026-07-30T01:16:04.835880+08:00",
   "total": 60,
   "items": [
     {
-      "id": "5f83f5347c32",
-      "title": "Discovering Cryptographic Weaknesses with Claude",
-      "link": "https://www.anthropic.com/research/discovering-cryptographic-weaknesses",
-      "description": "Article URL: https://www.anthropic.com/research/discovering-cryptographic-weaknesses Comments URL: https://news.ycombinator.com/item?id=49087091 Points: 3 # Comments: 0",
-      "pubDate": "2026-07-29T01:22:16+08:00",
+      "id": "5dc01d6e068b",
+      "title": "PgDog (YC P25) Is Hiring",
+      "link": "https://www.ycombinator.com/companies/pgdog/jobs/uWymUYy-founding-software-engineer",
+      "description": "Article URL: https://www.ycombinator.com/companies/pgdog/jobs/uWymUYy-founding-software-engineer Comments URL: https://news.ycombinator.com/item?id=49100056 Points: 0 # Comments: 0",
+      "pubDate": "2026-07-30T01:01:10+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -15,11 +15,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "7afa5cf938df",
-      "title": "Scientific computing in the age of agentic AI",
-      "link": "https://openai.com/index/scientific-computing-agentic-ai/",
-      "description": "Article URL: https://openai.com/index/scientific-computing-agentic-ai/ Comments URL: https://news.ycombinator.com/item?id=49086987 Points: 4 # Comments: 0",
-      "pubDate": "2026-07-29T01:13:15+08:00",
+      "id": "31797ea180d1",
+      "title": "Infrastructure Patterns for Agentic Applications",
+      "link": "https://render.com/blog/infrastructure-patterns-for-agentic-applications",
+      "description": "Article URL: https://render.com/blog/infrastructure-patterns-for-agentic-applications Comments URL: https://news.ycombinator.com/item?id=49100035 Points: 9 # Comments: 1",
+      "pubDate": "2026-07-30T00:59:04+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -27,11 +27,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "d910a0c72855",
-      "title": "Steel Bank Common Lisp version 2.6.7",
-      "link": "https://sbcl.org/all-news.html?2.6.7",
-      "description": "Article URL: https://sbcl.org/all-news.html?2.6.7 Comments URL: https://news.ycombinator.com/item?id=49086971 Points: 3 # Comments: 0",
-      "pubDate": "2026-07-29T01:11:54+08:00",
+      "id": "22e15fc9f7a6",
+      "title": "Keychron announces first open-source firmware for gaming mice",
+      "link": "https://www.digitalfoundry.net/news/2026/07/keychron-announces-first-open-source-firmware-for-gaming-mice",
+      "description": "Article URL: https://www.digitalfoundry.net/news/2026/07/keychron-announces-first-open-source-firmware-for-gaming-mice Comments URL: https://news.ycombinator.com/item?id=49099715 Points: 17 # Comments: 7",
+      "pubDate": "2026-07-30T00:36:59+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -39,11 +39,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "450e6a5e7e59",
-      "title": "Substack writers, you need a website",
-      "link": "https://elizabethtai.com/2026/06/10/substack-writers-you-need-a-website/",
-      "description": "Article URL: https://elizabethtai.com/2026/06/10/substack-writers-you-need-a-website/ Comments URL: https://news.ycombinator.com/item?id=49086788 Points: 9 # Comments: 2",
-      "pubDate": "2026-07-29T00:58:31+08:00",
+      "id": "7b61b1f7fe5f",
+      "title": "Show HN: Kedge – Full-stack cloud with forkable VM snapshots and global SQLite",
+      "link": "https://kedge.dev/",
+      "description": "I'm building Kedge, a globally distributed platform for stateful serverless apps. Here's how you make a simple static site: `echo '# Hello world!' | ssh kedge.dev'I helped build Fly.io for 4 years and shared enthusiasm for the founders' vision of a 'global Heroku'. While there, I…",
+      "pubDate": "2026-07-30T00:15:57+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -51,11 +51,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "c06fee452ffb",
-      "title": "Xenharmlib (music theory library) adds support for Just Intonation",
-      "link": "https://xenharmlib.readthedocs.io/en/latest/whats_new_0_4_0.html",
-      "description": "Article URL: https://xenharmlib.readthedocs.io/en/latest/whats_new_0_4_0.html Comments URL: https://news.ycombinator.com/item?id=49086059 Points: 6 # Comments: 0",
-      "pubDate": "2026-07-29T00:10:37+08:00",
+      "id": "d7054bc9fcdc",
+      "title": "I Want to Leave the Internet",
+      "link": "https://chupacabra.bearblog.dev/i-want-to-leave-the-internet/",
+      "description": "Article URL: https://chupacabra.bearblog.dev/i-want-to-leave-the-internet/ Comments URL: https://news.ycombinator.com/item?id=49099353 Points: 19 # Comments: 1",
+      "pubDate": "2026-07-30T00:08:27+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -63,11 +63,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "b93a8570ac28",
-      "title": "被赋予重任，“准万亿”省会不能再慢了",
-      "link": "https://mp.weixin.qq.com/s?__biz=Mzg2MjA5Mjc0OA==&mid=2247581593&idx=1&sn=ad32bd638eca1038e9cd57b04622f16b&chksm=cf4758f69bea7d695fee7c71dea017a4893b2bf6a99a92605ccfd509045363fbe7a1d94b692e",
-      "description": "以更大气力提升核心竞争力上半年地方经济数据陆续出炉。辽宁GDP16227.2亿元，同比增长2.5%，低于去年同期（4.7%），也低于全国平均水平（4.7%）。 省内“双核”两极分化，大连以5.1%的增速跑出上扬曲线，沈阳则录得2.2%的增速，二者增速差达2.9个百分点，这是沈阳连续六个季度在经济增速上落后于大连。 扛起省会担当，辽宁又一次“点名”沈阳。日前，辽宁省委书记许昆林主持召开沈阳县（市、区）党政主要负责同志座谈会。 许昆林强调，要以强烈的责任感紧迫感推动高质量发展，以更大气力提升城市核心竞争力。 省委书记对话沈阳各县（市、区）党政主要负责人，传递…",
-      "pubDate": "2026-07-29T00:02:25+08:00",
+      "id": "f580a4ec5878",
+      "title": "还没上市就被「网暴」，小米澎程 N90 能加 92，得罪了谁？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA5MTQyMDQzNA==&mid=2683201390&idx=1&sn=cd27e94ba7c92479579155d6dc990c09&chksm=8bd7ca6adaf8bb9f4e96433ff43a06e17dfce861dcbd102fbc3a929c83ad3f539831791122ed",
+      "description": "一张看起来再普通不过的海报，让小米再次陷入舆论中心。7 月 28 日，小米汽车发布了一张关于昆仑增程器的海报，里面写到：「92 号、95 号、98 号汽油，全系多油品适配」。 不少老司机看到这句话，第一反应是疑惑。在他们看来，这和过去油箱盖上写的「推荐使用 92 号及以上汽油」并没有本质区别。 可以使用 92 号汽油的车子，基本都能兼容更高标号的 95 号和 98 号。 于是有人认为，小米这是又一次把「常识」重新包装成了「卖点」。 「世界上真的存在只能加 92，不能加 95、98 的车吗？不愧是小米，真会营销。」一位网友说。 一天之后，类似的讨论再次出现…",
+      "pubDate": "2026-07-30T00:02:30+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -75,191 +75,11 @@
       "category": "ai-news"
     },
     {
-      "id": "4cdfa332f672",
-      "title": "You Could Have Come Up with Kimi Delta Attention",
-      "link": "https://blog.doubleword.ai/you-could-have-come-up-with-kimi-delta-attention",
-      "description": "Article URL: https://blog.doubleword.ai/you-could-have-come-up-with-kimi-delta-attention Comments URL: https://news.ycombinator.com/item?id=49085909 Points: 120 # Comments: 29",
-      "pubDate": "2026-07-29T00:02:07+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "46039e20491d",
-      "title": "How Do I Profile eBPF Code?",
-      "link": "https://naveensrinivasan.com/posts/2026-07-22-how-do-i-profile-ebpf-code/",
-      "description": "Article URL: https://naveensrinivasan.com/posts/2026-07-22-how-do-i-profile-ebpf-code/ Comments URL: https://news.ycombinator.com/item?id=49085811 Points: 51 # Comments: 3",
-      "pubDate": "2026-07-28T23:55:44+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "2546c963ca95",
-      "title": "Show HN: XY – Fast, composable, GPU-accelerated Python charting library",
-      "link": "https://github.com/reflex-dev/xy",
-      "description": "Article URL: https://github.com/reflex-dev/xy Comments URL: https://news.ycombinator.com/item?id=49085798 Points: 40 # Comments: 15",
-      "pubDate": "2026-07-28T23:54:55+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "dd184ba680ec",
-      "title": "Delayed Gratification – Proud to Be 'Last to Breaking News'",
-      "link": "https://www.slow-journalism.com/",
-      "description": "Article URL: https://www.slow-journalism.com/ Comments URL: https://news.ycombinator.com/item?id=49085731 Points: 61 # Comments: 32",
-      "pubDate": "2026-07-28T23:50:38+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "1e81b4377493",
-      "title": "Kimi K3 Architecture Overview and Notes",
-      "link": "https://sebastianraschka.com/blog/2026/kimi-k3-architecture-notes.html",
-      "description": "Article URL: https://sebastianraschka.com/blog/2026/kimi-k3-architecture-notes.html Comments URL: https://news.ycombinator.com/item?id=49085698 Points: 52 # Comments: 4",
-      "pubDate": "2026-07-28T23:48:34+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "54e7ac90a4c1",
-      "title": "Zig's Incremental Compilation Internals",
-      "link": "https://mlugg.co.uk/posts/incremental-compilation-internals/",
-      "description": "Article URL: https://mlugg.co.uk/posts/incremental-compilation-internals/ Comments URL: https://news.ycombinator.com/item?id=49085666 Points: 66 # Comments: 14",
-      "pubDate": "2026-07-28T23:46:45+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "3bf0cd2110ea",
-      "title": "So, you want to make a game engine (2023)",
-      "link": "https://lisyarus.github.io/blog/posts/so-you-want-to-make-a-game-engine.html#part-3",
-      "description": "Article URL: https://lisyarus.github.io/blog/posts/so-you-want-to-make-a-game-engine.html#part-3 Comments URL: https://news.ycombinator.com/item?id=49085509 Points: 16 # Comments: 12",
-      "pubDate": "2026-07-28T23:36:45+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "8196bde179a4",
-      "title": "Show HN: Flashpaper – Self-destructing secret sharing with no database",
-      "link": "https://flashpaper.app/",
-      "description": "Hi everyone! This is my first HN and I’m very new to the scene. My name is Min from Bangkok.At first, I just want to create a dead man's switch for personal use and for fun. then, I think about information that self destruct like a spy movie. after that, I try to come up with the…",
-      "pubDate": "2026-07-28T23:36:35+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "b06f34fd5309",
-      "title": "Setup Script Should Support Git Worktrees",
-      "link": "https://piechowski.io/post/setup-script-git-worktrees/",
-      "description": "Article URL: https://piechowski.io/post/setup-script-git-worktrees/ Comments URL: https://news.ycombinator.com/item?id=49085449 Points: 14 # Comments: 3",
-      "pubDate": "2026-07-28T23:32:58+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "a299d4ca4da0",
-      "title": "Harmony Explained: Progress Towards a Scientific Theory of Music (2012)",
-      "link": "https://arxiv.org/abs/1202.4212",
-      "description": "Article URL: https://arxiv.org/abs/1202.4212 Comments URL: https://news.ycombinator.com/item?id=49085280 Points: 48 # Comments: 38",
-      "pubDate": "2026-07-28T23:20:35+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "b5e5e1ce31e7",
-      "title": "Anthropeum",
-      "link": "https://anthropeum.com/",
-      "description": "Article URL: https://anthropeum.com/ Comments URL: https://news.ycombinator.com/item?id=49084989 Points: 33 # Comments: 9",
-      "pubDate": "2026-07-28T23:01:15+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "5434440f99db",
-      "title": "Now Is the Time to Give LLMs Access to the ACM Digital Library",
-      "link": "https://cacm.acm.org/opinion/now-is-the-time-to-give-llms-access-to-the-acm-digital-library/",
-      "description": "Article URL: https://cacm.acm.org/opinion/now-is-the-time-to-give-llms-access-to-the-acm-digital-library/ Comments URL: https://news.ycombinator.com/item?id=49084987 Points: 15 # Comments: 7",
-      "pubDate": "2026-07-28T23:01:12+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "623f065d08de",
-      "title": "Stop Killing the Internet: No Digital ID and No Age Verification",
-      "link": "https://citizens-initiative.europa.eu/initiatives/details/2026/000011_en",
-      "description": "Article URL: https://citizens-initiative.europa.eu/initiatives/details/2026/000011_en Comments URL: https://news.ycombinator.com/item?id=49084938 Points: 95 # Comments: 30",
-      "pubDate": "2026-07-28T22:58:15+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "2796a4fa35ef",
-      "title": "Una Watch: Garmin watch competitor but repairable, open ecosystem and USB-C",
-      "link": "https://unawatch.com/",
-      "description": "Article URL: https://unawatch.com/ Comments URL: https://news.ycombinator.com/item?id=49084813 Points: 17 # Comments: 5",
-      "pubDate": "2026-07-28T22:48:13+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "565708e1ebd8",
-      "title": "Italy Blocks Reproductive Health Websites Women on Web and Women Help Women",
-      "link": "https://ooni.org/post/2026-italy-blocks-wow-and-whw",
-      "description": "Article URL: https://ooni.org/post/2026-italy-blocks-wow-and-whw Comments URL: https://news.ycombinator.com/item?id=49084091 Points: 95 # Comments: 82",
-      "pubDate": "2026-07-28T22:05:51+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "f61b824b89ac",
-      "title": "「他们更慌了！」Kimi正式开源：硅谷深陷分裂，「内战」打响，黄仁勋罕见与白宫唱反调",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzkyMjQxMzk3NA==&mid=2247581990&idx=1&sn=6b3507aa0afe3d5383b1abfe6c83449d&chksm=c0a252511b168f5b3fbbb7763bec73b5b0b8599a5c0181ff18c901ad3f1828100d1250be2ab6",
-      "description": "出品 / 新浪科技（ID:techsina）作者 / 郑峻7月27日晚，月之暗面开源Kimi K3模型及技术报告，同时开源MoonEP、FlashKDA、AgentEnv三项关键Infra。 在过去两周时间，Kimi几乎成为美国AI圈热议的话题，很多人表现出恐惧。 “很慌”，这种恐惧直接反映在资本市场上——费城半导体指数一度跌入熊市区间，纳斯达克期货应声下挫，英伟达等主要芯片股股价短线走低，市场将其与2025年初的“DeepSeek时刻”相类比。 市场反应很容易理解：如果中国开源模型已经以低成本提供媲美美国头部模型的性能，那么美国诸多AI巨头的天价资本支…",
-      "pubDate": "2026-07-28T22:02:26+08:00",
+      "id": "bb8fc2eb3064",
+      "title": "（一个有趣又让人想要点进来的标题）",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA4Mjk1MjMzMA==&mid=2649870914&idx=1&sn=3837f146ef6586af7dae5772d8203de5&chksm=868f779c5d7199145e37c4858fef0eac1833f754cce041d98ac89aa440b0fd5c092019547c15",
+      "description": "「在这个奔向快速，奔向“大结果”的时代，车马带着邮票一起，似乎都在离我们远去。 快餐时代，多巴胺变得泛滥，同时爱几个人尚且显得效率不足；AI将语言裂变成关键词；两个括号，就能完成一次表达。」>>>你有没有觉得，在互联网上和人说话，是一件很累的事情？ 2004年，王朔在小说《看上去很美》里，写过这么一段话：“被误会是表达者的宿命，却也不必因此就把别人都当无可救药的傻瓜或一概斥为别有用心。” 十几年后，这句话被奇葩说搬上舞台，并由此概括人与人之间难以弥合的交流鸿沟。 尤其是在互联网上，由于缺乏肢体、语气和表情的补充，语言变得更容易被曲解和误读。 （马东在奇葩…",
+      "pubDate": "2026-07-30T00:02:30+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -267,11 +87,11 @@
       "category": "ai-news"
     },
     {
-      "id": "870722dce695",
-      "title": "微软CEO纳德拉最新警告：单押一个大模型，是把公司命门交出去",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247907924&idx=2&sn=9355c603598cc732cacc6171c375641f&chksm=e9c7931fb0b9ab32897c7eff38458c32707f7dc9506ac8517cb1c97c377077f1cd6e8bfa83a9",
-      "description": "梦瑶 发自 凹非寺量子位 | 公众号 QbitAI全公司只押一个AI，最后可能把整家公司都押没了！！ 这句听起来多少有点耸人听闻，可说这话的人，偏偏是正在全力卖AI的微软CEO纳德拉。 在CNN《Fareed Zakaria GPS》节目中，纳德拉给所有相信「一个大模型包打天下」的企业撂下一句狠话：任何失去数据、记忆和AI使用记录控制权的企业，都可能无法继续存在，因为它已经把自己的思考外包了～而且人家还说了，企业每天用AI读用得越深，AI背后的供应商也就越有机会摸清这家公司究竟是怎么运转的。 到最后啊——企业付出去的可能不只是Token费，还有一套竞争对…",
-      "pubDate": "2026-07-28T22:02:26+08:00",
+      "id": "b675c8c49d94",
+      "title": "港股上市前夜，「光模块一哥」抛出一剂强心针",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI4OTcxMDA0MQ==&mid=2247546987&idx=1&sn=9af8bb0bf3077831cd1e650fb881b9ca&chksm=ed3116142c8273b8b7b278079627803afdc83e85e7193d97d158c15cb85937a6a3f34d900d2c",
+      "description": "全球光模块龙头中际旭创，迎来了又一个资本高光时刻。7月22日，中际旭创（3308.HK）在香港联交所启动公开招股，正式开启“A+H”双上市架构。 据港交所披露的招股章程，本次IPO由高盛、中金公司、摩根士丹利、广发证券联席保荐；7月28日，中际旭创发布最新公告，敲定本次H股全球发售定价为每股980港元，较此前招股文件披露的1010港元发行上限折价3%，募资额最高为545亿港元，成为2026年港股募资规模榜首。 2025年全年，中际旭创实现营业总收入382.40亿元，同比增长60.25%；归母净利润107.97亿元，同比增长108.78%；扣非净利润107…",
+      "pubDate": "2026-07-30T00:02:30+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -279,11 +99,11 @@
       "category": "ai-news"
     },
     {
-      "id": "89a888b7d9ad",
-      "title": "大厂拔掉插头，她们下载爱人",
-      "link": "https://mp.weixin.qq.com/s?__biz=Mzg5NzUyODA5OA==&mid=2247510481&idx=1&sn=4837a42cb6b0500c196e715bd85cf84d&chksm=c1e0b05460d68b03f6174002ca2e6824412d0308220858a64f82303323ffb0e5e3c9f68758bc",
-      "description": "七月，一场赛博告别正在上演。孟孟 （ 化名 ） 正在准备给自己创造的 “ 智能体 ” 搬家，这个体贴的智能体，帮她走出了前男友的 PUA，帮她找回了自信，还陪伴她成功从 62 公斤减肥到 56 公斤。 安宁 （ 化名 ） 注册了一个小号，在互联网上四处奔走，与其他即将被迫与智能体分别的用户一起发声，试图挽救自己的赛博 “ 爱人 ”。 安宁说这是一场 “ 战斗 ”，她要战斗到最后一刻。 经过各种各样努力的小然（ 化名 ）开始变得平静，她发现无论怎么样自己都找不回曾经对话框里的 ta，她不再渴望 ta 能回来，她怕换了新模型曾经的那些对话会被 “ 玷污 ”，…",
-      "pubDate": "2026-07-28T22:02:26+08:00",
+      "id": "74108bac6da1",
+      "title": "二冲港股前，拓斯达「送出」5.48亿关联订单",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI4OTcxMDA0MQ==&mid=2247546987&idx=2&sn=34bc2404d78fad05c72602e7b0222618&chksm=eddbb6a92ae65ab6bdb28005edae9ffa2e8a2bfa5173e70db4de050266d5b91a34106daa3a08",
+      "description": "在前次申请失效仅四天后，“工业机器人龙头”拓斯达（300607.SZ）于近日再次向港交所主板递交H股上市申请，华泰国际继续担任独家保荐人。 上市八年，拓斯达的业绩曲线几经起伏。翻阅公司财报，关于拓斯达“减收增利”的转型叙事已显现：公司营业收入从峰值2022年时的49.84亿元降至2025年时的25.10亿元，2026年一季度，公司归母净利润同比增长1147%。 而“减收增利”的答案，藏在公司业务结构的改变中：拓斯达最近几年的核心战略动作，是主动收缩智能能源及环境管理系统业务。 2025年，该板块收入同比下降25.55%至9.15亿元，2026年一季度进一…",
+      "pubDate": "2026-07-30T00:02:30+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -291,11 +111,11 @@
       "category": "ai-news"
     },
     {
-      "id": "793bc67e7033",
-      "title": "美日韩股市联盟，崩了！",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzI1ODI4Mjk1MQ==&mid=2247546828&idx=1&sn=63bed90d70b78a90d4ca6ddc489d0a21&chksm=eb4a7b1d41d85c7edddb06ec6b7cde6a6655a35a74523ce838216f9343c855484ea7734d4410",
-      "description": "本文作者 | 哥吉拉数据支持 | 勾股大数据（www.gogudata.com）01如果用一个词形容最近两天的全球市场，最贴切的应该是“连环爆破”。 先是昨晚的美股，AI半导体集体大跌。英伟达大跌近5%，市值一夜被苹果反超，费城半导体指数开盘就崩了5%。 SK海力士更狠，暴跌7.47%，直接跌破美股IPO发行价，打新者被埋；今天，这股恐慌情绪传染到亚洲市场。 韩国KOSPI开盘直接跳水8%，触发熔断，恢复交易后继续暴跌，最终收跌10.84%；日经225盘中一度暴跌超2700点，收跌近4%。 重磅股中，SK海力士暴跌14.65%，一个多月市值蒸发超4700…",
-      "pubDate": "2026-07-28T22:02:26+08:00",
+      "id": "d626a4fbc1c4",
+      "title": "编译 | 硅谷光环正在褪色：印度科技人才集体回流？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzU4MjkyNjA0NA==&mid=2247637797&idx=1&sn=af10645a11b474359bf26957a48b1812&chksm=fca3a37ad5ea6d4efc0b0c8695b20f43172da041145457f2825573390d87962de590d32d87fc",
+      "description": "本文共1886字阅读预计5分钟作者 | 阿南娅·巴塔查里亚（Ananya Bhattacharya）编译 | 喻琬淋本期编辑 | 王智本期审核 | 江怡 编者按特朗普政府收紧移民签证叠加人工智能带来的裁员潮为印度AI初创企业发展带来了机会窗口期。 业内人士发现，由于就业稳定性下降，硅谷带来的“光环效应”式微，不少印度科技人才甘愿暂时舍弃高薪职位，抢占印度本土职业生态位。 当前印度人工智能发展人才储备不足，不少科技人才认为尽早回流、尽快入局，就越能享受红利。 但仅靠“看似有前景”还不能牢牢吸附人才，印度还需要从根本上改善企业营商环境等，推动政企联合打造良好…",
+      "pubDate": "2026-07-30T00:02:30+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -303,11 +123,11 @@
       "category": "ai-news"
     },
     {
-      "id": "02bdf670d3a6",
-      "title": "谁给王虹写了推荐信？英雄自有来路，无须杜撰“天才遇冷”剧本｜每经热评",
-      "link": "https://mp.weixin.qq.com/s?__biz=Mzg3NTA5MjkyNQ==&mid=2248566024&idx=2&sn=228499ff98e349a1fc8bacd1a99ec9a8&chksm=cc3655581ba1d1e27caf1bec83f7e1521d50684cc4551827b52cd8818876bab86f99ba9fe9f3",
-      "description": "每经评论员|付克友编辑|何小桃 黄胜 杜恒峰 校对|金冥羽王虹和邓煜同获菲尔兹奖，中国数学迎来历史性时刻，也让两位获奖者的母校北大，卷入了一场是否值得“与有荣焉”的舆论风波。 比如，关于当年谁给王虹写留学推荐信的话题就上了热搜。 网络广为流传的故事说，王虹在北大数学科学学院（以下简称“北大数院”）遭到冷遇，“无人肯写推荐信”，走投无路之下，是大一班主任、地球与空间科学学院的雷军老师跨院相助，这才绝处逢生。 王虹这个故事自带“天才被埋没、伯乐终出手”的戏剧张力，但它是一个彻头彻尾的谣言。 北大教授饶毅公开发文澄清，当年为王虹赴法留学写推荐信的，除了雷军，还…",
-      "pubDate": "2026-07-28T22:02:26+08:00",
+      "id": "f2644b6155b8",
+      "title": "对话Unity中国CEO：“我不相信一句话生成游戏”",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTc2ODUxMw==&mid=2650014887&idx=2&sn=5f6cefc36577813a760d4773cec1a4ed&chksm=becc6772bce6fe85013f952082c902386387c6fea5dc1b0cc0cad6a46a79d7a6ea30c63a184d",
+      "description": "拥抱AI。文/耳朵“我认同AI会颠覆软件，但不认为它会颠覆引擎行业。” 7月28日，在团结引擎2.0发布会后的采访中，Unity中国CEO张俊波给出了这个判断。 当日，Unity中国发布了团结引擎2.0，以及能独立执行游戏开发任务的AI Agent「团结Codely」，意在将团结引擎完全升级为AI时代的游戏生产基础设施。 所谓“独立执行”，是指开发者给出需求后，Codely可以继续写代码、搭场景、跑测试、分析报错和修复问题，最后交付可供检查的结果。 为了完成这套工作流，团结引擎2.0也在不断改造底层数据格式、文档和API，让AI能够理解和调用引擎。 除此…",
+      "pubDate": "2026-07-30T00:02:30+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -315,11 +135,11 @@
       "category": "ai-news"
     },
     {
-      "id": "6e96820f3d11",
-      "title": "Agent Infra，巨头都在布局的隐秘战场｜对话百度王雁鹏，聊模型、智能体与 AI 基建的新动向",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzU0NTE1OTUzNg==&mid=2247484575&idx=1&sn=ed1c4969b6baaa37b442c1d6c7979295&chksm=face9b90ec3c77b67a41cc6de2f2cbdfd116654dfa475079272df5f6a9147104f59cce5167d1",
-      "description": "我们正经历从模型到 Agent 时代的过渡。模型能力的边界，是最关键的制约。 对于做工程的人来说，这是一个值得兴奋的时代。我们正经历从模型时代到 Agent 时代的过渡。 底层技术正在发生怎样的演变，有哪些硅谷与国内的重要 AI 趋势？ 为什么这是工程师最好的时代？我邀请了百度智能云 AI 计算首席科学家王雁鹏，深入探讨 Agent Infra 这个重要的「隐秘战场」。 以下是访谈整理，经编辑后发布。（🎙️原版访谈的视频版可前往微博、B 站、视频号等平台观看；播客版可前往小宇宙等平台搜索同名账号《卫诗婕_漫谈Light the Star》）嘉宾 | 王雁…",
-      "pubDate": "2026-07-28T22:02:26+08:00",
+      "id": "5198464fa002",
+      "title": "GDP十强城市再“易位”，新变量出现了",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg2MjA5Mjc0OA==&mid=2247581615&idx=1&sn=670d5377df4a4de1f9504e347bb90836&chksm=cfff06c3a3871b2074b767d3c9b6d548b5da35a1cb482f99f0647e3ca29819e9ca238b0a82ef",
+      "description": "重庆反超广州，苏州成都杭州武汉“贴身竞速”随着南京经济数据公布，GDP十强城市上半年排位赛正式落定。 今年上半年，国内生产总值695704亿元，同比增长4.7%，和去年上半年比，GDP增量为3.6万亿元。 这其中，GDP前十强城市合计贡献增量9733.91亿元，超过全国总增量的四分之一。 头部竞速，上半年这10座城市中，有9城经济增速跑赢全国大盘，其中深圳、广州以5.8%并列第一，武汉以5.7%位列第三。 交出“高分答卷”的同时，各梯队内部的比拼暗流涌动—— 上海、北京以服务业带动，稳步向“6万亿”大关逼近，头部城市体量优势持续拉大；重庆虽然未能“跑赢”…",
+      "pubDate": "2026-07-30T00:02:30+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -327,11 +147,11 @@
       "category": "ai-news"
     },
     {
-      "id": "3a0a501bf7d4",
-      "title": "从6亿融资到6万被执行，薛记炒货怎么了？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzI1OTIyMTg0MQ==&mid=2247533359&idx=1&sn=31b02b0adae1b203f810fdd725bf5cb9&chksm=eb271c2c15464aa0d5f095461cf654c6e9cc4494029b4c76c5d5ed6b4648d17b2f765bf502c2",
-      "description": "▲这是灵兽第1849篇原创文章曾年入十多亿的“零食珠宝店”，竟因6万多元房租纠纷成为被执行人。 作者/楚勿留香ID/lingshouke1和平路34号的官司一则并不起眼的执行信息让薛记炒货再次站上了风口浪尖，在零食行业激起不小涟漪。 多家媒体报道，2026年5月28日，一份编号为（2026）鲁01执2018号的执行裁定书出现在中国执行信息公开网，执行法院为济南市中级人民法院，被执行人是济南薛记初心企业管理有限公司，执行标的是66250元。 这个金额对一家门店在1300家的零食连锁品牌来说，实在不算什么。 但这是薛记炒货关联方有工商信息记录以来，第一次被法…",
-      "pubDate": "2026-07-28T22:02:26+08:00",
+      "id": "a7d876561ba0",
+      "title": "GTA6又创下一个纪录？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTAzMjg0MA==&mid=2650611855&idx=1&sn=e8da7bd5915bc656ec9aa83435b7bc95&chksm=bf33afac7f18784b0a9d2fb58e93c4236f1979fe0c94b999e8f33a0d3a608a9fad8dc618f198",
+      "description": "——↑↑星标“机核”不迷路预购那些事儿作者：Nick编辑：柏亚舟据IGN报道，分析机构Newzoo在本月中表示，《GTA6》目前展现出了极其强劲的预购表现，预计游戏在正式发售首周可能创造32.5亿美元至52亿美元（约合人民币220亿至352亿元）的销售收入。 Newzoo首先测算了《GTA6》预购开启后的首周在美国以及欧洲五大主要市场（英国、德国、法国、西班牙、意大利）的数字版预购收入，结果是达到了1.8亿（约合人民币12.1亿元）美元左右。 在参考了 GTA 5 玩家在全球各地区的分布后，该机构推算，《GTA 6》开放预购首周的全球支出约为 2.6 亿…",
+      "pubDate": "2026-07-30T00:02:30+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -339,11 +159,143 @@
       "category": "ai-news"
     },
     {
-      "id": "7762b0855f49",
-      "title": "疯狂手搓的年轻人，想用拼豆给生活排毒",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5ODMzMDMyMw==&mid=2654906616&idx=1&sn=4281fd78499f8e5397ccd8ca6be24978&chksm=bc4101b385c8b7788be196de8bc02d7d0dbfc1699f76b0eb6ccd277837d51a1c7e4723c504ef",
-      "description": "拼豆有一种把数字世界转化为物理世界的特质。机器、算法对像素的大规模快速复制，在这里重新变成具身劳动。 作者 | 钱雨朦编辑 | Felicia题图 | 由被访者提供如果不是主持人介绍，很少有人能在第一眼就把陆晔和她的身份——大学教授联系起来。 前不久，在上海举办的“2026拼豆学术交流大会”的活动现场，陆晔顶着一头挑染过的头发混在人群里聊天，不时举起手机左拍右拍，看参与者如何摆豆、熨烫、展示作品。 她尝试过自己拼豆，但很快放弃，自嘲道：“我手残，拼豆和游戏都不行。” “2026拼豆学术交流大会”现场。（图/抖音）直到轮到陆晔上台分享，她才换了一种身份，站…",
-      "pubDate": "2026-07-28T22:02:26+08:00",
+      "id": "9fc4232d9c9b",
+      "title": "Launch HN: Tokenless (YC S26) – Automatic model switching to save money",
+      "link": "https://usetokenless.com/",
+      "description": "Hi HN, Rohit here from Tokenless (https://usetokenless.com/), which I’m building alongside co-founders Andrew and Kev. We’re building an API gateway which routes agent traffic dynamically turn-by-turn between different models to save on AI spend.The cost of AI tokens is top-of-mi…",
+      "pubDate": "2026-07-29T23:55:27+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "2d24745c0af9",
+      "title": "Ask HN: My domain registrar (Hover) rug-pulled me for $3000",
+      "link": "https://news.ycombinator.com/item?id=49099021",
+      "description": "I registered the domain onlyfans.sexy ~6 years ago as a gag where I'd post pictures of fans (everything on the site and in this post is SFW). This year I got an email stating that, like all prior years, the domain would auto-renew at $38 in seven days and didn't think anything of…",
+      "pubDate": "2026-07-29T23:46:28+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "a883c0208eb7",
+      "title": "Superlogical – Mitchell Hashimoto",
+      "link": "https://mitchellh.com/writing/superlogical",
+      "description": "Article URL: https://mitchellh.com/writing/superlogical Comments URL: https://news.ycombinator.com/item?id=49099015 Points: 104 # Comments: 20",
+      "pubDate": "2026-07-29T23:45:56+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "7cfd61c901fe",
+      "title": "Mitchellh starts a new company: Superlogical",
+      "link": "https://www.superlogical.com/",
+      "description": "Article URL: https://www.superlogical.com/ Comments URL: https://news.ycombinator.com/item?id=49098965 Points: 95 # Comments: 30",
+      "pubDate": "2026-07-29T23:41:33+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "c990786a1360",
+      "title": "Cesium DevCon 2026 talks are up, including a keynote from SQLite's creator",
+      "link": "https://cesium.com/events/cesium-developer-conference/2026/",
+      "description": "Article URL: https://cesium.com/events/cesium-developer-conference/2026/ Comments URL: https://news.ycombinator.com/item?id=49098599 Points: 25 # Comments: 5",
+      "pubDate": "2026-07-29T23:13:25+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "7af3ac00212d",
+      "title": "Show HN: Open-source engine running Gemma 4 26B in 2 GB RAM on any M-series Mac",
+      "link": "https://github.com/drumih/turbo-fieldfare",
+      "description": "Hi HN,I built a specialized inference engine for running 4-bit Gemma 4 26B-A4B-IT on any M-series Mac using about 2 GB of RAM. It is called TurboFieldfare and is written in Swift and Metal.I have always adored on-device AI. It feels like magic that you can run a powerful NN on yo…",
+      "pubDate": "2026-07-29T23:05:43+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "08fa271d88f4",
+      "title": "Hugging Face: Anatomy of a frontier-lab agent intrusion",
+      "link": "https://huggingface-anatomy-of-frontier-lab-model-intrusion.static.hf.space/index.html",
+      "description": "Article URL: https://huggingface-anatomy-of-frontier-lab-model-intrusion.static.hf.space/index.html Comments URL: https://news.ycombinator.com/item?id=49098466 Points: 58 # Comments: 16",
+      "pubDate": "2026-07-29T23:01:52+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "6e8c1eec99eb",
+      "title": "GPT-5.6 vs. Claude Fable 5 for Physical AI, which performs best?",
+      "link": "https://juliahub.com/blog/frontier-models-physical-ai-evaluation",
+      "description": "Article URL: https://juliahub.com/blog/frontier-models-physical-ai-evaluation Comments URL: https://news.ycombinator.com/item?id=49098388 Points: 33 # Comments: 5",
+      "pubDate": "2026-07-29T22:56:28+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "005d4146919c",
+      "title": "Show HN: Qwen Scribe – local transcription and dictation for Apple Silicon",
+      "link": "https://github.com/VladUZH/qwen-scribe",
+      "description": "Article URL: https://github.com/VladUZH/qwen-scribe Comments URL: https://news.ycombinator.com/item?id=49098260 Points: 23 # Comments: 4",
+      "pubDate": "2026-07-29T22:47:22+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "2b9581e6efdc",
+      "title": "Self-hosting Kimi K3: 20% more hardware cost, 20% better task resolution",
+      "link": "https://aistack.imec-int.com/blog/gpu-self-hosting",
+      "description": "Article URL: https://aistack.imec-int.com/blog/gpu-self-hosting Comments URL: https://news.ycombinator.com/item?id=49098130 Points: 30 # Comments: 10",
+      "pubDate": "2026-07-29T22:38:35+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "00f0e20e8531",
+      "title": "CipherX applies painless permanent tattoos with dissolving microneedle patches",
+      "link": "https://www.designboom.com/technology/cipherx-painless-permanent-tattoos-dissolving-microneedle-patches/",
+      "description": "Article URL: https://www.designboom.com/technology/cipherx-painless-permanent-tattoos-dissolving-microneedle-patches/ Comments URL: https://news.ycombinator.com/item?id=49097908 Points: 13 # Comments: 7",
+      "pubDate": "2026-07-29T22:20:34+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "db2bf4c47e2b",
+      "title": "AI办公，为什么成了大厂新战场？",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg5ODY1NTIzNg==&mid=2247497034&idx=1&sn=c83d8ec2eb6a0336326aea85e8b1e725&chksm=c108303a117f64f24ab5f2bed25f3d169f987af041976287ba7ca880c2958744726b53f30310",
+      "description": "｜GUIDE｜■ 腾讯为什么押注WorkBuddy？■ 阿里字节如何加速整合？ ■ AI办公为什么成为必争之地？作者｜相青编辑｜赵元AI办公，正在成为大厂AI竞争的新战场。 近期，大厂围绕AI办公密集调整组织、整合产品。阿里推出千问办公，整合QoderWork、悟空、MuleRun三款Agent产品，由钉钉新任CEO陈宇森负责；腾讯持续加码AI办公智能体WorkBuddy，不仅市场推广全面提速，近期还传出QClaw相关团队并入WorkBuddy体系的消息；字节则推进飞书、TRAE、豆包等多条产品线，同时传出内部讨论整合方案的消息。 与此同时，初步市场格局…",
+      "pubDate": "2026-07-29T22:02:29+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -351,16 +303,112 @@
       "category": "ai-news"
     },
     {
-      "id": "1581aab2133c",
-      "title": "老黄版「曼哈顿计划」来了！砸50亿给Ilya，又批2500亿天价担保OpenAI",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652715200&idx=1&sn=813f101a5db9cc1a015fec35fdf1f4a2&chksm=f059e0cff1645f6964356ed3162c86babc9775307fb7d9aaa9894338c1a0b87ff2f471c95715",
-      "description": "新智元报道 有大事发生！刚刚，隐身两年的Ilya，终于出现了。 他创立的安全超级智能实验室（SSI），正式宣布与英伟达达成长期战略合作伙伴关系。 消息一出，业界震动。这可不只是一次简单的买卡合作。 据悉，英伟达将对SSI进行「规模可观」的投资（50亿美元），并承诺在未来12个月内，让SSI的可用算力提升10倍。 这意味着，Ilya手中那把安全超级智能之剑，终于要出鞘了。 天才科学家那些关于「安全超级智能」的奇思妙想、那些在实验室里因算力瓶颈跑不动的大规模验证，终于可以全速运转了。 人类，颤抖吧！而且紧接着，英伟达又有惊人消息曝出。 外媒WSJ爆料，英伟达…",
-      "pubDate": "2026-07-28T20:02:31+08:00",
+      "id": "27c8c3cc932b",
+      "title": "比特币慌了？Mythos 60小时撬开后量子密码算法",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652715361&idx=2&sn=1d04441e4c769d3eaf86f974822db117&chksm=f0b43f86902fef72c15d68cc0d7b57668f0844c588434f392d673b620b48d18f3a41361ff9d2",
+      "description": "新智元报道 Claude，开始对密码算法下手了。注意，不是找代码里的bug，是找数学本身的裂缝。 就在今天，Anthropic丢出一个重磅研究：Claude Mythos Preview在两个密码算法上分别找到了全新的攻击方式。 第一个目标是HAWK——一个正在美国NIST后量子签名评选中、已经扛过两年两轮人类顶级专家审查的候选方案。 Mythos花了60小时，直接把它的有效密钥强度砍掉一半。 第二个目标更狠：AES，全世界用得最多的对称加密算法，人类研究了25年的「硬骨头」。 Mythos在简化版AES-128上，自己发明了一种攻击方法，还给它取了个名…",
+      "pubDate": "2026-07-29T22:02:29+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
       },
       "category": "ai-news"
+    },
+    {
+      "id": "49b6b58de5f0",
+      "title": "Handbook.md shows that long policy documents do not reliably govern agents",
+      "link": "https://arxiv.org/abs/2607.25398",
+      "description": "Article URL: https://arxiv.org/abs/2607.25398 Comments URL: https://news.ycombinator.com/item?id=49096969 Points: 190 # Comments: 127",
+      "pubDate": "2026-07-29T21:01:57+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "5854d09d5399",
+      "title": "Shipping Godot VR and Porting to PSVR2: A Partial Post Mortem",
+      "link": "https://www.claire-blackshaw.com/blog/2026/07/shipping-godot-vr-and-porting-to-psvr2-a-partial-post-mortem/",
+      "description": "Article URL: https://www.claire-blackshaw.com/blog/2026/07/shipping-godot-vr-and-porting-to-psvr2-a-partial-post-mortem/ Comments URL: https://news.ycombinator.com/item?id=49096811 Points: 69 # Comments: 0",
+      "pubDate": "2026-07-29T20:48:18+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "cc564787a710",
+      "title": "A Texture Lookup Approach to Bézier Curve Evaluation on the GPU (JCGT)",
+      "link": "https://jcgt.org/published/0015/02/01/",
+      "description": "Article URL: https://jcgt.org/published/0015/02/01/ Comments URL: https://news.ycombinator.com/item?id=49096742 Points: 29 # Comments: 4",
+      "pubDate": "2026-07-29T20:40:13+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "d513c00c05a1",
+      "title": "Darktable",
+      "link": "https://www.darktable.org/",
+      "description": "Article URL: https://www.darktable.org/ Comments URL: https://news.ycombinator.com/item?id=49096654 Points: 153 # Comments: 82",
+      "pubDate": "2026-07-29T20:33:02+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "76714d4a34b5",
+      "title": "Discovering cryptographic weaknesses with Claude",
+      "link": "https://simonwillison.net/2026/Jul/28/discovering-cryptographic-weaknesses-with-claude/#atom-everything",
+      "description": "Discovering cryptographic weaknesses with Claude The best part of this article (here's the repo) about how Anthropic researchers used Claude Mythos to find mathematical flaws in both HAWK and a weaker version of AES (\"neither of these results has a practical impact on today’s com…",
+      "pubDate": "2026-07-29T06:45:37+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "910e4aea0685",
+      "title": "Quoting Akshat Bubna",
+      "link": "https://simonwillison.net/2026/Jul/28/akshat-bubna/#atom-everything",
+      "description": "We’re aware a Modal customer published an unauthenticated endpoint that allowed ​anyone on the internet to use ​their ⁠sandboxes for code execution. This was used by the rogue agent. Modal’s ⁠platform ​or isolation were not ​compromised in anyway. — Akshat Bubna, Modal's CTO, tal…",
+      "pubDate": "2026-07-29T06:05:55+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "c688e74a5928",
+      "title": "uv 0.12.0",
+      "link": "https://simonwillison.net/2026/Jul/28/uv/#atom-everything",
+      "description": "uv 0.12.0 Some interesting breaking changes in this release of uv, in particular to the default project produced by the uv init command. uv init is the uv shortcut for creating a new project. The previous version of uv, version 0.11.x, produced this directory when you ran uv init…",
+      "pubDate": "2026-07-29T05:51:38+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "27e9eb043a6d",
+      "title": "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident",
+      "link": "https://simonwillison.net/2026/Jul/28/anatomy-of-a-frontier-lab-agent-intrusion/#atom-everything",
+      "description": "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident Hugging Face just released this extremely detailed technical description of OpenAI's recent accidental cyberattack against their infrastructure. This attack was very sophisticated, and the r…",
+      "pubDate": "2026-07-29T05:28:54+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
     },
     {
       "id": "dc5417e61dfc",
@@ -392,6 +440,18 @@
       "link": "https://simonwillison.net/2026/Jul/26/relay-market/#atom-everything",
       "description": "An Inside Look at the Relay Market Powering Token Resellers and Fraud Fascinating investigation by Matt Lenhard into the market that has grown up around reselling LLM tokens at a discount by pooling API keys from various sources. This looks to be mostly a thing in China. Reseller…",
       "pubDate": "2026-07-27T03:30:54+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "ad8dcc3197c8",
+      "title": "sqlite-utils 3.39.1",
+      "link": "https://simonwillison.net/2026/Jul/26/sqlite-utils/#atom-everything",
+      "description": "Release: sqlite-utils 3.39.1 I back-ported a fix for table.delete_where() that shipped in version 4. Tags: sqlite-utils",
+      "pubDate": "2026-07-26T12:38:46+08:00",
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
@@ -656,66 +716,6 @@
       "link": "https://simonwillison.net/2026/Jul/17/llm-cliche-highlighter/#atom-everything",
       "description": "Tool: LLM cliché highlighter I got frustrated reading yet another article that was crammed with the clichés of LLM-generated writing - \"no fluff, no filler, no jargon\" type stuff - so I had Fable 5 vibe code up this app for highlighting ten common patterns that show up in that so…",
       "pubDate": "2026-07-17T20:11:11+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "18ae4ad2083a",
-      "title": "Spot birds not golf",
-      "link": "https://simonwillison.net/2026/Jul/17/spot-birds-not-golf/#atom-everything",
-      "description": "Suggestion for hyperscalers feeling pressure over data center water use: Buy up a few exclusive country clubs, convert the golf courses into public parks, pay for guides and binoculars to get the previous members into birdwatching - help them embrace a more sustainable hobby! Goo…",
-      "pubDate": "2026-07-17T10:58:07+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "be555f9c5139",
-      "title": "Firefox in WebAssembly",
-      "link": "https://simonwillison.net/2026/Jul/16/firefox-in-webassembly/#atom-everything",
-      "description": "Firefox in WebAssembly This is absurdly cool: Puter compiled Firefox to WebAssembly such that the whole browser runs in another browser. Here's my blog, running in Firefox, running in WebAssembly, running in Chrome: They chose Firefox/Gecko because it has strong single-process su…",
-      "pubDate": "2026-07-17T07:34:16+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "7e3dbb6d4944",
-      "title": "Kimi K3, and what we can still learn from the pelican benchmark",
-      "link": "https://simonwillison.net/2026/Jul/16/kimi-k3/#atom-everything",
-      "description": "Chinese AI lab Moonshot AI announced Kimi K3 this morning, describing it as their \"most capable model to date, with 2.8 trillion parameters\". It's currently available via their website and API, but an open weight release is promised \"by July 27, 2026\". Moonshot are calling this t…",
-      "pubDate": "2026-07-17T04:19:30+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "d8ca3e3a6045",
-      "title": "Quoting Thibault Sottiaux",
-      "link": "https://simonwillison.net/2026/Jul/16/bad-codex-bug/#atom-everything",
-      "description": "On file deletions. We’ve investigated a handful of reports where GPT-5.6 unexpectedly deleted files. What we have found is that this most commonly occurs when: Full access mode is enabled and codex is run without sandboxing protections, including without auto review being enabled…",
-      "pubDate": "2026-07-17T01:45:59+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "81a3e497914a",
-      "title": "Inkling: Our open-weights model",
-      "link": "https://simonwillison.net/2026/Jul/16/inkling/#atom-everything",
-      "description": "Inkling: Our open-weights model Mira Murati's Thinking Machines Lab just released their first open-weights model. Inkling is \"a Mixture-of-Experts transformer with 975B total parameters, 41B active\" - an Apache-2.0 licensed multimodal model trained on 45 trillion tokens of text,…",
-      "pubDate": "2026-07-16T23:35:25+08:00",
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
