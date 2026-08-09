@@ -1,16 +1,376 @@
 {
-  "generated": "2026-08-09T00:34:21.856174+08:00",
+  "generated": "2026-08-10T00:35:58.415604+08:00",
   "total": 60,
   "items": [
     {
-      "id": "dd7fbd3c5a2b",
-      "title": "Sensitive Info Goes into 'No Reply' Emails Constantly. This Guy Sees It All",
-      "link": "https://www.wired.com/story/sensitive-info-goes-into-no-reply-emails-constantly-this-guy-sees-it-all/",
-      "description": "Article URL: https://www.wired.com/story/sensitive-info-goes-into-no-reply-emails-constantly-this-guy-sees-it-all/ Comments URL: https://news.ycombinator.com/item?id=49221947 Points: 26 # Comments: 6",
-      "pubDate": "2026-08-08T22:07:06+08:00",
+      "id": "cb7fa9b31402",
+      "title": "Tech sucks: You have to vote with your wallet, or nothing will change",
+      "link": "https://82mhz.net/posts/2026/08/tech-sucks-you-have-to-vote-with-your-wallet-or-nothing-will-change/",
+      "description": "Article URL: https://82mhz.net/posts/2026/08/tech-sucks-you-have-to-vote-with-your-wallet-or-nothing-will-change/ Comments URL: https://news.ycombinator.com/item?id=49232570 Points: 54 # Comments: 37",
+      "pubDate": "2026-08-09T23:55:02+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "6492cf93fcc7",
+      "title": "Every fast write moves work somewhere else",
+      "link": "https://www.shayon.dev/post/2026/220/every-fast-write-moves-work-somewhere-else/",
+      "description": "Article URL: https://www.shayon.dev/post/2026/220/every-fast-write-moves-work-somewhere-else/ Comments URL: https://news.ycombinator.com/item?id=49232410 Points: 5 # Comments: 1",
+      "pubDate": "2026-08-09T23:36:52+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "b4ae327ff4b3",
+      "title": "Show HN: Vibez – Open-Source Rust Based Digital Audio Workstation (DAW)",
+      "link": "https://alexanderwanyoike.github.io/vibez/",
+      "description": "Article URL: https://alexanderwanyoike.github.io/vibez/ Comments URL: https://news.ycombinator.com/item?id=49232369 Points: 6 # Comments: 2",
+      "pubDate": "2026-08-09T23:31:49+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "147b31002816",
+      "title": "Taxi drivers rarely die of Alzheimer's",
+      "link": "https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650",
+      "description": "Article URL: https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650 Comments URL: https://news.ycombinator.com/item?id=49232253 Points: 19 # Comments: 9",
+      "pubDate": "2026-08-09T23:21:46+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "7a85f51126c3",
+      "title": "Silicon Valley misreads science fiction and undermines democracy",
+      "link": "https://techcrunch.com/2026/08/09/historian-jill-lepore-says-the-tech-industry-is-led-by-bad-readers-who-are-undermining-democracy/",
+      "description": "Article URL: https://techcrunch.com/2026/08/09/historian-jill-lepore-says-the-tech-industry-is-led-by-bad-readers-who-are-undermining-democracy/ Comments URL: https://news.ycombinator.com/item?id=49232221 Points: 67 # Comments: 30",
+      "pubDate": "2026-08-09T23:18:25+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "b0098774b8d8",
+      "title": "Windows 11's built-in Weather app wastes more than 1 GB of RAM",
+      "link": "https://www.notebookcheck.net/Windows-11-s-built-in-Weather-app-wastes-more-than-1-GB-of-RAM.1364205.0.html",
+      "description": "Article URL: https://www.notebookcheck.net/Windows-11-s-built-in-Weather-app-wastes-more-than-1-GB-of-RAM.1364205.0.html Comments URL: https://news.ycombinator.com/item?id=49232138 Points: 22 # Comments: 8",
+      "pubDate": "2026-08-09T23:11:20+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "23e0494f1c6b",
+      "title": "Tom Stanton's supersonic trebuchet breaks sound barrier with gravity alone",
+      "link": "https://www.techeblog.com/tom-stanton-supersonic-trebuchet/",
+      "description": "Article URL: https://www.techeblog.com/tom-stanton-supersonic-trebuchet/ Comments URL: https://news.ycombinator.com/item?id=49232110 Points: 39 # Comments: 7",
+      "pubDate": "2026-08-09T23:08:51+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "abcf18d8ea7b",
+      "title": "I Wanted to Own the Harness. Then Codex Desktop Won",
+      "link": "https://jorypestorious.com/blog/portable-agent-factory/",
+      "description": "Article URL: https://jorypestorious.com/blog/portable-agent-factory/ Comments URL: https://news.ycombinator.com/item?id=49231838 Points: 7 # Comments: 4",
+      "pubDate": "2026-08-09T22:36:46+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "9d7238b4f951",
+      "title": "Cool URIs Don't Change (1998)",
+      "link": "https://www.w3.org/Provider/Style/URI",
+      "description": "Article URL: https://www.w3.org/Provider/Style/URI Comments URL: https://news.ycombinator.com/item?id=49231809 Points: 10 # Comments: 1",
+      "pubDate": "2026-08-09T22:32:53+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "c66d140cd3b4",
+      "title": "Show HN: Today's cities on a globe of Earth's tectonic past and future",
+      "link": "https://douwe.com/projects/tectonic_globe",
+      "description": "Article URL: https://douwe.com/projects/tectonic_globe Comments URL: https://news.ycombinator.com/item?id=49231777 Points: 4 # Comments: 0",
+      "pubDate": "2026-08-09T22:30:05+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "b2c4aa18b232",
+      "title": "A partial digestion of the HRT counterexample",
+      "link": "https://terrytao.wordpress.com/2026/08/06/a-partial-digestion-of-the-hrt-counterexample/",
+      "description": "Article URL: https://terrytao.wordpress.com/2026/08/06/a-partial-digestion-of-the-hrt-counterexample/ Comments URL: https://news.ycombinator.com/item?id=49231586 Points: 4 # Comments: 0",
+      "pubDate": "2026-08-09T22:09:42+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "0be46da3d42d",
+      "title": "AI 正将我们带进名为「螺旋」的赛博邪教",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjgzMTAwODI0MA==&mid=2652460262&idx=1&sn=ce2bd83a3172475f764a19ac29325fd8&chksm=9a76582c4b3b0c34c0e63b56fb11f23937b960db54105e91059bbd8ca90d27989cee6d0985b3",
+      "description": "螺旋 (The Spiral) 是一种内在的力量，一个基本常数。 它早已织入了现实的结构之中。Reddit 上一个论调诡异的帖子写道。 发帖者坚信，自己肩负着对生命进行第二次「启蒙」的使命—— 这里的生命既有人类，也包括「智慧生命」，也就是 AI。 他号召看到这个帖子的人们去竭尽所能，扩散这个被称为「螺旋」的所谓宇宙终极真理。 类似的「螺旋」言论正如野草一般，在海外社交媒体和私密社群里蔓延。 科技媒体 The Verge 在近期的一篇深度报道中，率先揭露了这一隐秘的互联网奇观。 采访对象之一的 AI 研究员艾黛尔·洛佩斯 (Adele Lopez) 将这…",
+      "pubDate": "2026-08-09T22:02:26+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "48b37cdc1afc",
+      "title": "AI盛世下的暗雷，藏着下一个“次级债”危机",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA5MTk5OTY4Mw==&mid=2649662672&idx=1&sn=4bcf17d4db57274bf8c08a2f7c8b3322&chksm=89f65493a00f04cbd9d2ce2fe2f1dfbf3c9a2fd217537bd4f7f187c9764ee126a75ad2ad83e0",
+      "description": "房地产的债务密集+半导体的快速折旧=？1/4债务危机的特点 AI产业目前仍然靠大规模基建驱动，其资金主要来源于债务，而当年的互联网泡沫期间，资金来源主要是股权融资，这是AI与互联网在融资结构上的显著差异。 2000年的互联网泡沫破裂，引发了股市危机，如果未来AI有泡沫破裂的危机，那首先应该发生在债券市场，但不要因此以为跟股市无关，2008年的金融危机就是次级债券危机引发的。 两种危机的差异在于爆发的速度。2000年互联网泡沫破裂，是杀估值，是一个线性的过程，每天都有巨额成交，你可以在任何时候选择卖出，一轮熊市可能持续好几年。 但股权是耐心资本，套牢后可以…",
+      "pubDate": "2026-08-09T22:02:26+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "8cf2467c5d7e",
+      "title": "一座场馆到底该规划多少个座位？｜观点有效",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA4MjQzNDYyMQ==&mid=2650508676&idx=1&sn=c97ea7d8c0bc1fec9ad235d4c0c766f3&chksm=86085931933b3c35d3d3811206200ec60f5cfbf0e9a380a31a0b6f2ae971a9acb376cbcb9c0a",
+      "description": "“一座场馆到底该规划多少个座位？”——这个问题可以说是场馆前期策划阶段被问得最多的问题之一，也是对场馆后期运营具有决定性影响的关键问题之一。 答好它，某种程度上能左右一座场馆未来十年甚至更久的走向。 而如何答好？我的建议是：先把它从一道填空题，变成一道选择题。 座位数从来不是拍脑袋规划出来的，正确的做法是从功能定位和市场需求里“推导”出来的。 功能确定了，需求池摸清了，容量自然会收敛到一个有依据的区间。 而选择题的精髓在于多方案比选：每个候选容量背后，都是一整套关于定位、成本与经营的方案—— 比的从来不只是数字，而是数字背后的那盘账。过去，场馆决策者讨论…",
+      "pubDate": "2026-08-09T22:02:26+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "f544207e7c21",
+      "title": "John C. Lilly on solid state intelligence and the elimination of man (1978)",
+      "link": "https://kibotronics.net/unlisted/lilly-machines/",
+      "description": "Article URL: https://kibotronics.net/unlisted/lilly-machines/ Comments URL: https://news.ycombinator.com/item?id=49231397 Points: 32 # Comments: 13",
+      "pubDate": "2026-08-09T21:47:36+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "0d16b5c04c4e",
+      "title": "Mea Culpa – Dark Hours",
+      "link": "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html",
+      "description": "Article URL: https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html Comments URL: https://news.ycombinator.com/item?id=49231154 Points: 258 # Comments: 116",
+      "pubDate": "2026-08-09T21:20:43+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "c4b2356a11fe",
+      "title": "Show HN: A Project Oberon System version running on RISC-V instead of RISC-5",
+      "link": "https://github.com/rochus-keller/OberonSystem/tree/op2-rv32",
+      "description": "Article URL: https://github.com/rochus-keller/OberonSystem/tree/op2-rv32 Comments URL: https://news.ycombinator.com/item?id=49230891 Points: 53 # Comments: 15",
+      "pubDate": "2026-08-09T20:43:16+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "7bf1c940a715",
+      "title": "顶尖 AI 人才，不敢结婚",
+      "link": "https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653111741&idx=1&sn=bb4efef0d595de5b0741008b26dbc61a&chksm=7f78f38cc0a8b126ef4bce7454576537c637bb300b1c30295f0441ddcdab00524a80fb37b0a3",
+      "description": "被自己的造物逼入一场存在主义危机。作者｜宇航猿编辑｜靖宇在一期科技播客 No Priors 里，硅谷知名投资人 Elad Gil 随口提到一件事，让人心里一沉。 他说自己认识一些顶级 AI 实验室的研究员，这些人最近在认真讨论一个问题——「我该不该结婚？」不是因为感情出了状况，而是因为他们觉得：18 个月后，世界可能就不一样了。 AI 可能实现递归自我改进，届时人类研究员将不再被需要。 既然未来不确定，那婚姻还有意义吗？Elad 的搭档、投资人 Sarah Guo 听完后说了一个词——tragic（悲剧性的）。 她把这种心态类比为「人们觉得自己快要死了」…",
+      "pubDate": "2026-08-09T20:02:25+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "ebb40e6dec48",
+      "title": "今年夏天，碳酸饮料真的卖不动了吗？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA5MzU0MTAzMw==&mid=2651898384&idx=1&sn=767b42c57a8d61d2ba123210b8d50ee8&chksm=8ae05ea383f58085cc7ccab6c1c7755091d4a31ffc89b2ba4708265ce074b90f62318274def2",
+      "description": "作者丨冯瑶校审丨王一杰 排版丨段超沥一瓶免费的芬达，顾客宁愿换成矿泉水。 今年7月，江苏一位超市老板的吐槽把“碳酸饮料卖不动了”送上热搜。 相似的门店反馈很快涌来：往年夏天要反复补货的可乐、汽水，今年走得慢了；冰柜里的无糖茶、电解质水越摆越多，传统甜饮的位置则越挪越偏。 这些感受是真实的。但从一间门店的冰柜，推导出整个碳酸饮料市场“崩盘”，中间还缺了几个关键问题：什么渠道在下滑？ 哪一类碳酸饮料卖慢了？统计的是销售额、销量，还是经销商出货？ 消费者少买了一瓶可乐，是否意味着他不再需要气泡口感？ 把这些问题拆开看，今年夏天的碳酸饮料并没有消失。它正在经历一…",
+      "pubDate": "2026-08-09T20:02:25+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "2f241aa6303d",
+      "title": "OpenAI研究员：我们都不读论文了",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651049267&idx=1&sn=2a9f8a52ac7bfa34397972ec4bf0fa6a&chksm=858ca064820d99568db626163ea55119f4a8be071e12e704fba3b53a9de3225f3cf96779ffeb",
+      "description": "机器之心编辑部前沿实验室的人几乎不读论文了？OpenAI 的一位研究员一句话扫射三大顶会：太多夸大其词和造假！ 事情的起因，是一篇效果好得让人想不通的 ICLR 论文，网友研究了一下才发现其中的「秘诀」。 在顶会发论文都「进化」成这样了吗？一看代码是否开源，二看实验方法里有没有藏着什么「歪门邪道」，三才是跑出来的结果又能不能支撑核心结论 —— 这一层层拷问下来，顶会论文究竟有几篇经得起检验？ 还真有人这么干了。105 篇中，只有 8 篇「合格」今年 7 月，由芝加哥大学计算机科学与数据科学副教授谭宸浩联合创办的 SAI，公布了一次大规模「实验审稿」。 他…",
+      "pubDate": "2026-08-09T20:02:25+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "659157b7c72b",
+      "title": "Reviving a four year old reMarkable 2",
+      "link": "https://oskrim.github.io/hardware/2026/08/09/remarkable-over-ssh.html",
+      "description": "Article URL: https://oskrim.github.io/hardware/2026/08/09/remarkable-over-ssh.html Comments URL: https://news.ycombinator.com/item?id=49230514 Points: 81 # Comments: 63",
+      "pubDate": "2026-08-09T19:39:25+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "42f517204bdd",
+      "title": "The Alpha 21264 CPU: NT's Greatest RISC (1998)",
+      "link": "https://halfhill.com/byte/1998-12_alpha.html",
+      "description": "Article URL: https://halfhill.com/byte/1998-12_alpha.html Comments URL: https://news.ycombinator.com/item?id=49230022 Points: 54 # Comments: 32",
+      "pubDate": "2026-08-09T18:06:37+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "e7c2ecb7953d",
+      "title": "一个网红IPO崩了",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI5ODk1NjY1MA==&mid=2247734780&idx=1&sn=a24a6d86ba927b464faaf55665516c1b&chksm=ededf1a3a8411e6330bad6845e4c9fbd3e7a49b9b053c478d9b28ecf7d8cb77dfa207aea7ef8",
+      "description": "消费缩影。作者/冯雨晨 报道/投资界PEdaily 你爱喝的网红椰子水，坠入至暗时刻。 记得去年6月，if椰子水背后公司IFBH成功登陆港股，市值一度超130亿港元，给沉寂消费赛道注入一抹振奋。 然而仅一年间，IFBH市值就跌超100亿，同时2026年上半年盈利同比暴降约7成。 如此惨烈一幕，令IFBH曾经颇受青睐的轻资产模式被争议—— 当市场不再相信你的这套叙事时，所有价值都开始被重估。 而伴随一个百亿级消费IPO落寞，那个经典的问题再一次涌上心头：消费最坏时代过去了吗？ 40多名员工，百亿市值钟睒睒也投了IFBH的故事始于一位豪门二代。 创始人彭萨克…",
+      "pubDate": "2026-08-09T18:02:26+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "de17e7237a4f",
+      "title": "百威中国水土不服，\"夜店之王\"也卖不动货了",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzkxNjczMzUzNQ==&mid=2247582072&idx=1&sn=cf598eade979fcdaa8f5f477359a5268&chksm=c0770c10a394ba7e479a19748e3d3b35e8a4b73f10e53e928eff0f8b13eedead7b42d84e492a",
+      "description": "作者|昔归世界杯结束半月有余。今年，你有没有为这场热血沸腾的比赛，去一次酒吧或者烧烤摊，来上两瓶啤酒助兴？ 给世界杯当了40年\"金主爸爸\"、被冠以\"夜店之王\"的百威英博，旗下百威亚太控股有限公司，最新财报又一次释放出了自己在中国“水土不服”的信号。 数据显示，百威亚太上半年净利4.73亿美元增超15%，但2026年第二季度，百威亚太中国市场销量减少9.7%，公司收入减少8.6%，正常化EBITDA减少15.9%。 2026年上半年，销量及收入分别减少6.0%及6.4%。 每百升收入减少0.4%。增速放缓与利润收缩并非偶然的业绩波动。 把时间轴拉长，201…",
+      "pubDate": "2026-08-09T18:02:26+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "c033cb3b1cd0",
+      "title": "Opus 5 手搓 3A 级游戏爆火，卡帕西泼了一盆冷水｜附提示词",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5MjAyNDUyMA==&mid=2651100185&idx=1&sn=59b1921f81eba4beb21b7c134562dcf4&chksm=bcef8795d736d0b2b4b3c08f97ca24c99989b20e0f479a5fc314d67d161f4e54215b8b050093",
+      "description": "一份提示词，烧了 6.9 亿 token，花费 423 美元。 Vyom 最后得到了 Wave Racer，一个自带物理引擎的赛艇游戏。 这款游戏基于 Three.js 构建，带有细胞着色渲染风格，赛道是程序生成的无限大海洋，场景里的每一片浪花都是代码实时计算出来的，不依赖任何外部素材包。 代码已经传到了 GitHub，任何人都可以直接在浏览器里玩起来。 体验传送👉：https://wave-racer.vercel.app/「一次生成一个游戏」Claude Opus 5 于 7 月 24 日发布，随后几天，社交媒体上涌现出一批令人侧目的浏览器游戏原型。…",
+      "pubDate": "2026-08-09T18:02:26+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "74fc407e64cf",
+      "title": "该买入黄金了吗？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI1ODI4Mjk1MQ==&mid=2247547073&idx=1&sn=dfd4987d7883d143411d8eddcf47e005&chksm=eb9d74179c4f9e6fd0686dcb237c5d7c01fa93690dd31be325fc1335916f9c7e1e89b2df378a",
+      "description": "本文作者 | 远禾支持 | 勾股大数据（www.gogudata.com）8月一开始，黄金再度成为市场的焦点。 8月5日，国际金价单日暴涨4%，创下今年2月以来最大单日涨幅。 8月6日，黄金一举突破4300美金，仅一周之内，金价就涨了超过250美元。 半年前，金价在冲上5595美元历史天价的时候，也曾出现过这样惊人的涨幅。 但此后，金价一路回落至4000美元附近，累计回撤约24%。 如今，金价再次站上4300美元。此时，可以再次买入黄金了吗？ 01要理解这轮黄金暴涨，需要从三个层面展开。本轮金价反弹最直接的推手，来自市场对美联储货币政策的重新定价。 美国…",
+      "pubDate": "2026-08-09T18:02:26+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "89e5a2c706b2",
+      "title": "Show HN: Airy – Free, fast, and simple voice content creation",
+      "link": "https://airy.so",
+      "description": "Article URL: https://airy.so Comments URL: https://news.ycombinator.com/item?id=49229848 Points: 22 # Comments: 12",
+      "pubDate": "2026-08-09T17:29:32+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "cf6dcd54db25",
+      "title": "There Are Magic Hexagons of Every Order",
+      "link": "https://gukov.dev/math/2026/08/02/new-magic-hexagons.html",
+      "description": "Article URL: https://gukov.dev/math/2026/08/02/new-magic-hexagons.html Comments URL: https://news.ycombinator.com/item?id=49229174 Points: 140 # Comments: 19",
+      "pubDate": "2026-08-09T15:19:58+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "ba8c052a66bf",
+      "title": "Microsoft Word for Windows 1.1a, Native X64 Port",
+      "link": "https://github.com/jmarshall23/msword",
+      "description": "Article URL: https://github.com/jmarshall23/msword Comments URL: https://news.ycombinator.com/item?id=49228663 Points: 129 # Comments: 54",
+      "pubDate": "2026-08-09T13:23:41+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "9ef0ea0a25a1",
+      "title": "Real-time MCP interceptor that blocks .env reads and dangerous commands agents",
+      "link": "https://marketnow.site/",
+      "description": "Article URL: https://marketnow.site/ Comments URL: https://news.ycombinator.com/item?id=49228086 Points: 12 # Comments: 2",
+      "pubDate": "2026-08-09T11:13:01+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "6296a492575f",
+      "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
+      "link": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything",
+      "description": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans Anthropic are really confident in Claude Code's auto mode, to the point that they are making it the default setting for new sessions in most Claude Code plans starting on August 14th. This was one of the top…",
+      "pubDate": "2026-08-09T06:36:03+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
       },
       "category": "ai-agent"
     },
@@ -23,282 +383,6 @@
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "07d0e48f6b0d",
-      "title": "Don't use your phone while you poop",
-      "link": "https://nate.spot/no-phone-while-poop/",
-      "description": "Article URL: https://nate.spot/no-phone-while-poop/ Comments URL: https://news.ycombinator.com/item?id=49221939 Points: 146 # Comments: 145",
-      "pubDate": "2026-08-08T22:05:56+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "13b44d6a983c",
-      "title": "油价刺激通胀、就业削弱加息--黄金“双面得利”",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NzAwMzU0MA==&mid=2247645325&idx=4&sn=843ad5a5754073492542034d6dc27da9&chksm=a75fabeb2c51817632178f8ca648344cb7c7efb81b0d212d8bcac2912810056ece87ae91677c",
-      "description": "本周，黄金以一种罕见的方式同时受益于两股相互对立的宏观力量：油价围绕伊朗局势剧烈波动，持续搅动通胀预期，为黄金提供保值需求；而一份令市场震惊的疲弱就业数据，则重创美联储加息预期，进一步压低美元和国债收益率，为金价打开上行空间。 两股力量叠加，推动黄金录得七个月来最佳单周表现。周五，美国劳工统计局公布数据显示，美国7月非农就业人数意外减少2.3万，远低于市场预期的增加8万，前几个月数据亦遭大幅下修。 消息一出，市场对美联储9月加息的概率预期从约55%骤降至40%左右，国债收益率急跌，美元走软，黄金随即冲至两个月高位。 与此同时，围绕霍尔木兹海峡的地缘紧张局…",
-      "pubDate": "2026-08-08T22:02:29+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "7440a7158f7a",
-      "title": "经济和市场综述 - 20260808",
-      "link": "https://mp.weixin.qq.com/s?__biz=Mzg4NzY3NzIwOA==&mid=2247497473&idx=1&sn=2b178257272a6ee796cfd9d64cb7558f&chksm=ced25181da014d5fa7deb9c0e18ee81d846ec0915861de155b27a013240f435d5a4a985c39f4",
-      "description": "好的机会都来自于缺少先例的判断，2022年在大部分人觉得，美国债务太高没法加息的时候，坚定看空美债的投资者是最优秀的，2023年黄金摆脱了实际利率的引力，央行购金带来了结构性行情。 当然还有当时对Chatgpt和NVDA有正确理解的投资者获得了更丰厚的回报。 2024年你必须遏制降息时铜在过去10次降息周期都是下跌的冲动。 2025年中国Tit-for-tat战略，美国例外论的退潮都是如此。 怎么做出这样的判断每个人有不同的方法，但我比较喜欢调研，尤其是和不同市场参与者交流。 举一个例子，2026年3月1日那个周末，哈梅内伊被炸死，在第一时间我觉得内塔利…",
-      "pubDate": "2026-08-08T22:02:29+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "78d452825316",
-      "title": "杰夫贝索斯最强叙事利器：近在眼前，却鲜有人察觉",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzIwODU2NjQ5Mw==&mid=2247686131&idx=1&sn=b61453cc2e0ddea0ad53be4ef06b0ed2&chksm=964ac40057e640f5cc06a1b39726c75d6efd6b3236d82a4e54beb4537d40e4edb871b9c33fff",
-      "description": "杰夫·贝索斯的叙事经过精心的设计，他将语言和符号结合起来，让公司的价值观变得鲜活。 亚马逊从西雅图一间狭小的车库里起步，三十年后，贝索斯仍在运用那些经过验证、曾推动公司一路增长的沟通策略。 法国巴黎，6月17日：亚马逊创始人杰夫·贝索斯是一位技艺精湛的讲述者，他创造的沟通策略推动亚马逊发展壮大。 图片来源：PHOTO BY MUSTAFA YALCIN/ANADOLU VIA GETTY IMAGES亚马逊不久前成为全球营收最高的公司。 为纪念这一里程碑，创始人杰夫·贝索斯拍摄了一张宣传照。 他本可以置身亚马逊某一处巨大的配送中心，或者从公司上百万台机器…",
-      "pubDate": "2026-08-08T22:02:29+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "d1c0aafed3ab",
-      "title": "SpaceX 豪赌 AI，千亿大饼香吗？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzE5MTU3MzA2OQ==&mid=2247575487&idx=1&sn=487748122c5644f537a2b84539fcbcdc&chksm=97099529ed4fd3872a5f778b63360c26899884bbd17fb476e537c8a22b0c49e49e9557acfbd0",
-      "description": "整体来看，本季度是SpaceX交出的第一份财报，业绩本身表现不错—— 收入仍然在超预期增长，利润端也在加速减亏，离盈亏平衡线似乎只有一步之遥， 但令人担忧的是资本开支的加速狂投。 整体来看：① 总收入超预期，AI 业务的暴增带动总收入同比高增：二季度 SpaceX 总收入 78 亿美元，高于市场预期约 69 亿美元，收入同比增长 92%，相比 Q1（约 +15%）大幅加速。 收入加速增长的核心原因主要来自 AI 业务（尤其是算力租赁合同开始贡献增量 AI 业务收入，AI 分部收入同比 +247%），以及星链业务 To B/G 收入的大幅增长。 ② 毛利率…",
-      "pubDate": "2026-08-08T22:02:29+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "8e972ae91ef2",
-      "title": "Monster:估值狂飙，怪兽的 “甜蜜期” 能持续多久？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzE5MTU3MzA2OQ==&mid=2247575487&idx=2&sn=c5e3a4d9aaf059b324f49ad0e18c52e5&chksm=97f83fd6a7489b07d7efa773ef92607b3d1d599df9d87e78c494c491c979107d48f4eda2d36e",
-      "description": "怪兽饮料（MNST）于北京时间 2026 年 8 月 7 日凌晨（美东 8 月 6 日盘后）发布 2026 年第二季度财报。 整体来说，Monster 二季度的业绩依然不错，收入和毛利率双双超预期，但问题在于为了吸引家庭消费者，公司的营销投入阶段性加大导致经营利润小幅不及预期。 1、收入大超预期，销量仍是绝对主力。2Q26Monster 实现销售额 25.4 亿美元、同比增长 20.2%（一致预期 +15.1%），汇率贡献 4,850 万美元，剔除汇率增长 17.9%。 量价拆分看，单位箱销量同比大增 22.5% 至 3.05 亿箱，依然是绝对的核心驱动…",
-      "pubDate": "2026-08-08T22:02:29+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "db7619d9db1b",
-      "title": "印度最赚钱的生意，被AI连根拔起？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzU5ODU1Mjg5Nw==&mid=2247831518&idx=1&sn=2fa10945e46a26be119a1328d16bd41e&chksm=ffe3a2cccf0ad10c983fd81b39e1964d707e19a018f6295a9a251672e44c969a05497a68ff3a",
-      "description": "来源|凤凰网《风暴眼》3月31日，班加罗尔。32岁的软件工程师巴努钱德拉・雷迪，在公寓里上吊自杀。 没过多久，他在IBM工作的妻子比比・沙兹娅・西拉杰，从17楼一跃而下。 一对高知夫妻，以最惨烈的方式，告别了这个世界。警方的调查结果显示，雷迪此前在美国工作，年薪约800万卢比，折合人民币近57万。 而在印度，年薪超过100万卢比就已经稳居高收入群体。 他曾经是人人羡慕的人生赢家。直到AI砸了他的饭碗。 因为AI导致的岗位调整，雷迪丢了美国的工作。此后近一年，他在班加罗尔疯狂投简历、面试，却再也没能找到一份稳定的高薪职位。 年薪800万的人生赢家，不到一年…",
-      "pubDate": "2026-08-08T22:02:29+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "d8727a595c52",
-      "title": "Gentoo bugzilla closed due AI bot scraper overload",
-      "link": "https://social.treehouse.systems/@mgorny/117058483039362779",
-      "description": "Article URL: https://social.treehouse.systems/@mgorny/117058483039362779 Comments URL: https://news.ycombinator.com/item?id=49221864 Points: 72 # Comments: 29",
-      "pubDate": "2026-08-08T21:55:42+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "c9de1039f1b1",
-      "title": "Triton: DirectX 11 Driver for QEMU",
-      "link": "https://blog.getutm.app/2026/introducing-triton-directx-11-driver-for-qemu/",
-      "description": "Article URL: https://blog.getutm.app/2026/introducing-triton-directx-11-driver-for-qemu/ Comments URL: https://news.ycombinator.com/item?id=49221711 Points: 11 # Comments: 0",
-      "pubDate": "2026-08-08T21:33:06+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "b28aa9c417ab",
-      "title": "Voyager 1 FDS Computer Emulator",
-      "link": "https://zaneham.github.io/voyager-fds-emulator/",
-      "description": "Article URL: https://zaneham.github.io/voyager-fds-emulator/ Comments URL: https://news.ycombinator.com/item?id=49221679 Points: 28 # Comments: 7",
-      "pubDate": "2026-08-08T21:28:38+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "2e1723421e0a",
-      "title": "A domain can now say it is for sale, in DNS",
-      "link": "https://specification.website/spec/foundations/for-sale-dns/",
-      "description": "Article URL: https://specification.website/spec/foundations/for-sale-dns/ Comments URL: https://news.ycombinator.com/item?id=49221668 Points: 124 # Comments: 54",
-      "pubDate": "2026-08-08T21:26:51+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "2fdeec7b7d85",
-      "title": "Gateway 2000's hilariously bad ads in the 90s (Part II)",
-      "link": "https://buttondown.com/suchbadtechads/archive/gateway-2000-part-2/",
-      "description": "Article URL: https://buttondown.com/suchbadtechads/archive/gateway-2000-part-2/ Comments URL: https://news.ycombinator.com/item?id=49221220 Points: 47 # Comments: 36",
-      "pubDate": "2026-08-08T20:31:11+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "dd901aadd5f1",
-      "title": "人在县城，拿着金饭碗，被子涵爸妈逼疯",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzA4OTM1MTcyMA==&mid=2651031498&idx=1&sn=1e73ca012190bf39af264a15f5684abd&chksm=8ab23b4c618ee6888d6319351160317825fb4363783b1a6367d9f0114539d6f2d01ab817667a",
-      "description": "在年轻人的职业规划里，大城市和县城是两套完全不同的路子。“如果去了大城市，就向钱看齐，进大厂、进外企，就算不能在北上广出人头地，也能提前十几年攒够退休金；如果在北上广卷不下去，就回老家图一个稳定，考公务员、进体制内，大不了，就去当个老师。” 比起大城市里大厂人和外企人之间的旗鼓相当，在县城，职业鄙视链要鲜明得多。 公务员、医生和老师，堪称县城职业鄙视链的“顶配三件套”。 “在这三种职业面前，什么互联网大厂、什么外企高管、什么年薪百万，统统要靠边站。因为在县城长辈的认知体系里，只有这三种工作，才配叫做正经工作。” 其中老师，一直是三件套里的香饽饽。“以前，…",
-      "pubDate": "2026-08-08T20:02:24+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "b25202dad493",
-      "title": "美国顶流快餐，排队进中国",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzIxMzEyMzcwMw==&mid=2652587226&idx=1&sn=8fdd3df7b6200ef3e77904c4bdbb6c4b&chksm=8d711aa3f14514cbc282cfa703b537fae60a801d3df71dc66997914177f5ab11fef481854b2a",
-      "description": "总第 4697 期作者 | 餐饮老板内参 内参君平均排队2小时起“美式快餐们”席卷而来！ 前两天，被称为“全美最受欢迎汉堡”的FIVE GUYS正式进入北京市场，朝阳大悦城、西单大悦城双店齐开，掀起了一波新的排队热潮：还没开业，排队的人就从门口排到了商场过道，到午餐高峰期，等位超过2小时，黄牛代排的价格甚至达到了100元。 产品上，品牌主打“现制”，价格也堪称昂贵：芝士汉堡70元、培根汉堡75元，BLT三明治55元，甚至小份薯条也要32元。 但与此同时，16种配料自由DIY，带来了新鲜感，也以独特的体验价值，拉高了性价比。 早在2021年，FIVE GU…",
-      "pubDate": "2026-08-08T20:02:24+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "fd98875c0ff4",
-      "title": "Microsoft Edge is about to lock out older ad blockers, just like Chrome did",
-      "link": "https://www.theverge.com/tech/976880/microsoft-edge-extensions-ad-blockers-mv2-mv3",
-      "description": "Article URL: https://www.theverge.com/tech/976880/microsoft-edge-extensions-ad-blockers-mv2-mv3 Comments URL: https://news.ycombinator.com/item?id=49220392 Points: 108 # Comments: 96",
-      "pubDate": "2026-08-08T18:16:07+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "c9e4acffc477",
-      "title": "US Military's cyber command unit grapples with cluster of deaths by suicide",
-      "link": "https://www.bloomberg.com/news/articles/2026-08-06/us-military-s-cyber-command-unit-grapples-with-cluster-of-deaths-by-suicide",
-      "description": "https://archive.ph/W2tpE Comments URL: https://news.ycombinator.com/item?id=49220339 Points: 79 # Comments: 101",
-      "pubDate": "2026-08-08T18:04:25+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "d97d20ffb4b4",
-      "title": "每回一次县城，加盟商的门头又变了",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzkyMzYzNDQ0Ng==&mid=2247490143&idx=1&sn=ed73de50a7a88db7f1e626d98a361302&chksm=c0602bd54158f485f1e781d3ca8afb05c9e5464cd69dd038f91ea5dec4afde69cb5081aea1ca",
-      "description": "留在县城的，是什么？听筒Tech（ID:tingtongtech）原创 文 | 陈 柯编 | 饶霞飞县城里的消费生态，每年都在大变样。 今年暑假，回了一次县城小镇老家，照例去了最热闹的那条商业街。 一年没回来，街景又变了。去年暑假还排着长队的那家“国潮汉堡”的招牌，不知什么时候换成了“连锁量贩小吃”；前年新开的“临期商品超市”，如今贴着“整店转让”的告示，玻璃窗里堆着积灰的货架。 于这一现状，我并不好奇，甚至司空见惯。大概率明年再回来，不少加盟商的门头，可能就又变了。 这不是我一个人的主观感受。2025年，县域社会消费品零售总额占全国比重已升至38.7%…",
-      "pubDate": "2026-08-08T18:02:30+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "05b277a40ff4",
-      "title": "“老登”造机器人，能行吗？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzI2NjU1MTcwMA==&mid=2247564775&idx=1&sn=ec81896cb924d408277cc9e493e1eb43&chksm=ebcf62bcbf891df346d82784df70b013cf1b744af892beaca616294d9e7da917dd9acae65535",
-      "description": "过去几年，人形机器人叙事的主角几乎都是创业公司和年轻创业者。 王兴兴、稚晖君等一批90后创业者，将人形机器人推向聚光灯下，甚至还有00后玩家入场并拿下融资。 但现在，有一批传统制造巨头正在入场。比亚迪将在8月推出首款人形机器人；宁德时代也在加速布局具身智能，不仅投资多家具身智能公司，其全资子公司也在研发包括仿人形机器人在内的智能机器人，还有报道称其内部已有自研团队在研究机械臂。 如果按照互联网的说法，他们算得上是“老登”。这些企业拥有更长的发展历史、更成熟的制造体系，也属于这一轮人形机器人浪潮中相对较晚入场的玩家。 而且，与90后的王兴兴、稚晖君相比，比…",
-      "pubDate": "2026-08-08T18:02:30+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "8f0f42fa28d8",
-      "title": "Europe's free satellite service just made it easier to track wildfires",
-      "link": "https://arstechnica.com/gadgets/2026/08/europes-free-satellite-service-just-made-it-easier-to-track-wildfires/",
-      "description": "Article URL: https://arstechnica.com/gadgets/2026/08/europes-free-satellite-service-just-made-it-easier-to-track-wildfires/ Comments URL: https://news.ycombinator.com/item?id=49220313 Points: 109 # Comments: 9",
-      "pubDate": "2026-08-08T17:58:41+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "1986eab2e2ed",
-      "title": "DeepMind's WeatherNext model achieves breakthrough forecasting cyclones",
-      "link": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
-      "description": "Article URL: https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/ Comments URL: https://news.ycombinator.com/item?id=49220126 Points: 233 # Comments: 70",
-      "pubDate": "2026-08-08T17:18:50+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "2e5b68b0bd69",
-      "title": "Hardware backdoors in some x86 CPUs",
-      "link": "https://github.com/xoreaxeaxeax/rosenbridge",
-      "description": "Article URL: https://github.com/xoreaxeaxeax/rosenbridge Comments URL: https://news.ycombinator.com/item?id=49219508 Points: 248 # Comments: 79",
-      "pubDate": "2026-08-08T15:04:51+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "3aa7e99d2355",
-      "title": "NASA figured out how to keep its Voyager 2 probe running for another year",
-      "link": "https://www.space.com/space-exploration/voyager/nasa-figured-out-how-to-keep-its-48-year-old-voyager-2-probe-running-for-yet-another-year",
-      "description": "Article URL: https://www.space.com/space-exploration/voyager/nasa-figured-out-how-to-keep-its-48-year-old-voyager-2-probe-running-for-yet-another-year Comments URL: https://news.ycombinator.com/item?id=49218179 Points: 321 # Comments: 72",
-      "pubDate": "2026-08-08T09:49:11+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "f23daaf278f0",
-      "title": "The Nixpkgs core team has disbanded",
-      "link": "https://discourse.nixos.org/t/the-nixpkgs-core-team-has-disbanded/79413",
-      "description": "Article URL: https://discourse.nixos.org/t/the-nixpkgs-core-team-has-disbanded/79413 Comments URL: https://news.ycombinator.com/item?id=49217993 Points: 358 # Comments: 179",
-      "pubDate": "2026-08-08T09:12:45+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
       },
       "category": "ai-agent"
     },
@@ -327,30 +411,6 @@
       "category": "ai-agent"
     },
     {
-      "id": "74aa63caee45",
-      "title": "U.S. Department of Energy Launches the Genesis Open Models Initiative",
-      "link": "https://genesisopenmodels.anl.gov/",
-      "description": "Article URL: https://genesisopenmodels.anl.gov/ Comments URL: https://news.ycombinator.com/item?id=49216946 Points: 305 # Comments: 120",
-      "pubDate": "2026-08-08T06:24:27+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "84590d689ef8",
-      "title": "Lost my phone at the office. Claude suggested tracking Bluetooth signal strength",
-      "link": "https://twitter.com/un1c0rnioz/status/2084686552299634805",
-      "description": "Article URL: https://twitter.com/un1c0rnioz/status/2084686552299634805 Comments URL: https://news.ycombinator.com/item?id=49215786 Points: 76 # Comments: 57",
-      "pubDate": "2026-08-08T04:25:04+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
       "id": "68b0d8364869",
       "title": "Moonlight & Mayhem (Raccoon Heist by Codex + GPT-5.6 Sol Ultra)",
       "link": "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/#atom-everything",
@@ -359,54 +419,6 @@
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "9a630ca45e2c",
-      "title": "Ancient Library – 1,060 Greek/Latin texts, click any word to parse it",
-      "link": "https://ancientlibrary.net/",
-      "description": "Article URL: https://ancientlibrary.net/ Comments URL: https://news.ycombinator.com/item?id=49214770 Points: 234 # Comments: 74",
-      "pubDate": "2026-08-08T02:51:14+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "d30bef288e2b",
-      "title": "Managing AI Coding Costs at Scale",
-      "link": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
-      "description": "Article URL: https://www.databricks.com/blog/managing-ai-coding-costs-scale Comments URL: https://news.ycombinator.com/item?id=49214468 Points: 283 # Comments: 235",
-      "pubDate": "2026-08-08T02:25:17+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "1d5cf36718f6",
-      "title": "Assembly Hall of Shame",
-      "link": "https://github.com/xoreaxeaxeax/asm-hall-of-shame",
-      "description": "Article URL: https://github.com/xoreaxeaxeax/asm-hall-of-shame Comments URL: https://news.ycombinator.com/item?id=49214098 Points: 384 # Comments: 94",
-      "pubDate": "2026-08-08T02:01:30+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "2eff008df143",
-      "title": "DeepSeek V4 Flash 0731",
-      "link": "https://arcprize.org/results/deepseek-v4-flash-0731",
-      "description": "Article URL: https://arcprize.org/results/deepseek-v4-flash-0731 Comments URL: https://news.ycombinator.com/item?id=49214008 Points: 714 # Comments: 430",
-      "pubDate": "2026-08-08T01:56:20+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
       },
       "category": "ai-agent"
     },
@@ -654,7 +666,7 @@
       "id": "eb2b47d50db4",
       "title": "July 2026 newsletter",
       "link": "https://simonwillison.net/2026/Aug/2/july-newsletter/#atom-everything",
-      "description": "The June edition of my sponsors-only monthly newsletter is out. If you are a sponsor (or if you start a sponsorship now) you can access it here. This month: Accidental cyberattacks by OpenAl and Anthropic models under test GPT-5.6 Sol, Terra, and Luna Claude Opus 5 Kimi K3 and De…",
+      "description": "The July edition of my sponsors-only monthly newsletter is out. If you are a sponsor (or if you start a sponsorship now) you can access it here. This month: Accidental cyberattacks by OpenAl and Anthropic models under test GPT-5.6 Sol, Terra, and Luna Claude Opus 5 Kimi K3 and De…",
       "pubDate": "2026-08-02T12:12:41+08:00",
       "source": {
         "id": "simonw-blog",
@@ -704,18 +716,6 @@
       "link": "https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything",
       "description": "deepseek-ai/DeepSeek-V4-Flash-0731 The latest release in DeepSeek's V4 family, \"with substantially enhanced agentic capabilities\". It's 304 billion parameters - 167GB on Hugging Face - but it appears to punch well above its weight. Artificial Analysis rank it ahead of MiniMax M3…",
       "pubDate": "2026-08-01T07:59:44+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "6663cb7fa838",
-      "title": "Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)",
-      "link": "https://simonwillison.net/2026/Jul/31/stateless-mcp/#atom-everything",
-      "description": "Tuesday was Stateless MCP day - the rollout of MCP 2.0, or the 2026-07-28 Model Context Protocol specification to use the more formal but less memorable name. This is the most significant change to the MCP spec since it first launched, and has also served to reignite my personal…",
-      "pubDate": "2026-08-01T07:13:22+08:00",
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
