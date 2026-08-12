@@ -1,13 +1,13 @@
 {
-  "generated": "2026-08-12T00:57:58.024589+08:00",
+  "generated": "2026-08-13T00:57:24.252985+08:00",
   "total": 60,
   "items": [
     {
-      "id": "1eb5d730fc8d",
-      "title": "University of Michigan Drops First-Semester Grades To'Curb Mental Health Crisis'",
-      "link": "https://www.wsj.com/us-news/education/university-of-michigan-grades-mental-health-1a5701d4",
-      "description": "Article URL: https://www.wsj.com/us-news/education/university-of-michigan-grades-mental-health-1a5701d4 Comments URL: https://news.ycombinator.com/item?id=49260250 Points: 31 # Comments: 29",
-      "pubDate": "2026-08-11T23:54:35+08:00",
+      "id": "809dbabd1c3e",
+      "title": "Wednesday, August 12: GitHub, Incident with Pull Requests and Issues",
+      "link": "https://www.githubstatus.com/incidents/76t89hbfb09h",
+      "description": "Article URL: https://www.githubstatus.com/incidents/76t89hbfb09h Comments URL: https://news.ycombinator.com/item?id=49274894 Points: 7 # Comments: 0",
+      "pubDate": "2026-08-13T00:22:27+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -15,11 +15,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "819d88fc7521",
-      "title": "Show HN: Git-knife – edit commit messages, authors, and dates like a spreadsheet",
-      "link": "https://github.com/TheRealYT/git-knife",
-      "description": "Article URL: https://github.com/TheRealYT/git-knife Comments URL: https://news.ycombinator.com/item?id=49259611 Points: 54 # Comments: 31",
-      "pubDate": "2026-08-11T23:09:34+08:00",
+      "id": "7408c6cd79dc",
+      "title": "DeepSeek V4 Pro 0813",
+      "link": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
+      "description": "Article URL: https://openrouter.ai/deepseek/deepseek-v4-pro-0813 Comments URL: https://news.ycombinator.com/item?id=49274600 Points: 18 # Comments: 5",
+      "pubDate": "2026-08-13T00:04:50+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -27,11 +27,23 @@
       "category": "ai-agent"
     },
     {
-      "id": "ac6a2b69d405",
-      "title": "Apple Silicon and macOS VMs: 11–16× Faster LLM Inference with Llama.cpp",
-      "link": "https://github.com/trycua/cua/blob/main/blog/gpu-passthrough-macos-vms.md",
-      "description": "Article URL: https://github.com/trycua/cua/blob/main/blog/gpu-passthrough-macos-vms.md Comments URL: https://news.ycombinator.com/item?id=49259339 Points: 102 # Comments: 20",
-      "pubDate": "2026-08-11T22:50:33+08:00",
+      "id": "8f3f6c2fab1d",
+      "title": "Quoting Florian Herrengt",
+      "link": "https://simonwillison.net/2026/Aug/12/florian-herrengt/#atom-everything",
+      "description": "But then users start to report a weird bug. It's the 4th time your team has been trying to fix it. I mean... asking AI to fix it. Unfortunately, it seems like not even Fable can figure it out. You go talk to the person who worked on this feature. \"So where does the data come from…",
+      "pubDate": "2026-08-12T23:08:47+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "2bc2cf30ffd5",
+      "title": "Qwen/Qwen3.8-2.4T-A95B",
+      "link": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+      "description": "Article URL: https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B Comments URL: https://news.ycombinator.com/item?id=49273478 Points: 134 # Comments: 40",
+      "pubDate": "2026-08-12T23:01:17+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -39,11 +51,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "75c41f0b1fc4",
-      "title": "Launch HN: Keet (YC S24) – An app to create video courses on anything",
-      "link": "https://www.trykeet.com/",
-      "description": "Hi HN! We’re Zack and Tommy the Co-Founders of Keet (https://trykeet.com). We are building a mobile app that generates courses on any topic, with short videos for explanation and games for reinforcement. Courses mirror a real curriculum to help you learn over an extended period o…",
-      "pubDate": "2026-08-11T22:48:37+08:00",
+      "id": "10b61ecacff9",
+      "title": "GiveCampus (YC S15) Is Hiring Engineering Managers",
+      "link": "https://job-boards.greenhouse.io/givecampus/jobs/4112793009",
+      "description": "Article URL: https://job-boards.greenhouse.io/givecampus/jobs/4112793009 Comments URL: https://news.ycombinator.com/item?id=49273395 Points: 0 # Comments: 0",
+      "pubDate": "2026-08-12T22:55:27+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -51,11 +63,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "1d92c8941cac",
-      "title": "Federal vendor with $50M in contracts leaves portal broken for a month",
-      "link": "https://www.propublica.org/article/foia-requests-responses",
-      "description": "Article URL: https://www.propublica.org/article/foia-requests-responses Comments URL: https://news.ycombinator.com/item?id=49259043 Points: 38 # Comments: 6",
-      "pubDate": "2026-08-11T22:32:21+08:00",
+      "id": "5299dc412dc9",
+      "title": "Google launches Pixel 11 Pro Fold",
+      "link": "https://blog.google/products-and-platforms/devices/pixel/pixel-11-pro-fold/",
+      "description": "Article URL: https://blog.google/products-and-platforms/devices/pixel/pixel-11-pro-fold/ Comments URL: https://news.ycombinator.com/item?id=49273330 Points: 29 # Comments: 18",
+      "pubDate": "2026-08-12T22:52:27+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -63,11 +75,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "a932dc630fbe",
-      "title": "Manus will return to operating as an independent company",
-      "link": "https://manus.im/blog/a-note-to-our-users",
-      "description": "Article URL: https://manus.im/blog/a-note-to-our-users Comments URL: https://news.ycombinator.com/item?id=49258764 Points: 44 # Comments: 15",
-      "pubDate": "2026-08-11T22:14:53+08:00",
+      "id": "69d5370a9766",
+      "title": "Hax – a minimalist, terminal-native coding agent written in C",
+      "link": "https://usehax.dev/",
+      "description": "Article URL: https://usehax.dev/ Comments URL: https://news.ycombinator.com/item?id=49273175 Points: 22 # Comments: 5",
+      "pubDate": "2026-08-12T22:43:45+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -75,11 +87,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "8dd74c53c117",
-      "title": "Why Did OpenAI's Head of Ethics Chloé Bakalar Leave?",
-      "link": "https://aimagazine.com/news/why-did-openai-head-of-ethics-chloe-bakalar-leave",
-      "description": "Article URL: https://aimagazine.com/news/why-did-openai-head-of-ethics-chloe-bakalar-leave Comments URL: https://news.ycombinator.com/item?id=49258581 Points: 67 # Comments: 58",
-      "pubDate": "2026-08-11T22:03:18+08:00",
+      "id": "8cc05f36c98f",
+      "title": "License plate reader searches should require a warrant",
+      "link": "https://andrewpwheeler.com/2026/08/12/license-plate-reader-searches-should-require-a-warrant/",
+      "description": "Article URL: https://andrewpwheeler.com/2026/08/12/license-plate-reader-searches-should-require-a-warrant/ Comments URL: https://news.ycombinator.com/item?id=49273165 Points: 269 # Comments: 168",
+      "pubDate": "2026-08-12T22:43:39+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -87,11 +99,59 @@
       "category": "ai-agent"
     },
     {
-      "id": "93403821981d",
-      "title": "索尼坚持2028年停售实体游戏光盘",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NTE0ODc2Nw==&mid=2650969663&idx=1&sn=47d3c2ae2cb62ff60742652df622eb2b&chksm=bca6592ec8b1157364114aa6b86d791db677c468b54f4262f02b826cb644122dbd40206dbe15",
-      "description": "图片来源：索尼PlayStation官网界面新闻记者 | 宋佳楠8月11日，界面新闻获悉，索尼PlayStation中国官网PS5购买页面新增重要通知提示，自2028年1月起，PlayStation上新发布的游戏将仅以数字格式销售。 2028年1月之前发售的游戏光盘仍可继续游玩。图片来源：索尼PlayStation官网需要说明的是，这并不代表PS5光驱版主机将会被锁光驱，玩家手上已经收藏的实体光盘，依旧可以在光驱主机上正常读取运行。 2028年1月前已经上市，或是确定会推出光盘版的游戏，也不会受到影响。 这项计划最早于今年7月1日经由PlayStatio…",
-      "pubDate": "2026-08-11T22:02:28+08:00",
+      "id": "eaf09036539f",
+      "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
+      "link": "https://tailscale.com/blog/sqlite-wal-reset-bug",
+      "description": "Article URL: https://tailscale.com/blog/sqlite-wal-reset-bug Comments URL: https://news.ycombinator.com/item?id=49272832 Points: 289 # Comments: 37",
+      "pubDate": "2026-08-12T22:22:30+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "60449cc95741",
+      "title": "Tim King, AmigaDOS developer, has died",
+      "link": "https://amiga-news.de/en/news/AN-2026-08-00070-EN.html",
+      "description": "Article URL: https://amiga-news.de/en/news/AN-2026-08-00070-EN.html Comments URL: https://news.ycombinator.com/item?id=49272655 Points: 100 # Comments: 19",
+      "pubDate": "2026-08-12T22:09:11+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "a7907ec05d87",
+      "title": "German advocacy group lodges criminal complaint over Meta AI glasses",
+      "link": "https://www.reuters.com/legal/government/german-advocacy-group-lodges-criminal-complaint-over-meta-ai-glasses-2026-08-12/",
+      "description": "Article URL: https://www.reuters.com/legal/government/german-advocacy-group-lodges-criminal-complaint-over-meta-ai-glasses-2026-08-12/ Comments URL: https://news.ycombinator.com/item?id=49272620 Points: 73 # Comments: 26",
+      "pubDate": "2026-08-12T22:06:03+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "de5acd99dd76",
+      "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
+      "link": "https://knownagents.com/insights",
+      "description": "Article URL: https://knownagents.com/insights Comments URL: https://news.ycombinator.com/item?id=49272569 Points: 92 # Comments: 41",
+      "pubDate": "2026-08-12T22:02:46+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "2386deebdc37",
+      "title": "华尔街开始质疑科技巨头的AI故事",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTExMjYwMA==&mid=2670391873&idx=1&sn=db4d65b0efb2235d58c8a4d2d14ee8a2&chksm=bd221168f43f18146ab11dba9f8fa65d6d334048f9d780120986d4ad78555e4aab4952cafd8c",
+      "description": "一座今天建成的数据中心，可能要在未来十几年中回收投资；装入其中的芯片，却可能在数年内面临新一代产品的竞争。 即使算力需求继续增长，算力价格、设备利用率、能源成本和技术替代，也会不断改写最初的回报测算。 作者：欧阳晓红封图：图虫创意“利好”也读成“利空”？ 前有谷歌等科技巨头交出亮眼财报，后有英伟达抛出5000亿美元的产融合作计划，市场的回答却一言难尽。 在美国另类资产金融科技平台iCapital董事总经理兼首席投资策略师Sonali Basak看来，现金流压力正在提高AI（人工智能）投资的考核门槛，但尚未构成所有超大规模厂商（hyperscalers）的…",
+      "pubDate": "2026-08-12T22:02:23+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -99,11 +159,83 @@
       "category": "ai-news"
     },
     {
-      "id": "18c1bc117097",
-      "title": "$580M undersea cable rerouted to avoid the grave of Dobby the House Elf",
-      "link": "https://www.tomshardware.com/networking/usd580-million-undersea-cable-rerouted-to-avoid-the-grave-of-dobby-the-house-elf-company-caves-to-fan-demands-to-safeguard-harry-potter-filming-location-will-instead-pass-by-bronze-age-burial-site",
-      "description": "Article URL: https://www.tomshardware.com/networking/usd580-million-undersea-cable-rerouted-to-avoid-the-grave-of-dobby-the-house-elf-company-caves-to-fan-demands-to-safeguard-harry-potter-filming-location-will-instead-pass-by-bronze-age-burial-site Comments URL: https://news.yco…",
-      "pubDate": "2026-08-11T21:42:27+08:00",
+      "id": "ea636469d5ea",
+      "title": "弃量保价的保时捷成为不了法拉利",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NTE0ODc2Nw==&mid=2650970180&idx=1&sn=fc1ad32da49db6672b92b90b0b3ebe70&chksm=bc31e33bc5662a4916d3aefabd7a854a46c53831ea96ab9c0acb86e691b383043b66c855bb36",
+      "description": "图片来源：界面新闻界面新闻记者 |武凯界面新闻编辑 |周姝祺销量和盈利能力持续承压的保时捷，正试图让产品结构重新向品牌金字塔尖倾斜，用全新的一套“价值优先于销量”的战略叙事定义经营目标。 但对于一家依靠规模走出危机并获得成功的公司而言，这可能只是对被动收缩更体面的包装。 今年上半年，保时捷营收172.29亿欧元，同比下滑5.1%；汽车交付量从14.64万辆降至12.23万辆，同比下跌16.5%，创2021年来新低。 其中，纯电动汽车占比由去年同期23.5%降至19.4%。 与销量和营收下滑形成反差的是，保时捷汽车业务的经营利润，从去年的8.32亿欧元提高…",
+      "pubDate": "2026-08-12T22:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "f393f057a4b5",
+      "title": "今晚美国CPI料温和放缓，9月加息预期或再遭一击！",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NzAwMzU0MA==&mid=2247645525&idx=3&sn=3ef88acb5976cb7750d1eae3ea99a113&chksm=a7f59fa328f06620aa2ed09405854747d556d868b37f864c5a66ddcdb8dfbba06afc4debe1b5",
+      "description": "美联储9月是否加息，答案或许今晚揭晓。美国劳工统计局将于美东时间周三上午8:30（北京时间周三晚20:30）公布7月CPI数据。 市场普遍预期整体CPI环比上涨0.1%，核心CPI环比上涨0.2%，年率分别降至3.4%和2.5%。 在上周非农就业数据意外走软之后，这份报告将成为检验9月加息预期的关键试金石。 若数据温和，市场可能进一步压低9月加息概率；若数据超预期偏热，则将令已呈鹰派态势的美联储面临更大压力。 当前，利率期货市场将9月加息概率定价于约50%，即所谓\"硬币正反面\"。 上周非农数据显示7月就业人口减少2.3万，令加息预期一度明显降温，但随后油…",
+      "pubDate": "2026-08-12T22:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "06eefb6a7030",
+      "title": "辉瑞中国总裁出镜秀身材，拉满了减肥药焦虑",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NTE0ODc2Nw==&mid=2650970180&idx=2&sn=9f1ca9317693a16d8d50a5a547859590&chksm=bc7da870b15868f29827a05b12d8e7e6b239fecd45b6cbf340ed8754c3033fbc6688286caed5",
+      "description": "图片来源：界面图库界面新闻记者 |黄华界面新闻编辑 |谢欣辉瑞中国区总裁彭振科（Jean-Christophe Pointeau）瘦了。 今年3月至今，他减重约17公斤。8月12日，辉瑞制药公开名为《30斤任务》（Mission 30）的宣传海报，将彭振科减重前后的形象并列呈现：左侧是其身着白色Polo衫的清爽近照，右侧则是西装笔挺的过往留影。 对比之下，这位药企高管的肩线收窄、腰围缩减，身形变化肉眼可辨。 当然，“辉瑞减重”的logo也被印在了彭振科的Polo新衫上—— 总裁亲自打样，活脱脱一份药企高管的硬核产品体验报告。 在北京日报报业集团旗下媒体长…",
+      "pubDate": "2026-08-12T22:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "699a1985a9cd",
+      "title": "一签赚35万？宇树IPO狂欢背后，王兴兴被问“你们是遥控玩具公司吗？”",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzU5ODU1Mjg5Nw==&mid=2247831841&idx=1&sn=4a5f42eab85983c9d0c79867083b12e0&chksm=ff49e5c27e114c11b97205cbeb03b5f4e59b7338ee042e759510b192398c6423a1b01c3ad585",
+      "description": "来源｜凤凰网财经《公司研究院》宇树科技中签结果尘埃落定，网上中签号码共19414个，最终中签率约为0.018%，远低于长鑫科技0.47%中签率。 图源：网络中签结果一出，社交平台立刻掀起晒单潮，若对标年内科创板新股首日466.61%的平均涨幅，单签盈利可达35.18万元。 但热闹背后，投资者的担忧也同步而来。150.80元的发行价，比此前市场按募资额测算出的104元，硬生生高出45%，甚至宇树科技的保荐机构中信证券，在询价前给出的6至12个月目标市值是506亿至559亿元，比609.93亿元的发行市值还要低。 宇树科技究竟值不值得长期布局？这些疑问，从打…",
+      "pubDate": "2026-08-12T22:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "bcd000b8b84e",
+      "title": "薛甄珠手势舞：2026年，我们还在渴望被坚定选择吗？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA4Mjk1MjMzMA==&mid=2649871070&idx=1&sn=9ac447f78dade1a5e2693fc1762e3a5d&chksm=86fe71e643b45dd18211e1d005147c775b344daef742221b4ce97e5e42c491c19f7cb9bbd209",
+      "description": "「当外界风浪汹涌，当不确定性如潮水般反复拍打日常生活的堤岸，人们需要这样一个锚来固定自己的位置，确定自己不会被轻易卷走，并去相信即便一切都在流动，依然有某种关系是我们无疑的底气。」>>>（网友们掀起模仿热潮）最近，薛甄珠的手势舞在抖音占据各大挑战榜榜首，电视剧《我的前半生》中薛甄珠来到女婿陈俊生公司寻找并质问其出轨对象凌玲的片段再度走红，如同这位强势捍卫自己和女儿利益的老太太，这一片段的台词也被分割为紧张的短句。 （《我的前半生》原剧片段）带着酣畅淋漓的辛辣气息，伴随着强劲如擂擂心跳的鼓点和大开大合的手势，引得众多网友模仿，甚至衍生出各地方言的二创，被评…",
+      "pubDate": "2026-08-12T22:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "dc99e5698f58",
+      "title": "在两元店打飞机的gooner，是一帮真正的loser",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5ODc5MDM2MA==&mid=2651806126&idx=1&sn=926724b718e1fed40ac7ed0af1699cc8&chksm=bc640136562a4f950bc9ca6f135ddf8331ffe0f7a951dc1039c8a016cfd7340ee0f8fba556d1",
+      "description": "还记得那句响透整条街的“两元，两元，全场两元”吗，以及那些堆积如山的塑料脸盆、不锈钢厨具、五金零件和临期小零食…… 在千禧年遍地林立、永远还剩三天清仓甩卖、永远假装下周就要搬走的店，大都和当年被手汗揉得皱巴巴的两元纸币一起，消失不见了。 但在美国，它们干成了连锁。和我们印象里逼仄杂乱的小铺面不同，这些被称为Dollar Store的门店有更大的空间、更多的牌子货。 灯光有些惨白，空气不算清新，不太富有的人们在这里精打细算地挑选着商品，规划着这个月所剩不多的生活开支。 就在这样的地方，美国两元店，有一类变态，神色闪躲，游荡在又高又大的货架之间，专门寻找落单…",
+      "pubDate": "2026-08-12T22:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "134ff5a2a975",
+      "title": "Why Tiny JPEGs Look Different in Chrome",
+      "link": "https://guillaumetech.github.io/posts/jpg-scaling-chrome/",
+      "description": "Article URL: https://guillaumetech.github.io/posts/jpg-scaling-chrome/ Comments URL: https://news.ycombinator.com/item?id=49272549 Points: 121 # Comments: 23",
+      "pubDate": "2026-08-12T22:00:54+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -111,11 +243,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "41b8e7b1ab96",
-      "title": "Show HN: Write.md, a free, open-source, themeable Markdown editor for macOS",
-      "link": "https://writemd.app/",
-      "description": "Article URL: https://writemd.app/ Comments URL: https://news.ycombinator.com/item?id=49258011 Points: 12 # Comments: 0",
-      "pubDate": "2026-08-11T21:30:39+08:00",
+      "id": "eb7be454b2fa",
+      "title": "My Agent Setup",
+      "link": "https://chad.cm/posts/2026-8-11-my-agent-setup",
+      "description": "Article URL: https://chad.cm/posts/2026-8-11-my-agent-setup Comments URL: https://news.ycombinator.com/item?id=49272484 Points: 63 # Comments: 34",
+      "pubDate": "2026-08-12T21:56:05+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -123,11 +255,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "155ce96cbe43",
-      "title": "Nvidia Nemotron 3.5 Lightning",
-      "link": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
-      "description": "Article URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4 Comments URL: https://news.ycombinator.com/item?id=49257947 Points: 72 # Comments: 17",
-      "pubDate": "2026-08-11T21:26:02+08:00",
+      "id": "7c20204f15d7",
+      "title": "Automatic1111 for Apple metal, 40% speed up sd1.5",
+      "link": "https://therad.ninja/from-8-10-seconds-to-3-7-teaching-automatic1111-to-speak-metal-on-an-m3-pro/",
+      "description": "Article URL: https://therad.ninja/from-8-10-seconds-to-3-7-teaching-automatic1111-to-speak-metal-on-an-m3-pro/ Comments URL: https://news.ycombinator.com/item?id=49272282 Points: 36 # Comments: 16",
+      "pubDate": "2026-08-12T21:41:12+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -135,206 +267,146 @@
       "category": "ai-agent"
     },
     {
-      "id": "5639e45f22b6",
+      "id": "ce97894c76e1",
+      "title": "Commodore 8-Bit 5¼\" Disk Images",
+      "link": "https://www.masswerk.at/nowgobang/2026/commodore-disk-images",
+      "description": "Article URL: https://www.masswerk.at/nowgobang/2026/commodore-disk-images Comments URL: https://news.ycombinator.com/item?id=49272132 Points: 20 # Comments: 0",
+      "pubDate": "2026-08-12T21:30:47+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "d10ea54f06e0",
+      "title": "AI is removing the middle class of software engineering",
+      "link": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
+      "description": "Article URL: https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html Comments URL: https://news.ycombinator.com/item?id=49271994 Points: 318 # Comments: 260",
+      "pubDate": "2026-08-12T21:20:05+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "3f4d4cc953d1",
+      "title": "Shade Map",
+      "link": "https://shademap.app",
+      "description": "Article URL: https://shademap.app Comments URL: https://news.ycombinator.com/item?id=49271757 Points: 45 # Comments: 7",
+      "pubDate": "2026-08-12T21:01:21+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "d0605d12dd10",
+      "title": "大厂AI，解锁新“收银台”",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzkyMzYzNDQ0Ng==&mid=2247490151&idx=1&sn=3c65ad69276fa28d55ec9ae74f8226de&chksm=c0917a11231708e77cc6f6c69f4d7e194735b6f586b9193d6edde71f1279c7444921af9adee9",
+      "description": "开放平台成又一战场。听筒Tech（ID:tingtongtech）原创 文 | 杨 林编 | 饶霞飞开放平台这出戏，演到2026年夏天，终于迎来了新的剧本。 过去这两年，国内叫得上名字的AI助手，几乎都长着同一张脸，能聊天、能写稿、能画图、能订票。 用户用得不亦乐乎，厂商烧钱烧得心惊肉跳。但热闹的AI免费大餐吃久了，总要有人买单。 8月10日，几乎在同一天，两家巨头几乎前后脚给出了答案。 一家宣布搭好了自己的开放平台，热热闹闹地请商家入驻；另一家，有市场消息表示，已经有免费流进来的酒店订单，开始按比例抽成。 尽管大厂也指出，收租并非事实。但或许，这也意味…",
+      "pubDate": "2026-08-12T20:03:25+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "c4410c54aa7f",
+      "title": "《欢迎来龙餐馆》能救暑期档吗？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI3OTEwMDQwNw==&mid=2649969790&idx=1&sn=883c5f6a5a37b12525dcdf760442a69b&chksm=f21689ccd8569e3840a713490a5667e3bd788a3b9b069b92091c55b6db10d898f25a4760f2b6",
+      "description": "「核心提示」爆款终于来了，但暑期档还没“爆”。作者 | 高宇哲编辑 | 刘杨一部电影能拯救暑期档票房吗？ 这个问题，正在被《欢迎来龙餐馆》推到台前。上映两天，票房破2.6亿，预测直奔30亿，联合出品方股票接连涨停，一切看起来都像“救世主”降临。 不过，一部影片带来的热闹，不足以改变市场的基本面。 将视野拉回整个暑期档乃至今年上半年，电影行业并未摆脱阴霾。 不仅暑期档前半程票房低迷，2026年上半年总票房相较去年同期大幅缩水超40%，几乎倒退至2022年上半年水平。 与之对应的，高票房出圈电影也骤减，今年以来，票房破20亿的影片目前仅有3部，几乎没有能形成…",
+      "pubDate": "2026-08-12T20:02:25+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "5b2d7763fc63",
+      "title": "千店规模换不来港股门票：消费企业上市，究竟卡在哪里？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzIyMzYyOTk2OA==&mid=2247617602&idx=1&sn=1f75a5b041bf9a97e668a6b639e2d148&chksm=e99214803d03ceef0fbc436556a47ef1bbb2ff88eb25d70c7f874eb9c035081c54523353e20c",
+      "description": "同处消费赛道，有的企业顺利拿到港股入场券，有的虽坐拥千家门店，却屡屡递表又折戟。 它们究竟被卡在了何处？作者：刘轩宇封图：图虫创意2026年7月，多家消费企业的港股上市进程出现变化。 老乡鸡、比格披萨、钱大妈、COMMUNE幻师等企业的申请版本先后到期失效；袁记云饺取得中国证监会境外上市备案后，更新了上市申请。 此前6月份，巴奴毛肚火锅第三次招股书失效，并于当月重新递交。 这些企业都拥有不小的经营规模，有些门店更是数以千计，但却迟迟未能走到敲钟环节。 与此同时，溜溜梅、齐云山食品相继在6、7月顺利敲钟。 鸣鸣很忙、东鹏饮料此前第一季度也在港股完成上市。同…",
+      "pubDate": "2026-08-12T20:02:25+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "58f4b92c184c",
+      "title": "2026 Eclipse Webcams",
+      "link": "https://jonty.github.io/2026_eclipse_webcams/",
+      "description": "Article URL: https://jonty.github.io/2026_eclipse_webcams/ Comments URL: https://news.ycombinator.com/item?id=49270953 Points: 359 # Comments: 81",
+      "pubDate": "2026-08-12T19:53:01+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "fcff4f4f0335",
+      "title": "uBlock Origin Is Giving Up the Fight to Keep Ads Off Facebook",
+      "link": "https://digitalescapetools.com/2026/08/ublock-origin-stops-chasing-facebook-ads.html",
+      "description": "Article URL: https://digitalescapetools.com/2026/08/ublock-origin-stops-chasing-facebook-ads.html Comments URL: https://news.ycombinator.com/item?id=49270726 Points: 103 # Comments: 66",
+      "pubDate": "2026-08-12T19:28:27+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "fbb48cdb56d6",
+      "title": "Delphi 13 Community Edition Is Now Available",
+      "link": "https://blogs.embarcadero.com/delphi-13-community-edition-is-now-available/",
+      "description": "Article URL: https://blogs.embarcadero.com/delphi-13-community-edition-is-now-available/ Comments URL: https://news.ycombinator.com/item?id=49270621 Points: 104 # Comments: 77",
+      "pubDate": "2026-08-12T19:13:36+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "1f044ad3768c",
+      "title": "There are no lossless transformations of natural-language text",
+      "link": "https://simonwillison.net/2026/Aug/11/there-are-no-lossless-transformations-of-natural-language-text/#atom-everything",
+      "description": "There are no lossless transformations of natural-language text Sophie Alpert shares her \"internal policy on acceptable use of AI writing by engineers\". It's a short read (supporting its own recommendations) and really good. If you chose to have LLMs help massage your writing the…",
+      "pubDate": "2026-08-12T07:48:35+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "ae0bb8510d8a",
       "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
-      "link": "https://stolen-thoughts.com/",
-      "description": "Article URL: https://stolen-thoughts.com/ Comments URL: https://news.ycombinator.com/item?id=49257876 Points: 158 # Comments: 60",
-      "pubDate": "2026-08-11T21:22:00+08:00",
+      "link": "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/#atom-everything",
+      "description": "Stealing Reasoning Traces from Proprietary LLM APIs A vanity domain name (stolen-thoughts.com) for a neat paper: Anthropic, OpenAI, and Google return encrypted chain-of-thought blocks to clients that can be replayed across sessions, users, and models. We take a trace produced by…",
+      "pubDate": "2026-08-12T06:40:45+08:00",
       "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
       },
       "category": "ai-agent"
     },
     {
-      "id": "1bc670f34b9d",
-      "title": "England set to be one of the first countries to eliminate hepatitis C",
-      "link": "https://www.bbc.com/news/articles/c75gk620r22o",
-      "description": "Article URL: https://www.bbc.com/news/articles/c75gk620r22o Comments URL: https://news.ycombinator.com/item?id=49257377 Points: 298 # Comments: 202",
-      "pubDate": "2026-08-11T20:41:59+08:00",
+      "id": "33db945aae2d",
+      "title": "datasette-upload-dbs 0.5a0",
+      "link": "https://simonwillison.net/2026/Aug/11/datasette-upload-dbs/#atom-everything",
+      "description": "Release: datasette-upload-dbs 0.5a0 This plugin has been around for a while - it lets users upload a brand new SQLite database to a hosted Datasette instance, at which point that database will start being served by that instance. It can also be used to atomically swap a database…",
+      "pubDate": "2026-08-12T04:35:13+08:00",
       "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "1df7f35228ec",
-      "title": "内外双重挤压，连锁药店何去何从？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzIyMzYyOTk2OA==&mid=2247617559&idx=1&sn=6c9d0451e8b32755964274634d1399b3&chksm=e96df47edbcbe197dbe56cefe0bd422197eefcef6909d70d2597b70725b4ed7964c03093b18b",
-      "description": "行业历经十余年的“跑马圈地”式扩张或将难以为继。作者：颜齐封图：图虫创意沿街密布的连锁药房，正迎来一轮集中调整。 老百姓2025年度报告摘要显示，2025 年全国药店净减少 2.2 万家，行业进入加速出清阶段。 当前，医保基金监管常态化，药店合规成本提高，药品集采不断压缩药品进销差价，商圈门店扎堆催生同质化内卷......外部环境持续收紧的同时，药店的内部矛盾也集中爆发：门店经营理念的失衡、门店网络的内部互搏......行业历经十余年的“跑马圈地”式扩张或将难以为继。 “跑马圈地”退潮：门店净增与单店效益放缓大参林、老百姓、益丰药房三家全国性头部连锁药房…",
-      "pubDate": "2026-08-11T20:03:31+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "f9bd9c080653",
-      "title": "国企贸易公司最大的错位：拿垄断性业务的机制，去管市场化业务！",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5ODc4Mzc0MA==&mid=2651976572&idx=1&sn=75a715afd6b4160b85ddc1c2f1db9fd8&chksm=bccb939732f60c38c8fa5c95513c53be445c000b18330c436a280e7005fce82ef3dcaa86c2c2",
-      "description": "现在很多国企贸易公司，最难受的可能不是业务难做，而是两套完全不同的逻辑，天天在公司里打架。 一边是市场逻辑。集团要求你出去抢客户、抢货源、抢订单，今年做几十亿，明年做上百亿，跟民营贸易商、头部供应链公司在一个市场里竞争。 客户不会因为你是国企就等你，你出手慢半拍，生意就是别人的。 另一边，又是国企原来的管理逻辑。业务要快，审批要稳；业务要抢，工资不能乱动；贸易要深度参与，差旅费、招待费卡得很紧；贸易要做实，库存和应收账款还得不断往下降。 单独看，每一条都有道理。审批严，是怕出事；费用紧，是防浪费；两金要降，是为了控制资金占用；追责严格，是为了保护国有资产…",
-      "pubDate": "2026-08-11T20:03:31+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "8d6a8e4f2ff3",
-      "title": "一只白海豚，为什么突然变成了 14 级台风？｜象形文字",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTA3MjUwMA==&mid=2651290741&idx=1&sn=ad4542630713be07f986d92816d9d78d&chksm=bcdaefa9f3e11a9f28d903420e576116e9ff73bbaa37c32f91cc78452272653a027b81ac7035",
-      "description": "8 月 9 日傍晚 5 点半，台风「白海豚」登陆浙江玉环，中心附近最大风力 14 级，风速每秒 42 米，中心气压 945 百帕。 相比于这组冰冷而剧烈的气象数据，「白海豚」这个名字听起来有些温柔。 真正的中华白海豚生活在珠江口、香港附近海域，岛屿后皮肤会因为血管透出淡淡的粉红色，因为数量稀少，常被称作「海上大熊猫」，是国家一级重点保护野生动物。 2005 年，香港天文台将这个名字写进了西北太平洋和南海的台风命名表。 今年，它终于成为了一个真正有重量的名字。浙江、上海、江苏等地先后受到影响。 上海中心城区8月9日上午10点30分发布暴雨红色预警，这是继…",
-      "pubDate": "2026-08-11T20:02:41+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "962bd06e57ef",
-      "title": "AI 入口，开始收费",
-      "link": "https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653111815&idx=1&sn=f4e03b907f18df17097e0e73302ee20a&chksm=7f36c31297eb6568d05ba7cd2807d361bd14acb8ea59160f0d5f196595bbba85c532e86e9e46",
-      "description": "AI 已经成为重要入口，但变现方式各不相同。作者｜宇航猿编辑｜靖宇AI 将成为未来唯一的「入口」，这几乎是近年来的一个行业共识，但是这个「入口」如何变现，没人能给出答案。 不过，现在中国大厂的探索路径，已经清晰出现了。8 月 10 日这个周末，两条看起来不相关的新闻几乎同时出现。 豆包宣布，通过其 AI 对话推荐跳转抖音来客成交的酒店订单，正式执行 12% 的独立佣金费率。 同一天，千问开放平台上线，顺丰、自如、盈米基金等十多个领域的服务商以 AI 智能体形态接入千问。 一个开始变现，一个把门打开。这两件事放在一起看，信号非常明确—— AI 助手喊了两年…",
-      "pubDate": "2026-08-11T20:02:41+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "c7d231843d7e",
-      "title": "研发周期跟风砍半，合资车企也造速成车了",
-      "link": "https://mp.weixin.qq.com/s?__biz=Mzg5MTc3NjgxNQ==&mid=2247549557&idx=1&sn=07ae586fe0ac48eabc2a88acd8d34834&chksm=ce054bd5fab89295d234243ec895c9a294cf0fb52681a09ebbad2fc73c5bc5dfdea3a4f553ed",
-      "description": "日产不会是最后一个”作者｜王磊编辑｜秦章勇傲慢的合资车企们，低头了？ 一款新车从立项到量产，日产以前要花55个月，现在只要37个月了。 这不是技术突破，是这家老牌车企主动向中国车企偷师学来的。 不仅如此，改款车型从50个月也压缩到了30个月，整体提速约40%，这是日产汽车在横滨总部披露研发体系改革的最新成果。 作为新流程的拳头产品，即将推出的全新一代Skyline，从立项到完成仅用时26个月，相比现款车型55个月的研发周期大幅缩短。 按照规划，日产将在2026财年内把这套高效研发流程推广至90%的车型项目。 日产的提速不是孤例。Stellantis也计划…",
-      "pubDate": "2026-08-11T20:02:41+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "b067bdd805cf",
-      "title": "26岁香港交易员巨亏1.5亿背后，一场韩国股市「大逃杀」",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzI3OTEwMDQwNw==&mid=2649969777&idx=1&sn=36bd317e276fc95151c6994975e065f2&chksm=f2979adcc260779fd00633bab77479a4600828d54dcec7ecd69405ab2384e99537bcfa60b190",
-      "description": "「核心提示」从造富神话到连环爆仓：杠杆牛市下的韩股狂欢与幻灭。 作者 | 高泽编辑 | 邢昀不久前，香港一位入职仅半年的26岁交易员被捕。 他在2026年1月9日至7月20日期间，未经授权擅自动用公司账户，挪用5000万港币当保证金融资，购买港股代号7709的“南方东英SK海力士每日杠杆（2x）ETF”。 上半年韩股一路冲高时，这笔仓位一度浮盈丰厚，没人想到转折来得如此迅猛。 6月到7月间，韩国股市接连触发跌停熔断，杠杆资金连环平仓，无数人的账面财富在短短数周内灰飞烟灭。 而上述交易员挪用公司账户，使用双重杠杆，在暴跌中形成1.5亿港元巨亏。 这个年轻人…",
-      "pubDate": "2026-08-11T20:02:41+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "d9a671b61cdb",
-      "title": "宇树IPO背后的302份招标书，关于人形机器人的六个真相",
-      "link": "https://mp.weixin.qq.com/s?__biz=Mzk0MDYyMDA0NQ==&mid=2247493694&idx=1&sn=4fd60a3271472ae6a3df9f714857103b&chksm=c313824a99d87787af2e0343cf6beafa581e50aa07e40587b56f7cd64e7bb8fc8f61d33bae4e",
-      "description": "文丨黄依婷编辑丨胡苗8月10日，宇树科技开启网上、网下申购，发行价定格在150.80元/股。 资本市场的回应近乎“癫狂”——978.46万户参与网上申购，有效申购股数达536.37亿股。 由于超额认购倍数超过8000倍，触发了回拨机制，最终网上中签率仅为0.018%。 这个概率，比打新很多热门新股还要低得多。以150.80元/股的发行价计算，这家公司市值已达约610亿元。 而在2024年9月，宇树科技完成B3轮融资时，投后估值仅为37.85亿元。 不到两年，宇树科技的估值已经增长了约16倍。翻开宇树科技的股东名册，美团、红杉中国、经纬创投、腾讯、阿里巴巴…",
-      "pubDate": "2026-08-11T20:02:41+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "f4a929790152",
-      "title": "WorkBuddy里的腾讯棋局",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzAwMzU0NjI5MQ==&mid=2650157610&idx=1&sn=a4aa1341e370a6e86ad8290125530d4b&chksm=820f482908ffa6260dd425f2b592775ceefe80c55e5e46ed1fbbc7c052b9c4d6225f9298e0ef",
-      "description": "文｜刘诗雨 编辑｜孙静 WorkBuddy无疑是腾讯今年升咖最快的产品。 今年3月，它还是腾讯云里一个十几人团队，基于腾讯云代码助手CodeBuddy爆肝出来的支线产品。 几个月后，马化腾亲自过问，团队扩至百人规模，腾讯六大事业群一路开绿灯。 腾讯内部员工甚至称它为「新太子」，开始讨论它能否继QQ、微信公众号等现象级产品之后，进入腾讯的名品堂。 WorkBuddy是一款面向普通白领和知识工作者的AI办公智能体，在今年「龙虾潮」中踩着OpenClaw上位，可以通过对话帮用户处理日常办公、代码开发、设计创意等工作。 在帮WorkBuddy「镀金」上面，腾讯也…",
-      "pubDate": "2026-08-11T20:02:41+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "69d952124681",
-      "title": "钟睒睒炮轰电商平台的话，错了吗？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzU5ODU1Mjg5Nw==&mid=2247831688&idx=1&sn=882b5cef17f8c4f420ee9cf803154e38&chksm=ff8e1b94971d1b2f5e41b0545435b1d3624cd366937fe658a6607b3a77a82f551ef4c60f160f",
-      "description": "来源|凤凰网《风暴眼》8月8日晚，央视《对话》播出，钟睒睒又开炮了。 这期节目录制于广西横州的茉莉花田，本来聊的是农业和产业链。 镜头前，他正谈一朵花从田间到茶杯的距离，聊着聊着，话锋突然一转把矛头指向了电商平台。 图源：网络“电商是板上钉钉的特殊中间商。” 他说，“传统中间商的抽成公开恒定，电商平台却可以借助算法对每一笔订单单独调整抽成、干预流量分配，商家做完一单生意，连自己能拿到多少收益都算不清。”最后说了一句：“必须限制平台的权力。”这不是钟睒睒第一次向电商开炮。 从2024年底在江西赣州直言“看不起做直播带货的企业家”，到称“四大平台是经济绞肉机…",
-      "pubDate": "2026-08-11T20:02:41+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "14e871653a72",
-      "title": "What I learned by putting GitHub Copilot behind a MitM proxy",
-      "link": "https://www.lighthousenewsletter.com/p/i-put-github-copilot-behind-a-mitm",
-      "description": "Article URL: https://www.lighthousenewsletter.com/p/i-put-github-copilot-behind-a-mitm Comments URL: https://news.ycombinator.com/item?id=49256057 Points: 80 # Comments: 8",
-      "pubDate": "2026-08-11T18:40:47+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "f89dbb090b22",
-      "title": "Nvidia's Risky Business",
-      "link": "https://stratechery.com/2026/nvidias-risky-business/",
-      "description": "Article URL: https://stratechery.com/2026/nvidias-risky-business/ Comments URL: https://news.ycombinator.com/item?id=49255710 Points: 144 # Comments: 38",
-      "pubDate": "2026-08-11T18:02:00+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "e8567714623f",
-      "title": "France to ban unsolicited telemarketing calls",
-      "link": "https://www.lemonde.fr/en/france/article/2026/08/06/france-to-ban-unsolicited-telemarketing-calls-from-august-11_6756208_7.html",
-      "description": "Article URL: https://www.lemonde.fr/en/france/article/2026/08/06/france-to-ban-unsolicited-telemarketing-calls-from-august-11_6756208_7.html Comments URL: https://news.ycombinator.com/item?id=49254880 Points: 843 # Comments: 409",
-      "pubDate": "2026-08-11T16:15:46+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "6145a48723fd",
-      "title": "Recycle – Floppydisks",
-      "link": "https://www.floppydisk.com/recycle",
-      "description": "Article URL: https://www.floppydisk.com/recycle Comments URL: https://news.ycombinator.com/item?id=49252462 Points: 102 # Comments: 48",
-      "pubDate": "2026-08-11T10:01:01+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "f0fa1fe670d0",
-      "title": "H3-metal – Native MiniMax-H3 inference for Apple Silicon",
-      "link": "https://github.com/antirez/h3.c",
-      "description": "Article URL: https://github.com/antirez/h3.c Comments URL: https://news.ycombinator.com/item?id=49252179 Points: 388 # Comments: 88",
-      "pubDate": "2026-08-11T09:22:09+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "2c3a236eede1",
-      "title": "Chicken Scheme 6.0",
-      "link": "https://code.call-cc.org/releases/6.0.0/NEWS",
-      "description": "Article URL: https://code.call-cc.org/releases/6.0.0/NEWS Comments URL: https://news.ycombinator.com/item?id=49251702 Points: 264 # Comments: 41",
-      "pubDate": "2026-08-11T08:24:15+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
       },
       "category": "ai-agent"
     },
@@ -347,30 +419,6 @@
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "ab1595435131",
-      "title": "Show HN: Scroll through all 43252003274489856000 Rubik's Cube states",
-      "link": "https://everycube.alen.is/",
-      "description": "Article URL: https://everycube.alen.is/ Comments URL: https://news.ycombinator.com/item?id=49251179 Points: 260 # Comments: 92",
-      "pubDate": "2026-08-11T07:16:25+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "d89cde6b1cef",
-      "title": "As AI eats the web, the internet’s collective memory is disappearing",
-      "link": "https://thewalrus.ca/google-search-is-dying/",
-      "description": "Article URL: https://thewalrus.ca/google-search-is-dying/ Comments URL: https://news.ycombinator.com/item?id=49250836 Points: 672 # Comments: 720",
-      "pubDate": "2026-08-11T06:36:30+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
       },
       "category": "ai-agent"
     },
@@ -668,54 +716,6 @@
       "link": "https://simonwillison.net/2026/Aug/3/dont-be-a-meat-proxy/#atom-everything",
       "description": "Don't be a meat proxy Niklas Gruhn coins an excellent new term - meat proxy - for people who blindly copy and paste the output of AI systems to their peers. By all means, prompt AI. But don't just relay the output. Read it, understand it, validate it, and then write a response in…",
       "pubDate": "2026-08-04T07:45:04+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "9fe0fd997118",
-      "title": "Quoting David Crawshaw's prompt",
-      "link": "https://simonwillison.net/2026/Aug/3/david-crawshaw/#atom-everything",
-      "description": "Set up a nightly cron job that executes the prompt: fetch upstream changes to the and rebase all local changes on top of upstream. Check that the software works as intended and replace the current version. — David Crawshaw's prompt, Devtools must be open source Tags: prompt-engin…",
-      "pubDate": "2026-08-04T00:15:27+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "dcbb8b19832c",
-      "title": "Devtools must be open source (exe.dev)",
-      "link": "https://simonwillison.net/2026/Aug/3/devtools-must-be-open-source-exedev/#atom-everything",
-      "description": "My comment on Devtools must be open source (exe.dev) — Hacker News.One of the arguments for open source software for end-users has always been the freedom to examine and modify how that software works. The reality for most people - even expert programmers - has been that the free…",
-      "pubDate": "2026-08-03T23:30:38+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "a280951a2c6d",
-      "title": "condense-json 1.1",
-      "link": "https://simonwillison.net/2026/Aug/3/condense-json/#atom-everything",
-      "description": "Release: condense-json 1.1 After shipping condense-json 1.0 I started integrating it into LLM, and found there were some desirable new features already: Replacements object can now include values other than strings. These will be identified and used as structural replacements by…",
-      "pubDate": "2026-08-03T12:56:26+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "76a4c194005a",
-      "title": "condense-json 1.0",
-      "link": "https://simonwillison.net/2026/Aug/2/condense-json/#atom-everything",
-      "description": "Release: condense-json 1.0 I'm trying to get braver at releasing 1.0 versions. This little library is a year and a half old now - I've applied some sensible and non-disruptive fixes and shipped the big 1.0 for it. Here's an example of what it can do, lifted from the README: { \"fo…",
-      "pubDate": "2026-08-03T06:19:59+08:00",
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
