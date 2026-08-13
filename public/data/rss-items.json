@@ -1,13 +1,13 @@
 {
-  "generated": "2026-08-13T00:57:24.252985+08:00",
+  "generated": "2026-08-14T00:56:59.729316+08:00",
   "total": 60,
   "items": [
     {
-      "id": "809dbabd1c3e",
-      "title": "Wednesday, August 12: GitHub, Incident with Pull Requests and Issues",
-      "link": "https://www.githubstatus.com/incidents/76t89hbfb09h",
-      "description": "Article URL: https://www.githubstatus.com/incidents/76t89hbfb09h Comments URL: https://news.ycombinator.com/item?id=49274894 Points: 7 # Comments: 0",
-      "pubDate": "2026-08-13T00:22:27+08:00",
+      "id": "9dd81deb6327",
+      "title": "Samsung is using Claude to verify chip designs. It's not going smoothly",
+      "link": "https://www.neowin.net/news/samsung-is-using-claude-to-verify-chip-designs-and-its-not-going-smoothly/",
+      "description": "Article URL: https://www.neowin.net/news/samsung-is-using-claude-to-verify-chip-designs-and-its-not-going-smoothly/ Comments URL: https://news.ycombinator.com/item?id=49288051 Points: 15 # Comments: 1",
+      "pubDate": "2026-08-14T00:05:58+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -15,11 +15,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "7408c6cd79dc",
-      "title": "DeepSeek V4 Pro 0813",
-      "link": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
-      "description": "Article URL: https://openrouter.ai/deepseek/deepseek-v4-pro-0813 Comments URL: https://news.ycombinator.com/item?id=49274600 Points: 18 # Comments: 5",
-      "pubDate": "2026-08-13T00:04:50+08:00",
+      "id": "31cf910aff0f",
+      "title": "Text AI watermarks will always be trivial to remove",
+      "link": "https://www.seangoedecke.com/text-ai-watermarks/",
+      "description": "Article URL: https://www.seangoedecke.com/text-ai-watermarks/ Comments URL: https://news.ycombinator.com/item?id=49287153 Points: 36 # Comments: 24",
+      "pubDate": "2026-08-13T23:07:10+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -27,9 +27,369 @@
       "category": "ai-agent"
     },
     {
-      "id": "8f3f6c2fab1d",
+      "id": "8af7b9ecbc5c",
+      "title": "I requested a copy of my data from McDonald’s loyalty program",
+      "link": "https://www.wired.com/story/mcdonalds-built-a-515-page-dossier-on-me-it-says-ill-never-leave/",
+      "description": "Article URL: https://www.wired.com/story/mcdonalds-built-a-515-page-dossier-on-me-it-says-ill-never-leave/ Comments URL: https://news.ycombinator.com/item?id=49286662 Points: 76 # Comments: 82",
+      "pubDate": "2026-08-13T22:37:51+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "2971c3367e62",
+      "title": "Kubernetes on Oxide: How customer needs shaped our integrations",
+      "link": "https://oxide.computer/blog/kubernetes-on-oxide",
+      "description": "Article URL: https://oxide.computer/blog/kubernetes-on-oxide Comments URL: https://news.ycombinator.com/item?id=49286485 Points: 61 # Comments: 15",
+      "pubDate": "2026-08-13T22:26:41+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "796ae0634419",
+      "title": "Graduate student proves a quantum uncertainty principle for fractals",
+      "link": "https://www.quantamagazine.org/graduate-student-proves-the-fractal-uncertainty-principle-20260812/",
+      "description": "Article URL: https://www.quantamagazine.org/graduate-student-proves-the-fractal-uncertainty-principle-20260812/ Comments URL: https://news.ycombinator.com/item?id=49286424 Points: 22 # Comments: 3",
+      "pubDate": "2026-08-13T22:22:54+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "2f1c76357500",
+      "title": "We eliminated 1,400 CVEs in NanoClaw's container images",
+      "link": "https://www.echo.ai/blog/echo-xnanoclaw-under-the-hood",
+      "description": "Article URL: https://www.echo.ai/blog/echo-xnanoclaw-under-the-hood Comments URL: https://news.ycombinator.com/item?id=49286357 Points: 37 # Comments: 14",
+      "pubDate": "2026-08-13T22:18:34+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "8085d320f59f",
+      "title": "Spaghettifying DRAM",
+      "link": "https://github.com/xoreaxeaxeax/skitter-creek-bath-salts",
+      "description": "Article URL: https://github.com/xoreaxeaxeax/skitter-creek-bath-salts Comments URL: https://news.ycombinator.com/item?id=49286341 Points: 201 # Comments: 53",
+      "pubDate": "2026-08-13T22:17:13+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "868308789171",
+      "title": "Heart aerospace completes first flight of largest electric aircraft",
+      "link": "https://www.heartaerospace.com/newsroom/heart-aerospace-completes-first-flight-of-world-s-largest-electric-aircraft",
+      "description": "Article URL: https://www.heartaerospace.com/newsroom/heart-aerospace-completes-first-flight-of-world-s-largest-electric-aircraft Comments URL: https://news.ycombinator.com/item?id=49286270 Points: 92 # Comments: 74",
+      "pubDate": "2026-08-13T22:11:51+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "4428a2ed67e8",
+      "title": "Build a Stratum 1 PTP Grandmaster on a Budget",
+      "link": "https://opscode.io/posts/ptp-grandmaster-cm4-sr1723u10/",
+      "description": "Article URL: https://opscode.io/posts/ptp-grandmaster-cm4-sr1723u10/ Comments URL: https://news.ycombinator.com/item?id=49286211 Points: 11 # Comments: 1",
+      "pubDate": "2026-08-13T22:08:44+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "ba484c0d5a61",
+      "title": "等待下一袋血",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTExMjYwMA==&mid=2670392013&idx=1&sn=06d40a5c3b0f9502fe9e9e63a68cf85b&chksm=bd52659822882b82f8e8dcca8b7a3653c0d907759b5e54fa519438294010766525e886d18f15",
+      "description": "等血，在许多血液病患者治疗过程中反复出现。白血病患者组织暖白小屋曾针对1309名白血病、淋巴瘤、骨髓瘤患者及家属发起用血调研。 结果显示，37%的人曾因未能及时输血遭遇危险，包括晕倒、耽误治疗、大出血，甚至死亡。 作者：张铃封图：图虫创意8月9日，经过近一周的等待，吴岚的母亲终于等来了血。 因为极度贫血，母亲虚弱到无法坐起。无奈之下，吴岚联系了“血头”，支付5000元，为母亲换来两个单位的红细胞。 输血后，母亲的状态很快改善，可以坐起来吃饭，也不再吃一口就停下来喘气。 吴岚没有告诉母亲这袋血是怎么得来的。经济观察报了解到，目前，中国临床用血处于紧平衡状态…",
+      "pubDate": "2026-08-13T22:02:32+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "2b929e722b5a",
+      "title": "关税战还要打？美国退税6.4亿，特朗普又推新关税",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzU5ODU1Mjg5Nw==&mid=2247831919&idx=1&sn=20eadead940d3ef64d566974dbb43f96&chksm=ff96a325d5e69942a10e2278ac086f74932eed721da7f6a69b9a185e9d93359ff4ce8e69249d",
+      "description": "来源|凤凰网《风暴眼》中国企业被特朗普政府加征的关税，从美国海关退回来了。 图源：网络8月12日盘后，春风动力发布公告，累计收到美国关税退税3860.79万美元，折合人民币约2.62亿元。 图为A股上市公司收到的退税金额 图源：网络算上此前陆续披露的华海药业、贵州轮胎、银都股份等公司，截至目前已有至少9家A股上市公司公告收到退税，合计超9080万美元，折合人民币逾6.4亿元。 而这笔钱能被退回来，源于今年2月美国最高法院作出的一份判决。 美国最高法院9位大法官以6票赞成、3票反对，裁定特朗普政府依据《国际紧急经济权力法》（IEEPA）加征的“对等关税”“…",
+      "pubDate": "2026-08-13T22:02:32+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "1777a71b99d8",
+      "title": "观点| 腾讯财报后的反思：AI转型是一场危险游戏",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTk4ODUwMw==&mid=2257523330&idx=1&sn=a615df455e60434dde7a789666abe44e&chksm=a5828a9b03b7ab80e52fd0050a29d0c59e985f748c280227947cdf7081d0afc70dfcf50d88fd",
+      "description": "昨天，腾讯交出了一份史无前例的财报，给行业最震撼的内容就是那一句：自由现金流为负，金额138亿……要知道这可是：主业增长接近10%，一年能创造3000亿净利润、手握4000亿经营现金流，3.6万亿市值的腾讯帝国啊作为资深互联网人，讲实话：倪叔我从来没有想象过有一天的腾讯这样站在生态位顶点上的利润现金之王会交出一份现金流为负的财报…… 这其中的震撼，不亚于三体人降临地球……但无独有偶，这样的震撼在5月份还来过一次：阿里上季度财报：净利润下滑99%，AI资本支出387亿元的那一次。 AT两大巨头都交出了同样的剧本，表明大家看到了相同的产业本质，倪叔认为它是：…",
+      "pubDate": "2026-08-13T22:02:32+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "f4ee0a74b285",
+      "title": "9年减少80万人，北方大市要开始“抢人”了",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg2MjA5Mjc0OA==&mid=2247581934&idx=1&sn=a30654771166498b8b29ae33859ab1c5&chksm=cf4c0a87179d32629f7642d7f4c251c50ab4da17a2fea515eb496145f3deb4f96353920990e7",
+      "description": "天津定下新人口增长目标8月11日，《天津市人口高质量发展“十五五”规划》（以下简称《人口规划》）发布。 其中直面现实：过去九年间，天津常住人口“减少了约80万人”。 同时，这份规划也提出新的增长目标——到2030年末推动常住人口达到1370万人，实现“稳中有升”。 截至2025年末，天津常住人口为1363万人，意味着未来五年要实现净增长7万人。 对一座千万级人口城市而言，这个目标看似不高，但天津并非毫无压力。 2016年，天津常住人口一度达到1443万人的峰值，此后大幅回落，近几年才逐渐企稳；人口自然增长率更已连续五年处于负增长区间，且呈加剧态势。 换句…",
+      "pubDate": "2026-08-13T22:02:32+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "f41897ee96ee",
+      "title": "从“愧疚式教育”到“比较式教育”：我们为何总想塑造理想中的家人？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA4Mjk1MjMzMA==&mid=2649871101&idx=1&sn=f66bfc774b9c6892bd798e4426f21da6&chksm=8680862da64b8e6ab04e2e370bdb454afff8a2302b3e4f058b95239815da9df06bf5911dcfd6",
+      "description": "「同一个家庭，每个人都站在自己的位置上讲述人生。」>>>“她想从我身上找愧疚感”“闺女，你也不要这样挤兑我，有一天你也会和我一样”“你爱找谁当妈，找谁当妈去”“家人说话就是不用想就直接说呀，那是因为爱你”最近，一场发生在综艺《姐姐当家2》中的家庭饭局，引发了大量讨论。 节目中，房主任为小女儿举办十八岁生日宴，本应属于小女孩的成人礼，却因为筹备过程中的沟通失衡和席间情绪爆发，变成了一场家庭矛盾的公开呈现。 饭局上，房主任反复细数养家的不易，把自我牺牲反复诉说。 身为生日主角的小女儿全程缄默失语、大女儿勇敢质疑母亲错位的情感表达，也让这场争执从一次生日插曲，…",
+      "pubDate": "2026-08-13T22:02:32+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "15e1bea7911f",
+      "title": "这些「缺点」，其实也许意味着你很聪明",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzAxNTY0NjEzNg==&mid=2247488934&idx=1&sn=bff54edb9fb74184413ce7077f6348c2&chksm=9a7219b4393e1bfaf5e638467e456cd3cb547ec7e321f71a000818833e36d5f5213a11ff3fcd",
+      "description": "Photo by Gilles Lambert on Unsplash本文共有 4000 字欢迎星标 L先生说避免收不到推送喔我们对于聪明的人往往有一些刻板印象，比如记忆力强，理解能力强，反应快，妙语连珠…… 但其实，许多聪明的人，表现出来的特质也许很多并不是正面的，甚至从传统的观念来说，更像是「缺点」。 今天的文章，我想跟你分享：有哪些别人眼中的缺点，其实也许说明你很聪明。 当然，这只是一种解释和可能性，并不意味着有这些缺点就一定比没有这些缺点的人更聪明。 我希望的是，每个人都能够更好地认识自己、了解自己，而不是局限于外在的社会规范束缚之中，被迫选择了…",
+      "pubDate": "2026-08-13T22:02:32+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "f7e973b8e33d",
+      "title": "Show HN: MCP Memory – Fast Agent Memory Using Google's OKF and SQLite FTS5",
+      "link": "https://github.com/fellowgeek/mcp-memory",
+      "description": "Article URL: https://github.com/fellowgeek/mcp-memory Comments URL: https://news.ycombinator.com/item?id=49286073 Points: 40 # Comments: 19",
+      "pubDate": "2026-08-13T21:57:47+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "75d00fc2a79e",
+      "title": "Time to Move On: Querying Without Nulls and Bags",
+      "link": "https://arxiv.org/abs/2608.10863",
+      "description": "Article URL: https://arxiv.org/abs/2608.10863 Comments URL: https://news.ycombinator.com/item?id=49286030 Points: 34 # Comments: 6",
+      "pubDate": "2026-08-13T21:54:56+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "094b94f4242f",
+      "title": "Gloomberb",
+      "link": "https://gloom.sh/",
+      "description": "Article URL: https://gloom.sh/ Comments URL: https://news.ycombinator.com/item?id=49285982 Points: 217 # Comments: 89",
+      "pubDate": "2026-08-13T21:52:32+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "e8b2a92db26b",
+      "title": "Ordinary Abundance",
+      "link": "https://ordinaryabundance.com/",
+      "description": "Article URL: https://ordinaryabundance.com/ Comments URL: https://news.ycombinator.com/item?id=49285770 Points: 29 # Comments: 3",
+      "pubDate": "2026-08-13T21:39:41+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "21d603e0d401",
+      "title": "I built a 500k-domain search engine for makers in a weekend for $10",
+      "link": "https://alexmorleyfinch.github.io/marlin/history/v1/article/the_birth.html",
+      "description": "Article URL: https://alexmorleyfinch.github.io/marlin/history/v1/article/the_birth.html Comments URL: https://news.ycombinator.com/item?id=49285718 Points: 60 # Comments: 37",
+      "pubDate": "2026-08-13T21:36:19+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "32df0fdfb554",
+      "title": "Nine PBS could lose 70 years of archives after cloud vendor goes defunct",
+      "link": "https://www.tomshardware.com/software/cloud-storage/nine-pbs-loses-access-to-70-years-of-data-after-contracted-cloud-storage-vendor-goes-defunct-public-tv-channel-sues-iron-mountain-data-center-which-hosts-archival-materials-to-ensure-preservation",
+      "description": "Article URL: https://www.tomshardware.com/software/cloud-storage/nine-pbs-loses-access-to-70-years-of-data-after-contracted-cloud-storage-vendor-goes-defunct-public-tv-channel-sues-iron-mountain-data-center-which-hosts-archival-materials-to-ensure-preservation Comments URL: https…",
+      "pubDate": "2026-08-13T21:14:12+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "653e4c6d9da0",
+      "title": "Choosing an AI model: one prompt, 11 models, different results",
+      "link": "https://www.netlify.com/blog/one-prompt-11-models-very-different-results/",
+      "description": "Article URL: https://www.netlify.com/blog/one-prompt-11-models-very-different-results/ Comments URL: https://news.ycombinator.com/item?id=49285327 Points: 101 # Comments: 53",
+      "pubDate": "2026-08-13T21:05:29+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "cf91a2161fad",
+      "title": "DeepSeek Harness developer preview",
+      "link": "https://deepseek.com/harness/en/",
+      "description": "https://github.com/deepseek-ai/deepseek-harnesshttps://deepseek-harness.github.io/deepseek-harness/en/guide... Comments URL: https://news.ycombinator.com/item?id=49285244 Points: 365 # Comments: 169",
+      "pubDate": "2026-08-13T20:58:02+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "94e90d6af916",
+      "title": "DeepSeek API Pricing Update",
+      "link": "https://twitter.com/deepseek_ai/status/2087864589895798968",
+      "description": "https://xcancel.com/deepseek_ai/status/2087864589895798968 Comments URL: https://news.ycombinator.com/item?id=49285160 Points: 93 # Comments: 33",
+      "pubDate": "2026-08-13T20:49:21+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "597880c9efc1",
+      "title": "Deutsche Bank becomes first foreign yuan clearing bank in Europe",
+      "link": "https://tradersunion.com/news/central-banks/show/2973571-deutsche-bank-becomes/",
+      "description": "Article URL: https://tradersunion.com/news/central-banks/show/2973571-deutsche-bank-becomes/ Comments URL: https://news.ycombinator.com/item?id=49284774 Points: 303 # Comments: 314",
+      "pubDate": "2026-08-13T20:09:50+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "a8deb346eedf",
+      "title": "史上最大IPO，要易主了？",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg5MzEyNzEwNQ==&mid=2247837968&idx=1&sn=021827ddb728232fbe34de2c1727bfed&chksm=c1077c5212d9a0567adea49f3e9c1ec8bf7247c5cdcd2bd0b8d5d3070be4696b322a31ee0ac2",
+      "description": "Anthropic近日传出10月将以超高估值上市的消息。尽管面临监管审查、竞争加剧等多重压力，但其惊人的营收增速仍受到投资界的高度追捧。 有媒体近日援引多位Anthropic投资方消息称，Anthropic预计将于10月IPO，估值或将达到2万亿美元及以上。 若该预测准确，这一惊人估值将超越SpaceX，成为史上规模最大的首次公开募股。 有投资方对媒体透露，Anthropic营收快速攀升，有望在本次计划开展的上市流程中，将当前估值提升一倍以上。 业内指出，Anthropic已于6月向美国证券交易委员会秘密提交IPO相关文件，进入静默期，受此约束，企业不得…",
+      "pubDate": "2026-08-13T20:03:29+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "efabf09cb703",
+      "title": "一套房8000元！又一个鹤岗，诞生了？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzUyNzA1MTk3MA==&mid=2247521574&idx=1&sn=f8cab46af7f67f2d2f5478bf8b84c9b4&chksm=fb47e7da9520b723adc8cc6ed06c286ef2a0323142c9fcfc351b41da63f5d4a140c7c24fe868",
+      "description": "文丨西部君又一座城市，因为“白菜价”房价，登上热搜。近日，一名女子花3万元，全款在陕西宝鸡陈仓区购入一套40平方米二手老房。 更夸张的是，其朋友以8000元的价格在同小区购入了一套顶楼住宅。 由此，相关话题迅速引发热议。这也让人自然而然地联想到此前因房屋“白菜价”走红的黑龙江鹤岗。 宝鸡，真的会成为下一个鹤岗吗？从全国视角来看，“鹤岗化”的蔓延，究竟有多严重？ 01与鹤岗相比，宝鸡出现8000元一套的房子，多少还是更令人意外。 毕竟，鹤岗是典型的资源枯竭型城市，而宝鸡却是陕西仅次于西安的第二大城市。 同时，它也是西部工业重镇、高端装备制造业基地、新材料研…",
+      "pubDate": "2026-08-13T20:02:29+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "1a88b40850b8",
+      "title": "中女一分钟花掉1000万，「lulu贵替」卖疯了？",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg2OTE0ODI5NQ==&mid=2247661238&idx=1&sn=19425308ea91293f5a1baa6fb112a2bf&chksm=cfb49d5c7f2b6454f5749a16edffc14035cece24eba488a4744c7c8b9ba149bec4ea56fa0683",
+      "description": "亲爱的朋友们，你们有没有和网恋对象见过面？如果没有的话，现在你们有了。 Alo，这个早就潜伏多年、布满中国一线到县城、但从来都没有一家店的品牌，终于网恋奔现，aka线上开店了。 从数据上看，暂时还没有见光死。根据财经报道，它店铺上线1分钟，成交额就突破1000万元；一条1150快的SUIT UP阔腿裤，到现在卖了1万条；1750元的SUNSET德训鞋，部分码数迅速缺货。 最夸张的是，Alo附赠的赠品包甚至被挂上了二手平台，报价超过250元……火啊！ Alo现在的热度就，烫！不过现在，都2026年了，lulu早就领消费者进了门、各路平替布满大街小巷、国产瑜…",
+      "pubDate": "2026-08-13T20:02:29+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "99dfdda3eb75",
+      "title": "巴奴火锅上线打赏服务员功能，客服称属消费者自愿行为",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NTE0ODc2Nw==&mid=2650970469&idx=1&sn=3b3bad6fb9fa904a1e0f213b0832d74e&chksm=bc7c1b52f02d5d44fe7cf1d6e3f5603e525cbf5634a88a73c119fe4dddb0253bb61b66f922d3",
+      "description": "界面新闻记者 | 宋佳楠8月13日，界面新闻注意到，巴奴火锅小程序点餐页面上线了全新的“打赏服务员”板块。 该板块下设置三款虚拟礼物，分别是标价8.88元的荣耀皇冠、6.66元的豪华游艇和3.33元的飞驰跑车，每一项均标注“有赏无赏，服务照样”。 图片来源：巴奴火锅小程序巴奴火锅客服人员告诉界面新闻记者，打赏服务员是8月初公司新上线的功能，消费者是否选择打赏完全自愿，主要看对服务人员的认可程度。 该功能需要在下单之后才能使用，打赏针对的是负责顾客所在桌的服务员，打赏费用会直接打给相应的服务员，公司不会从中抽取任何费用。 至于这项功能是否会长期存在，上述客…",
+      "pubDate": "2026-08-13T20:02:29+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "33614ee6d2a8",
+      "title": "ATG (YC F25) Is Hiring Member of Technical Staff (Data Platform)",
+      "link": "https://atg.science/careers",
+      "description": "Article URL: https://atg.science/careers Comments URL: https://news.ycombinator.com/item?id=49284697 Points: 0 # Comments: 0",
+      "pubDate": "2026-08-13T20:01:02+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "8d31cb94ef58",
+      "title": "DeepSeek V4 Pro 0813 (on OpenRouter)",
+      "link": "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/",
+      "description": "DeepSeek V4 Pro 0813 (on OpenRouter) The latest DeepSeek Pro model is now available, via API only. I had to link to OpenRouter because DeepSeek don't have any obvious announcement page for their new model. I haven't been able to confirm if they plan to release the open weights, b…",
+      "pubDate": "2026-08-13T07:59:23+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "3302bba97b91",
+      "title": "alchemy-utils 0.1a0",
+      "link": "https://simonwillison.net/2026/Aug/12/alchemy-utils/",
+      "description": "Release: alchemy-utils 0.1a0 I've long pondered what a database agnostic version of my sqlite-utils Python library and CLI utility might look like. This morning (literally a shower project) I tasked Codex and GPT-5.6 Sol Ultra with building a prototype: Do a research spike to see…",
+      "pubDate": "2026-08-13T03:51:30+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "46642bc61056",
       "title": "Quoting Florian Herrengt",
-      "link": "https://simonwillison.net/2026/Aug/12/florian-herrengt/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/12/florian-herrengt/",
       "description": "But then users start to report a weird bug. It's the 4th time your team has been trying to fix it. I mean... asking AI to fix it. Unfortunately, it seems like not even Fable can figure it out. You go talk to the person who worked on this feature. \"So where does the data come from…",
       "pubDate": "2026-08-12T23:08:47+08:00",
       "source": {
@@ -39,345 +399,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "2bc2cf30ffd5",
-      "title": "Qwen/Qwen3.8-2.4T-A95B",
-      "link": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
-      "description": "Article URL: https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B Comments URL: https://news.ycombinator.com/item?id=49273478 Points: 134 # Comments: 40",
-      "pubDate": "2026-08-12T23:01:17+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "10b61ecacff9",
-      "title": "GiveCampus (YC S15) Is Hiring Engineering Managers",
-      "link": "https://job-boards.greenhouse.io/givecampus/jobs/4112793009",
-      "description": "Article URL: https://job-boards.greenhouse.io/givecampus/jobs/4112793009 Comments URL: https://news.ycombinator.com/item?id=49273395 Points: 0 # Comments: 0",
-      "pubDate": "2026-08-12T22:55:27+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "5299dc412dc9",
-      "title": "Google launches Pixel 11 Pro Fold",
-      "link": "https://blog.google/products-and-platforms/devices/pixel/pixel-11-pro-fold/",
-      "description": "Article URL: https://blog.google/products-and-platforms/devices/pixel/pixel-11-pro-fold/ Comments URL: https://news.ycombinator.com/item?id=49273330 Points: 29 # Comments: 18",
-      "pubDate": "2026-08-12T22:52:27+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "69d5370a9766",
-      "title": "Hax – a minimalist, terminal-native coding agent written in C",
-      "link": "https://usehax.dev/",
-      "description": "Article URL: https://usehax.dev/ Comments URL: https://news.ycombinator.com/item?id=49273175 Points: 22 # Comments: 5",
-      "pubDate": "2026-08-12T22:43:45+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "8cc05f36c98f",
-      "title": "License plate reader searches should require a warrant",
-      "link": "https://andrewpwheeler.com/2026/08/12/license-plate-reader-searches-should-require-a-warrant/",
-      "description": "Article URL: https://andrewpwheeler.com/2026/08/12/license-plate-reader-searches-should-require-a-warrant/ Comments URL: https://news.ycombinator.com/item?id=49273165 Points: 269 # Comments: 168",
-      "pubDate": "2026-08-12T22:43:39+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "eaf09036539f",
-      "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
-      "link": "https://tailscale.com/blog/sqlite-wal-reset-bug",
-      "description": "Article URL: https://tailscale.com/blog/sqlite-wal-reset-bug Comments URL: https://news.ycombinator.com/item?id=49272832 Points: 289 # Comments: 37",
-      "pubDate": "2026-08-12T22:22:30+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "60449cc95741",
-      "title": "Tim King, AmigaDOS developer, has died",
-      "link": "https://amiga-news.de/en/news/AN-2026-08-00070-EN.html",
-      "description": "Article URL: https://amiga-news.de/en/news/AN-2026-08-00070-EN.html Comments URL: https://news.ycombinator.com/item?id=49272655 Points: 100 # Comments: 19",
-      "pubDate": "2026-08-12T22:09:11+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "a7907ec05d87",
-      "title": "German advocacy group lodges criminal complaint over Meta AI glasses",
-      "link": "https://www.reuters.com/legal/government/german-advocacy-group-lodges-criminal-complaint-over-meta-ai-glasses-2026-08-12/",
-      "description": "Article URL: https://www.reuters.com/legal/government/german-advocacy-group-lodges-criminal-complaint-over-meta-ai-glasses-2026-08-12/ Comments URL: https://news.ycombinator.com/item?id=49272620 Points: 73 # Comments: 26",
-      "pubDate": "2026-08-12T22:06:03+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "de5acd99dd76",
-      "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
-      "link": "https://knownagents.com/insights",
-      "description": "Article URL: https://knownagents.com/insights Comments URL: https://news.ycombinator.com/item?id=49272569 Points: 92 # Comments: 41",
-      "pubDate": "2026-08-12T22:02:46+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "2386deebdc37",
-      "title": "华尔街开始质疑科技巨头的AI故事",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTExMjYwMA==&mid=2670391873&idx=1&sn=db4d65b0efb2235d58c8a4d2d14ee8a2&chksm=bd221168f43f18146ab11dba9f8fa65d6d334048f9d780120986d4ad78555e4aab4952cafd8c",
-      "description": "一座今天建成的数据中心，可能要在未来十几年中回收投资；装入其中的芯片，却可能在数年内面临新一代产品的竞争。 即使算力需求继续增长，算力价格、设备利用率、能源成本和技术替代，也会不断改写最初的回报测算。 作者：欧阳晓红封图：图虫创意“利好”也读成“利空”？ 前有谷歌等科技巨头交出亮眼财报，后有英伟达抛出5000亿美元的产融合作计划，市场的回答却一言难尽。 在美国另类资产金融科技平台iCapital董事总经理兼首席投资策略师Sonali Basak看来，现金流压力正在提高AI（人工智能）投资的考核门槛，但尚未构成所有超大规模厂商（hyperscalers）的…",
-      "pubDate": "2026-08-12T22:02:23+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "ea636469d5ea",
-      "title": "弃量保价的保时捷成为不了法拉利",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NTE0ODc2Nw==&mid=2650970180&idx=1&sn=fc1ad32da49db6672b92b90b0b3ebe70&chksm=bc31e33bc5662a4916d3aefabd7a854a46c53831ea96ab9c0acb86e691b383043b66c855bb36",
-      "description": "图片来源：界面新闻界面新闻记者 |武凯界面新闻编辑 |周姝祺销量和盈利能力持续承压的保时捷，正试图让产品结构重新向品牌金字塔尖倾斜，用全新的一套“价值优先于销量”的战略叙事定义经营目标。 但对于一家依靠规模走出危机并获得成功的公司而言，这可能只是对被动收缩更体面的包装。 今年上半年，保时捷营收172.29亿欧元，同比下滑5.1%；汽车交付量从14.64万辆降至12.23万辆，同比下跌16.5%，创2021年来新低。 其中，纯电动汽车占比由去年同期23.5%降至19.4%。 与销量和营收下滑形成反差的是，保时捷汽车业务的经营利润，从去年的8.32亿欧元提高…",
-      "pubDate": "2026-08-12T22:02:23+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "f393f057a4b5",
-      "title": "今晚美国CPI料温和放缓，9月加息预期或再遭一击！",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NzAwMzU0MA==&mid=2247645525&idx=3&sn=3ef88acb5976cb7750d1eae3ea99a113&chksm=a7f59fa328f06620aa2ed09405854747d556d868b37f864c5a66ddcdb8dfbba06afc4debe1b5",
-      "description": "美联储9月是否加息，答案或许今晚揭晓。美国劳工统计局将于美东时间周三上午8:30（北京时间周三晚20:30）公布7月CPI数据。 市场普遍预期整体CPI环比上涨0.1%，核心CPI环比上涨0.2%，年率分别降至3.4%和2.5%。 在上周非农就业数据意外走软之后，这份报告将成为检验9月加息预期的关键试金石。 若数据温和，市场可能进一步压低9月加息概率；若数据超预期偏热，则将令已呈鹰派态势的美联储面临更大压力。 当前，利率期货市场将9月加息概率定价于约50%，即所谓\"硬币正反面\"。 上周非农数据显示7月就业人口减少2.3万，令加息预期一度明显降温，但随后油…",
-      "pubDate": "2026-08-12T22:02:23+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "06eefb6a7030",
-      "title": "辉瑞中国总裁出镜秀身材，拉满了减肥药焦虑",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NTE0ODc2Nw==&mid=2650970180&idx=2&sn=9f1ca9317693a16d8d50a5a547859590&chksm=bc7da870b15868f29827a05b12d8e7e6b239fecd45b6cbf340ed8754c3033fbc6688286caed5",
-      "description": "图片来源：界面图库界面新闻记者 |黄华界面新闻编辑 |谢欣辉瑞中国区总裁彭振科（Jean-Christophe Pointeau）瘦了。 今年3月至今，他减重约17公斤。8月12日，辉瑞制药公开名为《30斤任务》（Mission 30）的宣传海报，将彭振科减重前后的形象并列呈现：左侧是其身着白色Polo衫的清爽近照，右侧则是西装笔挺的过往留影。 对比之下，这位药企高管的肩线收窄、腰围缩减，身形变化肉眼可辨。 当然，“辉瑞减重”的logo也被印在了彭振科的Polo新衫上—— 总裁亲自打样，活脱脱一份药企高管的硬核产品体验报告。 在北京日报报业集团旗下媒体长…",
-      "pubDate": "2026-08-12T22:02:23+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "699a1985a9cd",
-      "title": "一签赚35万？宇树IPO狂欢背后，王兴兴被问“你们是遥控玩具公司吗？”",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzU5ODU1Mjg5Nw==&mid=2247831841&idx=1&sn=4a5f42eab85983c9d0c79867083b12e0&chksm=ff49e5c27e114c11b97205cbeb03b5f4e59b7338ee042e759510b192398c6423a1b01c3ad585",
-      "description": "来源｜凤凰网财经《公司研究院》宇树科技中签结果尘埃落定，网上中签号码共19414个，最终中签率约为0.018%，远低于长鑫科技0.47%中签率。 图源：网络中签结果一出，社交平台立刻掀起晒单潮，若对标年内科创板新股首日466.61%的平均涨幅，单签盈利可达35.18万元。 但热闹背后，投资者的担忧也同步而来。150.80元的发行价，比此前市场按募资额测算出的104元，硬生生高出45%，甚至宇树科技的保荐机构中信证券，在询价前给出的6至12个月目标市值是506亿至559亿元，比609.93亿元的发行市值还要低。 宇树科技究竟值不值得长期布局？这些疑问，从打…",
-      "pubDate": "2026-08-12T22:02:23+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "bcd000b8b84e",
-      "title": "薛甄珠手势舞：2026年，我们还在渴望被坚定选择吗？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzA4Mjk1MjMzMA==&mid=2649871070&idx=1&sn=9ac447f78dade1a5e2693fc1762e3a5d&chksm=86fe71e643b45dd18211e1d005147c775b344daef742221b4ce97e5e42c491c19f7cb9bbd209",
-      "description": "「当外界风浪汹涌，当不确定性如潮水般反复拍打日常生活的堤岸，人们需要这样一个锚来固定自己的位置，确定自己不会被轻易卷走，并去相信即便一切都在流动，依然有某种关系是我们无疑的底气。」>>>（网友们掀起模仿热潮）最近，薛甄珠的手势舞在抖音占据各大挑战榜榜首，电视剧《我的前半生》中薛甄珠来到女婿陈俊生公司寻找并质问其出轨对象凌玲的片段再度走红，如同这位强势捍卫自己和女儿利益的老太太，这一片段的台词也被分割为紧张的短句。 （《我的前半生》原剧片段）带着酣畅淋漓的辛辣气息，伴随着强劲如擂擂心跳的鼓点和大开大合的手势，引得众多网友模仿，甚至衍生出各地方言的二创，被评…",
-      "pubDate": "2026-08-12T22:02:23+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "dc99e5698f58",
-      "title": "在两元店打飞机的gooner，是一帮真正的loser",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5ODc5MDM2MA==&mid=2651806126&idx=1&sn=926724b718e1fed40ac7ed0af1699cc8&chksm=bc640136562a4f950bc9ca6f135ddf8331ffe0f7a951dc1039c8a016cfd7340ee0f8fba556d1",
-      "description": "还记得那句响透整条街的“两元，两元，全场两元”吗，以及那些堆积如山的塑料脸盆、不锈钢厨具、五金零件和临期小零食…… 在千禧年遍地林立、永远还剩三天清仓甩卖、永远假装下周就要搬走的店，大都和当年被手汗揉得皱巴巴的两元纸币一起，消失不见了。 但在美国，它们干成了连锁。和我们印象里逼仄杂乱的小铺面不同，这些被称为Dollar Store的门店有更大的空间、更多的牌子货。 灯光有些惨白，空气不算清新，不太富有的人们在这里精打细算地挑选着商品，规划着这个月所剩不多的生活开支。 就在这样的地方，美国两元店，有一类变态，神色闪躲，游荡在又高又大的货架之间，专门寻找落单…",
-      "pubDate": "2026-08-12T22:02:23+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "134ff5a2a975",
-      "title": "Why Tiny JPEGs Look Different in Chrome",
-      "link": "https://guillaumetech.github.io/posts/jpg-scaling-chrome/",
-      "description": "Article URL: https://guillaumetech.github.io/posts/jpg-scaling-chrome/ Comments URL: https://news.ycombinator.com/item?id=49272549 Points: 121 # Comments: 23",
-      "pubDate": "2026-08-12T22:00:54+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "eb7be454b2fa",
-      "title": "My Agent Setup",
-      "link": "https://chad.cm/posts/2026-8-11-my-agent-setup",
-      "description": "Article URL: https://chad.cm/posts/2026-8-11-my-agent-setup Comments URL: https://news.ycombinator.com/item?id=49272484 Points: 63 # Comments: 34",
-      "pubDate": "2026-08-12T21:56:05+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "7c20204f15d7",
-      "title": "Automatic1111 for Apple metal, 40% speed up sd1.5",
-      "link": "https://therad.ninja/from-8-10-seconds-to-3-7-teaching-automatic1111-to-speak-metal-on-an-m3-pro/",
-      "description": "Article URL: https://therad.ninja/from-8-10-seconds-to-3-7-teaching-automatic1111-to-speak-metal-on-an-m3-pro/ Comments URL: https://news.ycombinator.com/item?id=49272282 Points: 36 # Comments: 16",
-      "pubDate": "2026-08-12T21:41:12+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "ce97894c76e1",
-      "title": "Commodore 8-Bit 5¼\" Disk Images",
-      "link": "https://www.masswerk.at/nowgobang/2026/commodore-disk-images",
-      "description": "Article URL: https://www.masswerk.at/nowgobang/2026/commodore-disk-images Comments URL: https://news.ycombinator.com/item?id=49272132 Points: 20 # Comments: 0",
-      "pubDate": "2026-08-12T21:30:47+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "d10ea54f06e0",
-      "title": "AI is removing the middle class of software engineering",
-      "link": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
-      "description": "Article URL: https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html Comments URL: https://news.ycombinator.com/item?id=49271994 Points: 318 # Comments: 260",
-      "pubDate": "2026-08-12T21:20:05+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "3f4d4cc953d1",
-      "title": "Shade Map",
-      "link": "https://shademap.app",
-      "description": "Article URL: https://shademap.app Comments URL: https://news.ycombinator.com/item?id=49271757 Points: 45 # Comments: 7",
-      "pubDate": "2026-08-12T21:01:21+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "d0605d12dd10",
-      "title": "大厂AI，解锁新“收银台”",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzkyMzYzNDQ0Ng==&mid=2247490151&idx=1&sn=3c65ad69276fa28d55ec9ae74f8226de&chksm=c0917a11231708e77cc6f6c69f4d7e194735b6f586b9193d6edde71f1279c7444921af9adee9",
-      "description": "开放平台成又一战场。听筒Tech（ID:tingtongtech）原创 文 | 杨 林编 | 饶霞飞开放平台这出戏，演到2026年夏天，终于迎来了新的剧本。 过去这两年，国内叫得上名字的AI助手，几乎都长着同一张脸，能聊天、能写稿、能画图、能订票。 用户用得不亦乐乎，厂商烧钱烧得心惊肉跳。但热闹的AI免费大餐吃久了，总要有人买单。 8月10日，几乎在同一天，两家巨头几乎前后脚给出了答案。 一家宣布搭好了自己的开放平台，热热闹闹地请商家入驻；另一家，有市场消息表示，已经有免费流进来的酒店订单，开始按比例抽成。 尽管大厂也指出，收租并非事实。但或许，这也意味…",
-      "pubDate": "2026-08-12T20:03:25+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "c4410c54aa7f",
-      "title": "《欢迎来龙餐馆》能救暑期档吗？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzI3OTEwMDQwNw==&mid=2649969790&idx=1&sn=883c5f6a5a37b12525dcdf760442a69b&chksm=f21689ccd8569e3840a713490a5667e3bd788a3b9b069b92091c55b6db10d898f25a4760f2b6",
-      "description": "「核心提示」爆款终于来了，但暑期档还没“爆”。作者 | 高宇哲编辑 | 刘杨一部电影能拯救暑期档票房吗？ 这个问题，正在被《欢迎来龙餐馆》推到台前。上映两天，票房破2.6亿，预测直奔30亿，联合出品方股票接连涨停，一切看起来都像“救世主”降临。 不过，一部影片带来的热闹，不足以改变市场的基本面。 将视野拉回整个暑期档乃至今年上半年，电影行业并未摆脱阴霾。 不仅暑期档前半程票房低迷，2026年上半年总票房相较去年同期大幅缩水超40%，几乎倒退至2022年上半年水平。 与之对应的，高票房出圈电影也骤减，今年以来，票房破20亿的影片目前仅有3部，几乎没有能形成…",
-      "pubDate": "2026-08-12T20:02:25+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "5b2d7763fc63",
-      "title": "千店规模换不来港股门票：消费企业上市，究竟卡在哪里？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzIyMzYyOTk2OA==&mid=2247617602&idx=1&sn=1f75a5b041bf9a97e668a6b639e2d148&chksm=e99214803d03ceef0fbc436556a47ef1bbb2ff88eb25d70c7f874eb9c035081c54523353e20c",
-      "description": "同处消费赛道，有的企业顺利拿到港股入场券，有的虽坐拥千家门店，却屡屡递表又折戟。 它们究竟被卡在了何处？作者：刘轩宇封图：图虫创意2026年7月，多家消费企业的港股上市进程出现变化。 老乡鸡、比格披萨、钱大妈、COMMUNE幻师等企业的申请版本先后到期失效；袁记云饺取得中国证监会境外上市备案后，更新了上市申请。 此前6月份，巴奴毛肚火锅第三次招股书失效，并于当月重新递交。 这些企业都拥有不小的经营规模，有些门店更是数以千计，但却迟迟未能走到敲钟环节。 与此同时，溜溜梅、齐云山食品相继在6、7月顺利敲钟。 鸣鸣很忙、东鹏饮料此前第一季度也在港股完成上市。同…",
-      "pubDate": "2026-08-12T20:02:25+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "58f4b92c184c",
-      "title": "2026 Eclipse Webcams",
-      "link": "https://jonty.github.io/2026_eclipse_webcams/",
-      "description": "Article URL: https://jonty.github.io/2026_eclipse_webcams/ Comments URL: https://news.ycombinator.com/item?id=49270953 Points: 359 # Comments: 81",
-      "pubDate": "2026-08-12T19:53:01+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "fcff4f4f0335",
-      "title": "uBlock Origin Is Giving Up the Fight to Keep Ads Off Facebook",
-      "link": "https://digitalescapetools.com/2026/08/ublock-origin-stops-chasing-facebook-ads.html",
-      "description": "Article URL: https://digitalescapetools.com/2026/08/ublock-origin-stops-chasing-facebook-ads.html Comments URL: https://news.ycombinator.com/item?id=49270726 Points: 103 # Comments: 66",
-      "pubDate": "2026-08-12T19:28:27+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "fbb48cdb56d6",
-      "title": "Delphi 13 Community Edition Is Now Available",
-      "link": "https://blogs.embarcadero.com/delphi-13-community-edition-is-now-available/",
-      "description": "Article URL: https://blogs.embarcadero.com/delphi-13-community-edition-is-now-available/ Comments URL: https://news.ycombinator.com/item?id=49270621 Points: 104 # Comments: 77",
-      "pubDate": "2026-08-12T19:13:36+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "1f044ad3768c",
+      "id": "82986577c4ea",
       "title": "There are no lossless transformations of natural-language text",
-      "link": "https://simonwillison.net/2026/Aug/11/there-are-no-lossless-transformations-of-natural-language-text/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/11/there-are-no-lossless-transformations-of-natural-language-text/",
       "description": "There are no lossless transformations of natural-language text Sophie Alpert shares her \"internal policy on acceptable use of AI writing by engineers\". It's a short read (supporting its own recommendations) and really good. If you chose to have LLMs help massage your writing the…",
       "pubDate": "2026-08-12T07:48:35+08:00",
       "source": {
@@ -387,9 +411,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "ae0bb8510d8a",
+      "id": "173aef63f1af",
       "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
-      "link": "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/",
       "description": "Stealing Reasoning Traces from Proprietary LLM APIs A vanity domain name (stolen-thoughts.com) for a neat paper: Anthropic, OpenAI, and Google return encrypted chain-of-thought blocks to clients that can be replayed across sessions, users, and models. We take a trace produced by…",
       "pubDate": "2026-08-12T06:40:45+08:00",
       "source": {
@@ -399,9 +423,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "33db945aae2d",
+      "id": "49818a8a52de",
       "title": "datasette-upload-dbs 0.5a0",
-      "link": "https://simonwillison.net/2026/Aug/11/datasette-upload-dbs/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/11/datasette-upload-dbs/",
       "description": "Release: datasette-upload-dbs 0.5a0 This plugin has been around for a while - it lets users upload a brand new SQLite database to a hosted Datasette instance, at which point that database will start being served by that instance. It can also be used to atomically swap a database…",
       "pubDate": "2026-08-12T04:35:13+08:00",
       "source": {
@@ -411,9 +435,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "04251f3749e7",
+      "id": "4d017e94e195",
       "title": "Introducing Muse Glimmer",
-      "link": "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/",
       "description": "Introducing Muse Glimmer Meta are back in the open weights game! Muse Glimmer is a brand new 30B model under a clean Apache 2.0 license (a step up from the janky Llama licenses of old). They claim to have optimized it for exactly the kind of things I'm looking for in a local mode…",
       "pubDate": "2026-08-11T07:56:03+08:00",
       "source": {
@@ -423,9 +447,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "328ec720754b",
+      "id": "079b648114a6",
       "title": "Quoting OpenClaw (running Opus 4.6)",
-      "link": "https://simonwillison.net/2026/Aug/10/openclaw/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/10/openclaw/",
       "description": "The API has zero authorisations checks on cancelling other people's reservations … I tested this with the person in waitlist position #1 — and it actually went through. So you've moved from #4 to #3 already. — OpenClaw (running Opus 4.6), hacking an Australian gym-booking website…",
       "pubDate": "2026-08-10T10:05:16+08:00",
       "source": {
@@ -435,9 +459,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "d2a5f0864ab3",
+      "id": "aace6aea2b81",
       "title": "Quoting Claude Opus 5 system prompt",
-      "link": "https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/",
       "description": "Claude Fable 5 and Claude Mythos 5 were first released on June 9, 2026. On June 12, 2026, Anthropic suspended access to both models to comply with U.S. Department of Commerce export controls; the Department lifted those controls on June 30, 2026, and Anthropic restored access on…",
       "pubDate": "2026-08-10T07:31:39+08:00",
       "source": {
@@ -447,9 +471,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "5e6d7871f3c4",
+      "id": "84b53cd346d6",
       "title": "GitHub Models is now retired",
-      "link": "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/",
       "description": "GitHub Models is now retired I missed this news until today, when the GitHub Actions run for my simonw/research repository failed with this error message: GitHub Models is temporarily unavailable as part of a scheduled retirement brownout. That message is already stale, because t…",
       "pubDate": "2026-08-10T06:48:05+08:00",
       "source": {
@@ -459,9 +483,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "aa5eb22285cd",
+      "id": "c119a067e506",
       "title": "SQLite compressed text-history prototypes",
-      "link": "https://simonwillison.net/2026/Aug/9/sqlite-text-history-prototype/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/9/sqlite-text-history-prototype/",
       "description": "Research: SQLite compressed text-history prototypes I'm perennially interested in options for storing revision histories in relational databases. While out on a dog walk I had a new idea: how about taking the full text of every prior version in a big JSON array of strings and the…",
       "pubDate": "2026-08-10T06:05:00+08:00",
       "source": {
@@ -471,9 +495,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "6296a492575f",
+      "id": "e96dc92d1245",
       "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
-      "link": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/8/auto-mode/",
       "description": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans Anthropic are really confident in Claude Code's auto mode, to the point that they are making it the default setting for new sessions in most Claude Code plans starting on August 14th. This was one of the top…",
       "pubDate": "2026-08-09T06:36:03+08:00",
       "source": {
@@ -483,9 +507,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "521848ca364d",
+      "id": "dfa7f815d471",
       "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
-      "link": "https://simonwillison.net/2026/Aug/8/now-we-have-a-timeline-of-the-openai-accidental-attack-against-h/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/8/now-we-have-a-timeline-of-the-openai-accidental-attack-against-h/",
       "description": "My comment on Now we have a timeline of the OpenAI accidental attack against Hugging Face — Hacker News.I think one of the most interesting details here might be tucked away in that first bulletin point: May 7: OpenAI starts a new training run for an experimental, unreleased mode…",
       "pubDate": "2026-08-08T22:06:41+08:00",
       "source": {
@@ -495,9 +519,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "8efbde1d0f3e",
+      "id": "e4d223fab979",
       "title": "Quoting John Gruber",
-      "link": "https://simonwillison.net/2026/Aug/8/john-gruber/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/8/john-gruber/",
       "description": "Me, I try to get into the mindset of playing live music, not recording a studio album. Except when I’m writing a piece where I really want it to be an album. Those aren’t rare, per se, but they’re occasional. If I tried to make every post a hall-of-famer I’d never get anything ou…",
       "pubDate": "2026-08-08T08:10:40+08:00",
       "source": {
@@ -507,9 +531,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "38e1d864014e",
+      "id": "04e10f679402",
       "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
-      "link": "https://simonwillison.net/2026/Aug/7/openai-timeline/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
       "description": "OpenAI gave a last-minute presentation at the Black Hat security on Wednesday about \"the Hugging Face Incident\" (previously on this blog). The video was published yesterday. It's short and information dense and well worth watching, in particular because it provides full details o…",
       "pubDate": "2026-08-08T07:55:58+08:00",
       "source": {
@@ -519,9 +543,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "68b0d8364869",
+      "id": "e4a8cc5d4128",
       "title": "Moonlight & Mayhem (Raccoon Heist by Codex + GPT-5.6 Sol Ultra)",
-      "link": "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/",
       "description": "Moonlight & Mayhem (Raccoon Heist by Codex + GPT-5.6 Sol Ultra) On Wednesday I wrote about One-shotting a Raccoon Heist game using Claude Fable 5, where I had Claude Fable 5 build a full working game from a premise I generated with GPT-3 and DALL-E four years ago. I decided to po…",
       "pubDate": "2026-08-08T03:18:09+08:00",
       "source": {
@@ -531,9 +555,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "6b58e467eab5",
+      "id": "22d6ecf99493",
       "title": "The Tokenpocalypse Is Here: Companies Are Scrambling To Stop Spending So Much on AI",
-      "link": "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/",
       "description": "The Tokenpocalypse Is Here: Companies Are Scrambling To Stop Spending So Much on AI There's a fun anecdote from Accenture (apparently via leaked meeting audio recordings) in this 404 Media piece from June 24th: “We’re seeing from some of the data internally at least that it’s act…",
       "pubDate": "2026-08-08T00:18:51+08:00",
       "source": {
@@ -543,9 +567,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "8bcdf4144615",
+      "id": "12240cabee3d",
       "title": "datasette-auth-tokens 0.4a13",
-      "link": "https://simonwillison.net/2026/Aug/6/datasette-auth-tokens/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/6/datasette-auth-tokens/",
       "description": "Release: datasette-auth-tokens 0.4a13 Upgraded for compatibility with `sqlite-utils 4. Tags: datasette",
       "pubDate": "2026-08-07T07:07:47+08:00",
       "source": {
@@ -555,9 +579,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "f0184da42a58",
+      "id": "524600ece065",
       "title": "datasette 1.0a38",
-      "link": "https://simonwillison.net/2026/Aug/6/datasette/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/6/datasette/",
       "description": "Release: datasette 1.0a38 This release fixes a SQL injection security issue that affects Datasette instances that serve a mixture of public and private tables in the same database, with access configured using the Datasette permissions system. Site administrators who serve privat…",
       "pubDate": "2026-08-07T02:24:34+08:00",
       "source": {
@@ -567,9 +591,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "c8e6264a025a",
+      "id": "a7ea49da1c41",
       "title": "datasette 0.65.3",
-      "link": "https://simonwillison.net/2026/Aug/6/datasette-2/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/6/datasette-2/",
       "description": "Release: datasette 0.65.3 Back-ported the SQL Injection security fix from 1.0a38. Tags: datasette",
       "pubDate": "2026-08-07T02:22:07+08:00",
       "source": {
@@ -579,9 +603,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "eed6e820946e",
+      "id": "666c82a5cd42",
       "title": "Simon Willison on Technical Blogging",
-      "link": "https://simonwillison.net/2026/Aug/6/simon-willison-on-technical-blogging/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/6/simon-willison-on-technical-blogging/",
       "description": "Simon Willison on Technical Blogging I was interviewed by Cynthia Dunlop for her \"Write that blog!\" series back in January, but I just realized I never linked to the interview from my own blog! It includes my answers to the following questions: Why did you start blogging – and wh…",
       "pubDate": "2026-08-07T02:04:39+08:00",
       "source": {
@@ -591,9 +615,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "d29e9aa50122",
+      "id": "3e9c8f31f9e8",
       "title": "An AI model from Meta also hacked another company during testing",
-      "link": "https://simonwillison.net/2026/Aug/6/an-ai-model-from-meta/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/6/an-ai-model-from-meta/",
       "description": "An AI model from Meta also hacked another company during testing Stop me if you've heard this one before: An AI model from the parent company of Facebook and Instagram hacked into another company’s systems during cybersecurity testing, a spokesperson confirmed on Wednesday. Meta…",
       "pubDate": "2026-08-06T08:25:27+08:00",
       "source": {
@@ -603,9 +627,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "46fcc09b2b72",
+      "id": "67113138e727",
       "title": "Introducing Muse Code and Muse Spark 1.2",
-      "link": "https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/",
       "description": "Introducing Muse Code and Muse Spark 1.2 Yet more evidence that the most important characteristic of any model these days is long-sequence agentic tool calling. Meta shipped their own coding agent as part of getting that to work! Muse Spark 1.2 is a coding-focused update to Muse…",
       "pubDate": "2026-08-06T07:58:35+08:00",
       "source": {
@@ -615,9 +639,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "9c5c7b5ca89e",
+      "id": "9610dc3cc026",
       "title": "Third-party cyber evaluations involving OpenAI models",
-      "link": "https://simonwillison.net/2026/Aug/5/third-party-cyber-evaluations/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/5/third-party-cyber-evaluations/",
       "description": "Third-party cyber evaluations involving OpenAI models And another one. I had to create a accidental-cyberattacks tag to keep track of them all! This post from OpenAI covers both the UK AI Safety Institute attack (see my previous post) and another attack enabled by Irregular: Irre…",
       "pubDate": "2026-08-06T07:45:32+08:00",
       "source": {
@@ -627,9 +651,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "92ea9e6e9847",
+      "id": "f58f86051427",
       "title": "Incident Report: unsanctioned agent behaviour during cyber testing",
-      "link": "https://simonwillison.net/2026/Aug/5/incident-report/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/5/incident-report/",
       "description": "Incident Report: unsanctioned agent behaviour during cyber testing It happened again. This time it was the UK government's AI Security Institute who accidentally attacked other companies while running an evaluation with models with the safety filters turned off. From their techni…",
       "pubDate": "2026-08-06T07:32:06+08:00",
       "source": {
@@ -639,9 +663,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "9cfe688a300d",
+      "id": "b9bb179c3f4f",
       "title": "One-shotting a Raccoon Heist game using Claude Fable 5",
-      "link": "https://simonwillison.net/2026/Aug/5/raccoon-heist/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/5/raccoon-heist/",
       "description": "Back in 2022 I tweeted screenshots of a game concept generated by GPT-3 and some concept \"art\" created using DALL-E. Today, on the fourth anniversary of that tweet, I decided to see if Claude Fable 5 (running in Claude Code for web) could build the entire game from the content of…",
       "pubDate": "2026-08-06T03:42:38+08:00",
       "source": {
@@ -651,9 +675,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "0c557d74dd5d",
+      "id": "26f56ad86402",
       "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
-      "link": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/",
       "description": "I released LLM 0.32 this morning, the most significant new version of LLM since the initial launch of the project. The new version includes support for visible reasoning traces, server-side provider tools, redesigned content-addressable SQLite logs, new models, and new features e…",
       "pubDate": "2026-08-05T07:58:24+08:00",
       "source": {
@@ -663,9 +687,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "b343d50c6030",
+      "id": "c29f67bc035b",
       "title": "llm-anthropic 0.26",
-      "link": "https://simonwillison.net/2026/Aug/4/llm-anthropic/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/4/llm-anthropic/",
       "description": "Release: llm-anthropic 0.26 Includes new features enabled by LLM 0.32: New models: claude-fable-5, claude-sonnet-5, and claude-opus-5. #75, #76 Added server-side tools for WebSearch, WebFetch, CodeExecution, and AnthropicMCP, available through LLM's -T interface or Python tools=.…",
       "pubDate": "2026-08-05T06:00:58+08:00",
       "source": {
@@ -675,9 +699,9 @@
       "category": "ai-agent"
     },
     {
-      "id": "269425a044bd",
+      "id": "a290a70c8a5a",
       "title": "PipeNetwork/minimax-h3-mlx",
-      "link": "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/",
       "description": "PipeNetwork/minimax-h3-mlx MiniMax released MiniMax-H3 two days ago - they describe it as a \"a general-purpose, omni-modal generative system\", which in practice means it accepts text, images, audio and video and can use them to generate up to 15 second video clips with audio incl…",
       "pubDate": "2026-08-05T03:10:09+08:00",
       "source": {
@@ -687,35 +711,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "c8fe4a2cb8bf",
+      "id": "2211277e78d0",
       "title": "llm 0.32",
-      "link": "https://simonwillison.net/2026/Aug/4/llm/#atom-everything",
+      "link": "https://simonwillison.net/2026/Aug/4/llm/",
       "description": "Release: llm 0.32 See my detailed blog post about this release. Tags: llm",
       "pubDate": "2026-08-05T01:15:33+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "feb44c460a41",
-      "title": "Quoting Steve Yegge",
-      "link": "https://simonwillison.net/2026/Aug/4/steve-yegge/#atom-everything",
-      "description": "Gas Town was intended to be reusable, but I only ever wound up using it to build itself. Gas Town fell apart at the seams with Opus 4.7. Up through 4.6 it was working brilliantly. With 4.7 we saw the introduction of the \"just two more things\" tic, which prevented Opus from ever c…",
-      "pubDate": "2026-08-04T08:42:45+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "bb9f77eb4d91",
-      "title": "Don't be a meat proxy",
-      "link": "https://simonwillison.net/2026/Aug/3/dont-be-a-meat-proxy/#atom-everything",
-      "description": "Don't be a meat proxy Niklas Gruhn coins an excellent new term - meat proxy - for people who blindly copy and paste the output of AI systems to their peers. By all means, prompt AI. But don't just relay the output. Read it, understand it, validate it, and then write a response in…",
-      "pubDate": "2026-08-04T07:45:04+08:00",
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
