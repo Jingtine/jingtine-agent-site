@@ -1,13 +1,13 @@
 {
-  "generated": "2026-08-16T00:25:14.962391+08:00",
+  "generated": "2026-08-17T00:25:50.506379+08:00",
   "total": 60,
   "items": [
     {
-      "id": "0edd68986bd2",
-      "title": "AI Can Now Design Functional Viruses. Should We Worry?",
-      "link": "https://spectrum.ieee.org/ai-designed-virus",
-      "description": "Article URL: https://spectrum.ieee.org/ai-designed-virus Comments URL: https://news.ycombinator.com/item?id=49311445 Points: 15 # Comments: 4",
-      "pubDate": "2026-08-15T23:32:25+08:00",
+      "id": "6501164733dc",
+      "title": "The weekend is 100 years old",
+      "link": "https://www.theguardian.com/money/2026/aug/16/the-weekend-is-100-years-old-skiveday-fridays-and-hybrid-working-ruined-it",
+      "description": "Article URL: https://www.theguardian.com/money/2026/aug/16/the-weekend-is-100-years-old-skiveday-fridays-and-hybrid-working-ruined-it Comments URL: https://news.ycombinator.com/item?id=49320984 Points: 19 # Comments: 1",
+      "pubDate": "2026-08-16T23:30:15+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -15,11 +15,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "cbb6a06ed0bb",
-      "title": "The AI Situation in Software Development",
-      "link": "https://srikanth.ch/posts/the-ai-situation/",
-      "description": "Article URL: https://srikanth.ch/posts/the-ai-situation/ Comments URL: https://news.ycombinator.com/item?id=49310755 Points: 20 # Comments: 8",
-      "pubDate": "2026-08-15T22:12:27+08:00",
+      "id": "e9dd21da4958",
+      "title": "St Lucie Nuclear Reactor Unit 1 manually shutdown, 3 control rods drop into core",
+      "link": "https://www.wptv.com/news/treasure-coast/region-st-lucie-county/saint-lucie-nuclear-power-plant-unit-1-manually-shut-down-after-3-control-rods-drop-into-reactor-core",
+      "description": "Article URL: https://www.wptv.com/news/treasure-coast/region-st-lucie-county/saint-lucie-nuclear-power-plant-unit-1-manually-shut-down-after-3-control-rods-drop-into-reactor-core Comments URL: https://news.ycombinator.com/item?id=49320856 Points: 19 # Comments: 3",
+      "pubDate": "2026-08-16T23:16:06+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -27,311 +27,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "09d6b2df80b9",
-      "title": "The First At-Home Test for Infected Ticks Could Improve Lyme Disease Diagnosis",
-      "link": "https://www.smithsonianmag.com/innovation/the-first-at-home-test-for-infected-ticks-could-improve-lyme-disease-diagnosis-180989235/",
-      "description": "Article URL: https://www.smithsonianmag.com/innovation/the-first-at-home-test-for-infected-ticks-could-improve-lyme-disease-diagnosis-180989235/ Comments URL: https://news.ycombinator.com/item?id=49310682 Points: 60 # Comments: 13",
-      "pubDate": "2026-08-15T22:04:49+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "d070da42d8a1",
-      "title": "AI 满篇的“不是……而是……”，我开始不敢写了",
-      "link": "https://mp.weixin.qq.com/s?__biz=MTg1MjI3MzY2MQ==&mid=2652371791&idx=1&sn=eb7f0f9838bb1d50b27b74e68653062d&chksm=5ccf8a9070641adfa5482d9c0d850fa5f39383a6b3fda4576bfe1a7699792e70df3a07c3e90d",
-      "description": "有多少人快被 AI 满嘴的“不是……而是……”逼疯了？你问：“最近有点儿累，没去健身会掉肌肉吗？”它说：“你不是懒惰，而是身体需要休息。”你让它讲软件的新功能，它说：“这不只是一次升级，更是一场工作方式的革命。” 哪怕问个水煮蛋要煮几分钟，它都会说：“煮蛋不是等待食物变熟，而是对时间与温度的精准管理。”鸡蛋听得都气熟了。 “不是……而是……”已经成了最出名的 AI 口癖之一。 我愿把它和“破折号”、三段式排比、“接住你”，并称为 AI 的“四大名著”。 图源：Threads最让人难受的不是 AI 泔水，而是这个句式本来属于人类。 （就像我写完这句话，自己…",
-      "pubDate": "2026-08-15T22:02:24+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "1920a209abc3",
-      "title": "Show HN: Quasicrystals Animation Playground with WebXR",
-      "link": "https://hypnagogic-quasicrystals.github.io/",
-      "description": "Hi! This is my little project introducing quasicrystals animations with some parameters. It uses a custom shader to allow higher resolution.Not all combinations look equally good. For example the \"Spectrum\" color palette IMO makes sense only for low values of \"Tempo\" and \"Pattern…",
-      "pubDate": "2026-08-15T21:48:43+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "307b639b5b71",
-      "title": "Yadda 3.0.0: BDD in the Age of AI Agents",
-      "link": "https://www.stephen-cresswell.com/2026/08/15/Yadda-3.0.0-BDD-in-the-Age-of-AI-Agents.html",
-      "description": "Article URL: http://www.stephen-cresswell.com/2026/08/15/Yadda-3.0.0-BDD-in-the-Age-of-AI-Agents.html Comments URL: https://news.ycombinator.com/item?id=49310495 Points: 27 # Comments: 11",
-      "pubDate": "2026-08-15T21:43:46+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "90e80341c8de",
-      "title": "Could a computer scientist build a brain?",
-      "link": "https://stankerstjens.github.io/could-a-computer-scientist-build-a-brain/",
-      "description": "Article URL: https://stankerstjens.github.io/could-a-computer-scientist-build-a-brain/ Comments URL: https://news.ycombinator.com/item?id=49310362 Points: 13 # Comments: 5",
-      "pubDate": "2026-08-15T21:26:28+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "d1a711397812",
-      "title": "Brazilian election filter in X For You timeline",
-      "link": "https://github.com/xai-org/x-algorithm/blob/main/home-mixer/filters/brazil_2026_election_filter.rs",
-      "description": "Article URL: https://github.com/xai-org/x-algorithm/blob/main/home-mixer/filters/brazil_2026_election_filter.rs Comments URL: https://news.ycombinator.com/item?id=49310291 Points: 43 # Comments: 35",
-      "pubDate": "2026-08-15T21:18:27+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "911dc1ce1dd4",
-      "title": "388 years ago, Galileo worked out why human giants can't exist",
-      "link": "https://www.scientificamerican.com/article/388-years-ago-galileo-worked-out-why-human-giants-cant-exist-and-explained-a-law-of-nature/",
-      "description": "Article URL: https://www.scientificamerican.com/article/388-years-ago-galileo-worked-out-why-human-giants-cant-exist-and-explained-a-law-of-nature/ Comments URL: https://news.ycombinator.com/item?id=49310277 Points: 37 # Comments: 39",
-      "pubDate": "2026-08-15T21:15:48+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "95c882437216",
-      "title": "Brain turns listening inward during REM sleep, EEG recordings suggest",
-      "link": "https://medicalxpress.com/news/2026-07-brain-rem-eeg.html",
-      "description": "Article URL: https://medicalxpress.com/news/2026-07-brain-rem-eeg.html Comments URL: https://news.ycombinator.com/item?id=49310248 Points: 31 # Comments: 6",
-      "pubDate": "2026-08-15T21:09:28+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "72b163eb2b8d",
-      "title": "Xorshift Generators",
-      "link": "https://www.alanzucconi.com/2026/08/15/xorshift-generators/",
-      "description": "Article URL: https://www.alanzucconi.com/2026/08/15/xorshift-generators/ Comments URL: https://news.ycombinator.com/item?id=49310128 Points: 15 # Comments: 3",
-      "pubDate": "2026-08-15T20:47:52+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "a11a0e651119",
-      "title": "The Problem",
-      "link": "https://intelligence.org/the-problem/",
-      "description": "Article URL: https://intelligence.org/the-problem/ Comments URL: https://news.ycombinator.com/item?id=49309963 Points: 15 # Comments: 17",
-      "pubDate": "2026-08-15T20:14:17+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "ff26dc462743",
-      "title": "T3X/0 a Minimal Procedural Language",
-      "link": "https://t3x.org/t3x/0/index.html",
-      "description": "Article URL: https://t3x.org/t3x/0/index.html Comments URL: https://news.ycombinator.com/item?id=49309923 Points: 14 # Comments: 0",
-      "pubDate": "2026-08-15T20:06:24+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "6fc3413e33c1",
-      "title": "本周市场的“核心逻辑”：美联储9月不加息了？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NzAwMzU0MA==&mid=2247645639&idx=3&sn=c0b07eebc3077f3b36f695bfb439f472&chksm=a7e725e0e877329242123a52fe6e1197a91dddca816e389debc31dd6831eb0e4a14bcf4feaa6",
-      "description": "美国通胀数据意外降温，叠加就业与消费走软，本周市场对美联储9月加息的押注急剧退潮，但债券市场长端的异常信号、油价飙升以及鹰派官员的坚持，正在向这一\"暂停叙事\"发出挑战。 9月加息概率从7月下旬的75%骤降至约25%，带动全球股市连续第三周上涨，美股主要指数维持历史高位附近。 AI基础设施相关财报持续强劲，为科技股提供了额外支撑，令权益市场暂时得以忽视油价冲击与债市长端的警告音。 然而，伊朗/霍尔木兹海峡危机推动布伦特原油周内涨幅接近6%，逼近90美元/桶；美国30年期国债标售收益率触及25年来最高水平。 股市在欢呼\"美联储转向\"，债市长端却在为通胀与财政…",
-      "pubDate": "2026-08-15T20:02:24+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "0280d4ef5bf8",
-      "title": "8月，华尔街的“牛市”又回来了，“赌性”也回来了",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NzAwMzU0MA==&mid=2247645639&idx=4&sn=d1fb19c8956e334f2b27c39e10e8116b&chksm=a725a69e91614c871946ea8b86088b9440ab7e154fa00e1e15e0843210e0104b96b29c07480b",
-      "description": "美股8月强势反弹，标普500指数刷新历史高点，投资者重返科技与杠杆赛道。 强劲的企业盈利与通胀降温共同提供燃料，但油价飙升、长债收益率高企与跨资产信号相互矛盾，令这场\"黄金时代\"交易愈发脆弱。 7月芯片股遭到猛烈抛售后，市场的恐惧情绪来得快，去得也快。 标普500指数本月迄今已累涨约4%，本周触及历史高点7800点上方；此前短暂陷入技术性调整的纳斯达克100指数，目前距6月峰值也仅差2.5%。 本周，花旗和摩根大通双双上调标普500指数2026年年终目标，为近期的看涨情绪画下注脚。 资金持续涌入。据追踪逾50万亿美元机构资金的道富银行托管数据，过去一个月…",
-      "pubDate": "2026-08-15T20:02:24+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "3c8bebb3a93a",
-      "title": "贵州茅台：业绩又塌方？仍在 “手术流血” 中",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzE5MTU3MzA2OQ==&mid=2247575732&idx=1&sn=3b3287bcee6e94511ca84ff5cf4dbe57&chksm=979afd1fc6cb813cbaefcf08291c251ba2eba2af84ddc7f80d732ff34cfeb3f6b6a0561bd3cc",
-      "description": "北京时间 8 月 15 日晚间，贵州茅台（600519.SH）发布了 2026 年 Q2 季度业绩，整体来说，二季度茅台的业绩并不好，收入和利润双双转负，低于市场预期，海豚君推测核心拖累还是在于年初非标产品的集体大幅调价。 1、渠道改革的 “阵痛” 超预期。2Q26 茅台共实现营收 376 亿元，同比下滑 5.2%。 尽管 3 月末飞天出厂提价在二季度完整落地，但在渠道改革下，一方面高毛利非标产品主动缩减投放，另一方面 i 茅台代售定价相比过去经销商买断打款价明显下行，压低茅台酒综合吨价。 最终飞天提价的增量不足以抵消代售模式转型(新代销模式信息，可点击…",
-      "pubDate": "2026-08-15T20:02:24+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "4ebe610f1b86",
-      "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
-      "link": "https://sankalp.bearblog.dev/autoresearch/",
-      "description": "Article URL: https://sankalp.bearblog.dev/autoresearch/ Comments URL: https://news.ycombinator.com/item?id=49309549 Points: 220 # Comments: 59",
-      "pubDate": "2026-08-15T19:00:02+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "ae9bc7209f2d",
-      "title": "Working with AI Feels More Like Leadership Than Coding",
-      "link": "https://allen.bargi.org/notes/working-with-ai-feels-like-leadership/",
-      "description": "Article URL: https://allen.bargi.org/notes/working-with-ai-feels-like-leadership/ Comments URL: https://news.ycombinator.com/item?id=49309451 Points: 97 # Comments: 83",
-      "pubDate": "2026-08-15T18:39:41+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "d35955f4cfce",
-      "title": "“老登”AI，精髓是作秀",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzI2NjU1MTcwMA==&mid=2247565107&idx=1&sn=916a4072853cd934b7f1e788b3dde27c&chksm=eb1c41958aead91717f9d1679bb607fd88fff453f9bc7bd9f8ab5b740a1c09667e50a3afe1ef",
-      "description": "对联想交上的最新一季财报，资本市场显然非常满意。营收269.4亿美元，同比增长43%；AI相关收入增长60%至93亿美元；调整后净利润增长176%至10.75亿美元。 ISG（基础设施方案业务集团）收入达到85亿美元，同比增长98%，经营利润7.77亿美元。 财报发布当天，联想股价盘中一度上涨22%，最终收涨20.18%，报34.9港元，盘中创下历史新高。 杨元庆宣布，联想“正在成为全球AI基础设施领导者”，原本计划两年实现的千亿美元营收目标，也可能提前到今年完成。 市场终于相信了联想讲了多年的未来。过去几年，联想努力描绘的是一个由AI设备、基础设施和服…",
-      "pubDate": "2026-08-15T18:02:22+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "4a20d4ae4e2d",
-      "title": "洛杉矶湖人队125亿美元出售创纪录，重置职业运动队估值基准",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzIwODU2NjQ5Mw==&mid=2247687227&idx=1&sn=977fd280a50d4ab580f9eaa10df67147&chksm=96f62f74fb02a686c2fd575d6fbe6e08c1df8f9ad7a74598645455a4f2424f9eebb653d91f43",
-      "description": "马克·沃尔特（Mark Walter）斥资100亿美元买下这支球队还不到一年，就像倒卖房产一样将其转手。 不过，就算职业运动队买卖和估值领域存在泡沫，目前也还没有任何破裂的迹象。 高光时刻：NBA总裁亚当·萧华与湖人队准新东家—— 亿万富豪乔什·库什纳、迪士尼前首席执行官鲍勃·艾格合影。 两人的收购仍需获得联盟批准。图片来源：XNY/STAR MAX/GC IMAGES/GETTY IMAGESXNY/Star Max/GC Images/Getty Images美国娱乐体育节目电视网（ESPN）当地时间8月12日早间率先曝出消息称，亿万富豪风险投资家乔…",
-      "pubDate": "2026-08-15T16:02:23+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "7683614fdf05",
-      "title": "黄仁勋，投了马斯克",
-      "link": "https://mp.weixin.qq.com/s?__biz=Mzg5MzEyNzEwNQ==&mid=2247838557&idx=1&sn=a7e3f85825c3c2dfe85891c04877fdf4&chksm=c1bab5143c4055082753e1f768c399fea57a4f6621bb174e36576f060f7c0e49f9f55476e6de",
-      "description": "英伟达当地时间周五首度披露，其今年截止二季度末持有1.228亿股SpaceX的股票，这进一步凸显了这家芯片制造商与其部分最大客户之间错综复杂的财务关系。 根据周五提交给美国证券交易委员会(SEC)的13F文件显示，这家市值5.5万亿美元的公司截至6月底持有价值近210亿美元的SpaceX股票。 当然，自6月IPO以来，SpaceX的股价已大幅下跌，这意味着英伟达目前的持股价值约为170亿美元。 按FactSet数据，英伟达目前为SpaceX第六大股东。 此次披露标志着英伟达今年年初对xAI的100亿美元投资获得了巨大回报—— 该投资于1月完成，就在马斯克…",
-      "pubDate": "2026-08-15T16:02:23+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "69cd8e8522bd",
-      "title": "两年关店超九成，嗨特购不“嗨”了",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NTE0ODc2Nw==&mid=2650970999&idx=1&sn=cb11814f1688663d41777d61bf9c5137&chksm=bc7ace0385380728293f8740e207d2c32b33abb150c5f6bc6716809ba0e21da470744911d2d9",
-      "description": "嗨特购西单大悦城旗舰店 图片拍摄：界面新闻 马越界面新闻记者 |马越界面新闻编辑 |牙韩翔折扣超市嗨特购陷入大量关店危机中。 界面新闻8月14日走访发现，嗨特购位于北京西单大悦城的旗舰店已于近期关闭，半透明卷帘门内仍有部分杂物，门上由物业方贴出了“商铺优化改造”、“不营业”的通知。 2021年，这家门店入驻北京西单大悦城，随后从B1层搬至6楼，面积有上千平米，是该品牌核心商圈的标志性旗舰店。 嗨特购西单大悦城旗舰店 图片拍摄：界面新闻 马越嗨特购近期的关店远不止这一家。 同日，界面新闻走访北京京西大悦城发现，位于商场B1层的嗨特购也拉上了卷闸门，门店外商…",
-      "pubDate": "2026-08-15T16:02:23+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "27e1422bbf70",
-      "title": "Using GCC's Nested Functions with Wide Pointers and No Trampolines II",
-      "link": "https://uecker.codeberg.page/2026-07-14.html",
-      "description": "Article URL: https://uecker.codeberg.page/2026-07-14.html Comments URL: https://news.ycombinator.com/item?id=49308685 Points: 53 # Comments: 33",
-      "pubDate": "2026-08-15T15:59:42+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "7abd6af21938",
-      "title": "国行 iPhone 用上 AI 不远了，揭秘苹果如何打造「中国特供」模型",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5MjAyNDUyMA==&mid=2651101020&idx=1&sn=3ce63de583cbfce1d8781bdcab50de12&chksm=bc122fa4a4883bb6c8f91ebf528fae873dbcf78df4a7e9559ae08835ae6dd739b8a9591a50d8",
-      "description": "随着新 iPhone 已经进入发布倒计时，中国用户也不免再次关心起这个问题：国行 Apple Intelligence 到底能不能用？ 据路透社 8 月 14 日独家报道，苹果已经针对中国市场训练了一款大型语言模型。 三名知情人士透露，这款模型由苹果与阿里巴巴共同开发，阿里还为模型训练提供了支持。 苹果和阿里均未回应置评请求。 随着新 iPhone 已经进入发布倒计时，中国用户也不免再次关心起这个问题：国行 Apple Intelligence 到底能不能用？ 这可能跟大家对国行 AI 的 猜测有所不同。此前披露的方案苹果主要依赖中国合作伙伴提供模型能力…",
-      "pubDate": "2026-08-15T14:02:25+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "12e49993b677",
-      "title": "Stack Overflow快死了！新提问竟比内测时还少",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651050521&idx=2&sn=f6c334e02d3c80c1cd3f04b9be02e377&chksm=85065e5a22a161dda91214b149a742f2df481a2d0a0f9295d854f79ce4e824299d456cdfc8f3",
-      "description": "编辑｜PandaStack Overflow，有「程序员圣经」之称，已经积累超过 2400 万个问题专业社区，全网最大的编程问答语料库，正在走向死亡。 2026 年 7 月，全世界的程序员在 Stack Overflow 上一共提了 1304 个问题。 2014 年 3 月，这个数字是 20.7 万。前两天，开发者 Daniel Lockyer 把包含这些数据的折线图发到了 X 上，并发出了「一个时代的终结」的感慨。 数据是真的，来自 Stack Overflow 官方对外开放的 SQL 查询接口 Stack Exchange Data Explorer…",
-      "pubDate": "2026-08-15T14:02:25+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "908f986061ec",
-      "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
-      "link": "https://chenxiachan.github.io/thoughtdag/",
-      "description": "Article URL: https://chenxiachan.github.io/thoughtdag/ Comments URL: https://news.ycombinator.com/item?id=49307700 Points: 89 # Comments: 32",
-      "pubDate": "2026-08-15T12:42:07+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "09e5463f49c2",
-      "title": "The other Sean Byrne doesn't exist",
-      "link": "https://conic.al/writing/the-other-sean-byrne-doesnt-exist/",
-      "description": "Article URL: https://conic.al/writing/the-other-sean-byrne-doesnt-exist/ Comments URL: https://news.ycombinator.com/item?id=49307592 Points: 308 # Comments: 148",
-      "pubDate": "2026-08-15T12:18:44+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "ee5307265f0f",
-      "title": "Northern Gannet",
-      "link": "https://simonwillison.net/2026/Aug/15/sighting-391300422/",
-      "description": "Northern Gannet, in Pillar Point Harbor, CA, USThis is Morris. Morris is a local celebrity: the only known Northern Gannet (Morus bassanus) in the entire Pacific Ocean. He showed up in the Farallon Islands off the coast of San Francisco 14 years ago. He has since made Pillar Poin…",
-      "pubDate": "2026-08-15T11:22:00+08:00",
+      "id": "e27bba9b0711",
+      "title": "Quoting Dario Amodei",
+      "link": "https://simonwillison.net/2026/Aug/16/dario-amodei/",
+      "description": "I do agree that the public has a negative view of AI (and that this is a big problem), but I don’t think it is primarily caused by me or any other AI leader warning about AI’s risks. I think it is fundamentally a crisis of trust. I think that ordinary people don’t trust companies…",
+      "pubDate": "2026-08-16T23:05:36+08:00",
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
@@ -339,14 +39,362 @@
       "category": "ai-agent"
     },
     {
-      "id": "e155245e33ec",
-      "title": "2D Gaussian Splatting for Bézier Spline Line Art Vectorization",
-      "link": "https://studios.disneyresearch.com/2026/07/16/2d-gaussian-splatting-for-bezier-spline-line-art-vectorization/",
-      "description": "Article URL: https://studios.disneyresearch.com/2026/07/16/2d-gaussian-splatting-for-bezier-spline-line-art-vectorization/ Comments URL: https://news.ycombinator.com/item?id=49306333 Points: 9 # Comments: 2",
-      "pubDate": "2026-08-15T08:36:01+08:00",
+      "id": "47451c29630b",
+      "title": "GPS and the Lost Art of Getting Lost",
+      "link": "https://www.newyorker.com/news/annals-of-inquiry/gps-and-the-lost-art-of-getting-lost",
+      "description": "Article URL: https://www.newyorker.com/news/annals-of-inquiry/gps-and-the-lost-art-of-getting-lost Comments URL: https://news.ycombinator.com/item?id=49320673 Points: 6 # Comments: 5",
+      "pubDate": "2026-08-16T22:53:14+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "16ac10544a86",
+      "title": "The AI Credit Resale Economy",
+      "link": "https://vectoral.com/blog/who-are-the-token-brokers",
+      "description": "Article URL: https://vectoral.com/blog/who-are-the-token-brokers Comments URL: https://news.ycombinator.com/item?id=49320611 Points: 66 # Comments: 19",
+      "pubDate": "2026-08-16T22:44:55+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "c298e9d0a1e9",
+      "title": "“离谱私募”曝光：基金经理都是“借”来的",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg5MzEyNzEwNQ==&mid=2247838756&idx=1&sn=760d5b0190fea445f9268b8e35a50cfe&chksm=c1de8d4e1d22a792b38d7ee36bcc38e629e5ef7d894ee71ddc483f8ac995a9bbc84e35a9bfd9",
+      "description": "近年来，中基协及多地证监局已处置多起非结构化私募杠杆比例突破200%上限案件。 追溯发现，杠杆超标往往不是孤立违规，常伴随委托外部投研、信披造假、人员虚挂、关联交易等系统性治理缺陷。 早期监管警示若未实质整改，极端情形下或演变为兑付暴雷甚至刑事风险。 中基协最新披露，因存在三类违规事实，私募管理人深圳鼎呈被暂停受理基金产品备案12个月，同时现任法定代表人毛宇、现任合规风控负责人张天乐、时任投资经理谢亦颖均被采取公开谴责的纪律处分。 该私募被查出197个交易日杠杆比例超过200%的监管红线，旗下部分产品投资决策交由外部人员主导，名义上的基金经理谢亦颖仅做辅…",
+      "pubDate": "2026-08-16T22:02:27+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "82ee6efc4ff4",
+      "title": "Tasklet (YC P26) Is Hiring a Head of Design Engineering",
+      "link": "https://tasklet.ai/careers/head-of-design-engineering",
+      "description": "Article URL: https://tasklet.ai/careers/head-of-design-engineering Comments URL: https://news.ycombinator.com/item?id=49319892 Points: 0 # Comments: 0",
+      "pubDate": "2026-08-16T21:30:27+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "0f936c6ac057",
+      "title": "Show HN: A public AI whose memory is shared across all users",
+      "link": "https://wildstatic.com/",
+      "description": "Article URL: https://wildstatic.com/ Comments URL: https://news.ycombinator.com/item?id=49319814 Points: 22 # Comments: 12",
+      "pubDate": "2026-08-16T21:21:45+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "3ce67d83843e",
+      "title": "A U.S. Strategy to Prevent the Creation of Mirror Life",
+      "link": "https://www.rand.org/pubs/research_reports/RRA4335-1.html",
+      "description": "Article URL: https://www.rand.org/pubs/research_reports/RRA4335-1.html Comments URL: https://news.ycombinator.com/item?id=49319727 Points: 45 # Comments: 30",
+      "pubDate": "2026-08-16T21:09:41+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "51ee1c37ee66",
+      "title": "Firefox for iOS now has a native adblocker",
+      "link": "https://support.mozilla.org/en-US/kb/block-ads-firefox-ios",
+      "description": "Article URL: https://support.mozilla.org/en-US/kb/block-ads-firefox-ios Comments URL: https://news.ycombinator.com/item?id=49319633 Points: 200 # Comments: 73",
+      "pubDate": "2026-08-16T20:58:10+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "eb4edca3b5b8",
+      "title": "Claude: System Prompts",
+      "link": "https://platform.claude.com/docs/en/release-notes/system-prompts",
+      "description": "Article URL: https://platform.claude.com/docs/en/release-notes/system-prompts Comments URL: https://news.ycombinator.com/item?id=49319556 Points: 215 # Comments: 107",
+      "pubDate": "2026-08-16T20:48:21+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "4013095039a7",
+      "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
+      "link": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
+      "description": "Article URL: https://scholar.google.com/scholar?q=%22kidney+disappointment%22 Comments URL: https://news.ycombinator.com/item?id=49319389 Points: 187 # Comments: 77",
+      "pubDate": "2026-08-16T20:22:20+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "22c1ee9fe1f2",
+      "title": "A True Telnet BBS on a Casio Calculator",
+      "link": "https://ei3lh.eu/2026/08/16/a-true-telnet-bbs-on-a-casio-calculator/",
+      "description": "Article URL: https://ei3lh.eu/2026/08/16/a-true-telnet-bbs-on-a-casio-calculator/ Comments URL: https://news.ycombinator.com/item?id=49319349 Points: 34 # Comments: 5",
+      "pubDate": "2026-08-16T20:16:21+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "35903e7b4f95",
+      "title": "存储还能涨多久？",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg5MzEyNzEwNQ==&mid=2247838734&idx=1&sn=901605837ff8c81976176983f50f7d8a&chksm=c1859f8a22c71dc13e8affb3fc9973bef21662995b71a6e79c35b8bb5508b4937f21ea370730",
+      "description": "近期，有市场消息反馈部分eMMC的现货渠道价格跌破了原厂合约价，出现倒挂。 eMMC是一种广泛用于机顶盒、智能电视、入门级手机等消费电子产品的嵌入式存储芯片。 在存储行业正处于高景气的当下，这一品类为何会有倒挂现象产生？ 这种现象是否还发生在其他存储产品上？这是否意味着存储行业的上行已经接近拐点？ 带着这些疑问，财联社记者近日对话了多位业内人士。万创投行董事总经理吴沛东告诉财联社记者，目前eMMC价格的倒挂是结构性的，主要出现在用MLC颗粒（一种正在被原厂逐步停产的存储介质，属于利基型存储的核心品类之一）生产的低容量品种上，原因系上游资源涨太多、终端传导…",
+      "pubDate": "2026-08-16T20:02:27+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "9787fbf6c854",
+      "title": "博通暴跌20%，市场在怕什么？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NzAwMzU0MA==&mid=2247645676&idx=1&sn=406b41e544f9e001b0a4ed35edf1050d&chksm=a7ea9b5ebe779e95fbbf7bd8fe20b3a0ee7a211b93e53627091aaff46fe70ac0d2597b05840c",
+      "description": "本文首发于“见闻VIP”作者乐鸣，为见闻付费会员文章，现作为粉丝福利免费试读，欢迎点击阅读原文，加入见闻VIP。 8月11日，美国银行信用分析师Tom Curcuruto发了一份不长的降级报告。 他把博通的债券评级从“增持”下调到了“市场权重”。 注意，这不是股票评级，是信用端——也就是说，他担心的不是博通赚不赚钱，而是博通的资产负债表能不能扛住它正在做的事。 报告里有一个数字：3700亿美元。这是他测算的博通在一个叫“AI XPV Platform”的融资安排中，到2029年年中可能承担的最大剩余价值担保（Residual Value Guarante…",
+      "pubDate": "2026-08-16T20:02:27+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "9ee438043669",
+      "title": "Gooseworks (YC W23) Is Hiring a Founding Builder / Engineer",
+      "link": "https://www.ycombinator.com/companies/gooseworks/jobs/UJ4vH2F-founding-engineer",
+      "description": "Article URL: https://www.ycombinator.com/companies/gooseworks/jobs/UJ4vH2F-founding-engineer Comments URL: https://news.ycombinator.com/item?id=49319215 Points: 0 # Comments: 0",
+      "pubDate": "2026-08-16T20:00:23+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "d570c9d5baa2",
+      "title": "牛来出圈记：“谁会在乎一杯奶茶的营养”",
+      "link": "https://mp.weixin.qq.com/s?__biz=MTI3NTQ1MTY0MQ==&mid=2650673273&idx=1&sn=b575c829f353eb0faae5d596541e87ec&chksm=7d2cec6fdb530c1badac95affee0970e6d5dcf1889543908741b63424f80be24cbd5b6e2c728",
+      "description": "一部“手搓”烂片凭什么和《龙餐馆》与《奥德赛》抢热搜文｜《中国企业家》见习记者 施思羽记者 王怡洁编辑｜马吉英头图来源｜视觉中国去好片里找bug，去烂片里找亮点，是观众评价电影的潜在习惯，但这个习惯并不适用于“牛来”：它bug太多了，以至于bug变成了亮点。 “是牛来还是马来不重要，重要的是参与了这场狂欢。”8月15日晚，北京一家影院，能容纳80多人的影厅，几乎座无虚席。 全场一起笑、一起吐槽。走进影厅的以年轻人居多，吸引他们深夜“打卡”的是一部名为《牛来》的国产动画电影。 来源：猫眼App截图这部86分钟的院线动画，8月5日上映后前10天累计票房仅77…",
+      "pubDate": "2026-08-16T18:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "8cb777bc9d8e",
+      "title": "Token！Token！国内头部大厂齐聚乌兰察布圈地",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTExMjYwMA==&mid=2670392179&idx=1&sn=388eb2f058272aefd848380d410fb6ee&chksm=bda843ae529c0ca466e436f7eaf4fdddfe4c6afde8ae22f79ada971cfae78de7a30522b44939",
+      "description": "乌兰察布正成为算力产业的热土，一批算力中心项目集中涌入，处于开工建设的热潮中。 2024年底，乌兰察布签约的算力中心项目为36个，而到了2026年6月底达到了89个。 作者：田国宝封图：图虫创意2026年8月13日，内蒙古乌兰察布集宁区圣家营村北2公里，一大片蓝色铁皮围起的土地上，有几只羊还在吃草。 围墙西侧，几名电力工人正在组装钢管塔。这里将建设万润（乌兰察布）低碳智能算力基地。 万润算力基地向西约1公里，几排蓝顶白墙的工棚格外醒目，门口停着几十辆车。 工作人员称，这里是乌兰察布快手星河数据中心建设项目部。 项目四周已经打下不少水泥桩，尚未正式动工。从…",
+      "pubDate": "2026-08-16T18:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "a8848541d182",
+      "title": "磷化铟争夺战：海外巨头垄断市场，中国厂商如何突围",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTExMjYwMA==&mid=2670392179&idx=2&sn=f1ea0334e6312bdda9a3946e87bab09b&chksm=bd4211fccf4c969a4d62ea8294119a31bcd517ce9575ee99de34e703804ae9d15ea8cfe3d99e",
+      "description": "在全球磷化铟的争夺战中，中国的处境颇为特殊：上游铟资源全球领先，精铟产量约占全球七成；但下游衬底成品，国内所有厂商的出货量合计只约占全球一成。 作者：郑晨烨封图：图虫创意7月8日，美国光芯片巨头Lumentum（朗美通，LITE.NASDAQ）的总裁兼CEO迈克尔·赫尔斯顿在巴黎举行的欧洲AI行业峰会上表示，磷化铟的供需缺口已经超过DRAM（动态随机存取内存）和NAND（闪存）。 公司电信客户的订单量从“数百件”级别跳升到了“数亿件”，订单已经排到2028年。 Lumentum是当前AI算力链条中的当红公司之一，为英伟达等客户供应数据中心光互连所需的激光…",
+      "pubDate": "2026-08-16T18:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "fb8907e2d8e5",
+      "title": "网暴不仅是法律问题，更是社会问题",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTExMjYwMA==&mid=2670392179&idx=3&sn=4ccfb172f57a4fe4d042ca142eba80d3&chksm=bdf9d16b2f5693b6b007bd6531f607344c3c4fb078bd80a9f6397e9e278a3ce0a2160c8a8440",
+      "description": "立法从来不是万能的，反网暴还需要司法的持续深耕。与此同时，网暴不仅是法律问题，更是社会问题。 网暴之所以屡禁不绝，并非仅仅因为缺乏法律的威慑，其背后还有人性弱点与算法的推波助澜。 作者：陈碧封图：图虫创意《反网络暴力法（征求意见稿）》（以下称反网暴法）8月28日即将结束为期一个月的征求意见，完成立法链条中重要一环。 近年来，互联网上屡发因造谣诽谤、恶意攻击、人肉开盒导致的悲剧，比如寻亲男孩刘学洲和粉发女孩郑灵华，他们因网暴付出了生命的代价。 社会呼吁专门反网暴立法的声音日益强烈。2026年5月全国人大常委会发布年度立法工作计划，把治理网络暴力的立法放在预…",
+      "pubDate": "2026-08-16T18:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "91584f1031d7",
+      "title": "五连板！又一“追光者”炒疯了",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI1ODI4Mjk1MQ==&mid=2247547241&idx=1&sn=f571cd6d615d3f676fa086de6b7031a1&chksm=eb95df869084565d3a03a0afdc8fdff837c05db5fe9e132b4a7f248e74bc9dccd6061d3c01ef",
+      "description": "作者 | 弗雷迪支持 | 勾股大数据（www.gogudata.com）周五，蓝盾光电以20cm涨停收盘，录得复牌以来第5个涨停板。 而且换手率相当高，盘中一度回落至41.46元后重新封板。 让这家公司股价坐上火箭的，是月初披露的一份收购预案：蓝盾光电拟收购苏州岚创科技控股权。 更令人关注的，是该公司实际控制人为袁永刚，一年前其刚主导东山精密以59.35亿元收购索尔思光电。 此后，东山精密市值由537亿元升至3872亿元，峰值一度突破5000亿元，袁氏家族持股的对应浮盈超过千亿元。 一个发端于苏州钣金作坊的家族，以两笔跨界收购完成对光通信赛道的布局，简直…",
+      "pubDate": "2026-08-16T18:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "5205422f4648",
+      "title": "兆日科技四年连亏一日“翻身”，须警惕“易主+并购”背后的利益安排 | 每经热评",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg3NTA5MjkyNQ==&mid=2248573056&idx=2&sn=8de37ddf3e2b89b7f21a82ac382593bf&chksm=cc7869c16c6a602497e5c1a0691004a77bb54956b1d2324392bac34dc1e05dbfaf574fa83010",
+      "description": "8月12日晚，兆日科技公告称，控股股东新疆晁骏与璟和珩签署股份转让协议，拟转让其持有的全部14.18%股份，交易对价5.39亿元，完成后璟和珩将成为新的控股股东，曲嘉麟成为实控人。 公司同日发布发行股份及支付现金购买资产预案，拟收购曲嘉麟旗下佰内科技控制权。 同时向特定投资者募集配套资金，募集资金拟用于支付本次并购交易中的现金对价、交易税费、中介机构费用、标的公司项目建设、偿还银行借款、补充上市公司及标的公司流动资金等。 8月13日，兆日科技复牌，股价“20cm”一字涨停。 新旧大股东交替，通过精巧的安排，两者都实现了自身利益最大化。 兆日科技2012年…",
+      "pubDate": "2026-08-16T16:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "0e455e36c5bb",
+      "title": "库存克星，终究败给了内存大战",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjgzMTAwODI0MA==&mid=2652460921&idx=1&sn=2ab001defe5600698f1dd0629039e9e0&chksm=9a565bd247065970be52a00ebfa6319097659b2aa831ee1ed3713480b002fa5f1fb249022bf0",
+      "description": "「库存克星」——人们给蒂姆·库克起了这样一个昵称。执掌苹果供应链的这些年里，有一句话成了他的格言：You kind of want to manage it like you’re in the dairy business.你得像经营乳制品生意一样管理库存。 库存就像牛奶，放久了会馊，电子元件也一样，放久了会贬值，这是库克最著名的供应链哲学。 「库存即邪恶」(Inventory is fundamentally evil.)。 苹果是一家庞大的公司，推出了很多产品，也做过很多事情，但唯有一件尤其重要：让仓库尽可能地空。 而就在这几天，世界上最讨厌库存的…",
+      "pubDate": "2026-08-16T14:02:26+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "2052a044fbd3",
+      "title": "Falstad Math and Physics Simulations",
+      "link": "https://www.falstad.com/mathphysics.html",
+      "description": "Article URL: https://www.falstad.com/mathphysics.html Comments URL: https://news.ycombinator.com/item?id=49316872 Points: 53 # Comments: 11",
+      "pubDate": "2026-08-16T12:19:32+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "f87e14ef06b6",
+      "title": "Patterns and problems in emerging multi-agent systems",
+      "link": "https://www.anthropic.com/research/multiagent-systems",
+      "description": "Article URL: https://www.anthropic.com/research/multiagent-systems Comments URL: https://news.ycombinator.com/item?id=49316271 Points: 163 # Comments: 113",
+      "pubDate": "2026-08-16T10:12:53+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "0a69e00b5a49",
+      "title": "Guiding Ships with Moire Patterns (2018)",
+      "link": "https://tinkerings.org/2018/03/28/guiding-ships-with-moire-patterns/",
+      "description": "Article URL: https://tinkerings.org/2018/03/28/guiding-ships-with-moire-patterns/ Comments URL: https://news.ycombinator.com/item?id=49315995 Points: 94 # Comments: 22",
+      "pubDate": "2026-08-16T09:26:44+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "015c3c757456",
+      "title": "Show HN: Mic Drop, a real-time multiplayer karaoke game",
+      "link": "https://www.micdrop.gg/",
+      "description": "Article URL: https://www.micdrop.gg/ Comments URL: https://news.ycombinator.com/item?id=49315742 Points: 75 # Comments: 34",
+      "pubDate": "2026-08-16T08:46:29+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "6c33fc4bc9e8",
+      "title": "Software Engineering fundamentals matter more",
+      "link": "https://rhonabwy.com/2026/08/15/software-engineering-fundamentals-matter-more-than-ever/",
+      "description": "Article URL: https://rhonabwy.com/2026/08/15/software-engineering-fundamentals-matter-more-than-ever/ Comments URL: https://news.ycombinator.com/item?id=49314902 Points: 255 # Comments: 160",
+      "pubDate": "2026-08-16T06:31:09+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "c5bb51af2e22",
+      "title": "Cultivating a state of mind where new ideas are born (2023)",
+      "link": "https://www.henrikkarlsson.xyz/p/good-ideas",
+      "description": "Article URL: https://www.henrikkarlsson.xyz/p/good-ideas Comments URL: https://news.ycombinator.com/item?id=49314235 Points: 231 # Comments: 57",
+      "pubDate": "2026-08-16T04:54:11+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "1a64cd2bc9fd",
+      "title": "Super El Niño Keeps Growing as New Forecasts Reach Record Territory Ahead Winter",
+      "link": "https://www.severe-weather.eu/long-range-2/super-el-nino-growth-accelerating-to-record-strength-fall-winter-2026-2027-forecast-impact-united-states-canada-europe-fa/",
+      "description": "Article URL: https://www.severe-weather.eu/long-range-2/super-el-nino-growth-accelerating-to-record-strength-fall-winter-2026-2027-forecast-impact-united-states-canada-europe-fa/ Comments URL: https://news.ycombinator.com/item?id=49313428 Points: 359 # Comments: 246",
+      "pubDate": "2026-08-16T03:20:51+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "441022e5503b",
+      "title": "AI in drug discovery – what it is, where we stand and the path forward",
+      "link": "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really",
+      "description": "https://www.nature.com/articles/s41573-026-01496-2 Comments URL: https://news.ycombinator.com/item?id=49313367 Points: 170 # Comments: 84",
+      "pubDate": "2026-08-16T03:12:53+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "a22cf7dd149b",
+      "title": "CORS Chat",
+      "link": "https://simonwillison.net/2026/Aug/15/cors-chat/",
+      "description": "Tool: CORS Chat I built this today (with GPT-5.6-Sol xhigh) to help test Qwen 3.8 27B running in LM Studio on both my M5 MacBook Pro and an NVIDIA DGX Spark. It provides a web UI for exercising an OpenAI-Responses-compatible chat endpoint. I've tried it against LM Studio with the…",
+      "pubDate": "2026-08-15T22:49:54+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "ee5307265f0f",
+      "title": "Northern Gannet",
+      "link": "https://simonwillison.net/2026/Aug/15/sighting-391300422/",
+      "description": "Northern Gannet, in Pillar Point Harbor, CA, USThis is Morris. Morris is a local celebrity: the only known Northern Gannet (Morus bassanus) in the entire Pacific Ocean. They showed up in the Farallon Islands off the coast of San Francisco 14 years ago. They have since made Pillar…",
+      "pubDate": "2026-08-15T11:22:00+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
       },
       "category": "ai-agent"
     },
@@ -359,30 +407,6 @@
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "aedd30b73b5e",
-      "title": "Going Dark, and the era of law enforcement hacking",
-      "link": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
-      "description": "Article URL: https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/ Comments URL: https://news.ycombinator.com/item?id=49304447 Points: 414 # Comments: 208",
-      "pubDate": "2026-08-15T04:52:44+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "25fb2a3813e9",
-      "title": "Firefox is now the last major browser that still supports uBlock Origin",
-      "link": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html",
-      "description": "Article URL: https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html Comments URL: https://news.ycombinator.com/item?id=49303202 Points: 1444 # Comments: 551",
-      "pubDate": "2026-08-15T03:03:20+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
       },
       "category": "ai-agent"
     },
@@ -692,30 +716,6 @@
       "link": "https://simonwillison.net/2026/Aug/6/an-ai-model-from-meta/",
       "description": "An AI model from Meta also hacked another company during testing Stop me if you've heard this one before: An AI model from the parent company of Facebook and Instagram hacked into another company’s systems during cybersecurity testing, a spokesperson confirmed on Wednesday. Meta…",
       "pubDate": "2026-08-06T08:25:27+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "67113138e727",
-      "title": "Introducing Muse Code and Muse Spark 1.2",
-      "link": "https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/",
-      "description": "Introducing Muse Code and Muse Spark 1.2 Yet more evidence that the most important characteristic of any model these days is long-sequence agentic tool calling. Meta shipped their own coding agent as part of getting that to work! Muse Spark 1.2 is a coding-focused update to Muse…",
-      "pubDate": "2026-08-06T07:58:35+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "9610dc3cc026",
-      "title": "Third-party cyber evaluations involving OpenAI models",
-      "link": "https://simonwillison.net/2026/Aug/5/third-party-cyber-evaluations/",
-      "description": "Third-party cyber evaluations involving OpenAI models And another one. I had to create a accidental-cyberattacks tag to keep track of them all! This post from OpenAI covers both the UK AI Safety Institute attack (see my previous post) and another attack enabled by Irregular: Irre…",
-      "pubDate": "2026-08-06T07:45:32+08:00",
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
