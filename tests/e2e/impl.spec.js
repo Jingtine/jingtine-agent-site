@@ -381,3 +381,67 @@ test.describe('TC20 — 页面脚本无未捕获异常', () => {
     });
   }
 });
+
+/* ================================================================
+   TC21 — 移动端汉堡菜单 (F13)
+   ================================================================ */
+test.describe('TC21 — 移动端汉堡菜单', () => {
+  test.use({ viewport: { width: 375, height: 667 } });
+
+  test('TC21 展开/收起/跳转/无溢出', async ({ page }) => {
+    await page.goto('/index.html');
+    await page.waitForLoadState('networkidle');
+
+    const toggle = page.locator('.nav-toggle');
+    const links = page.locator('#nav-links');
+
+    await expect(toggle).toBeVisible();
+    await expect(links).not.toBeVisible();
+    await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+
+    await toggle.click();
+    await expect(links).toBeVisible();
+    await expect(page.locator('html')).toHaveClass(/nav-open/);
+    await expect(toggle).toHaveAttribute('aria-expanded', 'true');
+
+    const overflowOpen = await page.evaluate(
+      () => document.documentElement.scrollWidth <= window.innerWidth
+    );
+    expect(overflowOpen).toBe(true);
+
+    await toggle.click();
+    await expect(links).not.toBeVisible();
+    await expect(page.locator('html')).not.toHaveClass(/nav-open/);
+
+    await toggle.click();
+    await page.locator('#nav-links a:has-text("Blog")').click();
+    await page.waitForLoadState('networkidle');
+    const url = new URL(page.url());
+    expect(url.pathname).toBe('/blog.html');
+  });
+});
+
+/* ================================================================
+   TC22 — 375px 全页面无横向溢出 (F13)
+   ================================================================ */
+test.describe('TC22 — 375px 全页面无横向溢出', () => {
+  const paths = [
+    '/index.html', '/about.html', '/projects.html', '/blog.html',
+    '/papers.html', '/wiki.html', '/reader.html', '/assistant.html',
+    '/status.html', '/article.html?slug=hello-world', '/knowledge.html',
+    '/library.html', '/contact.html',
+  ];
+  for (const path of paths) {
+    test(`TC22 ${path} 375px 无溢出`, async ({ browser }) => {
+      const ctx = await browser.newContext({ viewport: { width: 375, height: 667 } });
+      const page = await ctx.newPage();
+      await page.goto(path);
+      await page.waitForLoadState('networkidle');
+      const overflow = await page.evaluate(
+        () => document.documentElement.scrollWidth <= window.innerWidth
+      );
+      expect(overflow).toBe(true);
+      await ctx.close();
+    });
+  }
+});
