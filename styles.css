@@ -949,7 +949,7 @@ a.contact-value:hover {
     transition: none;
   }
   html.nav-open .nav-links {
-    animation: none;
+    animation: none !important;
   }
   .hero-content {
     transform: none !important;
