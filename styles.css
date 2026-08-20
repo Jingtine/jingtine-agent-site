@@ -134,6 +134,30 @@ footer {
   color: var(--accent-purple);
 }
 
+/* Toggle button: hidden on desktop, flex on ≤768px */
+.nav-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--color-text);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
 /* ===== Hero ===== */
 .hero {
   position: relative;
@@ -924,6 +948,9 @@ a.contact-value:hover {
     transform: none;
     transition: none;
   }
+  html.nav-open .nav-links {
+    animation: none;
+  }
   .hero-content {
     transform: none !important;
     opacity: 1 !important;
@@ -1043,14 +1070,6 @@ a.contact-value:hover {
     grid-template-columns: 1fr;
   }
 
-  .nav-links {
-    gap: 16px;
-  }
-
-  .nav-links a {
-    font-size: 13px;
-  }
-
   .contact-card {
     padding: 24px 20px;
   }
@@ -1078,6 +1097,63 @@ a.contact-value:hover {
 
   .nav-inner {
     padding: 0 16px;
+  }
+}
+
+/* ============================================
+   v0.4 — Mobile Hamburger Navigation
+   ============================================ */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  html.nav-open .nav-toggle-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  html.nav-open .nav-toggle-bar:nth-child(2) {
+    opacity: 0;
+  }
+  html.nav-open .nav-toggle-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 0 12px;
+    background: rgba(248, 249, 255, 0.94);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--color-border-light);
+    box-shadow: 0 12px 32px rgba(90, 80, 140, 0.10);
+    display: none;
+  }
+
+  html.nav-open .nav-links {
+    display: flex;
+    animation: navIn 0.25s ease;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+}
+
+@keyframes navIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 
