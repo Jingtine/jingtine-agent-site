@@ -419,6 +419,32 @@ test.describe('TC21 — 移动端汉堡菜单', () => {
     const url = new URL(page.url());
     expect(url.pathname).toBe('/blog.html');
   });
+
+  test('TC21 点外部与 Esc 收起', async ({ page }) => {
+    await page.goto('/index.html');
+    await page.waitForLoadState('networkidle');
+    const toggle = page.locator('.nav-toggle');
+    await toggle.click();
+    await expect(page.locator('html')).toHaveClass(/nav-open/);
+    await page.mouse.click(180, 300);
+    await expect(page.locator('html')).not.toHaveClass(/nav-open/);
+    await toggle.click();
+    await expect(page.locator('html')).toHaveClass(/nav-open/);
+    await page.keyboard.press('Escape');
+    await expect(page.locator('html')).not.toHaveClass(/nav-open/);
+  });
+
+  test('TC21 reduced-motion 无 navIn 动画', async ({ page }) => {
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await page.goto('/index.html');
+    await page.waitForLoadState('networkidle');
+    const toggle = page.locator('.nav-toggle');
+    const links = page.locator('#nav-links');
+    await toggle.click();
+    await expect(links).toBeVisible();
+    const animationName = await links.evaluate(el => getComputedStyle(el).animationName);
+    expect(animationName).not.toBe('navIn');
+  });
 });
 
 /* ================================================================

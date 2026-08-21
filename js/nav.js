@@ -16,6 +16,7 @@
   function setOpen(open) {
     document.documentElement.classList.toggle('nav-open', open);
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (!open) toggle.focus();
   }
 
   toggle.addEventListener('click', function () {
