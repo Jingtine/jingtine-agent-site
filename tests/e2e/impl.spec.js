@@ -426,8 +426,10 @@ test.describe('TC21 — 移动端汉堡菜单', () => {
     const toggle = page.locator('.nav-toggle');
     await toggle.click();
     await expect(page.locator('html')).toHaveClass(/nav-open/);
-    await page.mouse.click(180, 300);
+    await page.mouse.click(180, 600);
     await expect(page.locator('html')).not.toHaveClass(/nav-open/);
+    const urlAfterOutside = new URL(page.url());
+    expect(urlAfterOutside.pathname).toBe('/index.html');
     await toggle.click();
     await expect(page.locator('html')).toHaveClass(/nav-open/);
     await page.keyboard.press('Escape');
