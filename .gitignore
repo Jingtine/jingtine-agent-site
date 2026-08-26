@@ -20,6 +20,7 @@ __pycache__/
 
 # Agent workflow scratch
 .superpowers/
+.worktrees/
 
 # Planning documents (internal workflow artifacts)
 docs/
