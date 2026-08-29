@@ -1,7 +1,379 @@
 {
-  "generated": "2026-08-28T08:46:19.556932+08:00",
-  "total": 40,
+  "generated": "2026-08-29T08:26:54.925222+08:00",
+  "total": 60,
   "items": [
+    {
+      "id": "87ca0b80950a",
+      "title": "德国零部件不再为汽车孤注一掷",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTQzOTE0MA==&mid=2651632935&idx=1&sn=5d6ecfa2f4750da643389fa7a862da52&chksm=bd18b06b6939b3658ac3e353d4f82655e7a8ccb42774eccf74e649e5561a7ec190013d516930",
+      "description": "加入轩辕同学，成就新汽车人撰文 | 刘 颖编辑 | 黄大路设计 | 甄尤美在德国巴伐利亚州劳夫，拥有120多年历史的森巴赫陶瓷（Sembach），正在把长期服务于汽车发动机和传感器的材料与工艺，用到心脏起搏器和微创内窥镜上。 汽车繁荣时期，森巴赫每年生产约6亿个小型汽车零件，如今只剩约4亿个。 公司给自己定下的目标是，到2033年，把汽车业务占收入的比例从约80%降至40%。 “如果没有新的战略，我不知道十年后我们是否还会存在。” 森巴赫第五代掌门人安娜·森巴赫（Anna Sembach）告诉英国《金融时报》。 德国汽车供应商不是想退出汽车，而是不敢再把…",
+      "pubDate": "2026-08-29T08:02:24+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "7efce9f5b420",
+      "title": "Does the Sumerian King List Align with Paleoclimate Events?",
+      "link": "https://www.vectorian.be/articles/2026-06-07/sumerian-king-list-paleoclimate-alignment-explorer/",
+      "description": "Article URL: https://www.vectorian.be/articles/2026-06-07/sumerian-king-list-paleoclimate-alignment-explorer/ Comments URL: https://news.ycombinator.com/item?id=49485532 Points: 10 # Comments: 2",
+      "pubDate": "2026-08-29T07:46:10+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "bd488c1cb70b",
+      "title": "Boot a Virtual iPhone via Apple's Virtualization.framework",
+      "link": "https://github.com/Lakr233/vphone-cli",
+      "description": "Article URL: https://github.com/Lakr233/vphone-cli Comments URL: https://news.ycombinator.com/item?id=49485267 Points: 23 # Comments: 7",
+      "pubDate": "2026-08-29T07:02:21+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "4ffd2b68fb03",
+      "title": "Identifying fake cosmetics using AI",
+      "link": "https://groverlab.org/hnbfpr/2026-08-26-ai-counterfeit-cosmetics.html",
+      "description": "Article URL: https://groverlab.org/hnbfpr/2026-08-26-ai-counterfeit-cosmetics.html Comments URL: https://news.ycombinator.com/item?id=49484925 Points: 16 # Comments: 5",
+      "pubDate": "2026-08-29T06:18:27+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "983102b3ea3b",
+      "title": "Just a rumour of a bug is enough to find a security exploit these days",
+      "link": "https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/",
+      "description": "Just a rumour of a bug is enough to find a security exploit these days Anil Madhavapeddy is a professor of computer science at Cambridge and a core maintainer of the OCaml compiler. In this somewhat alarming post he reports that security issues in OCaml projects are seeing eviden…",
+      "pubDate": "2026-08-29T06:12:02+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "b4f95ef47dd8",
+      "title": "Stopping the smart TV from being used against you",
+      "link": "https://www.s-config.com/stopping-a-smart-tv-from-being-used-against-you/",
+      "description": "Article URL: https://www.s-config.com/stopping-a-smart-tv-from-being-used-against-you/ Comments URL: https://news.ycombinator.com/item?id=49483816 Points: 137 # Comments: 106",
+      "pubDate": "2026-08-29T04:27:57+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "f8ee97f988cf",
+      "title": "Aspirational Clownmaxxing and Joey's cadillac todo list",
+      "link": "https://charlesleifer.com/blog/aspirational-clownmaxxing-and-joey-s-cadillac-todo-list/",
+      "description": "Article URL: https://charlesleifer.com/blog/aspirational-clownmaxxing-and-joey-s-cadillac-todo-list/ Comments URL: https://news.ycombinator.com/item?id=49483080 Points: 17 # Comments: 6",
+      "pubDate": "2026-08-29T03:18:22+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "eff17f29efac",
+      "title": "Show HN: Sesame - a local-first, open-source password manager",
+      "link": "https://usesesame.app/",
+      "description": "I have been working on Sesame, an open-source password manager that keeps your vault local by default. You don't need an account to create or use a vault, and the hosted service never receives the vault itself. It's still early software and the independent security review isn't f…",
+      "pubDate": "2026-08-29T03:14:14+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "de58f2f7593a",
+      "title": "Autonomous Mathematical Discovery in an Open-World Multi-Agent Environment",
+      "link": "https://arxiv.org/abs/2608.23691",
+      "description": "Article URL: https://arxiv.org/abs/2608.23691 Comments URL: https://news.ycombinator.com/item?id=49481455 Points: 75 # Comments: 16",
+      "pubDate": "2026-08-29T01:01:12+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "d3b3464d6b51",
+      "title": "Attimet (YC F24) Is Hiring Members of Technical Staff – Engineering and Research",
+      "link": "https://www.ycombinator.com/companies/attimet/jobs/6btZFDg-member-of-technical-staff-engineering",
+      "description": "Article URL: https://www.ycombinator.com/companies/attimet/jobs/6btZFDg-member-of-technical-staff-engineering Comments URL: https://news.ycombinator.com/item?id=49481423 Points: 0 # Comments: 0",
+      "pubDate": "2026-08-29T01:00:06+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "9092f3e33f2c",
+      "title": "吉隆口岸泥石流前后：有游客因小型塌方被困，跨境灾害预警难在哪儿",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzU5ODU1Mjg5Nw==&mid=2247832823&idx=1&sn=40a1d00cdc14b36110eb7701102441e3&chksm=ff5c9bcc79766b17e8651a6303b2814c40039be34ce25f0811461b616fe3edce4b75e2fd6fb5",
+      "description": "凤凰网《风暴眼》出品文丨李小白 洄野爆料投诉邮箱：all_cj@ifeng.com吉隆口岸灰白色调的国门，静静伫立在吉隆沟尽头，一侧依偎着西藏日喀则连绵群山，一侧俯瞰尼泊尔的纵深峡谷。 8月26日10时30分，由海拔5200米高处冰崩引发的巨型泥石流，奔涌而下，在一瞬间将其吞没。 这条自唐代延续至今的通商要道，彻底被泥泞覆盖，不远处的中尼友谊桥也被洪流拦腰冲断。 西藏吉隆口岸泥石流灾害前后对比图。图片来源：新华网灾难降临的瞬间，口岸两侧依旧人流穿梭，边防执勤人员、跨境商贾、徒步爱好者、自驾旅客仍在正常办理出入境手续，他们没有丝毫避险反应的时间。 一瞬间定…",
+      "pubDate": "2026-08-29T00:03:27+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "5179435ccc01",
+      "title": "雪王还要再烧三年钱",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzU3MjA5NDM5OQ==&mid=2247523618&idx=1&sn=eaa0d96434717f0318428618249afa1b&chksm=fdd94fe4ec244991960403c13be6c012308be39b3356aa2e772fc08dcc383bf4dba7b8360eaa",
+      "description": "作者 | 刘艺晨 高速扩张多年后，蜜雪冰城主动慢了下来。8月27日，蜜雪集团披露未经审计的2026年中期业绩。 上半年，公司收入为152.16亿元，同比增长2.3%；期内利润为23.19亿元，同比下降14.7%。 同期，全球门店增至63,987家，同比增长20.7%。 门店仍在增加，却没有再像过去一样带动收入和利润同步增长。 在随后举行的业绩会上，蜜雪集团首席执行官张渊承认，上半年集团整体店均营业额和蜜雪冰城主品牌店均营业额均出现双位数下滑。 去年外卖大战将门店营业额推至异常高位，形成较高的比较基数；茶饮与咖啡的品类边界不断模糊，行业竞争也在进一步分流门…",
+      "pubDate": "2026-08-29T00:03:27+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "a3d40848cd03",
+      "title": "Just the rumour of a bug is enough to find an exploit these days",
+      "link": "https://anil.recoil.org/notes/rumour-is-the-exploit",
+      "description": "Article URL: https://anil.recoil.org/notes/rumour-is-the-exploit Comments URL: https://news.ycombinator.com/item?id=49480466 Points: 244 # Comments: 89",
+      "pubDate": "2026-08-28T23:58:46+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "4424584ee706",
+      "title": "GLM-5.3 is now open-weight",
+      "link": "https://huggingface.co/zai-org/GLM-5.3",
+      "description": "https://twitter.com/Zai_org/status/2093354097122455713https://z.ai/blog/glm-5.3 Comments URL: https://news.ycombinator.com/item?id=49479878 Points: 569 # Comments: 201",
+      "pubDate": "2026-08-28T23:20:13+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "07aca43e12d4",
+      "title": "GUIs should be fully keyboard-driven",
+      "link": "https://ckardaris.com/blog/2026/08/28/keyboard-driven-guis.html",
+      "description": "Article URL: https://ckardaris.com/blog/2026/08/28/keyboard-driven-guis.html Comments URL: https://news.ycombinator.com/item?id=49479837 Points: 576 # Comments: 290",
+      "pubDate": "2026-08-28T23:17:09+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "2fab98b6754c",
+      "title": "Some conservationists are helping to restore Africa’s wild dog populations",
+      "link": "https://www.smithsonianmag.com/science-nature/africa-wild-dogs-most-hated-carnivores-continent-heres-why-conservationists-saving-them-anyway-180989287/",
+      "description": "Article URL: https://www.smithsonianmag.com/science-nature/africa-wild-dogs-most-hated-carnivores-continent-heres-why-conservationists-saving-them-anyway-180989287/ Comments URL: https://news.ycombinator.com/item?id=49479302 Points: 67 # Comments: 28",
+      "pubDate": "2026-08-28T22:44:51+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "5eaddba9a19f",
+      "title": "Verschlimmbesserung: The Word Your Software Updates Need",
+      "link": "https://geekyschmidt.com/post/2026-08-25-verschlimmbesserung/",
+      "description": "Article URL: https://geekyschmidt.com/post/2026-08-25-verschlimmbesserung/ Comments URL: https://news.ycombinator.com/item?id=49479072 Points: 103 # Comments: 66",
+      "pubDate": "2026-08-28T22:30:33+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "734715812ef7",
+      "title": "首次！出生人口，跌破800万了",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzUyNzA1MTk3MA==&mid=2247521665&idx=1&sn=630237e18970dcaea6d3eed37e1f151e&chksm=fb6447f1cdb4ca9386ddf4efcd36bbe41ab68cae56cd593dcd373ee7c615ef8dc4b43b752853",
+      "description": "文丨西部君出生人口仍在减少。日前，国家卫健委发布的《2025年我国卫生健康事业发展统计公报》显示，2025年末全国人口为140489万人。 全年出生人口792万人，出生率为5.63‰；死亡人口1131万人，死亡率为8.04‰。 尽管这一数据早在年初就已披露，但“792万”这个数字依然令人警醒。 要知道，这是70多年来，中国出生人口首次跌破800万大关。 更值得注意的是，这还是出现在近几年从国家到地方，不断加码“催生”政策的大背景之下。 到底怎么了？出生人口创新低，影响有多大？01792万，到底意味着什么？ 首先，它是数十年来的新低。而且，与前一年相比，它…",
+      "pubDate": "2026-08-28T22:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "c4d47a81f26f",
+      "title": "“榴莲大跌，依然卖不动”",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI1OTIyMTg0MQ==&mid=2247534158&idx=1&sn=9cd19c14055e95d43999291fe1a24f4a&chksm=eb43749f5e689ab279360e35f16faf87acb16c219a7e0aac394452af59e39cb1d0382f2f9634",
+      "description": "▲这是灵兽第1868篇原创文章榴莲越来越便宜，卖榴莲的人却越来越难赚钱。 作者/十里ID/lingshouke19.9元和23元，都是榴莲最近，榴莲又便宜了社交平台上，“榴莲价格崩盘”的讨论不少，甚至有人晒出9.9元一斤的价格。 但如果真的走进水果店，会发现另一种价格也存在。最近，北京有个水果专卖店老板陈强（化名）就没怎么进榴莲，不是卖不动，而是“不想拿”。 “产品不满意就不卖。”他说。8月底，泰国金枕大果的批发价已经回到每斤23元左右。 就在一个月前，部分榴莲货品的批发价还只有每斤13元到15元。 价格上上下下，老板真正关心的却不是行情图，而是拿回来的…",
+      "pubDate": "2026-08-28T22:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "b0c983f2e4b0",
+      "title": "人形机器人，进入淘汰赛",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg4MzE5Nzk5NQ==&mid=2247490707&idx=1&sn=a32d441b89710eaeddde9ffe8b2fd2e5&chksm=ce10f4f5a7ea234a2b85496420037f9657129fbadd6f127f72dd13f0cb1f31b7dcd810def16b",
+      "description": "落地为王。文丨许俊浩AI浪潮席卷之后，具身智能迅速成为全球科技产业竞逐的主战场，而人形机器人，正是这场竞逐中最受瞩目、最具想象空间的焦点。 聚光灯下的两场机器人盛会即是明证。先有8月19日至23日举办的2026世界机器人大会（WRC），以“人机共生，产需共融”为主题，有373家企业的超过3000个产品参展；后是8月22日至26日举行的第二届世界人形机器人运动会（WHRG），设有赛跑、跳远、拳击等51个竞赛项目，有16个国家的超过2000台机器人参赛。 相较之前，这两场盛会均更强调真实应用场景。大家逐渐对空翻、跑酷等表演式展示习以为常，更关注的是展台上拧螺…",
+      "pubDate": "2026-08-28T22:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "d2ae98a14bce",
+      "title": "影石的利润，被谁拿走了？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzkzODUxNTM2OA==&mid=2247541648&idx=1&sn=952615663511821c83b90c881397a9d7&chksm=c31817755e5d44abb1a9c80375370514a8ca8fc49c98c90a1699580019471e0c9786df87d831",
+      "description": "上市以来首次单季亏损。定焦One（dingjiaoone）原创作者 | 王汉星编辑 | 魏佳影石创新可能正处在上市以来最艰难的一段时期。 上游存储芯片涨价大幅挤压毛利空间，与硬件巨头的全面竞争又不断抬高费用，利润开始不堪重负。 8月27日盘后，影石创新发布2026年半年报，财报中最扎眼的数字是利润。 上半年公司扣非后归母净利润由盈转亏，亏损约1534万元，去年同期为盈利4.9亿元；拆开单季来看，Q2公司扣非归母净利润亏损约7760万元，这家全景相机出货量全球第一的公司，上市以来第一次出现单季亏损，但结果并不意外。 一季报中端倪已现，当季营收增长83.11…",
+      "pubDate": "2026-08-28T22:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "1245e8de3b01",
+      "title": "交战半年，美国滤镜碎一地，伊朗智勇难双全",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTExMjYwMA==&mid=2670393741&idx=3&sn=dac15706429df20504b2f79bb37bdc4c&chksm=bd09e0aeeded4a852bca3743e7e013821fd69d29bb87a29535ffc77fc2d1682b1f46da4df0ba",
+      "description": "大国和小国如何处理关系，中国古代先哲孟子有一个经典解说。孟子说：“惟仁者为能以大事小，惟智者为能以小事大。” 从这个角度分析，美国可以不仁，伊朗不能不智。作者：王义伟封图：东方IC2026年8月28日，美以伊战争爆发半年。 笔者认为，可以用两句话总结美国和伊朗在半年之内的表现：美国的滤镜碎了一地、露出了真面目，伊朗勇则勇矣，但在谋略上有很大的欠缺。 详述如下。美国的真面目分两个层面。第一，美国的实力暴露了。 2月28日战争爆发初期，很多人预判，以美国和以色列的军事实力，美以将轻松推翻伊朗现政权、取得战争胜利。 事实上，战事进展到4月8日，刚刚40天的时候…",
+      "pubDate": "2026-08-28T22:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "b1bb6cd02046",
+      "title": "科技巨头四处拿地买楼",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTExMjYwMA==&mid=2670393741&idx=1&sn=fe795d6d6d4da7b38625acca125ad240&chksm=bdcfbd708c9165cc1e9c9f18f3b8cd3eed08b70785cb6dfdf5b42f28a4a837474e0a74f811b6",
+      "description": "以互联网、AI和硬科技为主的新经济企业开始加大不动产配置，既拿地自建研发、办公和数据中心，也在一二线城市核心区购置现成物业。 作者：田国宝封图：图虫创意2026年8月24日，武汉光屿智谷科技有限公司（下称“光屿智谷”）以2056万元竞得武汉光谷一幅23.7亩的工业用地。 工商注册资料显示，光屿智谷由湖北巨量引擎科技有限公司持股，最终控制人为抖音集团。 此前武汉官方曾宣布，抖音集团华中区域总部将落地。这是2026年抖音集团第三次在土地市场出手。 2月，抖音集团以28亿元竞得北京大钟寺蓝景丽家地块，规划建设数字经济产业园；3月，其以33.05亿元通过协议出让…",
+      "pubDate": "2026-08-28T22:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "60a6227b5d80",
+      "title": "State of the Map 2026",
+      "link": "https://2026.stateofthemap.org/",
+      "description": "Article URL: https://2026.stateofthemap.org/ Comments URL: https://news.ycombinator.com/item?id=49478401 Points: 136 # Comments: 50",
+      "pubDate": "2026-08-28T21:46:28+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "d56369a9ec49",
+      "title": "Get your Windows license refund",
+      "link": "https://en.refund4freedom.org/",
+      "description": "Article URL: https://en.refund4freedom.org/ Comments URL: https://news.ycombinator.com/item?id=49478340 Points: 645 # Comments: 268",
+      "pubDate": "2026-08-28T21:42:40+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "6b67b7c84370",
+      "title": "Htmx 4.0",
+      "link": "https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released",
+      "description": "Article URL: https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released Comments URL: https://news.ycombinator.com/item?id=49478178 Points: 491 # Comments: 121",
+      "pubDate": "2026-08-28T21:28:56+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "0f50e8401ebe",
+      "title": "U.S. sanctions against the A/I Collective",
+      "link": "https://www.inventati.org/",
+      "description": "Earlier:US Government designates host of noblogs.org a \"global terrorist\" - https://news.ycombinator.com/item?id=49464391 - (131 comments)US sanctions Italian hosting provider Autistici Inventati - https://news.ycombinator.com/item?id=49451343 - (219 comments) Comments URL: https…",
+      "pubDate": "2026-08-28T20:58:53+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "3000911ccffc",
+      "title": "An investigation into the state of corvid–human relations",
+      "link": "https://www.audubon.org/magazine/are-crows-really-our-friends",
+      "description": "Article URL: https://www.audubon.org/magazine/are-crows-really-our-friends Comments URL: https://news.ycombinator.com/item?id=49477813 Points: 106 # Comments: 63",
+      "pubDate": "2026-08-28T20:53:42+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "c323c9b58119",
+      "title": "Inception-style curved map for turn-by-turn directions",
+      "link": "https://www.orbify.eu/demo/",
+      "description": "Article URL: https://www.orbify.eu/demo/ Comments URL: https://news.ycombinator.com/item?id=49477564 Points: 409 # Comments: 138",
+      "pubDate": "2026-08-28T20:29:05+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "db96dd286179",
+      "title": "今夜，沃什能否拯救美债？或决定AI牛市命运",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NzAwMzU0MA==&mid=2247646400&idx=4&sn=66b6301184304939ab166cfddea3aeba&chksm=a7719f1a9f8fe63899bb0d2c4e423c6db3d007c22ffebfcdbb04a15b87fc133004fc71eaaea2",
+      "description": "美银证券首席策略师Michael Hartnett警告，美债长端收益率走势正成为当前全球资产定价的核心变量—— 债市在\"主导\"泡沫，而非跟随泡沫。今夜，美联储主席沃什将在杰克逊霍尔发表演讲，市场将其视为稳住长端利率的关键一搏。 美银在8月28日的《Flow Show》报告中表示，沃什此番演讲的\"成功剧本\"是实现收益率曲线牛市平坦化—— 即通过对通胀释放可信的鹰派信号锚定短端，同时对长端债券释放鸽派暗示，为财政部的国债回购计划提供支撑。 若此番操作成功穿针引线，风险资产与美元有望同步反弹。 然而一旦政策沟通失败，10年期美债收益率将突破4.7%、30年期突…",
+      "pubDate": "2026-08-28T20:02:25+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "04411ad809f1",
+      "title": "Migrating to HTTPX2",
+      "link": "https://github.com/openai/openai-python/blob/main/httpx2.md",
+      "description": "Article URL: https://github.com/openai/openai-python/blob/main/httpx2.md Comments URL: https://news.ycombinator.com/item?id=49477212 Points: 182 # Comments: 78",
+      "pubDate": "2026-08-28T19:51:20+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
     {
       "id": "bc6639b3f246",
       "title": "Breaking Claude Code Opus 5 Auto Mode",
@@ -13,126 +385,6 @@
         "name": "Simon Willison's Weblog"
       },
       "category": "ai-agent"
-    },
-    {
-      "id": "b6fa2fd607d3",
-      "title": "从前晒包，现在晒展：这届中产的刚需变了",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzA3ODI5NDg0Mw==&mid=2654259762&idx=1&sn=2942eb56c68a85824c5f1190f7e49222&chksm=85233a3ddf674bbc54690b0f8320aa4b0bb4a922885d69f814a6e6a8cb8586044cd4ebcb0612",
-      "description": "8月18日，上海书展落幕的日子，一个上班日的周二。傍晚前赶到现场，人流依然相当可观，展厅里人山人海。 直到华灯初上、快要毕展时，场内人流依旧未减。因为毕展前很多摊位都有一些类似收摊甩卖的优惠，收银台反倒更加热闹。 我也忍不住频频“剁手”，入手的文创里最有趣的一件，来自“宛平南路600号”——上海市精神卫生中心的帆布袋。 这两年，这家医院的文创出人意料地成了出圈顶流，人们背上它，笑称自己的精神状态再次得到肯定。 一家精神卫生中心的周边，在一个书展上被欣然买走，好像对，又好像哪里不太对。 第二天，刷到新闻，今年书展又创了新高。可是，身边刷短视频的人好像越来越…",
-      "pubDate": "2026-08-28T02:03:26+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "aa6fcbd399a1",
-      "title": "东方甄选、与辉同行、美丽明天：离开之后，没有赢家与输家，只有三种资产",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzA3ODI5NDg0Mw==&mid=2654259762&idx=2&sn=ac57c1294729109a2c517e05b30d8aff&chksm=851628629813eacc540caac5697964ad1ae44ec2698cc0e687716f3b9d255a2d69314533af91",
-      "description": "董宇辉离开后的第一个完整财年，东方甄选净利润从619万元增至5.44亿元。 8月21日发布的2026财年业绩显示，东方甄选营收57.01亿元，同比增长29.8%；经调整净利润6.29亿元，同比增长262.2%。 董宇辉和与辉同行继续经营以个人表达为核心的内容与商业共同体。 孙东旭、明明、天权等人组成美丽明天，重新进入直播带货市场。 8月2日首播时，其直播间半小时在线人数突破10万，一度登上抖音带货总榜首位。 一边是上市公司利润修复，一边是超级个体继续放大影响力，另一边是原管理者与主播以团队方式重新创业。 舆论很容易把它们写成一场胜负已分的比赛。平台似乎证…",
-      "pubDate": "2026-08-28T02:03:26+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "069f940e9345",
-      "title": "上海家化22年只赚了个退出价，丝芙兰的货架正被抖音重新定义",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzkxNjczMzUzNQ==&mid=2247583336&idx=1&sn=330ef9cee96e1857183bee11aa1acad8&chksm=c08d9149a92551a44f14f47e4af3baee81681da2d67008e0100ab466b3e6d9e46ef23c8317cc",
-      "description": "作者|Evelin上海家化还是卖掉了丝芙兰。近日，上海家化宣布拟将持有的丝芙兰上海、丝芙兰北京各19%股权，以7000万欧元（约5.55亿人民币）的价格转让给Sephora Asia。 交易完成后，上海家化将彻底退出这两家合资公司。这笔生意最初谈的不是卖。 上海家化董事长兼首席执行官林小海在业绩会上透露，双方20年的合资合同已经到期，此前还曾经延期一次。 经过协商，最终由丝芙兰方面回购上海家化的股份。公告还透露，上海家化委派的两名董事随交割自动退出；买方享有目标股权自2026年3月31日评估基准日至交割日的全部损益；交割后两年内，上海家化不得在中国境内经…",
-      "pubDate": "2026-08-28T00:03:27+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "bb2df3e298ea",
-      "title": "白忙活十几年？日本的稀土替代计划，为什么流产了",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTYwOTM0Nw==&mid=2650563939&idx=1&sn=347207c46cfbb87896f88c03f9a228f8&chksm=bed6d5b4539f6224df4ea6654e6e20bb932ff2dbc8e8fd8aca5849d59f3be6762f44e1fa665e",
-      "description": "酷玩实验室原创作品掐指一算，中国对日进行稀土出口管制，已经有8个月时间了，估计很多人好奇，这套组合拳打出去效果到底如何呢？ 正巧日本财务省发来了最新战报。2026年1月到6月，日本进口的关键稀土材料镝铁合金，仅有13吨，相比管制之前的2024年同期，进口量暴跌82%。 另一种重要稀土材料氧化钇，进口量也大幅下滑，今年上半年为204吨，同比减少74%…… 很显然，套在日本制造业脖子上的绳索正在慢慢收紧。站在我们中国人的视角：“呦西！斯国一！”但日本人可能满心疑惑：“咋会这样？不是十几年前就开始稀土去中国化了吗？”01：稀土“去中国化”时间回到2010年9月…",
-      "pubDate": "2026-08-28T00:03:27+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "e8eaa9f40c98",
-      "title": "10年超1400人遇难，尼泊尔为何频频爆发山洪？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NDUxMzE3Mg==&mid=2652188683&idx=1&sn=c274c3842cdb31668b13025e7c29dc9c&chksm=bcf864870c729955aa2ee8244cf46c81a81e365667eff533f36cbeeb95fd563bd823d69bc9ad",
-      "description": "被称为“高山之国”的尼泊尔，再一次爆发山洪。目前救援工作仍在进行中。 据央视新闻报道，当地时间8月27日从尼泊尔警方发言人处获悉，尼泊尔北部地区山洪造成的死亡人数升至359人。 尼泊尔旅游委员会同日发布报告说，据初步统计，644名游客在山洪中失联，包括来自约30个国家的517名外国游客和127名尼泊尔本国游客。 近年来，尼泊尔山洪灾害频频暴发，到底是什么原因造成的？ 造成了多大的伤害？ 10年遇难人数超1400 根据新华社及尼泊尔国家减少灾害风险管理局不完全统计，尼泊尔近十年来遭遇了多起严重的山洪及其引发的泥石流灾害，累计死亡人数已经超过1400人。 2…",
-      "pubDate": "2026-08-28T00:03:27+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "4fe8a05c8009",
-      "title": "刘翔争议的背后，是一个我们至今没摆脱的“被定义”困境 | 旧锦新样",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzA3ODk5NTAzNA==&mid=2652207536&idx=1&sn=1cade7ae02ef285952797e5ac7205414&chksm=851edb426d1b019607bb0c055f0e69f9c29c474f64fc4cea7f9fe8981204a887e4f3f0842ba2",
-      "description": "编者按近日，刘翔与上海体育局之间的编制争议引发广泛关注—— 退役十一年后，他在“买断工龄”与“当教练上班”之间陷入两难。 这件事让很多人重新想起：这位曾经的“亚洲飞人”，到底是一个怎样的存在？ 我们今天重发范可先生写于二十年前的文章，并非要讨论编制问题本身。 这篇文章当年以刘翔夺冠为引子，讨论了一个更深层的问题：一个东亚运动员的成功，如何被欧美的种族话语所解读？ 十几年过去，刘翔早已退役，但围绕他的定义从未停止—— 从赛场上的“黄种人的奇迹”，到体制内的“挂名团委副书记”； 当年他被欧美种族话语定义，今天他被体制内的编制逻辑定义。 一个运动员，既要突破种…",
-      "pubDate": "2026-08-27T22:02:23+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "59488859da0f",
-      "title": "“科技合伙人”，为何火了？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NTUwNzUyMQ==&mid=2652262725&idx=1&sn=10cd00a8e033cc89c3b01ada9fc494e1&chksm=bc9a639d305e932da72c3aa23386d7fcddc85c2b860e0b5988adbd6f006e8dc2a49fb79125b1",
-      "description": "“科技合伙人”模式，在上海迅速走红。从高校院所内部转化试点、区级专项计划，逐步升级为全市性科创生态主流范式，成为破解科创“死亡之谷”、培育新质生产力的关键抓手。 与简单撮合供需的“科技红娘”模式不同，“科技合伙人”以科学家、企业家、技术经理人、产业资本、园区平台、政府服务六大主体深度绑定、风险共担、利益共享为核心逻辑，有力塑造四链融合体系，打通了科研成果从实验室走向生产线的通路。 01“科技合伙人”的火爆传统科创合作长期停留在短期对接、甲乙方交易、单次技术买卖层面，高校院所只管研发、企业只管落地、资本只管投资，各方边界割裂，科研成果普遍卡在“0到1概念验…",
-      "pubDate": "2026-08-27T22:02:23+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "282ce3b26644",
-      "title": "肿瘤疫苗私人定制，中国版2030年或上市",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTExMjYwMA==&mid=2670393575&idx=1&sn=1289ccbd35996e74aa90058dd5797b38&chksm=bddee18e1ca47a1617810bdeaa5039faeaa0ed9df532d3baaebc12525fbbf2f3884f03b864b6",
-      "description": "中国的个体化肿瘤疫苗最快的进展在II期临床试验，受访者推测，大概率要到2030年前后才有产品可能获批上市。 作者：刘晓诺封图：图虫创意新冠疫苗巨头，时隔5年后，凭借全球首创肿瘤疫苗重回聚光灯下。 8月19日，美国公司Moderna宣布，其个体化肿瘤疫苗临床试验成功。 资本市场旋即沸腾，一周之内Moderna股价涨幅近138%。 Moderna曾在新冠期间迅速制出首款进入临床试验的mRNA新冠疫苗，验证了mRNA技术。 这一次，Moderna进一步验证了mRNA可用于肿瘤治疗。 虽然名为肿瘤疫苗，它实际并不能让健康人预防肿瘤，而是用于肿瘤被切除后的防止复发…",
-      "pubDate": "2026-08-27T22:02:23+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "b095a0176e3a",
-      "title": "治理电动自行车：限速只是拼图一角",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTExMjYwMA==&mid=2670393575&idx=3&sn=5c8e42b7d34c7ec37d2558269c7ffe8a&chksm=bdae7b5de9fd78381a88b29ac8b1d31b46caa1eff20e407f386707f4e8994ccee17bac4fa304",
-      "description": "对电动自行车限速，只是制度拼图中的一小块，真正的治理成效，取决于违法成本提升与路权供给改善能否同步推进。 作者：远山封图：图虫创意8月25日，十四届全国人大常委会第二十四次会议初次审议了《道路交通安全法（修订草案）》，拟将电动自行车在非机动车道内的最高行驶时速由15公里提升至20公里。 法律调整的出发点是回应广大电动自行车使用者的实际出行需求，在安全与通行效率之间找到更适配的平衡点，适度放宽限速有助于提升整体通行效率。 有观点认为，这一标准与电动自行车现行国标25公里的设计上限仍有差距，属于法律与国标不统一。 但这其实混淆了两个概念：产品技术标准与道路通…",
-      "pubDate": "2026-08-27T22:02:23+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "e5cf86fa1218",
-      "title": "热得受不了，国家啥时候能搞“集中供冷”？！",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzkyNzIwODI3OA==&mid=2247685179&idx=1&sn=c865ecc4ecbcabbc9113f6639e7e75f5&chksm=c3d7a692c0d8a2ff85418f7cf8882552f8362d9a6910596f6a89a944b35c10f28bc889d3ad5b",
-      "description": "地球知识局文字 | 阿米娅校对 | 朝乾 编辑 | 巴拿拿大家有没有发现，现在的夏天越来越热，而国内有些地方开始搞“集中供冷”了。 在江苏、广东等地，已经开始了集中供冷（图：@央视新闻 @广东发布）▼集中供冷这四个字，听上去就颇有种“基础设施的福利感”，就像南方人长期向往的集中供暖一样，集中供冷能普及么？ 北方会先走一步么？道路是曲折的，其实中国早在2000年就开始搞集中供冷，但二十多年过去了，这种技术依然只在个别地方落地，比如深圳前海、上海虹桥等少数商务区和大学城，以及我所在的武汉，就有个新项目，就在汉口滨江国际商务区，要用江水能源站把长江变成天然空调…",
-      "pubDate": "2026-08-27T22:02:23+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
     },
     {
       "id": "c66ebdceece6",
@@ -464,18 +716,6 @@
       "link": "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/",
       "description": "Don't classify. Hallucinate! I still have quite a bit of older content on my blog that I never got round to tagging. My blog has 1,856 tags - likely too many to feed to an LLM in one go and say \"which of these tags match the following content\". Doug Turnbull has a neat solution.…",
       "pubDate": "2026-08-15T05:54:35+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "481e2b039322",
-      "title": "sqlite-utils 4.2.1",
-      "link": "https://simonwillison.net/2026/Aug/13/sqlite-utils-2/",
-      "description": "Release: sqlite-utils 4.2.1 Fixes a crashing bug in sqlite-utils 4.2. I'd introduced code that looks like this: from typing_extensions import Self It turned out the typing-extensions package was not listed as a dependency for sqlite-utils - it was installed by one of the other de…",
-      "pubDate": "2026-08-14T07:53:47+08:00",
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
