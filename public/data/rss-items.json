@@ -1,13 +1,13 @@
 {
-  "generated": "2026-08-31T03:05:37.522300+08:00",
+  "generated": "2026-09-01T05:20:27.614565+08:00",
   "total": 60,
   "items": [
     {
-      "id": "0170c2ed0df5",
-      "title": "Running SQLite Apps on Docker and Kubernetes with Litestream",
-      "link": "https://openrun.dev/blog/litestream/",
-      "description": "Article URL: https://openrun.dev/blog/litestream/ Comments URL: https://news.ycombinator.com/item?id=49501147 Points: 10 # Comments: 3",
-      "pubDate": "2026-08-31T02:05:06+08:00",
+      "id": "8121c4840abc",
+      "title": "Autonomous (YC F25) Is Hiring Engineers",
+      "link": "https://news.ycombinator.com/item?id=49514781",
+      "description": "Comments URL: https://news.ycombinator.com/item?id=49514781 Points: 0 # Comments: 0",
+      "pubDate": "2026-09-01T05:00:09+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -15,11 +15,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "97194d7e25c3",
-      "title": "Artie (YC S23) Is Hiring Technical AES",
-      "link": "https://www.artie.com/careers?ashby_jid=e87b84d2-78b3-41a3-937a-47e83643cdf1",
-      "description": "Article URL: https://www.artie.com/careers?ashby_jid=e87b84d2-78b3-41a3-937a-47e83643cdf1 Comments URL: https://news.ycombinator.com/item?id=49500471 Points: 0 # Comments: 0",
-      "pubDate": "2026-08-31T01:01:56+08:00",
+      "id": "c63d155c4f44",
+      "title": "A walkable ASCII cyberpunk city in one HTML file [video]",
+      "link": "https://www.youtube.com/watch?v=3YtygAx_C6A",
+      "description": "ASCII City: Traffic and Detail Update - https://www.youtube.com/watch?v=DSRooHo_HSIASCII City Update: Interiors, Elevation and Skyscrapers - https://www.youtube.com/watch?v=UCKEDWowc0o Comments URL: https://news.ycombinator.com/item?id=49512975 Points: 122 # Comments: 25",
+      "pubDate": "2026-09-01T02:21:33+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -27,23 +27,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "19d8c9b3512a",
-      "title": "Coordination Headwind: How Organizations Are Like Slime Molds",
-      "link": "https://komoroske.com/slime-mold/",
-      "description": "Article URL: https://komoroske.com/slime-mold/ Comments URL: https://news.ycombinator.com/item?id=49499891 Points: 53 # Comments: 22",
-      "pubDate": "2026-08-31T00:03:17+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "1522c3aaca98",
-      "title": "长鑫之后，合肥押注核聚变",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTYwOTM0Nw==&mid=2650564145&idx=1&sn=f55915c91d33bed351f6ab4dc18fb5b3&chksm=beeaaae8bde20f4bc2d2cae33e0e09ea1d53a6963c4ab09b10a8e7322364b2896bda93b2215b",
-      "description": "酷玩实验室原创作品中国最大的“赌城”在哪里？很多人会说是合肥。 京东方、蔚来汽车、长鑫存储，这些合肥国资押中的公司，在当时几乎都不被看好，但最后证明合肥的确有眼光和魄力。 长鑫存储最近在A股上市，市值超过3万亿，合肥国资相关主体合计持有约36.79%的股份，账面收益超过1万亿，合肥在之前的房地产大周期中累计的地方债大概3000亿，一把轻松捞回。 与其说合肥是“赌城”，不如说它是“最牛风投”。因为它的投资逻辑从来不是押注单点，而是用产业链的思维做布局：先投一个头部企业，再把上下游配套拉进来。 比如，一块屏幕引出一条显示产业链，一台整车拉来一整套新能源供应链…",
-      "pubDate": "2026-08-31T00:02:24+08:00",
+      "id": "4665a6442e2c",
+      "title": "A股再现，“股权反哺高校”",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg5MzEyNzEwNQ==&mid=2247844131&idx=1&sn=92d4bf66bfc647a6e17d2c5c9189d627&chksm=c1dc9b430c8b9a552a0c1750e3883e7e815e73b2158817b25460207303340c2456b68c4f6271",
+      "description": "今日晚间，又一A股上市公司公布了高校捐赠股份计划。顺络电子公告表示，股东新余市恒顺通电子科技开发有限公司（以下简称“恒顺通”）计划向广东省华南理工大学教育发展基金会捐赠其持有的100万股无限售流通股，占公司总股本的0.12%。 按照顺络电子今日收盘股价50.05元/股计算，顺络电子恒顺通本次向华南理工大学捐赠股份市值超过5000万元。 顺络电子并非孤例。据财联社记者不完全梳理，今年以来，A股市场至少出现了7起大股东或持股平台向高校教育发展基金会捐赠股票的情形。 包括燕麦科技、佳驰科技、通鼎互联、宣泰医药、宁德时代以及东方财富等多家上市公司。 出资主体多为…",
+      "pubDate": "2026-09-01T02:03:26+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -51,83 +39,11 @@
       "category": "ai-news"
     },
     {
-      "id": "ae7f02d03a5e",
-      "title": "Haiku R1/beta6 has been released",
-      "link": "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6",
-      "description": "Article URL: https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6 Comments URL: https://news.ycombinator.com/item?id=49499867 Points: 142 # Comments: 37",
-      "pubDate": "2026-08-31T00:01:10+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "7d7d969eaa8d",
-      "title": "Omarchy: Any User Process Can Escalate to Root",
-      "link": "https://0xcc.io/posts/omarchy-root-creds/",
-      "description": "Article URL: https://0xcc.io/posts/omarchy-root-creds/ Comments URL: https://news.ycombinator.com/item?id=49499854 Points: 218 # Comments: 217",
-      "pubDate": "2026-08-30T23:59:49+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "a072b325bc37",
-      "title": "European Commission Revives Push for Encryption Backdoors in ProtectEU Strategy",
-      "link": "https://reclaimthenet.org/eu-protecteu-strategy-encryption-backdoor-law-enforcement",
-      "description": "Article URL: https://reclaimthenet.org/eu-protecteu-strategy-encryption-backdoor-law-enforcement Comments URL: https://news.ycombinator.com/item?id=49499394 Points: 202 # Comments: 75",
-      "pubDate": "2026-08-30T23:12:40+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "8e806d1c9542",
-      "title": "Zig: Pointer Stability for ArrayLists",
-      "link": "https://ziglang.org/devlog/2026/#2026-08-27",
-      "description": "Article URL: https://ziglang.org/devlog/2026/#2026-08-27 Comments URL: https://news.ycombinator.com/item?id=49499095 Points: 42 # Comments: 10",
-      "pubDate": "2026-08-30T22:41:53+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "ba4b8ab5e2ca",
-      "title": "Europe's summer drought is so extreme that desertification is a growing threat",
-      "link": "https://fortune.com/2026/08/29/europe-summer-drought-desertification-threat-rivers-fish/",
-      "description": "Article URL: https://fortune.com/2026/08/29/europe-summer-drought-desertification-threat-rivers-fish/ Comments URL: https://news.ycombinator.com/item?id=49498978 Points: 140 # Comments: 164",
-      "pubDate": "2026-08-30T22:29:25+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "92830e6d697d",
-      "title": "METR and Redwood Offer Holy %^ Postmortem of the HuggingFace Hack",
-      "link": "https://thezvi.wordpress.com/2026/08/29/metr-and-redwood-offer-holy-postmortem-of-the-huggingface-hack/",
-      "description": "Article URL: https://thezvi.wordpress.com/2026/08/29/metr-and-redwood-offer-holy-postmortem-of-the-huggingface-hack/ Comments URL: https://news.ycombinator.com/item?id=49498787 Points: 83 # Comments: 31",
-      "pubDate": "2026-08-30T22:06:54+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "47e2a4f0ebdb",
-      "title": "医保七连降，谁在离开？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzI1ODI4Mjk1MQ==&mid=2247547608&idx=1&sn=dbc46c2f35b0e7727d83aae463471916&chksm=eb01132db9361c298e08ae6a1df761d806bc97db6d1af4a6c6a60f6ed16f1d54525a9a433edd",
-      "description": "本文作者 | 独行侠数据支持 | 勾股大数据（www.gogudata.com）2019至2025年，我国居民医保走出了一条持续下行的罕见曲线，创下行业瞩目的“七连降”纪录。 据国家医保局2026年7月正式发布的《2025年全国医疗保障事业发展统计公报》权威数据，居民医保参保人数从2019年的10.25亿峰值，逐年回落至2025年末的9.42亿，七年累计净减少约8300万人。 这一减量规模，等同于一个亿级人口大省的全部人口，在七年间悄然退出居民医保体系。 但数字只是表象。真正值得追问的是：谁离开了？为什么离开？ 01事实上，这组“七连降”数据，大半数减量…",
-      "pubDate": "2026-08-30T22:02:23+08:00",
+      "id": "cda808b3d63d",
+      "title": "美联储主席沃什“最鹰”讲话，特朗普又“遇人不淑”？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA3ODI5NDg0Mw==&mid=2654259970&idx=1&sn=16091f3907a2217da81b28e1311029a6&chksm=8541d1c07bfd1de6ae1aab94508260cf28d13668725e6caa6da588d5bab87daf0773779bec72",
+      "description": "沃什上台凯文・沃什与特朗普相识，是由他的岳父、特朗普的金主好友、雅诗兰黛继承人罗纳德・劳德引荐的。 2017年，特朗普第一任期遴选美联储主席时两人正式面谈。 同期候选人还有杰罗姆・鲍威尔。最终特朗普选择了鲍威尔。 鲍威尔时任美联储理事，参议院通过阻力小；而且他主张放松金融监管，这很合特朗普的胃口。 然而没想到，鲍威尔2018年2月上任后不顾特朗普强烈反对，一年连续加息四次。 理论上，为了维护央行货币政策的独立性，总统应该避嫌。 不过，特朗普不是那种能够忍住不说的人，他骂鲍威尔是傻瓜、疯子，公开咨询能否解雇他。 2019年，鲍威尔“预防性”降息三次；202…",
+      "pubDate": "2026-09-01T02:03:26+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -135,23 +51,11 @@
       "category": "ai-news"
     },
     {
-      "id": "7473caaaff04",
-      "title": "中选之后，“特朗普交易”要反噬了？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NzAwMzU0MA==&mid=2247646496&idx=3&sn=a93c39d19d04bd536963ab60d0c0c87f&chksm=a7fa197639e21b748f84182f96e838428d15ab68d07c03f15387d5bc79c7e47811de610889af",
-      "description": "过去一年，跟随特朗普政府入股上市公司的投资者赚得盆满钵满。 但随着中期选举临近、民主党有望夺回国会至少一院，这场由政府背书驱动的股价盛宴正面临多重风险—— 诉讼、国会听证、政治反弹，任何一项都可能逆转相关股票的涨势。 8月29日，据彭博社报道，民调显示民主党胜算上升，市场策略师警告，一旦民主党控制参议院或众议院，针对政府持股企业的国会调查将接踵而至，企业品牌与股价均面临冲击。 与此同时，一场股东诉讼正在法院挑战政府入股英特尔的合法性—— 若法院裁定《芯片法案》不赋予商务部以股权换补贴的权力，整个政府持股组合的法律基础将受到动摇。 市场策略师指出，这些股票…",
-      "pubDate": "2026-08-30T22:02:23+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "d671abf37cb5",
-      "title": "Claude Session URL appended to commit messages and PR descriptions by default",
-      "link": "https://github.com/anthropics/claude-code/issues/66504",
-      "description": "Article URL: https://github.com/anthropics/claude-code/issues/66504 Comments URL: https://news.ycombinator.com/item?id=49498201 Points: 135 # Comments: 169",
-      "pubDate": "2026-08-30T20:50:54+08:00",
+      "id": "ae9e0e1252dc",
+      "title": "Kids These Days",
+      "link": "https://smallpotatoes.paulbloom.net/p/kids-these-days",
+      "description": "Article URL: https://smallpotatoes.paulbloom.net/p/kids-these-days Comments URL: https://news.ycombinator.com/item?id=49512618 Points: 39 # Comments: 51",
+      "pubDate": "2026-09-01T01:50:37+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -159,35 +63,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "b2064090abc4",
-      "title": "手机正在「杀死」充电宝，它却还在偷偷涨价",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjgzMTAwODI0MA==&mid=2652463269&idx=1&sn=3e2ed22fd7d91fdc46c6be6da2b442a0&chksm=9a5e286c9a2fb487424dc1913475cd179bd841ae919041bbc77528db40cfe061db294050e8c1",
-      "description": "最近想买一个充电宝，打开购物网站才发现，过去印象里几十元就能解决的东西，如今稍微像样一点，价格就到了两三百元。 第一反应当然是：充电宝怎么变得这么贵了？更反常的是销量。 有数据显示，2026 年 5 月，国内移动电源线上主流市场零售量 312.3 万台，同比下降 10.6%，这已经是 2026 年以来连续第五个月下滑；可同期零售均价涨到了 137.1 元，同比上涨 12%。 卖得越来越少，价格也越来越贵。新国标：更安全，也更贵了2025 年，多家头部品牌因电芯安全风险召回部分移动电源，市场监管总局撤销、暂停了多个充电宝及电芯厂家的 CCC 认证。 民航局…",
-      "pubDate": "2026-08-30T20:02:23+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "649e2fd4d5cf",
-      "title": "“终于有希望提速了！”电动自行车限速拟提至20km/h，九号、雅迪、小牛等回应",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzA4NTc3MDYyOQ==&mid=2651593221&idx=1&sn=b686f35917605b0f734f600d685511a4&chksm=8598ded2a43b2e845996298298e3dbd404bdbd38e4d4f8294563bafcf50124fb7f0bc779342e",
-      "description": "文 |《BUG》栏目陈思竹“终于有希望提速了。”近日，道路交通安全法修订草案提请十四届全国人大常委会初次审议，其中拟将电动自行车在非机动车道内的最高时速，从15公里提升至20公里。 此外，草案中还提及，电动自行车在道路上行驶不得逆向行驶、超速行驶、拨打或接听手持电话等规定。 需要说明的是，此次调整的是道路行驶限速，而非产品设计上限。 根据2025年9月实施的新版国标GB17761-2024，电动自行车最高设计车速仍为25km/h，此次修订并未涉及产品标准的调整。 消息一出，立刻引起无数电动自行车车主的关注。“这条规定肯定是比以前好一些，以前限速15有时候…",
-      "pubDate": "2026-08-30T20:02:23+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "090aa5dbc37b",
-      "title": "monty-go: Pure-Go wrapper for Pydantic's Monty Python Interpreter",
-      "link": "https://github.com/fugue-labs/monty-go",
-      "description": "Article URL: https://github.com/fugue-labs/monty-go Comments URL: https://news.ycombinator.com/item?id=49497928 Points: 38 # Comments: 11",
-      "pubDate": "2026-08-30T20:02:09+08:00",
+      "id": "9cc6e313651b",
+      "title": "'Stunning' percolation proof solves decades-old puzzle about phase transitions",
+      "link": "https://www.quantamagazine.org/stunning-percolation-proof-solves-decades-old-puzzle-about-phase-transitions-20260831/",
+      "description": "Article URL: https://www.quantamagazine.org/stunning-percolation-proof-solves-decades-old-puzzle-about-phase-transitions-20260831/ Comments URL: https://news.ycombinator.com/item?id=49512311 Points: 32 # Comments: 4",
+      "pubDate": "2026-09-01T01:22:43+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -195,11 +75,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "828552fcc014",
-      "title": "Automating Immersive Reading",
-      "link": "https://smoores.dev/post/automating_immersive_reading/",
-      "description": "Article URL: https://smoores.dev/post/automating_immersive_reading/ Comments URL: https://news.ycombinator.com/item?id=49497854 Points: 61 # Comments: 18",
-      "pubDate": "2026-08-30T19:46:23+08:00",
+      "id": "ab7eed5c9a62",
+      "title": "Konrad Zuse Museum shutting down due to lack of funding",
+      "link": "https://www.heise.de/en/news/Zuse-Computer-Museum-ZCOM-in-Hoyerswerda-faces-closure-11344513.html",
+      "description": "https://www.mdr.de/nachrichten/sachsen/bautzen/bautzen-hoyer... (auf Deutsch) Comments URL: https://news.ycombinator.com/item?id=49511917 Points: 130 # Comments: 62",
+      "pubDate": "2026-09-01T00:52:35+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -207,11 +87,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "ae434bff6a52",
-      "title": "An implementation of Conway's Game of Life for Windows 3.1x and later",
-      "link": "https://www.muppetlabs.com/~breadbox/software/windows.html",
-      "description": "Article URL: https://www.muppetlabs.com/~breadbox/software/windows.html Comments URL: https://news.ycombinator.com/item?id=49497819 Points: 43 # Comments: 9",
-      "pubDate": "2026-08-30T19:41:40+08:00",
+      "id": "001d0ddadc40",
+      "title": "I turned my security cameras into an automatic bird identification system",
+      "link": "https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/",
+      "description": "Article URL: https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/ Comments URL: https://news.ycombinator.com/item?id=49511856 Points: 263 # Comments: 73",
+      "pubDate": "2026-09-01T00:47:11+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -219,11 +99,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "354c125af4df",
-      "title": "Hacking IKEA Furniture",
-      "link": "https://greenlightning.eu/diy/hacking-ikea-furniture/",
-      "description": "Article URL: https://greenlightning.eu/diy/hacking-ikea-furniture/ Comments URL: https://news.ycombinator.com/item?id=49497810 Points: 198 # Comments: 111",
-      "pubDate": "2026-08-30T19:39:43+08:00",
+      "id": "30cbe227f51e",
+      "title": "ravynOS: Pre-alpha open-source OS based on Darwin, FreeBSD, Apple open-source",
+      "link": "https://ravynos.com/",
+      "description": "Article URL: https://ravynos.com/ Comments URL: https://news.ycombinator.com/item?id=49511534 Points: 119 # Comments: 80",
+      "pubDate": "2026-09-01T00:19:36+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -231,11 +111,23 @@
       "category": "ai-agent"
     },
     {
-      "id": "4c3af37af92f",
-      "title": "李东生又要IPO敲钟了",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzI5ODk1NjY1MA==&mid=2247737535&idx=1&sn=db6aa8affab371171b65a5ddfe974527&chksm=edb24f66d50d74edcd6d28a97f50481c65a5ca582d61464fdcce0a3cda6882760b5d5621484f",
-      "description": "华南理工系。作者/余梦莹报道/投资界PEdaily李东生又一个IPO来了。 投资界获悉，TCL电子公告称，拟分拆光伏业务独立上市。 这也意味着继硅材料企业TCL中环后，李东生将再添一个光伏IPO。 李东生，大名鼎鼎的“华工三剑客”之一。从华南理工大学毕业后不愿从政，偏爱经商，他从电话机起家，后来凭借电视机称霸江湖。 数十年岁月打下大片江山，至今李东生手握多家上市公司。 无独有偶，跟他同级的校友陈伟荣，也正在带着微容电子奔赴创业板IPO。 被称为“大湾区斯坦福”，华南理工走出一个硬核创业天团。 华工校友缔造一个家电帝国1957年，李东生出生在广东惠州，是高…",
-      "pubDate": "2026-08-30T18:02:22+08:00",
+      "id": "cb262358597d",
+      "title": "Show HN: Corporate Mind Games – logic puzzles with a sarcastic corporate theme",
+      "link": "https://corporatemindgames.com/",
+      "description": "I have always enjoyed building and playing puzzles. I am a regular user of NYT Games and LinkedIn Games. I thought it would be fun to create some corporate-themed puzzles as a silly alternative to LinkedIn Games.So, I built Corporate Mind Games. The games are intended to be a lit…",
+      "pubDate": "2026-09-01T00:08:08+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "5ef869e4133d",
+      "title": "假装点外卖？“自欺欺人式”消费竟爆红",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTYwOTM0Nw==&mid=2650564262&idx=1&sn=843060cc123962e26212c9fd8d7c8d6e&chksm=be04281e883e2928775aad55d7437110a834cd6766e461459a053b2c6d4ce4224e93fee11f56",
+      "description": "酷玩实验室原创作品 01：多巴胺时代假如最近朋友给你展示他豪华的外卖点单页面，先别急着叫义父请客，因为这可能是假外卖。 是的，眼熟的界面，熟悉的餐食，可这外卖永远都不会送上门，因为从平台到下单，所有的一切，都是假的。 那图啥呢？心里爽呗。“马斯克来了都不敢这么点”每到馋嘴想点外卖的时候，有人心疼钱，有人担心长胖，还有人每次下单完后就兴致全无，开门拿了外卖又后悔下了单......现在有了能自己给自己画饼的虚拟下单平台，终于能骗过大脑，重拾对身体的控制权。 这还并非孤立，一大堆的“假装点外卖”平台正悄然流行起来。 什么“假装点外卖”、“今晚先不点”、“外卖不…",
+      "pubDate": "2026-09-01T00:02:28+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -243,11 +135,11 @@
       "category": "ai-news"
     },
     {
-      "id": "60f356109a26",
-      "title": "“新官不理旧账”，被三甲医院拖住的社会资本",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTExMjYwMA==&mid=2670394037&idx=1&sn=15b997181d88003276a7bd05036a2d18&chksm=bd0cc3d3b10cc91465a49f02bb2a8d4fe649a5c6f9ddfae6fc056610302237c88adee6723973",
-      "description": "PPP模式极易受政策变化影响。不同部门政策思路的调整，曾让PPP行业方向出现多次摇摆；而落到地方实践层面，政府负责人更替也会带来一些冲击，“新官不理旧账”成为不少存量PPP项目出现欠款的诱因。 作者：杜涛封图：图虫创意编者按：PPP（政府与社会资本合作）本是一场政府与社会资本长达十几年甚至二十年的长期合作：社会资本出钱、出力、供服务，政府按绩效付费。 自2014年大规模推开，这一模式十年间拉动逾十万亿元投资，一定程度上改善了公共服务、拉动了有效投资。 如今项目陆续建成、进入运维回款期，社会资本等来的却不是按约付费，而是不断累积的欠账。 地方政府为降低付费…",
-      "pubDate": "2026-08-30T18:02:22+08:00",
+      "id": "0735cba25002",
+      "title": "比亚迪滴滴合资公司被转卖，信濠光电9.5亿接手",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTExMjYwMA==&mid=2670394151&idx=2&sn=62b331e6df28b3c0c8853964a4f4801e&chksm=bd5b5a0b93d4f06cee8d31c826debb9c4c589c1d8475e0e01f5af6075e207bf7e7054c8b6afe",
+      "description": "通过收购亚滴，信濠光电可与比亚迪建立更深的战略绑定，进而换取车载玻璃等领域更多的订单。 作者：周信封图：图虫创意8月21日，信濠光电（301051.SZ）发布公告，拟以不超过9.5亿元收购惠迪（天津）商务服务有限公司、比亚迪汽车工业有限公司合计持有的深圳市迪滴新能源汽车科技有限公司100%股权。 迪滴新能源由滴滴与比亚迪于2015年联合设立，注册资本14亿元，是双方在新能源合规出行运力领域的核心运营平台。 成立之初，比亚迪汽车工业持股60%，滴滴商业服务持股40%。 2018年迪滴新能源品牌升级后对外称“亚滴新能源”（下称“亚滴”）。 公告落地后的第一个…",
+      "pubDate": "2026-09-01T00:02:28+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -255,11 +147,11 @@
       "category": "ai-news"
     },
     {
-      "id": "7fe96f725c61",
-      "title": "自动驾驶入法后，罚单还得车主交?",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzkzNjk3NTQ0OQ==&mid=2247517789&idx=1&sn=a463b9f0a0a36eaea273c743c63959a1&chksm=c34d09a0947a49cbc1e00f1a59bd3858d077f7bd5e6e910bc75eb53c42063d50e54f0b9a1662",
-      "description": "是新朋友吗？记得先点蓝字“锌刻度”关注我哦～每日一篇科技财经深度调查走进商业背后的故事图片由AI生成“激活状态”或是未来官司的焦点撰文/ 孟会缘编辑/ 黎文婕排版/ Annalee“开着智驾出了事，到底谁担责？现在终于有答案了。自动驾驶首次入法：L3以上出事车企担责，L2仍是司机的锅，‘零接管’广告以后就是法庭证据。” 正如这句网友评论，对于智能驾驶出事之后的责任划分，法律终于给出了一个锚点。 8月25日，道路交通安全法修订草案提请十四届全国人大常委会第二十四次会议初次审议，首次增设“自动驾驶汽车的特别规定”专章。 其中最受关注的规定是：自动驾驶汽车在自…",
-      "pubDate": "2026-08-30T18:02:22+08:00",
+      "id": "34d69021c243",
+      "title": "AI情感陪伴需要怎样的监管",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTExMjYwMA==&mid=2670394151&idx=3&sn=e932a31126c32a646ebb1ca57d8348c6&chksm=bddea8d3abe4bc7c99648cf43aa5a94959db7f53ec39a50a08043d36f42cce66f5333cc19f0c",
+      "description": "OpenAI前沿大模型在内部测试中失控并自主入侵外部系统的事件就在警示我们：底层AI技术的越界与不可控风险已成现实。 当这类强大算法被用于深度介入人类情感时，商业诉求与技术设定的叠加，将不可避免地衍生出一系列复杂的伦理与合规难题。 作者：刘诚封图：图虫创意近期施行的《人工智能拟人化互动服务管理暂行办法》，作为中国首部针对AI情感陪伴及拟人化互动场景的国家级监管规则，确立了明确的产业合规标尺。 与此同时，字节豆包、阿里千问、网易妙时及腾讯元宝等相继下线智能体功能，预示该领域正由前期的自由探索转向规范发展轨道。 社会价值与现实现代社会结构的变迁在客观上重塑了…",
+      "pubDate": "2026-09-01T00:02:28+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -267,11 +159,11 @@
       "category": "ai-news"
     },
     {
-      "id": "e7ec9987f665",
-      "title": "特步跑步俱乐部收缩，释放了什么信号？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTExMjYwMA==&mid=2670394037&idx=3&sn=43c64d6727dbcd8d604b257ef278ea64&chksm=bd47f3e7c95582592878a3fee56ec4c23225d2685cd885844085cf4802a4c4e2e360816596d3",
-      "description": "跑步俱乐部数量的减少，意味着特步“装备+社交+服务”的生态闭环出现了松动的迹象。 作者：叶心冉封图：特步公众号特步国际控股有限公司（01368.HK，下称“特步集团”）于8月25日发布的2026年半年报中，罕见地未披露特步跑步俱乐部的情况。 跑步俱乐部这一店型是特步跑步生态中极为重要的角色之一，它不仅是一个销售阵地，也是特步跑步社群的线下触点，提供存包、淋浴、活动等多种服务。 2025年年底，特步的“特跑族”社群已经吸纳了超过250万位跑者，特步跑步俱乐部便是面向特跑族会员的关键场域。 跑步俱乐部也一直是特步集团财报中的常客。过去5年，特步集团在每一期的…",
-      "pubDate": "2026-08-30T18:02:22+08:00",
+      "id": "34cf69201461",
+      "title": "商场负一楼的“小山姆”，留不住00后年轻人",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NTQ4NzMzNQ==&mid=2247507831&idx=1&sn=2a10103b04419b756cd788c121cd116e&chksm=a7556e527ae6abb42f4dd3e08932d7357e4b7609216345f47fbdac66d1b61e3c9c6b48d4a9e6",
+      "description": "文 | 陈梓洁编辑 | 曹宾玲 付晓玲数据支持 | 洞见数据研究院400万、500万、620万…… 新鲜零食店不断刷新的首月销售额，令人咋舌。一个月能卖出零食很忙们一年的销售额，郑州金融岛的清山森、合肥万象汇的几多全、北京合生汇的一栗等“现象级门店”，捅破坪效天花板；金粒门深圳店，挤到连收银系统都崩溃。 这些“零食界小山姆”，还以一座城市“五店齐开”的速度跑马圈地。 仅7月份，就有94家新鲜零食店落地，环比大增35%①，且各品牌年内开店计划，少则十几家，多则数百家。 不过，在“开店即爆”的热闹里，微妙的信号也已浮现。 一向保持克制、先试点再扩张的绝味新鲜…",
+      "pubDate": "2026-09-01T00:02:28+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -279,11 +171,11 @@
       "category": "ai-news"
     },
     {
-      "id": "316af8dbf16b",
-      "title": "利润归零，股价腰斩！硬科技龙头崩了？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzAwNjExNDkyOA==&mid=2649876664&idx=1&sn=8f59e73cef09091eb0b2ded92da910a5&chksm=829c26fb636c1f948956d22686e101dcddd0372fd4f8307de4d1d246b8b60a1fbb5b10062f92",
-      "description": "本文作者 | 远禾数据支持 | 勾股大数据（www.gogudata.com）曾经风光大好的“智能影像第一股”，如今已经跌跌不休。 8月27日，影石创新交出了一份让市场哗然的半年报。 次日开盘，影石创新股价低开近4%，收跌1.17%，报119.30元/股。 从去年9月377.04元的历史高点算起，影石股价已跌去近七成，市值蒸发近千亿元。 如今回头看，那个高点几乎成了影石在二级市场上最后的高光。 投资者的愤怒也已溢于言表。6月，有股东在互动平台上质问：“据统计，从去年九月到现在，影石创新股价跌幅居于沪深两市5000多只非ST股票跌幅榜的第五名，跌幅近60%…",
-      "pubDate": "2026-08-30T18:02:22+08:00",
+      "id": "26742fdfe133",
+      "title": "北方“强援”就位，中部省会要圆梦了？",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg2MjA5Mjc0OA==&mid=2247582389&idx=1&sn=2a5e10cd8ee769ecb4cf12af64514cbd&chksm=cf90bf87b57c11e416b60fefb3015b069b8d9e3bd79f34ecf2d87ec37585cac5a5263f83d1ea",
+      "description": "竞逐“氢都”郑州，迎来了与国家级城市群并肩的机会。不久前，工信部等三部门联合批准同意5个城市群开展为期4年的氢能综合应用试点工作。 在京津冀、大湾区、东北（含蒙东）—长三角、新疆—成渝地区双城经济圈等本就国家级含量极高的城市群之外，以郑州、鄂尔多斯双核引领的黄河几字弯—中原城市群的入围显得颇为特别。 相比其他入围者，该试点横跨河南、内蒙古、宁夏、陕西、山西、湖北6个省份，涉及省份数量最多；作为“领头羊”的两座城市，鄂尔多斯制氢能力突出，所在的内蒙古绿氢制氢量更是居于“塔尖”；反观郑州，与其他试点的代表城市相比，氢能“标签”似乎尚不够“出圈”。 但对于冲刺…",
+      "pubDate": "2026-09-01T00:02:28+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -291,11 +183,23 @@
       "category": "ai-news"
     },
     {
-      "id": "94c469e9166a",
-      "title": "Building my own network stack",
-      "link": "https://blog.lyc8503.net/en/post/dn42-2-dnet/",
-      "description": "Article URL: https://blog.lyc8503.net/en/post/dn42-2-dnet/ Comments URL: https://news.ycombinator.com/item?id=49497200 Points: 81 # Comments: 64",
-      "pubDate": "2026-08-30T17:52:15+08:00",
+      "id": "50cb86760e08",
+      "title": "125亿的暑期档：好钢用在了刀刃上",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg2MjYxNTUyMQ==&mid=2247621970&idx=1&sn=e3f13bb7ac334f406f75ece01d8c2349&chksm=cfa02c3e2d5a484b5e3be7d3cdcc73b935e0a030d8c5b49940be72d5ecaac25a2fbee8396a91",
+      "description": "125亿一半是观众的热情，一半是供给的“提前兑付”。文丨小鹿编辑｜刘南豆2026年暑期档正式收官，总票房接近125亿元，超过2025年同期的119.66亿元，连续两年实现票房正向增长。 观影人次约3.4亿，同比增长约5.3%。放映场次3850.5万场，多项数据刷新档期纪录。 在12亿元惠民观影补贴的撬动下，平均票价降至36.8元、为近五年最低，“以价换量”的效果明显。 单看数据，今年暑期对电影来说还是一个热辣滚烫的夏天。 （图源：猫眼专业版）如果把目光从大盘移到供给端，另一个故事也展开了。 首先，进口片在今年暑期档的存在感有所回升，《蜘蛛侠：崭新之日》以…",
+      "pubDate": "2026-09-01T00:02:28+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "dc4741c62467",
+      "title": "Launch HN: Almanac (YC S26) – AI that knows your company",
+      "link": "https://usealmanac.com/",
+      "description": "Hi HN, I'm Kushagra, one of three founders of Almanac, a Hermes with a brain that knows everything about your company.We started our journey with setting up Hermes for our company, thinking it must be easy. We wanted an agent that would know every context about our company, so we…",
+      "pubDate": "2026-08-31T23:34:34+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -303,11 +207,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "d9340aeff2f2",
-      "title": "Arbitrary code execution in QubesOS via copy-to-VM error reporting backchannel",
-      "link": "https://www.qubes-os.org/news/2026/08/29/qsb-118/",
-      "description": "Article URL: https://www.qubes-os.org/news/2026/08/29/qsb-118/ Comments URL: https://news.ycombinator.com/item?id=49496918 Points: 171 # Comments: 71",
-      "pubDate": "2026-08-30T16:51:39+08:00",
+      "id": "c5d31b731e2b",
+      "title": "Launch HN: Hebbian Robotics (YC S26) – Build scalable robotics data pipelines",
+      "link": "https://github.com/Hebbian-Robotics/hflow",
+      "description": "Hi HN, we’re Brandon and Kingston, the founders of Hebbian Robotics. We built HFlow (https://github.com/Hebbian-Robotics/hflow), an SDK that turns multimodal recordings from robots and human operators into standardized, quality-checked episodes and queryable dataset manifests. A…",
+      "pubDate": "2026-08-31T23:02:41+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -315,11 +219,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "6d2ece70c0a3",
-      "title": "Longest Straight Line Paths on Water or Land on the Earth (2018)",
-      "link": "https://arxiv.org/abs/1804.07389",
-      "description": "Article URL: https://arxiv.org/abs/1804.07389 Comments URL: https://news.ycombinator.com/item?id=49496782 Points: 174 # Comments: 50",
-      "pubDate": "2026-08-30T16:23:26+08:00",
+      "id": "63994c0b6655",
+      "title": "Playa Phone",
+      "link": "https://playaphone.com/",
+      "description": "Article URL: https://playaphone.com/ Comments URL: https://news.ycombinator.com/item?id=49510514 Points: 395 # Comments: 156",
+      "pubDate": "2026-08-31T22:52:26+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -327,11 +231,143 @@
       "category": "ai-agent"
     },
     {
-      "id": "05502ae5938a",
-      "title": "Bug Blindness",
-      "link": "https://danluu.com/bug-blind/",
-      "description": "Article URL: https://danluu.com/bug-blind/ Comments URL: https://news.ycombinator.com/item?id=49494520 Points: 367 # Comments: 236",
-      "pubDate": "2026-08-30T08:21:40+08:00",
+      "id": "43b7b7ff4080",
+      "title": "C++26: Standard Library Hardening Experiments",
+      "link": "https://www.cppstories.com/2026/hardening-experiments/",
+      "description": "Article URL: https://www.cppstories.com/2026/hardening-experiments/ Comments URL: https://news.ycombinator.com/item?id=49510511 Points: 74 # Comments: 39",
+      "pubDate": "2026-08-31T22:52:24+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "b6eec732c56c",
+      "title": "The Snow/Leavis ‘two cultures’ clash",
+      "link": "https://aeon.co/essays/at-the-heart-of-the-snow-leavis-two-cultures-clash",
+      "description": "Article URL: https://aeon.co/essays/at-the-heart-of-the-snow-leavis-two-cultures-clash Comments URL: https://news.ycombinator.com/item?id=49510489 Points: 59 # Comments: 32",
+      "pubDate": "2026-08-31T22:50:24+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "a3f40d92ed89",
+      "title": "ChatGPT Work Tool and Skill Reference",
+      "link": "https://codex-tool-reference.simonw.chatgpt.site/",
+      "description": "Article URL: https://codex-tool-reference.simonw.chatgpt.site/ Comments URL: https://news.ycombinator.com/item?id=49510000 Points: 150 # Comments: 46",
+      "pubDate": "2026-08-31T22:07:15+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "d804be67241e",
+      "title": "下一个“缅北”？电诈团伙正在非洲复刻诈骗工厂",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5MjEyODE4MA==&mid=2653350363&idx=3&sn=f18e42dd293871e868bc2a14c05694ec&chksm=bc8b163197170526ccb02c4e26e1ea510a3163b8cdc278739ff12fa14638a378f68c78a39082",
+      "description": "电诈的风，吹到了非洲。日前，外交部和中国驻南非使领馆提醒中国公民近期暂勿前往斯威士兰，已在当地中国公民和机构请尽快撤离或转移至南非等相对安全区域，密切关注局势发展，加强安全防范和应急准备。 8月26日，中国外交部发言人林剑在例行记者会上再次提及斯威士兰。 他表示，“关于这次的安全提醒，我想强调的是，鉴于当前斯威士兰的社会治安等风险极高，电诈网赌活动猖獗，中国政府为确保本国公民的安全，稳慎评估后发布了安全提醒。” 这并不是外交部第一次发出类似的提醒。早在今年3月22日，中国驻南非大使馆就通报，多名中国公民因涉嫌从事电诈、网络赌博等违法犯罪活动被南非、斯威士…",
+      "pubDate": "2026-08-31T22:02:29+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "b396c1d89ab7",
+      "title": "从“大连没有湖南台”到甘肃卫视四省退网，落地费博弈20年浮沉",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzYzNDUxMDQwNw==&mid=2247677578&idx=1&sn=f4430d7eda7153bdd98d3045011b0f16&chksm=f155b5feb23a5a367d275b5ae50531bead9511875281caa1cfaabe672eadcd604e54f7aee1e3",
+      "description": "作者｜James6月底，家住广州的王先生想关注老家甘肃的“中华人文始祖伏羲大典”，却发现，他可以在各种视频号等甘肃融媒体观看，却死活在电视上搜不到甘肃卫视。 原来，像这样搜不到甘肃卫视的情况不仅仅发生在广东省。 在甘肃省广播电视局的政务公开页面，有人在5月19日提了这样一个问题：最近一段时间，一些省份（黑龙江，江苏，广东，广西）的有线网络的甘肃卫视信号突然停播下线了……这个是什么原因？ 三天后，甘肃台总编室给出回复：近年来，甘肃卫视省外落地覆盖财政扶持资金大幅缩减，叠加频道自身经营承压，难以承担较高的省外覆盖传输费用。 经综合研判，目前已暂停与黑龙江、江…",
+      "pubDate": "2026-08-31T22:02:29+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "252ce094ce45",
+      "title": "Apple caught off guard by AI demand for Mac Mini and Mac Studio",
+      "link": "https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/",
+      "description": "Article URL: https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/ Comments URL: https://news.ycombinator.com/item?id=49508982 Points: 212 # Comments: 231",
+      "pubDate": "2026-08-31T20:41:22+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "c1b0b4a70d7f",
+      "title": "I think the military commissary's freezers were hacked",
+      "link": "https://signalandsilence.substack.com/p/i-think-someone-hacked-the-commissary",
+      "description": "Article URL: https://signalandsilence.substack.com/p/i-think-someone-hacked-the-commissary Comments URL: https://news.ycombinator.com/item?id=49508506 Points: 171 # Comments: 102",
+      "pubDate": "2026-08-31T19:45:48+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "0093bb3cdd1d",
+      "title": "OpenShot 4.0 – Open-source video editor",
+      "link": "https://www.openshot.org/blog/2026/08/30/openshot-40-record-edit-color-like-never-before/",
+      "description": "Article URL: https://www.openshot.org/blog/2026/08/30/openshot-40-record-edit-color-like-never-before/ Comments URL: https://news.ycombinator.com/item?id=49507822 Points: 490 # Comments: 110",
+      "pubDate": "2026-08-31T17:59:05+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "ec3f36b4902a",
+      "title": "Breaking Claude Code Opus 5 Auto Mode",
+      "link": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/",
+      "description": "Article URL: https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/ Comments URL: https://news.ycombinator.com/item?id=49506819 Points: 315 # Comments: 105",
+      "pubDate": "2026-08-31T15:49:18+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "f8abdfcd34dc",
+      "title": "Internet centralization and the original sin of NAT",
+      "link": "https://dreamstation.systems/personal/ntppost.html",
+      "description": "Article URL: https://dreamstation.systems/personal/ntppost.html Comments URL: https://news.ycombinator.com/item?id=49504905 Points: 134 # Comments: 96",
+      "pubDate": "2026-08-31T10:23:03+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "ac6e7e3c37d7",
+      "title": "Understanding ChatGPT Work",
+      "link": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
+      "description": "OpenAI announced ChatGPT Work on July 9th, and have been furiously iterating on it ever since. It is an extraordinarily confusing and very powerful product. Here's what I've figured out about it so far. ChatGPT Work is actually two products The more interesting version of ChatGPT…",
+      "pubDate": "2026-08-31T07:59:47+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "285f12babd44",
+      "title": "Accidental Aesthetics and Romance of Power Wires",
+      "link": "https://www.governance.fyi/p/accidental-aesthetics-and-romance",
+      "description": "Article URL: https://www.governance.fyi/p/accidental-aesthetics-and-romance Comments URL: https://news.ycombinator.com/item?id=49503672 Points: 28 # Comments: 12",
+      "pubDate": "2026-08-31T07:00:15+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -347,30 +383,6 @@
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "7ccb97bb9a47",
-      "title": "Hy4 preview",
-      "link": "https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/",
-      "description": "Article URL: https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/ Comments URL: https://news.ycombinator.com/item?id=49492632 Points: 366 # Comments: 233",
-      "pubDate": "2026-08-30T03:33:23+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "50a1b279676e",
-      "title": "Creepy Crawlies",
-      "link": "https://people.kernel.org/monsieuricon/creepy-crawlies",
-      "description": "Article URL: https://people.kernel.org/monsieuricon/creepy-crawlies Comments URL: https://news.ycombinator.com/item?id=49491791 Points: 460 # Comments: 216",
-      "pubDate": "2026-08-30T01:49:01+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
       },
       "category": "ai-agent"
     },
@@ -704,18 +716,6 @@
       "link": "https://simonwillison.net/2026/Aug/15/cors-chat/",
       "description": "Tool: CORS Chat I built this today (with GPT-5.6-Sol xhigh) to help test Qwen 3.8 27B running in LM Studio on both my M5 MacBook Pro and an NVIDIA DGX Spark. It provides a web UI for exercising an OpenAI-Responses-compatible chat endpoint. I've tried it against LM Studio with the…",
       "pubDate": "2026-08-15T22:49:54+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "ee5307265f0f",
-      "title": "Northern Gannet",
-      "link": "https://simonwillison.net/2026/Aug/15/sighting-391300422/",
-      "description": "Northern Gannet, in Pillar Point Harbor, CA, USThis is Morris. Morris is a local celebrity: the only known Northern Gannet (Morus bassanus) in the entire Pacific Ocean. They showed up in the Farallon Islands off the coast of San Francisco 14 years ago. They have since made Pillar…",
-      "pubDate": "2026-08-15T11:22:00+08:00",
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
