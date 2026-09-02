@@ -1,7 +1,415 @@
 {
-  "generated": "2026-09-02T03:14:44.716950+08:00",
+  "generated": "2026-09-03T03:15:15.982957+08:00",
   "total": 60,
   "items": [
+    {
+      "id": "241313bbf365",
+      "title": "Firefox's AI Switch Is Off. Telemetry Isn't",
+      "link": "https://marius.blog/firefox-155-ai-kill-switch-retest/",
+      "description": "Article URL: https://marius.blog/firefox-155-ai-kill-switch-retest/ Comments URL: https://news.ycombinator.com/item?id=49540397 Points: 14 # Comments: 1",
+      "pubDate": "2026-09-03T02:30:49+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "436a4cf2c3e8",
+      "title": "Why do so many tools have JSON config files?",
+      "link": "https://textlog.cc/post/895",
+      "description": "Article URL: https://textlog.cc/post/895 Comments URL: https://news.ycombinator.com/item?id=49540297 Points: 9 # Comments: 15",
+      "pubDate": "2026-09-03T02:23:01+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "b67a144e8413",
+      "title": "从创业国度到战争国度——以色列的战争经济学",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA3ODI5NDg0Mw==&mid=2654260056&idx=1&sn=76413ca07336055657ae1c56afa87f08&chksm=850c079a78e47935e19924e1614a072e8c3a6bb0d0e58390fa1734411045360a1620a99004f6",
+      "description": "从2023年10月开始，以色列已经在战争状态中度过了接近三年。 加沙、黎巴嫩、红海、伊朗，战线一轮轮扩大，军费、预备役、重建、疏散和债务融资也随之堆高。 按照以色列银行2026年的估算，2023～2026年的战争财政成本约为3500亿谢克尔，而且这一数字还没有完全计入2026年2月底以后新增的对伊军事开支。 2025年底，以色列公共债务占GDP的比重已经升至68.5%，明显高于战前约60%的水平。 如果只看这些数字，这是一场越来越昂贵的战争。但另一组数字放在一起，画面就变得很不一样。 2025年，以色列高科技企业私募融资达到156亿美元，较2024年的1…",
+      "pubDate": "2026-09-03T02:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "05a8ad59883e",
+      "title": "Kimi 启动 IPO，赶在市场不再按梦想定价之前",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzkyMTczNjE3Nw==&mid=2247492963&idx=1&sn=b73dc66820843cc88f4c5c3ffa538ac1&chksm=c0f102f636fbd337446d0c6765cb19153efa7ce44d8bb8d5ad7cfb1df0f3fb81429e71c35138",
+      "description": "文 | Sleepy据晚点报道，月之暗面已经以保密形式向港交所递交 A1 文件，正式启动港股 IPO 流程。 A1 是企业申请在港交所上市时提交的正式申请表之一。 几乎同一时间，它还在以 500 亿美元投前估值推进新一轮融资。 这很可能是 Kimi 上市前的最后一轮私募。这两个动作放在一起看，事情就不只是「又一家大模型公司要上市了」这么简单了。 2026 年很可能是独立大模型公司最后一个还能按科技梦想定价的上市窗口。 让我们回顾一下这一年发生了什么。1 月 8 日，智谱在港交所挂牌。 第二天，MiniMax 上市。6 月 1 日，Anthropic 秘密…",
+      "pubDate": "2026-09-03T02:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "9c3cdcf1dd12",
+      "title": "我想知道：安检设备不报警，旅客还要不要人工再检？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA3ODI5NDg0Mw==&mid=2654260056&idx=2&sn=a38720cc0831c80e7bedd245fdf8a39d&chksm=85c6e09a5881c02a93a2f9aa06ecdc03648053672bf256a25d77c44d8e4fc738b39b60a763a5",
+      "description": "我经常出差，坐飞机，安检。过去一直以为，通过人身安检设备进行检查而没有报警，就可以直接走了，无须人工再检。 多数时候安检设备都会响，基本都是皮带引致，这时人工检查员就用手工再检。 有时我通过了安检设备，没有报警，也会有人工来查。但这种情况极少，无论国内还是国外。 8月26日，我从华东某市机场出发，该市GDP在省里排第二，去年为5000多亿元。 我穿着T恤和没有皮带的运动长裤、运动鞋，安检设备没有报警声，但人身检查员让我过去，检得特别仔细。 我说：不报警还需要检查吗？她回答：100%要检。检完，我随口问了下千问，“在飞机场过安检的时候，如果身上一点点都没有…",
+      "pubDate": "2026-09-03T02:02:23+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "f25cc793f033",
+      "title": "I Don't Have a Smartphone",
+      "link": "https://ploum.net/2026-09-02-i_dont_have_a_smartphone.html",
+      "description": "Article URL: https://ploum.net/2026-09-02-i_dont_have_a_smartphone.html Comments URL: https://news.ycombinator.com/item?id=49539872 Points: 91 # Comments: 70",
+      "pubDate": "2026-09-03T01:51:29+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "6a1d0209dc69",
+      "title": "Paint.net 5.2 alpha now runs on Linux",
+      "link": "https://forums.paint.net/topic/134562-paintnet-52-alpha-build-9739/",
+      "description": "Article URL: https://forums.paint.net/topic/134562-paintnet-52-alpha-build-9739/ Comments URL: https://news.ycombinator.com/item?id=49539389 Points: 84 # Comments: 54",
+      "pubDate": "2026-09-03T01:18:39+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "2e72d015a9b0",
+      "title": "How Railroad Crossings Work",
+      "link": "https://practical.engineering/blog/2023/12/29/how-railroad-crossings-work",
+      "description": "Article URL: https://practical.engineering/blog/2023/12/29/how-railroad-crossings-work Comments URL: https://news.ycombinator.com/item?id=49539064 Points: 19 # Comments: 12",
+      "pubDate": "2026-09-03T00:52:20+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "d43ffc573a1d",
+      "title": "Tangle – Visual ML Pipeline Editor",
+      "link": "https://tangleml.com/",
+      "description": "Article URL: https://tangleml.com/ Comments URL: https://news.ycombinator.com/item?id=49539024 Points: 16 # Comments: 1",
+      "pubDate": "2026-09-03T00:49:29+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "18c439efc6c9",
+      "title": "llm-gemini 0.34",
+      "link": "https://simonwillison.net/2026/Sep/2/llm-gemini/",
+      "description": "Release: llm-gemini 0.34 New model gemini-3.8-flash for Gemini 3.8 Flash, with low, medium and high thinking levels. #146 Fixed async responses failing to record the resolved model version. Thanks, Charlie Tonneslan. #137 Tags: llm, gemini",
+      "pubDate": "2026-09-03T00:39:38+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "786d1856c819",
+      "title": "How to debloat your Xiaomi 15 Ultra without root access",
+      "link": "https://trackerninja.codeberg.page/post/how-to-debloat-your-xiaomi-15-ultra-without-rooting-and-connecting-it-to-the-computer/",
+      "description": "Article URL: https://trackerninja.codeberg.page/post/how-to-debloat-your-xiaomi-15-ultra-without-rooting-and-connecting-it-to-the-computer/ Comments URL: https://news.ycombinator.com/item?id=49538745 Points: 21 # Comments: 11",
+      "pubDate": "2026-09-03T00:33:07+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "39b91b2ba512",
+      "title": "The race to engineer new knobs for the human brain",
+      "link": "https://www.neuroai.science/p/the-race-to-engineer-new-knobs-for",
+      "description": "Article URL: https://www.neuroai.science/p/the-race-to-engineer-new-knobs-for Comments URL: https://news.ycombinator.com/item?id=49538633 Points: 20 # Comments: 2",
+      "pubDate": "2026-09-03T00:25:28+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "9022ddd44d0c",
+      "title": "Show HN: FrontierHarness Eval – 9 harness, same model, cost per pass varies 17x",
+      "link": "https://frontierharness.org",
+      "description": "Article URL: https://frontierharness.org Comments URL: https://news.ycombinator.com/item?id=49538490 Points: 44 # Comments: 21",
+      "pubDate": "2026-09-03T00:14:52+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "b4b7ddc11bd4",
+      "title": "多家上市银行未披露科技金融贷款规模",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NTE0ODc2Nw==&mid=2650976728&idx=1&sn=cc7bb688702202f36860fbbfe9dbfa7e&chksm=bc6ac6e2c6e9c0f3e435b0dca77bcc5f9159bd5ef46a508c8fb034233db33bbdd29ae9e4012f",
+      "description": "图片来源：界面图库界面新闻记者 |安震银行似乎不再热衷于披露科技金融数据。 据界面新闻梳理42家A股上市银行2026年半年报发现，多家国有大行和全国性股份行未披露科技金融贷款规模数据，而去年同期，多数银行都披露了这一数据。 据业内人士对界面新闻记者透露，这与部分银行科技金融专属产品和服务未能精准对接企业急难愁盼的融资需求，存在“叫好不叫座”现象有一定关系，监管对该项数据的披露也有了更为审慎的考量。 业内人士分析称，如何让资金真正流向科技创新、让专属产品真正发挥作用，也成为银行下一阶段需要解决的问题。 多家银行未披露科技贷款规模从国有银行情况来看，工商银行…",
+      "pubDate": "2026-09-03T00:02:31+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "9f8b82684795",
+      "title": "冲击“工业三万亿俱乐部”，又一座地级市来了",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg2MjA5Mjc0OA==&mid=2247582449&idx=1&sn=e3f6b3d5250ceb9e570000ff14a0d3d1&chksm=cfcebadba85ded3228ff2e6f88de73fc9531d67453928016cc52d2ebd134ab3b7bac66e4f28d",
+      "description": "对手凶猛，谁先过线？又一座城市明确了冲击“工业三万亿俱乐部”的时间表。 据当地媒体报道，东莞“十五五”规划纲要正式公布，其中明确：到2030年，力争地区生产总值突破1.7万亿元；全市规模以上工业总产值超3万亿元。 “工业3万亿”是什么概念？作为衡量头部城市制造业发展水平的重要指标，这一体量超过全国约一半的省份，含金量不言而喻。 梳理公开报道，这不是东莞第一次喊出“3万亿”目标。 早在2024年初，兄弟城市佛山曾官宣成为全国第二个、广东首个“工业3万亿”地级市，同期东莞2024年市政府一号文明确提出：力争到2027年底，规上工业总产值超过3万亿元。 对比两…",
+      "pubDate": "2026-09-03T00:02:31+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "b50743ec831b",
+      "title": "「新势力」除了造车，还在干啥？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI3OTEwMDQwNw==&mid=2649970003&idx=1&sn=723a1c2c7f2de2357ee79091efb0a2c3&chksm=f22567963704c5d474ad389ddb7bdb7a60ad0301c91d97a243c4ddd320b47e8a884410b20c4e",
+      "description": "「核心提示」都在找“第二曲线”，但造车的主业还得做扎实。作者 | 陈法善编辑 | 刘杨零跑10.3万辆、小鹏3.9万辆、蔚来3.6万辆、理想3.8万辆。 这是8月四家造车“新势力”的销量数据，前三家销量与7月基本持平，理想因7月基数较低，8月多卖了约7200辆。 当造车“新势力”的位次逐渐稳定，能让资本市场兴奋的，已经不是每月销量，而是在卖车之外，车企还能做什么。 近日，这四家车企相继发布半年报，折射出各自不同的野心和焦虑。 小鹏和零跑同一天交卷，在财报会上，分析师对小鹏追问最多的是机器人；而零跑管理层，则用不少篇幅去介绍出海节奏和Stellantis协…",
+      "pubDate": "2026-09-03T00:02:30+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "333999792e78",
+      "title": "SteamdDB Joins Nexus Mods",
+      "link": "https://www.nexusmods.com/news/15597",
+      "description": "Article URL: https://www.nexusmods.com/news/15597 Comments URL: https://news.ycombinator.com/item?id=49537738 Points: 56 # Comments: 24",
+      "pubDate": "2026-09-02T23:25:55+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "1e5b8618d900",
+      "title": "Gemini 3.8 Flash and 3.8 Flash Cyber",
+      "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "description": "https://deepmind.google/models/model-cards/gemini-3-8-flash/ Comments URL: https://news.ycombinator.com/item?id=49537553 Points: 547 # Comments: 337",
+      "pubDate": "2026-09-02T23:12:40+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "7ba86f7b1ce2",
+      "title": "Exit the Cave",
+      "link": "https://turtlespace.blog/p/exit-the-cave",
+      "description": "Article URL: https://turtlespace.blog/p/exit-the-cave Comments URL: https://news.ycombinator.com/item?id=49536606 Points: 129 # Comments: 29",
+      "pubDate": "2026-09-02T22:16:45+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "2557b479477d",
+      "title": "Claude's new system prompt really doesn't want to reproduce song lyrics",
+      "link": "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/",
+      "description": "Anthropic publish the system prompts for their Claude consumer applications (Claude.ai and the Claude mobile apps - sadly not for Claude Cowork or Claude Code). I love that they do this, and that they share not just the current prompts but historic changes to their prompts as wel…",
+      "pubDate": "2026-09-02T22:16:42+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "e21378f22db2",
+      "title": "WebLLM: high-performance in-browser LLM inference engine",
+      "link": "https://github.com/mlc-ai/web-llm",
+      "description": "Article URL: https://github.com/mlc-ai/web-llm Comments URL: https://news.ycombinator.com/item?id=49536411 Points: 58 # Comments: 12",
+      "pubDate": "2026-09-02T22:02:35+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "baba3856a64f",
+      "title": "李飞飞的World Labs新发布的世界模型，是真的世界模型吗？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzkyMTczNjE3Nw==&mid=2247492895&idx=1&sn=deeb93f5b9314d04873822cda204faac&chksm=c0bf539fba01050d5f87afff9afb96e96c1f61cd78d3fe938fb96d82703c520dc2029f93c336",
+      "description": "文｜Sleepy9 月 1 日，李飞飞的 World Labs 发布了 Atlas。 发布页上有一组画面确实好看。几台手机架在三脚架和夹具上，从三到五个角度对着同一个现场，然后时间停住，镜头开始移动，绕过人物，走到真实摄影机从未站过的位置。 子弹时间，这个手法这两年不算稀奇。差别在 Atlas 同时交出来的另外三样东西。 第一样是 depth。给画面里每一个像素标上它离镜头有多远，一张普通照片就变成一张按远近上色的地形图。 第二样是 point cloud。在空间里撒下几百万个点，每个点记住自己的三维坐标，凑到一起就是这间屋子的形状。 第三样是 3D G…",
+      "pubDate": "2026-09-02T22:02:27+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "bb9e9e035994",
+      "title": "利润增长15%背后，光明乳业中报藏着多少隐忧",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI4OTcxMDA0MQ==&mid=2247547415&idx=1&sn=c73e9b3488038ab8c16fc61b0a0c266b&chksm=edd3001d21ff62d4440955ba7579eeb0394f05db27d2a2bf8b2de727582098b154f0713d18ca",
+      "description": "2026年上半年，光明乳业交出一份账面与实质存在反差的半年报。 财报显示，报告期内，光明乳业实现营业收入118.73亿元，同比下降4.81%；归属于上市公司股东的净利润2.51亿元，同比增长15.34%。 值得注意的是，上半年，其归母净利润中有一部分来自出售海外子公司新莱特旗下新西兰北岛资产带来的一次性处置收益。 财报显示，扣除非经常性损益后，光明乳业的归母净利润为2.18亿元，同比下滑13.39%。 就在这份半年报披露 35 天前，光明乳业新任董事长陆骏飞正式当选履职。 在行业竞争持续加剧的背景下，主业盈利承压、存货减值压力、海外资产遗留风险，仍是摆在…",
+      "pubDate": "2026-09-02T22:02:27+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "8f63e3e59a17",
+      "title": "周星驰入股，原著霸榜起点No.1，在线峰值超1.2万：互动影游出现新的爆款？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NzI2NzA3Mg==&mid=2648481141&idx=1&sn=6be35597b0b53b18056f5cefdcf2d1c3&chksm=bff80caecb8fa4e3a9d2bed641138412d6f390f4780fea20c7c13e1fb81e4720bbc0eda32be2",
+      "description": "作者丨弹痕编辑丨火狐狸“携卷重开，逆写国运”向来是历史模拟器最令人无法拒绝的玩法之一。 8月20日，一款名叫《绍宋：还我河山》的互动影视游戏上线Steam，玩家在其中魂穿皇帝赵构，一洗千古骂名。 《绍宋：还我河山》是根据阅文集团起点读书作者榴弹怕水网络小说《绍宋》改编的互动影游，由周星驰比高集团不久前投资的互动之星出品，真人实拍体量10+小时，原作排在历史类双榜Top1。 游戏上线后，Steam在线峰值一度突破12000人。 但在线人数逐日走低 图源：SteamDB猫眼娱乐并非今年唯一押注互动影游的玩家。 往前看，欢瑞世纪从去年11月的《江山北望》起步，…",
+      "pubDate": "2026-09-02T22:02:27+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "0bd3a787295d",
+      "title": "开学先花几万块，“数码三件套”涨价让新手大学生肉疼了",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5ODMzMDMyMw==&mid=2654910872&idx=1&sn=e26ade1e9cb8a1a6ea9e858777d0e710&chksm=bca6a93532e4430926eee1f8b6413674d795553d852911598c14528f7eb38978053070fa18ee",
+      "description": "“上大学必须要有电脑吗？手写代码可以吗？”这个夏天，很多人都在社交平台刷到类似的帖子。 在这些帖子里，家长常常发出本该属于上个世纪的雷霆疑问“上课不带笔和本，带什么电脑？” “我就不信，他没电脑还学不了计算机”。不过，除了一些“起号”骗回复的情况，这些发帖者大概率是学生本人，他们需要援引评论区回复来向家长证明，读大学确实需要购置一系列电子设备。 近几年来，在高考结束后的暑假，“开学几件套”已经成为一种属于准大学生的潮流。 习惯了统一校服、统一作息的年轻人，还没踏入大学校园，消费差距已经提前显现。 而随着数码产品的新一轮涨价，这笔挑费也逐渐成为一部分家庭的…",
+      "pubDate": "2026-09-02T22:02:27+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "0ea86a000c0b",
+      "title": "GrapheneOS says Pixel 11 has MTE support after all",
+      "link": "https://grapheneos.social/@GrapheneOS/117194007157499435",
+      "description": "Article URL: https://grapheneos.social/@GrapheneOS/117194007157499435 Comments URL: https://news.ycombinator.com/item?id=49536384 Points: 155 # Comments: 104",
+      "pubDate": "2026-09-02T22:00:28+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "b3e7eee39581",
+      "title": "Three sites made 215,128 “best software” pages for AI. Perplexity cites them",
+      "link": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/",
+      "description": "Article URL: https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/ Comments URL: https://news.ycombinator.com/item?id=49536375 Points: 221 # Comments: 106",
+      "pubDate": "2026-09-02T21:59:59+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "7aeda70f8181",
+      "title": "A third of Perplexity's citations don't contain the number they're cited for",
+      "link": "https://hausresearch.com/reports/perplexity-citation-audit/",
+      "description": "Article URL: https://hausresearch.com/reports/perplexity-citation-audit/ Comments URL: https://news.ycombinator.com/item?id=49536201 Points: 116 # Comments: 42",
+      "pubDate": "2026-09-02T21:49:23+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "0d4cf45aafbb",
+      "title": "Poisson Disk Sampling",
+      "link": "https://stripeacross.com/posts/poisson-disk-sampling/",
+      "description": "Article URL: https://stripeacross.com/posts/poisson-disk-sampling/ Comments URL: https://news.ycombinator.com/item?id=49536177 Points: 90 # Comments: 12",
+      "pubDate": "2026-09-02T21:47:49+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "b9a7dc4a09e4",
+      "title": "Six curl CVEs after OpenAI and Anthropic came back with zero",
+      "link": "https://aisle.com/blog/aisle-discovered-six-curl-cves-after-openai-and-anthropic-found-zero",
+      "description": "Article URL: https://aisle.com/blog/aisle-discovered-six-curl-cves-after-openai-and-anthropic-found-zero Comments URL: https://news.ycombinator.com/item?id=49536114 Points: 135 # Comments: 48",
+      "pubDate": "2026-09-02T21:43:14+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "2c6e9bf7a10d",
+      "title": "Biggest dark matter detector spots a single weird particle",
+      "link": "https://www.science.org/content/article/world-s-biggest-dark-matter-detector-spots-single-weird-particle",
+      "description": "Article URL: https://www.science.org/content/article/world-s-biggest-dark-matter-detector-spots-single-weird-particle Comments URL: https://news.ycombinator.com/item?id=49536079 Points: 177 # Comments: 41",
+      "pubDate": "2026-09-02T21:40:29+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "4c7cb9ef483a",
+      "title": "A Note from LWN",
+      "link": "https://lwn.net/Articles/1090585/",
+      "description": "Article URL: https://lwn.net/Articles/1090585/ Comments URL: https://news.ycombinator.com/item?id=49535752 Points: 614 # Comments: 124",
+      "pubDate": "2026-09-02T21:17:12+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "b6e93fadaf7e",
+      "title": "Quoting Rick Brewster",
+      "link": "https://simonwillison.net/2026/Sep/2/rick-brewster/",
+      "description": "Direct2D has always been the biggest hurdle for Paint.NET on WINE, and it's clear that it will never be completed enough for Paint.NET's use. And I can't just \"disable\" the use of Direct2D. So, instead, Paint.NET now has an internal, from-scratch, clean-room reverse-engineered re…",
+      "pubDate": "2026-09-02T13:50:57+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "6cb14383ff4a",
+      "title": "Claude Fable 5.1 made me a really nice animated pelican",
+      "link": "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/",
+      "description": "Today is Claude Fable (and Mythos) 5.1 day. Anthropic say that Fable 5.1 \"sets a new standard for coding, knowledge work, and long-running problem-solving tasks\". Their announcement spends a notable amount of time on scientific research, boasting of a 52.6% score on the brand new…",
+      "pubDate": "2026-09-02T07:57:28+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
     {
       "id": "86d3bc7092b6",
       "title": "Codex bundles LibreOffice",
@@ -15,98 +423,14 @@
       "category": "ai-agent"
     },
     {
-      "id": "337c41b804f9",
-      "title": "超强厄尔尼诺预期，“点燃”种业板块",
-      "link": "https://mp.weixin.qq.com/s?__biz=Mzg5MzEyNzEwNQ==&mid=2247844545&idx=1&sn=f54cf1bddc3e7a6badd591112d43ebb7&chksm=c1e2b077667c1c0e7256026d330775eae899629e2646267bb83f335a127c2b25a1f561667f9f",
-      "description": "超强厄尔尼诺预期持续升温，A股农业板块今日再次全线爆发，其中种业概念最为突出。 截至今日收盘，万向德农（600371.SH）收获6连板，神农种业（300189.SZ）、农发种业（600313.SH）、敦煌种业（600354.SH）、登海种业（002041.SZ）等多股涨停。 与二级市场的火热形成对比的是，企业对厄尔尼诺影响的判断存在分歧，有企业对财联社记者表示已受到一定影响，但也有企业表示影响有限。 总体而言，业内人士对相关影响的传导时间、程度均表态谨慎，承认存在不确定性。 厄尔尼诺升温 国际粮价创三年新高超强厄尔尼诺引发国际粮价上涨预期，是此轮农业股走…",
-      "pubDate": "2026-09-02T02:02:27+08:00",
+      "id": "92dade5d3d44",
+      "title": "GeoJSON Map Viewer",
+      "link": "https://simonwillison.net/2026/Sep/1/geojson/",
+      "description": "Tool: GeoJSON Map Viewer I was helping Natalie gather some maps of local political boundaries (for the Granada Community Services District and the Midcoast Community Council) and found a need to display some GeoJSON files on a map and export that as a PNG. I asked GPT-5.6-Sol for…",
+      "pubDate": "2026-09-02T02:05:45+08:00",
       "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "feaf67df049b",
-      "title": "编译 | 孟加拉国成衣业改用美国棉花？美孟形成“棉花走廊”意味着…",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzU4MjkyNjA0NA==&mid=2247638959&idx=1&sn=4457da9776dcb4a9e911a4b4d0a705d0&chksm=fc75a9e60f060156eed412bd730dce4717522150617e81505ea6acb3eef2fdcdd4f4d7fdfb4c",
-      "description": "本文共7565字阅读预计15分钟作者 | 孟加拉理事会编译 | 王娇杨编译审核 | 胡可怡本期编辑 | 佳仁·云丹吉本期审核 | 余佳轩 朱依林编者按 2026年2月，美孟签署《互惠贸易协定》。 对于出口高度依赖成衣业、美国又是其核心市场之一的孟加拉国而言，这份协议首先是一场“避免更大损失”的谈判：美方最初提出37%的互惠关税，最终降至19%，同时为使用美国原产棉花和人造纤维生产的部分纺织服装产品设置零关税通道。 由此形成的“棉花走廊”，有望提升孟加拉国产品在美国市场的价格竞争力，却也将推动其原料采购向美国倾斜，并对印度等传统供应方产生外溢影响。 与此同…",
-      "pubDate": "2026-09-02T02:02:27+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "73cb3010df4b",
-      "title": "让一部分人先活到159岁",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzA3ODI5NDg0Mw==&mid=2654260028&idx=1&sn=6bf700cbc53a7c30e79757753dd74fb7&chksm=85e8fd16d1de14c62e62170353adb78ac8820ad2ab4217dff82e332a563a3a3a17c85c8e3f36",
-      "description": "过去，我们喜欢用“长命百岁”来祝福亲朋好友。确实在人类漫长的发展历程里，活到100岁，已经是人们对于生命长度最美好的想象。 但放在今天，百岁人生是不是有点保守了？癌症疫苗已经出现，基因编辑过的猪肾可以移植进人体，AI开始从影像和血液蛋白中寻找疾病尚未发生的信号，一次注射修改慢性病相关基因的疗法也进入了人体试验。 医学领域正在发生很重要的变化，过去主要是在身体出现问题后治病，今天则开始提前发现、清除、修补、替换和编辑。 我们对寿命的想象也在不断的拓宽，100岁不再像一道遥不可及的天花板，人们已经开始讨论活到120岁，甚至150岁。 而且那些真正激进的人，已…",
-      "pubDate": "2026-09-02T02:02:27+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "26f4dc81c029",
-      "title": "中国太阳能发电，历史性突破！",
-      "link": "https://mp.weixin.qq.com/s?__biz=Mzg3NTA5MjkyNQ==&mid=2248580576&idx=3&sn=4bec6daf7d2d0dab1e0fa01954c474f2&chksm=cc2009ab1ec5b59bc660e8f19e4e04ef8c6ee1db3e151ea508ebea7eea8a21d29b1c6a0a3b0b",
-      "description": "记者|蔡鼎编辑|梁露月 陈旭 杜恒峰 校对|段炼9月1日，国家能源局公布的最新数据显示，截至2026年7月底，全国光伏发电装机容量达到12.86亿千瓦。 这一数据首次超越了同期煤电12.85亿千瓦的装机容量。 截至今年上半年的光伏累计装机容量至此，光伏首次在装机规模上登顶，成为中国装机规模最大的电源品类，在全国40.8亿千瓦的发电总装机中占比达31.5%。 今年以来各月度累计新增光伏装机容量具体来看，今年前7个月，全国光伏发电量突破8024亿千瓦时，同比增长15.5%，高出全社会用电量增速约10个百分点。 一个更为直观的换算是：全国每消耗的8度电中，就有…",
-      "pubDate": "2026-09-02T02:02:27+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "9e99b83f5c87",
-      "title": "UEFA's Champions League draw creates unfair clusters; a Cayley graph fixes it",
-      "link": "https://sariyuce.com/blog/2026/UEFA-Draw/",
-      "description": "Article URL: https://sariyuce.com/blog/2026/UEFA-Draw/ Comments URL: https://news.ycombinator.com/item?id=49525420 Points: 24 # Comments: 6",
-      "pubDate": "2026-09-02T01:57:09+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "e7232d52f37f",
-      "title": "Claude Fable 5.1 and Claude Mythos 5.1",
-      "link": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
-      "description": "What's new in Claude Fable 5.1 – https://platform.claude.com/docs/en/models/fable-5-1/whats-n...System Card: https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32... Comments URL: https://news.ycombinator.com/item?id=49525378 Points: 358 # Comments: 294",
-      "pubDate": "2026-09-02T01:53:53+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "e31b0c181f45",
-      "title": "The creator of Jujutsu has joined ERSC",
-      "link": "https://ersc.io/blog/martin-joins-ersc",
-      "description": "Article URL: https://ersc.io/blog/martin-joins-ersc Comments URL: https://news.ycombinator.com/item?id=49525297 Points: 67 # Comments: 39",
-      "pubDate": "2026-09-02T01:46:21+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "8ea18c332d43",
-      "title": "Launch HN: Nori Robotics (YC S26) – A low-cost humanoid robot for development",
-      "link": "https://www.norirobotics.com/",
-      "description": "Hey HN, I’m Antonio from Nori Robotics (https://norirobotics.com). We build a $1,688 bimanual mobile robot in San Francisco for robotics developers and researchers.I started working on Nori while doing robotics research at Columbia. I was teaching robots through human demonstrati…",
-      "pubDate": "2026-09-02T01:35:10+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
       },
       "category": "ai-agent"
     },
@@ -123,170 +447,14 @@
       "category": "ai-agent"
     },
     {
-      "id": "4bddcfcfe940",
-      "title": "Quill (YC W20) Is Hiring a Fullstack SWE",
-      "link": "https://news.ycombinator.com/item?id=49524704",
-      "description": "Comments URL: https://news.ycombinator.com/item?id=49524704 Points: 0 # Comments: 0",
-      "pubDate": "2026-09-02T01:00:14+08:00",
+      "id": "06c1aea3d44b",
+      "title": "datasette-mcp 0.2",
+      "link": "https://simonwillison.net/2026/Sep/1/datasette-mcp/",
+      "description": "Release: datasette-mcp 0.2 \"rows\" from execute_sql is now an array of objects. Previously it was an array of arrays. This should help weaker models avoid losing track of which positional array element maps to which column. #1 Now depends on mcp>=2.1.1. This is the first non-alpha…",
+      "pubDate": "2026-09-01T23:30:12+08:00",
       "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "fb0827c68cc0",
-      "title": "Show HN: Running 104GB Qwen3.8-Flash-Next on 48GB Mac with at ~12 tok/s",
-      "link": "https://github.com/carloslfu/slotstream",
-      "description": "I built slotstream, a way to run Qwen3.8-Flash-Next 4-bit on a low-memory mac starting from 16GB, a 125B parameter model that would need 100GB+ memory/RAM, thanks to expert-offloading/ssd-streaming. Easy to install/update, and mac-native using MLX and Swift.It ships with auto-mod…",
-      "pubDate": "2026-09-02T00:42:46+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "372a433b5951",
-      "title": "Movie Scene Map – 13,312 films, series, games, anime and manga",
-      "link": "https://moviescenemap.com/",
-      "description": "Article URL: https://moviescenemap.com/ Comments URL: https://news.ycombinator.com/item?id=49524320 Points: 43 # Comments: 18",
-      "pubDate": "2026-09-02T00:34:45+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "0ddb81d284bf",
-      "title": "为什么大部分主理人品牌都是昙花一现？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5MTc3MzQzMw==&mid=2649679374&idx=1&sn=4fc45deb1a16cc66a8aeff6d4c877da6&chksm=bf970af4ea0e6e5d891537b165e826eb0a264128540efe43fe2a1d9c7a98c3b5c3c9eb735230",
-      "description": "过去几年，独立品牌和主理人品牌曾是消费市场的新热点。借助内容平台、社交媒体和商业空间，一个人的审美、理念和影响力，可以快速转化为品牌认知，设计师、创业者和生活方式创造者，开始成为消费者理解品牌的重要入口。 但热潮之后，当下行业正在经历着洗牌。部分品牌逐渐建立长期能力，成长为具有生命力的新品牌，但更多品牌却在短暂关注后逐渐沉寂，甚至退出市场，一个本质性问题也随之浮现：为什么有些品牌能够穿越周期，而大多数只能沦为短暂的消费记忆？ 主理人品牌兴起，本质是消费信任机制的变化理解主理人品牌为什么能够快速崛起，需要先理解消费者信任方式的变化。 过去几十年的消费市场，…",
-      "pubDate": "2026-09-02T00:02:27+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "364a26dc7608",
-      "title": "三大北方工业重镇，这次不再“单打独斗”了？",
-      "link": "https://mp.weixin.qq.com/s?__biz=Mzg2MjA5Mjc0OA==&mid=2247582424&idx=1&sn=5e39af76136f59a7e6cf5e303274da6c&chksm=cfce4f64dcbd3e308076e688859e05d624face3a58d5b43dbb0118cf33f8e5c497609ab82574",
-      "description": "航空产业跨省合作的空间有多大北方航空产业的跨市协同，正迈出关键一步。 不久前举行的先进制造业集群发展大会（2026）期间，沈阳、西安、哈尔滨三地航空集群促进机构签署了一份产业协作共建协议，三方约定在关键环节深化分工协作，推动优势互补、资源共享。 眼下，国产大飞机加速规模化、低空经济打开新赛道，航空产业迎来一系列新增长点。 但航空产业属先进制造，链条极长、技术门槛极高，任何单一城市都很难覆盖全链条，一定要在更大范围内组织联合攻关、合作生产。 参与签约的沈阳航空集群代表、沈阳航空产业技术研究院有限公司总经理孙奉道向城市进化论表示，三市产业相似性高、互补性强，…",
-      "pubDate": "2026-09-02T00:02:27+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "03086d353874",
-      "title": "中报里的幸存者游戏：华通追赶祖龙烧钱，腾讯网易断层领先",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzYzNDUxMDQwNw==&mid=2247677672&idx=1&sn=7d3f90c7ec92cba49b862d003bceed0b&chksm=f1284e97c2aac2ea50bce17d725a1ff06ffe2c724856aa9557ff27cbbf340603b8a943c38c75",
-      "description": "作者|Iris游戏行业也许是传媒板块唯一一片能稳定赚到钱的“绿洲”。 从受众的角度看，游戏行业与影视行业互为镜像：面对碎片化消费习惯，影视有微短剧，游戏有小游戏；新产品同样会被玩家/观众严肃审阅，王牌工作室的“S+大制作”也有可能被全网群嘲。 游戏行业为什么能挣到钱？未来能否挣更多的钱？小娱统计了A股和港股的十家头部游戏公司的半年报数据，发现：游戏厂商想要活得长久、赚得长久，最重要的不是新游首发能拉到多少用户，而是是否具备长线运营的态度与能力。1）构成游戏行业大盘的长青游戏收入相对稳定，其“造血”能力是决定厂商新游戏打法的关键，在竞争格局相对稳定的游戏行…",
-      "pubDate": "2026-09-02T00:02:27+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "b01ea0a4129b",
-      "title": "追觅回应放弃整车量产",
-      "link": "https://mp.weixin.qq.com/s?__biz=Mzg3NTA5MjkyNQ==&mid=2248580508&idx=1&sn=d4cafeb1576b9d03f51f07f39005247c&chksm=ccfda581061ebc45d3829ff632a5597b679882ba0e9acd6b85938a489fe6550daf59aadb4a13",
-      "description": "记者|孙桐桐编辑|段炼 余婷婷 杜恒峰 校对|梁露月“汽车相关业务将并入公司产业研究院管理，未来主要聚焦通用技术的探索与研究，持续做好相关技术产投研落地。” 9月1日，针对追觅科技造车项目终止的传闻，追觅科技相关人士向《每日经济新闻》记者表示，追觅汽车业务已经放弃量产计划，只做相应技术储备。 8月31日，记者在苏州一处产业园6号楼内看到，追觅科技（以下简称追觅）“星空计划”造车业务的主要办公场地已经显露出“退潮”迹象。 办公区内工位大面积闲置，桌面空空荡荡，仅有零星人员进出，楼层指引牌上已经找不到“星空计划”的标识。 追觅“星空计划”办公地 图片来源：每…",
-      "pubDate": "2026-09-02T00:02:27+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "5a60d7da991c",
-      "title": "多地社保缴费基数微涨",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTExMjYwMA==&mid=2670394218&idx=1&sn=d26ed04326678a0cb7e60ac7f382d4d4&chksm=bd371cf7ffc3df6074cfdde6c3aa0d8a64d29f3855d6039e47e5c3dcac99135f8d05a6204ea6",
-      "description": "2025年，31个省份社保缴费基数下限的增幅与增速均出现大面积回落，24个省份月缴费基数下限上调不足100元。 2026年社保缴费基数下限的涨幅整体呈现进一步收缩的特征。 已公布数据的13个省份中，9个省份的涨幅相比去年进一步下滑。 作者：田进封图：图虫创意8月21日，北京市人社局公布的信息显示，2026年北京每月社保缴费基数下限为7270元，结束了此前几年的较快上涨趋势，同比增长1.5%。 2021—2024年，受社平工资上涨、社保合规等因素影响，多数省份社保缴费基数下限迎来了一轮较高上涨。 其中，21个省份2024年的社保缴费基数下限同比增速超5%。…",
-      "pubDate": "2026-09-02T00:02:27+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "a268bc4bcd64",
-      "title": "Play Store blocks AuroraStore, hurting GrapheneOS users",
-      "link": "https://gitlab.com/AuroraOSS/AuroraStore/-/work_items/1566",
-      "description": "Article URL: https://gitlab.com/AuroraOSS/AuroraStore/-/work_items/1566 Comments URL: https://news.ycombinator.com/item?id=49523754 Points: 312 # Comments: 117",
-      "pubDate": "2026-09-01T23:55:53+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "f66bf5e5e154",
-      "title": "Dwarf Fortress' creator says the industry's in shambles over AI",
-      "link": "https://www.pcgamer.com/gaming-industry/dwarf-fortress-creator-says-the-industrys-in-shambles-over-ai-and-layoff-happy-ceos-everyone-i-know-their-bosses-are-slowly-getting-psychosis/",
-      "description": "Article URL: https://www.pcgamer.com/gaming-industry/dwarf-fortress-creator-says-the-industrys-in-shambles-over-ai-and-layoff-happy-ceos-everyone-i-know-their-bosses-are-slowly-getting-psychosis/ Comments URL: https://news.ycombinator.com/item?id=49523720 Points: 106 # Comments:…",
-      "pubDate": "2026-09-01T23:53:42+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "fd6b4062a749",
-      "title": "Keenable SELECT: an agent that searches the web in SQL",
-      "link": "https://keenableai.github.io/select-showcase/",
-      "description": "Article URL: https://keenableai.github.io/select-showcase/ Comments URL: https://news.ycombinator.com/item?id=49523473 Points: 37 # Comments: 11",
-      "pubDate": "2026-09-01T23:41:03+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "c337f3e90fc0",
-      "title": "Ambient CSS v3 – Blender meets CSS",
-      "link": "https://ambientcss.vercel.app/",
-      "description": "Article URL: https://ambientcss.vercel.app/ Comments URL: https://news.ycombinator.com/item?id=49523387 Points: 106 # Comments: 43",
-      "pubDate": "2026-09-01T23:35:11+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "ab365fd4e35d",
-      "title": "A browser-based viewer for Office Open XML documents",
-      "link": "https://ooxml.silurus.dev/",
-      "description": "Article URL: https://ooxml.silurus.dev/ Comments URL: https://news.ycombinator.com/item?id=49523361 Points: 41 # Comments: 9",
-      "pubDate": "2026-09-01T23:33:13+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "301560d42aaa",
-      "title": "Ask HN: Who is hiring? (September 2026)",
-      "link": "https://news.ycombinator.com/item?id=49522897",
-      "description": "Please state the location and include REMOTE for remote work, REMOTE (US) or similar if the country is restricted, and ONSITE when remote work is not an option.Please only post if you personally are part of the hiring company—no recruiting firms or job boards. One post per compan…",
-      "pubDate": "2026-09-01T23:01:17+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
       },
       "category": "ai-agent"
     },
@@ -303,90 +471,6 @@
       "category": "ai-agent"
     },
     {
-      "id": "6ba4892767fa",
-      "title": "比音勒芬电商收入翻倍，关闭小红书，重做抖音+得物？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzkxNjczMzUzNQ==&mid=2247583700&idx=1&sn=0a9ab3228f3e46413652927dfafccccf&chksm=c015ef6c11952ed3d8539eb12711537c1c91ab06a5ffe536bc0d58e4ce30992d8313e375ed87",
-      "description": "作者| Evelin一家过去几乎不靠电商增长的服装公司，突然把线上生意翻了一倍。 8月27日，比音勒芬发布2026年半年报：上半年，公司电商销售收入达到4.33亿元，同比增长101.93%，占总营收的比重从2025年全年的10.47%升至16.63%。 半年时间，线上销售规模已经接近去年全年。更值得注意的是，这并不是一轮简单的低价冲量。 报告期内，比音勒芬电商渠道毛利率达到79.61%，甚至高于公司整体75.9%的毛利率。 同期公司实现营收26.01亿元，同比增长23.66%；归母净利润4.91亿元，同比增长18.41%。 对一家刚在2025年经历上市以…",
-      "pubDate": "2026-09-01T22:02:28+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "72ac859d4cec",
-      "title": "Introducing Ad Blocker for Firefox on iOS",
-      "link": "https://blog.mozilla.org/en/firefox/ad-blocker-on-ios/",
-      "description": "Article URL: https://blog.mozilla.org/en/firefox/ad-blocker-on-ios/ Comments URL: https://news.ycombinator.com/item?id=49521973 Points: 170 # Comments: 69",
-      "pubDate": "2026-09-01T21:46:49+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "2248824e36b5",
-      "title": "Io_uring Without Readahead",
-      "link": "https://frn.sh/io-uring/",
-      "description": "Article URL: https://frn.sh/io-uring/ Comments URL: https://news.ycombinator.com/item?id=49521623 Points: 83 # Comments: 27",
-      "pubDate": "2026-09-01T21:19:12+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "509d34212988",
-      "title": "AnkiDroid: Google Play no longer allowing Open Collective donation link",
-      "link": "https://github.com/ankidroid/Anki-Android/issues/21656",
-      "description": "Article URL: https://github.com/ankidroid/Anki-Android/issues/21656 Comments URL: https://news.ycombinator.com/item?id=49520022 Points: 714 # Comments: 198",
-      "pubDate": "2026-09-01T18:11:02+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "2e7d0fb45461",
-      "title": "I trained a small transformer in 1.5hrs and it beats many LLMs",
-      "link": "https://mvakde.github.io/blog/44-on-arc-1/",
-      "description": "Article URL: https://mvakde.github.io/blog/44-on-arc-1/ Comments URL: https://news.ycombinator.com/item?id=49519939 Points: 394 # Comments: 113",
-      "pubDate": "2026-09-01T17:52:45+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "b8d00bb7f83a",
-      "title": "Restroom Archive",
-      "link": "https://restroomarchive.com",
-      "description": "Article URL: https://restroomarchive.com Comments URL: https://news.ycombinator.com/item?id=49517624 Points: 324 # Comments: 77",
-      "pubDate": "2026-09-01T11:23:48+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "89e5df783443",
-      "title": "Fastpotify",
-      "link": "https://fastpotify.rocks/",
-      "description": "Article URL: https://fastpotify.rocks/ Comments URL: https://news.ycombinator.com/item?id=49517448 Points: 748 # Comments: 487",
-      "pubDate": "2026-09-01T10:52:14+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
       "id": "bf3e1e0703c0",
       "title": "Introducing wrapture",
       "link": "https://simonwillison.net/2026/Aug/31/introducing-wrapture/",
@@ -395,18 +479,6 @@
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "0cfe375b4501",
-      "title": "Has early Scratch experience led to fulfilling careers?",
-      "link": "https://twitter.com/ID_AA_Carmack/status/2094450188911845827",
-      "description": "Article URL: https://twitter.com/ID_AA_Carmack/status/2094450188911845827 Comments URL: https://news.ycombinator.com/item?id=49516209 Points: 102 # Comments: 76",
-      "pubDate": "2026-09-01T07:46:38+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
       },
       "category": "ai-agent"
     },
@@ -644,78 +716,6 @@
       "link": "https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/",
       "description": "ChatGPT search now uses the site:operator at scale Promptwatch is part of the emerging \"GEO\" space, for Generative Engine Optimization - the chatbot version of SEO, where companies offer tools and consulting to help your site increase its presence in replies to prompts inside too…",
       "pubDate": "2026-08-21T07:57:32+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "2da3f824e886",
-      "title": "A shot-scraper-style JSON API on Bun 1.4's new Bun.WebView",
-      "link": "https://simonwillison.net/2026/Aug/20/bun-webview-json-api/",
-      "description": "Research: A shot-scraper-style JSON API on Bun 1.4's new Bun.WebView Today saw the long awaited release of Bun 1.4, the first stable version since the infamous Rust rewrite a few months ago. Interestingly, the Rust rewrite was downplayed in the release notes, which introduced a b…",
-      "pubDate": "2026-08-20T23:37:00+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "606747c02046",
-      "title": "smolmachines / smolvm as a sandbox for untrusted Python & JavaScript",
-      "link": "https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/",
-      "description": "Research: smolmachines / smolvm as a sandbox for untrusted Python & JavaScript I tasked Claude Fable 5 running in Claude Code for web with the following research task: Put https://smolmachines.com through its paces as a fast secure sandbox. Explore what it would take to use this…",
-      "pubDate": "2026-08-20T07:16:00+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "430ba0c7a248",
-      "title": "Quoting Jeremy Morrell",
-      "link": "https://simonwillison.net/2026/Aug/19/jeremy-morrell/",
-      "description": "My hypothesis is that there is a new opportunity for Extensible Software on the web. LLMs radically lower the cost of authoring extensions, and modern sandbox primitives lower the deployment cost and provide good security boundaries. We can build our app as a solid, accountable c…",
-      "pubDate": "2026-08-20T06:56:31+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "e0c0c7d06c2b",
-      "title": "Conceptual integrity and counting lines of code",
-      "link": "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/",
-      "description": "Last week I recorded an episode of the Talking Postgres podcast with Claire Giordano on the subject of \"How AI is changing software development\". We had a really great conversation. Here are a couple of my highlights from a lightly edited transcript (prompt to Claude: \"very minor…",
-      "pubDate": "2026-08-20T06:46:07+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "d82f5875bade",
-      "title": "Mojo🔥 is now open source",
-      "link": "https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/",
-      "description": "Mojo🔥 is now open source The Mojo programming language has been promising an open source release since May 2023. Last week they shipped their 1.0 and today they have followed through on that original promise, releasing the compiler and toolchain under an Apache 2 license. When Mo…",
-      "pubDate": "2026-08-19T05:39:20+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "e31db42fd1ba",
-      "title": "Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index",
-      "link": "https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/",
-      "description": "Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index That's the same score as GPT-5.6 Luna (max), and just one point behind GLM-5.2 (max) and DeepSeek V4 Pro 0813 (max) - that GLM is 753B and that DeepSeek is 1.7T parameters, and Luna is size unknown but presumabl…",
-      "pubDate": "2026-08-18T07:58:14+08:00",
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
