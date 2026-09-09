@@ -1,13 +1,13 @@
 {
-  "generated": "2026-09-09T23:36:15.113274+08:00",
+  "generated": "2026-09-10T03:07:18.491717+08:00",
   "total": 112,
   "items": [
     {
-      "id": "259c8fd88c0f",
-      "title": "ChatGPT Images 2.5",
-      "link": "https://openai.com/index/introducing-chatgpt-images-2-5/",
-      "description": "Article URL: https://openai.com/index/introducing-chatgpt-images-2-5/ Comments URL: https://news.ycombinator.com/item?id=49614720 Points: 62 # Comments: 18",
-      "pubDate": "2026-09-09T02:37:51+08:00",
+      "id": "9e253fa4a250",
+      "title": "Apple Watch Ultra 4",
+      "link": "https://www.apple.com/apple-watch-ultra-4/",
+      "description": "Article URL: https://www.apple.com/apple-watch-ultra-4/ Comments URL: https://news.ycombinator.com/item?id=49631121 Points: 27 # Comments: 8",
+      "pubDate": "2026-09-10T02:21:40+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -15,11 +15,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "3fa2cd26f191",
-      "title": "100s of flights cancelled at UK airports due to ATC issue",
-      "link": "https://www.bbc.com/news/live/c6x2z0yy32ejt",
-      "description": "Article URL: https://www.bbc.com/news/live/c6x2z0yy32ejt Comments URL: https://news.ycombinator.com/item?id=49614557 Points: 9 # Comments: 3",
-      "pubDate": "2026-09-09T02:26:27+08:00",
+      "id": "e2137401cab3",
+      "title": "Apple Unveils iPhone Duo",
+      "link": "https://www.apple.com/newsroom/2026/09/apple-unveils-iphone-duo/",
+      "description": "Article URL: https://www.apple.com/newsroom/2026/09/apple-unveils-iphone-duo/ Comments URL: https://news.ycombinator.com/item?id=49630964 Points: 182 # Comments: 159",
+      "pubDate": "2026-09-10T02:17:06+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -27,11 +27,107 @@
       "category": "ai-agent"
     },
     {
-      "id": "ff020809d7ef",
-      "title": "《重案六组》回归，活化老IP有了新思路",
-      "link": "https://mp.weixin.qq.com/s?__biz=Mzg2MjYxNTUyMQ==&mid=2247622077&idx=1&sn=882e8f8a36f9984f9812d962704e578a&chksm=cf7a1a4a31ca3e89cdb160aafc669406ef3e198f0dcc0c06c8766b0fdc1094bbe6bba3033e3c",
-      "description": "老IP可以是香饽饽了。文丨慕辰惜编辑｜刘南豆上线首日正片有效播放率就达到44.6%，两天后站内热度就突破了7000，《重案六组》前传《消失的警号》给中剧赛道又添小爆款。 暑期档时，同样是经典老IP改编的中剧《灵魂摆渡・十年》成绩也很亮眼，开播四小时播放量迅速破亿，更是拉动平台中剧板块会员新增达42%。 经典IP的重启，一直以来是影视行业的高难度命题。对于沉淀十年、甚至二十余年的经典IP而言，直接开发成长剧，意味着需要面临极高的试错成本和市场风险的双重考验。 当年的观众是否还会为它买单？新生代观众还了不了解这个IP？ 老故事、老设定还能不能符合当下的审美？…",
-      "pubDate": "2026-09-09T02:02:24+08:00",
+      "id": "227061d064a9",
+      "title": "iPhone Duo",
+      "link": "https://www.apple.com/iphone-duo/",
+      "description": "Article URL: https://www.apple.com/iphone-duo/ Comments URL: https://news.ycombinator.com/item?id=49630931 Points: 268 # Comments: 368",
+      "pubDate": "2026-09-10T02:15:43+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "5821ed47a804",
+      "title": "Show HN: Self-hosted company OS, Claude Code and Codex agents in departments",
+      "link": "https://github.com/OtoDock/oto-dock",
+      "description": "Hi HN, I am Dimitris. This is a company OS that I built and use to run my business and anyone can install it and self host it for free. Think of it as Claude Code, Cowork and the cloud sessions in one self hosted application.It is a Multi-tenant application by design where many p…",
+      "pubDate": "2026-09-10T01:57:55+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "707b25cf5704",
+      "title": "Apple Watch Series 12",
+      "link": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/",
+      "description": "Article URL: https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/ Comments URL: https://news.ycombinator.com/item?id=49630566 Points: 87 # Comments: 76",
+      "pubDate": "2026-09-10T01:56:17+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "5b32cdc139a2",
+      "title": "Apple Introduces AirPods 5",
+      "link": "https://www.apple.com/newsroom/2026/09/apple-introduces-airpods-5-with-best-in-class-open-ear-active-noise-cancellation/",
+      "description": "Article URL: https://www.apple.com/newsroom/2026/09/apple-introduces-airpods-5-with-best-in-class-open-ear-active-noise-cancellation/ Comments URL: https://news.ycombinator.com/item?id=49630253 Points: 131 # Comments: 113",
+      "pubDate": "2026-09-10T01:39:24+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "a76cf7777d6d",
+      "title": "Qwen 3.8 follows GPT-5.5 Pro reasoning prefills",
+      "link": "https://gist.github.com/wsxiaoys/e0286dc6bb624ff5fdf49e7f4c528ba3",
+      "description": "Article URL: https://gist.github.com/wsxiaoys/e0286dc6bb624ff5fdf49e7f4c528ba3 Comments URL: https://news.ycombinator.com/item?id=49630026 Points: 61 # Comments: 13",
+      "pubDate": "2026-09-10T01:24:28+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "d647aa045876",
+      "title": "Procedural Graphs: Self-Evolving Execution Structures for LLM Agents",
+      "link": "https://academy.dair.ai/papers/procedural-graphs-self-evolving-execution-structures-for-llm-agents-2609.09153",
+      "description": "Article URL: https://academy.dair.ai/papers/procedural-graphs-self-evolving-execution-structures-for-llm-agents-2609.09153 Comments URL: https://news.ycombinator.com/item?id=49629868 Points: 10 # Comments: 1",
+      "pubDate": "2026-09-10T01:13:52+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "ec2ff24e3c43",
+      "title": "Why Emacs Consult async searches feel slow and how to speed them up",
+      "link": "https://www.jamescherti.com/emacs-consult-speed-async-searche-grep-ripgrep-fd-find/",
+      "description": "Article URL: https://www.jamescherti.com/emacs-consult-speed-async-searche-grep-ripgrep-fd-find/ Comments URL: https://news.ycombinator.com/item?id=49629865 Points: 16 # Comments: 1",
+      "pubDate": "2026-09-10T01:13:43+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "464ece3505b6",
+      "title": "I haven't lost a customer service fight in seven months",
+      "link": "https://www.sudomoin.com/p/consumer-claims",
+      "description": "Article URL: https://www.sudomoin.com/p/consumer-claims Comments URL: https://news.ycombinator.com/item?id=49628982 Points: 32 # Comments: 29",
+      "pubDate": "2026-09-10T00:18:38+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "2e7352d84ce7",
+      "title": "字节赢得时间，但AI在消灭时间",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzU3MjA5NDM5OQ==&mid=2247523659&idx=1&sn=5fb6056f01800fafebbb93b037d7720a&chksm=fd1b682962bbbe20b08f2e87889a487c0def7aa8fa097603073185532a9d432737e563d66aad",
+      "description": "作者 | 刘艺晨 抖音坐上了移动互联网市场的王座。野村最新研报援引QuestMobile数据称，2026年7月，抖音总使用时长首次超过微信。 字节系在中国Top 50 App中的时长份额，也从去年同期的33.6%升至40.9%；腾讯系则降至29.1%，双方差距扩大至11.8个百分点。 这并不是简单的“抖音打败微信”。 从覆盖人群的维度看，微信日活仍达到9.31亿，高于抖音的7.14亿。 抖音完成反超，既因为日活同比增长19%，也因为单个活跃用户的日均使用时长增长8%。 微信依然是覆盖范围最广的数字基础设施，抖音则正在成为最大的注意力入口。 这个数据最终建…",
+      "pubDate": "2026-09-10T00:03:27+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -39,11 +135,11 @@
       "category": "ai-news"
     },
     {
-      "id": "8439833ac3f7",
-      "title": "储能电池扩产急刹车",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NTE0ODc2Nw==&mid=2650978553&idx=1&sn=f04aa190af2c4da264f230e859a0c58c&chksm=bc9bcadafb28b140a3cb0bee28c31cf6c166f020f18a29d3764bb31eda1ac36e903c8f9abac6",
-      "description": "图片来源：视觉中国界面新闻记者 | 高菁“年初的时候就已经有风声了。” 9月7日，一位要求匿名的储能电池企业相关人士向界面新闻称，储能电池新建项目审批可能收紧的消息已传多时。 据财联社当天报道，有关部门已在摸排储能产能底数，重点涉及储能电芯等领域。 暂缓尚处规划阶段、未正式开工项目的审批和推进，已备案且在建的项目不受影响，后续有望视市场情况动态调整。 多家储能电池企业也向界面新闻证实，确有相关情况。国内某电池企业高管黄易(化名)向界面新闻透露，目前管控主要针对电池环节，新增产能将受到限制，相关部门层面的项目审批基本停止。 前述储能企业相关人士称，包括其所…",
-      "pubDate": "2026-09-09T02:02:24+08:00",
+      "id": "71176d535410",
+      "title": "数读HYROX易主：2026预计收入2.7亿欧，盈方变现3.6亿欧",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA4MjQzNDYyMQ==&mid=2650509468&idx=1&sn=4fc53e2ee6702bcfc37164281c16ad0a&chksm=8671e171c892870564f20c4a8517128b0362bf161ca15483db689853923471408267ef3f95c6",
+      "description": "备受欢迎的体能赛品牌HYROX在今天凌晨（9月9日），正式易主。 盈方体育作为曾经的控股股东，将所持有的HYROX多数股权悉数出售给L Catterton牵头的财团，完全从中退出。 除了L Catterton，该财团还包括HYROX的两位创始人Christian Toetzke、Moritz Fürste，以及Jeffrey Katzenburg联合创办的投资公司WndrCo。 交易完成后，两位创始人将合计持股51%，其他资方为小股东。 HYROX是近几年全球范围内迅猛蹿红的体能赛IP，因此交易消息一出，迅速成为行业热搜级新闻。 60%股份全卖，盈方体育…",
+      "pubDate": "2026-09-10T00:03:27+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -51,11 +147,11 @@
       "category": "ai-news"
     },
     {
-      "id": "77c2ab40b1fa",
-      "title": "关键拐点已至，中部大省“硬气”起来了",
-      "link": "https://mp.weixin.qq.com/s?__biz=Mzg2MjA5Mjc0OA==&mid=2247582613&idx=1&sn=f775a6dbef75c4e6e9d25a5b373ddf3b&chksm=cfa9241f2f916a49eb11dc5875bb53cd027f6dc7901701a4e4e723c0415763d4d1c24c8fa9c6",
-      "description": "卡位千亿级赛道近日，国内首个年产能超40万克拉的智能切磨工厂在郑州正式投产。 项目落地，“标志着我国培育钻石产业成功补齐中游切磨加工这一关键短板”。 几乎同时，河南超硬材料行业上半年经营情况出炉：7家超硬材料上市公司及新三板企业中，6家实现营业收入、净利润双增长。 其中，力量钻石营收同比增长超80%，归母净利润暴涨247.61%，领跑行业。 投资与资本市场捷报频传并非巧合。这背后，金刚石凭借其超高热导率被视为AI芯片散热的“理想材料”，有望带来千亿级市场蓝海。 而在这场新赛道竞逐中，手握全国80%人造金刚石产量的河南，已率先完成战略卡位。 这一空前机遇，…",
-      "pubDate": "2026-09-09T02:02:24+08:00",
+      "id": "541e01bce71e",
+      "title": "16.57mm？新 iPhone 药丸开孔变短了，背后是哪些关键技术？| 硬哲学",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjgzMTAwODI0MA==&mid=2652465694&idx=1&sn=b0a065abdfb52e264a2368376a27b512&chksm=9ac2fa0ed788a3ff60c4e37538e2009da8ad63eb013de46264992c9ca5cae7644d6e198d2940",
+      "description": "消费电子总习惯用更快的芯片、更多的功能来证明进步，但一件产品如何被人记住，往往取决于那些细小而具体的设计—— 材料的触感、形态的取舍，甚至按键的排布。在「硬哲学」里，爱范儿试图剥离技术和参数的外衣，探求产品设计中人性的本源。 这是「硬哲学」的第 88 篇文章。大家好，距离苹果发布会正式召开还有不到 6 个小时了。 从早前的各路爆料信息，再到发布会前一天 Spigen、Casetify、dbrand 等配件厂商堂而皇之的泄露，关于新手机我们该了解的东西基本已经了解清楚了。 不过有趣的是，在面向开发者的 beta 版本系统中，仍然藏着许多尚待挖掘的新信息。…",
+      "pubDate": "2026-09-10T00:03:27+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -63,11 +159,11 @@
       "category": "ai-news"
     },
     {
-      "id": "cad5248430b4",
-      "title": "救援队不会用灭火器，照出了中国汽车最后的短板",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTYwOTM0Nw==&mid=2650565727&idx=1&sn=193ed7fbfd13c84a0ee7e553b7389483&chksm=be4e49906209c0a068c0837a1087a9af1d90d0705273738f55548ea0f61793b0fc1749a67e84",
-      "description": "酷玩实验室原创作品一场车祸，让全世界觉得中国赛车是个“草台班子”。 国内顶级的汽车赛事之一，China GT，9月5日发生重大事故，7号与33号赛车在缠斗中失控冲出赛道，随后撞上91号赛车的侧面，后者疑似油箱被撞破，瞬间变成了一团火球，万幸的是，车手勉强保住了一条命。 作为一项对抗极其激烈的运动，赛车碰撞并不是什么稀罕事，但主办方在事故发生后的神级操作，足以载入历史。 01 闹剧式救援话说91号车爆燃之后，瘫在了赛道边上，上面的英国车手奥利·米尔罗伊几乎失去意识，没法第一时间逃生，直接被烈火包围，起火约10秒后，仍然没有任何赛道工作人员到达现场，留奥利一…",
-      "pubDate": "2026-09-09T02:02:24+08:00",
+      "id": "b204b4b95c3a",
+      "title": "存量时代，又一座城市的地铁要涨价了",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg2MjA5Mjc0OA==&mid=2247582646&idx=1&sn=39a162eb9da779e9cd49bdfcd1477653&chksm=cfaede8163c49271c36ef074af162763bdce458b17d919680afcb4d493a323fd54cf9c6b1554",
+      "description": "背后是一场“拉锯战”9月7日，备受关注的上海地铁调价听证会举行。 根据当天讨论的两套调价方案，“涨价”大概率已难以避免—— 两个方案平均每人次票价均提高约1元，涨幅接近，区别主要在于票价结构。 这是上海地铁21年来首次启动票价机制优化调整，也意味着又一座城市加入地铁“涨价”行列。 去年，重庆、昆明地铁调价就曾引发关注；广州也在酝酿之中，根据计划，今年12月前广州将完成“地铁票价机制优化”，其现行票价机制同样已沿用20年之久。 此轮调价背后，是地铁行业长期面临的“入不敷出”难题。 从各地地铁集团披露的数据看，除广州等少数城市外，大部分城市的运营高度依赖政府…",
+      "pubDate": "2026-09-10T00:03:27+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -75,11 +171,83 @@
       "category": "ai-news"
     },
     {
-      "id": "cdce67d3c7af",
-      "title": "结婚也开始“仅退款”了，还能怎么办？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzA3ODI5NDg0Mw==&mid=2654260405&idx=1&sn=3b0e4c7a28c7c23b4adb837768c672fe&chksm=85784b5914f1dfa3312f7c876b20f49cf76e7ff506c61a0673e5b21c75f6b5871942beadcbc6",
-      "description": "上个月，民政部公布了2026年二季度民政统计数据。数字看起来不算惊天动地，但如果把它和过去十几年的曲线放在一起看，就会发现，中国人的婚姻正在发生一件非常大的变化：2026年上半年，全国结婚登记327.5万对，离婚登记138.3万对。 和2025年同期相比，结婚少了26.4万对，下降7.46%；离婚却增加了5.2万对，上升3.91%。 简单计算一下，离婚登记对数相当于同期结婚登记对数的42.2%。 当然，这个42.2%绝对不能理解成“每100对夫妻最后有42对会离婚”，因为它只是两个同期登记数据之间的比例，和婚姻最终离婚概率完全是两回事。 但这个数字依然足…",
-      "pubDate": "2026-09-09T02:02:24+08:00",
+      "id": "5cdb0d2e968b",
+      "title": "Understanding the recent DDoS attack against Read the Docs",
+      "link": "https://about.readthedocs.com/blog/2026/09/2026-ddos-attack/",
+      "description": "Article URL: https://about.readthedocs.com/blog/2026/09/2026-ddos-attack/ Comments URL: https://news.ycombinator.com/item?id=49628614 Points: 81 # Comments: 23",
+      "pubDate": "2026-09-09T23:55:53+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "51f9d3682897",
+      "title": "GNU Radio in the browser",
+      "link": "https://gnuradioworld.com/",
+      "description": "Article URL: https://gnuradioworld.com/ Comments URL: https://news.ycombinator.com/item?id=49628576 Points: 94 # Comments: 14",
+      "pubDate": "2026-09-09T23:53:06+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "5a2b2b0a8401",
+      "title": "Better AI code comment detector",
+      "link": "https://entropicthoughts.com/better-ai-comment-classifier",
+      "description": "Article URL: https://entropicthoughts.com/better-ai-comment-classifier Comments URL: https://news.ycombinator.com/item?id=49628454 Points: 27 # Comments: 17",
+      "pubDate": "2026-09-09T23:45:43+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "1546ced40984",
+      "title": "Planet Labs' open satellite feed",
+      "link": "https://tech.marksblogg.com/planet-labs-open-satellite-feed.html",
+      "description": "Article URL: https://tech.marksblogg.com/planet-labs-open-satellite-feed.html Comments URL: https://news.ycombinator.com/item?id=49628429 Points: 78 # Comments: 17",
+      "pubDate": "2026-09-09T23:44:09+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "72e16b46dc6d",
+      "title": "We accidentally built a synthetic cell factory",
+      "link": "https://bnext.bio/post/we-accidentally-built-a-synthetic-cell-factory",
+      "description": "Article URL: https://bnext.bio/post/we-accidentally-built-a-synthetic-cell-factory Comments URL: https://news.ycombinator.com/item?id=49628290 Points: 48 # Comments: 3",
+      "pubDate": "2026-09-09T23:34:51+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "4ef1fa7cd057",
+      "title": "GPT-6 Astra, looped transformers, and hidden reasoning",
+      "link": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
+      "description": "Article URL: https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and Comments URL: https://news.ycombinator.com/item?id=49627370 Points: 210 # Comments: 76",
+      "pubDate": "2026-09-09T22:37:47+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "ffd999fa06f2",
+      "title": "分红险狂飙",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NTE0ODc2Nw==&mid=2650979024&idx=2&sn=3d1b643411edae3e16b1d21d4ec58375&chksm=bc62b67e2cbbbe858b3c193da4a269494c7891260394f707bfa0afe3a670764b79acaa604bac",
+      "description": "图片来源：界面图库界面新闻记者 |曾令俊“今年以来主动询问分红险的客户占了六成以上。客户算得很清楚，现在三年期定存利率不到2%，理财又不保本，分红险有确定的保底收益，还能跟着保险公司的投资业绩分红利，接受度特别高。” 周岚近日告诉界面新闻记者。 周岚是某险企广东分公司银保渠道经理，从业13年的她对保险市场的变化有着最直观的感受。 “很多客户担心利率还会继续降，想着早点锁定长期的稳健收益渠道，签单决策周期比以前短了很多。” 周岚说，上半年团队里不少代理人的分红险单件平均保费较去年同期提升了三成以上，单件保费超百万元的高净值保单也明显增多。 上市险企2026…",
+      "pubDate": "2026-09-09T22:02:27+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -87,11 +255,11 @@
       "category": "ai-news"
     },
     {
-      "id": "309ea75064fb",
-      "title": "南北经济失衡的惯性，终于被打破了",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzA3ODI5NDg0Mw==&mid=2654260405&idx=2&sn=ad525b556ee04fa9367ad4db2d76e671&chksm=851e6cf71b64e98f9aba06a267f4f9d38a8011305decb08a4f6e017629960d9b547cac0a2df6",
-      "description": "中国经济不再只有“孔雀东南飞”。长久以来，大家都有一个思维惯性：孔雀东南飞。 在宏大的中国经济版图中，这已经形成了一套固定的叙事模式：人口拼命奔赴东南沿海，南北经济失衡、东中西经济失衡，内陆的优势只有廉价劳动力、原材料，想要挣钱、挣大钱，很多人只能背井离乡，奔赴长三角、珠三角，甚至固化到上海、深圳、杭州、广州、厦门、宁波等极少数城市中。 但是，这套固化的叙事模式太单薄，无法完整表述中国经济版图的多样性和纵深性。 我从不否认，东南沿海依旧聚集高端产业链，持续吸纳外来人口，上海、深圳、杭州、广州等资源优势短时间内无法被撼动。 但我十几年来跑过了国内大大小小数…",
-      "pubDate": "2026-09-09T02:02:24+08:00",
+      "id": "77ddd9ced0bd",
+      "title": "中年人过日子不需要真相",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzU3OTU2ODY5MA==&mid=2247487876&idx=1&sn=856cdb1cb79adb9c1f4c60255a296382&chksm=fc6a15ddbb279daf4c74f0f93da82fb32c7f2fc5baf9b1e60eb7c9a8e31520be2f49c5133e3b",
+      "description": "（图/《完美陌生人》）2016年，意大利电影《完美陌生人》（Perfect Strangers）把七个中年人聚到了餐桌旁。 他们玩了一个看似坦荡的游戏：所有人把手机都放到桌子上，所有的来电、短信、邮件全部公开。 游戏开始于一句自信满满的「我们没有秘密」，却终于出轨、隐瞒、家庭裂痕的接连摊牌。 原本温馨的晚宴 ，最终在尖锐的争吵和窒息的沉默中收场。 电影上映后，「该不该看伴侣手机」也成为了被公共舆论反复咀嚼的道德难题。 往前再推十几年，冯导的电影《手机》也曾预演过这场关于婚姻信任的危机。 男主严守一在这块屏幕所编织的秘密和谎言中，一步步走向失控。 如今二十…",
+      "pubDate": "2026-09-09T22:02:27+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -99,268 +267,136 @@
       "category": "ai-news"
     },
     {
-      "id": "1d977876014d",
+      "id": "9bc664560417",
+      "title": "霸王卖蛋，茶颜关店",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg2ODg4ODU5MA==&mid=2247815310&idx=1&sn=53a62089d4a2e279dd8062a5a6601674&chksm=cfe7cab6948b795c791a4967495c34d483da2a0395ced485891c55d210f6c1266bf075ecfecb",
+      "description": "霸王茶姬的茶叶蛋，茶颜悦色的小酒馆：新茶饮行业的中年危机。 作者：史安杰@零售商业财经 原创出品9月7日，霸王茶姬在上海7家门店上架白雾红尘茶叶蛋。 用招牌大红袍茶汤慢煮，单点5元，买杯正价饮品加2.5元就能换购。 同一天晚上，茶颜悦色发布公开信，宣布旗下昼夜诗酒茶艺文小酒馆将在10月31日前全部关闭。 这是继7月小神闲茶馆全线撤店后，茶颜家族半年内关停的第二个子品牌。 一个往收银台旁摆煮蛋锅，一个从办公楼里拆酒馆招牌。 两家缠斗十余年的品牌，一个激进扩品，一个主动收缩。 有人把这看作新茶饮下半场的开幕：上半场比开店速度，下半场比单店效率。 但问题在于，…",
+      "pubDate": "2026-09-09T22:02:27+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "2a9a4f3cd8ec",
+      "title": "钱大妈二次递表：对赌压力缓了一步，增长难题仍在",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzI1OTIyMTg0MQ==&mid=2247534425&idx=1&sn=e40900bb9e38b6a968085cd5ae2e027e&chksm=ebb1265793aaf333af2b508b435594ef2fd94c80560b1948df4874a1e0e80d7962b29ce7e918",
+      "description": "▲这是灵兽第1876篇原创文章钱大妈真正需要回答的，仍是增长、加盟商以及全国化扩张这几道题。 作者/十里ID/lingshouke18月21日，钱大妈再次向港交所递交上市申请，距离上一次递表失效仅一个月。 “钱大妈急了”这是对其此举最多的评论。但实际上，这是市场对钱大妈再次递表关注度较高。 原本临近的对赌回购压力已经获得进一步缓冲。根据新版招股书，相关股份回购开始日期已延至2028年1月1日。 （最早约定2024年12月31日前完成上市，未达成后于2025年9月延后至2027年1月1日；二次递表后，最新回购时间已延长到2028年1月1日。‌‌）不过，上市…",
+      "pubDate": "2026-09-09T22:02:27+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "ec0be571e8cc",
+      "title": "西安半导体：依赖三星，不止三星 | 重新发现西安",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA3MjIzMzg0Mw==&mid=2649986951&idx=1&sn=22186c537627bca82ae2ce2bccd8f2ba&chksm=866abf06c6aea3c416dafa46bdf6c0279f37e3efc1c9e33c9c0c19e9c69ac3106d37a7484044",
+      "description": "十年时间，西安半导体产业的规模赶上了产业名片头牌航空航天制造业。 统计数据显示，西安电子器件制造业——城市统计口径中与半导体制造最为接近工业门类—— 的营业收入，由2014年的108亿元增至2024年的910亿元。 十年前，这一规模仅相当于航空航天制造的四分之一，如今两者已经处于同一量级。 而这背后，三星是西安半导体崛起的支点，也让它更早开始思考建立规模之后，更深层次的产业链布局。 以重大外资项目的招商引资拉起一条全新的产业链，是那个时期不少中国城市发展新兴产业的重要路径。 理想化的设想是：先借跨国公司的资本、技术和订单进入全球产业链，再在更长周期里补本…",
+      "pubDate": "2026-09-09T22:02:27+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "cc50efc6763b",
+      "title": "Tailwind Labs is joining Shopify",
+      "link": "https://tailwindcss.com/blog/tailwind-is-joining-shopify",
+      "description": "Article URL: https://tailwindcss.com/blog/tailwind-is-joining-shopify Comments URL: https://news.ycombinator.com/item?id=49626190 Points: 637 # Comments: 266",
+      "pubDate": "2026-09-09T21:27:11+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "37e507421ba7",
+      "title": "这回，AI真的打过来了",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTUzNDA4Mg==&mid=2650603464&idx=1&sn=ea085b3b744de1966f586a5f1c2d9a78&chksm=becafd4e2f662b183103e7a6b5975f8d0c02b408c0d1d4bcb09c0563789f98c4360b56a7551e",
+      "description": "最近有几件事情刚好值得放在一起说。8月26日，即梦AI正式推出首个影视内容厂牌“即梦片场”，面向影视公司、专业影视团队与AI内容创作者开放长篇项目征集，重点扶持不低于90分钟的电影项目和剧集，其中电影项目以院线或网络发行为目标。 显而易见，即梦并不甘于只做一个“AI工具”，而更进一步朝向“内容制作者”迈进。 几天之后的8月31日，芒果TV出品的AIGC剧集《后西游记》在湖南卫视+芒果TV开播，成为国内首部进入卫视黄金档的AIGC长剧。 30集，每集45分钟，这是完整的长剧逻辑和制作规模，暂且不说剧集内容能否让人满意，《后西游记》至少证明了AI内容进入传统…",
+      "pubDate": "2026-09-09T20:02:31+08:00",
+      "source": {
+        "id": "wasi-reader",
+        "name": "瓦斯阅读"
+      },
+      "category": "ai-news"
+    },
+    {
+      "id": "775dcccdb09c",
+      "title": "Roame (YC S23) Is Hiring Viral Content Editor",
+      "link": "https://www.ycombinator.com/companies/roame/jobs/KuVVqSh-content-systems-builder-editor",
+      "description": "Article URL: https://www.ycombinator.com/companies/roame/jobs/KuVVqSh-content-systems-builder-editor Comments URL: https://news.ycombinator.com/item?id=49625110 Points: 0 # Comments: 0",
+      "pubDate": "2026-09-09T20:01:38+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "46815a9fce93",
+      "title": "How I advertise malicious software on Google Ads",
+      "link": "https://xlii.space/eng/malicious-software-on-google-ads/",
+      "description": "Article URL: https://xlii.space/eng/malicious-software-on-google-ads/ Comments URL: https://news.ycombinator.com/item?id=49624856 Points: 293 # Comments: 174",
+      "pubDate": "2026-09-09T19:43:21+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "0a27670444c9",
+      "title": "Desert Ant Labs: local, fast models that run on device",
+      "link": "https://desertant.com/blog/introducing-desert-ant-labs/",
+      "description": "Article URL: https://desertant.com/blog/introducing-desert-ant-labs/ Comments URL: https://news.ycombinator.com/item?id=49624823 Points: 309 # Comments: 83",
+      "pubDate": "2026-09-09T19:39:46+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "93334b7607d9",
+      "title": "Quoting Terence Tao",
+      "link": "https://simonwillison.net/2026/Sep/9/terence-tao/",
+      "description": "I wrote recently about how the collection of good, fruitful open problems is now being mined in a non-renewable fashion, leading to the potential scenario of these problems becoming scarce. [...] We have now seen that even the rumor of someone working on a problem can trigger a m…",
+      "pubDate": "2026-09-09T08:20:17+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "33eea6358b54",
       "title": "On the Navier–Stokes Millennium Prize Problem",
-      "link": "https://openai.com/index/navier-stokes-solution/",
-      "description": "Article URL: https://openai.com/index/navier-stokes-solution/ Comments URL: https://news.ycombinator.com/item?id=49613262 Points: 551 # Comments: 388",
-      "pubDate": "2026-09-09T01:13:21+08:00",
+      "link": "https://simonwillison.net/2026/Sep/8/on-navier-stokes/",
+      "description": "On the Navier–Stokes Millennium Prize Problem Impressive result from OpenAI, who used an unreleased model to produce a resolution to the Navier–Stokes existence and smoothness problem, one of the seven Millennium Prize Problems that have been subject to a $1,000,000 prize since M…",
+      "pubDate": "2026-09-09T07:55:12+08:00",
       "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
       },
       "category": "ai-agent"
     },
     {
-      "id": "ab100b8a617b",
-      "title": "Show HN: LLM Attention Visualization",
-      "link": "https://ishamf.dev/p/llm-attention-visualizer/",
-      "description": "Article URL: https://ishamf.dev/p/llm-attention-visualizer/ Comments URL: https://news.ycombinator.com/item?id=49613068 Points: 41 # Comments: 9",
-      "pubDate": "2026-09-09T00:59:41+08:00",
+      "id": "78524e1fb74f",
+      "title": "Introducing ChatGPT Images 2.5",
+      "link": "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/",
+      "description": "Introducing ChatGPT Images 2.5 OpenAI's image generation models are apparently used \"more than 3 billion images across ChatGPT Images and the GPT‑Image models in the API\". This latest release improves their instruction-following ability across multiple turns, responds faster, and…",
+      "pubDate": "2026-09-09T06:46:33+08:00",
       "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
       },
       "category": "ai-agent"
-    },
-    {
-      "id": "634addfb7264",
-      "title": "Connecting the Machines",
-      "link": "https://herdr.dev/blog/connecting-the-machines/",
-      "description": "Article URL: https://herdr.dev/blog/connecting-the-machines/ Comments URL: https://news.ycombinator.com/item?id=49612818 Points: 38 # Comments: 15",
-      "pubDate": "2026-09-09T00:43:55+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "e165e82fdafe",
-      "title": "Y Combinator Early Access Network",
-      "link": "https://events.ycombinator.com/yc-early-access-fall-26",
-      "description": "Article URL: https://events.ycombinator.com/yc-early-access-fall-26 Comments URL: https://news.ycombinator.com/item?id=49612635 Points: 38 # Comments: 28",
-      "pubDate": "2026-09-09T00:31:01+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "8e63610c2955",
-      "title": "LG TVs caught spying even when offline or on standby",
-      "link": "https://www.theverge.com/tech/991190/lg-tv-spying-standby-recording-wi-fi-scanning-gamers-nexus",
-      "description": "Article URL: https://www.theverge.com/tech/991190/lg-tv-spying-standby-recording-wi-fi-scanning-gamers-nexus Comments URL: https://news.ycombinator.com/item?id=49612329 Points: 279 # Comments: 157",
-      "pubDate": "2026-09-09T00:07:08+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "d568f0e4b0c6",
-      "title": "C*: Unifying Programming and Verification in C",
-      "link": "https://arxiv.org/abs/2504.02246",
-      "description": "Article URL: https://arxiv.org/abs/2504.02246 Comments URL: https://news.ycombinator.com/item?id=49612191 Points: 41 # Comments: 29",
-      "pubDate": "2026-09-08T23:56:56+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "812c97535fb9",
-      "title": "Disappointed Optimists",
-      "link": "https://cwodtke.com/disappointed-optimists/",
-      "description": "Article URL: https://cwodtke.com/disappointed-optimists/ Comments URL: https://news.ycombinator.com/item?id=49611549 Points: 44 # Comments: 2",
-      "pubDate": "2026-09-08T23:13:56+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "cb9d5807c71a",
-      "title": "Reverse engineering the 2008 LogiCola, a logic drill program",
-      "link": "https://logicola.org/blog/the-new-logicola",
-      "description": "Article URL: https://logicola.org/blog/the-new-logicola Comments URL: https://news.ycombinator.com/item?id=49611329 Points: 17 # Comments: 2",
-      "pubDate": "2026-09-08T23:00:43+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "2ce01404d80f",
-      "title": "Google DeepMind Releases AlphaGenome Atlas",
-      "link": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
-      "description": "Article URL: https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/ Comments URL: https://news.ycombinator.com/item?id=49611251 Points: 335 # Comments: 81",
-      "pubDate": "2026-09-08T22:55:45+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "e57f111ef077",
-      "title": "ZX Spectrum: Experimenting with 1-Bit Sound",
-      "link": "https://bumbershootsoft.wordpress.com/2026/09/05/zx-spectrum-experimenting-with-1-bit-sound/",
-      "description": "Article URL: https://bumbershootsoft.wordpress.com/2026/09/05/zx-spectrum-experimenting-with-1-bit-sound/ Comments URL: https://news.ycombinator.com/item?id=49611230 Points: 62 # Comments: 19",
-      "pubDate": "2026-09-08T22:54:29+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "66c10c1bec5a",
-      "title": "Benchmarking Qwen3.8 27B quantizations: 4-bit holds up, 1-bit collapses",
-      "link": "https://quesma.com/blog/qwen38-27b-quantizations-benchmarked/",
-      "description": "Article URL: https://quesma.com/blog/qwen38-27b-quantizations-benchmarked/ Comments URL: https://news.ycombinator.com/item?id=49611128 Points: 122 # Comments: 73",
-      "pubDate": "2026-09-08T22:49:19+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "4e7e39773cd2",
-      "title": "The two Christian saints who are the Buddha",
-      "link": "https://signoregalilei.com/2026/08/30/the-two-christian-saints-who-are-secretly-the-buddha/",
-      "description": "Article URL: https://signoregalilei.com/2026/08/30/the-two-christian-saints-who-are-secretly-the-buddha/ Comments URL: https://news.ycombinator.com/item?id=49611051 Points: 138 # Comments: 76",
-      "pubDate": "2026-09-08T22:44:25+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "fba616c3d1a8",
-      "title": "DHS 'Predictive Policing' Unit Is Analyzing Americans' Financial Habits",
-      "link": "https://www.404media.co/a-secretive-dhs-predictive-policing-unit-is-analyzing-americans-financial-habits-and-pulling-them-over/",
-      "description": "Article URL: https://www.404media.co/a-secretive-dhs-predictive-policing-unit-is-analyzing-americans-financial-habits-and-pulling-them-over/ Comments URL: https://news.ycombinator.com/item?id=49610988 Points: 248 # Comments: 119",
-      "pubDate": "2026-09-08T22:40:30+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "8ce22404e628",
-      "title": "Paramount Caught Using 'Astroturf' Group to Drum Up Fake Support for Merger",
-      "link": "https://www.techdirt.com/2026/09/08/paramount-caught-using-astroturf-group-to-drum-up-fake-support-for-merger/",
-      "description": "Article URL: https://www.techdirt.com/2026/09/08/paramount-caught-using-astroturf-group-to-drum-up-fake-support-for-merger/ Comments URL: https://news.ycombinator.com/item?id=49610900 Points: 244 # Comments: 68",
-      "pubDate": "2026-09-08T22:33:52+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "f0e27f432f48",
-      "title": "AlphaGenome Atlas predictive map of every DNA letter change in the human genome",
-      "link": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
-      "description": "Article URL: https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/ Comments URL: https://news.ycombinator.com/item?id=49610641 Points: 59 # Comments: 8",
-      "pubDate": "2026-09-08T22:14:15+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "46f3c1d61241",
-      "title": "I-have-ADHD: A skill to stop coding agents from burying the answer",
-      "link": "https://github.com/ayghri/i-have-adhd",
-      "description": "Article URL: https://github.com/ayghri/i-have-adhd Comments URL: https://news.ycombinator.com/item?id=49610631 Points: 148 # Comments: 117",
-      "pubDate": "2026-09-08T22:13:26+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "2fed6615f132",
-      "title": "不能练的健身房，可能是中国酒店业体验提升的下一个重点｜有点意思",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzA4MjQzNDYyMQ==&mid=2650509450&idx=1&sn=726c6d672a883097f35e0d3a72516a74&chksm=86514b315b04292212b5b0e7f82b88330045bdcd780606e276fa87885064b980bad2bc1da45e",
-      "description": "「有点意思」是刘易斯在懒熊体育分享他的独特观察的专栏。我的一个朋友在美国拍摄了一段连锁酒店的健身房视频，给我发了过来。 视频中没有泳池、落地窗，也没有成排的高端器械。房间不大，灯光甚至有些朴素。 他的镜头依次扫过跑步机、椭圆机、卧式单车，两套绳索训练设备，一张训练凳，以及少量自由重量、药球、弹力带和垫子。 它和豪华毫无关系，甚至有些简陋，却能让一个常年训练的人一眼就知道：这里能练。 一位有经验的训练者可以在这里完成推、拉、蹲、髋伸和核心训练，再加上一段有氧。 器械品牌不是重点，空间大小也不是重点。重要的是，这间房围绕人的动作来配置，而不是围绕一张采购清单…",
-      "pubDate": "2026-09-08T22:02:28+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "069676305ba4",
-      "title": "AI驱动8月进出口高增，贸易保护主义或成后续“逆风”",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NTE0ODc2Nw==&mid=2650978528&idx=2&sn=5f39b5838edda269872fe4e2335c460d&chksm=bcb541f21151edccb14289acf9ed325d97905fe6d8c24a6c3f48da139def214f187290cd3db9",
-      "description": "2026年9月8日，江苏太仓港码头，大批集装箱有序堆放静待出港。 图片来源：CFP记者 王珍海关总署周二发布数据，以美元计，8月，中国出口金额同比上涨25.0%，增速较上月加快1.1个百分点；进口同比上涨28.2%，较上月加快0.6个百分点。 “全球PMI回暖、AI产业仍处于极高景气区间、新能源汽车出口维持高增以及涨价因素继续对出口带来支撑。” 中国银河证券首席宏观分析师张迪对界面新闻表示，8月全球制造业采购经理人指数（PMI）升至52.3%，带动中国PMI新出口订单指数回升0.5个百分点至50.1%。 从进口看，8月进口金额达2823.56亿美元，连续…",
-      "pubDate": "2026-09-08T22:02:28+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "96e1b1059378",
-      "title": "“神一阵鬼一阵”的《早春晴朗》，天天挨骂冤吗？",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5ODMzMDMyMw==&mid=2654911431&idx=1&sn=59b87affdbed6ee4f8de9db1004cdc25&chksm=bc10bbda66e3b4c207ac50d97b3ced04746c31c14c067e06208993868a27c40a3120f871f5bb",
-      "description": "《早春晴朗》的冰火两重天，折射出的是，曾经往往被认为是一个整体的“偶像剧女性受众”已经分裂，成了无法调和的不同人群。 但我们却难以想象偶像剧故事“下一个阶段”的样子。作者 | 贾小凡编辑 | Felicia题图 |《早春晴朗》国产偶像剧现在有三种命运。 第一种，糊得无人问津，没人知道它拍过，也没人知道它播过。 第二种，烂得石破天惊，全网都往死里吐槽和嘲讽，产出了诸如《我的人间烟火》的“白粥”这样的爆梗。 第三种，优缺点都很明显，骂声高举高打，但偷偷爱看的人我行我素。 比如自开播来就频频引发争议，但热度水涨船高的《早春晴朗》。 广告行业职场戏虚假，男女主是…",
-      "pubDate": "2026-09-08T22:02:28+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
-    },
-    {
-      "id": "3ffc81ecc281",
-      "title": "DaVinci Resolve 21.1",
-      "link": "https://www.blackmagicdesign.com/media/release/20260908-03",
-      "description": "Article URL: https://www.blackmagicdesign.com/media/release/20260908-03 Comments URL: https://news.ycombinator.com/item?id=49610181 Points: 280 # Comments: 113",
-      "pubDate": "2026-09-08T21:36:53+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "677366c88d97",
-      "title": "Show HN: Copperhead – Hardware as Fast as Software",
-      "link": "https://copperhead.sh/",
-      "description": "Article URL: https://copperhead.sh/ Comments URL: https://news.ycombinator.com/item?id=49610059 Points: 166 # Comments: 61",
-      "pubDate": "2026-09-08T21:26:45+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "a3d4339d3fe7",
-      "title": "AI越火，手机、电脑越贵：一场被「抢」出来的涨价潮",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzI3OTEwMDQwNw==&mid=2649970050&idx=1&sn=c9f1b16a4ebfa30d9728e6e1b9a558be&chksm=f2c9d72f57a0347b9fccc0c2367486c8c73fea4f44a6dbb433ed8f44c1f0cc429c9bfce519e4",
-      "description": "「核心提示」这个秋天，从千元机到高端轻薄本，价格正在集体上探。 而这轮涨价，可能才刚刚开始。作者 | 高宇哲编辑 | 刘杨9月本是开学季选购数码“三件套”的促销窗口，但今年的秋季新品季，却以一连串刷新纪录的高价开场。 9月7日，华为、小米同日亮出秋季旗舰，新品定价一个比一个高。 两天后登场的苹果新机，售价也被普遍预期继续上探。新品越发越贵，成了这个秋天最直观的信号。 而这远不止于聚光灯下的旗舰。9月1日起，华为、小米、荣耀等多个手机品牌，上调在售机型的价格，涨幅从百元到千元不等。 电脑端也同步跟进，惠普、华硕等品牌纷纷调价，个别品牌产品今年以来累计最高涨…",
-      "pubDate": "2026-09-08T20:02:26+08:00",
-      "source": {
-        "id": "wasi-reader",
-        "name": "瓦斯阅读"
-      },
-      "category": "ai-news"
     },
     {
       "id": "af3eb01e6111",
@@ -692,42 +728,6 @@
       "link": "https://simonwillison.net/2026/Sep/1/python-315-rc-2/",
       "description": "Python 3.15.0 candidate 2 is here! Hugo van Kemenade (release manager for Python 3.14 and 3.15) announces the final release candidate for Python 3.15, scheduled for release in October: Entering the release candidate phase, only reviewed code changes which are clear bug fixes are…",
       "pubDate": "2026-09-01T22:59:18+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "bf3e1e0703c0",
-      "title": "Introducing wrapture",
-      "link": "https://simonwillison.net/2026/Aug/31/introducing-wrapture/",
-      "description": "Introducing wrapture New from Graham Dumpleton (of wrapt, mod_wsgi, and New Relic's Python agent fame), who describes Wrapture as taking the monkeypatching ideas from wrapt and extending them to apply to testing and tracing at the same time. Wrapture (full documentation here) mak…",
-      "pubDate": "2026-09-01T07:59:36+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "3bbd285f29ae",
-      "title": "Quoting Andrew Digby",
-      "link": "https://simonwillison.net/2026/Aug/31/andrew-digby/",
-      "description": "325 #kakapo! The chicks from this year's record breeding season are now juveniles and so have been added to the population. In 1995 there were just 51 kākāpō left. Recovery of critically endangered species is possible with sustained effort. — Andrew Digby, providing the best news…",
-      "pubDate": "2026-09-01T06:25:02+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "ac6e7e3c37d7",
-      "title": "Understanding ChatGPT Work",
-      "link": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
-      "description": "OpenAI announced ChatGPT Work on July 9th, and have been furiously iterating on it ever since. It is an extraordinarily confusing and very powerful product. Here's what I've figured out about it so far. ChatGPT Work is actually two products The more interesting version of ChatGPT…",
-      "pubDate": "2026-08-31T07:59:47+08:00",
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
