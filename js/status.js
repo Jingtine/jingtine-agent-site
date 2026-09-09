@@ -1,122 +1,137 @@
-/**
- * status.js — Render website status dashboard from public/data/status.json
- *
- * SECURITY: All data uses textContent. No innerHTML for external content.
- */
+/** Render public GitHub data with the generated local status as a fallback. */
 (function () {
-  function loadStatus() { fetch('public/data/status.json')
-    .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
-    .then(function (data) {
-      renderDashboard(data);
-    })
-    .catch(function () {
-      var el = document.getElementById('status-dashboard');
-      el.textContent = '';
-      var p = document.createElement('p');
-      p.setAttribute('style', 'text-align:center;color:var(--color-text-muted);padding:24px;');
-      p.textContent = 'Failed to load status.';
-      el.appendChild(p);
-      var retry = document.createElement('button');
-      retry.className = 'btn'; retry.textContent = '重试';
-      retry.addEventListener('click', loadStatus); el.appendChild(retry);
+  var GITHUB_USER = 'Jingtine';
+  var API_ROOT = 'https://api.github.com/users/' + GITHUB_USER;
+
+  function fetchJSON(url) {
+    return fetch(url).then(function (response) {
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      return response.json();
     });
   }
-  loadStatus();
 
-  function renderDashboard(data) {
-    var container = document.getElementById('status-dashboard');
-    container.textContent = '';
-    if (!data || !data.build || !data.content || !data.quality) {
-      container.textContent = '暂无完整状态数据。';
-      return;
-    }
-
-    // Overview bar
-    container.appendChild(createOverview(data));
-
-    // 2x2 grid: Build, Content, Quality, Services
-    var grid = document.createElement('div');
-    grid.className = 'status-grid';
-    grid.appendChild(createCard('Build', [['Version', data.build.version || ''], ['Generated', data.build.generated || '']]));
-    grid.appendChild(createCard('Content', [['Blog', data.content.blogArticles + ' articles'], ['Research', data.content.researchPapers + ' papers'], ['Wiki', data.content.wikiPages + ' pages']]));
-    grid.appendChild(createCard('Quality', [['Result', data.quality.result || ''], ['Last Validated', data.quality.lastValidation || '']]));
-    grid.appendChild(createServicesCard(data.services));
-    container.appendChild(grid);
-    if (window.SiteMotion) window.SiteMotion.revealNewElements(container);
+  function element(tag, className, text) {
+    var node = document.createElement(tag);
+    if (className) node.className = className;
+    if (typeof text === 'string') node.textContent = text;
+    return node;
   }
 
-  function createOverview(data) {
-    var bar = document.createElement('div');
-    bar.className = 'contact-card';
-    bar.setAttribute('style', 'padding:20px 28px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;');
+  function safeGitHubLink(url, text, className) {
+    var link = element('a', className, text);
+    try {
+      var parsed = new URL(url);
+      if (parsed.protocol === 'https:' && parsed.hostname === 'github.com') link.href = parsed.href;
+    } catch (error) {
+      link.removeAttribute('href');
+    }
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    return link;
+  }
 
-    var left = document.createElement('div');
+  function loadStatus() {
+    var container = document.getElementById('status-dashboard');
+    container.textContent = '';
+    container.appendChild(element('p', 'status-loading', 'Loading status...'));
 
-    var badge = document.createElement('span');
-    badge.textContent = data.status === 'passing' ? 'System Healthy' : 'Degraded';
-    badge.className = 'article-category';
-    badge.setAttribute('style', 'font-size:13px;padding:4px 14px;');
+    fetchJSON('public/data/status.json').then(function (data) {
+      if (!data || !data.build || !data.content || !data.quality) {
+        container.textContent = '暂无完整状态数据。';
+        return;
+      }
+      renderDashboard(container, data);
+    }).catch(function () {
+      container.textContent = '';
+      container.appendChild(element('p', 'status-loading', 'Failed to load status.'));
+      var retry = element('button', 'btn', '重试');
+      retry.type = 'button';
+      retry.addEventListener('click', loadStatus);
+      container.appendChild(retry);
+    });
+  }
 
-    var ver = document.createElement('span');
-    ver.setAttribute('style', 'margin-left:12px;font-size:13px;color:var(--color-text-muted);font-family:var(--font-mono);');
-    ver.textContent = 'v' + (data.build.version || '');
+  function renderDashboard(container, siteData) {
+    container.textContent = '';
+    var github = element('div', 'github-dashboard');
+    github.appendChild(element('p', 'status-loading', 'Loading GitHub data...'));
+    container.appendChild(github);
+    container.appendChild(createSiteHealth(siteData));
 
-    left.appendChild(badge);
-    left.appendChild(ver);
+    Promise.all([
+      fetchJSON(API_ROOT),
+      fetchJSON(API_ROOT + '/repos?per_page=100&sort=updated')
+    ]).then(function (results) {
+      renderGitHub(github, results[0], results[1]);
+      if (window.SiteMotion) window.SiteMotion.revealNewElements(container);
+    }).catch(function () {
+      github.textContent = '';
+      github.appendChild(element('h2', 'status-section-title', 'GitHub Stats'));
+      github.appendChild(element('p', 'github-unavailable', 'GitHub 数据暂时不可用。'));
+      github.appendChild(safeGitHubLink('https://github.com/' + GITHUB_USER, 'View @' + GITHUB_USER + ' on GitHub \u2197', 'github-profile-link'));
+    });
+  }
 
-    var right = document.createElement('div');
-    right.setAttribute('style', 'display:flex;gap:20px;font-size:13px;color:var(--color-text-muted);');
+  function renderGitHub(container, profile, repositories) {
+    container.textContent = '';
+    var header = element('div', 'github-heading');
+    var titleGroup = element('div');
+    titleGroup.appendChild(element('div', 'section-label', 'Public activity'));
+    titleGroup.appendChild(element('h2', 'status-section-title', 'GitHub Stats'));
+    header.appendChild(titleGroup);
+    header.appendChild(safeGitHubLink(profile.html_url, '@' + (profile.login || GITHUB_USER) + ' \u2197', 'github-profile-link'));
+    container.appendChild(header);
 
-    var gen = document.createElement('span');
-    gen.textContent = 'Generated: ' + (data.build.generated || '');
-    var checks = document.createElement('span');
-    checks.textContent = (data.quality.result || '');
+    var ownedRepositories = Array.isArray(repositories) ? repositories.filter(function (repo) {
+      return repo && !repo.fork && !repo.archived;
+    }) : [];
+    var stars = ownedRepositories.reduce(function (total, repo) {
+      return total + (Number(repo.stargazers_count) || 0);
+    }, 0);
+    var stats = [
+      ['repositories', 'Repositories', Number(profile.public_repos) || 0],
+      ['stars', 'Stars', stars],
+      ['followers', 'Followers', Number(profile.followers) || 0],
+      ['following', 'Following', Number(profile.following) || 0]
+    ];
+    var grid = element('div', 'github-stat-grid');
+    stats.forEach(function (stat) {
+      var card = element('div', 'github-stat');
+      card.setAttribute('data-github-stat', stat[0]);
+      card.appendChild(element('strong', '', String(stat[2])));
+      card.appendChild(element('span', '', stat[1]));
+      grid.appendChild(card);
+    });
+    container.appendChild(grid);
 
-    right.appendChild(gen);
-    right.appendChild(checks);
+    if (ownedRepositories.length) {
+      container.appendChild(element('h3', 'github-repos-title', 'Recently updated'));
+      var list = element('div', 'github-repo-list');
+      ownedRepositories.slice(0, 4).forEach(function (repo) {
+        var card = element('article', 'github-repo-card');
+        card.appendChild(safeGitHubLink(repo.html_url, repo.name || 'Untitled repository', 'github-repo-name'));
+        card.appendChild(element('p', '', repo.description || 'Public GitHub repository'));
+        var meta = element('div', 'github-repo-meta');
+        meta.appendChild(element('span', '', repo.language || 'Code'));
+        meta.appendChild(element('span', '', '\u2605 ' + (Number(repo.stargazers_count) || 0)));
+        card.appendChild(meta);
+        list.appendChild(card);
+      });
+      container.appendChild(list);
+    }
+  }
 
-    bar.appendChild(left);
-    bar.appendChild(right);
+  function createSiteHealth(data) {
+    var bar = element('div', 'site-health');
+    var status = element('span', 'site-health-state', data.status === 'passing' ? 'Site healthy' : 'Site degraded');
+    status.setAttribute('data-state', data.status === 'passing' ? 'passing' : 'degraded');
+    bar.appendChild(status);
+    bar.appendChild(element('span', '', data.content.blogArticles + ' articles'));
+    bar.appendChild(element('span', '', data.content.wikiPages + ' wiki pages'));
+    bar.appendChild(element('span', '', data.quality.result || 'Checks unavailable'));
+    bar.appendChild(element('span', '', 'Updated ' + (data.build.generated || '')));
     return bar;
   }
 
-  function createCard(title, rows) {
-    var card = document.createElement('div');
-    card.className = 'home-skill-card';
-
-    var h3 = document.createElement('h3');
-    h3.textContent = title;
-    card.appendChild(h3);
-
-    var list = document.createElement('ul');
-    list.className = 'home-skill-list';
-    for (var i = 0; i < rows.length; i++) {
-      var li = document.createElement('li');
-      li.textContent = rows[i][0] + ': ' + rows[i][1];
-      list.appendChild(li);
-    }
-    card.appendChild(list);
-    return card;
-  }
-
-  function createServicesCard(services) {
-    var card = document.createElement('div');
-    card.className = 'home-skill-card';
-
-    var h3 = document.createElement('h3');
-    h3.textContent = 'Services';
-    card.appendChild(h3);
-
-    var list = document.createElement('ul');
-    list.className = 'home-skill-list';
-    var keys = Object.keys(services || {});
-    for (var i = 0; i < keys.length; i++) {
-      var svc = services[keys[i]];
-      var li = document.createElement('li');
-      li.textContent = (svc.enabled ? '\u2713' : '\u2717') + ' ' + (svc.name || keys[i]);
-      list.appendChild(li);
-    }
-    card.appendChild(list);
-    return card;
-  }
+  loadStatus();
 })();

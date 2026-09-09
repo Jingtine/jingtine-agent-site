@@ -74,6 +74,25 @@ test('Reader filtering, keyboard source and source links',async({page})=>{
   await page.locator('#source-clear').click();await cards.first().focus();await page.keyboard.press('Enter');
   await expect(page.locator('#reader-list a').first()).toHaveAttribute('href',/^https:\/\//);
 });
+test('Status presents public GitHub activity and safe repository links',async({page})=>{
+  await page.route('https://api.github.com/users/Jingtine',route=>route.fulfill({json:{
+    login:'Jingtine',name:'Jingtine',html_url:'https://github.com/Jingtine',avatar_url:'https://avatars.githubusercontent.com/u/1?v=4',
+    public_repos:12,followers:34,following:5,public_gists:0,bio:null,blog:'',location:null,company:null,created_at:'2020-01-01T00:00:00Z',updated_at:'2026-09-01T00:00:00Z'
+  }}));
+  await page.route('**/api.github.com/users/Jingtine/repos?**',route=>route.fulfill({json:[
+    {id:1,name:'jingtine-agent-site',full_name:'Jingtine/jingtine-agent-site',html_url:'https://github.com/Jingtine/jingtine-agent-site',description:'Personal knowledge archive',fork:false,archived:false,stargazers_count:7,forks_count:2,language:'JavaScript',updated_at:'2026-09-09T00:00:00Z'},
+    {id:2,name:'research-notes',full_name:'Jingtine/research-notes',html_url:'https://github.com/Jingtine/research-notes',description:null,fork:false,archived:false,stargazers_count:4,forks_count:0,language:'Python',updated_at:'2026-08-30T00:00:00Z'}
+  ]}));
+  await page.goto('/status.html');
+  await expect(page.getByRole('heading',{name:'GitHub Stats',level:2})).toBeVisible();
+  await expect(page.locator('[data-github-stat="repositories"]')).toContainText('12');
+  await expect(page.locator('[data-github-stat="stars"]')).toContainText('11');
+  const statBackgrounds=await page.locator('.github-stat').evaluateAll(cards=>cards.map(card=>getComputedStyle(card).backgroundColor));
+  expect(new Set(statBackgrounds).size).toBeGreaterThanOrEqual(3);
+  const project=page.getByRole('link',{name:/jingtine-agent-site/});
+  await expect(project).toHaveAttribute('href','https://github.com/Jingtine/jingtine-agent-site');
+  await expect(project).toHaveAttribute('rel','noopener noreferrer');
+});
 for(const kind of ['empty','failure']) test(`Status and Reader ${kind} states`,async({page})=>{
   for(const [route,file,target] of [['status','status','#status-dashboard'],['reader','rss-items','#source-cards']]){
     await page.route('**/public/data/'+file+'.json',r=>kind==='failure'?r.abort():r.fulfill({json:file==='status'?{}:{items:[]}}));
