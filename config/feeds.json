@@ -25,5 +25,14 @@
     "enabled": true,
     "public": true,
     "description": "\u7cbe\u9009 AI \u8d44\u8baf\u805a\u5408"
+  },
+  {
+    "id": "zylatent",
+    "name": "\u5bd2\u67f3\u522b\u82d1",
+    "url": "https://zylatent.com/rss.xml",
+    "category": "classmate-blog",
+    "enabled": true,
+    "public": true,
+    "description": "\u67f3\u542b\u77e5\u7684\u4e2a\u4eba\u535a\u5ba2\uff08\u6211\u7684\u540c\u5b66\uff09"
   }
 ]

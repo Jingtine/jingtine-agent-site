@@ -3,6 +3,7 @@
   "feeds": [
     "hn-frontpage",
     "simonw-blog",
-    "wasi-reader"
+    "wasi-reader",
+    "zylatent"
   ]
 }

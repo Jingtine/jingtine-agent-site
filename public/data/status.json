@@ -1,9 +1,9 @@
 {
   "version": "0.10.0",
-  "generated": "2026-07-18T23:37:57.336139+08:00",
+  "generated": "2026-09-09T23:26:19.420201+08:00",
   "build": {
     "version": "0.10.0",
-    "generated": "2026-07-18 23:37"
+    "generated": "2026-09-09 23:26"
   },
   "content": {
     "blogArticles": 9,
@@ -13,7 +13,7 @@
   "quality": {
     "result": "10/10 passed",
     "passing": true,
-    "lastValidation": "2026-07-18 23:37"
+    "lastValidation": "2026-09-09 23:26"
   },
   "services": {
     "blog": {

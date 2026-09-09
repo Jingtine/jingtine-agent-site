@@ -198,6 +198,7 @@
   var CATEGORY_MAP = {
     'ai-agent': 'AI Agent',
     'ai-news': 'AI News',
+    'classmate-blog': '\u540c\u5b66\u535a\u5ba2',
     'software-engineering': 'Software Engineering',
     'product-thinking': 'Product Thinking'
   };

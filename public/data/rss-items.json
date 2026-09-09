@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-09T03:17:27.681670+08:00",
-  "total": 60,
+  "generated": "2026-09-09T23:36:15.113274+08:00",
+  "total": 112,
   "items": [
     {
       "id": "259c8fd88c0f",
@@ -423,6 +423,18 @@
       "category": "ai-agent"
     },
     {
+      "id": "76a6407bc0d1",
+      "title": "Dog-Map：我给自己做的一张路线地图",
+      "link": "https://zylatent.com/blog/dog-map%E4%B8%AA%E4%BA%BA%E8%B7%AF%E7%BA%BF%E5%9C%B0%E5%9B%BE/",
+      "description": "记录我如何用一张地图保存去过的地方、走过的路线和留下的照片。",
+      "pubDate": "2026-09-07T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
       "id": "20cafbfa4822",
       "title": "Research acceleration: The view inside OpenAI",
       "link": "https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/",
@@ -721,6 +733,618 @@
         "name": "Simon Willison's Weblog"
       },
       "category": "ai-agent"
+    },
+    {
+      "id": "9c76f1d826bb",
+      "title": "谁该得到这 100 分？人工智能中的点数分配问题",
+      "link": "https://zylatent.com/blog/point-allocation-credit-assignment/",
+      "description": "从概率统计中的点数分配问题出发，讨论强化学习、多智能体、反事实归因、Shapley Value 与神经网络中的点数分配。",
+      "pubDate": "2026-08-25T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "ff9c94b229e5",
+      "title": "七夕，重走一遍上学路",
+      "link": "https://zylatent.com/blog/remembrance-of-things-past/",
+      "description": "骑车回到初中时的家、学校和那些已经说不清的旧日片段，在一条改变了的路上重新辨认过去。",
+      "pubDate": "2026-08-20T07:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "acaeeed14313",
+      "title": "我为什么开始做 OhMyStyle：把“风格”变成可复用的工程对象",
+      "link": "https://zylatent.com/blog/ohmystyle%E8%A7%86%E8%A7%89%E9%A3%8E%E6%A0%BC%E5%B7%A5%E7%A8%8B/",
+      "description": "从寒柳别苑的背景图开始，我尝试把一句“保持原来的画风”拆成可追溯、可组合、可校验的视觉风格系统。",
+      "pubDate": "2026-08-11T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "7f383f0e52c8",
+      "title": "我给寒柳别苑做了一张语义地图",
+      "link": "https://zylatent.com/blog/latent-garden%E4%B8%AA%E4%BA%BA%E8%AF%AD%E4%B9%89%E8%8A%B1%E5%9B%AD/",
+      "description": "Latent Garden 的一次真实试验：把博客、项目和学习记录变成一张可以走进去的地图。",
+      "pubDate": "2026-08-03T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "4d6a37a72b7a",
+      "title": "从五子棋作业到搜索实验：用第五章的方法拆开一个 Agent",
+      "link": "https://zylatent.com/blog/%E4%BA%94%E5%AD%90%E6%A3%8B%E6%90%9C%E7%B4%A2%E5%AE%9E%E9%AA%8C/",
+      "description": "以《人工智能：一种现代方法》第五章的对抗搜索为主线，把一次五子棋课程作业重构成可比较、可复现的搜索实验。",
+      "pubDate": "2026-07-31T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "41cb37c02f3f",
+      "title": "从一门必修课出发，我和马斯克之间真的只有五跳？",
+      "link": "https://zylatent.com/blog/%E6%88%91%E5%92%8C%E5%9F%83%E9%9A%86%E9%A9%AC%E6%96%AF%E5%85%8B%E4%B9%8B%E9%97%B4%E7%9C%9F%E7%9A%84%E5%8F%AA%E9%9A%94%E4%BA%94%E4%B8%AA%E4%BA%BA%E5%90%97/",
+      "description": "从自己的必修课开始，我用公开资料重新查了一遍到埃隆·马斯克的关系链：这次不凑同场嘉宾，只保留能找到直接授课、共同署名或面对面会见依据的五条边。",
+      "pubDate": "2026-07-30T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "d13cac2377c0",
+      "title": "FastAPI 入门：给寒柳别苑搭一个小型 API",
+      "link": "https://zylatent.com/blog/fastapi-basics/",
+      "description": "从一个最小接口开始，使用 FastAPI 为 zylatent.com 设计站点资料、文章查询和留言接口，理解路由、参数校验、自动文档与跨域配置。",
+      "pubDate": "2026-07-29T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "9f08cb015fda",
+      "title": "在概率的雾里行走：从贝叶斯更新到 MCMC",
+      "link": "https://zylatent.com/blog/%E5%9C%A8%E6%A6%82%E7%8E%87%E7%9A%84%E9%9B%BE%E9%87%8C%E8%A1%8C%E8%B5%B0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E4%B8%8Emcmc%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/",
+      "description": "记录阅读《Probabilistic Programming and Bayesian Methods for Hackers》前 3 章的收获：如何用概率描述不确定性，用 PyMC 构造模型，再用 MCMC 从后验分布中取出答案。",
+      "pubDate": "2026-07-27T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "aa71ec8d641b",
+      "title": "Dog-Babble：把 AES 密文伪装成一串哈基米",
+      "link": "https://zylatent.com/blog/dog-babble%E5%8A%A0%E5%AF%86%E5%AE%9E%E9%AA%8C/",
+      "description": "PBKDF2 密钥派生 + AES-256-GCM 加密 + 自定义字典编码，零依赖纯前端密码学实验。用「发疯文学」隐藏信息。",
+      "pubDate": "2026-07-23T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "f583d4d62e0e",
+      "title": "Dog-LittleTools：九个 Bash 脚本和我不想再敲第二遍的命令",
+      "link": "https://zylatent.com/blog/dog-littletools%E5%B7%A5%E5%85%B7%E9%9B%86/",
+      "description": "9 个纯 Bash CLI 工具：GPU 选择、进程锁、Token 统计、Git 目录树、条件等待。零依赖，跨平台。",
+      "pubDate": "2026-07-23T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "62e4ebb1d338",
+      "title": "Dog-Skills 续篇：从 48 到 116，我开始认真考虑维护成本",
+      "link": "https://zylatent.com/blog/dog-skills%E7%BB%AD%E7%AF%87/",
+      "description": "当一个收藏夹增长成开源项目：元 Skill 架构、冲突治理、自动化维护、分类设计。构建可持续的 Claude Code Skill 生态。",
+      "pubDate": "2026-07-23T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "b6184e183f2f",
+      "title": "MiniArena 自走棋",
+      "link": "https://zylatent.com/blog/miniarena%E8%87%AA%E8%B5%B0%E6%A3%8B/",
+      "description": "基于 Qt6 / C++17 的 PvE 自走棋游戏。17 个可玩单位，8×8 六边形棋盘，BFS 寻路，羁绊组合，装备系统，随机事件，存档读档。",
+      "pubDate": "2026-07-23T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "5dee6b8f6ec6",
+      "title": "NanE 南易：我把校园互助平台做上线，又亲手把它停了",
+      "link": "https://zylatent.com/blog/nane%E6%A0%A1%E5%9B%AD%E4%BA%92%E5%8A%A9/",
+      "description": "从宿舍群痛点到完整产品：原生 JS + Node.js + PostgreSQL + PWA 全栈实践。一次诚实的失败复盘。",
+      "pubDate": "2026-07-23T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "136ee63d58c9",
+      "title": "nannahelper docs：给完全不会编程的人写一份不会跳步的教程",
+      "link": "https://zylatent.com/blog/nannahelper%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/",
+      "description": "覆盖 20+ 主题的零基础编程教程。MkDocs + GitHub Actions 自动部署，Build in Public。",
+      "pubDate": "2026-07-23T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "1185a69ee980",
+      "title": "淮海战役 H5 互动地图：当红色文化遇见前端技术",
+      "link": "https://zylatent.com/blog/%E6%B7%AE%E6%B5%B7%E6%88%98%E5%BD%B9h5%E4%BA%92%E5%8A%A8%E5%9C%B0%E5%9B%BE/",
+      "description": "作为徐州本地人，用 React + TypeScript 为淮海战役 16 处遗址搭建了一座可交互的数字纪念馆——泛黄地图、三阶段时间轴、PWA 离线访问。",
+      "pubDate": "2026-07-23T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "1133f9f698f9",
+      "title": "“绘出七彩”的七天",
+      "link": "https://zylatent.com/blog/%E7%BB%98%E5%87%BA%E4%B8%83%E5%BD%A9%E7%9A%84%E4%B8%83%E5%A4%A9/",
+      "description": "记录南京大学“星空下的守望者”暑期夏令营的七天，以及我在陪伴一位小朋友的过程中，逐渐理解的一些事情。",
+      "pubDate": "2026-07-15T04:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "b24e8ca870ed",
+      "title": "Dog-Skills：我整理的 48 个 Claude Code 技能库，从写代码到 AI 唱歌全涵盖",
+      "link": "https://zylatent.com/blog/dog-skills-48-claude-code%E6%8A%80%E8%83%BD%E5%BA%93/",
+      "description": "从开发流程、品牌设计、深度思考到健康管理和AI音乐生成，48个Claude Code技能的完整指南——含元技能架构图、安装方式和组合推荐。",
+      "pubDate": "2026-07-03T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "c35a9771d3eb",
+      "title": "消失的半年：代码、项目与一个智科人的大一春季学期",
+      "link": "https://zylatent.com/blog/2026%E4%B8%8A%E5%8D%8A%E5%B9%B4-%E4%BB%A3%E7%A0%81%E4%B8%8E%E9%A1%B9%E7%9B%AE%E5%9B%9E%E9%A1%BE/",
+      "description": "智科大一下学期忙得博客长草，但代码仓库没闲着——NanE、Dog-Skills一次迟到的项目回顾。",
+      "pubDate": "2026-06-22T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "cc37987c6562",
+      "title": "当奇迹遇见奇迹——《挽救计划》书评",
+      "link": "https://zylatent.com/blog/%E5%BD%93%E5%A5%87%E8%BF%B9%E9%81%87%E5%88%B0%E5%A5%87%E8%BF%B9/",
+      "description": "探讨《挽救计划》如何在冰冷的物理法则中，演奏出一支反其道而行之的、充满温情的宇宙赞歌。",
+      "pubDate": "2026-03-25T02:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "e7546cb6cbef",
+      "title": "每日诗语：海子 《以梦为马》",
+      "link": "https://zylatent.com/blog/%E6%B5%B7%E5%AD%90-%E4%BB%A5%E6%A2%A6%E4%B8%BA%E9%A9%AC/",
+      "description": "终于春天",
+      "pubDate": "2026-03-25T00:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "e01ca103023b",
+      "title": "奔跑在残酷与纯真之间——《小鞋子》影评",
+      "link": "https://zylatent.com/blog/we-are-the-world/",
+      "description": "伊朗经典电影《小鞋子》",
+      "pubDate": "2026-03-24T02:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "017aa9217e1c",
+      "title": "自然语言加密器: 自定义 Base-N 文本隐写实验",
+      "link": "https://zylatent.com/blog/my-compile/",
+      "description": "一个基于 AES-256-GCM 与大数进制转换的纯前端高隐蔽性文本加密工具。",
+      "pubDate": "2026-03-21T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "e63ec865f726",
+      "title": "Smart Agent: 迷宫寻路实验",
+      "link": "https://zylatent.com/blog/smartagent/",
+      "description": "一个基于 A* 算法与空间折跃机制的交互式路径规划实验。",
+      "pubDate": "2026-03-18T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "e49a3ad68b31",
+      "title": "片言成蝶",
+      "link": "https://zylatent.com/blog/%E9%B8%B3%E9%B8%AF/",
+      "description": "追忆高中时促成的一场恋爱",
+      "pubDate": "2026-03-16T02:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "420a54584ef8",
+      "title": "谁拥有这块内存：一次 C++ 资源管理实验",
+      "link": "https://zylatent.com/blog/cpp-memory-ownership-raii/",
+      "description": "以一个动态栈为实验对象，追踪 C++ 堆内存从分配、复制、移动到释放的完整生命周期，并与 C、Go、Java 和 Rust 的资源管理方式进行对照。",
+      "pubDate": "2026-03-08T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "fc9cc89ec34d",
+      "title": "如何在网络时代退化成一棵树",
+      "link": "https://zylatent.com/blog/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3%E6%B4%BB%E6%88%90%E4%B8%80%E6%A3%B5%E6%A0%91/",
+      "description": "在网络时代成为一棵树，并不意味着逃离世界，而是在世界之中保持定力。我们仍然使用工具，仍然获取信息，但不再让它们决定我们的节奏。年轮缓慢增加，根系向下延伸。安静。清醒。足够了。",
+      "pubDate": "2026-03-03T04:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "b807cbfa446d",
+      "title": "游记 济南",
+      "link": "https://zylatent.com/blog/%E6%B8%B8%E8%AE%B0-%E6%B5%8E%E5%8D%97/",
+      "description": "说是游记，其实只是一篇流水账，记录我们一家三口到泉城济南游玩的两天半。",
+      "pubDate": "2026-03-01T07:30:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "cd681dc9b91f",
+      "title": "一只脚与王子的性命孰重？——《七王国的骑士》影评",
+      "link": "https://zylatent.com/blog/%E4%B8%83%E7%8E%8B%E5%9B%BD%E7%9A%84%E9%AA%91%E5%A3%AB-%E7%AC%AC%E4%B8%80%E5%AD%A3/",
+      "description": "七王国的骑士,高个邓肯与蛋总的羁绊开始",
+      "pubDate": "2026-02-25T02:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "5e2d098f3c88",
+      "title": "【每日诗语】兰波：地狱之夜",
+      "link": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%9C%B0%E7%8B%B1%E4%B9%8B%E5%A4%9C/",
+      "description": "我吞下了一大口毒药。毒液的烈火扭曲了我的肢体,这就是地狱,永恒的痛苦！",
+      "pubDate": "2026-02-19T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "a38256980f3a",
+      "title": "【每日诗语】兰波：第一次夜晚",
+      "link": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%A4%9C%E6%99%9A/",
+      "description": "这首诗作于 1870 年,是少年兰波笔下最温存、最具有官能美感的作品之一。",
+      "pubDate": "2026-02-18T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "b1170d1a2d6e",
+      "title": "夜空为你闪烁",
+      "link": "https://zylatent.com/blog/%E4%BA%92%E5%8A%A8%E7%BD%91%E9%A1%B5-%E5%A4%9C%E7%A9%BA%E4%B8%BA%E4%BD%A0%E9%97%AA%E7%83%81/",
+      "description": "点击上方封面,进入这片夜空",
+      "pubDate": "2026-02-17T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "29ee9e361250",
+      "title": "【每日诗语】兰波：被囚禁者",
+      "link": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E8%A2%AB%E5%9B%9A%E7%A6%81%E8%80%85/",
+      "description": "厌恶那些整日坐在阅览室里、神情呆滞、思想僵化的职员和学者,这是一种精神上的自我囚禁。",
+      "pubDate": "2026-02-17T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "277f2e960fba",
+      "title": "【每日诗语】兰波：致一位理性的人",
+      "link": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E8%87%B4%E4%B8%80%E4%BD%8D%E7%90%86%E6%80%A7%E7%9A%84%E4%BA%BA/",
+      "description": "当那一记指尖敲响宇宙的鼓面,所有的旧疾都将痊愈。",
+      "pubDate": "2026-02-15T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "9c8531c12b0f",
+      "title": "【每日诗语】兰波：母狼",
+      "link": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%AF%8D%E7%8B%BC/",
+      "description": "在兰波的笔下,“母狼”不仅是荒野中的掠食者,更象征着一种被文明放逐、却在苦难中保持尊严的原始生命力。",
+      "pubDate": "2026-02-13T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "905426ec22df",
+      "title": "大庚剑阵",
+      "link": "https://zylatent.com/blog/%E5%A4%A7%E5%BA%9A%E5%89%91%E9%98%B5/",
+      "description": "点击此老魔开始操纵青竹蜂云剑",
+      "pubDate": "2026-02-13T05:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "5d46824b3bfa",
+      "title": "【每日诗语】兰波：告别",
+      "link": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%91%8A%E5%88%AB/",
+      "description": "这不仅是一首诗的结束,是一个文学时代的断裂。",
+      "pubDate": "2026-02-12T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "369dc028d83e",
+      "title": "【每日诗语】兰波：七岁智者",
+      "link": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E4%B8%83%E5%B2%81%E6%99%BA%E8%80%85/",
+      "description": "在顺从的假面下,一颗七岁的灵魂正躲在阴影里,用厌恶与幻想,秘密地解构整个平庸的世界。",
+      "pubDate": "2026-02-11T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "b3f79c3fcea9",
+      "title": "【每日诗语】兰波：我的饥饿",
+      "link": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%88%91%E7%9A%84%E9%A5%A5%E9%A5%BF/",
+      "description": "放弃平庸的谷物,去啃食岩石、煤炭与毒液。这是少年通灵者对物质世界最决绝的冒犯,一场关于匮乏的狂欢",
+      "pubDate": "2026-02-10T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "4db1ec16abc7",
+      "title": "【每日诗语】兰波：奥菲利娅",
+      "link": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%A5%A5%E8%8F%B2%E5%88%A9%E5%A8%85/",
+      "description": "一首受象征主义影响的优美哀歌,通过对莎士比亚笔下悲剧人物的重塑,将水、死亡、爱情与自然融为一体",
+      "pubDate": "2026-02-09T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "80f08e968d75",
+      "title": "烟火文沃,康城新章",
+      "link": "https://zylatent.com/blog/%E7%83%9F%E7%81%AB%E6%96%87%E6%B2%83%E5%BA%B7%E5%9F%8E%E6%96%B0%E7%AB%A0/",
+      "description": "旧社区文沃的重访随想,记录高中迁离后的变迁与回忆。",
+      "pubDate": "2026-02-09T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "260f7725bd77",
+      "title": "【每日诗语】兰波：黎明",
+      "link": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E9%BB%8E%E6%98%8E/",
+      "description": "他把宫殿写成寂静无声,把花写成睁眼凝望,把阳光写成高悬的瀑布...",
+      "pubDate": "2026-02-08T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "3be15e90351a",
+      "title": "“接下来我们将要面对面”——《攻壳机动队》影评",
+      "link": "https://zylatent.com/blog/ghost-in-shell/",
+      "description": "“《攻壳机动队》影评”",
+      "pubDate": "2026-02-08T02:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "29c45a017c24",
+      "title": "【每日诗语】兰波：邪恶",
+      "link": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E9%82%AA%E6%81%B6/",
+      "description": "此诗尖锐地体现了兰波的反教权思想",
+      "pubDate": "2026-02-07T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "0c497ceb8827",
+      "title": "【每日诗语】兰波：醉舟",
+      "link": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E9%86%89%E8%88%9F/",
+      "description": "死亡,诞生,未来,过去,创世,虚无",
+      "pubDate": "2026-02-06T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "0680c1313a22",
+      "title": "【每日诗语】兰波：巴黎狂欢节",
+      "link": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%B7%B4%E9%BB%8E%E7%8B%82%E6%AC%A2%E8%8A%82/",
+      "description": "兰波对那些在公社烈士血迹未干时就迫不及待寻欢作乐者的愤怒控诉",
+      "pubDate": "2026-02-05T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "4e538159ccd4",
+      "title": "【每日诗语】兰波：永恒",
+      "link": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%B0%B8%E6%81%92/",
+      "description": "兰波从早期的感官骚动转向纯粹精神探索的转折点",
+      "pubDate": "2026-02-04T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "6f03452edada",
+      "title": "【每日诗语】兰波：山谷睡者",
+      "link": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E5%B1%B1%E8%B0%B7%E7%9D%A1%E8%80%85/",
+      "description": "这是一个绿色的穴,河在那儿歌唱。一位年轻的士兵睡着,他右肋上有两个红色的洞。",
+      "pubDate": "2026-02-03T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "c0c7543c96df",
+      "title": "【每日诗语】兰波：感觉",
+      "link": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%84%9F%E8%A7%89/",
+      "description": "在蓝色的夏晚,我将走上小径...",
+      "pubDate": "2026-02-02T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "697c343719fb",
+      "title": "【每日诗语】兰波：我的流浪",
+      "link": "https://zylatent.com/blog/%E5%85%B0%E6%B3%A2-%E6%88%91%E7%9A%84%E6%B5%81%E6%B5%AA/",
+      "description": "穿破洞裤子,以星空为被,把旧鞋当作竖琴弹奏。这是兰波最自由、最浪漫的波希米亚宣言,一曲青春与流浪的赞歌。",
+      "pubDate": "2026-02-01T08:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "50db976e34e2",
+      "title": "今年雪照哪年影",
+      "link": "https://zylatent.com/blog/2025-%E5%A4%A7%E9%9B%AA/",
+      "description": "追忆寒假大雪，与朋友独享全校积雪之趣事",
+      "pubDate": "2026-01-20T02:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
+    },
+    {
+      "id": "2627eb0d548b",
+      "title": "我的2025:三年,三日和三个月",
+      "link": "https://zylatent.com/blog/%E6%88%91%E7%9A%842025/",
+      "description": "“在岁末追忆一生中相当重要的一年”",
+      "pubDate": "2026-01-01T07:00:00+08:00",
+      "source": {
+        "id": "zylatent",
+        "name": "寒柳别苑"
+      },
+      "category": "classmate-blog"
     }
   ]
 }
