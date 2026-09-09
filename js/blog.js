@@ -26,7 +26,7 @@ function formatDate(dateStr) {
  */
 function loadArticleIndex() {
   return fetch('articles/index.json')
-    .then(function (res) { return res.json(); })
+    .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
     .then(function (articles) {
       articles.sort(function (a, b) {
         return new Date(b.date) - new Date(a.date);
@@ -159,26 +159,20 @@ function renderArticleList(containerId, articles, limit) {
     list = list.slice(0, limit);
   }
 
-  if (list.length === 0) {
-    container.innerHTML = '<p style="text-align:center;color:var(--color-text-muted);padding:24px;">No articles yet.</p>';
-    return;
-  }
-
-  var html = '';
-  for (var i = 0; i < list.length; i++) {
-    var a = list[i];
-    var cat = CATEGORY_MAP[a.category] || a.category;
-    html +=
-      '<a href="article.html?slug=' + a.slug + '" class="article-card">' +
-        '<div class="article-card-header">' +
-          '<span class="article-category">' + cat + '</span>' +
-          '<span class="article-date">' + formatDate(a.date) + '</span>' +
-        '</div>' +
-        '<h3>' + a.title + '</h3>' +
-        '<p>' + a.summary + '</p>' +
-      '</a>';
-  }
-  container.innerHTML = html;
+  container.textContent = '';
+  if (!list.length) { container.textContent = 'No articles yet.'; return; }
+  list.forEach(function (article) {
+    var card = document.createElement('a'); card.className = 'article-card';
+    card.href = 'article.html?slug=' + encodeURIComponent(article.slug);
+    var header = document.createElement('div'); header.className = 'article-card-header';
+    var category = document.createElement('span'); category.className = 'article-category';
+    category.textContent = CATEGORY_MAP[article.category] || article.category;
+    var date = document.createElement('span'); date.className = 'article-date'; date.textContent = formatDate(article.date);
+    header.append(category, date);
+    var title = document.createElement('h3'); title.textContent = article.title;
+    var summary = document.createElement('p'); summary.textContent = article.summary;
+    card.append(header, title, summary); container.appendChild(card);
+  });
   if (window.SiteMotion) window.SiteMotion.revealNewElements(container);
 }
 
@@ -235,6 +229,7 @@ function loadArticleDetail() {
   }).then(function (md) {
     var body = document.getElementById('article-body');
     body.innerHTML = marked.parse(md);
+    prepareReading(body);
     loadWikiIndex().then(function (pages) {
       renderWikiLinks(body, pages);
     });

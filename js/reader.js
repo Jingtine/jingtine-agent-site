@@ -17,9 +17,9 @@
   var FEEDS_URL = 'config/feeds.json';
 
   // ── Init ──────────────────────────────────────────────
-  Promise.all([
-    fetch(DATA_URL).then(function (r) { return r.json(); }),
-    fetch(FEEDS_URL).then(function (r) { return r.json(); }),
+  function loadData() { Promise.all([
+    fetch(DATA_URL).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }),
+    fetch(FEEDS_URL).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }),
     fetch(STATUS_URL).then(function (r) { return r.json(); }).catch(function () { return null; })
   ]).then(function (results) {
     allItems = results[0].items || [];
@@ -33,7 +33,11 @@
     updateStats(status);
   }).catch(function () {
     showEmpty('Failed to load data.', 'source-cards');
+    var retry = document.createElement('button'); retry.className = 'btn'; retry.textContent = '重试';
+    retry.addEventListener('click', loadData); document.getElementById('source-cards').appendChild(retry);
   });
+  }
+  loadData();
 
   function buildSourceMap() {
     for (var i = 0; i < allItems.length; i++) {
@@ -90,8 +94,16 @@
         var name = cards[j].getAttribute('data-source-name') || '';
         cards[j].style.display = !q || name.toLowerCase().indexOf(q) !== -1 ? '' : 'none';
       }
+      var found = Array.from(cards).some(function (card) { return card.style.display !== 'none'; });
+      document.getElementById('source-feedback').textContent = found ? '' : '没有匹配的来源。';
+      document.getElementById('source-clear').hidden = !q;
     };
   }
+
+  document.getElementById('source-clear').addEventListener('click', function () {
+    var search = document.getElementById('source-search');
+    search.value = ''; search.dispatchEvent(new Event('input')); search.focus();
+  });
 
   function createSourceCard(src) {
     var card = document.createElement('div');
@@ -99,6 +111,8 @@
     card.style.cursor = 'pointer';
     card.setAttribute('data-source-name', src.name);
     card.addEventListener('click', function () { showArticleList(src); });
+    card.tabIndex = 0; card.setAttribute('role', 'button');
+    card.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showArticleList(src); } });
 
     var title = document.createElement('h3');
     title.textContent = src.name;
@@ -122,6 +136,7 @@
   function showArticleList(src) {
     document.getElementById('reader-source-view').style.display = 'none';
     document.getElementById('reader-article-view').style.display = 'block';
+    document.getElementById('reader-back').focus();
     window.scrollTo(0, 0);
 
     document.getElementById('reader-source-name').textContent = src.name;

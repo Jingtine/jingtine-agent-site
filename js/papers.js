@@ -8,7 +8,7 @@
  */
 (function () {
   fetch('public/data/papers.json')
-    .then(function (res) { return res.json(); })
+    .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
     .then(function (data) {
       var papers = data.papers || [];
       renderPapers(papers);
@@ -20,6 +20,8 @@
       p.setAttribute('style', 'text-align:center;color:var(--color-text-muted);padding:24px;');
       p.textContent = 'Failed to load papers.';
       el.appendChild(p);
+      var retry = document.createElement('button'); retry.className = 'btn'; retry.textContent = '重试';
+      retry.addEventListener('click', function () { location.reload(); }); el.appendChild(retry);
     });
 
   function renderPapers(papers) {
@@ -90,7 +92,7 @@
     footer.setAttribute('style', 'display:flex;align-items:center;justify-content:space-between;margin-top:14px;');
 
     var label = document.createElement('span');
-    label.setAttribute('style', 'font-size:12px;color:var(--color-text-muted);');
+    label.setAttribute('style', 'font-size:13px;color:var(--color-text-muted);');
     label.textContent = paper.id || '';
 
     var btn = document.createElement('a');

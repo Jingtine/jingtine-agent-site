@@ -5,18 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="AI Assistant — ask questions about Jingtine's personal wiki.">
   <title>Assistant — Jingtine</title>
-  <link rel="stylesheet" href="styles.css?v=20260821-1">
+  <link rel="stylesheet" href="styles.css?v=20260910">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">跳转正文</a>
 
-  <nav class="nav">
-    <div class="nav-inner">
+  <nav class="nav" aria-label="主导航"><div class="nav-inner">
       <a href="index.html" class="nav-logo">Jingtine</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-      </button>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button>
       <div class="nav-links" id="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -25,23 +21,26 @@
         <a href="papers.html">Research</a>
         <a href="wiki.html">Wiki</a>
         <a href="reader.html">Reader</a>
-        <a href="assistant.html" class="active">Assistant</a>
-      </div>
-    </div>
-  </nav>
+        <a href="assistant.html" class="active" aria-current="page">Assistant</a>
+        <a href="status.html">Status</a>
+      </div></div></nav>
+  <main id="main-content" tabindex="-1">
 
   <div class="page-header">
     <div class="section-label">Assistant</div>
     <h1>Ask Jingtine</h1>
-    <p>Ask questions based on my personal knowledge base.</p>
+    <p>基于个人 Wiki 的本地检索与原文摘录，附可追溯来源。</p>
   </div>
 
-  <section class="section">
-    <div style="display:flex;gap:10px;margin-bottom:28px;">
+  <section class="section assistant-workbench">
+    <label class="field-label" for="assistant-input">你的问题 / Question</label>
+    <div class="assistant-input-row">
       <input type="text" id="assistant-input" placeholder="Ask me anything..."
         style="flex:1;padding:10px 16px;font-size:14px;font-family:var(--font-sans);border:1px solid var(--color-border);border-radius:var(--radius-sm);background:var(--color-surface);color:var(--color-text);outline:none;">
       <button id="assistant-ask" class="btn btn-primary">Ask</button>
     </div>
+    <p id="assistant-feedback" class="feedback" role="status">正在加载知识库…</p>
+    <button id="assistant-retry" class="btn" hidden>重试</button>
 
     <!-- Observable steps -->
     <div id="assistant-steps" class="contact-card" style="display:none;margin-bottom:20px;">
@@ -51,7 +50,7 @@
     </div>
 
     <!-- Answer area -->
-    <div id="assistant-answer" style="display:none;">
+    <div id="assistant-answer" style="display:none;" aria-live="polite">
       <div class="contact-card" style="margin-bottom:16px;">
         <p id="assistant-answer-text" style="font-size:15px;color:var(--color-text-secondary);line-height:1.8;"></p>
       </div>
@@ -63,9 +62,10 @@
     </div>
   </section>
 
+  </main>
   <footer class="footer">
     <div class="footer-links">
-      <a href="https://github.com/jingtine" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/jingtine" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="mailto:jingtineli@smail.nju.edu.cn">Email</a>
       <a href="feed.xml">RSS</a>
       <a href="status.html">Status</a>
@@ -74,8 +74,8 @@
   </footer>
 
   <script src="js/assistant.js"></script>
-  <script src="js/site-motion.js?v=20260713-1"></script>
-  <script src="js/nav.js?v=20260821-1"></script>
+  <script src="js/site-motion.js?v=20260910"></script>
+  <script src="js/nav.js?v=20260910"></script>
 
 </body>
 </html>

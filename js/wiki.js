@@ -197,6 +197,9 @@
     card.addEventListener('click', function () {
       openPageById(page.id);
     });
+    card.tabIndex = 0;
+    card.setAttribute('role', 'link');
+    card.addEventListener('keydown', function (e) { if (e.key === 'Enter') openPageById(page.id); });
 
     // Header: category badge + updated date
     var header = document.createElement('div');
@@ -252,6 +255,8 @@
 
     var body = document.getElementById('wiki-detail-body');
     body.textContent = '';
+    var oldToc = body.previousElementSibling;
+    if (oldToc && oldToc.classList.contains('reading-toc')) oldToc.remove();
     body.innerHTML = '<p style="text-align:center;color:var(--color-text-muted);padding:24px;">Loading...</p>';
 
     var oldRelated = document.getElementById('wiki-related-articles');
@@ -264,6 +269,7 @@
       })
       .then(function (md) {
         body.innerHTML = marked.parse(cleanMarkdown(md));
+        prepareReading(body);
         renderWikiLinks(body, page);
         try {
           if (window.SiteMotion) window.SiteMotion.revealNewElements(body);
@@ -477,5 +483,15 @@
     p.setAttribute('style', 'text-align:center;color:var(--color-text-muted);padding:24px;');
     p.textContent = msg;
     container.appendChild(p);
+    if (msg.indexOf('Failed') === 0 || msg === 'No pages found.') {
+      var action = document.createElement('button'); action.className = 'btn';
+      action.textContent = msg.indexOf('Failed') === 0 ? '重试' : '清空筛选';
+      action.addEventListener('click', function () {
+        if (msg.indexOf('Failed') === 0) { location.reload(); return; }
+        document.getElementById('wiki-search').value = ''; currentCategory = '';
+        setupCategoryFilter(); filterAndRender();
+      });
+      container.appendChild(action);
+    }
   }
 })();

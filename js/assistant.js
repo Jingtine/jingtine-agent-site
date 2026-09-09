@@ -9,11 +9,27 @@
   var WIKI_URL = 'public/data/wiki.json';
   var TOP_K = 5;
 
-  fetch(WIKI_URL)
-    .then(function (res) { return res.json(); })
-    .then(function (data) {
-      wikiPages = data.pages || [];
+  var feedback = document.getElementById('assistant-feedback');
+  var retry = document.getElementById('assistant-retry');
+  function loadIndex() {
+    document.getElementById('assistant-ask').disabled = true;
+    feedback.textContent = '正在加载知识库…';
+    retry.hidden = true;
+    fetch(WIKI_URL).then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    }).then(function (data) {
+      if (!Array.isArray(data.pages)) throw new Error('Invalid index');
+      wikiPages = data.pages;
+      feedback.textContent = wikiPages.length ? '知识库已就绪。试试 Agent、RAG 或软件工程。' : '知识库暂无内容。';
+      document.getElementById('assistant-ask').disabled = !wikiPages.length;
+    }).catch(function () {
+      feedback.textContent = '知识库加载失败，请重试。';
+      retry.hidden = false;
     });
+  }
+  retry.addEventListener('click', loadIndex);
+  loadIndex();
 
   // ── Event handlers ───────────────────────────────────
   document.getElementById('assistant-ask').addEventListener('click', function () {
@@ -26,7 +42,10 @@
   function askQuestion() {
     var input = document.getElementById('assistant-input');
     var question = input.value.trim();
-    if (!question || wikiPages.length === 0) return;
+    if (input.disabled) return;
+    if (!question) { feedback.textContent = '请输入一个问题。'; input.focus(); return; }
+    if (wikiPages.length === 0) return;
+    feedback.textContent = '正在检索原文…';
     input.disabled = true;
     document.getElementById('assistant-ask').disabled = true;
 
@@ -41,6 +60,7 @@
 
       if (results.length === 0) {
         finish('\u5f53\u524d Wiki \u4e2d\u6ca1\u6709\u8db3\u591f\u4fe1\u606f\u56de\u7b54\u8fd9\u4e2a\u95ee\u9898\u3002', []);
+        return;
       }
 
       // Step 2: Retrieve page content
@@ -52,7 +72,7 @@
           false);
 
         // Step 3: Generate
-        setStep('step-generate', 'Generating Answer...', true);
+        setStep('step-generate', '整理原文摘录…', true);
         setTimeout(function () {
           var answer = generateAnswer(question, loadedPages);
           finish(answer.text, answer.sources);
@@ -209,6 +229,7 @@
   }
 
   function finish(text, sources) {
+    feedback.textContent = sources.length ? '已完成检索，以下为 Wiki 原文摘录。' : '没有找到足够的信息，可尝试其他关键词。';
     setStep('step-generate', sources.length > 0 ? 'Answer ready' : 'No results found', false);
     showAnswer(text, sources);
     document.getElementById('assistant-input').disabled = false;
@@ -229,14 +250,11 @@
     var list = document.getElementById('assistant-source-list');
     list.textContent = '';
     for (var i = 0; i < sources.length; i++) {
-      var card = document.createElement('div');
+      var card = document.createElement('a');
       card.className = 'article-card';
-      card.style.cursor = 'pointer';
-      card.addEventListener('click', function (s) {
-        return function () {
-          window.open('wiki.html#' + encodeURIComponent(s.id), '_blank');
-        };
-      }(sources[i]));
+      card.href = 'wiki.html#' + encodeURIComponent(sources[i].id);
+      card.target = '_blank';
+      card.rel = 'noopener noreferrer';
 
       var header = document.createElement('div');
       header.className = 'article-card-header';

@@ -4,8 +4,8 @@
  * SECURITY: All data uses textContent. No innerHTML for external content.
  */
 (function () {
-  fetch('public/data/status.json')
-    .then(function (res) { return res.json(); })
+  function loadStatus() { fetch('public/data/status.json')
+    .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
     .then(function (data) {
       renderDashboard(data);
     })
@@ -16,18 +16,27 @@
       p.setAttribute('style', 'text-align:center;color:var(--color-text-muted);padding:24px;');
       p.textContent = 'Failed to load status.';
       el.appendChild(p);
+      var retry = document.createElement('button');
+      retry.className = 'btn'; retry.textContent = '重试';
+      retry.addEventListener('click', loadStatus); el.appendChild(retry);
     });
+  }
+  loadStatus();
 
   function renderDashboard(data) {
     var container = document.getElementById('status-dashboard');
     container.textContent = '';
+    if (!data || !data.build || !data.content || !data.quality) {
+      container.textContent = '暂无完整状态数据。';
+      return;
+    }
 
     // Overview bar
     container.appendChild(createOverview(data));
 
     // 2x2 grid: Build, Content, Quality, Services
     var grid = document.createElement('div');
-    grid.setAttribute('style', 'display:grid;grid-template-columns:1fr 1fr;gap:16px;');
+    grid.className = 'status-grid';
     grid.appendChild(createCard('Build', [['Version', data.build.version || ''], ['Generated', data.build.generated || '']]));
     grid.appendChild(createCard('Content', [['Blog', data.content.blogArticles + ' articles'], ['Research', data.content.researchPapers + ' papers'], ['Wiki', data.content.wikiPages + ' pages']]));
     grid.appendChild(createCard('Quality', [['Result', data.quality.result || ''], ['Last Validated', data.quality.lastValidation || '']]));

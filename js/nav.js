@@ -1,43 +1,22 @@
-/**
- * nav.js — Mobile hamburger navigation toggle for Jingtine's site.
- *
- * - Toggles html.nav-open and the button's aria-expanded state.
- * - Closes on: link click, outside click, Escape, resize above 768px.
- * - Zero dependencies, no inline event handlers.
- */
+/* Non-modal navigation; HTML links remain available without JavaScript. */
 (function () {
   'use strict';
-
-  var nav = document.querySelector('.nav');
   var toggle = document.querySelector('.nav-toggle');
   var links = document.getElementById('nav-links');
-  if (!nav || !toggle || !links) return;
-
-  function setOpen(open) {
+  if (!toggle || !links) return;
+  document.documentElement.classList.add('nav-ready');
+  function setOpen(open, restore) {
     document.documentElement.classList.toggle('nav-open', open);
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    if (!open) toggle.focus();
+    toggle.setAttribute('aria-expanded', String(open));
+    if (restore) toggle.focus();
   }
-
-  toggle.addEventListener('click', function () {
-    setOpen(!document.documentElement.classList.contains('nav-open'));
-  });
-
-  links.addEventListener('click', function (e) {
-    if (e.target.closest('a')) setOpen(false);
-  });
-
+  toggle.addEventListener('click', function () { setOpen(toggle.getAttribute('aria-expanded') !== 'true'); });
+  links.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
   document.addEventListener('click', function (e) {
-    if (!e.target.closest('.nav') && document.documentElement.classList.contains('nav-open')) {
-      setOpen(false);
-    }
+    if (!e.target.closest('.nav') && toggle.getAttribute('aria-expanded') === 'true') setOpen(false);
   });
-
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') setOpen(false);
+    if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') setOpen(false, true);
   });
-
-  window.addEventListener('resize', function () {
-    if (window.innerWidth > 768) setOpen(false);
-  });
+  window.matchMedia('(min-width:1200px)').addEventListener('change', function (e) { if (e.matches) setOpen(false); });
 })();

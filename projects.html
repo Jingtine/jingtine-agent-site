@@ -5,30 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Jingtine's projects — NoteWhale, 街像, AI Agent Studio.">
   <title>Projects — Jingtine</title>
-  <link rel="stylesheet" href="styles.css?v=20260821-1">
+  <link rel="stylesheet" href="styles.css?v=20260910">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">跳转正文</a>
 
-  <nav class="nav">
-    <div class="nav-inner">
+  <nav class="nav" aria-label="主导航"><div class="nav-inner">
       <a href="index.html" class="nav-logo">Jingtine</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-      </button>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button>
       <div class="nav-links" id="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="projects.html" class="active">Projects</a>
+        <a href="projects.html" class="active" aria-current="page">Projects</a>
         <a href="blog.html">Blog</a>
         <a href="papers.html">Research</a>
         <a href="wiki.html">Wiki</a>
         <a href="reader.html">Reader</a>
         <a href="assistant.html">Assistant</a>
-      </div>
-    </div>
-  </nav>
+        <a href="status.html">Status</a>
+      </div></div></nav>
+  <main id="main-content" tabindex="-1">
 
   <div class="page-header">
     <div class="section-label">Projects</div>
@@ -40,7 +36,7 @@
     <div class="project-list">
 
       <!-- NoteWhale -->
-      <article class="project-detail-card">
+      <article class="project-detail-card" id="notewhale">
         <div class="project-detail-header">
           <h3>NoteWhale</h3>
         </div>
@@ -77,7 +73,7 @@
       </article>
 
       <!-- 街像 -->
-      <article class="project-detail-card">
+      <article class="project-detail-card" id="street">
         <div class="project-detail-header">
           <h3>街像</h3>
         </div>
@@ -114,7 +110,7 @@
       </article>
 
       <!-- AI Agent Studio -->
-      <article class="project-detail-card">
+      <article class="project-detail-card" id="agent-studio">
         <div class="project-detail-header">
           <h3>AI Agent Studio</h3>
         </div>
@@ -151,7 +147,7 @@
       </article>
 
       <!-- My Personal Website -->
-      <article class="project-detail-card">
+      <article class="project-detail-card" id="personal-site">
         <div class="project-detail-header">
           <h3>My Personal Website</h3>
         </div>
@@ -191,17 +187,18 @@
     </div>
   </section>
 
+  </main>
   <footer class="footer">
     <div class="footer-links">
-      <a href="https://github.com/jingtine" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/jingtine" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="mailto:jingtineli@smail.nju.edu.cn">Email</a>
       <a href="feed.xml">RSS</a>
       <a href="status.html">Status</a>
     </div>
     <p>&copy; 2026 Jingtine</p>
   </footer>
-  <script src="js/site-motion.js?v=20260713-1"></script>
-  <script src="js/nav.js?v=20260821-1"></script>
+  <script src="js/site-motion.js?v=20260910"></script>
+  <script src="js/nav.js?v=20260910"></script>
 
 </body>
 </html>

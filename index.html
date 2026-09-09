@@ -5,27 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Jingtine — Software Engineering Student at NJU. AI Agent, Product Innovation.">
   <title>Jingtine — Home</title>
-  <script>
-    (function () {
-      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        document.documentElement.classList.add('hero-intro-active');
-      }
-    })();
-  </script>
-  <link rel="stylesheet" href="styles.css?v=20260821-1">
+<link rel="stylesheet" href="styles.css?v=20260910">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">跳转正文</a>
 
-  <nav class="nav">
-    <div class="nav-inner">
+  <nav class="nav" aria-label="主导航"><div class="nav-inner">
       <a href="index.html" class="nav-logo">Jingtine</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-      </button>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button>
       <div class="nav-links" id="nav-links">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html" class="active" aria-current="page">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="blog.html">Blog</a>
@@ -33,62 +22,43 @@
         <a href="wiki.html">Wiki</a>
         <a href="reader.html">Reader</a>
         <a href="assistant.html">Assistant</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <header class="hero hero-intro-section">
-    <div class="hero-intro-stage" id="hero-intro-stage">
-      <div class="hero-content" id="hero-intro-content">
-        <div class="hero-avatar-stage">
-          <div class="hero-intro-deco" aria-hidden="true">
-            <div class="hero-intro-glow-outer-wrap">
-              <div class="hero-intro-glow hero-intro-glow-outer"></div>
-            </div>
-            <div class="hero-intro-glow-inner-wrap">
-              <div class="hero-intro-glow hero-intro-glow-inner"></div>
-            </div>
-            <div class="hero-waveform-wrap">
-              <div class="hero-waveform" aria-hidden="true"></div>
-            </div>
-            <div class="hero-waveform-pulse-wrap">
-              <div class="hero-waveform-pulse" aria-hidden="true"></div>
-            </div>
-            <div class="hero-intro-ring-wrap">
-              <div class="hero-intro-ring">
-                <div class="hero-intro-ring-dot"></div>
-              </div>
-            </div>
-            <div class="hero-intro-particles"></div>
-          </div>
-          <div class="hero-avatar-wrap">
-            <img src="assets/images/figure.jpg" alt="Jingtine avatar" class="hero-avatar">
-          </div>
-        </div>
-        <p class="hero-greeting">Hi, I'm</p>
-        <h1 class="hero-name">Jingtine</h1>
-        <p class="hero-identity">
-          Software Engineering Student &middot; Business Innovation Explorer
-        </p>
-        <div class="hero-tags">
-          <span class="hero-tag">Software Engineering</span>
-          <span class="hero-tag tag-accent">AI Agent</span>
-          <span class="hero-tag">Product Innovation</span>
-        </div>
-        <p class="hero-desc">
-          结合软件工程、AI Agent 与产品创新，探索技术如何创造真实价值。
-        </p>
-      </div>
-    </div>
-    <div class="hero-scroll-hint" aria-hidden="true">
-      <span class="hero-scroll-hint-text">Explore</span>
-      <span class="hero-scroll-hint-arrow">&darr;</span>
-    </div>
-  </header>
-
+        <a href="status.html">Status</a>
+      </div></div></nav>
+  <main id="main-content" tabindex="-1">
+  <div class="home-masthead"><span>JINGTINE / PERSONAL ARCHIVE</span><span>软件 · 智能 · 产品<br>持续学习的个人档案</span></div>
+  <div class="home-grid">
+    <section class="paper-panel panel-intro">
+      <span class="panel-number">01 / A NOTE TO BEGIN</span>
+      <h1>Hi, I'm Jingtine.<br>在学习与创造之间。</h1>
+      <p class="intro-note">结合软件工程、AI Agent 与产品创新，探索技术如何创造真实价值。</p>
+      <div class="hero-tags"><span class="hero-tag">Software Engineering</span><span class="hero-tag">AI Agent</span><span class="hero-tag">Product Innovation</span></div>
+      <div class="panel-actions"><a class="btn btn-primary" href="projects.html">探索 Projects ↗</a><a class="btn" href="about.html">关于我 About →</a></div>
+    </section>
+    <section class="paper-panel panel-profile">
+      <span class="panel-number">02 / PROFILE</span>
+      <img class="profile-image" src="assets/images/figure.jpg" width="120" height="120" alt="Jingtine avatar">
+      <h2>Jingtine</h2>
+      <p>南京大学 · 软件工程<br>软工商业创新班<br>工商管理双学位在读</p>
+      <div class="panel-actions"><a href="https://github.com/jingtine" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="mailto:jingtineli@smail.nju.edu.cn">Email ↗</a></div>
+    </section>
+    <section class="paper-panel panel-projects" id="projects">
+      <span class="panel-number">03 / SELECTED WORK</span><h2>把想法做成作品</h2>
+      <article class="home-project-card"><h3><a href="projects.html#notewhale">NoteWhale ↗</a></h3><p>面向知识管理的智能学习平台，结合 AI 实现笔记自动分类、智能关联与语义检索。</p><span class="article-category">AI · Knowledge Management</span></article>
+      <article class="home-project-card"><h3><a href="projects.html#street">街像 ↗</a></h3><p>关注校园空间与城市叙事的交叉，通过技术手段记录和呈现城市中的日常故事。</p><span class="article-category">Product Design · Spatial Data</span></article>
+      <a class="btn" href="projects.html">所有项目 · 含 AI Agent Studio →</a>
+    </section>
+    <section class="paper-panel panel-posts" id="thoughts">
+      <span class="panel-number">04 / RECENT WRITING</span><h2>最新文章</h2>
+      <div id="latest-posts" class="article-list" aria-live="polite">正在加载文章…</div>
+      <a class="btn" href="blog.html">文章目录 Blog →</a>
+    </section>
+    <section class="paper-panel panel-entry panel-research"><span class="panel-number">05 / RESEARCH</span><h2>文献与问题</h2><p>AI 相关论文收藏，记录值得继续探索的研究方向。</p><a class="btn" href="papers.html">Research →</a></section>
+    <section class="paper-panel panel-entry panel-wiki"><span class="panel-number">06 / WIKI</span><h2>生长中的知识</h2><p>沉淀可检索、可关联、可持续更新的个人知识。</p><a class="btn" href="wiki.html">Wiki →</a></section>
+    <section class="paper-panel panel-entry panel-reader"><span class="panel-number">07 / READER</span><h2>阅读剪报</h2><p>浏览已订阅来源的文章，沿着线索走向原文。</p><a class="btn" href="reader.html">Reader →</a></section>
+    <section class="paper-panel panel-tools"><div><span class="panel-number">08 / ASSISTANT</span><a href="assistant.html">向知识库提问 ↗</a><p>本地检索与原文摘录，附可追溯的 Wiki 来源。</p></div><div><span class="panel-number">09 / STATUS</span><a href="status.html">查看站点记录 ↗</a><p>内容、数据源与质量检查状态。</p></div></section>
+  </div>
   <!-- Skills Preview -->
-  <section class="section" id="skills">
+  <details class="home-skills-note" id="skills"><summary>能力档案 / Skills</summary>
     <div class="section-label">Skills</div>
     <h2 class="section-title">核心能力</h2>
     <div class="home-skills-grid">
@@ -117,44 +87,13 @@
         </ul>
       </div>
     </div>
-  </section>
+  </details>
 
-  <!-- Selected Projects -->
-  <section class="section" id="projects">
-    <div class="section-label">Projects</div>
-    <h2 class="section-title">精选项目</h2>
-    <div class="home-project-list">
-      <article class="home-project-card">
-        <h3>NoteWhale</h3>
-        <p>AI-powered learning management platform for knowledge organization and retrieval.</p>
-        <a href="projects.html" class="btn btn-outline">View Project &rarr;</a>
-      </article>
-      <article class="home-project-card">
-        <h3>街像</h3>
-        <p>Campus experience design project exploring urban storytelling through technology.</p>
-        <a href="projects.html" class="btn btn-outline">View Project &rarr;</a>
-      </article>
-      <article class="home-project-card">
-        <h3>AI Agent Studio</h3>
-        <p>Personal AI Agent experiments — reasoning, planning, and tool-use in practice.</p>
-        <a href="projects.html" class="btn btn-outline">View Project &rarr;</a>
-      </article>
-    </div>
-  </section>
 
-  <!-- Latest Thoughts -->
-  <section class="section" id="thoughts">
-    <div class="section-label">Blog</div>
-    <h2 class="section-title">Latest Thoughts</h2>
-    <div class="thoughts-preview">
-      <div class="article-list" id="latest-posts"></div>
-      <a href="blog.html" class="btn btn-outline" style="margin-top: 20px;">Visit Blog &rarr;</a>
-    </div>
-  </section>
-
+</main>
   <footer class="footer">
     <div class="footer-links">
-      <a href="https://github.com/jingtine" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/jingtine" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="mailto:jingtineli@smail.nju.edu.cn">Email</a>
       <a href="feed.xml">RSS</a>
       <a href="status.html">Status</a>
@@ -163,13 +102,9 @@
   </footer>
 
   <script src="js/blog.js"></script>
-  <script src="js/site-motion.js?v=20260713-7"></script>
-  <script src="js/nav.js?v=20260821-1"></script>
-  <script>
-    loadArticleIndex().then(function (articles) {
-      renderArticleList('latest-posts', articles, 2);
-    });
-  </script>
+  <script src="js/site-motion.js?v=20260910"></script>
+  <script src="js/nav.js?v=20260910"></script>
+  <script src="js/home.js"></script>
 
 </body>
 </html>
