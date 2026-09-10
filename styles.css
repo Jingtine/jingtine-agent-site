@@ -255,17 +255,17 @@ main {
 }
 .footer-icon-link {
   justify-content:center;
-  width:44px;
-  height:44px;
-  min-height:44px;
+  width:34px;
+  height:34px;
+  min-height:34px;
   color:var(--muted);
   border-radius:50%;
   text-decoration:none;
   transition:color var(--transition),background-color var(--transition),transform var(--transition)
 }
 .footer-icon-link svg {
-  width:28px;
-  height:28px;
+  width:25px;
+  height:25px;
   fill:none;
   stroke:currentColor;
   stroke-width:1.8;
@@ -274,7 +274,6 @@ main {
 }
 .footer-icon-link:hover,.footer-icon-link:focus-visible,.footer-icon-link[aria-current="page"] {
   color:var(--accent-ink);
-  background:var(--accent-soft);
   transform:translateY(-2px) rotate(-2deg)
 }
 .footer p {
@@ -287,7 +286,7 @@ main {
 .nav-social-links {
   align-items:center;
   flex-wrap:nowrap;
-  gap:2px;
+  gap:6px;
   width:100%;
   margin-top:16px;
   padding-top:16px;

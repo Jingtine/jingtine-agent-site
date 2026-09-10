@@ -31,6 +31,13 @@ test('social icons live below the sidebar while no-JS footer links remain availa
   await expect(page.locator('.nav-links a',{hasText:'Status'})).toHaveCount(0);
   await expect(page.locator('.footer .footer-links')).toHaveCount(0);
   await expect(page.locator('.nav-social-links a[aria-label="Status"]')).toHaveAttribute('href','status.html');
+  const iconMetrics=await links.evaluateAll(items=>items.map(item=>({
+    width:item.getBoundingClientRect().width,
+    height:item.getBoundingClientRect().height,
+    background:getComputedStyle(item).backgroundColor
+  })));
+  expect(iconMetrics.every(item=>item.width<=34&&item.height<=34)).toBe(true);
+  expect(iconMetrics.every(item=>item.background==='rgba(0, 0, 0, 0)')).toBe(true);
 
   const context=await browser.newContext({javaScriptEnabled:false});
   const fallback=await context.newPage();
