@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="About Jingtine — Software Engineering & Business Administration student at Nanjing University.">
   <title>About — Jingtine</title>
-  <link rel="stylesheet" href="styles.css?v=20260910">
+  <link rel="stylesheet" href="styles.css?v=20260910-about">
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳转正文</a>
@@ -23,125 +23,87 @@
         <a href="reader.html">Reader</a>
         <a href="assistant.html">Assistant</a>
       </div></div></nav>
-  <main id="main-content" tabindex="-1">
+  <main id="main-content" tabindex="-1" class="about-page">
+    <div class="about-masthead"><span>ABOUT / PERSONAL DOSSIER</span><span>NANJING · 2026</span></div>
 
-  <div class="page-header">
-    <div class="section-label">About</div>
-    <h1>Jingtine</h1>
-    <div class="hero-tags" style="margin-top: 16px;">
-      <span class="hero-tag">Software Engineering</span>
-      <span class="hero-tag tag-accent">Business Innovation</span>
-      <span class="hero-tag">AI Agent</span>
-    </div>
-  </div>
-
-  <section class="section about-profile">
-    <div class="about-text">
-      <p>
-        南京大学 软件工程（软工商业创新班）在读，同时修读工商管理双学位。
-        我对 AI Agent、软件架构设计和产品创新充满热情，致力于将技术能力与商业思维结合，
-        构建有价值、可落地的软件产品。
-      </p>
-    </div>
-
-    <div class="edu-cards">
-      <div class="edu-card">
-        <div class="edu-icon">&#9900;</div>
-        <div class="edu-info">
-          <span class="edu-school">南京大学</span>
-          <span class="edu-major">软件工程（软工商业创新班）</span>
-          <span class="edu-desc">系统学习软件设计、架构、开发与工程管理</span>
+    <section class="about-dossier" aria-labelledby="about-title">
+      <div class="about-dossier-copy">
+        <span class="panel-number">01 / A SHORT INTRODUCTION</span>
+        <h1 id="about-title">Jingtine.<br><em>在技术与商业之间，持续创造。</em></h1>
+        <p class="about-lead">南京大学软件工程（软工商业创新班）在读，同时修读工商管理双学位。</p>
+        <p>我关注 AI Agent、软件架构与产品创新，希望把工程能力和商业思维放在同一张图纸上，做出有价值、能够真正落地的软件产品。</p>
+        <div class="hero-tags" aria-label="关注方向">
+          <span class="hero-tag">Software Engineering</span>
+          <span class="hero-tag">AI Agent</span>
+          <span class="hero-tag">Product Innovation</span>
         </div>
-      </div>
-      <div class="edu-card">
-        <div class="edu-icon edu-icon-blue">&#9883;</div>
-        <div class="edu-info">
-          <span class="edu-school">双学位</span>
-          <span class="edu-major">工商管理</span>
-          <span class="edu-desc">培养商业分析、产品策略与创新创业能力</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-label">Skills</div>
-    <h2 class="section-title">技术能力</h2>
-
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-header">
-          <span class="skill-dot"></span>
-          <h3>软件工程</h3>
-        </div>
-        <p class="skill-desc">扎实的工程基础，熟悉现代软件开发全流程。</p>
-        <div class="skill-tags">
-          <span>Python</span><span>TypeScript</span><span>Java</span>
-          <span>React</span><span>Node.js</span><span>Git</span>
-          <span>Docker</span><span>CI/CD</span><span>数据库设计</span>
+        <div class="about-actions">
+          <a class="btn btn-primary" href="projects.html">查看作品 Projects ↗</a>
+          <a class="btn" href="mailto:jingtineli@smail.nju.edu.cn">写信给我 Email →</a>
         </div>
       </div>
 
-      <div class="skill-card">
-        <div class="skill-header">
-          <span class="skill-dot dot-purple"></span>
-          <h3>AI Agent</h3>
-        </div>
-        <p class="skill-desc">深入探索大语言模型与自主 Agent 的工程实践。</p>
-        <div class="skill-tags">
-          <span>LangChain</span><span>RAG</span><span>Prompt Engineering</span>
-          <span>Agent 框架</span><span>LLM 应用</span><span>工具调用</span>
-          <span>向量检索</span><span>多 Agent 协作</span>
-        </div>
-      </div>
+      <figure class="about-portrait">
+        <span class="about-tape" aria-hidden="true"></span>
+        <img src="assets/images/figure.jpg" width="420" height="420" alt="Jingtine avatar">
+        <figcaption>
+          <strong>Jingtine</strong>
+          <span>NJU · Software Engineering</span>
+          <span>Business Administration / Double Degree</span>
+        </figcaption>
+        <span class="about-stamp">STUDENT<br>MAKER</span>
+      </figure>
+    </section>
 
-      <div class="skill-card">
-        <div class="skill-header">
-          <span class="skill-dot dot-blue"></span>
-          <h3>产品创新</h3>
-        </div>
-        <p class="skill-desc">结合商业思维与技术能力，推动产品从想法到落地。</p>
-        <div class="skill-tags">
-          <span>需求分析</span><span>产品设计</span><span>商业分析</span>
-          <span>用户研究</span><span>MVP 设计</span><span>项目管理</span>
-          <span>数据分析</span><span>市场调研</span>
-        </div>
+    <section class="section about-study" aria-labelledby="study-title">
+      <div class="about-section-heading">
+        <div><span class="panel-number">02 / EDUCATION</span><h2 id="study-title">两条学习线索</h2></div>
+        <p>工程训练回答“如何实现”，商业学习继续追问“为何值得做”。</p>
       </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-label">Contact</div>
-    <h2 class="section-title">联系方式</h2>
-    <div class="contact-card">
-      <p class="contact-intro">
-        如果你对我的项目或研究方向感兴趣，欢迎随时交流。
-      </p>
-      <div class="contact-list">
-        <div class="contact-item">
-          <span class="contact-label">Email</span>
-          <a href="mailto:jingtineli@smail.nju.edu.cn" class="contact-value">jingtineli@smail.nju.edu.cn</a>
-        </div>
-        <div class="contact-item">
-          <span class="contact-label">GitHub</span>
-          <a href="https://github.com/jingtine" class="contact-value" target="_blank" rel="noopener noreferrer">github.com/jingtine</a>
-        </div>
-        <div class="contact-item">
-          <span class="contact-label">School</span>
-          <span class="contact-value">Nanjing University</span>
-        </div>
-        <div class="contact-item">
-          <span class="contact-label">Major</span>
-          <span class="contact-value">Software Engineering (Business Innovation Class)</span>
-        </div>
-        <div class="contact-item">
-          <span class="contact-label">Double</span>
-          <span class="contact-value">Business Administration</span>
-        </div>
+      <div class="about-study-grid">
+        <article class="about-study-card">
+          <span class="about-study-mark">SE</span>
+          <div><p class="about-study-school">南京大学</p><h3>软件工程</h3><p>软工商业创新班 · 系统学习软件设计、架构、开发与工程管理。</p></div>
+        </article>
+        <article class="about-study-card">
+          <span class="about-study-mark">BA</span>
+          <div><p class="about-study-school">双学位</p><h3>工商管理</h3><p>培养商业分析、产品策略与创新创业能力。</p></div>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <section class="section about-capabilities" aria-labelledby="capability-title">
+      <div class="about-section-heading">
+        <div><span class="panel-number">03 / CAPABILITIES</span><h2 id="capability-title">能力索引</h2></div>
+        <p>从代码、智能系统到产品判断，形成一条完整的实践路径。</p>
+      </div>
+      <div class="about-capability-list">
+        <article class="about-capability-row">
+          <span class="about-capability-number">01</span>
+          <div class="about-capability-copy"><h3>软件工程</h3><p>扎实的工程基础，熟悉现代软件开发全流程。</p></div>
+          <div class="skill-tags"><span>Python</span><span>TypeScript</span><span>Java</span><span>React</span><span>Node.js</span><span>Git</span><span>Docker</span><span>CI/CD</span><span>数据库设计</span></div>
+        </article>
+        <article class="about-capability-row">
+          <span class="about-capability-number">02</span>
+          <div class="about-capability-copy"><h3>AI Agent</h3><p>深入探索大语言模型与自主 Agent 的工程实践。</p></div>
+          <div class="skill-tags"><span>LangChain</span><span>RAG</span><span>Prompt Engineering</span><span>Agent 框架</span><span>LLM 应用</span><span>工具调用</span><span>向量检索</span><span>多 Agent 协作</span></div>
+        </article>
+        <article class="about-capability-row">
+          <span class="about-capability-number">03</span>
+          <div class="about-capability-copy"><h3>产品创新</h3><p>结合商业思维与技术能力，推动产品从想法到落地。</p></div>
+          <div class="skill-tags"><span>需求分析</span><span>产品设计</span><span>商业分析</span><span>用户研究</span><span>MVP 设计</span><span>项目管理</span><span>数据分析</span><span>市场调研</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-contact-strip" aria-labelledby="contact-title">
+      <span class="panel-number">04 / CONTACT</span>
+      <div><h2 id="contact-title">有想法？来聊聊。</h2><p>项目、研究方向，或一个还没有成形的产品问题。</p></div>
+      <div class="about-contact-links">
+        <a href="mailto:jingtineli@smail.nju.edu.cn">Email ↗</a>
+        <a href="https://github.com/jingtine" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </section>
   </main>
   <footer class="footer">
     <div class="footer-links">

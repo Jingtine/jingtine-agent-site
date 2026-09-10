@@ -20,6 +20,16 @@ test('small editorial labels retain readable contrast on colored paper',async({p
   });
   expect(ratio).toBeGreaterThanOrEqual(4.5);
 });
+test('About reads as a layered personal dossier',async({page})=>{
+  await page.goto('/about.html');
+  await expect(page.locator('.about-dossier')).toBeVisible();
+  await expect(page.locator('.about-portrait img')).toHaveAttribute('src','assets/images/figure.jpg');
+  await expect(page.locator('.about-study-card')).toHaveCount(2);
+  await expect(page.locator('.about-capability-row')).toHaveCount(3);
+  await expect(page.locator('.about-contact-strip a[href^="mailto:"]')).toBeVisible();
+  const backgrounds=await page.locator('.about-dossier-copy,.about-portrait,.about-study-card').evaluateAll(items=>items.map(item=>getComputedStyle(item).backgroundColor));
+  expect(new Set(backgrounds).size).toBeGreaterThanOrEqual(3);
+});
 test('social icons live below the sidebar while no-JS footer links remain available',async({page,browser})=>{
   await page.goto('/index.html');
   const links=page.locator('.nav .nav-social-links a');
