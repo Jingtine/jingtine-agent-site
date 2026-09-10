@@ -247,8 +247,32 @@ main {
   min-height:44px;
   align-items:center
 }
+.footer .footer-icon-link {
+  justify-content:center;
+  width:44px;
+  height:44px;
+  min-height:44px;
+  color:var(--muted);
+  border-radius:50%;
+  text-decoration:none;
+  transition:color var(--transition),background-color var(--transition),transform var(--transition)
+}
+.footer-icon-link svg {
+  width:28px;
+  height:28px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round
+}
+.footer .footer-icon-link:hover,.footer .footer-icon-link:focus-visible {
+  color:var(--accent-ink);
+  background:var(--accent-soft);
+  transform:translateY(-2px) rotate(-2deg)
+}
 .footer p {
-  margin:8px 0 0;
+  margin:14px 0 0;
   font-family:var(--font-mono)
 }
 .btn,.blog-tag,.subscribe-link {

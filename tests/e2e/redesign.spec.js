@@ -20,6 +20,20 @@ test('small editorial labels retain readable contrast on colored paper',async({p
   });
   expect(ratio).toBeGreaterThanOrEqual(4.5);
 });
+test('footer links become accessible icon controls while keeping no-JS links',async({page,browser})=>{
+  await page.goto('/index.html');
+  const links=page.locator('.footer-links a');
+  await expect(links).toHaveCount(4);
+  await expect(links.first()).toHaveClass(/footer-icon-link/);
+  await expect(links.first().locator('svg')).toHaveCount(1);
+  await expect(links.first()).toHaveAttribute('aria-label','GitHub');
+
+  const context=await browser.newContext({javaScriptEnabled:false});
+  const fallback=await context.newPage();
+  await fallback.goto('/index.html');
+  await expect(fallback.locator('.footer-links')).toContainText('GitHub');
+  await context.close();
+});
 test('failed Wiki navigation does not retain previous article TOC',async({page})=>{
   await page.goto('/wiki.html');
   await page.locator('#wiki-article-list .article-card').first().click();
