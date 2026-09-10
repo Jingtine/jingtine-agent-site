@@ -1,13 +1,13 @@
 {
-  "generated": "2026-09-10T03:07:18.491717+08:00",
+  "generated": "2026-09-11T02:59:10.166585+08:00",
   "total": 112,
   "items": [
     {
-      "id": "9e253fa4a250",
-      "title": "Apple Watch Ultra 4",
-      "link": "https://www.apple.com/apple-watch-ultra-4/",
-      "description": "Article URL: https://www.apple.com/apple-watch-ultra-4/ Comments URL: https://news.ycombinator.com/item?id=49631121 Points: 27 # Comments: 8",
-      "pubDate": "2026-09-10T02:21:40+08:00",
+      "id": "5e851ed2e066",
+      "title": "JEP 544: Ahead-of-Time Code Compilation",
+      "link": "https://openjdk.org/jeps/544",
+      "description": "Article URL: https://openjdk.org/jeps/544 Comments URL: https://news.ycombinator.com/item?id=49647404 Points: 13 # Comments: 9",
+      "pubDate": "2026-09-11T01:30:39+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -15,11 +15,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "e2137401cab3",
-      "title": "Apple Unveils iPhone Duo",
-      "link": "https://www.apple.com/newsroom/2026/09/apple-unveils-iphone-duo/",
-      "description": "Article URL: https://www.apple.com/newsroom/2026/09/apple-unveils-iphone-duo/ Comments URL: https://news.ycombinator.com/item?id=49630964 Points: 182 # Comments: 159",
-      "pubDate": "2026-09-10T02:17:06+08:00",
+      "id": "9e03277e8851",
+      "title": "Music Theory for the 21st-Century Classroom",
+      "link": "https://musictheory.pugetsound.edu/mt21c/MusicTheory.html",
+      "description": "Article URL: https://musictheory.pugetsound.edu/mt21c/MusicTheory.html Comments URL: https://news.ycombinator.com/item?id=49647134 Points: 21 # Comments: 5",
+      "pubDate": "2026-09-11T01:14:12+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -27,11 +27,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "227061d064a9",
-      "title": "iPhone Duo",
-      "link": "https://www.apple.com/iphone-duo/",
-      "description": "Article URL: https://www.apple.com/iphone-duo/ Comments URL: https://news.ycombinator.com/item?id=49630931 Points: 268 # Comments: 368",
-      "pubDate": "2026-09-10T02:15:43+08:00",
+      "id": "579e626a2540",
+      "title": "Cognition's SWE-2 achieves 92.8 on Terminal-Bench 2.1",
+      "link": "https://tokenstead.ai/models/swe-2",
+      "description": "Article URL: https://tokenstead.ai/models/swe-2 Comments URL: https://news.ycombinator.com/item?id=49646778 Points: 15 # Comments: 4",
+      "pubDate": "2026-09-11T00:52:11+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -39,11 +39,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "5821ed47a804",
-      "title": "Show HN: Self-hosted company OS, Claude Code and Codex agents in departments",
-      "link": "https://github.com/OtoDock/oto-dock",
-      "description": "Hi HN, I am Dimitris. This is a company OS that I built and use to run my business and anyone can install it and self host it for free. Think of it as Claude Code, Cowork and the cloud sessions in one self hosted application.It is a Multi-tenant application by design where many p…",
-      "pubDate": "2026-09-10T01:57:55+08:00",
+      "id": "97da0e57f6ea",
+      "title": "I have a theory that software drives people insane",
+      "link": "https://graybeard.ing/software-drives-people-insane/",
+      "description": "Article URL: https://graybeard.ing/software-drives-people-insane/ Comments URL: https://news.ycombinator.com/item?id=49646181 Points: 132 # Comments: 62",
+      "pubDate": "2026-09-11T00:13:42+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -51,83 +51,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "707b25cf5704",
-      "title": "Apple Watch Series 12",
-      "link": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/",
-      "description": "Article URL: https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/ Comments URL: https://news.ycombinator.com/item?id=49630566 Points: 87 # Comments: 76",
-      "pubDate": "2026-09-10T01:56:17+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "5b32cdc139a2",
-      "title": "Apple Introduces AirPods 5",
-      "link": "https://www.apple.com/newsroom/2026/09/apple-introduces-airpods-5-with-best-in-class-open-ear-active-noise-cancellation/",
-      "description": "Article URL: https://www.apple.com/newsroom/2026/09/apple-introduces-airpods-5-with-best-in-class-open-ear-active-noise-cancellation/ Comments URL: https://news.ycombinator.com/item?id=49630253 Points: 131 # Comments: 113",
-      "pubDate": "2026-09-10T01:39:24+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "a76cf7777d6d",
-      "title": "Qwen 3.8 follows GPT-5.5 Pro reasoning prefills",
-      "link": "https://gist.github.com/wsxiaoys/e0286dc6bb624ff5fdf49e7f4c528ba3",
-      "description": "Article URL: https://gist.github.com/wsxiaoys/e0286dc6bb624ff5fdf49e7f4c528ba3 Comments URL: https://news.ycombinator.com/item?id=49630026 Points: 61 # Comments: 13",
-      "pubDate": "2026-09-10T01:24:28+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "d647aa045876",
-      "title": "Procedural Graphs: Self-Evolving Execution Structures for LLM Agents",
-      "link": "https://academy.dair.ai/papers/procedural-graphs-self-evolving-execution-structures-for-llm-agents-2609.09153",
-      "description": "Article URL: https://academy.dair.ai/papers/procedural-graphs-self-evolving-execution-structures-for-llm-agents-2609.09153 Comments URL: https://news.ycombinator.com/item?id=49629868 Points: 10 # Comments: 1",
-      "pubDate": "2026-09-10T01:13:52+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "ec2ff24e3c43",
-      "title": "Why Emacs Consult async searches feel slow and how to speed them up",
-      "link": "https://www.jamescherti.com/emacs-consult-speed-async-searche-grep-ripgrep-fd-find/",
-      "description": "Article URL: https://www.jamescherti.com/emacs-consult-speed-async-searche-grep-ripgrep-fd-find/ Comments URL: https://news.ycombinator.com/item?id=49629865 Points: 16 # Comments: 1",
-      "pubDate": "2026-09-10T01:13:43+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "464ece3505b6",
-      "title": "I haven't lost a customer service fight in seven months",
-      "link": "https://www.sudomoin.com/p/consumer-claims",
-      "description": "Article URL: https://www.sudomoin.com/p/consumer-claims Comments URL: https://news.ycombinator.com/item?id=49628982 Points: 32 # Comments: 29",
-      "pubDate": "2026-09-10T00:18:38+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "2e7352d84ce7",
-      "title": "字节赢得时间，但AI在消灭时间",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzU3MjA5NDM5OQ==&mid=2247523659&idx=1&sn=5fb6056f01800fafebbb93b037d7720a&chksm=fd1b682962bbbe20b08f2e87889a487c0def7aa8fa097603073185532a9d432737e563d66aad",
-      "description": "作者 | 刘艺晨 抖音坐上了移动互联网市场的王座。野村最新研报援引QuestMobile数据称，2026年7月，抖音总使用时长首次超过微信。 字节系在中国Top 50 App中的时长份额，也从去年同期的33.6%升至40.9%；腾讯系则降至29.1%，双方差距扩大至11.8个百分点。 这并不是简单的“抖音打败微信”。 从覆盖人群的维度看，微信日活仍达到9.31亿，高于抖音的7.14亿。 抖音完成反超，既因为日活同比增长19%，也因为单个活跃用户的日均使用时长增长8%。 微信依然是覆盖范围最广的数字基础设施，抖音则正在成为最大的注意力入口。 这个数据最终建…",
-      "pubDate": "2026-09-10T00:03:27+08:00",
+      "id": "5364fcb77fdd",
+      "title": "特努斯首秀，苹果杀死折叠屏？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTYwOTM0Nw==&mid=2650565991&idx=1&sn=93b77f70851f865e8da29317bc7b0c91&chksm=be19f2526853f810e42b22dcb917b9bbfeb1633b1e8777006daa9289ce9fd301cfe3f085ea6a",
+      "description": "酷玩实验室原创作品秋天来了，又到了苹果发布会的季节。这次不太一样，以CEO身份陪伴了果粉整整15年的库克，已经从台前转向了幕后，他在开场时一闪而过，指了指身后出现的新CEO约翰·特努斯，笑着说道：“那才是你们的主角”，象征新时代的开启。 而作为新任掌门人的特努斯，在首秀上不仅带来了常规升级的iPhone 18 Pro系列以及新耳机、新手表，还有万众期待的\"One more thing\" ———— 折叠屏产品iPhone Duo。苹果这边“双新临门”，然而资本市场给出的评价是…… “难评”，发布会后股价没有大涨也没有跳水，只是微跌0.28%，对比历代iPh…",
+      "pubDate": "2026-09-11T00:03:23+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -135,11 +63,11 @@
       "category": "ai-news"
     },
     {
-      "id": "71176d535410",
-      "title": "数读HYROX易主：2026预计收入2.7亿欧，盈方变现3.6亿欧",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzA4MjQzNDYyMQ==&mid=2650509468&idx=1&sn=4fc53e2ee6702bcfc37164281c16ad0a&chksm=8671e171c892870564f20c4a8517128b0362bf161ca15483db689853923471408267ef3f95c6",
-      "description": "备受欢迎的体能赛品牌HYROX在今天凌晨（9月9日），正式易主。 盈方体育作为曾经的控股股东，将所持有的HYROX多数股权悉数出售给L Catterton牵头的财团，完全从中退出。 除了L Catterton，该财团还包括HYROX的两位创始人Christian Toetzke、Moritz Fürste，以及Jeffrey Katzenburg联合创办的投资公司WndrCo。 交易完成后，两位创始人将合计持股51%，其他资方为小股东。 HYROX是近几年全球范围内迅猛蹿红的体能赛IP，因此交易消息一出，迅速成为行业热搜级新闻。 60%股份全卖，盈方体育…",
-      "pubDate": "2026-09-10T00:03:27+08:00",
+      "id": "246f2358ec3e",
+      "title": "大学“一床难求”，高教大省出手了",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg2MjA5Mjc0OA==&mid=2247582683&idx=1&sn=4b82b407c0f5601b22902cdc22fe2248&chksm=cfcaa3e6d7a479b64b39f46960466dbf54809e992ac3090f790e2b0d4ee8178928da7391e65d",
+      "description": "高校扩招VS校舍不足，难题何解？作为全国高教资源大省，近日，江苏印发《省属高校学生宿舍提质扩容三年攻坚行动省级资金补助方案》（以下简称《方案》），提出支持高校综合采取“改、租、买、建、调”等方式，有针对性地配置学生宿舍资源。 其中还提到，支持在徐州、淮安、连云港等房价相对较低地区开展宿舍购置工作，省财政补助30%。 近年来，高校扩招与校舍不足的矛盾愈演愈烈。2024年初，国家发展改革委、教育部等七部门联合印发《关于加强高校学生宿舍建设的指导意见》（以下简称《意见》），首次提出“推动高校招生计划安排与宿舍面积达标挂钩”。 此后，湖北、安徽、湖南、广东等地相…",
+      "pubDate": "2026-09-11T00:03:23+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -147,11 +75,155 @@
       "category": "ai-news"
     },
     {
-      "id": "541e01bce71e",
-      "title": "16.57mm？新 iPhone 药丸开孔变短了，背后是哪些关键技术？| 硬哲学",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjgzMTAwODI0MA==&mid=2652465694&idx=1&sn=b0a065abdfb52e264a2368376a27b512&chksm=9ac2fa0ed788a3ff60c4e37538e2009da8ad63eb013de46264992c9ca5cae7644d6e198d2940",
-      "description": "消费电子总习惯用更快的芯片、更多的功能来证明进步，但一件产品如何被人记住，往往取决于那些细小而具体的设计—— 材料的触感、形态的取舍，甚至按键的排布。在「硬哲学」里，爱范儿试图剥离技术和参数的外衣，探求产品设计中人性的本源。 这是「硬哲学」的第 88 篇文章。大家好，距离苹果发布会正式召开还有不到 6 个小时了。 从早前的各路爆料信息，再到发布会前一天 Spigen、Casetify、dbrand 等配件厂商堂而皇之的泄露，关于新手机我们该了解的东西基本已经了解清楚了。 不过有趣的是，在面向开发者的 beta 版本系统中，仍然藏着许多尚待挖掘的新信息。…",
-      "pubDate": "2026-09-10T00:03:27+08:00",
+      "id": "fa7bd8e6fd84",
+      "title": "Forgejo <=16.0.3 Critical RCE",
+      "link": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md",
+      "description": "Article URL: https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md Comments URL: https://news.ycombinator.com/item?id=49645907 Points: 53 # Comments: 25",
+      "pubDate": "2026-09-10T23:57:40+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "286b9039ee8a",
+      "title": "Casablanca: How an unproduced play marched into movie history",
+      "link": "https://www.thecollector.com/casablanca-unproduced-play-movie-history/",
+      "description": "Article URL: https://www.thecollector.com/casablanca-unproduced-play-movie-history/ Comments URL: https://news.ycombinator.com/item?id=49645826 Points: 33 # Comments: 10",
+      "pubDate": "2026-09-10T23:52:02+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "5be41d31baf9",
+      "title": "Show HN: MultiMatte, a Promptable Image Background Removal Model",
+      "link": "https://usefeyn.com/blog/multimatte/",
+      "description": "Hey HN, I'm Shreyash from Feyn. We help companies build custom models from their data.Today we're releasing MultiMatte, a background removal model you can aim with words. Name an object in your image. MultiMatte keeps just that thing, and removes everything else.Try it out on you…",
+      "pubDate": "2026-09-10T23:50:25+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "56c33bf373a1",
+      "title": "Neki is sharded Postgres by PlanetScale",
+      "link": "https://neki.dev/",
+      "description": "Article URL: https://neki.dev/ Comments URL: https://news.ycombinator.com/item?id=49645763 Points: 80 # Comments: 21",
+      "pubDate": "2026-09-10T23:48:14+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "a51420107f54",
+      "title": "Silicon Valley Is Transforming the Military-Industrial Complex",
+      "link": "https://costsofwar.watson.brown.edu/paper/how-big-tech-and-silicon-valley-are-transforming-military-industrial-complex",
+      "description": "Article URL: https://costsofwar.watson.brown.edu/paper/how-big-tech-and-silicon-valley-are-transforming-military-industrial-complex Comments URL: https://news.ycombinator.com/item?id=49645754 Points: 60 # Comments: 82",
+      "pubDate": "2026-09-10T23:47:50+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "d5b330bed085",
+      "title": "Neki",
+      "link": "https://planetscale.com/blog/introducing-neki",
+      "description": "Article URL: https://planetscale.com/blog/introducing-neki Comments URL: https://news.ycombinator.com/item?id=49645686 Points: 111 # Comments: 42",
+      "pubDate": "2026-09-10T23:43:49+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "403f674bcee8",
+      "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
+      "link": "https://cognition.com/blog/swe-2",
+      "description": "Article URL: https://cognition.com/blog/swe-2 Comments URL: https://news.ycombinator.com/item?id=49645443 Points: 165 # Comments: 89",
+      "pubDate": "2026-09-10T23:29:47+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "2076cbdbd673",
+      "title": "NASA Color Trick Was Meant for Mars. Now It's Unveiling Rock Art on Earth",
+      "link": "https://gizmodo.com/this-nasa-color-trick-was-meant-for-mars-now-its-unveiling-rock-art-on-earth-2000809844",
+      "description": "Article URL: https://gizmodo.com/this-nasa-color-trick-was-meant-for-mars-now-its-unveiling-rock-art-on-earth-2000809844 Comments URL: https://news.ycombinator.com/item?id=49645437 Points: 109 # Comments: 16",
+      "pubDate": "2026-09-10T23:29:30+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "068732eab6f9",
+      "title": "Show HN: Syq – copy files between machines fast (better than rsync)",
+      "link": "https://greaber.github.io/syq/",
+      "description": "I got frustrated with the slowness of rsync and made an alternative that works faster by using multiple parallel connections, direct encrypted TCP when available, and other optimizations. I also added cool features like the ability to maintain a persistent ssh connection to the s…",
+      "pubDate": "2026-09-10T23:01:27+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "8c4c7fc4c8be",
+      "title": "The Four-Color Theorem Gets a Rare New Proof",
+      "link": "https://www.quantamagazine.org/the-four-color-theorem-gets-a-rare-new-proof-20260910/",
+      "description": "Article URL: https://www.quantamagazine.org/the-four-color-theorem-gets-a-rare-new-proof-20260910/ Comments URL: https://news.ycombinator.com/item?id=49644647 Points: 20 # Comments: 5",
+      "pubDate": "2026-09-10T22:46:08+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "cf709a60227b",
+      "title": "AI 2027 (2025)",
+      "link": "https://ai-2027.com",
+      "description": "Article URL: https://ai-2027.com Comments URL: https://news.ycombinator.com/item?id=49644294 Points: 20 # Comments: 9",
+      "pubDate": "2026-09-10T22:27:00+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "ccf40ae115f1",
+      "title": "Shopify moves back to Native from React Native",
+      "link": "https://shopify.engineering/back-to-native",
+      "description": "Article URL: https://shopify.engineering/back-to-native Comments URL: https://news.ycombinator.com/item?id=49643982 Points: 509 # Comments: 361",
+      "pubDate": "2026-09-10T22:09:31+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "548c1f912b99",
+      "title": "星巴克：狼狈出走中国，咖啡之王靠美国能东山再起吗？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzE5MTU3MzA2OQ==&mid=2247576954&idx=1&sn=ab20354ddd96ccae019632fb74ef7a4f&chksm=973173c968ecc375274fb6ff0912181a33fee7b74e5dac2422865b20742a6f9745f7920f9fbd",
+      "description": "上篇我们讲清了星巴克是一家怎样的公司：一只靠品牌与“第三空间”高溢价撑起近70%毛利、能像银行一样吸纳储值浮存、常年靠回购分红把自己买成负权益的现金牛。 但好公司不一定等于好成长和好资产。这一篇，海豚君要回答的是另一个问题：近年来美国同店转负、中国“失守”、增长萎靡的当下，这台现金牛，到底还值多少钱？ 一、星巴克未来的成长性如何？聊成长性之前，首先要厘清一个核心前提，即我们究竟该把目光投向哪里寻找增长。 实际上，伴随4月份星巴克出售中国业务这笔交易完成后（中国60%的股权卖给博裕、近8000家门店转授权出表），星巴克的增长版图就已经被彻底重构—— 中国市…",
+      "pubDate": "2026-09-10T22:02:27+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -159,11 +231,11 @@
       "category": "ai-news"
     },
     {
-      "id": "b204b4b95c3a",
-      "title": "存量时代，又一座城市的地铁要涨价了",
-      "link": "https://mp.weixin.qq.com/s?__biz=Mzg2MjA5Mjc0OA==&mid=2247582646&idx=1&sn=39a162eb9da779e9cd49bdfcd1477653&chksm=cfaede8163c49271c36ef074af162763bdce458b17d919680afcb4d493a323fd54cf9c6b1554",
-      "description": "背后是一场“拉锯战”9月7日，备受关注的上海地铁调价听证会举行。 根据当天讨论的两套调价方案，“涨价”大概率已难以避免—— 两个方案平均每人次票价均提高约1元，涨幅接近，区别主要在于票价结构。 这是上海地铁21年来首次启动票价机制优化调整，也意味着又一座城市加入地铁“涨价”行列。 去年，重庆、昆明地铁调价就曾引发关注；广州也在酝酿之中，根据计划，今年12月前广州将完成“地铁票价机制优化”，其现行票价机制同样已沿用20年之久。 此轮调价背后，是地铁行业长期面临的“入不敷出”难题。 从各地地铁集团披露的数据看，除广州等少数城市外，大部分城市的运营高度依赖政府…",
-      "pubDate": "2026-09-10T00:03:27+08:00",
+      "id": "b486b3de0246",
+      "title": "《三体》最狠的一句话，正在重写AI时代的商业规则",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg5NDMyMDk2OQ==&mid=2247501120&idx=1&sn=8154885fa4f2ace6427040e1d8fa30e7&chksm=c118714b46e0c75b970d7a770afda7577c3cc67720502d245c4cc6f09b4690b3429363e8a1fa",
+      "description": "公众号规则是部分推送，您只有设了星标⭐️，才能及时接收最新推送“只送大脑”1/5像大脑一样轻《三体》里有一个阶梯计划，要把冷冻人体当成间谍“送”给三体，但人体太重了，根本飞不到预定速度。 负责计划的维德提出了一个冷酷而大胆的方案：“只送大脑”。 “只送大脑”是《三体》中令人印象深刻的金句之一。它是在技术极端受限的情况下，只保留最不可替代的环节，其他问题到了条件允许时再解决。 大脑是意识和记忆的唯一载体，而三体人远超人类的科技水平，完全有能力恢复这颗大脑的意识。 大部分的任务，都需要具备了一定的条件，才能保证完成，这个原则叫“预则立，不预则废”，但想要办成…",
+      "pubDate": "2026-09-10T22:02:27+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -171,83 +243,11 @@
       "category": "ai-news"
     },
     {
-      "id": "5cdb0d2e968b",
-      "title": "Understanding the recent DDoS attack against Read the Docs",
-      "link": "https://about.readthedocs.com/blog/2026/09/2026-ddos-attack/",
-      "description": "Article URL: https://about.readthedocs.com/blog/2026/09/2026-ddos-attack/ Comments URL: https://news.ycombinator.com/item?id=49628614 Points: 81 # Comments: 23",
-      "pubDate": "2026-09-09T23:55:53+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "51f9d3682897",
-      "title": "GNU Radio in the browser",
-      "link": "https://gnuradioworld.com/",
-      "description": "Article URL: https://gnuradioworld.com/ Comments URL: https://news.ycombinator.com/item?id=49628576 Points: 94 # Comments: 14",
-      "pubDate": "2026-09-09T23:53:06+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "5a2b2b0a8401",
-      "title": "Better AI code comment detector",
-      "link": "https://entropicthoughts.com/better-ai-comment-classifier",
-      "description": "Article URL: https://entropicthoughts.com/better-ai-comment-classifier Comments URL: https://news.ycombinator.com/item?id=49628454 Points: 27 # Comments: 17",
-      "pubDate": "2026-09-09T23:45:43+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "1546ced40984",
-      "title": "Planet Labs' open satellite feed",
-      "link": "https://tech.marksblogg.com/planet-labs-open-satellite-feed.html",
-      "description": "Article URL: https://tech.marksblogg.com/planet-labs-open-satellite-feed.html Comments URL: https://news.ycombinator.com/item?id=49628429 Points: 78 # Comments: 17",
-      "pubDate": "2026-09-09T23:44:09+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "72e16b46dc6d",
-      "title": "We accidentally built a synthetic cell factory",
-      "link": "https://bnext.bio/post/we-accidentally-built-a-synthetic-cell-factory",
-      "description": "Article URL: https://bnext.bio/post/we-accidentally-built-a-synthetic-cell-factory Comments URL: https://news.ycombinator.com/item?id=49628290 Points: 48 # Comments: 3",
-      "pubDate": "2026-09-09T23:34:51+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "4ef1fa7cd057",
-      "title": "GPT-6 Astra, looped transformers, and hidden reasoning",
-      "link": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
-      "description": "Article URL: https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and Comments URL: https://news.ycombinator.com/item?id=49627370 Points: 210 # Comments: 76",
-      "pubDate": "2026-09-09T22:37:47+08:00",
-      "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "ffd999fa06f2",
-      "title": "分红险狂飙",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NTE0ODc2Nw==&mid=2650979024&idx=2&sn=3d1b643411edae3e16b1d21d4ec58375&chksm=bc62b67e2cbbbe858b3c193da4a269494c7891260394f707bfa0afe3a670764b79acaa604bac",
-      "description": "图片来源：界面图库界面新闻记者 |曾令俊“今年以来主动询问分红险的客户占了六成以上。客户算得很清楚，现在三年期定存利率不到2%，理财又不保本，分红险有确定的保底收益，还能跟着保险公司的投资业绩分红利，接受度特别高。” 周岚近日告诉界面新闻记者。 周岚是某险企广东分公司银保渠道经理，从业13年的她对保险市场的变化有着最直观的感受。 “很多客户担心利率还会继续降，想着早点锁定长期的稳健收益渠道，签单决策周期比以前短了很多。” 周岚说，上半年团队里不少代理人的分红险单件平均保费较去年同期提升了三成以上，单件保费超百万元的高净值保单也明显增多。 上市险企2026…",
-      "pubDate": "2026-09-09T22:02:27+08:00",
+      "id": "804c9f6d951d",
+      "title": "大宗商品，正将全球股市逼至悬崖边？",
+      "link": "https://mp.weixin.qq.com/s?__biz=Mzg5MzEyNzEwNQ==&mid=2247848238&idx=1&sn=bfa2838f367042f166a58eeb08fc53ee&chksm=c1fde96912db213e7fe54109d95d6cfe4292f3744118095a215781f7c316cbffc4db7809150a",
+      "description": "过去几周，随着“大宗商品教父”杰夫·柯里等人的供应链预警相继印证，一场超越石油范畴、横跨能源、农产品与金属的广泛大宗商品牛市行情正加速形成。 而不少业内人士眼下担心，实体经济所面临的日益加剧的实物商品供应紧张局面，也将开始向企业利润与美股估值发起正面冲击…… 如下图所示，彭博大宗商品指数目前已攀升至2012年以来的最高水平…… 而Quantix商品指数更是创下了历史新高。知名宏观策略师Simon White在周三发布的最新报告中警告称，大宗商品的狂飙，正暗藏挤压企业利润率和削弱家庭支出的风险。 这不禁让人产生疑问：面对这场远超石油范畴的通胀冲击，股市究竟…",
+      "pubDate": "2026-09-10T22:02:27+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -255,11 +255,11 @@
       "category": "ai-news"
     },
     {
-      "id": "77ddd9ced0bd",
-      "title": "中年人过日子不需要真相",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzU3OTU2ODY5MA==&mid=2247487876&idx=1&sn=856cdb1cb79adb9c1f4c60255a296382&chksm=fc6a15ddbb279daf4c74f0f93da82fb32c7f2fc5baf9b1e60eb7c9a8e31520be2f49c5133e3b",
-      "description": "（图/《完美陌生人》）2016年，意大利电影《完美陌生人》（Perfect Strangers）把七个中年人聚到了餐桌旁。 他们玩了一个看似坦荡的游戏：所有人把手机都放到桌子上，所有的来电、短信、邮件全部公开。 游戏开始于一句自信满满的「我们没有秘密」，却终于出轨、隐瞒、家庭裂痕的接连摊牌。 原本温馨的晚宴 ，最终在尖锐的争吵和窒息的沉默中收场。 电影上映后，「该不该看伴侣手机」也成为了被公共舆论反复咀嚼的道德难题。 往前再推十几年，冯导的电影《手机》也曾预演过这场关于婚姻信任的危机。 男主严守一在这块屏幕所编织的秘密和谎言中，一步步走向失控。 如今二十…",
-      "pubDate": "2026-09-09T22:02:27+08:00",
+      "id": "532c0603811e",
+      "title": "现房新政出台十一天，房企拿地开始算新账",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTExMjYwMA==&mid=2670395100&idx=1&sn=e1c2015699e785baec0c42ef8833e00f&chksm=bd09b89b2a6b5640f017c040842184cd4acd6b3475d6adf2e24d77e23a6051efc5444a591479",
+      "description": "8月28日前后出台的一系列政策，涉及商品住房销售、房地产信贷等制度调整。 对参与竞拍的房企来说，一宗地的价值不仅取决于房子能卖多少钱，还要考虑拿地和建设的投入以及投资回报周期。 作者：田国宝封图：图虫创意8月28日房地产新政出台后，李洋一直盯着一二线城市的土地市场。 这名央企投拓人员发现，区位、容积率、限高、收益率等过去常用的投资指标，似乎都不足以解释近期几场土拍的结果。 8月31日，上海出让两宗涉宅用地。位于内环与中环之间的普陀区真如地块以150.19亿元底价成交；位于郊区、容积率1.2的松江泗泾地块经过29轮竞价，以约5.82亿元成交，溢价率约16.…",
+      "pubDate": "2026-09-10T22:02:27+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -267,11 +267,11 @@
       "category": "ai-news"
     },
     {
-      "id": "9bc664560417",
-      "title": "霸王卖蛋，茶颜关店",
-      "link": "https://mp.weixin.qq.com/s?__biz=Mzg2ODg4ODU5MA==&mid=2247815310&idx=1&sn=53a62089d4a2e279dd8062a5a6601674&chksm=cfe7cab6948b795c791a4967495c34d483da2a0395ced485891c55d210f6c1266bf075ecfecb",
-      "description": "霸王茶姬的茶叶蛋，茶颜悦色的小酒馆：新茶饮行业的中年危机。 作者：史安杰@零售商业财经 原创出品9月7日，霸王茶姬在上海7家门店上架白雾红尘茶叶蛋。 用招牌大红袍茶汤慢煮，单点5元，买杯正价饮品加2.5元就能换购。 同一天晚上，茶颜悦色发布公开信，宣布旗下昼夜诗酒茶艺文小酒馆将在10月31日前全部关闭。 这是继7月小神闲茶馆全线撤店后，茶颜家族半年内关停的第二个子品牌。 一个往收银台旁摆煮蛋锅，一个从办公楼里拆酒馆招牌。 两家缠斗十余年的品牌，一个激进扩品，一个主动收缩。 有人把这看作新茶饮下半场的开幕：上半场比开店速度，下半场比单店效率。 但问题在于，…",
-      "pubDate": "2026-09-09T22:02:27+08:00",
+      "id": "5676abead0ab",
+      "title": "三次部委座谈会后 锂电扩产之门“暂闭”",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTExMjYwMA==&mid=2670395100&idx=2&sn=fdd84911de48e5765c9a58cecc800524&chksm=bda34d085702f3362470783d89976928d1dbce8776941e17ce5623f03eccd385f240262365ba",
+      "description": "这不是简单的行政干预，而是在中国锂电产业从“规模竞速”迈向“高质量发展”的关键节点上，监管部门对粗放增长模式的果断纠偏，其关乎产业能否实现可持续健康发展。 作者：王帅国封图：图虫创意锂电行业扩产的大门正在关上。 近日，多家头部电池企业向经济观察报确认，今年下半年以来，各地基本已经停止受理新增动力电池、储能电池产能备案，新增动力、储能电池产能申报基本暂停。 一家头部储能电池企业管理人员表示：“从今年上半年开始已经严格备案管理了，但并不是停止，是审批权从地方转到国家层面统一审批。” 无论是暂停备案受理还是审批收权，国家层面收紧锂电扩产的信号已经明确。 这一看…",
+      "pubDate": "2026-09-10T22:02:27+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -279,11 +279,11 @@
       "category": "ai-news"
     },
     {
-      "id": "2a9a4f3cd8ec",
-      "title": "钱大妈二次递表：对赌压力缓了一步，增长难题仍在",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzI1OTIyMTg0MQ==&mid=2247534425&idx=1&sn=e40900bb9e38b6a968085cd5ae2e027e&chksm=ebb1265793aaf333af2b508b435594ef2fd94c80560b1948df4874a1e0e80d7962b29ce7e918",
-      "description": "▲这是灵兽第1876篇原创文章钱大妈真正需要回答的，仍是增长、加盟商以及全国化扩张这几道题。 作者/十里ID/lingshouke18月21日，钱大妈再次向港交所递交上市申请，距离上一次递表失效仅一个月。 “钱大妈急了”这是对其此举最多的评论。但实际上，这是市场对钱大妈再次递表关注度较高。 原本临近的对赌回购压力已经获得进一步缓冲。根据新版招股书，相关股份回购开始日期已延至2028年1月1日。 （最早约定2024年12月31日前完成上市，未达成后于2025年9月延后至2027年1月1日；二次递表后，最新回购时间已延长到2028年1月1日。‌‌）不过，上市…",
-      "pubDate": "2026-09-09T22:02:27+08:00",
+      "id": "33c3aadbe617",
+      "title": "张勇妻子套现27.5亿港元后，海底捞股价连跌",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5NTE0ODc2Nw==&mid=2650979575&idx=1&sn=53aee115ccd20c512ee4353c6c51f482&chksm=bc519b458e1fa6c0f99511a674d02b6f3fe2f4930d60cf5ec4bbca3c945dac3b118a07716147",
+      "description": "海底捞创始人张勇（右二）及其夫人舒萍（右一）图片来源：界面新闻界面新闻记者 | 李烨界面新闻编辑 | 牙韩翔四个月前，海底捞创始人张勇花了约1.52亿港元增持海底捞；而四个月后，他妻子舒萍设立的家族信托旗下公司，以低约两成的股价卖出了约27.5亿港元的海底捞股份。 后者的动作让资本市场不安。消息披露后，海底捞股价9月9日收跌9.14%，报10.34港元。 9月10日继续下跌，截至15:21分，报9.89港元，跌幅4.35%，该公司的股价也来到阶段性低点。 两天前，9月8日，海底捞控股股东之一SP NP Ltd.通过大宗交易减持2.59亿股海底捞股份，成交…",
+      "pubDate": "2026-09-10T22:02:27+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -291,11 +291,11 @@
       "category": "ai-news"
     },
     {
-      "id": "ec0be571e8cc",
-      "title": "西安半导体：依赖三星，不止三星 | 重新发现西安",
-      "link": "https://mp.weixin.qq.com/s?__biz=MzA3MjIzMzg0Mw==&mid=2649986951&idx=1&sn=22186c537627bca82ae2ce2bccd8f2ba&chksm=866abf06c6aea3c416dafa46bdf6c0279f37e3efc1c9e33c9c0c19e9c69ac3106d37a7484044",
-      "description": "十年时间，西安半导体产业的规模赶上了产业名片头牌航空航天制造业。 统计数据显示，西安电子器件制造业——城市统计口径中与半导体制造最为接近工业门类—— 的营业收入，由2014年的108亿元增至2024年的910亿元。 十年前，这一规模仅相当于航空航天制造的四分之一，如今两者已经处于同一量级。 而这背后，三星是西安半导体崛起的支点，也让它更早开始思考建立规模之后，更深层次的产业链布局。 以重大外资项目的招商引资拉起一条全新的产业链，是那个时期不少中国城市发展新兴产业的重要路径。 理想化的设想是：先借跨国公司的资本、技术和订单进入全球产业链，再在更长周期里补本…",
-      "pubDate": "2026-09-09T22:02:27+08:00",
+      "id": "5b840943564c",
+      "title": "10个立刻能让生活变得更好的小技巧",
+      "link": "https://mp.weixin.qq.com/s?__biz=MzAxNTY0NjEzNg==&mid=2247488957&idx=1&sn=2059799790bc7177eadade1238e6f652&chksm=9aeb9b286f2193cde1852bd4ee10999a57820ebe192daec16dfb62ff4c75adeef5b91198d305",
+      "description": "Photo by eduard on Unsplash本文共有 4400 字欢迎星标 L先生说避免收不到推送喔今天的文章，我想跟你分享 10 个简单易行的小技巧。 它们都有心理学原理支撑，没有什么门槛和成本，但能非常有效地提高对生活的满意度，让你的工作、学习和生活变得更顺手、更舒服。 1. 每一天多做一些不同的事情，让它变得多元化我在之前的文章里，分享过一个观点：我们对时间的记忆，其实并非依据真实的时间，而是依据我们所经历的事件的新鲜感和重要性。 它越新鲜、越重要，我们就越会觉得时间过得更久。这可以解释为什么随着年龄增长，我们会觉得时间变得越来越快：因为…",
+      "pubDate": "2026-09-10T22:02:27+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -303,11 +303,11 @@
       "category": "ai-news"
     },
     {
-      "id": "cc50efc6763b",
-      "title": "Tailwind Labs is joining Shopify",
-      "link": "https://tailwindcss.com/blog/tailwind-is-joining-shopify",
-      "description": "Article URL: https://tailwindcss.com/blog/tailwind-is-joining-shopify Comments URL: https://news.ycombinator.com/item?id=49626190 Points: 637 # Comments: 266",
-      "pubDate": "2026-09-09T21:27:11+08:00",
+      "id": "c3aba4d13cd3",
+      "title": "Rust is tier-1 language at Microsoft",
+      "link": "https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/",
+      "description": "Article URL: https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/ Comments URL: https://news.ycombinator.com/item?id=49643546 Points: 404 # Comments: 215",
+      "pubDate": "2026-09-10T21:39:16+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -315,11 +315,23 @@
       "category": "ai-agent"
     },
     {
-      "id": "37e507421ba7",
-      "title": "这回，AI真的打过来了",
-      "link": "https://mp.weixin.qq.com/s?__biz=MjM5OTUzNDA4Mg==&mid=2650603464&idx=1&sn=ea085b3b744de1966f586a5f1c2d9a78&chksm=becafd4e2f662b183103e7a6b5975f8d0c02b408c0d1d4bcb09c0563789f98c4360b56a7551e",
-      "description": "最近有几件事情刚好值得放在一起说。8月26日，即梦AI正式推出首个影视内容厂牌“即梦片场”，面向影视公司、专业影视团队与AI内容创作者开放长篇项目征集，重点扶持不低于90分钟的电影项目和剧集，其中电影项目以院线或网络发行为目标。 显而易见，即梦并不甘于只做一个“AI工具”，而更进一步朝向“内容制作者”迈进。 几天之后的8月31日，芒果TV出品的AIGC剧集《后西游记》在湖南卫视+芒果TV开播，成为国内首部进入卫视黄金档的AIGC长剧。 30集，每集45分钟，这是完整的长剧逻辑和制作规模，暂且不说剧集内容能否让人满意，《后西游记》至少证明了AI内容进入传统…",
-      "pubDate": "2026-09-09T20:02:31+08:00",
+      "id": "41b4e5a6ca97",
+      "title": "List of references on Sony websites to players \"owning\" their digital games",
+      "link": "https://consumerrights.wiki/w/Sony_PlayStation_digital_game_ownership_lawsuit",
+      "description": "Article URL: https://consumerrights.wiki/w/Sony_PlayStation_digital_game_ownership_lawsuit Comments URL: https://news.ycombinator.com/item?id=49642531 Points: 268 # Comments: 89",
+      "pubDate": "2026-09-10T20:18:06+08:00",
+      "source": {
+        "id": "hn-frontpage",
+        "name": "Hacker News"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "b0a1a964ade5",
+      "title": "Anthropic研究员辞职刷屏，4天7位AI大牛警告，AI或灭绝人类？",
+      "link": "https://mp.weixin.qq.com/s?__biz=MjM5MjAyNDUyMA==&mid=2651107048&idx=1&sn=b594ce94d90bf223f0d1cbef2ba126b7&chksm=bc613e8aa8030db5c56fc78ced74c3a88c2ad4b9d3e03f21b33f587ac82ae495242ac8130a4c",
+      "description": "你知道吗，硅谷有个笑话：当有人离开一份普通的科技行业工作时，他们会说：「我在这里过得很开心，现在要开启下一段冒险了。」而当有人离开人工智能领域的工作时，他们会说：「我曾直视深渊。我要退休去写诗了。请大家多陪陪家人，好吗？」昨天，Jacob Coxon 宣布从 Anthropic 辞职。 这位也在 OpenAI 工作过的研究员认为，两家公司正在追逐能够自我改进的超级智能，拿人类的未来冒险。 「从事人工智能研发的人士真诚地认为，到本十年末，人工智能可能会将我们全都杀光。」帖子发布不到一天，浏览量就已经超过 1 亿次。 Coxon 对 OpenAI 和 Ant…",
+      "pubDate": "2026-09-10T20:02:26+08:00",
       "source": {
         "id": "wasi-reader",
         "name": "瓦斯阅读"
@@ -327,11 +339,11 @@
       "category": "ai-news"
     },
     {
-      "id": "775dcccdb09c",
-      "title": "Roame (YC S23) Is Hiring Viral Content Editor",
-      "link": "https://www.ycombinator.com/companies/roame/jobs/KuVVqSh-content-systems-builder-editor",
-      "description": "Article URL: https://www.ycombinator.com/companies/roame/jobs/KuVVqSh-content-systems-builder-editor Comments URL: https://news.ycombinator.com/item?id=49625110 Points: 0 # Comments: 0",
-      "pubDate": "2026-09-09T20:01:38+08:00",
+      "id": "7040bcc06f18",
+      "title": "What algorithm did Windows XP use to choose your initial user picture?",
+      "link": "https://devblogs.microsoft.com/oldnewthing/20260909-00/?p=112683",
+      "description": "Article URL: https://devblogs.microsoft.com/oldnewthing/20260909-00/?p=112683 Comments URL: https://news.ycombinator.com/item?id=49640646 Points: 289 # Comments: 143",
+      "pubDate": "2026-09-10T17:04:14+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -339,11 +351,11 @@
       "category": "ai-agent"
     },
     {
-      "id": "46815a9fce93",
-      "title": "How I advertise malicious software on Google Ads",
-      "link": "https://xlii.space/eng/malicious-software-on-google-ads/",
-      "description": "Article URL: https://xlii.space/eng/malicious-software-on-google-ads/ Comments URL: https://news.ycombinator.com/item?id=49624856 Points: 293 # Comments: 174",
-      "pubDate": "2026-09-09T19:43:21+08:00",
+      "id": "d194009aff36",
+      "title": "More questions about whether researchers can trust OpenAI with unpublished math",
+      "link": "https://mathstodon.xyz/@andreasthom/117240535270608201",
+      "description": "https://mathstodon.xyz/@andreasthom/117240536885387540https://mathstodon.xyz/@andreasthom/117240537520615623https://x.com/ValerioCapraro/status/2097791836269977996, https://xcancel.com/ValerioCapraro/status/209779183626997799...https://bsky.app/profile/did:plc:ckaz32jwl6t2cno6fmu…",
+      "pubDate": "2026-09-10T14:49:43+08:00",
       "source": {
         "id": "hn-frontpage",
         "name": "Hacker News"
@@ -351,14 +363,26 @@
       "category": "ai-agent"
     },
     {
-      "id": "0a27670444c9",
-      "title": "Desert Ant Labs: local, fast models that run on device",
-      "link": "https://desertant.com/blog/introducing-desert-ant-labs/",
-      "description": "Article URL: https://desertant.com/blog/introducing-desert-ant-labs/ Comments URL: https://news.ycombinator.com/item?id=49624823 Points: 309 # Comments: 83",
-      "pubDate": "2026-09-09T19:39:46+08:00",
+      "id": "8bb8a5d2f8af",
+      "title": "Quoting Calif Research",
+      "link": "https://simonwillison.net/2026/Sep/10/calif-research/",
+      "description": "Today, we're releasing a demo of WeWorm, the first zero-click worm to spread through WeChat calls across iOS and Android. [...] The victim does not need to answer the call, or interact with their phone at all. Even if they do answer, they hear nothing, and the exploit still succe…",
+      "pubDate": "2026-09-10T08:56:41+08:00",
       "source": {
-        "id": "hn-frontpage",
-        "name": "Hacker News"
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
+      },
+      "category": "ai-agent"
+    },
+    {
+      "id": "46bc2da24ce5",
+      "title": ".blend URL Viewer",
+      "link": "https://simonwillison.net/2026/Sep/9/blender-viewer/",
+      "description": "Tool: .blend URL Viewer I'm continuing to have a lot of fun with GPT-6 Astra and Blender (see my TIL). As a big fan of the Imperial Fabergé Easter eggs, I've always thought it would be fun to make some new ones that celebrate popular culture. Yesterday I decided to try out the ne…",
+      "pubDate": "2026-09-10T07:58:32+08:00",
+      "source": {
+        "id": "simonw-blog",
+        "name": "Simon Willison's Weblog"
       },
       "category": "ai-agent"
     },
@@ -704,30 +728,6 @@
       "link": "https://simonwillison.net/2026/Sep/1/tarn-adams/",
       "description": "They took the letters from me! I have to talk about dwarf behavior now. I can't even talk about dwarf AI. It doesn't exist. It's dwarf behavior, and they misbehave sometimes — Tarn Adams, co-creator of Dwarf Fortress Tags: ai, game-design",
       "pubDate": "2026-09-02T01:01:11+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "06c1aea3d44b",
-      "title": "datasette-mcp 0.2",
-      "link": "https://simonwillison.net/2026/Sep/1/datasette-mcp/",
-      "description": "Release: datasette-mcp 0.2 \"rows\" from execute_sql is now an array of objects. Previously it was an array of arrays. This should help weaker models avoid losing track of which positional array element maps to which column. #1 Now depends on mcp>=2.1.1. This is the first non-alpha…",
-      "pubDate": "2026-09-01T23:30:12+08:00",
-      "source": {
-        "id": "simonw-blog",
-        "name": "Simon Willison's Weblog"
-      },
-      "category": "ai-agent"
-    },
-    {
-      "id": "b79951c45667",
-      "title": "Python 3.15.0 candidate 2 is here!",
-      "link": "https://simonwillison.net/2026/Sep/1/python-315-rc-2/",
-      "description": "Python 3.15.0 candidate 2 is here! Hugo van Kemenade (release manager for Python 3.14 and 3.15) announces the final release candidate for Python 3.15, scheduled for release in October: Entering the release candidate phase, only reviewed code changes which are clear bug fixes are…",
-      "pubDate": "2026-09-01T22:59:18+08:00",
       "source": {
         "id": "simonw-blog",
         "name": "Simon Willison's Weblog"
