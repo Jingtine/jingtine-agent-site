@@ -48,6 +48,7 @@ WIKI_JSON = os.path.join(PROJECT_DIR, "public", "data", "wiki.json")
 WIKI_REQUIRED_FIELDS = ["id", "title", "category", "tags", "updated", "summary", "links", "path"]
 
 STATUS_JSON = os.path.join(PROJECT_DIR, "public", "data", "status.json")
+GITHUB_STATS_JSON = os.path.join(PROJECT_DIR, "public", "data", "github-stats.json")
 
 PASS = "[PASS]"
 FAIL = "[FAIL]"
@@ -421,6 +422,35 @@ def check_status_json():
             p(f"{FAIL} status.json:        missing key: {key}")
             return False
     p(f"{PASS} status.json:        valid JSON, status={data.get('status', '?')}")
+    return True
+
+
+def check_github_stats_json():
+    """Check that the generated public GitHub snapshot is safe and complete."""
+    if not os.path.exists(GITHUB_STATS_JSON):
+        p(f"{FAIL} GitHub stats:       github-stats.json not found")
+        return False
+    try:
+        with open(GITHUB_STATS_JSON, "r", encoding="utf-8") as source:
+            data = json.load(source)
+    except json.JSONDecodeError as error:
+        p(f"{FAIL} GitHub stats:       JSON parse error: {error}")
+        return False
+    required = ["generated", "profile", "summary", "months", "calendar", "repositories"]
+    missing = [key for key in required if key not in data]
+    if missing:
+        p(f"{FAIL} GitHub stats:       missing keys: {', '.join(missing)}")
+        return False
+    if not isinstance(data["calendar"], list) or not data["calendar"]:
+        p(f"{FAIL} GitHub stats:       contribution calendar is empty")
+        return False
+    if any(
+        not isinstance(repo.get("url"), str) or not repo["url"].startswith("https://github.com/")
+        for repo in data["repositories"]
+    ):
+        p(f"{FAIL} GitHub stats:       repository URL is not a GitHub HTTPS URL")
+        return False
+    p(f"{PASS} GitHub stats:       {len(data['calendar'])} days, {len(data['repositories'])} repositories")
     return True
 
 
@@ -830,18 +860,21 @@ def main():
     results.append(check_status_json())
 
     # Check 12
-    results.append(check_wiki_hash_routing())
+    results.append(check_github_stats_json())
 
     # Check 13
-    results.append(check_blog_wiki_links())
+    results.append(check_wiki_hash_routing())
 
     # Check 14
-    results.append(check_wiki_related_blog())
+    results.append(check_blog_wiki_links())
 
     # Check 15
-    results.append(check_blog_content())
+    results.append(check_wiki_related_blog())
 
     # Check 16
+    results.append(check_blog_content())
+
+    # Check 17
     results.append(check_wiki_content())
 
     # Summary

@@ -112,20 +112,19 @@ test('Reader filtering, keyboard source and source links',async({page})=>{
   await expect(page.locator('#reader-list a').first()).toHaveAttribute('href',/^https:\/\//);
 });
 test('Status presents public GitHub activity and safe repository links',async({page})=>{
-  await page.route('https://api.github.com/users/Jingtine',route=>route.fulfill({json:{
-    login:'Jingtine',name:'Jingtine',html_url:'https://github.com/Jingtine',avatar_url:'https://avatars.githubusercontent.com/u/1?v=4',
-    public_repos:12,followers:34,following:5,public_gists:0,bio:null,blog:'',location:null,company:null,created_at:'2020-01-01T00:00:00Z',updated_at:'2026-09-01T00:00:00Z'
+  await page.route('**/public/data/github-stats.json',route=>route.fulfill({json:{
+    generated:'2026-09-10T00:00:00+08:00',profile:{login:'Jingtine',url:'https://github.com/Jingtine',publicRepos:12,followers:34},
+    summary:{totalContributions:9,activeDays:3,busiestDay:{date:'2026-09-02',count:5},stars:11},
+    months:[{key:'2026-08',label:'Aug',count:4},{key:'2026-09',label:'Sep',count:5}],
+    calendar:[{date:'2026-09-01',count:3,level:2},{date:'2026-09-02',count:5,level:4},{date:'2026-09-03',count:1,level:1}],
+    repositories:[{name:'jingtine-agent-site',url:'https://github.com/Jingtine/jingtine-agent-site',description:'Personal knowledge archive',stars:7,forks:2,language:'JavaScript',updatedAt:'2026-09-09T00:00:00Z'}]
   }}));
-  await page.route('**/api.github.com/users/Jingtine/repos?**',route=>route.fulfill({json:[
-    {id:1,name:'jingtine-agent-site',full_name:'Jingtine/jingtine-agent-site',html_url:'https://github.com/Jingtine/jingtine-agent-site',description:'Personal knowledge archive',fork:false,archived:false,stargazers_count:7,forks_count:2,language:'JavaScript',updated_at:'2026-09-09T00:00:00Z'},
-    {id:2,name:'research-notes',full_name:'Jingtine/research-notes',html_url:'https://github.com/Jingtine/research-notes',description:null,fork:false,archived:false,stargazers_count:4,forks_count:0,language:'Python',updated_at:'2026-08-30T00:00:00Z'}
-  ]}));
   await page.goto('/status.html');
-  await expect(page.getByRole('heading',{name:'GitHub Stats',level:2})).toBeVisible();
+  await expect(page.getByRole('heading',{name:'GitHub, by the numbers.'})).toBeVisible();
   await expect(page.locator('[data-github-stat="repositories"]')).toContainText('12');
-  await expect(page.locator('[data-github-stat="stars"]')).toContainText('11');
-  const statBackgrounds=await page.locator('.github-stat').evaluateAll(cards=>cards.map(card=>getComputedStyle(card).backgroundColor));
-  expect(new Set(statBackgrounds).size).toBeGreaterThanOrEqual(3);
+  await expect(page.locator('[data-github-stat="contributions"]')).toContainText('9');
+  await expect(page.locator('.github-month-bar')).toHaveCount(2);
+  await expect(page.locator('.github-calendar-day')).toHaveCount(3);
   const project=page.getByRole('link',{name:/jingtine-agent-site/});
   await expect(project).toHaveAttribute('href','https://github.com/Jingtine/jingtine-agent-site');
   await expect(project).toHaveAttribute('rel','noopener noreferrer');

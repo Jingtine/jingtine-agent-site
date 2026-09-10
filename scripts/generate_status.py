@@ -8,6 +8,7 @@ Zero dependencies — Python stdlib only.
 """
 import json
 import os
+import re
 import sys
 from datetime import datetime, timezone, timedelta
 
@@ -55,7 +56,7 @@ def count_allowlisted_feeds():
 
 
 def run_quality_check():
-    """Run check.py subprocess and parse result. Fallback to 10/10."""
+    """Run check.py subprocess and report its current passed-check count."""
     import subprocess
     check_py = os.path.join(SCRIPT_DIR, "check.py")
     try:
@@ -64,7 +65,8 @@ def run_quality_check():
             capture_output=True, text=True, timeout=30
         )
         if result.returncode == 0:
-            return "10/10 passed", True
+            match = re.search(r"All checks passed \((\d+)/(\d+)\)", result.stdout)
+            return (f"{match.group(1)}/{match.group(2)} passed" if match else "all checks passed"), True
         else:
             return "checks failed", False
     except Exception:
