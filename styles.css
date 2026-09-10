@@ -496,7 +496,7 @@ a.article-card h3 {
 /* Reading surfaces have no texture or motion. */
 .article-detail {
   width:100%;
-  max-width:760px;
+  max-width:920px;
   margin:0 auto;
   padding:28px;
   border:1px solid var(--rule);
@@ -555,15 +555,20 @@ a.article-card h3 {
   height:auto
 }
 .article-back {
-  max-width:760px;
+  max-width:920px;
   margin:24px auto
 }
 .reading-toc {
-  max-width:760px;
+  max-width:920px;
   margin:0 auto 20px;
   background:var(--surface);
   padding:12px 20px;
   border:1px solid var(--rule)
+}
+#wiki-detail-view > div:first-child,#wiki-detail-title,#wiki-detail-meta {
+  width:100%;
+  max-width:920px;
+  margin-inline:auto
 }
 .reading-toc summary {
   cursor:pointer;
