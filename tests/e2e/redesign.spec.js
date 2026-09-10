@@ -30,6 +30,13 @@ test('About reads as a layered personal dossier',async({page})=>{
   const backgrounds=await page.locator('.about-dossier-copy,.about-portrait,.about-study-card').evaluateAll(items=>items.map(item=>getComputedStyle(item).backgroundColor));
   expect(new Set(backgrounds).size).toBeGreaterThanOrEqual(3);
 });
+test('education wording identifies the Business School dual-degree program',async({page})=>{
+  for(const route of ['/index.html','/about.html']){
+    await page.goto(route);
+    await expect(page.locator('body')).toContainText('南京大学商学院');
+    await expect(page.locator('body')).toContainText('软件工程与工商管理双学位班');
+  }
+});
 test('social icons live below the sidebar while no-JS footer links remain available',async({page,browser})=>{
   await page.goto('/index.html');
   const links=page.locator('.nav .nav-social-links a');
