@@ -63,4 +63,20 @@
     link.title = label;
     link.appendChild(svg);
   });
+
+  var shortcuts = document.querySelector('.footer-links');
+  var navInner = document.querySelector('.nav-inner');
+  if (shortcuts && navInner) {
+    shortcuts.classList.add('nav-social-links');
+    shortcuts.setAttribute('aria-label', '快捷链接');
+    navInner.appendChild(shortcuts);
+
+    var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    shortcuts.querySelectorAll('a').forEach(function (link) {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+  }
 })();

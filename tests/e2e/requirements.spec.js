@@ -12,7 +12,7 @@ test('BC01 — 首页完整信息展示', async ({ page }) => {
   expect(bodyText).toContain('Software Engineering');
   expect(bodyText).toContain('AI Agent');
   expect(bodyText).toContain('Product Innovation');
-  const emailLink = page.locator('footer a[href*="mailto:"]');
+  const emailLink = page.locator('.nav-social-links a[href*="mailto:"]');
   await expect(emailLink).toBeVisible();
 });
 

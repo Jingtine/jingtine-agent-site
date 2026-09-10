@@ -20,18 +20,23 @@ test('small editorial labels retain readable contrast on colored paper',async({p
   });
   expect(ratio).toBeGreaterThanOrEqual(4.5);
 });
-test('footer links become accessible icon controls while keeping no-JS links',async({page,browser})=>{
+test('social icons live below the sidebar while no-JS footer links remain available',async({page,browser})=>{
   await page.goto('/index.html');
-  const links=page.locator('.footer-links a');
+  const links=page.locator('.nav .nav-social-links a');
   await expect(links).toHaveCount(4);
   await expect(links.first()).toHaveClass(/footer-icon-link/);
   await expect(links.first().locator('svg')).toHaveCount(1);
   await expect(links.first()).toHaveAttribute('aria-label','GitHub');
+  await expect(page.locator('.nav-links a')).toHaveCount(8);
+  await expect(page.locator('.nav-links a',{hasText:'Status'})).toHaveCount(0);
+  await expect(page.locator('.footer .footer-links')).toHaveCount(0);
+  await expect(page.locator('.nav-social-links a[aria-label="Status"]')).toHaveAttribute('href','status.html');
 
   const context=await browser.newContext({javaScriptEnabled:false});
   const fallback=await context.newPage();
   await fallback.goto('/index.html');
   await expect(fallback.locator('.footer-links')).toContainText('GitHub');
+  await expect(fallback.locator('#nav-links a')).toHaveCount(8);
   await context.close();
 });
 test('failed Wiki navigation does not retain previous article TOC',async({page})=>{
@@ -69,7 +74,7 @@ test('reading TOC, keyboard Wiki, wide content and no-JS navigation',async({page
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   const context=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:800}});
   const fallback=await context.newPage();await fallback.goto('/index.html');
-  await expect(fallback.locator('#nav-links a')).toHaveCount(9);
+  await expect(fallback.locator('#nav-links a')).toHaveCount(8);
   await expect(fallback.locator('#nav-links a').last()).toBeVisible();
   await context.close();
   await page.goto('/wiki.html');
@@ -133,7 +138,8 @@ test('menu is accessible on mobile and tablet and Escape preserves unrelated foc
     await expect(toggle).toHaveAttribute('aria-expanded','false');
     await expect(page.locator('#nav-links')).toBeHidden();
     await toggle.click();
-    await expect(page.locator('#nav-links a')).toHaveCount(9);
+    await expect(page.locator('#nav-links a')).toHaveCount(8);
+    await expect(page.locator('.nav-social-links')).toBeVisible();
     await expect(page.locator('[aria-current="page"]')).toHaveText('Assistant');
     await page.keyboard.press('Escape');
     await expect(toggle).toBeFocused();

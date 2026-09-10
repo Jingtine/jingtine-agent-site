@@ -92,8 +92,8 @@ test('TC04 — 首页个人信息完整性', async ({ page }) => {
   await expect(page.locator('body')).toContainText('Software Engineering');
   await expect(page.locator('body')).toContainText('AI Agent');
   await expect(page.locator('body')).toContainText('Product Innovation');
-  // Email in footer
-  const emailLink = page.locator('footer a[href*="mailto:"]');
+  // Email in the sidebar shortcut row
+  const emailLink = page.locator('.nav-social-links a[href*="mailto:"]');
   await expect(emailLink).toBeVisible();
 });
 
