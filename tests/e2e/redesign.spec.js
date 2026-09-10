@@ -99,11 +99,13 @@ test('Blog and Wiki reading surfaces use the available desktop width',async({pag
   await page.goto('/article.html?slug=hello-world');
   await expect(page.locator('.article-detail')).toBeVisible();
   expect((await page.locator('.article-detail').boundingBox()).width).toBeGreaterThanOrEqual(880);
+  await expect(page.locator('.article-detail')).toHaveCSS('border-top-width','0px');
 
   await page.goto('/wiki.html');
   await page.locator('#wiki-article-list .article-card').first().click();
   await expect(page.locator('#wiki-detail-body')).toBeVisible();
   expect((await page.locator('#wiki-detail-body').boundingBox()).width).toBeGreaterThanOrEqual(880);
+  await expect(page.locator('#wiki-detail-body')).toHaveCSS('border-top-width','0px');
 });
 test('Reader filtering, keyboard source and source links',async({page})=>{
   await page.goto('/reader.html');const cards=page.locator('#source-cards [role="button"]');await expect(cards.first()).toBeVisible();
