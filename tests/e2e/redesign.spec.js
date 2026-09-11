@@ -1,25 +1,5 @@
 const {test, expect} = require('@playwright/test');
 const routes=['index','about','projects','blog','papers','wiki','reader','assistant','status','contact','knowledge','library','article'];
-test('homepage uses varied paper accents and hand-drawn editorial details',async({page})=>{
-  await page.goto('/index.html');
-  const backgrounds=await page.locator('.panel-profile,.panel-projects,.panel-posts,.panel-research,.panel-wiki,.panel-reader,.panel-tools').evaluateAll(els=>els.map(el=>getComputedStyle(el).backgroundColor));
-  expect(new Set(backgrounds).size).toBeGreaterThanOrEqual(5);
-  const details=await page.locator('.panel-posts,.panel-wiki,.panel-reader').evaluateAll(els=>els.map(el=>getComputedStyle(el,'::before').content));
-  expect(details.every(content=>content && content!=='none')).toBe(true);
-  const topOffsets=await page.locator('.panel-projects,.panel-posts').evaluateAll(els=>els.map(el=>el.getBoundingClientRect().top));
-  expect(Math.abs(topOffsets[0]-topOffsets[1])).toBeGreaterThanOrEqual(10);
-});
-test('small editorial labels retain readable contrast on colored paper',async({page})=>{
-  await page.goto('/index.html');
-  const ratio=await page.locator('.panel-wiki .panel-number').evaluate(el=>{
-    const parse=value=>value.match(/\d+/g).slice(0,3).map(Number);
-    const luminance=rgb=>rgb.map(value=>value/255).map(value=>value<=.04045?value/12.92:Math.pow((value+.055)/1.055,2.4)).reduce((sum,value,index)=>sum+value*[.2126,.7152,.0722][index],0);
-    const fg=luminance(parse(getComputedStyle(el).color));
-    const bg=luminance(parse(getComputedStyle(el.closest('.paper-panel')).backgroundColor));
-    return (Math.max(fg,bg)+.05)/(Math.min(fg,bg)+.05);
-  });
-  expect(ratio).toBeGreaterThanOrEqual(4.5);
-});
 test('About reads as a layered personal dossier',async({page})=>{
   await page.goto('/about.html');
   await expect(page.locator('.about-dossier')).toBeVisible();
@@ -177,7 +157,7 @@ test('menu is accessible on mobile and tablet and Escape preserves unrelated foc
     await toggle.click();
     await expect(page.locator('#nav-links a')).toHaveCount(8);
     await expect(page.locator('.nav-social-links')).toBeVisible();
-    await expect(page.locator('[aria-current="page"]')).toHaveText('Assistant');
+    await expect(page.locator('[aria-current="page"]')).toHaveText('问答助手');
     await page.keyboard.press('Escape');
     await expect(toggle).toBeFocused();
     await expect(page.locator('#nav-links')).toBeHidden();

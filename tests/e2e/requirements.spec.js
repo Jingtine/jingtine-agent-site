@@ -17,11 +17,19 @@ test('BC01 — 首页完整信息展示', async ({ page }) => {
 });
 
 /* ================================================================
-   BC02 — 五个导航入口可跳转 (Req2)
+   BC02 — 八个导航入口可跳转 (Req2)
    ================================================================ */
-test('BC02 — 五个导航入口可跳转', async ({ page }) => {
+test('BC02 — 八个导航入口可跳转', async ({ page }) => {
   await page.goto('/index.html');
-  const navMap = { 'About': '/about.html', 'Blog': '/blog.html', 'Research': '/papers.html', 'Wiki': '/wiki.html' };
+  const navMap = {
+    '关于': '/about.html',
+    '作品': '/projects.html',
+    '随笔': '/blog.html',
+    '研究': '/papers.html',
+    '知识库': '/wiki.html',
+    '订阅阅读': '/reader.html',
+    '问答助手': '/assistant.html'
+  };
   for (const [label, expectedPath] of Object.entries(navMap)) {
     await page.click(`.nav-links a:has-text("${label}")`);
     await page.waitForLoadState('networkidle');
@@ -32,9 +40,9 @@ test('BC02 — 五个导航入口可跳转', async ({ page }) => {
     await page.goBack();
     await page.waitForLoadState('networkidle');
   }
-  // also check back to Home
+  // also check back to 首页
   await page.goto('/about.html');
-  await page.click('.nav-links a:has-text("Home")');
+  await page.click('.nav-links a:has-text("首页")');
   await page.waitForLoadState('networkidle');
   expect(new URL(page.url()).pathname).toBe('/index.html');
 });

@@ -15,7 +15,7 @@ const PAGES = [
   { name: 'status', path: '/status.html', title: 'Jingtine' },
 ];
 
-const NAV_ITEMS = ['Home', 'About', 'Projects', 'Blog', 'Research', 'Wiki', 'Reader', 'Assistant'];
+const NAV_ITEMS = ['首页', '关于', '作品', '随笔', '研究', '知识库', '订阅阅读', '问答助手'];
 
 /* ================================================================
    TC01 — 所有页面可正常访问 (F1)
@@ -36,7 +36,15 @@ test.describe('TC01 — 所有页面可正常访问', () => {
    ================================================================ */
 test('TC02 — 导航栏链接可跳转', async ({ page }) => {
   await page.goto('/index.html');
-  const navMap = { 'About': '/about.html', 'Projects': '/projects.html', 'Blog': '/blog.html', 'Research': '/papers.html', 'Wiki': '/wiki.html', 'Reader': '/reader.html', 'Assistant': '/assistant.html' };
+  const navMap = {
+    '关于': '/about.html',
+    '作品': '/projects.html',
+    '随笔': '/blog.html',
+    '研究': '/papers.html',
+    '知识库': '/wiki.html',
+    '订阅阅读': '/reader.html',
+    '问答助手': '/assistant.html'
+  };
   for (const [label, expectedPath] of Object.entries(navMap)) {
     await page.click(`.nav-links a:has-text("${label}")`);
     await page.waitForLoadState('networkidle');
@@ -51,14 +59,14 @@ test('TC02 — 导航栏链接可跳转', async ({ page }) => {
    TC03 — 当前页面导航高亮与 aria-current (F1/F13)
    ================================================================ */
 const navActiveMap = {
-  '/index.html': 'Home',
-  '/about.html': 'About',
-  '/projects.html': 'Projects',
-  '/blog.html': 'Blog',
-  '/papers.html': 'Research',
-  '/wiki.html': 'Wiki',
-  '/reader.html': 'Reader',
-  '/assistant.html': 'Assistant',
+  '/index.html': '首页',
+  '/about.html': '关于',
+  '/projects.html': '作品',
+  '/blog.html': '随笔',
+  '/papers.html': '研究',
+  '/wiki.html': '知识库',
+  '/reader.html': '订阅阅读',
+  '/assistant.html': '问答助手',
 };
 
 test.describe('TC03 — 导航高亮', () => {
@@ -414,7 +422,7 @@ test.describe('TC21 — 移动端汉堡菜单', () => {
     await expect(page.locator('html')).not.toHaveClass(/nav-open/);
 
     await toggle.click();
-    await page.locator('#nav-links a:has-text("Blog")').click();
+    await page.locator('#nav-links a:has-text("随笔")').click();
     await page.waitForLoadState('networkidle');
     const url = new URL(page.url());
     expect(url.pathname).toBe('/blog.html');
