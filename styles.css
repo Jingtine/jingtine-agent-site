@@ -56,6 +56,27 @@ body {
   background-image:radial-gradient(var(--grid) 1px,transparent 1px);
   background-size:20px 20px
 }
+body::before {
+  content:"";
+  position:fixed;
+  inset:-40px;
+  z-index:-2;
+  background:var(--site-bg-image) var(--site-bg-position)/cover no-repeat;
+  filter:blur(var(--site-bg-blur)) saturate(var(--site-bg-saturation));
+  opacity:0
+}
+.site-background-ready body::before {
+  opacity:1
+}
+body::after {
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:var(--site-bg-overlay);
+  opacity:var(--site-bg-overlay-opacity)
+}
 h1,h2,h3,h4,p,ul,ol {
   margin:0
 }
