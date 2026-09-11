@@ -12,9 +12,12 @@ const expectedNavigation = ['首页', '关于', '作品', '随笔', '研究', '�
 
 test('Chinese navigation remains real HTML without JavaScript', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
-  const page = await context.newPage();
-  await page.goto('/index.html');
-  await expect(page.locator('#nav-links a')).toHaveText(expectedNavigation);
-  await expect(page.locator('.footer a[href="feed.xml"]')).toBeVisible();
-  await context.close();
+  try {
+    const page = await context.newPage();
+    await page.goto('/index.html');
+    await expect(page.locator('#nav-links a')).toHaveText(expectedNavigation);
+    await expect(page.locator('.footer a[href="feed.xml"]')).toBeVisible();
+  } finally {
+    await context.close();
+  }
 });
