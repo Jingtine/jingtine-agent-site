@@ -1,6 +1,12 @@
 /* Shared paper editorial system;
 legacy token names map to this palette. */
 :root {
+  --site-bg-image:none;
+  --site-bg-blur:14px;
+  --site-bg-saturation:0.72;
+  --site-bg-overlay:#f4f0e8;
+  --site-bg-overlay-opacity:0;
+  --site-bg-position:center;
   --paper:#F4F0E8;
   --surface:#FFFCF5;
   --ink:#302D3D;
@@ -75,6 +81,9 @@ body::after {
   z-index:-1;
   pointer-events:none;
   background:var(--site-bg-overlay);
+  opacity:0
+}
+.site-background-ready body::after {
   opacity:var(--site-bg-overlay-opacity)
 }
 h1,h2,h3,h4,p,ul,ol {
