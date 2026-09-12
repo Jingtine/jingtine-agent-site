@@ -255,6 +255,9 @@ draft = false
         cover = self.root / "assets/images/covers/canonical.jpg"
         cover.parent.mkdir(parents=True)
         cover.write_bytes(b"cover")
+        nested_cover = self.root / "assets/images/covers/nested/canonical.jpg"
+        nested_cover.parent.mkdir(parents=True)
+        nested_cover.write_bytes(b"nested cover")
         absolute = cover.as_posix()
         cases = [
             ("dot-prefix", "./assets/images/covers/canonical.jpg"),
@@ -265,6 +268,10 @@ draft = false
                 "assets/images/covers/nested/../canonical.jpg",
             ),
             ("backslash", r"assets\images\covers\canonical.jpg"),
+            (
+                "mixed-separators",
+                r"assets/images/covers/nested\canonical.jpg",
+            ),
             ("absolute", absolute),
         ]
         for name, cover_value in cases:

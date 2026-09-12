@@ -88,7 +88,8 @@ def _validate_metadata(path: Path, project_dir: Path, metadata: dict) -> None:
         normalized_cover = PurePosixPath(cover).as_posix()
         cover_parts = PurePosixPath(cover).parts
         if (
-            normalized_cover != cover
+            "\\" in cover
+            or normalized_cover != cover
             or PurePosixPath(cover).is_absolute()
             or cover_parts[:3] != ("assets", "images", "covers")
             or ".." in cover_parts
