@@ -1,3 +1,12 @@
++++
+title = "My OpenCode + Superpowers Workflow"
+date = 2026-07-12
+kind = "technical"
+category = "software-engineering"
+tags = ["OpenCode", "Superpowers", "工作流"]
+summary = "使用 OpenCode 和 Superpowers 技能系统规划后再编码的工作流。"
+draft = false
++++
 # My OpenCode + Superpowers Workflow
 
 > Planning Before Coding

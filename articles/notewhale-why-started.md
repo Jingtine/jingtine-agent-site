@@ -1,3 +1,12 @@
++++
+title = "Building NoteWhale: Why I Started"
+date = 2026-07-13
+kind = "essay"
+category = "product-thinking"
+tags = ["NoteWhale", "知识管理"]
+summary = "从学生痛点出发，构建一个 AI 驱动的知识管理平台。"
+draft = false
++++
 # Building NoteWhale: Why I Started
 
 > From a Student's Frustration to an AI-Powered Learning Platform

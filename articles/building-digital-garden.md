@@ -1,3 +1,12 @@
++++
+title = "Building My Digital Garden"
+date = 2026-07-13
+kind = "essay"
+category = "software-engineering"
+tags = ["数字花园", "个人网站"]
+summary = "为什么我选择构建数字花园而不是传统作品集。"
+draft = false
++++
 # Building My Digital Garden
 
 > Why I Chose a Knowledge Network Instead of a Portfolio

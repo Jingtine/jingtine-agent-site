@@ -1,3 +1,12 @@
++++
+title = "GitHub Pages Development Notes"
+date = 2026-07-12
+kind = "technical"
+category = "software-engineering"
+tags = ["GitHub Pages", "静态网站"]
+summary = "在 GitHub Pages 上部署静态站点的技术笔记：Hash 路由、Markdown 服务、缓存与 NoJekyll。"
+draft = false
++++
 # GitHub Pages Development Notes
 
 > Hash Routing, Markdown, Cache and NoJekyll

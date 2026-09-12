@@ -1,3 +1,12 @@
++++
+title = "Why Software Engineering Matters for AI"
+date = 2026-07-11
+kind = "technical"
+category = "software-engineering"
+tags = ["软件工程", "AI"]
+summary = "软件工程实践如何影响 AI 项目的质量与可维护性。"
+draft = false
++++
 # Why Software Engineering Matters for AI
 
 软件工程实践如何影响 AI 项目的质量。

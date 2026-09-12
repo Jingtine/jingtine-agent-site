@@ -1,6 +1,11 @@
 from pathlib import Path
 from tempfile import TemporaryDirectory
+import json
+import shutil
+import subprocess
+import sys
 import unittest
+import xml.etree.ElementTree as ET
 
 from scripts.article_content import (
     ArticleError,
@@ -351,6 +356,99 @@ title = [
             [item["slug"] for item in records],
             ["a-new", "z-new", "old"],
         )
+
+
+class ArticleBuildTests(unittest.TestCase):
+    def setUp(self):
+        self.temporary_directory = TemporaryDirectory()
+        self.root = Path(self.temporary_directory.name)
+        self.addCleanup(self.temporary_directory.cleanup)
+        self.articles = self.root / "articles"
+        self.articles.mkdir()
+        scripts = self.root / "scripts"
+        scripts.mkdir()
+        for source in (Path(__file__).resolve().parents[1] / "scripts").glob("*.py"):
+            shutil.copy2(source, scripts / source.name)
+
+    def write_article(self, slug, **metadata):
+        (self.articles / f"{slug}.md").write_text(
+            article_text(**metadata), encoding="utf-8", newline="\n"
+        )
+
+    def run_build(self, entry="build_articles.py"):
+        return subprocess.run(
+            [sys.executable, "-X", "utf8", str(self.root / "scripts" / entry)],
+            cwd=self.root, capture_output=True, text=True, encoding="utf-8",
+        )
+
+    def test_build_outputs_are_stable_and_publish_only_sorted_public_articles(self):
+        self.write_article("old", date="2026-01-01")
+        self.write_article("z-new", title="清晨 & <trees>", summary="A & B < C")
+        self.write_article("a-new")
+        self.write_article("secret", date="2026-09-12", draft=True)
+        # Stale compatibility metadata must never be used as a source.
+        (self.articles / "index.json").write_text("not JSON", encoding="utf-8")
+
+        first = self.run_build()
+        self.assertEqual(first.returncode, 0, first.stderr)
+        self.assertEqual(first.stderr, "")
+        self.assertIn("3 articles", first.stdout)
+        index = self.root / "public/data/articles.json"
+        feed = self.root / "feed.xml"
+        index_first, feed_first = index.read_bytes(), feed.read_bytes()
+        records = json.loads(index_first)
+        self.assertEqual([record["slug"] for record in records], ["a-new", "z-new", "old"])
+        self.assertIn("清晨".encode("utf-8"), index_first)
+        self.assertTrue(index_first.endswith(b"\n"))
+        self.assertNotIn(b"\r", index_first)
+        self.assertIn(b'\n  {\n    "slug":', index_first)
+        channel = ET.fromstring(feed_first).find("channel")
+        self.assertEqual(channel.findtext("lastBuildDate"), "Fri, 11 Sep 2026 00:00:00 +0800")
+        items = channel.findall("item")
+        self.assertEqual([item.findtext("link").split("slug=")[1] for item in items], ["a-new", "z-new", "old"])
+        self.assertEqual(items[1].findtext("title"), "清晨 & <trees>")
+        self.assertEqual(items[1].findtext("description"), "A & B < C")
+        self.assertEqual(items[0].findtext("category"), "life")
+        self.assertEqual(items[0].findtext("pubDate"), channel.findtext("lastBuildDate"))
+        self.assertTrue(items[0].findtext("link").startswith("https://jingtine.github.io/jingtine-agent-site/article.html?slug="))
+
+        second = self.run_build()
+        self.assertEqual(second.returncode, 0, second.stderr)
+        self.assertEqual(index_first, index.read_bytes())
+        self.assertEqual(feed_first, feed.read_bytes())
+        compatibility = self.run_build("generate_feed.py")
+        self.assertEqual(compatibility.returncode, 0, compatibility.stderr)
+        self.assertEqual(index_first, index.read_bytes())
+        self.assertEqual(feed_first, feed.read_bytes())
+
+    def test_invalid_source_reports_error_and_does_not_replace_outputs(self):
+        self.write_article("broken", kind="unsupported")
+        feed = self.root / "feed.xml"
+        feed.write_bytes(b"existing feed")
+        result = self.run_build()
+        self.assertEqual(result.returncode, 1)
+        self.assertEqual(result.stdout, "")
+        self.assertIn("broken.md", result.stderr)
+        self.assertIn("kind", result.stderr)
+        self.assertEqual(feed.read_bytes(), b"existing feed")
+        self.assertFalse((self.root / "public/data/articles.json").exists())
+
+    def test_output_filesystem_error_returns_one(self):
+        self.write_article("valid")
+        (self.root / "public").write_text("blocking file", encoding="utf-8")
+        result = self.run_build()
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("ERROR:", result.stderr)
+        self.assertEqual(result.stdout, "")
+
+    def test_empty_publication_has_no_wall_clock_timestamp(self):
+        self.write_article("secret", draft=True)
+        result = self.run_build()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual((self.root / "public/data/articles.json").read_bytes(), b"[]\n")
+        channel = ET.parse(self.root / "feed.xml").find("channel")
+        self.assertEqual(channel.findall("item"), [])
+        self.assertIsNone(channel.find("lastBuildDate"))
 
 
 if __name__ == "__main__":
