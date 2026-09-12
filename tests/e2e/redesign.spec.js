@@ -164,7 +164,12 @@ test('Status retains site health when GitHub data fails',async({page})=>{
 });
 
 test('Status repository cards stack on a narrow screen',async({page})=>{
-  const statusData=require('../../public/data/status.json');
+  const statusData={
+    build:{version:'test',generated:'2026-09-12 00:00'},
+    content:{blogArticles:0,wikiPages:0},
+    quality:{result:'test',passing:true},
+    status:'passing'
+  };
   await page.route('**/public/data/status.json',route=>route.fulfill({json:statusData}));
   await page.route('**/public/data/github-stats.json',route=>route.fulfill({json:{
     profile:{login:'Jingtine',url:'https://github.com/Jingtine',publicRepos:2},
