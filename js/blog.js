@@ -14,25 +14,14 @@ const CATEGORY_MAP = {
  * Format ISO date string to readable format
  */
 function formatDate(dateStr) {
-  var d = new Date(dateStr);
-  var y = d.getFullYear();
-  var m = String(d.getMonth() + 1).padStart(2, '0');
-  var day = String(d.getDate()).padStart(2, '0');
-  return y + '-' + m + '-' + day;
+  return ArticleData.formatDate(dateStr);
 }
 
 /**
- * Load article index from articles/index.json
+ * Load the generated article index.
  */
 function loadArticleIndex() {
-  return fetch('articles/index.json')
-    .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
-    .then(function (articles) {
-      articles.sort(function (a, b) {
-        return new Date(b.date) - new Date(a.date);
-      });
-      return articles;
-    });
+  return ArticleData.load();
 }
 
 /**
@@ -163,7 +152,7 @@ function renderArticleList(containerId, articles, limit) {
   if (!list.length) { container.textContent = 'No articles yet.'; return; }
   list.forEach(function (article) {
     var card = document.createElement('a'); card.className = 'article-card';
-    card.href = 'article.html?slug=' + encodeURIComponent(article.slug);
+    card.href = ArticleData.articleHref(article.slug);
     var header = document.createElement('div'); header.className = 'article-card-header';
     var category = document.createElement('span'); category.className = 'article-category';
     category.textContent = CATEGORY_MAP[article.category] || article.category;

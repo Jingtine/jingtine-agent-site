@@ -656,12 +656,12 @@ def check_wiki_related_blog():
     with open(wiki_js, "r", encoding="utf-8") as f:
         content = f.read()
 
-    if "articles/index.json" not in content:
-        p(f"{FAIL} Wiki related blog:   wiki.js does not read articles/index.json")
+    if "ArticleData.load()" not in content:
+        p(f"{FAIL} Wiki related blog:   wiki.js does not load the shared article index")
         passed = False
 
-    if "article.html?slug=" not in content:
-        p(f"{FAIL} Wiki related blog:   wiki.js does not generate article.html?slug= links")
+    if "ArticleData.articleHref(" not in content:
+        p(f"{FAIL} Wiki related blog:   wiki.js does not generate article links")
         passed = False
 
     if "[[" not in content or "]]" not in content:

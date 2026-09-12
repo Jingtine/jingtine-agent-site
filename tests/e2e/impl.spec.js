@@ -355,15 +355,74 @@ test('TC18 — 导航栏在所有页面中结构一致', async ({ page }) => {
    TC19 — 文章数量与渲染一致性 (F4 边界)
    ================================================================ */
 test('TC19 — 文章数量与渲染一致性', async ({ page }) => {
-  const resp = await page.request.get('/articles/index.json');
-  const indexData = await resp.json();
-  // index.json is a bare array of articles
-  const articles = Array.isArray(indexData) ? indexData : (indexData.articles || indexData.items || []);
+  const response = await page.request.get('/public/data/articles.json');
+  expect(response.status()).toBe(200);
+  const articles = await response.json();
+  expect(Array.isArray(articles)).toBe(true);
   const expectedCount = articles.length;
   await page.goto('/blog.html');
   await page.waitForSelector('.article-card', { timeout: 5000 });
   const cardCount = await page.locator('.article-card').count();
   expect(cardCount).toBe(expectedCount);
+});
+
+test('TC19 生成文章数据模块读取索引和写作配置', async ({ page }) => {
+  await page.goto('/index.html');
+  const result = await page.evaluate(async () => {
+    const articles = await window.ArticleData.load();
+    const config = await window.ArticleData.loadConfig();
+    return {
+      count: articles.length,
+      firstSlug: articles[0].slug,
+      category: config.categories['software-engineering'],
+      kind: config.kinds.technical,
+      date: window.ArticleData.formatDate('2026-02-28'),
+      invalidDate: window.ArticleData.formatDate('2026-02-29'),
+      href: window.ArticleData.articleHref('hello world/测试'),
+    };
+  });
+
+  expect(result).toEqual({
+    count: 9,
+    firstSlug: 'building-digital-garden',
+    category: '软件工程',
+    kind: '技术',
+    date: '2026-02-28',
+    invalidDate: '',
+    href: 'article.html?slug=hello%20world%2F%E6%B5%8B%E8%AF%95',
+  });
+});
+
+test('TC19 博客在旧索引不可用时仍渲染生成文章', async ({ page }) => {
+  await page.route('**/articles/index.json', route => route.fulfill({ status: 503 }));
+  await page.goto('/blog.html');
+  await expect(page.locator('.article-card')).toHaveCount(9);
+});
+
+test('TC19 首页在生成文章索引第一次失败后可重试', async ({ page }) => {
+  const response = await page.request.get('/public/data/articles.json');
+  const articles = await response.json();
+  let generatedIndexRequests = 0;
+
+  await page.route('**/public/data/articles.json', async route => {
+    generatedIndexRequests += 1;
+    if (generatedIndexRequests === 1) {
+      await route.fulfill({ status: 500, body: 'temporary failure' });
+      return;
+    }
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify(articles),
+    });
+  });
+
+  await page.goto('/index.html');
+  const retry = page.locator('#latest-posts button:has-text("重试")');
+  await expect(retry).toBeVisible();
+  await retry.click();
+  await expect(page.locator('#latest-posts .article-card')).toHaveCount(3);
+  expect(generatedIndexRequests).toBe(2);
 });
 
 /* ================================================================

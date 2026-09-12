@@ -3,7 +3,7 @@
   function load() {
     var list = document.getElementById('latest-posts');
     list.textContent = '正在加载随笔…';
-    loadArticleIndex().then(function (articles) {
+    ArticleData.load().then(function (articles) {
       renderArticleList('latest-posts', articles, 3);
     }).catch(function () {
       list.textContent = '随笔加载失败。';

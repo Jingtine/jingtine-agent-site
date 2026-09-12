@@ -345,24 +345,10 @@
   }
 
   // ── Related Blog Articles ───────────────────────────
-  var articleIndexCache = null;
-  var articleIndexLoaded = false;
-
   function loadArticleIndex() {
-    if (articleIndexLoaded) return Promise.resolve(articleIndexCache);
-    articleIndexLoaded = true;
-    return fetch('articles/index.json')
-      .then(function (res) {
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        return res.json();
-      })
-      .then(function (articles) {
-        articleIndexCache = articles;
-        return articles;
-      })
+    return ArticleData.load()
       .catch(function (err) {
-        console.warn('Failed to load articles/index.json:', err.message);
-        articleIndexCache = [];
+        console.warn('Failed to load generated article index:', err.message);
         return [];
       });
   }
@@ -447,7 +433,7 @@
   function createRelatedCard(article) {
     var card = document.createElement('a');
     card.className = 'article-card';
-    card.href = 'article.html?slug=' + encodeURIComponent(article.slug);
+    card.href = ArticleData.articleHref(article.slug);
 
     var header = document.createElement('div');
     header.className = 'article-card-header';
@@ -458,7 +444,7 @@
 
     var date = document.createElement('span');
     date.className = 'article-date';
-    date.textContent = (typeof formatDate !== 'undefined') ? formatDate(article.date) : article.date;
+    date.textContent = ArticleData.formatDate(article.date);
 
     header.appendChild(cat);
     header.appendChild(date);
