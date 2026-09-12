@@ -49,6 +49,7 @@ WIKI_REQUIRED_FIELDS = ["id", "title", "category", "tags", "updated", "summary",
 
 STATUS_JSON = os.path.join(PROJECT_DIR, "public", "data", "status.json")
 GITHUB_STATS_JSON = os.path.join(PROJECT_DIR, "public", "data", "github-stats.json")
+SITE_CONFIG_JSON = os.path.join(PROJECT_DIR, "config", "site.json")
 
 PASS = "[PASS]"
 FAIL = "[FAIL]"
@@ -451,6 +452,56 @@ def check_github_stats_json():
         p(f"{FAIL} GitHub stats:       repository URL is not a GitHub HTTPS URL")
         return False
     p(f"{PASS} GitHub stats:       {len(data['calendar'])} days, {len(data['repositories'])} repositories")
+    return True
+
+
+def check_site_config():
+    """Check that site identity and background settings match the local contract."""
+    try:
+        with open(SITE_CONFIG_JSON, "r", encoding="utf-8") as source:
+            data = json.load(source)
+    except FileNotFoundError:
+        p(f"{FAIL} Site config:        config/site.json not found")
+        return False
+    except json.JSONDecodeError as error:
+        p(f"{FAIL} Site config:        JSON parse error: {error}")
+        return False
+
+    expected_keys = {"name", "author", "handle", "background"}
+    if set(data) != expected_keys:
+        p(f"{FAIL} Site config:        expected keys: {', '.join(sorted(expected_keys))}")
+        return False
+    if (data["name"], data["author"], data["handle"]) != ("不驚茶坊", "不驚醴", "Jingtine"):
+        p(f"{FAIL} Site config:        identity values do not match")
+        return False
+
+    background = data["background"]
+    expected_background_keys = {"image", "blur", "saturation", "overlay", "overlayOpacity", "position"}
+    if not isinstance(background, dict) or set(background) != expected_background_keys:
+        p(f"{FAIL} Site config:        background keys do not match")
+        return False
+    image = background["image"]
+    if not isinstance(image, str) or (image and not re.fullmatch(r"assets/images/backgrounds/[a-zA-Z0-9._/-]+", image)) or ".." in image or "//" in image:
+        p(f"{FAIL} Site config:        background image must use the local prefix")
+        return False
+    numeric_ranges = {
+        "blur": (0, 40),
+        "saturation": (0, 2),
+        "overlayOpacity": (0, 1),
+    }
+    for key, (minimum, maximum) in numeric_ranges.items():
+        value = background[key]
+        if isinstance(value, bool) or not isinstance(value, (int, float)) or not minimum <= value <= maximum:
+            p(f"{FAIL} Site config:        {key} must be between {minimum} and {maximum}")
+            return False
+    if not isinstance(background["overlay"], str) or not re.fullmatch(r"#[0-9a-fA-F]{6}", background["overlay"]):
+        p(f"{FAIL} Site config:        overlay must be a six-digit hex color")
+        return False
+    if not isinstance(background["position"], str) or not re.fullmatch(r"(center|top|bottom|left|right)( (center|top|bottom|left|right))?", background["position"]):
+        p(f"{FAIL} Site config:        position is invalid")
+        return False
+
+    p(f"{PASS} Site config:        identity and background contract valid")
     return True
 
 
@@ -876,6 +927,9 @@ def main():
 
     # Check 17
     results.append(check_wiki_content())
+
+    # Check 18
+    results.append(check_site_config())
 
     # Summary
     passed = sum(1 for r in results if r)

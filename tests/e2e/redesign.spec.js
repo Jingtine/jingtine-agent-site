@@ -164,6 +164,15 @@ test('Status retains site health when GitHub data fails',async({page})=>{
 });
 
 test('Status repository cards stack on a narrow screen',async({page})=>{
+  await page.route('**/public/data/github-stats.json',route=>route.fulfill({json:{
+    profile:{login:'Jingtine',url:'https://github.com/Jingtine',publicRepos:2},
+    summary:{totalContributions:2,activeDays:1,stars:0},
+    months:[],calendar:[],
+    repositories:[
+      {name:'first-repository',url:'https://github.com/Jingtine/first-repository',description:'First fixed test repository',stars:0,forks:0,language:'JavaScript'},
+      {name:'second-repository',url:'https://github.com/Jingtine/second-repository',description:'Second fixed test repository',stars:0,forks:0,language:'Python'}
+    ]
+  }}));
   await page.setViewportSize({width:390,height:900});
   await page.goto('/status.html');
   const cards=page.locator('.github-repo-card');
