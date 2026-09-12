@@ -1401,6 +1401,12 @@ a.article-card h3 {
     border-bottom:1px solid var(--ink);
     margin-bottom:16px
   }
+  .nav-brand-name {
+    font-size:clamp(28px,2vw,36px)
+  }
+  .nav-brand-name,.nav-brand-signature {
+    white-space:nowrap
+  }
   .nav-links,.nav-ready .nav-links {
     display:flex;
     flex-direction:column;

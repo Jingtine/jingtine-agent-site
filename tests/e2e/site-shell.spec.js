@@ -9,6 +9,37 @@ test('site shell presents the tea-house identity and English attribution', async
   await expect(page.locator('.footer')).not.toContainText('不驚醴');
 });
 
+test('wide desktop masthead keeps each brand line inside the sidebar', async ({ page }) => {
+  await page.setViewportSize({ width: 1920, height: 1080 });
+  await page.goto('/index.html');
+
+  const layout = await page.locator('.nav-logo').evaluate(logo => {
+    const sidebar = logo.closest('.nav').getBoundingClientRect();
+    return Array.from(logo.children).map(span => {
+      const range = document.createRange();
+      range.selectNodeContents(span);
+      const lineRects = Array.from(range.getClientRects()).filter(rect => rect.width && rect.height);
+      return {
+        lines: lineRects.length,
+        left: Math.min(...lineRects.map(rect => rect.left)),
+        right: Math.max(...lineRects.map(rect => rect.right)),
+        top: Math.min(...lineRects.map(rect => rect.top)),
+        bottom: Math.max(...lineRects.map(rect => rect.bottom)),
+        sidebarLeft: sidebar.left,
+        sidebarRight: sidebar.right,
+      };
+    });
+  });
+
+  expect(layout).toHaveLength(2);
+  for (const line of layout) {
+    expect(line.lines).toBe(1);
+    expect(line.left).toBeGreaterThanOrEqual(line.sidebarLeft);
+    expect(line.right).toBeLessThanOrEqual(line.sidebarRight);
+  }
+  expect(layout[1].top).toBeGreaterThanOrEqual(layout[0].bottom);
+});
+
 const expectedNavigation = ['首页', '关于', '作品', '随笔', '研究', '知识库', '订阅阅读', '问答助手'];
 
 test('Chinese navigation remains real HTML without JavaScript', async ({ browser }) => {
