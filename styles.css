@@ -178,13 +178,24 @@ img {
   margin:auto
 }
 .nav-logo {
-  font:700 27px/1.5 var(--font-serif);
-  color:var(--ink);
+  display:grid;
+  gap:4px;
   text-decoration:none
 }
+.nav-brand-name {
+  font-family:var(--font-serif);
+  font-size:clamp(28px,2.4vw,42px);
+  line-height:1;
+  color:var(--ink)
+}
+.nav-brand-signature {
+  font-family:var(--font-mono);
+  font-size:11px;
+  letter-spacing:.08em;
+  color:var(--muted)
+}
 .nav-logo::after {
-  content:'.';
-  color:var(--accent)
+  content:none
 }
 .nav-links {
   width:100%;
@@ -1385,7 +1396,7 @@ a.article-card h3 {
     display:block
   }
   .nav-logo {
-    display:block;
+    display:grid;
     padding:0 10px 20px;
     border-bottom:1px solid var(--ink);
     margin-bottom:16px
