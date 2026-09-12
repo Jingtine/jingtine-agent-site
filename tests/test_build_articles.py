@@ -124,6 +124,12 @@ draft = false
         self.assertEqual(reading_metrics(markdown), (6, 1))
         self.assertEqual(reading_metrics(" ".join(["word"] * 301)), (301, 2))
 
+    def test_reading_metrics_keep_punctuation_joined_latin_text_as_one_word(self):
+        self.assertEqual(reading_metrics("one/two three-four five.six"), (3, 1))
+
+    def test_reading_metrics_count_cjk_next_to_latin_as_one_latin_token(self):
+        self.assertEqual(reading_metrics("one中two"), (2, 1))
+
     def test_missing_required_fields_are_rejected_with_the_field_name(self):
         for field in REQUIRED_FIELDS:
             with self.subTest(field=field):
@@ -195,6 +201,86 @@ draft = false
         self.assert_article_error(
             path, "cover", lambda: parse_article(path, self.root)
         )
+
+    def test_declared_cover_fields_must_both_be_non_empty(self):
+        cover = self.root / "assets/images/covers/plain.jpg"
+        cover.parent.mkdir(parents=True)
+        cover.write_bytes(b"cover")
+        cases = [
+            (
+                "empty-cover",
+                ['cover = ""', 'cover_alt = "Alt text."'],
+                "cover",
+            ),
+            (
+                "empty-cover-alt",
+                [
+                    'cover = "assets/images/covers/plain.jpg"',
+                    'cover_alt = ""',
+                ],
+                "cover_alt",
+            ),
+            (
+                "both-empty",
+                ['cover = ""', 'cover_alt = ""'],
+                "cover",
+            ),
+            (
+                "whitespace-cover",
+                ['cover = "   "', 'cover_alt = "Alt text."'],
+                "cover",
+            ),
+            (
+                "whitespace-cover-alt",
+                [
+                    'cover = "assets/images/covers/plain.jpg"',
+                    'cover_alt = "   "',
+                ],
+                "cover_alt",
+            ),
+        ]
+        for name, extra_lines, field in cases:
+            with self.subTest(name=name):
+                path = self.write_article(
+                    f"{name}.md",
+                    article_text(extra_lines=extra_lines),
+                )
+                self.assert_article_error(
+                    path,
+                    field,
+                    lambda path=path: parse_article(path, self.root),
+                )
+
+    def test_noncanonical_cover_paths_are_rejected(self):
+        cover = self.root / "assets/images/covers/canonical.jpg"
+        cover.parent.mkdir(parents=True)
+        cover.write_bytes(b"cover")
+        absolute = cover.as_posix()
+        cases = [
+            ("dot-prefix", "./assets/images/covers/canonical.jpg"),
+            ("duplicate-separator", "assets/images/covers//canonical.jpg"),
+            ("dot-segment", "assets/images/covers/./canonical.jpg"),
+            (
+                "traversal-segment",
+                "assets/images/covers/nested/../canonical.jpg",
+            ),
+            ("backslash", r"assets\images\covers\canonical.jpg"),
+            ("absolute", absolute),
+        ]
+        for name, cover_value in cases:
+            with self.subTest(name=name):
+                path = self.write_article(
+                    f"noncanonical-{name}.md",
+                    article_text(extra_lines=[
+                        f"cover = '{cover_value}'",
+                        'cover_alt = "Canonical cover."',
+                    ]),
+                )
+                self.assert_article_error(
+                    path,
+                    "cover",
+                    lambda path=path: parse_article(path, self.root),
+                )
 
     def test_duplicate_slugs_are_rejected(self):
         self.write_article("same.md", article_text(title="First"), self.articles / "a")

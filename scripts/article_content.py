@@ -2,7 +2,7 @@
 
 from datetime import date, datetime
 from math import ceil
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import re
 import tomllib
 
@@ -14,7 +14,7 @@ CJK_PATTERN = re.compile(
     "[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff"
     "\u3040-\u30ff\u31f0-\u31ff\uac00-\ud7af]"
 )
-LATIN_WORD_PATTERN = re.compile(r"[A-Za-z0-9]+(?:['’-][A-Za-z0-9]+)*")
+LATIN_CHARACTER_PATTERN = re.compile(r"[A-Za-z]")
 
 
 class ArticleError(ValueError):
@@ -69,20 +69,38 @@ def _validate_metadata(path: Path, project_dir: Path, metadata: dict) -> None:
     if not isinstance(tags, list) or any(not isinstance(tag, str) for tag in tags):
         raise ArticleError(path, "tags", "must be an array of strings")
 
+    cover_declared = "cover" in metadata
+    cover_alt_declared = "cover_alt" in metadata
     cover = metadata.get("cover", "")
     cover_alt = metadata.get("cover_alt", "")
-    if not isinstance(cover, str):
-        raise ArticleError(path, "cover", "must be a string")
-    if not isinstance(cover_alt, str):
-        raise ArticleError(path, "cover_alt", "must be a string")
-    if cover and not cover_alt.strip():
+    if cover_declared and (not isinstance(cover, str) or not cover.strip()):
+        raise ArticleError(path, "cover", "must be a non-empty string")
+    if cover_alt_declared and (
+        not isinstance(cover_alt, str) or not cover_alt.strip()
+    ):
+        raise ArticleError(path, "cover_alt", "must be a non-empty string")
+    if cover_declared and not cover_alt_declared:
         raise ArticleError(path, "cover_alt", "is required when cover is set")
-    if cover_alt and not cover:
+    if cover_alt_declared and not cover_declared:
         raise ArticleError(path, "cover", "is required when cover_alt is set")
 
-    if cover:
+    if cover_declared:
+        normalized_cover = PurePosixPath(cover).as_posix()
+        cover_parts = PurePosixPath(cover).parts
+        if (
+            normalized_cover != cover
+            or PurePosixPath(cover).is_absolute()
+            or cover_parts[:3] != ("assets", "images", "covers")
+            or ".." in cover_parts
+        ):
+            raise ArticleError(
+                path,
+                "cover",
+                "must be a canonical repository-relative POSIX path under "
+                "assets/images/covers/",
+            )
         cover_root = (project_dir / "assets/images/covers").resolve()
-        cover_path = (project_dir / cover).resolve()
+        cover_path = (project_dir / Path(*cover_parts)).resolve()
         try:
             cover_path.relative_to(cover_root)
         except ValueError as error:
@@ -91,6 +109,7 @@ def _validate_metadata(path: Path, project_dir: Path, metadata: dict) -> None:
             ) from error
         if not cover_path.is_file():
             raise ArticleError(path, "cover", f"file does not exist: {cover}")
+        metadata["cover"] = normalized_cover
 
 
 def _strip_markdown(markdown: str) -> str:
@@ -105,7 +124,10 @@ def _strip_markdown(markdown: str) -> str:
 def reading_metrics(markdown: str) -> tuple[int, int]:
     """Return visible word/character count and 300-word reading minutes."""
     text = _strip_markdown(markdown)
-    word_count = len(CJK_PATTERN.findall(text)) + len(LATIN_WORD_PATTERN.findall(text))
+    latin_words = sum(
+        1 for token in text.split() if LATIN_CHARACTER_PATTERN.search(token)
+    )
+    word_count = len(CJK_PATTERN.findall(text)) + latin_words
     return word_count, max(1, ceil(word_count / 300))
 
 
