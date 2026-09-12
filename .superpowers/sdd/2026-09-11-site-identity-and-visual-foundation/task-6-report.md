@@ -18,4 +18,4 @@ Status: complete and fully green. Task 6 commits: `7330c11` (`test: verify visua
 
 ## Concerns
 
-Fix-round commit: `6e09e1e` (updates the two stale homepage assertions above). The Windows Playwright runner leaves its task-local Python server alive after output; verified bundled-Python listeners on port 8091 were stopped after each run without touching unrelated processes.
+Fix-round commit: `4fd7069` (updates the two stale homepage assertions above). The Windows Playwright runner leaves its task-local Python server alive after output; verified bundled-Python listeners on port 8091 were stopped after each run without touching unrelated processes.
