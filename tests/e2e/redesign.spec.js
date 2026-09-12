@@ -164,6 +164,8 @@ test('Status retains site health when GitHub data fails',async({page})=>{
 });
 
 test('Status repository cards stack on a narrow screen',async({page})=>{
+  const statusData=require('../../public/data/status.json');
+  await page.route('**/public/data/status.json',route=>route.fulfill({json:statusData}));
   await page.route('**/public/data/github-stats.json',route=>route.fulfill({json:{
     profile:{login:'Jingtine',url:'https://github.com/Jingtine',publicRepos:2},
     summary:{totalContributions:2,activeDays:1,stars:0},

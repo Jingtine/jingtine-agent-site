@@ -467,6 +467,10 @@ def check_site_config():
         p(f"{FAIL} Site config:        JSON parse error: {error}")
         return False
 
+    if not isinstance(data, dict):
+        p(f"{FAIL} Site config:        expected a JSON object")
+        return False
+
     expected_keys = {"name", "author", "handle", "background"}
     if set(data) != expected_keys:
         p(f"{FAIL} Site config:        expected keys: {', '.join(sorted(expected_keys))}")
