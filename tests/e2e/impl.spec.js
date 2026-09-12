@@ -86,20 +86,12 @@ test.describe('TC03 — 导航高亮', () => {
    ================================================================ */
 test('TC04 — 首页个人信息完整性', async ({ page }) => {
   await page.goto('/index.html');
-  // Title
   const title = await page.title();
-  expect(title).toContain('Jingtine');
-  // Name
-  await expect(page.locator('body')).toContainText('Jingtine');
-  // Avatar image
-  const avatar = page.locator('img[src*="figure.jpg"]').first();
-  await expect(avatar).toBeVisible();
-  const naturalWidth = await avatar.evaluate(img => img.naturalWidth);
-  expect(naturalWidth).toBeGreaterThan(0);
-  // Tags
-  await expect(page.locator('body')).toContainText('Software Engineering');
-  await expect(page.locator('body')).toContainText('AI Agent');
-  await expect(page.locator('body')).toContainText('Product Innovation');
+  expect(title).toBe('不驚茶坊 — 首页');
+  await expect(page.locator('h1')).toHaveText('你好，我是不驚醴。');
+  await expect(page.locator('.home-now')).toContainText('南京大学商学院软件工程（软工商业创新班）在读。');
+  await expect(page.locator('main > section')).toHaveCount(4);
+  await expect(page.locator('.home-making')).toContainText('NoteWhale');
   // Email in the sidebar shortcut row
   const emailLink = page.locator('.nav-social-links a[href*="mailto:"]');
   await expect(emailLink).toBeVisible();

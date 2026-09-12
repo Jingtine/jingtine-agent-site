@@ -6,12 +6,15 @@ const { test, expect } = require('@playwright/test');
 test('BC01 — 首页完整信息展示', async ({ page }) => {
   await page.goto('/index.html');
   const title = await page.title();
-  expect(title).toContain('Jingtine');
-  const bodyText = await page.locator('body').textContent();
-  expect(bodyText).toContain('Jingtine');
-  expect(bodyText).toContain('Software Engineering');
-  expect(bodyText).toContain('AI Agent');
-  expect(bodyText).toContain('Product Innovation');
+  expect(title).toBe('不驚茶坊 — 首页');
+  await expect(page.locator('h1')).toHaveText('你好，我是不驚醴。');
+  await expect(page.locator('.home-now')).toContainText('南京大学商学院软件工程（软工商业创新班）在读。');
+  await expect(page.locator('main > section')).toHaveCount(4);
+  expect(await page.locator('main > section').evaluateAll(sections => sections.map(section => section.className)))
+    .toEqual(['home-now', 'home-writing', 'home-making', 'home-found']);
+  await expect(page.locator('#latest-posts .article-card')).toHaveCount(3);
+  await expect(page.locator('.home-making')).toContainText('NoteWhale');
+  await expect(page.locator('.home-found')).toContainText('知识库');
   const emailLink = page.locator('.nav-social-links a[href*="mailto:"]');
   await expect(emailLink).toBeVisible();
 });
