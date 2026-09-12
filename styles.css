@@ -9,6 +9,7 @@ legacy token names map to this palette. */
   --site-bg-position:center;
   --paper:#F4F0E8;
   --surface:#FFFCF5;
+  --reading-surface:color-mix(in srgb,var(--surface) 98%,transparent);
   --ink:#302D3D;
   --muted:#655F70;
   --accent:#7662B5;
@@ -87,6 +88,11 @@ body::after {
 }
 .site-background-ready body::after {
   opacity:var(--site-bg-overlay-opacity)
+}
+/* Keep open reading layouts legible independently of the owner's backdrop. */
+.site-background-ready .home-publication,
+.site-background-ready .about-page {
+  background:var(--reading-surface)
 }
 h1,h2,h3,h4,p,ul,ol {
   margin:0

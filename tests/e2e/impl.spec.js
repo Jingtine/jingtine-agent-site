@@ -87,7 +87,7 @@ test.describe('TC03 — 导航高亮', () => {
 test('TC04 — 首页个人信息完整性', async ({ page }) => {
   await page.goto('/index.html');
   const title = await page.title();
-  expect(title).toBe('不驚茶坊 — 首页');
+  expect(title).toBe('不驚茶坊 — Jingtine 的个人网站');
   await expect(page.locator('h1')).toHaveText('你好，我是不驚醴。');
   await expect(page.locator('.home-now')).toContainText('南京大学商学院软件工程（软工商业创新班）在读。');
   await expect(page.locator('main > section')).toHaveCount(4);
