@@ -1,14 +1,13 @@
 const {test, expect} = require('@playwright/test');
 const routes=['index','about','projects','blog','papers','wiki','reader','assistant','status','contact','knowledge','library','article'];
-test('About reads as a layered personal dossier',async({page})=>{
+test('About reads as a personal introduction with one education program',async({page})=>{
   await page.goto('/about.html');
   await expect(page.locator('.about-dossier')).toBeVisible();
   await expect(page.locator('.about-portrait img')).toHaveAttribute('src','assets/images/figure.jpg');
-  await expect(page.locator('.about-study-card')).toHaveCount(2);
+  await expect(page.locator('.about-study-card')).toHaveCount(1);
   await expect(page.locator('.about-capability-row')).toHaveCount(3);
   await expect(page.locator('.about-contact-strip a[href^="mailto:"]')).toBeVisible();
-  const backgrounds=await page.locator('.about-dossier-copy,.about-portrait,.about-study-card').evaluateAll(items=>items.map(item=>getComputedStyle(item).backgroundColor));
-  expect(new Set(backgrounds).size).toBeGreaterThanOrEqual(3);
+  await expect(page.locator('.about-stamp,.about-tape,.about-page .panel-number,.about-capability-number')).toHaveCount(0);
 });
 test('education summary stays concise while the dossier keeps program detail',async({page})=>{
   await page.goto('/index.html');
@@ -120,7 +119,14 @@ test('Status presents public GitHub activity and safe repository links',async({p
     repositories:[{name:'jingtine-agent-site',url:'https://github.com/Jingtine/jingtine-agent-site',description:'Personal knowledge archive',stars:7,forks:2,language:'JavaScript',updatedAt:'2026-09-09T00:00:00Z'}]
   }}));
   await page.goto('/status.html');
-  await expect(page.getByRole('heading',{name:'GitHub, by the numbers.'})).toBeVisible();
+  await expect(page.locator('h1')).toHaveText('近况 / Status');
+  await expect(page.locator('.page-header > p')).toHaveText('公开的 GitHub 活动，以及这座档案馆最近是否运转正常。');
+  for(const name of ['GitHub 活动','月度活动','每日活动','最近维护的仓库']) {
+    await expect(page.getByRole('heading',{name,exact:true})).toBeVisible();
+  }
+  for(const [key,label] of [['contributions','贡献'],['repositories','公开仓库'],['stars','获得的星标'],['active-days','活跃天数']]) {
+    await expect(page.locator(`[data-github-stat="${key}"] span`)).toHaveText(label);
+  }
   await expect(page.locator('[data-github-stat="repositories"]')).toContainText('12');
   await expect(page.locator('[data-github-stat="contributions"]')).toContainText('9');
   await expect(page.locator('.github-month-bar')).toHaveCount(2);
@@ -128,6 +134,43 @@ test('Status presents public GitHub activity and safe repository links',async({p
   const project=page.getByRole('link',{name:/jingtine-agent-site/});
   await expect(project).toHaveAttribute('href','https://github.com/Jingtine/jingtine-agent-site');
   await expect(project).toHaveAttribute('rel','noopener noreferrer');
+});
+
+test('Status treats repository metadata as text and rejects unsafe links',async({page})=>{
+  const data=require('../../public/data/github-stats.json');
+  const unsafeName='<img src=x onerror=alert(1)>';
+  await page.route('**/public/data/github-stats.json',route=>route.fulfill({json:{
+    ...data,
+    profile:{...data.profile,url:'javascript:alert(1)'},
+    repositories:['javascript:alert(1)','http://github.com/Jingtine/test','https://example.com/test'].map(url=>({
+      name:unsafeName,url,description:'<script>alert(1)</script>',stars:0,forks:0,language:'JavaScript'
+    }))
+  }}));
+  await page.goto('/status.html');
+  await expect(page.locator('.github-repo-name')).toHaveCount(3);
+  for(const link of await page.locator('.github-repo-name,.github-profile-link').all()) {
+    await expect(link).not.toHaveAttribute('href');
+  }
+  await expect(page.locator('.github-repo-name').first()).toHaveText(unsafeName+' ↗');
+  await expect(page.locator('.github-repo-card img,.github-repo-card script')).toHaveCount(0);
+});
+
+test('Status retains site health when GitHub data fails',async({page})=>{
+  await page.route('**/public/data/github-stats.json',route=>route.abort());
+  await page.goto('/status.html');
+  await expect(page.locator('.github-unavailable')).toHaveText('GitHub 数据暂时不可用。');
+  await expect(page.locator('.site-health')).toBeVisible();
+  await expect(page.locator('.site-health-state')).toHaveAttribute('data-state',/passing|degraded/);
+});
+
+test('Status repository cards stack on a narrow screen',async({page})=>{
+  await page.setViewportSize({width:390,height:900});
+  await page.goto('/status.html');
+  const cards=page.locator('.github-repo-card');
+  await expect(cards).toHaveCount(2);
+  const first=await cards.first().boundingBox();
+  const second=await cards.nth(1).boundingBox();
+  expect(second.y).toBeGreaterThanOrEqual(first.y+first.height);
 });
 for(const kind of ['empty','failure']) test(`Status and Reader ${kind} states`,async({page})=>{
   for(const [route,file,target] of [['status','status','#status-dashboard'],['reader','rss-items','#source-cards']]){

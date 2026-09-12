@@ -1,6 +1,13 @@
 const { test, expect } = require('@playwright/test');
 const backgroundImage = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIHWP4z8DwHwAFgAI/ScLqLwAAAABJRU5ErkJggg==', 'base64');
 
+test('About keeps the precise program wording', async ({ page }) => {
+  await page.goto('/about.html');
+  await expect(page.locator('h1')).toHaveText('不驚醴 / Jingtine');
+  await expect(page.locator('.about-lead')).toHaveText('南京大学商学院软件工程（软工商业创新班）在读。');
+  await expect(page.locator('.about-study')).toContainText('软件工程与工商管理双学位班');
+});
+
 test('home reads as a personal publication', async ({ page }) => {
   await page.goto('/index.html');
   await expect(page.locator('h1')).toContainText('你好，我是不驚醴。');
