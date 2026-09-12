@@ -1,6 +1,47 @@
 const { test, expect } = require('@playwright/test');
 const backgroundImage = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIHWP4z8DwHwAFgAI/ScLqLwAAAABJRU5ErkJggg==', 'base64');
 
+test('home reads as a personal publication', async ({ page }) => {
+  await page.goto('/index.html');
+  await expect(page.locator('h1')).toContainText('你好，我是不驚醴。');
+  await expect(page.locator('main > section')).toHaveCount(4);
+  await expect(page.locator('.home-now')).toBeVisible();
+  await expect(page.locator('.home-writing')).toBeVisible();
+  await expect(page.locator('.home-making')).toBeVisible();
+  await expect(page.locator('.home-found')).toBeVisible();
+  await expect(page.locator('.panel-number')).toHaveCount(2);
+});
+
+for (const width of [360, 390, 768, 1024, 1440]) {
+  test(`home responsive reading order at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto('/index.html');
+    await expect(page.locator('#latest-posts .article-card')).toHaveCount(3);
+    expect(await page.locator('main > section').evaluateAll(sections => sections.map(section => section.className)))
+      .toEqual(['home-now', 'home-writing', 'home-making', 'home-found']);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    if (width < 768) {
+      const sections = await page.locator('main > section').evaluateAll(items => items.map(item => {
+        const rect = item.getBoundingClientRect();
+        return { top: rect.top, bottom: rect.bottom };
+      }));
+      sections.slice(1).forEach((section, index) => expect(section.top).toBeGreaterThanOrEqual(sections[index].bottom));
+    }
+  });
+}
+
+test('home writing recovers from a failed load with keyboard retry', async ({ page }) => {
+  await page.route('**/articles/index.json', route => route.fulfill({ status: 503 }));
+  await page.goto('/index.html');
+  await expect(page.locator('#latest-posts')).toContainText('随笔加载失败。');
+  await expect(page.locator('.home-now a[href="about.html"]')).toBeVisible();
+  await page.unroute('**/articles/index.json');
+  await page.getByRole('button', { name: '重试' }).focus();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('#latest-posts .article-card')).toHaveCount(3);
+  await expect(page.getByRole('button', { name: '重试' })).toHaveCount(0);
+});
+
 test('site shell presents the tea-house identity and English attribution', async ({ page }) => {
   await page.goto('/index.html');
   await expect(page.locator('.nav-brand-name')).toHaveText('不驚茶坊');

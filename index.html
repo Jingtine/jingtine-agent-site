@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jingtine — Software Engineering and Business Administration dual-degree student at Nanjing University Business School.">
-  <title>Jingtine — Home</title>
+  <meta name="description" content="不驚醴的个人茶坊：记录南京大学的学习生活、随笔、作品与阅读发现。">
+  <title>不驚茶坊 — 首页</title>
 <link rel="stylesheet" href="styles.css?v=20260910">
 </head>
 <body>
@@ -26,73 +26,43 @@
         <a href="reader.html">订阅阅读</a>
         <a href="assistant.html">问答助手</a>
       </div></div></nav>
-  <main id="main-content" tabindex="-1">
-  <div class="home-masthead"><span>JINGTINE / PERSONAL ARCHIVE</span><span>软件 · 智能 · 产品<br>持续学习的个人档案</span></div>
-  <div class="home-grid">
-    <section class="paper-panel panel-intro">
-      <span class="panel-number">01 / A NOTE TO BEGIN</span>
-      <h1>Hi, I'm Jingtine.<br>在学习与创造之间。</h1>
-      <p class="intro-note">结合软件工程、AI Agent 与产品创新，探索技术如何创造真实价值。</p>
-      <div class="hero-tags"><span class="hero-tag">Software Engineering</span><span class="hero-tag">AI Agent</span><span class="hero-tag">Product Innovation</span></div>
-      <div class="panel-actions"><a class="btn btn-primary" href="projects.html">探索 Projects ↗</a><a class="btn" href="about.html">关于我 About →</a></div>
+  <main id="main-content" class="home-publication" tabindex="-1">
+    <section class="home-now" aria-labelledby="home-title">
+      <span class="panel-number">茶坊手记 / 此刻</span>
+      <h1 id="home-title">你好，我是不驚醴。</h1>
+      <p class="intro-note">在学习与创造之间，记下一些想法，也留住日常的发现。</p>
+      <p class="home-education">南京大学商学院软件工程（软工商业创新班）在读。</p>
+      <p>这里放着我的随笔、正在尝试的作品，以及阅读途中收集的线索。欢迎坐坐，慢慢翻。</p>
+      <a class="btn" href="about.html">关于我 →</a>
     </section>
-    <section class="paper-panel panel-profile">
-      <span class="panel-number">02 / PROFILE</span>
-      <img class="profile-image" src="assets/images/figure.jpg" width="120" height="120" alt="Jingtine avatar">
-      <h2>Jingtine</h2>
-      <p>南京大学商学院<br>软件工程（软工商业创新班）</p>
-      <div class="panel-actions"><a href="https://github.com/jingtine" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="mailto:jingtineli@smail.nju.edu.cn">Email ↗</a></div>
+    <section class="home-writing" aria-labelledby="writing-title" id="thoughts">
+      <span class="panel-number">茶坊手记 / 近作</span>
+      <h2 id="writing-title">最近写下的</h2>
+      <div id="latest-posts" class="article-list" aria-live="polite">正在加载随笔…</div>
+      <a class="btn" href="blog.html">全部随笔 →</a>
     </section>
-    <section class="paper-panel panel-projects" id="projects">
-      <span class="panel-number">03 / SELECTED WORK</span><h2>把想法做成作品</h2>
-      <article class="home-project-card"><h3><a href="projects.html#notewhale">NoteWhale ↗</a></h3><p>面向知识管理的智能学习平台，结合 AI 实现笔记自动分类、智能关联与语义检索。</p><span class="article-category">AI · Knowledge Management</span></article>
-      <article class="home-project-card"><h3><a href="projects.html#street">街像 ↗</a></h3><p>关注校园空间与城市叙事的交叉，通过技术手段记录和呈现城市中的日常故事。</p><span class="article-category">Product Design · Spatial Data</span></article>
-      <a class="btn" href="projects.html">所有项目 · 含 AI Agent Studio →</a>
+    <section class="home-making" aria-labelledby="making-title" id="projects">
+      <h2 id="making-title">正在做的事</h2>
+      <article class="home-project-card">
+        <h3><a href="projects.html#notewhale">NoteWhale ↗</a></h3>
+        <p>尝试用 AI 整理笔记、连接知识，让学习留下的线索更容易被找回。</p>
+      </article>
+      <article class="home-project-card">
+        <h3><a href="projects.html#street">街像 ↗</a></h3>
+        <p>从校园空间到城市日常，记录地方与人之间的小故事。</p>
+      </article>
+      <a class="btn" href="projects.html">更多作品 →</a>
     </section>
-    <section class="paper-panel panel-posts" id="thoughts">
-      <span class="panel-number">04 / RECENT WRITING</span><h2>最新文章</h2>
-      <div id="latest-posts" class="article-list" aria-live="polite">正在加载文章…</div>
-      <a class="btn" href="blog.html">文章目录 Blog →</a>
+    <section class="home-found" aria-labelledby="found-title">
+      <h2 id="found-title">随手收藏</h2>
+      <p>读到、想到，也许还会再回来的地方。</p>
+      <ul>
+        <li><a href="papers.html">研究 →</a><span>论文与待探索的问题</span></li>
+        <li><a href="wiki.html">知识库 →</a><span>慢慢生长的笔记</span></li>
+        <li><a href="reader.html">订阅阅读 →</a><span>沿着文字发现新线索</span></li>
+      </ul>
     </section>
-    <section class="paper-panel panel-entry panel-research"><span class="panel-number">05 / RESEARCH</span><h2>文献与问题</h2><p>AI 相关论文收藏，记录值得继续探索的研究方向。</p><a class="btn" href="papers.html">Research →</a></section>
-    <section class="paper-panel panel-entry panel-wiki"><span class="panel-number">06 / WIKI</span><h2>生长中的知识</h2><p>沉淀可检索、可关联、可持续更新的个人知识。</p><a class="btn" href="wiki.html">Wiki →</a></section>
-    <section class="paper-panel panel-entry panel-reader"><span class="panel-number">07 / READER</span><h2>阅读剪报</h2><p>浏览已订阅来源的文章，沿着线索走向原文。</p><a class="btn" href="reader.html">Reader →</a></section>
-    <section class="paper-panel panel-tools"><div><span class="panel-number">08 / ASSISTANT</span><a href="assistant.html">向知识库提问 ↗</a><p>本地检索与原文摘录，附可追溯的 Wiki 来源。</p></div><div><span class="panel-number">09 / STATUS</span><a href="status.html">查看站点记录 ↗</a><p>内容、数据源与质量检查状态。</p></div></section>
-  </div>
-  <!-- Skills Preview -->
-  <details class="home-skills-note" id="skills"><summary>能力档案 / Skills</summary>
-    <div class="section-label">Skills</div>
-    <h2 class="section-title">核心能力</h2>
-    <div class="home-skills-grid">
-      <div class="home-skill-card">
-        <h3>Software Engineering</h3>
-        <ul class="home-skill-list">
-          <li>Full-stack Development</li>
-          <li>Software Architecture</li>
-          <li>Engineering Practice</li>
-        </ul>
-      </div>
-      <div class="home-skill-card">
-        <h3>AI Agent</h3>
-        <ul class="home-skill-list">
-          <li>LLM Application</li>
-          <li>RAG</li>
-          <li>Agent Workflow</li>
-        </ul>
-      </div>
-      <div class="home-skill-card">
-        <h3>Product Innovation</h3>
-        <ul class="home-skill-list">
-          <li>Product Design</li>
-          <li>User Experience</li>
-          <li>Business Thinking</li>
-        </ul>
-      </div>
-    </div>
-  </details>
-
-
-</main>
+  </main>
   <footer class="footer">
     <div class="footer-links">
       <a href="https://github.com/jingtine" target="_blank" rel="noopener noreferrer">GitHub</a>

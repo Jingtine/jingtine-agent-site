@@ -12,8 +12,8 @@ test('About reads as a layered personal dossier',async({page})=>{
 });
 test('education summary stays concise while the dossier keeps program detail',async({page})=>{
   await page.goto('/index.html');
-  await expect(page.locator('.panel-profile p')).toContainText('南京大学商学院');
-  await expect(page.locator('.panel-profile p')).not.toContainText('软件工程与工商管理双学位班');
+  await expect(page.locator('.home-education')).toContainText('南京大学商学院');
+  await expect(page.locator('.home-education')).not.toContainText('软件工程与工商管理双学位班');
   await page.goto('/about.html');
   await expect(page.locator('.about-lead')).toHaveText('南京大学商学院软件工程（软工商业创新班）在读。');
   await expect(page.locator('.about-study')).toContainText('软件工程与工商管理双学位班');
