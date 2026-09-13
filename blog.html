@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jingtine's blog — thoughts on AI Agent, Software Engineering, and Product Thinking.">
-  <link rel="alternate" type="application/rss+xml" title="Jingtine's Blog" href="feed.xml">
-  <title>Blog — Jingtine</title>
+  <meta name="description" content="不驚茶坊随笔：记录技术实践、阅读笔记、生活观察与尚在生长的想法。">
+  <link rel="alternate" type="application/rss+xml" title="不驚茶坊随笔" href="feed.xml">
+  <title>随笔 / Writing — Jingtine</title>
   <link rel="stylesheet" href="styles.css?v=20260910">
 </head>
 <body>
@@ -30,17 +30,32 @@
   <main id="main-content" tabindex="-1">
 
   <div class="page-header">
-    <div class="section-label">Blog</div>
-    <h1>文章与思考</h1>
-    <p>记录 AI Agent 学习、软件工程实践与产品设计心得。      <a href="feed.xml" class="subscribe-link" style="display:inline-flex;vertical-align:middle;margin-left:8px;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
-        RSS
-      </a></p>
+    <div class="section-label">Notes from the tea room</div>
+    <h1>随笔 / Writing</h1>
+    <p>记录技术实践、阅读笔记、生活观察，与尚在生长的想法。</p>
+    <a href="feed.xml" class="subscribe-link writing-subscribe">订阅 RSS ↗</a>
   </div>
 
-  <section class="section">
-    <div class="article-list" id="article-list" aria-live="polite">正在加载文章…</div>
+  <section class="section" aria-label="查找随笔">
+    <div class="writing-filters">
+      <div class="writing-search-field"><label for="writing-search">搜索随笔</label><input id="writing-search" type="search" placeholder="标题、摘要或标签" aria-controls="writing-results writing-archive" disabled></div>
+      <div><label for="writing-kind">文章类型</label><select id="writing-kind" aria-controls="writing-results writing-archive" disabled><option value="">全部类型</option></select></div>
+      <div><label for="writing-category">文章分类</label><select id="writing-category" aria-controls="writing-results writing-archive" disabled><option value="">全部分类</option></select></div>
+    </div>
+    <p id="writing-count" role="status" aria-live="polite" aria-atomic="true">正在加载文章…</p>
+    <noscript><p>启用 JavaScript 后可搜索和浏览文章。也可以通过 <a href="feed.xml">RSS 阅读全部随笔</a>。</p></noscript>
   </section>
+  <section class="section" id="writing-featured" aria-label="推荐阅读" hidden></section>
+  <div class="writing-layout">
+    <section class="section" aria-labelledby="writing-results-heading">
+      <h2 id="writing-results-heading" class="writing-section-heading">文章 / Entries</h2>
+      <div class="article-list writing-grid" id="writing-results" aria-busy="true"></div>
+    </section>
+    <section class="section writing-archive-panel" aria-labelledby="writing-archive-heading">
+      <h2 id="writing-archive-heading" class="writing-section-heading">归档 / Archive</h2>
+      <div id="writing-archive"></div>
+    </section>
+  </div>
 
   </main>
   <footer class="footer">
@@ -56,19 +71,9 @@
   <script src="js/site-theme.js?v=20260911"></script>
 
   <script src="js/article-data.js"></script>
-  <script src="js/blog.js"></script>
+  <script src="js/writing.js"></script>
   <script src="js/site-motion.js?v=20260910"></script>
   <script src="js/nav.js?v=20260910"></script>
-  <script>
-    loadArticleIndex().then(function (articles) {
-      renderArticleList('article-list', articles);
-    }).catch(function () {
-      var list = document.getElementById('article-list');
-      list.textContent = '文章加载失败。';
-      var retry = document.createElement('button'); retry.className = 'btn'; retry.textContent = '重试';
-      retry.addEventListener('click', function () { location.reload(); }); list.appendChild(retry);
-    });
-  </script>
 
 </body>
 </html>

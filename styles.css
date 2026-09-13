@@ -386,7 +386,7 @@ main {
   gap:16px;
   min-width:0
 }
-.article-card,.project-detail-card,.contact-card,.home-skill-card,.skill-card,.edu-card,.knowledge-feature-card,.library-card {
+.article-card,.writing-feature,.project-detail-card,.contact-card,.home-skill-card,.skill-card,.edu-card,.knowledge-feature-card,.library-card {
   display:block;
   min-width:0;
   padding:24px;
@@ -430,6 +430,85 @@ a.article-card h3 {
   font-size:15px;
   line-height:1.85;
   margin:0 0 8px
+}
+/* Writing pairs an open publication index with a compact dated archive. */
+.writing-subscribe { margin-top:16px }
+.writing-filters {
+  display:grid;
+  grid-template-columns:minmax(0,2fr) repeat(2,minmax(0,1fr));
+  gap:20px
+}
+.writing-filters label { display:block; margin-bottom:6px; font-size:14px }
+.writing-filters input,.writing-filters select {
+  width:100%;
+  min-width:0;
+  min-height:46px;
+  padding:10px 12px;
+  border:1px solid var(--rule);
+  border-radius:var(--radius-sm);
+  background:var(--surface);
+  color:var(--ink)
+}
+#writing-count,.writing-meta { color:var(--muted); font-size:14px }
+#writing-count { margin:14px 0 0 }
+.writing-feature {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);
+  padding:0;
+  border-color:var(--ink)
+}
+.writing-feature:hover { border-color:var(--accent) }
+.writing-feature .writing-cover { min-height:280px; height:100% }
+.writing-feature .writing-card-body { padding:28px }
+.writing-feature h3 { font-size:30px; margin:0 0 12px }
+.writing-feature p { color:var(--muted); margin:0 0 14px }
+.writing-layout { display:grid; grid-template-columns:minmax(0,3fr) minmax(230px,1fr); gap:32px }
+.writing-section-heading { font-size:20px; padding-bottom:12px; border-bottom:1px solid var(--ink) }
+.writing-grid { grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start }
+.writing-card { padding:0 }
+.writing-card-body { min-width:0; padding:20px }
+.writing-cover {
+  position:relative;
+  display:grid;
+  place-items:center;
+  height:150px;
+  overflow:hidden;
+  color:var(--accent-ink);
+  background:linear-gradient(135deg,var(--accent-soft),var(--blue-soft));
+  border-bottom:1px solid var(--rule)
+}
+.writing-cover::before {
+  content:'';
+  position:absolute;
+  width:75%;
+  height:65%;
+  border:1px solid var(--rule);
+  transform:rotate(-6deg)
+}
+.writing-cover-label { position:relative; padding:16px; text-align:center; font:24px/1.5 var(--font-serif) }
+.writing-cover img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover }
+.writing-card .article-card-header { font-size:13px }
+.writing-card h3 { font-size:22px }
+.writing-card .blog-tag,.writing-feature .blog-tag { font-size:12px; padding:2px 8px }
+.writing-empty { color:var(--muted); grid-column:1/-1 }
+.writing-archive-panel { min-width:0; overflow-wrap:anywhere }
+.writing-archive-year h3 { margin:20px 0 8px; font:22px/1.6 var(--font-serif) }
+.writing-archive-year h4 { margin:14px 0 6px; color:var(--muted); font:13px/1.6 var(--font-mono) }
+.writing-archive-year ul { list-style:none; margin:0; padding:0 }
+.writing-archive-year li { display:grid; gap:2px; padding:10px 0; border-bottom:1px solid var(--accent-soft) }
+.writing-archive-year a { font-size:14px; line-height:1.6 }
+@media(max-width:900px) {
+  .writing-layout { grid-template-columns:minmax(0,1fr) }
+  .writing-archive-year ul { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:24px }
+}
+@media(max-width:600px) {
+  .writing-filters { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px }
+  .writing-search-field { grid-column:1/-1 }
+  .writing-feature,.writing-grid,.writing-archive-year ul { grid-template-columns:minmax(0,1fr) }
+  .writing-feature .writing-cover { min-height:170px }
+  .writing-feature .writing-card-body { padding:20px }
+  .writing-feature h3 { font-size:26px }
+  .writing-card.article-card { padding:0 }
 }
 .project-detail-card {
   border-color:var(--ink);
