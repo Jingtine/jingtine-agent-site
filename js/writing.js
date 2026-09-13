@@ -39,9 +39,10 @@
 
   function coverPath(path) {
     if (typeof path !== 'string' || path.indexOf('assets/images/covers/') !== 0
-      || /[%\\?#:\s\u0000-\u001f\u007f]/.test(path)) return '';
+      || /[\\?#\u0000-\u001f\u007f]/.test(path)) return '';
     var parts = path.split('/');
-    return parts.every(function (part) { return part && part !== '.' && part !== '..'; }) ? path : '';
+    return parts.every(function (part) { return part && part !== '.' && part !== '..'; })
+      ? parts.map(encodeURIComponent).join('/') : '';
   }
 
   function cover(item) {

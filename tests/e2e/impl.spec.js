@@ -119,6 +119,7 @@ test('TC06 — 博客文章详情页', async ({ page }) => {
   await page.goto('/article.html?slug=hello-world');
   await page.waitForSelector('.article-detail', { timeout: 5000 });
   await expect(page.locator('.article-detail')).toBeVisible();
+  await expect(page.locator('#article-body')).toHaveAttribute('aria-busy', 'false');
   const text = await page.locator('.article-detail').textContent();
   expect(text.length).toBeGreaterThan(50);
 });

@@ -379,7 +379,13 @@
   }
 
   function loadRelatedArticles(targetPage, detailContainer) {
-    loadArticleIndex().then(function (articles) {
+    Promise.all([
+      loadArticleIndex(),
+      ArticleData.loadConfig().catch(function () { return {}; })
+    ]).then(function (values) {
+      var articles = values[0];
+      var config = values[1];
+      var categories = config && typeof config.categories === 'object' ? config.categories : {};
       if (!articles || articles.length === 0) return;
 
       var promises = articles.map(function (article) {
@@ -415,7 +421,7 @@
         list.className = 'article-list';
 
         for (var i = 0; i < related.length; i++) {
-          list.appendChild(createRelatedCard(related[i]));
+          list.appendChild(createRelatedCard(related[i], categories));
         }
 
         section.appendChild(list);
@@ -430,7 +436,7 @@
     });
   }
 
-  function createRelatedCard(article) {
+  function createRelatedCard(article, categories) {
     var card = document.createElement('a');
     card.className = 'article-card';
     card.href = ArticleData.articleHref(article.slug);
@@ -440,7 +446,9 @@
 
     var cat = document.createElement('span');
     cat.className = 'article-category';
-    cat.textContent = (typeof CATEGORY_MAP !== 'undefined' && CATEGORY_MAP[article.category]) || article.category || '';
+    cat.textContent = categories && Object.prototype.hasOwnProperty.call(categories, article.category)
+      && typeof categories[article.category] === 'string' && categories[article.category]
+      ? categories[article.category] : article.category || '';
 
     var date = document.createElement('span');
     date.className = 'article-date';

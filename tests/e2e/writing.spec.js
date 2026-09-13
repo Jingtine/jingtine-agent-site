@@ -1,4 +1,62 @@
 const { test, expect } = require('@playwright/test');
+const fs = require('fs');
+const path = require('path');
+
+test('article and Writing cards load an existing local cover containing spaces and Unicode', async ({ page }) => {
+  const relativePath = 'assets/images/covers/article e2e 封面.svg';
+  const coverPath = path.resolve(__dirname, '../..', relativePath);
+  fs.mkdirSync(path.dirname(coverPath), { recursive: true });
+  fs.writeFileSync(coverPath, '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100"><rect width="200" height="100" fill="lavender"/></svg>', { flag: 'wx' });
+  try {
+    await articleFixture(page, [{ ...fixture[0], cover: relativePath, coverAlt: '带空格的本地封面' }]);
+    await page.goto('/article.html?slug=new-note');
+    const cover = page.locator('#article-cover img');
+    await expect(cover).toBeVisible();
+    await expect(cover).toHaveAttribute('src', 'assets/images/covers/article%20e2e%20%E5%B0%81%E9%9D%A2.svg');
+    await expect(cover).toHaveAttribute('alt', '带空格的本地封面');
+    expect(await cover.evaluate(image => image.naturalWidth)).toBe(200);
+    await page.goto('/blog.html');
+    const cardCover = page.locator('#writing-results img');
+    await expect(cardCover).toBeVisible();
+    await expect(cardCover).toHaveAttribute('src', 'assets/images/covers/article%20e2e%20%E5%B0%81%E9%9D%A2.svg');
+    expect(await cardCover.evaluate(image => image.naturalWidth)).toBe(200);
+  } finally {
+    fs.unlinkSync(coverPath);
+  }
+});
+
+test('Wiki related article categories use Writing config labels and fall back when config fails', async ({ page }) => {
+  await page.goto('/wiki.html#Software/clean-architecture');
+  const categories = page.locator('#wiki-related-articles .article-category');
+  await expect(categories.first()).toHaveText('软件工程');
+  await page.route('**/config/writing.json', route => route.fulfill({ status: 503, body: '' }));
+  await page.reload();
+  await expect(categories.first()).toHaveText('software-engineering');
+  await expect(page.locator('#wiki-detail-body h2').first()).toBeVisible();
+  await page.route('**/config/writing.json', route => route.fulfill({ json: { categories: { 'software-engineering': '<b>工程笔记</b>' } } }));
+  await page.reload();
+  await expect(categories.first()).toHaveText('<b>工程笔记</b>');
+  await expect(page.locator('#wiki-related-articles b')).toHaveCount(0);
+});
+
+test('article and Writing reject noncanonical cover segments and URL injection without fetching them', async ({ page }) => {
+  const requests = [];
+  page.on('request', request => { if (request.url().includes('/assets/images/')) requests.push(request.url()); });
+  for (const cover of ['assets/images/covers/../x.svg', 'assets/images/covers/./x.svg',
+    'assets/images/covers//x.svg', 'assets/images/covers/x.svg?query=1',
+    'assets/images/covers/x.svg#fragment', 'assets/images/covers/x\n.svg',
+    'assets/images/covers/x\\y.svg', 'assets/images/other/x.svg']) {
+    await articleFixture(page, [{ ...fixture[0], cover, coverAlt: 'Invalid cover' }]);
+    await page.goto('/article.html?slug=new-note');
+    await expect(page.locator('#article-body')).toHaveAttribute('aria-busy', 'false');
+    await expect(page.locator('#article-cover')).toBeHidden();
+    await expect(page.locator('#article-cover img')).toHaveCount(0);
+    await page.goto('/blog.html');
+    await expect(page.locator('#writing-results .writing-card')).toHaveCount(1);
+    await expect(page.locator('#writing-results img')).toHaveCount(0);
+  }
+  expect(requests).toEqual([]);
+});
 
 async function articleFixture(page, records, markdown = '+++\ndraft = false\n+++\n## A heading\n\nArticle body.') {
   await useArticles(page, records);

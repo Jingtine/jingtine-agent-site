@@ -57,13 +57,13 @@
     cover.hidden = true;
     var path = record.cover;
     if (typeof path !== 'string' || !path.startsWith('assets/images/covers/')
-      || /[%\\?#:\s\u0000-\u001f\u007f]/.test(path)
+      || /[\\?#\u0000-\u001f\u007f]/.test(path)
       || !path.split('/').every(function (part) { return part && part !== '.' && part !== '..'; })) return;
     var image = node('img');
     image.alt = record.coverAlt || '';
     image.addEventListener('load', function () { cover.hidden = false; });
     image.addEventListener('error', function () { image.remove(); cover.hidden = true; });
-    image.src = path;
+    image.src = path.split('/').map(encodeURIComponent).join('/');
     cover.appendChild(image);
   }
 
