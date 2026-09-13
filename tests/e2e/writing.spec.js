@@ -1,5 +1,163 @@
 const { test, expect } = require('@playwright/test');
 
+async function articleFixture(page, records, markdown = '+++\ndraft = false\n+++\n## A heading\n\nArticle body.') {
+  await useArticles(page, records);
+  await page.route('**/articles/*.md', route => route.fulfill({ body: markdown }));
+}
+
+test('article loads an indexed Unicode filename through an encoded local Markdown path', async ({ page }) => {
+  await articleFixture(page, [{ ...fixture[0], slug: '读书_笔记 01' }]);
+  const requests = [];
+  page.on('request', request => { if (request.url().endsWith('.md')) requests.push(new URL(request.url()).pathname); });
+  await page.goto('/article.html?slug=' + encodeURIComponent('读书_笔记 01'));
+  await expect(page.locator('#article-body h2')).toHaveText('A heading');
+  expect(requests).toEqual(['/articles/%E8%AF%BB%E4%B9%A6_%E7%AC%94%E8%AE%B0%2001.md']);
+});
+
+test('article renders metadata without exposing front matter and emits ready after reading enhancements', async ({ page }) => {
+  await page.addInitScript(() => document.addEventListener('article:ready', event => {
+    window.readyArticle = { ...event.detail, hasContents: !!document.querySelector('.reading-toc') };
+  }));
+  await page.goto('/article.html?slug=hello-world');
+  await expect(page.locator('#article-title')).toHaveText('Hello World');
+  await expect(page.locator('#article-meta')).toContainText('1 分钟');
+  await expect(page.locator('#article-meta')).toContainText('168 字');
+  await expect(page.locator('#article-meta time')).toHaveAttribute('datetime', '2026-07-10');
+  await expect(page.locator('#article-meta')).toContainText('技术');
+  await expect(page.locator('#article-summary')).toContainText('第一篇');
+  await expect(page.locator('#article-tags')).toContainText('个人网站');
+  await expect(page.locator('#article-body')).not.toContainText('draft = false');
+  await expect(page.locator('#related-articles a')).not.toHaveCount(0);
+  await expect.poll(() => page.evaluate(() => window.readyArticle)).toEqual({ slug: 'hello-world', title: 'Hello World', hasContents: true });
+  await expect(page.locator('#article-comments')).toHaveCount(1);
+});
+
+for (const query of ['', '?slug=unknown', '?slug=..%2Fconfig%2Fwriting']) {
+  test(`article rejects missing or nonpublic slug ${JSON.stringify(query)} without fetching Markdown`, async ({ page }) => {
+    const requests = [];
+    page.on('request', request => { if (request.url().includes('.md')) requests.push(request.url()); });
+    await page.goto('/article.html' + query);
+    await expect(page.getByRole('alert')).toContainText('文章不存在');
+    await expect(page.locator('#article-body')).toHaveAttribute('aria-busy', 'false');
+    await expect(page.locator('.article-back a')).toBeVisible();
+    expect(requests).toEqual([]);
+  });
+}
+
+for (const resource of ['public/data/articles.json', 'articles/hello-world.md']) {
+  test(`article reports accessible load failure for ${resource}`, async ({ page }) => {
+    await page.route('**/' + resource, route => route.fulfill({ status: 503, body: '' }));
+    await page.addInitScript(() => document.addEventListener('article:ready', () => { window.readyArticle = true; }));
+    await page.goto('/article.html?slug=hello-world');
+    await expect(page.getByRole('alert')).toContainText('加载失败');
+    await expect(page.locator('#article-body')).toHaveAttribute('aria-busy', 'false');
+    expect(await page.evaluate(() => window.readyArticle)).toBeUndefined();
+  });
+}
+
+for (const newline of ['\n', '\r\n']) {
+  test(`article strips strict TOML delimiters with ${JSON.stringify(newline)} line endings`, async ({ page }) => {
+    await articleFixture(page, [fixture[0]], ['+++', 'draft = false', '+++', '## Visible body'].join(newline));
+    await page.goto('/article.html?slug=new-note');
+    await expect(page.locator('#article-body h2')).toHaveText('Visible body');
+    await expect(page.locator('#article-body')).not.toContainText('draft');
+  });
+}
+
+for (const markdown of ['## Missing front matter', '+++\ndraft = false\n## Unclosed', ' +++\ndraft = false\n+++\nBad', '+++\ndraft = false\n+++extra\nBad']) {
+  test(`article rejects malformed front matter ${JSON.stringify(markdown)}`, async ({ page }) => {
+    await articleFixture(page, [fixture[0]], markdown);
+    await page.goto('/article.html?slug=new-note');
+    await expect(page.getByRole('alert')).toContainText('加载失败');
+    await expect(page.locator('#article-body')).not.toContainText('draft');
+  });
+}
+
+test('article ranks related by shared tags then category, date and slug with a three item limit', async ({ page }) => {
+  const current = { ...fixture[0], tags: ['one', 'two'] };
+  await articleFixture(page, [current,
+    { ...fixture[1], slug: 'only-category', category: 'life', date: '2026-10-01' },
+    { ...fixture[1], slug: 'z-tag', tags: ['one'], date: '2026-08-02' },
+    { ...fixture[1], slug: 'a-tag', tags: ['one'], date: '2026-08-02' },
+    { ...fixture[1], slug: 'old-tag', tags: ['two'], date: '2026-08-01' },
+    { ...fixture[1], slug: 'best', tags: ['one', 'two'], date: '2020-01-01' },
+    fixture[2],
+  ]);
+  await page.goto('/article.html?slug=new-note');
+  await expect(page.locator('#related-articles a')).toHaveCount(3);
+  expect(await page.locator('#related-articles a').evaluateAll(links => links.map(link => link.getAttribute('href')))).toEqual([
+    'article.html?slug=best', 'article.html?slug=a-tag', 'article.html?slug=z-tag',
+  ]);
+});
+
+test('article hides optional cover and related section when no matches exist, with config failure fallback', async ({ page }) => {
+  await articleFixture(page, fixture);
+  await page.route('**/config/writing.json', route => route.fulfill({ status: 503, body: '' }));
+  await page.goto('/article.html?slug=new-note');
+  await expect(page.locator('#article-body h2')).toBeVisible();
+  await expect(page.locator('#article-cover')).toBeHidden();
+  await expect(page.locator('#related-section')).toBeHidden();
+  await expect(page.locator('#article-meta')).toContainText('note');
+});
+
+test('article renders optional safe cover and removes failed cover without disrupting the body', async ({ page }) => {
+  await articleFixture(page, [{ ...fixture[0], cover: 'assets/images/covers/present.svg', coverAlt: 'Quiet landscape' }]);
+  await page.route('**/assets/images/covers/present.svg', route => route.fulfill({ contentType: 'image/svg+xml', body: '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100"/>' }));
+  await page.goto('/article.html?slug=new-note');
+  await expect(page.locator('#article-cover img')).toBeVisible();
+  await expect(page.locator('#article-cover img')).toHaveAttribute('alt', 'Quiet landscape');
+  await page.route('**/assets/images/covers/present.svg', route => route.fulfill({ status: 404, body: '' }));
+  await page.reload();
+  await expect(page.locator('#article-cover')).toBeHidden();
+  await expect(page.locator('#article-body h2')).toBeVisible();
+});
+
+test('article uses text for metadata and related cards and rejects unsafe covers', async ({ page }) => {
+  const payload = '<img src=x onerror=alert(1)>';
+  for (const cover of ['https://example.com/a.jpg', 'assets/images/covers/../x.png', 'assets/images/covers/%2e%2e/x.png', 'assets/images/covers/..\\x.png', '//example.com/x', 'javascript:alert(1)']) {
+    await articleFixture(page, [
+      { ...fixture[0], title: payload, summary: payload, tags: [payload], category: payload, cover },
+      { ...fixture[1], title: payload, summary: payload, tags: [payload], category: payload, cover },
+    ]);
+    await page.goto('/article.html?slug=new-note');
+    await expect(page.locator('#article-title')).toHaveText(payload);
+    await expect(page.locator('#article-summary')).toHaveText(payload);
+    await expect(page.locator('#article-tags')).toHaveText(payload);
+    await expect(page.locator('#related-articles h3')).toHaveText(payload);
+    await expect(page.locator('#related-articles p')).toHaveText(payload);
+    await expect(page.locator('#article-cover')).toBeHidden();
+    await expect(page.locator('main img')).toHaveCount(0);
+  }
+});
+
+test('article preserves Wiki Link resolution and reading accessibility, including Wiki failure', async ({ page }) => {
+  await articleFixture(page, [fixture[0]], '+++\ndraft = false\n+++\n# Heading\n\n[[topic]] [[Missing]] `[[topic]]`\n\n```js\nconst value = 1;\n```');
+  await page.route('**/public/data/wiki.json', route => route.fulfill({ json: { pages: [{ id: 'notes/topic', title: 'Topic' }] } }));
+  await page.goto('/article.html?slug=new-note');
+  await expect(page.locator('#article-body a.wiki-link')).toHaveAttribute('href', 'wiki.html#notes%2Ftopic');
+  await expect(page.locator('#article-body code').first()).toHaveText('[[topic]]');
+  await expect(page.locator('#article-body')).toContainText('[[Missing]]');
+  await expect(page.locator('#article-body pre')).toHaveAttribute('tabindex', '0');
+  await expect(page.locator('.reading-toc')).toBeVisible();
+  await page.route('**/public/data/wiki.json', route => route.fulfill({ status: 503, body: '' }));
+  await page.reload();
+  await expect(page.locator('#article-body')).toContainText('[[topic]]');
+  await expect(page.locator('#article-body')).toHaveAttribute('aria-busy', 'false');
+});
+
+test('article is unframed and responsive with keyboard reachable back navigation', async ({ page }) => {
+  await page.goto('/article.html?slug=building-digital-garden');
+  await expect(page.locator('#article-body h2').first()).toBeVisible();
+  const style = await page.locator('#article-body').evaluate(el => ({ maxWidth: getComputedStyle(el).maxWidth, border: getComputedStyle(el).borderWidth }));
+  expect(style).toEqual({ maxWidth: '920px', border: '0px' });
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.locator('.article-back a').focus();
+  await expect(page.locator('.article-back a')).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(page).toHaveURL(/blog\.html$/);
+});
+
 const fixture = [
   { slug: 'new-note', title: 'Newest note', date: '2026-09-02', kind: 'note', category: 'life', tags: ['quiet'], summary: 'A morning observation', cover: '', coverAlt: '', wordCount: 40, readingMinutes: 1 },
   { slug: 'older-essay', title: 'Older essay', date: '2026-08-01', kind: 'essay', category: 'reading', tags: ['books'], summary: 'Reading a library', cover: '', coverAlt: '', wordCount: 200, readingMinutes: 1 },

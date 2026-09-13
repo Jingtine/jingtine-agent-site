@@ -575,22 +575,22 @@ def check_wiki_hash_routing():
 
 def check_blog_wiki_links():
     """Check 13: Blog articles support [[Wiki Link]] syntax."""
-    blog_js = os.path.join(PROJECT_DIR, "js", "blog.js")
+    blog_js = os.path.join(PROJECT_DIR, "js", "wiki-links.js")
     passed = True
 
     if not os.path.exists(blog_js):
-        p(f"{FAIL} Blog wiki links:    js/blog.js not found")
+        p(f"{FAIL} Blog wiki links:    js/wiki-links.js not found")
         return False
 
     with open(blog_js, "r", encoding="utf-8") as f:
         content = f.read()
 
     if "wiki.json" not in content:
-        p(f"{FAIL} Blog wiki links:    blog.js does not read wiki.json")
+        p(f"{FAIL} Blog wiki links:    wiki-links.js does not read wiki.json")
         passed = False
 
     if "wiki.html#" not in content:
-        p(f"{FAIL} Blog wiki links:    blog.js does not generate wiki.html# links")
+        p(f"{FAIL} Blog wiki links:    wiki-links.js does not generate wiki.html# links")
         passed = False
 
     articles_dir = os.path.join(PROJECT_DIR, "articles")

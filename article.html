@@ -28,20 +28,29 @@
       </div></div></nav>
   <main id="main-content" tabindex="-1">
 
-  <div class="page-header">
-    <div class="section-label">Blog</div>
-    <h1 id="article-title">Loading...</h1>
-    <p id="article-meta"></p>
-  </div>
-
-  <section class="section">
-    <div class="article-detail" id="article-body">
-      <p style="text-align:center;color:var(--color-text-muted);padding:24px;">Loading article...</p>
+  <article class="article-page" aria-labelledby="article-title">
+    <header class="page-header article-header">
+      <div class="section-label">随笔 / Writing</div>
+      <h1 id="article-title">正在加载文章…</h1>
+      <p id="article-summary" class="article-summary" hidden></p>
+      <div id="article-meta" class="article-metadata"></div>
+      <div id="article-tags" class="blog-tags"></div>
+    </header>
+    <div class="section">
+      <figure id="article-cover" class="article-cover" hidden></figure>
+      <p id="article-status" role="status" aria-live="polite">正在加载正文…</p>
+      <noscript><p>请启用 JavaScript 阅读文章，或通过 <a href="feed.xml">RSS</a> 订阅随笔。</p></noscript>
+      <div class="article-detail" id="article-body" aria-busy="true"></div>
+      <section id="related-section" class="article-related" aria-labelledby="related-title" hidden>
+        <h2 id="related-title" class="writing-section-heading">继续阅读</h2>
+        <div id="related-articles" class="article-related-grid"></div>
+      </section>
+      <div id="article-comments"></div>
     </div>
+  </article>
     <div class="article-back">
-      <a href="blog.html" class="btn btn-outline">&larr; Back to Blog</a>
+      <a href="blog.html" class="btn btn-outline">&larr; 返回随笔</a>
     </div>
-  </section>
 
   </main>
   <footer class="footer">
@@ -58,13 +67,11 @@
 
   <script src="js/marked.min.js"></script>
   <script src="js/article-data.js"></script>
-  <script src="js/blog.js"></script>
+  <script src="js/wiki-links.js"></script>
   <script src="js/reading.js"></script>
+  <script src="js/article-page.js"></script>
   <script src="js/site-motion.js?v=20260910"></script>
   <script src="js/nav.js?v=20260910"></script>
-  <script>
-    loadArticleDetail();
-  </script>
 
 </body>
 </html>
