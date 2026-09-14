@@ -40,7 +40,7 @@ draft = false
 
 ## 双向链接的实现
 
-Blog → Wiki 的链接是通过 Markdown 中的 `[[Wiki Name]]` 语法实现的。`blog.js` 在 `marked.parse()` 渲染完 HTML 后，用 TreeWalker 扫描文本节点，找到 `[[...]]` 模式，解析到对应的 Wiki 页面，替换成 `<a>` 标签。
+Blog → Wiki 的链接是通过 Markdown 中的 `[[Wiki Name]]` 语法实现的。`article-page.js` 使用 `marked.parse()` 渲染正文，再由共享的 `wiki-links.js` 扫描文本节点，找到 `[[...]]` 模式，解析到对应的 Wiki 页面并替换成 `<a>` 标签。
 
 Wiki → Blog 的反向关联也实现了。`wiki.js` 在 Wiki 详情页加载时，扫描所有 Blog 文章的 Markdown，找到引用了当前 Wiki 页面的文章，在页面底部展示 "Related Blog Articles"。
 
@@ -51,10 +51,10 @@ Wiki → Blog 的反向关联也实现了。`wiki.js` 在 Wiki 详情页加载�
 整个网站的架构遵循 [[clean-architecture]] 的思路：
 
 - **页面层**：13 个 HTML 页面，纯 HTML + CSS，无框架
-- **脚本层**：`blog.js`（全局函数）、`wiki.js`（IIFE 模块）、`site-motion.js`（动画）、`marked.min.js`（Markdown 渲染）
-- **数据层**：`articles/index.json`、`public/data/wiki.json`、`public/data/papers.json`、`public/data/rss-items.json`
+- **脚本层**：`writing.js`（随笔列表）、`article-page.js`（文章详情）、`wiki.js`（Wiki 页面）、`wiki-links.js`（双向链接）、`site-motion.js`（动画）、`marked.min.js`（Markdown 渲染）
+- **数据层**：`public/data/articles.json`、`public/data/wiki.json`、`public/data/papers.json`、`public/data/rss-items.json`
 - **内容层**：`articles/*.md`（博客）、`content/wiki/**/*.md`（Wiki）
-- **脚本层**：Python 3 标准库，零依赖
+- **脚本层**：Python 3.11+ 标准库，零依赖
 
 没有 npm，没有 bundler，没有 transpiler。`scripts/` 里的 Python 脚本用标准库生成 RSS feed、构建 Wiki 索引、聚合 RSS 源、收集论文数据。
 

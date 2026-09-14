@@ -109,3 +109,4 @@ function walkAndReplace(root, regex, pages) {
   }
 }
 
+\r\n
