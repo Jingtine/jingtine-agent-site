@@ -50,3 +50,9 @@
 新增分类可直接写入文章；没有配置名称时显示原 slug。精选 slug 为空、失效或被筛选隐藏时，列表使用当前可见的最新文章。
 公开记录按日期倒序、同日按 slug 升序排列；日期不是定时发布开关，发布由 `draft` 控制。
 夜间工作流会重新生成索引和 RSS，再运行质量检查并提交生成结果。
+
+## 友链目录维护
+
+`config/links.json` 是人工维护的友链源。按页面显示顺序填写 `groups`，每个分组依次包含稳定的 `id`、显示名称 `name` 和 `links`；分组及其中链接的数组顺序就是目录中的显示顺序。新增条目时填写非空的 `name`、`description` 和 HTTPS `url`，可选的 `tags` 也必须是非空文本。
+
+头像只能使用仓库内 `assets/images/` 下已有的本地文件，例如 `assets/images/avatars/example.svg`。不要使用远程 URL、查询参数、片段或会离开该目录的路径。完成后运行 `python scripts/check.py` 验证配置。

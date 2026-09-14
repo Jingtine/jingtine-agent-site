@@ -88,7 +88,7 @@ test('wide desktop masthead keeps each brand line inside the sidebar', async ({ 
   expect(layout[1].top).toBeGreaterThanOrEqual(layout[0].bottom);
 });
 
-const expectedNavigation = ['首页', '关于', '作品', '随笔', '研究', '知识库', '订阅阅读', '问答助手'];
+const expectedNavigation = ['首页', '关于', '作品', '随笔', '研究', '知识库', '订阅阅读', '问答助手', '友链'];
 
 test('Chinese navigation remains real HTML without JavaScript', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });

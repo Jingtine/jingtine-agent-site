@@ -13,9 +13,19 @@ const PAGES = [
   { name: 'reader', path: '/reader.html', title: 'Jingtine' },
   { name: 'assistant', path: '/assistant.html', title: 'Jingtine' },
   { name: 'status', path: '/status.html', title: 'Jingtine' },
+  { name: 'links', path: '/links.html', title: '不驚茶坊' },
 ];
 
-const NAV_ITEMS = ['首页', '关于', '作品', '随笔', '研究', '知识库', '订阅阅读', '问答助手'];
+const LEGACY_PAGES = [
+  { name: 'article', path: '/article.html' },
+  { name: 'knowledge', path: '/knowledge.html' },
+  { name: 'library', path: '/library.html' },
+  { name: 'contact', path: '/contact.html' },
+];
+
+const ROOT_NAV_PAGES = [...PAGES, ...LEGACY_PAGES];
+
+const NAV_ITEMS = ['首页', '关于', '作品', '随笔', '研究', '知识库', '订阅阅读', '问答助手', '友链'];
 
 /* ================================================================
    TC01 — 所有页面可正常访问 (F1)
@@ -43,7 +53,8 @@ test('TC02 — 导航栏链接可跳转', async ({ page }) => {
     '研究': '/papers.html',
     '知识库': '/wiki.html',
     '订阅阅读': '/reader.html',
-    '问答助手': '/assistant.html'
+    '问答助手': '/assistant.html',
+    '友链': '/links.html'
   };
   for (const [label, expectedPath] of Object.entries(navMap)) {
     await page.click(`.nav-links a:has-text("${label}")`);
@@ -67,6 +78,7 @@ const navActiveMap = {
   '/wiki.html': '知识库',
   '/reader.html': '订阅阅读',
   '/assistant.html': '问答助手',
+  '/links.html': '友链',
 };
 
 test.describe('TC03 — 导航高亮', () => {
@@ -78,6 +90,24 @@ test.describe('TC03 — 导航高亮', () => {
       const color = await link.evaluate(el => getComputedStyle(el).color);
       expect(color).toBeTruthy();
     });
+  }
+});
+
+test('TC01 legacy routes return 200', async ({ request }) => {
+  for (const legacyPage of LEGACY_PAGES) {
+    const res = await request.get(legacyPage.path);
+    expect(res.status()).toBe(200);
+  }
+});
+
+test('navigation exposes the final links group on every root page', async ({ page }) => {
+  for (const sitePage of ROOT_NAV_PAGES) {
+    await page.goto(sitePage.path);
+    const links = page.locator('#nav-links');
+    await expect(links.locator('.nav-group-label').last()).toHaveText('来坐坐');
+    const directoryLink = links.locator('a[href="links.html"]').last();
+    await expect(directoryLink).toHaveText('友链');
+    await expect(directoryLink).toBeVisible();
   }
 });
 
@@ -528,7 +558,7 @@ test.describe('TC21 — 移动端汉堡菜单', () => {
     const toggle = page.locator('.nav-toggle');
     await toggle.click();
     await expect(page.locator('html')).toHaveClass(/nav-open/);
-    await page.mouse.click(180, 600);
+    await page.locator('main').click({ position: { x: 10, y: 10 } });
     await expect(page.locator('html')).not.toHaveClass(/nav-open/);
     const urlAfterOutside = new URL(page.url());
     expect(urlAfterOutside.pathname).toBe('/index.html');

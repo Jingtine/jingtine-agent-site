@@ -97,7 +97,11 @@ test('keeps navigation and the no-JavaScript notice available without JavaScript
   try {
     const page = await context.newPage();
     await page.goto('/links.html');
-    await expect(page.locator('#nav-links a')).toHaveCount(8);
+    const directoryLink = page.locator('#nav-links a[href="links.html"]');
+    await expect(page.locator('#nav-links a')).toHaveCount(9);
+    await expect(directoryLink).toHaveText('友链');
+    await expect(directoryLink).toBeVisible();
+    await expect(directoryLink).toHaveAttribute('aria-current', 'page');
     await expect(page.locator('noscript .empty-state')).toContainText('链接目录需要 JavaScript 读取');
   } finally {
     await context.close();

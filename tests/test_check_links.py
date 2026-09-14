@@ -59,6 +59,12 @@ class LinksConfigCheckTests(unittest.TestCase):
         self.write_links(config)
         self.assert_check(False)
 
+    def test_rejects_whitespace_only_group_name(self):
+        self.write_links(self.valid_config(groups=[{
+            "id": "places", "name": "  ", "links": [self.valid_link()]
+        }]))
+        self.assert_check(False)
+
     def test_rejects_empty_required_text(self):
         for field in ("name", "description"):
             with self.subTest(field=field):

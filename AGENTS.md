@@ -69,6 +69,7 @@ my-agent-site/
 - Wiki 源内容：`content/wiki/**/*.md`。
 - RSS 配置：`config/feeds.json` 和 `config/allowlist.json`。
 - 论文配置：`config/papers.json`。
+- 友链配置：`config/links.json`。
 - 文章生成输出：`public/data/articles.json` 和 `feed.xml`，由 `python scripts/build_articles.py` 生成；禁止手工编辑文章索引。
 - 其他生成输出：`subscriptions.opml` 以及 `public/data/` 下的文件。
 
@@ -91,6 +92,7 @@ GitHub Actions 使用 Python 3.11，每晚构建文章索引与 Feed，并刷新
 5. HTML 中不得添加 `onclick`、`onload` 等内联事件处理器；应在 JavaScript 中
    使用 `addEventListener` 注册事件。
 6. 禁止使用 `javascript:` URL，以及不安全的动态脚本或样式注入。
+7. `config/links.json` 是人工维护的源；其中的外部 URL 必须使用 HTTPS，配置文本按不可信数据用 `textContent` 渲染，头像只能引用 `assets/images/` 下不可逃逸的本地文件。
 
 ## GitHub Pages 路径规则
 
