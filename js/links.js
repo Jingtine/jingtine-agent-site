@@ -18,6 +18,13 @@
     if (typeof value !== 'string' || !value || value.indexOf('\\') !== -1 || value.indexOf('?') !== -1 || value.indexOf('#') !== -1) return null;
     var parts = value.split('/');
     if (parts.length < 3 || parts[0] !== 'assets' || parts[1] !== 'images' || parts.some(function (part) { return !part || part === '.' || part === '..'; })) return null;
+    try {
+      var resolved = new URL(value, window.location.href);
+      var avatarRoot = new URL('assets/images/', window.location.href);
+      if (resolved.origin !== avatarRoot.origin || resolved.pathname.indexOf(avatarRoot.pathname) !== 0) return null;
+    } catch (error) {
+      return null;
+    }
     return value;
   }
 

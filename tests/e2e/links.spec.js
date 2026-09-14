@@ -62,6 +62,19 @@ test('treats untrusted strings as text and rejects unsafe URLs and avatars', asy
   await expect(page.locator('.link-avatar')).toHaveText('S');
 });
 
+test('rejects percent-encoded traversal in local avatar paths', async ({ page }) => {
+  await page.route('**/config/links.json', route => route.fulfill({ json: { groups: [{
+    id: 'safety', name: '安全', links: [
+      { name: 'Encoded', url: 'https://safe.example/', description: 'must use an initial', avatar: 'assets/images/%2e%2e/figure.jpg' }
+    ]
+  }] } }));
+  await page.goto('/links.html');
+  await expect(page.locator('.link-entry')).toHaveCount(1);
+  expect(await page.evaluate(() => window.LinksPage.normalizeAvatarPath('assets/images/%2e%2e/figure.jpg'))).toBeNull();
+  await expect(page.locator('.link-avatar img')).toHaveCount(0);
+  await expect(page.locator('.link-avatar')).toHaveText('E');
+});
+
 test('replaces a failed local avatar with its text initial without changing focus', async ({ page }) => {
   await page.route('**/config/links.json', route => route.fulfill({ json: fixture }));
   await page.goto('/links.html');
