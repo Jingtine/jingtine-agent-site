@@ -108,5 +108,3 @@ function walkAndReplace(root, regex, pages) {
     tn.parentNode.replaceChild(frag, tn);
   }
 }
-
-\r\n
