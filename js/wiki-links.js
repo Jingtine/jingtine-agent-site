@@ -23,7 +23,6 @@ function loadWikiIndex() {
       return [];
     });
 }
-
 /**
  * Resolve a [[reference]] string to a wiki page object.
  * Priority: 1) exact page.id  2) page.id slug (last segment)  3) title (case-insensitive)
