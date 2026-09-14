@@ -10,8 +10,10 @@ import os
 import re
 import sys
 import xml.etree.ElementTree as ET
+from dataclasses import dataclass
 from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import urlsplit
 
 if __package__:
     from .article_content import build_public_records, parse_article, SUPPORTED_KINDS
@@ -61,6 +63,16 @@ PASS = "[PASS]"
 FAIL = "[FAIL]"
 CROSS = "x"
 ARROW = "->"
+
+
+@dataclass(frozen=True)
+class CheckResult:
+    """A check outcome that stays compatible with the boolean quality gate."""
+
+    passed: bool
+
+    def __bool__(self):
+        return self.passed
 
 
 # ── Helpers ─────────────────────────────────────────────────────
@@ -496,6 +508,89 @@ def check_site_config():
     return True
 
 
+def check_links_config() -> CheckResult:
+    """Validate the hand-maintained Links Directory source configuration."""
+    source_path = Path(PROJECT_DIR) / "config" / "links.json"
+    try:
+        data = json.loads(source_path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        p(f"{FAIL} Links config:       config/links.json not found")
+        return CheckResult(False)
+    except (OSError, json.JSONDecodeError) as error:
+        p(f"{FAIL} Links config:       invalid JSON: {error}")
+        return CheckResult(False)
+
+    if not isinstance(data, dict) or not isinstance(data.get("groups"), list):
+        p(f"{FAIL} Links config:       expected an object with a groups array")
+        return CheckResult(False)
+
+    group_ids = set()
+    images_root = (Path(PROJECT_DIR) / "assets" / "images").resolve()
+    for group_index, group in enumerate(data["groups"]):
+        if not isinstance(group, dict):
+            p(f"{FAIL} Links config:       group[{group_index}] must be an object")
+            return CheckResult(False)
+        group_id = group.get("id")
+        if not isinstance(group_id, str) or not re.fullmatch(r"[a-z0-9-]+", group_id):
+            p(f"{FAIL} Links config:       group[{group_index}] has an invalid id")
+            return CheckResult(False)
+        if group_id in group_ids:
+            p(f"{FAIL} Links config:       duplicate group id: {group_id}")
+            return CheckResult(False)
+        group_ids.add(group_id)
+        if not isinstance(group.get("name"), str) or not group["name"].strip():
+            p(f"{FAIL} Links config:       group[{group_index}] has an empty name")
+            return CheckResult(False)
+        links = group.get("links")
+        if not isinstance(links, list):
+            p(f"{FAIL} Links config:       group[{group_index}] links must be an array")
+            return CheckResult(False)
+
+        for link_index, link in enumerate(links):
+            label = f"group[{group_index}].links[{link_index}]"
+            if not isinstance(link, dict):
+                p(f"{FAIL} Links config:       {label} must be an object")
+                return CheckResult(False)
+            for field in ("name", "description"):
+                if not isinstance(link.get(field), str) or not link[field].strip():
+                    p(f"{FAIL} Links config:       {label} has an empty {field}")
+                    return CheckResult(False)
+            url = link.get("url")
+            try:
+                parsed_url = urlsplit(url) if isinstance(url, str) else None
+            except ValueError:
+                parsed_url = None
+            if not isinstance(url, str) or parsed_url.scheme != "https" or not parsed_url.netloc:
+                p(f"{FAIL} Links config:       {label} URL must use HTTPS")
+                return CheckResult(False)
+            if "tags" in link:
+                tags = link["tags"]
+                if (not isinstance(tags, list) or not tags
+                        or any(not isinstance(tag, str) or not tag.strip() for tag in tags)):
+                    p(f"{FAIL} Links config:       {label} tags must be nonempty strings")
+                    return CheckResult(False)
+            if "avatar" in link:
+                avatar = link["avatar"]
+                segments = avatar.split("/") if isinstance(avatar, str) else []
+                if (not isinstance(avatar, str) or not avatar.startswith("assets/images/")
+                        or "?" in avatar or "#" in avatar or "\\" in avatar
+                        or any(segment in ("", ".", "..") for segment in segments)):
+                    p(f"{FAIL} Links config:       {label} avatar must be a canonical local image path")
+                    return CheckResult(False)
+                avatar_path = (Path(PROJECT_DIR) / Path(*segments)).resolve()
+                try:
+                    avatar_path.relative_to(images_root)
+                except ValueError:
+                    p(f"{FAIL} Links config:       {label} avatar escapes assets/images")
+                    return CheckResult(False)
+                if not avatar_path.is_file():
+                    p(f"{FAIL} Links config:       {label} avatar file not found")
+                    return CheckResult(False)
+
+    p(f"{PASS} Links config:       valid JSON, {len(data['groups'])} groups")
+    return CheckResult(True)
+
+
 def check_wiki_hash_routing():
     """Check 12: Wiki hash routing for shareable URLs."""
     wiki_js = os.path.join(PROJECT_DIR, "js", "wiki.js")
@@ -881,6 +976,9 @@ def main():
 
     # Check 18
     results.append(check_site_config())
+
+    # Check 19
+    results.append(check_links_config())
 
     # Summary
     passed = sum(1 for r in results if r)
