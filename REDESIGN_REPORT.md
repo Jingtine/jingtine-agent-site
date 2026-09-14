@@ -68,7 +68,7 @@
 
 `articles/`、`content/`、`config/`、`public/data/`、`scripts/`、`feed.xml`、`subscriptions.opml`、部署工作流与依赖清单全部无 diff。未刷新远程数据，未改 JSON 字段，未新增或清除存储键。未引入前端框架、打包器、生产服务或第三方跟踪。
 
-配色和字体在 `styles.css` 顶部 `:root`；首页精选项目与简介在 `index.html`；完整项目在 `projects.html`；最新文章来自 `articles/index.json`，由 `js/home.js` 限制为三条。中文衬线标题使用系统回退字体，不请求字体 CDN。
+配色和字体在 `styles.css` 顶部 `:root`；首页精选项目与简介在 `index.html`；完整项目在 `projects.html`；最新文章来自 `public/data/articles.json`，由 `js/home.js` 限制为三条。中文衬线标题使用系统回退字体，不请求字体 CDN。
 
 ## 资源、限制与回退
 
