@@ -11,6 +11,12 @@ import re
 import sys
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
+from pathlib import Path
+
+if __package__:
+    from .article_content import build_public_records, parse_article, SUPPORTED_KINDS
+else:
+    from article_content import build_public_records, parse_article, SUPPORTED_KINDS
 
 # Ensure UTF-8 output on Windows
 if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
@@ -33,7 +39,7 @@ REQUIRED_HTML = [
 ]
 
 FEED_XML = os.path.join(PROJECT_DIR, "feed.xml")
-ARTICLES_JSON = os.path.join(PROJECT_DIR, "articles", "index.json")
+ARTICLES_JSON = os.path.join(PROJECT_DIR, "public", "data", "articles.json")
 RSS_ITEMS_JSON = os.path.join(PROJECT_DIR, "public", "data", "rss-items.json")
 OPML_XML = os.path.join(PROJECT_DIR, "subscriptions.opml")
 
@@ -55,7 +61,6 @@ PASS = "[PASS]"
 FAIL = "[FAIL]"
 CROSS = "x"
 ARROW = "->"
-NEQ = "!="
 
 
 # ── Helpers ─────────────────────────────────────────────────────
@@ -183,24 +188,6 @@ def check_feed_xml():
     except ET.ParseError as e:
         p(f"{FAIL} feed.xml:          XML parse error: {e}")
         return False, 0
-
-
-def check_feed_item_count(feed_items):
-    """Check 4: feed.xml item count matches articles/index.json."""
-    if not os.path.exists(ARTICLES_JSON):
-        p(f"{FAIL} Feed item count:   articles/index.json not found")
-        return False
-
-    with open(ARTICLES_JSON, "r", encoding="utf-8") as f:
-        articles = json.load(f)
-
-    article_count = len(articles)
-    if feed_items == article_count:
-        p(f"{PASS} Feed item count:   {feed_items} items = {article_count} articles")
-        return True
-    else:
-        p(f"{FAIL} Feed item count:   {feed_items} items {NEQ} {article_count} articles")
-        return False
 
 
 def check_rss_items_json():
@@ -603,8 +590,11 @@ def check_blog_wiki_links():
             if not fname.endswith(".md"):
                 continue
             fpath = os.path.join(articles_dir, fname)
-            with open(fpath, "r", encoding="utf-8") as f:
-                md = f.read()
+            try:
+                _record, md = parse_article(Path(fpath), Path(PROJECT_DIR))
+            except (OSError, ValueError) as error:
+                print(f"{FAIL} Blog wiki links:    {error}", file=sys.stderr)
+                return False
             md = strip_code_blocks(md)
             matches = wiki_link_pattern.findall(md)
             if matches:
@@ -670,8 +660,12 @@ def check_wiki_related_blog():
 
     pilot_article = os.path.join(PROJECT_DIR, "articles", "building-agent.md")
     if os.path.exists(pilot_article):
-        with open(pilot_article, "r", encoding="utf-8") as f:
-            md = f.read()
+        try:
+            _record, md = parse_article(Path(pilot_article), Path(PROJECT_DIR))
+        except (OSError, ValueError) as error:
+            print(f"{FAIL} Wiki related blog:   {error}", file=sys.stderr)
+            return False
+        md = strip_code_blocks(md)
         wiki_link_pattern = re.compile(r'\[\[([^\]]+)\]\]')
         matches = wiki_link_pattern.findall(md)
 
@@ -703,120 +697,78 @@ def check_wiki_related_blog():
                     p(f"{FAIL} Wiki related blog:   unresolved references in pilot: {', '.join(unresolved)}")
                     passed = False
 
-    if os.path.exists(ARTICLES_JSON):
-        with open(ARTICLES_JSON, "r", encoding="utf-8") as f:
-            articles = json.load(f)
-        slugs = [a.get("slug", "") for a in articles]
-        empty = [i for i, s in enumerate(slugs) if not s]
-        if empty:
-            p(f"{FAIL} Wiki related blog:   empty article slug at index {empty}")
-            passed = False
-        if len(slugs) != len(set(slugs)):
-            p(f"{FAIL} Wiki related blog:   duplicate article slugs")
-            passed = False
-
     if passed:
         p(f"{PASS} Wiki related blog:   related articles configured")
     return passed
 
 
-def check_blog_content():
-    """Check 15: Blog content completeness and metadata."""
-    passed = True
+def check_article_sources():
+    """Validate Writing sources, public index parity, config, Wiki links and RSS."""
+    try:
+        project = Path(PROJECT_DIR)
+        records = build_public_records(project / "articles", project)
+        articles = json.loads(Path(ARTICLES_JSON).read_text(encoding="utf-8"))
+        fields = {"slug", "title", "date", "kind", "category", "tags", "summary",
+                  "cover", "coverAlt", "wordCount", "readingMinutes"}
+        if not isinstance(articles, list) or any(
+            not isinstance(article, dict) or set(article) != fields for article in articles
+        ):
+            raise ValueError("public/data/articles.json: invalid public record fields")
+        # JSON comparison is type-sensitive (Python otherwise treats True == 1).
+        # Rebuilding validates dates, kinds, metadata, covers and duplicate source
+        # slugs; exact parity also enforces date-descending / slug-ascending order.
+        if json.dumps(articles, sort_keys=True) != json.dumps(records, sort_keys=True):
+            raise ValueError("public/data/articles.json is stale; run python scripts/build_articles.py")
 
-    if not os.path.exists(ARTICLES_JSON):
-        p(f"{FAIL} Blog content:       articles/index.json not found")
-        return False
+        config = json.loads((project / "config/writing.json").read_text(encoding="utf-8"))
+        if not isinstance(config, dict) or set(config) != {"featuredSlug", "categories", "kinds"}:
+            raise ValueError("config/writing.json: expected featuredSlug, categories and kinds")
+        if not isinstance(config["featuredSlug"], str):
+            raise ValueError("config/writing.json: featuredSlug must be a string")
+        for field in ("categories", "kinds"):
+            labels = config[field]
+            if not isinstance(labels, dict) or any(
+                not key.strip() or not isinstance(value, str) or not value.strip()
+                for key, value in labels.items()
+            ):
+                raise ValueError(f"config/writing.json: {field} must map non-empty keys to labels")
+        if set(config["kinds"]) != SUPPORTED_KINDS:
+            raise ValueError("config/writing.json: kinds must label essay, note and technical")
+        # Unknown categories and stale featured slugs intentionally use UI fallbacks.
 
-    with open(ARTICLES_JSON, "r", encoding="utf-8") as f:
-        articles = json.load(f)
-
-    if len(articles) < 9:
-        p(f"{FAIL} Blog content:       {len(articles)} articles (expected >= 9)")
-        passed = False
-
-    required_fields = ["slug", "title", "date", "category", "summary"]
-    incomplete = []
-    for i, a in enumerate(articles):
-        missing = [f for f in required_fields if f not in a or not a.get(f)]
-        if missing:
-            incomplete.append((i, missing))
-
-    if incomplete:
-        p(f"{FAIL} Blog content:       metadata incomplete")
-        for idx, missing in incomplete:
-            p(f"  {CROSS} article[{idx}] missing: {', '.join(missing)}")
-        passed = False
-
-    articles_dir = os.path.join(PROJECT_DIR, "articles")
-    missing_md = []
-    for a in articles:
-        slug = a.get("slug", "")
-        md_path = os.path.join(articles_dir, slug + ".md")
-        if not os.path.exists(md_path):
-            missing_md.append(slug)
-
-    if missing_md:
-        p(f"{FAIL} Blog content:       missing .md files: {', '.join(missing_md)}")
-        passed = False
-
-    if os.path.exists(WIKI_JSON):
-        with open(WIKI_JSON, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        pages = data.get("pages", [])
+        wiki = json.loads(Path(WIKI_JSON).read_text(encoding="utf-8"))
+        if not isinstance(wiki, dict) or not isinstance(wiki.get("pages"), list):
+            raise ValueError("public/data/wiki.json: expected a pages array")
         wiki_ids = set()
-        wiki_slugs = set()
-        wiki_titles_lower = set()
-        for page in pages:
-            wiki_ids.add(page.get("id", ""))
-            wiki_slugs.add(page.get("id", "").split("/")[-1])
-            wiki_titles_lower.add(page.get("title", "").lower())
+        wiki_slugs = []
+        wiki_titles = []
+        for page in wiki["pages"]:
+            if not isinstance(page, dict) or not all(
+                isinstance(page.get(key), str) and page[key] for key in ("id", "title")
+            ):
+                raise ValueError("public/data/wiki.json: pages require id and title")
+            wiki_ids.add(page["id"])
+            wiki_slugs.append(page["id"].split("/")[-1])
+            wiki_titles.append(page["title"].lower())
+        for article in articles:
+            source = project / "articles" / (article["slug"] + ".md")
+            if not source.is_file():
+                raise ValueError(f"articles/{article['slug']}.md: public source file not found")
+            _record, body = parse_article(source, project)
+            for match in re.findall(r'\[\[([^\]]+)\]\]', strip_code_blocks(body)):
+                ref = match.strip()
+                if (ref not in wiki_ids and wiki_slugs.count(ref) != 1
+                        and wiki_titles.count(ref.lower()) != 1):
+                    raise ValueError(f"{source.name}: unresolved or ambiguous Wiki reference: {ref}")
 
-        wiki_link_pattern = re.compile(r'\[\[([^\]]+)\]\]')
-        unresolved = set()
-        article_count_with_wiki = 0
-
-        for a in articles:
-            slug = a.get("slug", "")
-            md_path = os.path.join(articles_dir, slug + ".md")
-            if not os.path.exists(md_path):
-                continue
-            with open(md_path, "r", encoding="utf-8") as f:
-                md = f.read()
-            md = strip_code_blocks(md)
-            matches = wiki_link_pattern.findall(md)
-            if matches:
-                article_count_with_wiki += 1
-            for m in matches:
-                ref = m.strip()
-                ref_lower = ref.lower()
-                if ref in wiki_ids or ref in wiki_slugs or ref_lower in wiki_titles_lower:
-                    continue
-                unresolved.add(ref)
-
-        if unresolved:
-            p(f"{FAIL} Blog content:       unresolved wiki refs: {', '.join(sorted(unresolved))}")
-            passed = False
-
-        if article_count_with_wiki < 2:
-            p(f"{FAIL} Blog content:       only {article_count_with_wiki} articles have wiki links (expected >= 2)")
-            passed = False
-
-    slugs = [a.get("slug", "") for a in articles]
-    if len(slugs) != len(set(slugs)):
-        p(f"{FAIL} Blog content:       duplicate article slugs")
-        passed = False
-
-    if os.path.exists(FEED_XML):
-        tree = ET.parse(FEED_XML)
-        feed_items = tree.findall(".//item")
+        feed_items = ET.parse(FEED_XML).findall(".//item")
         if len(feed_items) != len(articles):
-            p(f"{FAIL} Blog content:       feed.xml has {len(feed_items)} items {NEQ} {len(articles)} articles")
-            passed = False
-
-    if passed:
-        p(f"{PASS} Blog content:       {len(articles)} articles, metadata ok, wiki refs ok")
-    return passed
+            raise ValueError(f"feed.xml: {len(feed_items)} items != {len(articles)} public articles")
+    except (OSError, ValueError, ET.ParseError) as error:
+        print(f"{FAIL} Article sources:    {error}", file=sys.stderr)
+        return False
+    p(f"{PASS} Article sources:    {len(articles)} public articles; source/index/feed parity, config and Wiki refs ok")
+    return True
 
 
 def check_wiki_content():
@@ -879,13 +831,8 @@ def main():
     feed_result = check_feed_xml()
     if isinstance(feed_result, tuple):
         results.append(feed_result[0])
-        feed_item_count = feed_result[1]
     else:
         results.append(feed_result)
-        feed_item_count = 0
-
-    # Check 4
-    results.append(check_feed_item_count(feed_item_count))
 
     # Check 5
     rss_result = check_rss_items_json()
@@ -927,7 +874,7 @@ def main():
     results.append(check_wiki_related_blog())
 
     # Check 16
-    results.append(check_blog_content())
+    results.append(check_article_sources())
 
     # Check 17
     results.append(check_wiki_content())

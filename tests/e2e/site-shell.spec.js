@@ -38,11 +38,11 @@ for (const width of [360, 390, 768, 1024, 1440]) {
 }
 
 test('home writing recovers from a failed load with keyboard retry', async ({ page }) => {
-  await page.route('**/articles/index.json', route => route.fulfill({ status: 503 }));
+  await page.route('**/public/data/articles.json', route => route.fulfill({ status: 503 }));
   await page.goto('/index.html');
   await expect(page.locator('#latest-posts')).toContainText('随笔加载失败。');
   await expect(page.locator('.home-now a[href="about.html"]')).toBeVisible();
-  await page.unroute('**/articles/index.json');
+  await page.unroute('**/public/data/articles.json');
   await page.getByRole('button', { name: '重试' }).focus();
   await page.keyboard.press('Enter');
   await expect(page.locator('#latest-posts .article-card')).toHaveCount(3);

@@ -101,11 +101,11 @@ test('TC04 — 首页个人信息完整性', async ({ page }) => {
    TC05 — 博客文章列表渲染 (F4)
    ================================================================ */
 test('TC05 — 博客文章列表渲染', async ({ page }) => {
+  const articles = await (await page.request.get('/public/data/articles.json')).json();
+  expect(articles.length).toBeGreaterThan(0);
   await page.goto('/blog.html');
-  await page.waitForSelector('.article-card', { timeout: 5000 });
   const cards = page.locator('.article-card');
-  const count = await cards.count();
-  expect(count).toBeGreaterThanOrEqual(9);
+  await expect(cards).toHaveCount(articles.length);
   const firstCard = cards.first();
   await expect(firstCard.locator('.article-category')).toBeVisible();
   await expect(firstCard.locator('.article-date')).toBeVisible();
@@ -184,7 +184,8 @@ test('TC09 — RSS item 字段完整性', async ({ page }) => {
     return { count: items.length, issues };
   }, xmlText);
   expect(result.error).toBeUndefined();
-  expect(result.count).toBeGreaterThanOrEqual(9);
+  const articles = await (await page.request.get('/public/data/articles.json')).json();
+  expect(result.count).toBe(articles.length);
   expect(result.issues).toEqual([]);
 });
 
@@ -368,37 +369,78 @@ test('TC19 — 文章数量与渲染一致性', async ({ page }) => {
 });
 
 test('TC19 生成文章数据模块读取索引和写作配置', async ({ page }) => {
+  const articles = await (await page.request.get('/public/data/articles.json')).json();
+  const config = await (await page.request.get('/config/writing.json')).json();
+  expect(articles.length).toBeGreaterThan(0);
+  const fields = ['slug', 'title', 'date', 'kind', 'category', 'tags', 'summary', 'cover', 'coverAlt', 'wordCount', 'readingMinutes'].sort();
+  expect(new Set(articles.map(article => article.slug)).size).toBe(articles.length);
+  for (const article of articles) {
+    expect(Object.keys(article).sort()).toEqual(fields);
+    expect(article.slug).toEqual(expect.any(String));
+    expect(article.date).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    expect(['essay', 'note', 'technical']).toContain(article.kind);
+    expect(Array.isArray(article.tags)).toBe(true);
+    expect(Number.isInteger(article.wordCount)).toBe(true);
+    expect(article.wordCount).toBeGreaterThanOrEqual(0);
+    expect(Number.isInteger(article.readingMinutes)).toBe(true);
+    expect(article.readingMinutes).toBeGreaterThanOrEqual(1);
+  }
+  expect(articles.map(article => article.date)).toEqual(articles.map(article => article.date).sort().reverse());
+  for (let index = 1; index < articles.length; index += 1) {
+    if (articles[index - 1].date === articles[index].date) {
+      // Compare Unicode code points, matching Python's stable slug ordering.
+      const previous = Array.from(articles[index - 1].slug, char => char.codePointAt(0));
+      const current = Array.from(articles[index].slug, char => char.codePointAt(0));
+      const differing = previous.findIndex((point, offset) => point !== current[offset]);
+      expect(differing < 0 ? previous.length < current.length : previous[differing] < (current[differing] ?? -1)).toBe(true);
+    }
+  }
   await page.goto('/index.html');
-  const result = await page.evaluate(async () => {
-    const articles = await window.ArticleData.load();
-    const config = await window.ArticleData.loadConfig();
-    return {
-      count: articles.length,
-      firstSlug: articles[0].slug,
-      category: config.categories['software-engineering'],
-      kind: config.kinds.technical,
-      date: window.ArticleData.formatDate('2026-02-28'),
-      invalidDate: window.ArticleData.formatDate('2026-02-29'),
-      href: window.ArticleData.articleHref('hello world/测试'),
-    };
-  });
-
+  const result = await page.evaluate(async () => ({
+    articles: await window.ArticleData.load(),
+    config: await window.ArticleData.loadConfig(),
+    date: window.ArticleData.formatDate('2026-02-28'),
+    invalidDate: window.ArticleData.formatDate('2026-02-29'),
+    href: window.ArticleData.articleHref('hello world/测试'),
+  }));
   expect(result).toEqual({
-    count: 9,
-    firstSlug: 'building-digital-garden',
-    category: '软件工程',
-    kind: '技术',
+    articles,
+    config,
     date: '2026-02-28',
     invalidDate: '',
     href: 'article.html?slug=hello%20world%2F%E6%B5%8B%E8%AF%95',
   });
 });
 
-test('TC19 博客在旧索引不可用时仍渲染生成文章', async ({ page }) => {
-  await page.route('**/articles/index.json', route => route.fulfill({ status: 503 }));
+test('TC19 旧索引返回 404 且博客只读取生成文章', async ({ page }) => {
+  const response = await page.request.get('/articles/index.json');
+  expect(response.status()).toBe(404);
+  const articles = await (await page.request.get('/public/data/articles.json')).json();
+  const oldRequests = [];
+  page.on('request', request => {
+    if (new URL(request.url()).pathname === '/articles/index.json') oldRequests.push(request.url());
+  });
   await page.goto('/blog.html');
-  await expect(page.locator('.article-card')).toHaveCount(9);
+  await expect(page.locator('.article-card')).toHaveCount(articles.length);
+  expect(oldRequests).toEqual([]);
 });
+
+// Published URL compatibility is intentionally a fixed historical contract.
+for (const slug of ['hello-world', 'building-agent', 'why-se-matters', 'product-thinking-101',
+  'notewhale-why-started', 'building-digital-garden', 'opencode-superpowers-workflow',
+  'github-pages-dev-notes', 'from-ui-to-product']) {
+  test(`TC19 published article URL remains readable: ${slug}`, async ({ page }) => {
+    const errors = [];
+    page.on('pageerror', error => errors.push(error.message));
+    const response = await page.goto(`/article.html?slug=${slug}`);
+    expect(response.status()).toBe(200);
+    await expect(page.locator('#article-body')).toHaveAttribute('aria-busy', 'false');
+    await expect(page.locator('#article-body')).not.toHaveAttribute('role', 'alert');
+    await expect(page.locator('#article-body h2').first()).toBeVisible();
+    expect((await page.locator('#article-body').innerText()).trim().length).toBeGreaterThan(50);
+    expect(errors).toEqual([]);
+  });
+}
 
 test('TC19 首页在生成文章索引第一次失败后可重试', async ({ page }) => {
   const response = await page.request.get('/public/data/articles.json');
@@ -422,7 +464,7 @@ test('TC19 首页在生成文章索引第一次失败后可重试', async ({ pag
   const retry = page.locator('#latest-posts button:has-text("重试")');
   await expect(retry).toBeVisible();
   await retry.click();
-  await expect(page.locator('#latest-posts .article-card')).toHaveCount(3);
+  await expect(page.locator('#latest-posts .article-card')).toHaveCount(Math.min(3, articles.length));
   expect(generatedIndexRequests).toBe(2);
 });
 
