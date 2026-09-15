@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="不驚茶坊的公开留言簿。">
   <title>留言簿 — 不驚茶坊</title>
-  <link rel="stylesheet" href="styles.css?v=20260915-1">
+  <link rel="stylesheet" href="styles.css?v=20260915-2">
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳转正文</a>
@@ -35,8 +35,8 @@
       <h1>茶客留言簿</h1>
       <p>这里的留言公开可见；写下名字之前，需要先用 GitHub 登录。</p>
     </header>
-    <section class="section guestbook-section" aria-labelledby="guestbook-heading">
-      <h2 id="guestbook-heading">来坐坐，留句话</h2>
+    <section class="section guestbook-section comments-section" aria-labelledby="guestbook-heading">
+      <h2 id="guestbook-heading" class="comments-heading">来坐坐，留句话</h2>
       <div id="guestbook-comments" class="comments-mount" aria-live="polite"></div>
       <noscript><p><a href="https://github.com/Jingtine/jingtine-agent-site/discussions" rel="noopener noreferrer">前往 GitHub Discussions 留言</a></p></noscript>
     </section>
@@ -51,6 +51,10 @@
     <p>&copy; 2026 Jingtine</p>
   </footer>
   <script src="js/site-theme.js?v=20260911"></script>
+  <script src="js/comments.js"></script>
+  <script>
+    window.SiteComments.mount(document.getElementById('guestbook-comments'), 'guestbook');
+  </script>
   <script src="js/nav.js?v=20260910"></script>
 </body>
 </html>

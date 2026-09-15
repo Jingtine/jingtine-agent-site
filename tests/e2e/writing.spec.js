@@ -2,6 +2,26 @@ const { test, expect } = require('@playwright/test');
 const fs = require('fs');
 const path = require('path');
 
+const commentsConfig = {
+  enabled: true,
+  repo: 'Jingtine/jingtine-agent-site',
+  repoId: 'R_kgDOExample',
+  category: '茶客留言',
+  categoryId: 'DIC_kwDOExample',
+  theme: 'light',
+  lang: 'zh-CN',
+};
+
+async function useManualComments(page) {
+  await page.addInitScript(() => {
+    Object.defineProperty(window, 'IntersectionObserver', { value: undefined, configurable: true });
+  });
+  await page.route('**/config/comments.json', route => route.fulfill({ json: commentsConfig }));
+  await page.route('https://giscus.app/client.js', route => route.fulfill({
+    contentType: 'application/javascript', body: '',
+  }));
+}
+
 test('article and Writing cards load an existing local cover containing spaces and Unicode', async ({ page }) => {
   const relativePath = 'assets/images/covers/article e2e 封面.svg';
   const coverPath = path.resolve(__dirname, '../..', relativePath);
@@ -88,6 +108,28 @@ test('article renders metadata without exposing front matter and emits ready aft
   await expect(page.locator('#related-articles a')).not.toHaveCount(0);
   await expect.poll(() => page.evaluate(() => window.readyArticle)).toEqual({ slug: 'hello-world', title: 'Hello World', hasContents: true });
   await expect(page.locator('#article-comments')).toHaveCount(1);
+});
+
+test('article comments mount after article ready with a stable slug term', async ({ page }) => {
+  await useManualComments(page);
+  await page.goto('/article.html?slug=hello-world');
+  await expect(page.locator('#article-title')).toHaveText('Hello World');
+  await page.getByRole('button', { name: '加载留言' }).focus();
+  await expect.poll(async () => page.locator('#article-comments script').getAttribute('data-term'))
+    .toBe('article:hello-world');
+});
+
+test('article comments never mount for an invalid article', async ({ page }) => {
+  await useManualComments(page);
+  const giscusRequests = [];
+  page.on('request', request => {
+    if (request.url() === 'https://giscus.app/client.js') giscusRequests.push(request.url());
+  });
+  await page.goto('/article.html?slug=unknown');
+  await expect(page.getByRole('alert')).toContainText('文章不存在');
+  await expect(page.locator('#article-comments script')).toHaveCount(0);
+  await expect(page.locator('#article-comments .comments-load')).toHaveCount(0);
+  expect(giscusRequests).toEqual([]);
 });
 
 for (const query of ['', '?slug=unknown', '?slug=..%2Fconfig%2Fwriting']) {

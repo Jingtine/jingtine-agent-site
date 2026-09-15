@@ -145,5 +145,9 @@
   window.stripFrontMatter = stripFrontMatter;
   window.selectRelated = selectRelated;
   window.loadArticleDetail = loadArticleDetail;
+  document.addEventListener('article:ready', function (event) {
+    var slug = event.detail && event.detail.slug;
+    window.SiteComments.mount(document.getElementById('article-comments'), 'article:' + slug);
+  }, { once: true });
   loadArticleDetail();
 })();
