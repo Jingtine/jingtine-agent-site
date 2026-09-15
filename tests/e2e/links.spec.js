@@ -116,7 +116,7 @@ test('keeps navigation and the no-JavaScript notice available without JavaScript
     const page = await context.newPage();
     await page.goto('/links.html');
     const directoryLink = page.locator('#nav-links a[href="links.html"]');
-    await expect(page.locator('#nav-links a')).toHaveCount(9);
+    await expect(page.locator('#nav-links a')).toHaveCount(10);
     await expect(directoryLink).toHaveText('友链');
     await expect(directoryLink).toBeVisible();
     await expect(directoryLink).toHaveAttribute('aria-current', 'page');

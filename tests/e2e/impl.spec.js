@@ -14,6 +14,7 @@ const PAGES = [
   { name: 'assistant', path: '/assistant.html', title: 'Jingtine' },
   { name: 'status', path: '/status.html', title: 'Jingtine' },
   { name: 'links', path: '/links.html', title: '不驚茶坊' },
+  { name: 'guestbook', path: '/guestbook.html', title: '不驚茶坊' },
 ];
 
 const LEGACY_PAGES = [
@@ -52,7 +53,8 @@ test('TC02 — 导航栏链接可跳转', async ({ page }) => {
     '知识库': '/wiki.html',
     '订阅阅读': '/reader.html',
     '问答助手': '/assistant.html',
-    '友链': '/links.html'
+    '友链': '/links.html',
+    '留言簿': '/guestbook.html'
   };
   for (const [label, expectedPath] of Object.entries(navMap)) {
     await page.click(`.nav-links a:has-text("${label}")`);
@@ -77,6 +79,7 @@ const navActiveMap = {
   '/reader.html': '订阅阅读',
   '/assistant.html': '问答助手',
   '/links.html': '友链',
+  '/guestbook.html': '留言簿',
 };
 
 test.describe('TC03 — 导航高亮', () => {
@@ -98,7 +101,7 @@ test('TC01 legacy routes return 200', async ({ request }) => {
   }
 });
 
-test('navigation exposes the final links group on every root page', async ({ page }) => {
+test('navigation exposes the visitor group on every root page', async ({ page }) => {
   for (const sitePage of ROOT_NAV_PAGES) {
     await page.goto(sitePage.path);
     const links = page.locator('#nav-links');
@@ -106,6 +109,9 @@ test('navigation exposes the final links group on every root page', async ({ pag
     const directoryLink = links.locator('a[href="links.html"]').last();
     await expect(directoryLink).toHaveText('友链');
     await expect(directoryLink).toBeVisible();
+    const guestbookLink = links.locator('a[href="guestbook.html"]').last();
+    await expect(guestbookLink).toHaveText('留言簿');
+    await expect(guestbookLink).toBeVisible();
   }
 });
 
@@ -587,7 +593,7 @@ test.describe('TC22 — 375px 全页面无横向溢出', () => {
     '/index.html', '/about.html', '/projects.html', '/blog.html',
     '/papers.html', '/wiki.html', '/reader.html', '/assistant.html',
     '/status.html', '/article.html?slug=hello-world', '/knowledge.html',
-    '/library.html', '/contact.html',
+    '/library.html', '/contact.html', '/links.html', '/guestbook.html',
   ];
   for (const path of paths) {
     test(`TC22 ${path} 375px 无溢出`, async ({ browser }) => {

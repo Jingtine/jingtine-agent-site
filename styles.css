@@ -1273,12 +1273,15 @@ a.article-card h3 {
     top:24px;
     max-height:calc(100dvh - 48px);
     overflow-y:auto;
+    overflow-x:hidden;
+    overscroll-behavior:contain;
     padding:20px 16px;
     border:1px solid var(--ink);
     margin-top:24px
   }
   .nav-inner {
-    display:block
+    display:block;
+    min-height:max-content
   }
   .nav-logo {
     display:grid;
@@ -1304,7 +1307,9 @@ a.article-card h3 {
     padding:12px 10px 0
   }
   .nav-social-links,.nav-ready .nav-social-links {
-    display:flex
+    display:flex;
+    flex-wrap:wrap;
+    padding-bottom:4px
   }
   .nav-links a:nth-child(4),.nav-links a:nth-child(7) {
     margin-top:12px;

@@ -36,7 +36,7 @@ BASE_PATH = "jingtine-agent-site"
 REQUIRED_HTML = [
     "index.html", "about.html", "projects.html", "blog.html",
     "papers.html", "wiki.html", "reader.html", "assistant.html", "status.html",
-    "links.html",
+    "links.html", "guestbook.html",
     "article.html",
     "knowledge.html", "library.html", "contact.html",
 ]
