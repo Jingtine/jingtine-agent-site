@@ -72,7 +72,11 @@ class CommentsConfigCheckTests(unittest.TestCase):
     def test_rejects_unsupported_theme_or_language(self):
         for changes in (
             {"theme": "system"},
+            {"theme": []},
+            {"theme": {}},
             {"lang": "ja"},
+            {"lang": []},
+            {"lang": {}},
         ):
             with self.subTest(changes=changes):
                 self.write_comments(self.valid_config(**changes))

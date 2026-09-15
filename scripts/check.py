@@ -620,10 +620,11 @@ def check_comments_config() -> CheckResult:
     if data["category"] != "茶客留言":
         p(f"{FAIL} Comments config:    category must match the site discussion category")
         return CheckResult(False)
-    if data["theme"] not in {"light", "dark", "preferred_color_scheme"}:
+    if (not isinstance(data["theme"], str)
+            or data["theme"] not in {"light", "dark", "preferred_color_scheme"}):
         p(f"{FAIL} Comments config:    unsupported theme")
         return CheckResult(False)
-    if data["lang"] not in {"zh-CN", "en"}:
+    if not isinstance(data["lang"], str) or data["lang"] not in {"zh-CN", "en"}:
         p(f"{FAIL} Comments config:    unsupported language")
         return CheckResult(False)
     if not all(isinstance(data[key], str) for key in ("repoId", "categoryId")):
