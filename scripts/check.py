@@ -592,6 +592,51 @@ def check_links_config() -> CheckResult:
     return CheckResult(True)
 
 
+def check_comments_config() -> CheckResult:
+    """Validate the hand-maintained comments integration configuration."""
+    source_path = Path(PROJECT_DIR) / "config" / "comments.json"
+    try:
+        data = json.loads(source_path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        p(f"{FAIL} Comments config:    config/comments.json not found")
+        return CheckResult(False)
+    except (OSError, json.JSONDecodeError) as error:
+        p(f"{FAIL} Comments config:    invalid JSON: {error}")
+        return CheckResult(False)
+
+    expected_keys = {"enabled", "repo", "repoId", "category", "categoryId", "theme", "lang"}
+    if not isinstance(data, dict):
+        p(f"{FAIL} Comments config:    expected a JSON object")
+        return CheckResult(False)
+    if set(data) != expected_keys:
+        p(f"{FAIL} Comments config:    expected exact configuration keys")
+        return CheckResult(False)
+    if not isinstance(data["enabled"], bool):
+        p(f"{FAIL} Comments config:    enabled must be a boolean")
+        return CheckResult(False)
+    if data["repo"] != "Jingtine/jingtine-agent-site":
+        p(f"{FAIL} Comments config:    repository must match the site repository")
+        return CheckResult(False)
+    if data["category"] != "茶客留言":
+        p(f"{FAIL} Comments config:    category must match the site discussion category")
+        return CheckResult(False)
+    if data["theme"] not in {"light", "dark", "preferred_color_scheme"}:
+        p(f"{FAIL} Comments config:    unsupported theme")
+        return CheckResult(False)
+    if data["lang"] not in {"zh-CN", "en"}:
+        p(f"{FAIL} Comments config:    unsupported language")
+        return CheckResult(False)
+    if not all(isinstance(data[key], str) for key in ("repoId", "categoryId")):
+        p(f"{FAIL} Comments config:    IDs must be strings")
+        return CheckResult(False)
+    if data["enabled"] and not all(data[key].strip() for key in ("repoId", "categoryId")):
+        p(f"{FAIL} Comments config:    enabled comments require repository and category IDs")
+        return CheckResult(False)
+
+    p(f"{PASS} Comments config:    valid comments configuration")
+    return CheckResult(True)
+
+
 def check_wiki_hash_routing():
     """Check 12: Wiki hash routing for shareable URLs."""
     wiki_js = os.path.join(PROJECT_DIR, "js", "wiki.js")
@@ -980,6 +1025,9 @@ def main():
 
     # Check 19
     results.append(check_links_config())
+
+    # Check 20
+    results.append(check_comments_config())
 
     # Summary
     passed = sum(1 for r in results if r)
