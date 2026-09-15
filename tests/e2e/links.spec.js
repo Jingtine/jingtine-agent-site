@@ -75,6 +75,24 @@ test('rejects percent-encoded traversal in local avatar paths', async ({ page })
   await expect(page.locator('.link-avatar')).toHaveText('E');
 });
 
+test('rejects percent-encoded separators in local avatar paths', async ({ page }) => {
+  const encodedPaths = [
+    'assets/images/x%2f..%2f..%2fconfig/links.json',
+    'assets/images/x%5c..%5c..%5cconfig/links.json'
+  ];
+  await page.route('**/config/links.json', route => route.fulfill({ json: { groups: [{
+    id: 'safety', name: '安全', links: encodedPaths.map((avatar, index) => ({
+      name: 'Encoded ' + index, url: 'https://safe.example/', description: 'must use an initial', avatar
+    }))
+  }] } }));
+  await page.goto('/links.html');
+  for (const avatar of encodedPaths) {
+    expect(await page.evaluate(value => window.LinksPage.normalizeAvatarPath(value), avatar)).toBeNull();
+  }
+  await expect(page.locator('.link-avatar img')).toHaveCount(0);
+  await expect(page.locator('.link-avatar')).toHaveText(['E', 'E']);
+});
+
 test('replaces a failed local avatar with its text initial without changing focus', async ({ page }) => {
   await page.route('**/config/links.json', route => route.fulfill({ json: fixture }));
   await page.goto('/links.html');

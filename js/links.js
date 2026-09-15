@@ -15,7 +15,7 @@
   }
 
   function normalizeAvatarPath(value) {
-    if (typeof value !== 'string' || !value || value.indexOf('\\') !== -1 || value.indexOf('?') !== -1 || value.indexOf('#') !== -1) return null;
+    if (typeof value !== 'string' || !value || value.indexOf('%') !== -1 || value.indexOf('\\') !== -1 || value.indexOf('?') !== -1 || value.indexOf('#') !== -1) return null;
     var parts = value.split('/');
     if (parts.length < 3 || parts[0] !== 'assets' || parts[1] !== 'images' || parts.some(function (part) { return !part || part === '.' || part === '..'; })) return null;
     try {

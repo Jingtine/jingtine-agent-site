@@ -92,6 +92,17 @@ class LinksConfigCheckTests(unittest.TestCase):
         }]}]})
         self.assert_check(False)
 
+    def test_rejects_percent_encoded_avatar_separators(self):
+        for encoded in ("x%2f..%2fexample.svg", "x%5c..%5cexample.svg"):
+            with self.subTest(encoded=encoded):
+                (self.root / "assets/images/avatars" / encoded).write_text("<svg/>", encoding="utf-8")
+                self.write_links(self.valid_config(groups=[{
+                    "id": "places", "name": "常去看看", "links": [
+                        self.valid_link(avatar="assets/images/avatars/" + encoded)
+                    ]
+                }]))
+                self.assert_check(False)
+
     def test_rejects_remote_and_missing_avatars(self):
         for avatar in ("https://example.com/avatar.svg", "assets/images/avatars/missing.svg"):
             with self.subTest(avatar=avatar):

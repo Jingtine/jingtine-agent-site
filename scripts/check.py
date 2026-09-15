@@ -574,7 +574,7 @@ def check_links_config() -> CheckResult:
                 avatar = link["avatar"]
                 segments = avatar.split("/") if isinstance(avatar, str) else []
                 if (not isinstance(avatar, str) or not avatar.startswith("assets/images/")
-                        or "?" in avatar or "#" in avatar or "\\" in avatar
+                        or "%" in avatar or "?" in avatar or "#" in avatar or "\\" in avatar
                         or any(segment in ("", ".", "..") for segment in segments)):
                     p(f"{FAIL} Links config:       {label} avatar must be a canonical local image path")
                     return CheckResult(False)
