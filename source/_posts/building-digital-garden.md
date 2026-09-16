@@ -29,7 +29,7 @@ toc: true
 - **博客**：时间线驱动，写完就结束
 - **数字花园**：网络驱动，内容之间有双向链接，持续生长
 
-我的网站现在有这些部分：
+当时的网站有这些部分：
 
 - **Wiki**（9 个页面）：AI、Software、Product、Study 四个分类
 - **Projects**（4 个项目）：NoteWhale、街像、AI Agent Studio、My Personal Website
@@ -42,7 +42,7 @@ toc: true
 
 ## 技术架构
 
-整个网站的架构遵循清晰分层的思路：
+当时整个网站的架构遵循清晰分层的思路：
 
 - **页面层**：13 个 HTML 页面，纯 HTML + CSS，无框架
 - **脚本层**：`writing.js`（随笔列表）、`article-page.js`（文章详情）、`wiki.js`（Wiki 页面）、`wiki-links.js`（双向链接）、`site-motion.js`（动画）、`marked.min.js`（Markdown 渲染）
@@ -50,9 +50,9 @@ toc: true
 - **内容层**：`articles/*.md`（博客）、`content/wiki/**/*.md`（Wiki）
 - **脚本层**：Python 3.11+ 标准库，零依赖
 
-没有 npm，没有 bundler，没有 transpiler。`scripts/` 里的 Python 脚本用标准库生成 RSS feed、构建 Wiki 索引、聚合 RSS 源、收集论文数据。
+当时没有 npm，没有 bundler，没有 transpiler。`scripts/` 里的 Python 脚本用标准库生成 RSS feed、构建 Wiki 索引、聚合 RSS 源、收集论文数据。
 
-这个架构的选择遵循同样的原则：每个模块有清晰的职责，数据流单向，依赖方向从外向内。
+这个架构的选择遵循了同样的原则：每个模块有清晰的职责，数据流单向，依赖方向从外向内。
 
 ## Git 历史中的生长轨迹
 
@@ -68,6 +68,6 @@ toc: true
 
 ## 总结
 
-传统作品集是静态的展示，数字花园是动态的网络。选择后者意味着：内容不是写完就结束，而是可以被引用、被关联、被持续发现。技术实现不复杂——TreeWalker 扫描文本节点、Python 脚本生成索引——但效果是让知识在网络中流动。
+传统作品集是静态的展示，数字花园是动态的网络。选择后者意味着：内容不是写完就结束，而是可以被引用、被关联、被持续发现。当时的技术实现不复杂——TreeWalker 扫描文本节点、Python 脚本生成索引——但效果是让知识在网络中流动。
 
 这个网站本身就是一个产品思维的实践：从"我想要什么"出发，而不是从"技术能做什么"出发。
