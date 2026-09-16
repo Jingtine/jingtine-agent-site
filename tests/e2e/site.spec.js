@@ -126,6 +126,39 @@ test('local search finds Agent posts beneath the project root', async ({ page })
   await expect(page.getByRole('heading', { name: 'Building My First AI Agent', exact: true })).toBeVisible();
 });
 
+test('theme control is keyboard reachable, cycles once per activation and persists on reload', async ({ page }) => {
+  await page.emulateMedia({ colorScheme: 'light' });
+  await page.goto('./');
+  const control = page.getByRole('button', { name: /^主题模式：/ });
+  await expect(control).toBeVisible();
+  await expect(control).toHaveAttribute('aria-pressed', 'false');
+  await expect(control).toHaveAccessibleName(/跟随系统/);
+  for (let step = 0; step < 30 && !await control.evaluate(element => element === document.activeElement); step++) {
+    await page.keyboard.press('Tab');
+  }
+  await expect(control).toBeFocused();
+
+  await page.keyboard.press('Enter');
+  await expect(control).toHaveAccessibleName(/浅色/);
+  await expect.poll(() => page.evaluate(() => localStorage.getItem('dark_mode'))).toBe('false');
+  await expect(control).toHaveAttribute('aria-pressed', 'false');
+  await page.keyboard.press('Space');
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+  await expect(control).toHaveAccessibleName(/深色/);
+  await expect(control).toHaveAttribute('aria-pressed', 'true');
+  await expect.poll(() => page.evaluate(() => localStorage.getItem('dark_mode'))).toBe('true');
+
+  await page.reload();
+  await expect(control).toHaveAccessibleName(/深色/);
+  await expect(control).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+  await control.click();
+  await expect(control).toHaveAccessibleName(/跟随系统/);
+  await expect(control).toHaveAttribute('aria-pressed', 'false');
+  await expect(page.locator('html')).not.toHaveAttribute('data-theme', 'dark');
+  await expect.poll(() => page.evaluate(() => localStorage.getItem('dark_mode'))).toBe('auto');
+});
+
 test('light and dark contexts use different readable theme tokens', async ({ browser, isMobile }) => {
   const tokens = [];
   for (const colorScheme of ['light', 'dark']) {

@@ -45,18 +45,19 @@ GitHub Pages 根路径保持 `/jingtine-agent-site/`。新增或修改内部链�
 
 ## 验证
 
-每次变更至少运行单元检查和一次干净的 Hexo 构建：
+每次变更至少按以下顺序运行干净的 Hexo 构建、质量门禁和单元检查：
 
 ```powershell
+npm run check
 npm run test:unit
-npm run clean
-npm run build
 ```
 
-涉及页面行为、导航、可访问性或响应式布局时还必须运行：
+`npm run check` 先执行清理与构建，再检查生成站点。单元测试读取生成的 `public/`，所以在干净检出中也必须先运行 `check`，再运行 `test:unit`。
+
+涉及页面行为、导航、可访问性或响应式布局时随后还必须运行：
 
 ```powershell
 npm run test:e2e
 ```
 
-如果仓库提供额外的 `npm run check` 质量门禁，也必须在提交前运行。任何成功声明都应以本次工作中实际执行且退出码为 0 的命令为依据。
+完整门禁可直接运行 `npm test`，它按 `check` → `test:unit` → `test:e2e` 的顺序执行。任何成功声明都应以本次工作中实际执行且退出码为 0 的命令为依据。

@@ -71,3 +71,11 @@ NoteWhale 不只是一个项目，它是我学习的一种方式。
 NoteWhale 还在早期阶段。MVP 还没跑通，分块策略和向量数据库的选型都还在调研。但方向是清晰的：从学生痛点出发，用 AI 解决知识管理的问题，同时在这个过程中把 RAG、LLM、产品设计的理论变成实践。
 
 不追求一步到位，先做最小可用版本，再用真实使用反馈驱动迭代。
+
+## Related Projects
+
+- [NoteWhale](/jingtine-agent-site/projects/#notewhale) — AI-powered Learning Management Platform
+
+## Further Reading
+
+- [Building My First AI Agent](/jingtine-agent-site/posts/building-agent/)

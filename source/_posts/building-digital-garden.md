@@ -71,3 +71,11 @@ toc: true
 传统作品集是静态的展示，数字花园是动态的网络。选择后者意味着：内容不是写完就结束，而是可以被引用、被关联、被持续发现。当时的技术实现不复杂——TreeWalker 扫描文本节点、Python 脚本生成索引——但效果是让知识在网络中流动。
 
 这个网站本身就是一个产品思维的实践：从"我想要什么"出发，而不是从"技术能做什么"出发。
+
+## Related Projects
+
+- [My Personal Website](/jingtine-agent-site/projects/#personal-site) — 这个网站本身
+
+## Further Reading
+
+- [Hello World](/jingtine-agent-site/posts/hello-world/)

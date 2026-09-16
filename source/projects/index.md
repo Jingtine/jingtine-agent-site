@@ -13,9 +13,18 @@ comments: false
 <p>AI-powered Learning Management Platform</p>
 <p>面向知识管理的智能学习平台，结合 AI 实现笔记自动分类、智能关联与语义检索。</p>
 <ul>
+<li><strong>类型：</strong>Product Case Study</li>
 <li><strong>角色：</strong>Full-stack Developer</li>
 <li><strong>技术：</strong>React · Node.js · Python · LLM · RAG</li>
 </ul>
+<h4>Highlights</h4>
+<ul>
+<li>AI-powered content classification and auto-tagging</li>
+<li>Semantic search across notes with vector embeddings</li>
+<li>Personalized knowledge graph generation</li>
+<li>Full-stack architecture with modern engineering practices</li>
+</ul>
+<p>AI · RAG · Knowledge Management · Full-stack</p>
 </article>
 
 <article class="project-card" id="street">
@@ -23,9 +32,18 @@ comments: false
 <p>Campus Experience Design Project</p>
 <p>关注校园空间与城市叙事的交叉，通过技术手段记录和呈现城市中的日常故事。</p>
 <ul>
+<li><strong>类型：</strong>Product Case Study</li>
 <li><strong>角色：</strong>Product Designer &amp; Developer</li>
 <li><strong>技术：</strong>Vue · Node.js · Mapbox · PostgreSQL</li>
 </ul>
+<h4>Highlights</h4>
+<ul>
+<li>Interactive map-based urban storytelling experience</li>
+<li>User-generated content with community curation</li>
+<li>Spatial data visualization and narrative design</li>
+<li>Cross-disciplinary collaboration between tech and design</li>
+</ul>
+<p>Product Design · Spatial Data · UX · Full-stack</p>
 </article>
 
 <article class="project-card" id="agent-studio">
@@ -33,9 +51,18 @@ comments: false
 <p>Personal AI Agent Experiments</p>
 <p>自主 Agent 实践项目集合，探索推理、规划与工具调用的工程落地。</p>
 <ul>
+<li><strong>类型：</strong>Personal Lab</li>
 <li><strong>角色：</strong>AI Engineer</li>
 <li><strong>技术：</strong>Python · LangChain · OpenAI · Vector DB</li>
 </ul>
+<h4>Highlights</h4>
+<ul>
+<li>Multi-step reasoning and autonomous task execution</li>
+<li>Tool-calling integration with external APIs</li>
+<li>RAG pipeline for knowledge-grounded responses</li>
+<li>Agent workflow design and evaluation framework</li>
+</ul>
+<p>LLM · Agent · LangChain · RAG · Tool Calling</p>
 </article>
 
 <article class="project-card" id="personal-site">

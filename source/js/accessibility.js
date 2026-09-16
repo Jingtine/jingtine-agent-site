@@ -1,3 +1,27 @@
+// Keep Reimu's theme cycle and persistence, adding semantics to its click-only anchor.
+(() => {
+  const control = document.querySelector('.dark-mode-btn');
+  if (!control) return;
+  control.tabIndex = 0;
+  control.setAttribute('role', 'button');
+  const sync = () => {
+    const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const mode = control.id === 'nav-moon-btn' ? '深色'
+      : control.id === 'nav-sun-btn' ? '浅色' : `跟随系统（${dark ? '深色' : '浅色'}）`;
+    control.setAttribute('aria-label', `主题模式：${mode}；切换主题`);
+    control.setAttribute('aria-pressed', String(dark));
+  };
+  control.addEventListener('keydown', event => {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    event.preventDefault();
+    if (!event.repeat) control.click();
+  });
+  sync();
+  document.body.addEventListener('reimu:theme-set', sync);
+  new MutationObserver(sync).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  window.addEventListener('pjax:complete', sync);
+})();
+
 // Add keyboard semantics to Reimu's existing mobile menu without replacing it.
 (() => {
   const toggle = document.getElementById('main-nav-toggle');

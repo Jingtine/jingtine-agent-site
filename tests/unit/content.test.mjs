@@ -28,3 +28,49 @@ test('creates retained standalone pages without comments', async () => {
     assert.match(text, /^comments: false$/m);
   }
 });
+
+const retainedLinks = {
+  'building-digital-garden': ['projects/#personal-site', 'posts/hello-world/'],
+  'from-ui-to-product': ['projects/#personal-site', 'posts/product-thinking-101/'],
+  'github-pages-dev-notes': ['posts/building-digital-garden/'],
+  'notewhale-why-started': ['projects/#notewhale', 'posts/building-agent/'],
+  'opencode-superpowers-workflow': ['posts/why-se-matters/'],
+};
+
+for (const [slug, destinations] of Object.entries(retainedLinks)) {
+  test(`${slug} preserves independent related links in the rendered post`, async () => {
+    const html = await readFile(`public/posts/${slug}/index.html`, 'utf8');
+    const article = html.match(/<div class="[^"]*\barticle-entry\b[^"]*"[^>]*>([\s\S]*?)<\/div>/)?.[1];
+    assert.ok(article, 'Rendered article body exists');
+    for (const destination of destinations) {
+      assert.ok(article.includes(`href="/jingtine-agent-site/${destination}"`), `Missing retained link: ${destination}`);
+    }
+  });
+}
+
+const retainedProjects = {
+  notewhale: ['Product Case Study',
+    'AI-powered content classification and auto-tagging',
+    'Semantic search across notes with vector embeddings',
+    'Personalized knowledge graph generation',
+    'Full-stack architecture with modern engineering practices'],
+  street: ['Product Case Study',
+    'Interactive map-based urban storytelling experience',
+    'User-generated content with community curation',
+    'Spatial data visualization and narrative design',
+    'Cross-disciplinary collaboration between tech and design'],
+  'agent-studio': ['Personal Lab',
+    'Multi-step reasoning and autonomous task execution',
+    'Tool-calling integration with external APIs',
+    'RAG pipeline for knowledge-grounded responses',
+    'Agent workflow design and evaluation framework'],
+};
+
+for (const [id, details] of Object.entries(retainedProjects)) {
+  test(`${id} preserves its project type and unique highlights`, async () => {
+    const html = await readFile('public/projects/index.html', 'utf8');
+    const project = html.match(new RegExp(`<article[^>]*id="${id}"[^>]*>([\\s\\S]*?)</article>`))?.[1];
+    assert.ok(project, `Rendered project ${id} exists`);
+    for (const detail of details) assert.ok(project.includes(detail), `Missing preserved project detail: ${detail}`);
+  });
+}

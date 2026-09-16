@@ -67,3 +67,7 @@ IDE 帮你写代码，但不帮你想清楚要写什么。Superpowers 的价值�
 工具不是重点，流程才是。OpenCode + Superpowers 给了我一套结构化的流程：想清楚再动手，做完后验证。它不替我写代码，但它确保我在写代码之前已经想清楚了要写什么、怎么写、怎么验证。
 
 好的模式不是增加复杂度，而是减少犯错的可能性。
+
+## Further Reading
+
+- [Why Software Engineering Matters for AI](/jingtine-agent-site/posts/why-se-matters/)

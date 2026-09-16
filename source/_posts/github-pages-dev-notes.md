@@ -61,3 +61,7 @@ GitHub Pages 是一个简单可靠的静态站点托管方案，但需要注意�
 2. **层叠上下文**：用 `isolation: isolate` 隔离背景和内容的 z-index
 
 这些都是实际部署中遇到的问题，不是理论推测。每个问题都有对应的 git commit 记录排查和修复过程。
+
+## Further Reading
+
+- [Building My Digital Garden](/jingtine-agent-site/posts/building-digital-garden/)

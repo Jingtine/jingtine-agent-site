@@ -75,3 +75,11 @@ UI 基本定下来后，开始做功能。当时陆续做了：
 从 UI 到产品，不是技术的升级，是思维的转变。从"好看"到"能用"，每一步都在问更深层的问题：这个东西到底为用户创造了什么价值？
 
 网站还会继续生长。但方向已经清晰了：不是加更多页面，而是加更多连接。
+
+## Related Projects
+
+- [My Personal Website](/jingtine-agent-site/projects/#personal-site) — 这个网站本身的产品演进
+
+## Further Reading
+
+- [Product Thinking for Engineers](/jingtine-agent-site/posts/product-thinking-101/)
