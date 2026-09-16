@@ -42,6 +42,19 @@ test('generates retained routes, nine posts, and an Atom feed', async () => {
   assert.match(feed, /https:\/\/jingtine\.github\.io\/jingtine-agent-site\/posts\//);
 });
 
+test('renders the tags page as a chip cloud', async () => {
+  const tags = await readFile('public/tags/index.html', 'utf8');
+  const cloud = /<div class="tag-cloud-list">([\s\S]*?)<\/div>/.exec(tags);
+  assert.ok(cloud, 'tag cloud container exists');
+  const chips = [...cloud[1].matchAll(/<a href="([^"]+)" style="font-size: [^"]*" class="tag-chip-(\d+)">/g)];
+  assert.equal(chips.length, 16);
+  assert.equal(chips[0][2], '10', 'the most-used tag renders first with the hottest class');
+  for (const [, href] of chips) assert.ok(href.startsWith('/jingtine-agent-site/tags/'), href);
+  assert.match(cloud[1], /class="tag-chip-10"/);
+  assert.match(cloud[1], /class="tag-chip-0"/);
+  assert.doesNotMatch(cloud[1], /background-color/);
+});
+
 test('uses the default campus cover for lazy-loaded home cards', async () => {
   const home = await readFile('public/index.html', 'utf8');
   assert.match(home, /data-src="\/jingtine-agent-site\/images\/default-campus-cover.webp"/);

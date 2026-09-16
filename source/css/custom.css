@@ -63,6 +63,86 @@
   color: var(--red-1);
 }
 
+.tag-cloud-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem 0.65rem;
+  margin: 1.25rem 0 0.25rem;
+  font-size: 15px;
+}
+
+.tag-cloud-list a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35em 0.95em;
+  border: 1px solid color-mix(in srgb, var(--red-2) 35%, transparent);
+  border-radius: 999px;
+  background: var(--red-5);
+  color: color-mix(in srgb, var(--red-0) 72%, #14141b);
+  font-weight: 600;
+  line-height: 1.7;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.tag-cloud-list a::after {
+  content: none !important;
+}
+
+.tag-cloud-list a:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1.2rem color-mix(in srgb, var(--red-1) 26%, transparent);
+}
+
+.tag-cloud-list:hover a:not(:hover) {
+  opacity: 0.72;
+}
+
+.tag-cloud-list a.tag-chip-5,
+.tag-cloud-list a.tag-chip-6,
+.tag-cloud-list a.tag-chip-7 {
+  background: var(--red-4);
+}
+
+.tag-cloud-list a.tag-chip-8,
+.tag-cloud-list a.tag-chip-9,
+.tag-cloud-list a.tag-chip-10 {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--red-0), var(--red-1));
+  color: #fff;
+  box-shadow: 0 0.5rem 1.2rem color-mix(in srgb, var(--red-1) 24%, transparent);
+}
+
+[data-theme='dark'] .tag-cloud-list a {
+  border-color: color-mix(in srgb, var(--red-1) 32%, transparent);
+  background: color-mix(in srgb, var(--red-1) 16%, transparent);
+  color: var(--red-2);
+}
+
+[data-theme='dark'] .tag-cloud-list a.tag-chip-5,
+[data-theme='dark'] .tag-cloud-list a.tag-chip-6,
+[data-theme='dark'] .tag-cloud-list a.tag-chip-7 {
+  background: color-mix(in srgb, var(--red-1) 26%, transparent);
+}
+
+[data-theme='dark'] .tag-cloud-list a.tag-chip-8,
+[data-theme='dark'] .tag-cloud-list a.tag-chip-9,
+[data-theme='dark'] .tag-cloud-list a.tag-chip-10 {
+  border-color: color-mix(in srgb, var(--red-1) 55%, transparent);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--red-1) 40%, transparent), color-mix(in srgb, var(--red-1) 22%, transparent));
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .tag-cloud-list {
+    gap: 0.4rem 0.5rem;
+    font-size: 13.5px;
+  }
+}
+
 :focus-visible {
   outline: 3px solid var(--red-1);
   outline-offset: 3px;
