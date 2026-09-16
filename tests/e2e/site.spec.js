@@ -198,11 +198,27 @@ test('Pixel viewport has no horizontal overflow and keyboard-reachable navigatio
 });
 
 test('reduced motion limits animated article elements to 0.01ms', async ({ page }) => {
-  await page.emulateMedia({ reducedMotion: 'reduce' });
-  await page.goto('posts/github-pages-dev-notes/');
+  const durationsInMs = value => value.split(',').map(entry => parseFloat(entry) * (entry.trim().endsWith('ms') ? 1 : 1000));
   const article = page.locator('.article-inner[data-aos="fade-up"]');
+
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.goto('posts/github-pages-dev-notes/');
   await expect(article).toBeVisible();
-  const durations = await article.evaluate(element => getComputedStyle(element).animationDuration.split(',').map(value => parseFloat(value) * (value.trim().endsWith('ms') ? 1 : 1000)));
-  expect(durations.length).toBeGreaterThan(0);
-  for (const duration of durations) expect(duration).toBeLessThanOrEqual(0.01);
+  const normalTransitions = durationsInMs(await article.evaluate(element => getComputedStyle(element).transitionDuration));
+  expect(normalTransitions.length).toBeGreaterThan(0);
+  for (const duration of normalTransitions) expect(duration).toBeGreaterThan(0.01);
+
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.reload();
+  await expect(article).toBeVisible();
+  const reduced = await article.evaluate(element => ({
+    animationDuration: getComputedStyle(element).animationDuration,
+    transitionDuration: getComputedStyle(element).transitionDuration,
+  }));
+  const reducedAnimations = durationsInMs(reduced.animationDuration);
+  expect(reducedAnimations.length).toBeGreaterThan(0);
+  for (const duration of reducedAnimations) expect(duration).toBeLessThanOrEqual(0.01);
+  const reducedTransitions = durationsInMs(reduced.transitionDuration);
+  expect(reducedTransitions.length).toBeGreaterThan(0);
+  for (const duration of reducedTransitions) expect(duration).toBeLessThanOrEqual(0.01);
 });
