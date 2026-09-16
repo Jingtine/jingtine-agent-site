@@ -144,6 +144,12 @@
     frame.addEventListener('error', record.frameError, { once: true });
   }
 
+  function recoverableGiscusMessage(error) {
+    return error === 'Discussion not found'
+      || error === 'Bad credentials'
+      || error === 'Unauthorized';
+  }
+
   function beginWidgetWatch(record) {
     record.widgetObserver = new MutationObserver(function () { watchForFrame(record); });
     record.widgetObserver.observe(record.widget, { childList: true, subtree: true });
@@ -152,6 +158,7 @@
         || !event.data || typeof event.data !== 'object'
         || !event.data.giscus || typeof event.data.giscus !== 'object'
         || typeof event.data.giscus.error !== 'string') return;
+      if (recoverableGiscusMessage(event.data.giscus.error)) return;
       failWidget(record, '留言组件加载失败。', true);
     };
     window.addEventListener('message', record.messageListener);

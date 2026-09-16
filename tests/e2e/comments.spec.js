@@ -21,6 +21,19 @@ const giscusWidgetFixture = `
   })();
 `;
 
+const discussionNotFoundFixture = `
+  (() => {
+    const frame = document.createElement('iframe');
+    frame.className = 'giscus-frame';
+    document.currentScript.parentNode.appendChild(frame);
+    window.dispatchEvent(new MessageEvent('message', {
+      origin: 'https://giscus.app',
+      data: { giscus: { error: 'Discussion not found' } },
+    }));
+    window.setTimeout(() => frame.dispatchEvent(new Event('load')), 150);
+  })();
+`;
+
 async function disableAutomaticLoading(page) {
   await page.addInitScript(() => {
     Object.defineProperty(window, 'IntersectionObserver', { value: undefined, configurable: true });
@@ -45,6 +58,22 @@ async function expectDiscussionsFallback(page, mountSelector) {
 }
 
 test.describe('guestbook', () => {
+  test('guestbook keeps the Giscus frame after an expected missing discussion status', async ({ page }) => {
+    await disableAutomaticLoading(page);
+    await routeConfig(page);
+    await routeGiscus(page, route => route.fulfill({
+      contentType: 'application/javascript',
+      body: discussionNotFoundFixture,
+    }));
+    await page.goto('/guestbook.html');
+
+    await page.getByRole('button', { name: '加载留言' }).focus();
+    await expect(page.locator('#guestbook-comments')).toHaveAttribute('data-comments-state', 'loading');
+    await expect(page.locator('#guestbook-comments iframe.giscus-frame')).toBeVisible();
+    await expect(page.locator('#guestbook-comments')).toHaveAttribute('data-comments-state', 'loaded');
+    await expectDiscussionsFallback(page, '#guestbook-comments');
+  });
+
   test('guestbook keeps a fixed Discussions link while the Giscus widget becomes ready', async ({ page }) => {
     await disableAutomaticLoading(page);
     await routeConfig(page);
