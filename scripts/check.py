@@ -617,7 +617,7 @@ def check_comments_config() -> CheckResult:
     if data["repo"] != "Jingtine/jingtine-agent-site":
         p(f"{FAIL} Comments config:    repository must match the site repository")
         return CheckResult(False)
-    if data["category"] != "茶客留言":
+    if data["category"] != "General":
         p(f"{FAIL} Comments config:    category must match the site discussion category")
         return CheckResult(False)
     if (not isinstance(data["theme"], str)

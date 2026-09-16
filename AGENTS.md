@@ -70,6 +70,7 @@ my-agent-site/
 - RSS 配置：`config/feeds.json` 和 `config/allowlist.json`。
 - 论文配置：`config/papers.json`。
 - 友链配置：`config/links.json`。
+- 评论配置：`config/comments.json`（人工维护的 GitHub Discussions/Giscus 公开集成配置）。
 - 文章生成输出：`public/data/articles.json` 和 `feed.xml`，由 `python scripts/build_articles.py` 生成；禁止手工编辑文章索引。
 - 其他生成输出：`subscriptions.opml` 以及 `public/data/` 下的文件。
 
@@ -129,6 +130,7 @@ GitHub Actions 使用 Python 3.11，每晚构建文章索引与 Feed，并刷新
   `subscriptions.opml` 中。
 - 订阅源 ID 必须保持稳定，因为生成数据和界面筛选可能引用这些 ID。
 - 所有远程订阅源 URL 必须使用 HTTPS。
+- `config/comments.json` 是人工维护的公开源，只能保存启用状态、仓库、Discussion 分类及其公开 ID、主题和语言；不得写入令牌、Cookie、邮箱或机器路径。Giscus 客户端地址固定为 `https://giscus.app/client.js`，不得由配置覆盖。
 
 ## 本地验证
 

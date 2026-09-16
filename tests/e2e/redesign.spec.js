@@ -24,7 +24,7 @@ test('social icons live below the sidebar while no-JS footer links remain availa
   await expect(links.first()).toHaveClass(/footer-icon-link/);
   await expect(links.first().locator('svg')).toHaveCount(1);
   await expect(links.first()).toHaveAttribute('aria-label','GitHub');
-  await expect(page.locator('.nav-links a')).toHaveCount(9);
+  await expect(page.locator('.nav-links a')).toHaveCount(10);
   await expect(page.locator('.nav-links a',{hasText:'Status'})).toHaveCount(0);
   await expect(page.locator('.footer .footer-links')).toHaveCount(0);
   await expect(page.locator('.nav-social-links a[aria-label="Status"]')).toHaveAttribute('href','status.html');
@@ -40,7 +40,7 @@ test('social icons live below the sidebar while no-JS footer links remain availa
   const fallback=await context.newPage();
   await fallback.goto('/index.html');
   await expect(fallback.locator('.footer-links')).toContainText('GitHub');
-  await expect(fallback.locator('#nav-links a')).toHaveCount(9);
+  await expect(fallback.locator('#nav-links a')).toHaveCount(10);
   await context.close();
 });
 test('failed Wiki navigation does not retain previous article TOC',async({page})=>{
@@ -78,7 +78,7 @@ test('reading TOC, keyboard Wiki, wide content and no-JS navigation',async({page
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   const context=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:800}});
   const fallback=await context.newPage();await fallback.goto('/index.html');
-  await expect(fallback.locator('#nav-links a')).toHaveCount(9);
+  await expect(fallback.locator('#nav-links a')).toHaveCount(10);
   await expect(fallback.locator('#nav-links a').last()).toBeVisible();
   await context.close();
   await page.goto('/wiki.html');
@@ -214,7 +214,7 @@ test('menu is accessible on mobile and tablet and Escape preserves unrelated foc
     await expect(toggle).toHaveAttribute('aria-expanded','false');
     await expect(page.locator('#nav-links')).toBeHidden();
     await toggle.click();
-    await expect(page.locator('#nav-links a')).toHaveCount(9);
+    await expect(page.locator('#nav-links a')).toHaveCount(10);
     await expect(page.locator('.nav-social-links')).toBeVisible();
     await expect(page.locator('[aria-current="page"]')).toHaveText('问答助手');
     await page.keyboard.press('Escape');

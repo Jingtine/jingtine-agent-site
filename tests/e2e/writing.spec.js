@@ -6,7 +6,7 @@ const commentsConfig = {
   enabled: true,
   repo: 'Jingtine/jingtine-agent-site',
   repoId: 'R_kgDOExample',
-  category: '茶客留言',
+  category: 'General',
   categoryId: 'DIC_kwDOExample',
   theme: 'light',
   lang: 'zh-CN',

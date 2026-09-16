@@ -17,7 +17,7 @@
       || keys.some(function (key, index) { return key !== REQUIRED_KEYS.slice().sort()[index]; })) return null;
     if (typeof value.enabled !== 'boolean'
       || value.repo !== 'Jingtine/jingtine-agent-site'
-      || value.category !== '茶客留言'
+      || value.category !== 'General'
       || typeof value.repoId !== 'string'
       || typeof value.categoryId !== 'string'
       || THEMES.indexOf(value.theme) === -1

@@ -1,11 +1,12 @@
 const { test, expect } = require('@playwright/test');
+const productionConfig = require('../../config/comments.json');
 
 const discussionsUrl = 'https://github.com/Jingtine/jingtine-agent-site/discussions';
 const validConfig = {
   enabled: true,
   repo: 'Jingtine/jingtine-agent-site',
   repoId: 'R_kgDOExample',
-  category: '茶客留言',
+  category: 'General',
   categoryId: 'DIC_kwDOExample',
   theme: 'dark',
   lang: 'en',
@@ -35,6 +36,25 @@ async function expectDiscussionsFallback(page, mountSelector) {
 }
 
 test.describe('guestbook', () => {
+  test('guestbook passes the committed production configuration to Giscus', async ({ page }) => {
+    await disableAutomaticLoading(page);
+    await routeGiscus(page);
+    await page.goto('/guestbook.html');
+
+    expect(productionConfig.enabled).toBe(true);
+    expect(productionConfig.repoId).not.toBe('');
+    expect(productionConfig.categoryId).not.toBe('');
+    await page.getByRole('button', { name: '加载留言' }).focus();
+
+    const script = page.locator('#guestbook-comments script');
+    await expect(script).toHaveAttribute('data-repo', productionConfig.repo);
+    await expect(script).toHaveAttribute('data-repo-id', productionConfig.repoId);
+    await expect(script).toHaveAttribute('data-category', productionConfig.category);
+    await expect(script).toHaveAttribute('data-category-id', productionConfig.categoryId);
+    await expect(script).toHaveAttribute('data-theme', productionConfig.theme);
+    await expect(script).toHaveAttribute('data-lang', productionConfig.lang);
+  });
+
   test('guestbook route provides an accessible public discussion fallback', async ({ page, browser }) => {
     const response = await page.goto('/guestbook.html');
 
@@ -66,7 +86,7 @@ test.describe('guestbook', () => {
     await expect(script).toHaveAttribute('src', 'https://giscus.app/client.js');
     await expect(script).toHaveAttribute('data-repo', 'Jingtine/jingtine-agent-site');
     await expect(script).toHaveAttribute('data-repo-id', 'R_kgDOExample');
-    await expect(script).toHaveAttribute('data-category', '茶客留言');
+    await expect(script).toHaveAttribute('data-category', 'General');
     await expect(script).toHaveAttribute('data-category-id', 'DIC_kwDOExample');
     await expect(script).toHaveAttribute('data-mapping', 'specific');
     await expect(script).toHaveAttribute('data-term', 'guestbook');

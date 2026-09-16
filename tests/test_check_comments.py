@@ -29,7 +29,7 @@ class CommentsConfigCheckTests(unittest.TestCase):
             "enabled": False,
             "repo": "Jingtine/jingtine-agent-site",
             "repoId": "",
-            "category": "茶客留言",
+            "category": "General",
             "categoryId": "",
             "theme": "light",
             "lang": "zh-CN",
@@ -63,7 +63,7 @@ class CommentsConfigCheckTests(unittest.TestCase):
     def test_rejects_unexpected_repository_or_category(self):
         for changes in (
             {"repo": "other/site"},
-            {"category": "留言"},
+            {"category": "茶客留言"},
         ):
             with self.subTest(changes=changes):
                 self.write_comments(self.valid_config(**changes))
