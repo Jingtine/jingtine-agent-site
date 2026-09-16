@@ -112,6 +112,17 @@ test('home header shows the banner illustration', async ({ page, request }) => {
   expect((await request.get(`${root}images/banner-illustration.webp`)).status()).toBe(200);
 });
 
+test('friend page shows the classmate card', async ({ page }) => {
+  await page.goto('./friend/');
+  const card = page.locator('.friend-item-wrap').first();
+  await expect(card.locator('.friend-name')).toHaveText('江畔絮语');
+  await expect(card.locator('.friend-desc')).toContainText('一位文院学生思考的存档地');
+  await expect(card.locator('img')).toHaveAttribute('data-src', 'https://water1i1y.org/img/dia.jpg');
+  await expect(card.locator('a')).toHaveAttribute('href', 'https://water1i1y.org/');
+  await expect(card.locator('a')).toHaveAttribute('target', '_blank');
+  await expect(card.locator('a')).toHaveAttribute('rel', 'noopener nofollow noreferrer');
+});
+
 test('navigation excludes all retired experiences', async ({ page, isMobile }) => {
   await page.goto('./');
   const nav = await navigation(page, isMobile);

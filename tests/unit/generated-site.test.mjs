@@ -265,3 +265,11 @@ test('does not generate retired routes or comment clients', async () => {
   const home = await readFile('public/index.html', 'utf8');
   assert.doesNotMatch(home, /giscus\.app|@waline|valine|twikoo|gitalk|disqus|utterances|beaudar|guestbook|reader\.html|papers\.html|wiki\.html/i);
 });
+
+test('renders the friend card with safe external attributes', async () => {
+  const friend = await readFile('public/friend/index.html', 'utf8');
+  assert.match(friend, /<a href="https:\/\/water1i1y\.org\/" rel="noopener nofollow noreferrer" target="_blank"><\/a>/);
+  assert.match(friend, /<img class="no-lightbox" src="https:\/\/water1i1y\.org\/img\/dia\.jpg" alt="江畔絮语">/);
+  assert.match(friend, /<div class="friend-name">\s*江畔絮语\s*<\/div>/);
+  assert.match(friend, /一位文院学生思考的存档地/);
+});
