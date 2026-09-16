@@ -1,9 +1,9 @@
 /**
  * Site-local Hexo tag plugins.
  *
- * Hexo 8 exposes `list_categories` and `tagcloud` as EJS helpers, not tags,
- * so the taxonomy index pages cannot use them directly. These tags delegate
- * to the built-in helpers with the matching site collections.
+ * Hexo 8 exposes `list_categories` as an EJS helper, not a tag, so the
+ * taxonomy index pages cannot use it directly. This tag delegates to the
+ * built-in helper with the matching site collection.
  */
 
 const parseArgs = (args) => {
@@ -40,13 +40,6 @@ const renderHelper = (helperName, collectionName, args) => {
  */
 hexo.extend.tag.register("list_categories", function (args) {
   return renderHelper("list_categories", "categories", args);
-});
-
-/**
- * {% tagcloud %}
- */
-hexo.extend.tag.register("tagcloud", function (args) {
-  return renderHelper("tagcloud", "tags", args);
 });
 
 /**

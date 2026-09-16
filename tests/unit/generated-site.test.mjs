@@ -85,6 +85,15 @@ test('cloud_tags emits palette chips with stable colors and escaped names', asyn
     Object.fromEntries(second.map(chip => [chip.name, chip.color])),
   );
 
+  collection.shuffled = false;
+  collection.length = 0;
+  collection.push(
+    { name: 'one', path: 'tags/one/', length: 1 },
+    { name: 'two', path: 'tags/two/', length: 2 },
+    { name: 'three', path: 'tags/three/', length: 3 },
+  );
+  assert.deepEqual(parse(render.call({})).map(chip => chip.fontSize), ['1.2em', '1.35em', '1.5em']);
+
   collection.length = 0;
   assert.equal(render.call({}), '');
 });

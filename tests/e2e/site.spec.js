@@ -284,7 +284,7 @@ test('tags page renders a Butterfly-style multicolor cloud', async ({ page, isMo
     expect(scaled.shine).toBe('none');
   } else {
     await chips.first().hover();
-    await expect.poll(() => chips.first().evaluate(element => getComputedStyle(element).filter)).toContain('brightness');
+    await expect.poll(() => chips.first().evaluate(element => getComputedStyle(element).boxShadow)).not.toBe('none');
   }
 });
 
