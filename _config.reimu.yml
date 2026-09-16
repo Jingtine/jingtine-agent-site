@@ -39,6 +39,9 @@ open_graph:
   options:
     default_og_image: https://jingtine.github.io/jingtine-agent-site/images/default-campus-cover.webp
 
+footer:
+  since: 2026
+
 sidebar:
   position: left
   menu: true

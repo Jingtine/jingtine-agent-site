@@ -52,3 +52,8 @@ test('moves the sidebar left and drops the taxonomy cards', async () => {
     ['- recent_posts'],
   );
 });
+
+test('pins the footer copyright to the 2026 site year', async () => {
+  const config = await read('_config.reimu.yml');
+  assert.match(config, /^footer:\r?\n\s+since: 2026$/m);
+});

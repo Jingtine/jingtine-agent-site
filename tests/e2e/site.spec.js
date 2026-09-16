@@ -92,6 +92,17 @@ test('sidebar renders left without taxonomy cards', async ({ page, isMobile }) =
   }
 });
 
+test('footer credits the 2026 site year to Jingtine', async ({ page }) => {
+  await page.goto('./');
+  const copyright = page.locator('#footer-info > div').first();
+  await expect(copyright).toContainText('2026');
+  await expect(copyright).not.toContainText('2020');
+  await expect(copyright).toContainText('Jingtine');
+  await expect(copyright).not.toContainText('不驚醴');
+  await expect(copyright.locator('.footer-info-sep')).toHaveCount(1);
+  await expect(page.locator('#sidebar .sidebar-author-name')).toHaveText('不驚醴');
+});
+
 test('navigation excludes all retired experiences', async ({ page, isMobile }) => {
   await page.goto('./');
   const nav = await navigation(page, isMobile);

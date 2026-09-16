@@ -41,6 +41,12 @@ test('site filters fix only exact theme 404 and iconfont URLs', async () => {
   const versions = [...output.matchAll(/\?v=([0-9a-f]{10})"/g)].map(match => match[1]);
   assert.equal(versions.length, 2, 'both injected assets are versioned');
   assert.equal(versions[0], versions[1], 'assets share one build version');
+  const footer = '<div><span class="icon-copyright"></span>\n      2026\n      <span class="footer-info-sep rotate"></span>\n      不驚醴\n    </div>';
+  const footerOutput = filters.get('after_render:html')(footer);
+  assert.match(footerOutput, /Jingtine/);
+  assert.doesNotMatch(footerOutput, /不驚醴/);
+  assert.match(footerOutput, /<span class="footer-info-sep rotate"><\/span>/);
+  assert.match(filters.get('after_render:html')('<img alt="不驚醴" class="lazyload">'), /alt="不驚醴"/);
   assert.equal(filters.get('after_render:css')('@font-face{src:url("//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2")}'), '@font-face{src:url("https://at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2")}');
 });
 

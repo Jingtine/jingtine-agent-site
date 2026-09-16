@@ -104,6 +104,7 @@ hexo.extend.filter.register("after_render:html", function (html) {
   return html
     .replace(/<a href="\/" id="(logo|subtitle)">/g, (_, id) => `<a href="${hexo.config.root}" id="${id}">`)
     .replace(/<a id="nav-rss-link"[^>]*><\/a>\s*/g, "")
+    .replace(/(<span class="footer-info-sep[^>]*><\/span>\s*)[^<]+?(\s*<\/div>)/g, "$1Jingtine$2")
     .replaceAll(`href="${hexo.config.root}css/custom.css"`, `href="${hexo.config.root}css/custom.css?v=${version}"`)
     .replaceAll(`src="${hexo.config.root}js/accessibility.js"`, `src="${hexo.config.root}js/accessibility.js?v=${version}"`)
     .replaceAll(`href="${iconFontUrl}"`, `href="https:${iconFontUrl}"`);
