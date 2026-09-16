@@ -30,6 +30,10 @@ docs/
 
 # Node / npm
 node_modules/
+public/
+.deploy_git/
+db.json
+.cache/
 
 # Video output (large binaries)
 videos/
@@ -46,6 +50,7 @@ skills-lock.json
 
 # Test output artifacts
 test-results/
+playwright-report/
 
 # Presentation tooling (local only)
 agent-site-presentation-script.md
