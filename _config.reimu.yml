@@ -77,7 +77,30 @@ top:
   enable: true
   position: right
 firework:
-  enable: false
+  enable: true
+  disable_on_mobile: false
+  options:
+    excludeElements: ["a", "button"]
+    particles:
+      - shape: circle
+        move: ["emit"]
+        easing: easeOutExpo
+        colors: ["#86efac", "#4ade80", "#22c55e", "#16a34a"]
+        number: 20
+        duration: [1200, 1800]
+        shapeOptions:
+          radius: [16, 32]
+          alpha: [0.3, 0.5]
+      - shape: circle
+        move: ["diffuse"]
+        easing: easeOutExpo
+        colors: ["#22c55e"]
+        number: 1
+        duration: [1200, 1800]
+        shapeOptions:
+          radius: 20
+          alpha: [0.2, 0.5]
+          lineWidth: 6
 live2d:
   enable: false
 live2d_widgets:
@@ -137,7 +160,7 @@ internal_theme:
     --red-6: "rgba(89, 104, 216, 0.22)"
 
 injector:
-  head_end: '<link rel="stylesheet" href="/jingtine-agent-site/css/custom.css">'
+  head_end: '<link rel="stylesheet" href="/jingtine-agent-site/css/custom.css"><script src="/jingtine-agent-site/js/firework-guard.js"></script>'
   head_begin:
   body_begin:
   body_end: '<script src="/jingtine-agent-site/js/accessibility.js" defer></script>'

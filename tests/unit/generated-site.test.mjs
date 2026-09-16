@@ -281,3 +281,29 @@ test('serves the site favicon from the project root', async () => {
   const published = await readFile('public/images/site-favicon.ico');
   assert.deepEqual(published, source, 'the site favicon is published unchanged');
 });
+
+test('injects the firework guard before the vendor script', async () => {
+  const home = await readFile('public/index.html', 'utf8');
+  assert.match(home, /<script src="\/jingtine-agent-site\/js\/firework-guard\.js"><\/script>/);
+  assert.match(home, /mouse-firework@0\.2\.0\/dist\/index\.umd\.js/);
+  assert.ok(home.indexOf('firework-guard.js') < home.indexOf('mouse-firework@0.2.0'), 'guard loads first');
+});
+
+test('firework guard honors reduced motion', async () => {
+  const code = await readFile('source/js/firework-guard.js', 'utf8');
+  const loadGuard = matches => {
+    const window = { matchMedia: () => ({ matches }) };
+    vm.runInNewContext(code, { window });
+    return window;
+  };
+  const reduced = loadGuard(true);
+  let reducedCalled = false;
+  reduced.firework = () => { reducedCalled = true; };
+  reduced.firework({});
+  assert.equal(reducedCalled, false, 'reduced motion suppresses the effect');
+  const normal = loadGuard(false);
+  let normalCalled = false;
+  normal.firework = () => { normalCalled = true; };
+  normal.firework({});
+  assert.equal(normalCalled, true, 'the effect stays enabled without the preference');
+});

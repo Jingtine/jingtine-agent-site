@@ -24,7 +24,7 @@ test('uses the GitHub Pages project root and clean post URLs', async () => {
 
 test('disables comments and unwanted effects', async () => {
   const config = await read('_config.reimu.yml');
-  for (const key of ['valine', 'waline', 'twikoo', 'gitalk', 'giscus', 'disqus', 'utterances', 'beaudar', 'live2d', 'live2d_widgets', 'reimu_cursor', 'firework', 'material_theme']) {
+  for (const key of ['valine', 'waline', 'twikoo', 'gitalk', 'giscus', 'disqus', 'utterances', 'beaudar', 'live2d', 'live2d_widgets', 'reimu_cursor', 'material_theme']) {
     assert.match(config, new RegExp(`${key}:\\r?\\n\\s+enable: false`));
   }
   assert.match(config, /aplayer:\r?\n\s+enable: false/);
@@ -56,4 +56,11 @@ test('moves the sidebar left and drops the taxonomy cards', async () => {
 test('pins the footer copyright to the 2026 site year', async () => {
   const config = await read('_config.reimu.yml');
   assert.match(config, /^footer:\r?\n\s+since: 2026$/m);
+});
+
+test('enables the green click firework', async () => {
+  const config = await read('_config.reimu.yml');
+  assert.match(config, /firework:\r?\n\s+enable: true/);
+  assert.match(config, /colors: \["#86efac", "#4ade80", "#22c55e", "#16a34a"\]/);
+  assert.match(config, /excludeElements: \["a", "button"\]/);
 });

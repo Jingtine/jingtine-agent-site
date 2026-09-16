@@ -129,6 +129,28 @@ test('serves the site favicon', async ({ page, request }) => {
   expect((await request.get(`${root}images/site-favicon.ico`)).status()).toBe(200);
 });
 
+test('click firework respects reduced motion', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('./');
+  await expect(page.locator('script[src*="mouse-firework"]')).toHaveCount(1);
+  const reduced = await page.evaluate(() => {
+    let called = false;
+    window.firework = () => { called = true; };
+    window.firework({});
+    return called;
+  });
+  expect(reduced).toBe(false);
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.reload();
+  const normal = await page.evaluate(() => {
+    let called = false;
+    window.firework = () => { called = true; };
+    window.firework({});
+    return called;
+  });
+  expect(normal).toBe(true);
+});
+
 test('navigation excludes all retired experiences', async ({ page, isMobile }) => {
   await page.goto('./');
   const nav = await navigation(page, isMobile);
