@@ -152,7 +152,7 @@ test('renders the tags page as a Butterfly-style cloud', async () => {
 test('uses the default campus cover for lazy-loaded home cards', async () => {
   const home = await readFile('public/index.html', 'utf8');
   assert.match(home, /data-src="\/jingtine-agent-site\/images\/default-campus-cover.webp"/);
-  assert.doesNotMatch(home, /data-src="\/jingtine-agent-site\/images\/banner-placeholder.svg"/);
+  assert.doesNotMatch(home, /data-src="\/jingtine-agent-site\/images\/banner-illustration\.webp"/);
 });
 
 test('keeps social preview images on the deployed project root without theme artwork', async () => {

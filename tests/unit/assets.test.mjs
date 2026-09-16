@@ -4,7 +4,11 @@ import { readFile, stat } from 'node:fs/promises';
 
 test('ships local avatar, banner, and optimized WebP cover', async () => {
   await stat('source/_data/avatar/avatar.jpg');
-  await stat('source/images/banner-placeholder.svg');
+  const banner = await readFile('source/images/banner-illustration.webp');
+  assert.equal(banner.subarray(0, 4).toString('ascii'), 'RIFF');
+  assert.equal(banner.subarray(8, 12).toString('ascii'), 'WEBP');
+  assert.ok(banner.length < 600_000, `banner is ${banner.length} bytes`);
+  await assert.rejects(stat('source/images/banner-placeholder.svg'));
   const cover = await readFile('source/images/default-campus-cover.webp');
   assert.equal(cover.subarray(0, 4).toString('ascii'), 'RIFF');
   assert.equal(cover.subarray(8, 12).toString('ascii'), 'WEBP');

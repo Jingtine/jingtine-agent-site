@@ -105,6 +105,13 @@ test('footer credits the 2026 site year to Jingtine', async ({ page }) => {
   await expect(page.locator('#sidebar .sidebar-author-name')).toHaveText('不驚醴');
 });
 
+test('home header shows the banner illustration', async ({ page, request }) => {
+  await page.goto('./');
+  const banner = page.locator('#header img').first();
+  await expect(banner).toHaveAttribute('src', `${root}images/banner-illustration.webp`);
+  expect((await request.get(`${root}images/banner-illustration.webp`)).status()).toBe(200);
+});
+
 test('navigation excludes all retired experiences', async ({ page, isMobile }) => {
   await page.goto('./');
   const nav = await navigation(page, isMobile);
