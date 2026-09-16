@@ -56,6 +56,10 @@ generator_search:
 dark_mode:
   button: true
   type: auto
+preloader:
+  enable: true
+  text:
+    zh-CN: 茶香氤氲时...
 animation:
   enable: true
 pjax:

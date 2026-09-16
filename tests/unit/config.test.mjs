@@ -28,3 +28,9 @@ test('disables comments and unwanted effects', async () => {
   assert.match(config, /aplayer:\r?\n\s+enable: false/);
   assert.match(config, /meting:\r?\n\s+enable: false/);
 });
+
+test('uses the tea-house loading message', async () => {
+  const config = await read('_config.reimu.yml');
+  assert.match(config, /preloader:\r?\n\s+enable: true\r?\n\s+text:\r?\n\s+zh-CN: 茶香氤氲时\.\.\./);
+  assert.doesNotMatch(config, /少女祈祷中/);
+});
