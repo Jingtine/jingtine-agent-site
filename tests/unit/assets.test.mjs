@@ -20,4 +20,5 @@ test('defines a blue-purple Reimu palette and local stylesheet', async () => {
   const css = await readFile('source/css/custom.css', 'utf8');
   assert.match(css, /prefers-reduced-motion: reduce/);
   assert.match(css, /\.project-grid/);
+  assert.match(css, /\.reimu-bg\s*\{[^}]*display:\s*none\s*!important;/s);
 });
