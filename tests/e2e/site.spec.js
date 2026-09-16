@@ -223,6 +223,7 @@ test('tags page renders a centered chip cloud with accessible focus states', asy
   const cool = page.locator('.tag-cloud-list a.tag-chip-0').first();
   const hot = page.locator('.tag-cloud-list a.tag-chip-10').first();
   await expect(chips).toHaveCount(16);
+  expect(await page.locator('.tag-cloud-list').evaluate(element => getComputedStyle(element).justifyContent)).toBe('center');
   await expect(page.locator('.tag-cloud-list a.tag-chip-10')).toHaveCount(3);
   await expect(chips.first()).toHaveAttribute('href', new RegExp(`^${root}tags/`));
 
@@ -258,7 +259,9 @@ test('tags page renders a centered chip cloud with accessible focus states', asy
   expect(hotStyle.fontSize).toBeGreaterThan(coolStyle.fontSize);
   expect(hotStyle.color).toBe('rgb(255, 255, 255)');
 
-  for (let step = 0; step < 60 && !await chips.first().evaluate(element => element === document.activeElement); step++) {
+  // The enabled sidebar widgets push the first chip to tab stop 44 on desktop.
+  const tabBudget = 60;
+  for (let step = 0; step < tabBudget && !await chips.first().evaluate(element => element === document.activeElement); step++) {
     await page.keyboard.press('Tab');
   }
   await expect(chips.first()).toBeFocused();
