@@ -1,0 +1,23 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFile, stat } from 'node:fs/promises';
+
+test('ships local avatar, banner, and optimized WebP cover', async () => {
+  await stat('source/_data/avatar/avatar.jpg');
+  await stat('source/images/banner-placeholder.svg');
+  const cover = await readFile('source/images/default-campus-cover.webp');
+  assert.equal(cover.subarray(0, 4).toString('ascii'), 'RIFF');
+  assert.equal(cover.subarray(8, 12).toString('ascii'), 'WEBP');
+  assert.ok(cover.length < 450_000, `cover is ${cover.length} bytes`);
+});
+
+test('defines a blue-purple Reimu palette and local stylesheet', async () => {
+  const theme = await readFile('_config.reimu.yml', 'utf8');
+  assert.match(theme, /internal_theme:/);
+  assert.match(theme, /--red-1: "#6f7fe8"/);
+  assert.match(theme, /--red-2: "#8795ee"/);
+  assert.match(theme, /head_end: '<link rel="stylesheet" href="\/jingtine-agent-site\/css\/custom\.css">'/);
+  const css = await readFile('source/css/custom.css', 'utf8');
+  assert.match(css, /prefers-reduced-motion: reduce/);
+  assert.match(css, /\.project-grid/);
+});

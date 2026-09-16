@@ -25,8 +25,8 @@ menu:
     icon: false
 
 avatar: avatar.jpg
-banner: /jingtine-agent-site/images/banner-placeholder.svg
-cover: /jingtine-agent-site/images/default-campus-cover.webp
+banner: /images/banner-placeholder.svg
+cover: /images/default-campus-cover.webp
 rss: atom.xml
 
 sidebar:
@@ -97,3 +97,33 @@ utterances:
   enable: false
 beaudar:
   enable: false
+
+internal_theme:
+  light:
+    --red-0: "#5968d8"
+    --red-1: "#6f7fe8"
+    --red-2: "#8795ee"
+    --red-3: "#aab4f5"
+    --red-4: "#cbd2fa"
+    --red-5: "#e7eafe"
+    --red-5-5: "#f0f1ff"
+    --red-6: "#f7f8ff"
+    --color-red-6-shadow: "rgba(111, 127, 232, 0.45)"
+    --color-red-3-shadow: "rgba(135, 149, 238, 0.28)"
+  dark:
+    --red-0: "#9aa8f3"
+    --red-1: "#aab4f5"
+    --red-2: "#bcc4f8"
+    --red-3: "#cdd3fa"
+    --red-4: "rgba(170, 180, 245, 0.55)"
+    --red-5: "rgba(135, 149, 238, 0.18)"
+    --red-5-5: "rgba(111, 127, 232, 0.10)"
+    --red-6: "rgba(89, 104, 216, 0.22)"
+
+injector:
+  head_end: '<link rel="stylesheet" href="/jingtine-agent-site/css/custom.css">'
+  head_begin:
+  body_begin:
+  body_end:
+  sidebar_begin:
+  sidebar_end:

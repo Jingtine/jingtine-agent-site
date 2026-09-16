@@ -1,0 +1,29 @@
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1.25rem;
+}
+
+.project-card {
+  padding: 1.4rem;
+  border: 1px solid color-mix(in srgb, var(--red-3) 36%, transparent);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--red-6) 88%, transparent);
+  box-shadow: 0 1rem 2.5rem color-mix(in srgb, var(--red-1) 10%, transparent);
+}
+
+.project-card h3 { margin-top: 0; }
+
+:focus-visible {
+  outline: 3px solid var(--red-1);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
