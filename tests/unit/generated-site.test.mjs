@@ -5,8 +5,10 @@ import { readFile, readdir, mkdtemp, mkdir, writeFile, rm } from 'node:fs/promis
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { execFileSync, spawnSync } from 'node:child_process';
+import { createRequire } from 'node:module';
 import vm from 'node:vm';
 
+const require = createRequire(import.meta.url);
 const slugs = ['building-agent', 'building-digital-garden', 'from-ui-to-product', 'github-pages-dev-notes', 'hello-world', 'notewhale-why-started', 'opencode-superpowers-workflow', 'product-thinking-101', 'why-se-matters'];
 
 async function checker() {
@@ -17,7 +19,9 @@ async function checker() {
 test('site filters fix only exact theme 404 and iconfont URLs', async () => {
   const filters = new Map();
   vm.runInNewContext(await readFile('scripts/tags.js', 'utf8'), {
+    require,
     hexo: {
+      base_dir: process.cwd(),
       config: { root: '/jingtine-agent-site/' },
       theme: { config: { icon_font: '4552607_ex15nbittbh' } },
       extend: { tag: { register() {} }, filter: { register(name, handler) { filters.set(name, handler); } } }
@@ -25,8 +29,18 @@ test('site filters fix only exact theme 404 and iconfont URLs', async () => {
   });
   assert.equal(typeof filters.get('after_render:html'), 'function');
   assert.equal(typeof filters.get('after_render:css'), 'function');
-  const html = '<a href="/" id="logo">404</a><a href="/" id="subtitle">back</a><a href="/">body</a><a id="nav-rss-link" class="nav-icon" href="/jingtine-agent-site/atom.xml" title="RSS 订阅" aria-label="RSS 订阅" target="_blank"></a><link rel="preload" href="//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2" as="font"><p>//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2</p>';
-  assert.equal(filters.get('after_render:html')(html), '<a href="/jingtine-agent-site/" id="logo">404</a><a href="/jingtine-agent-site/" id="subtitle">back</a><a href="/">body</a><link rel="preload" href="https://at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2" as="font"><p>//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2</p>');
+  const html = '<a href="/" id="logo">404</a><a href="/" id="subtitle">back</a><a href="/">body</a><a id="nav-rss-link" class="nav-icon" href="/jingtine-agent-site/atom.xml" title="RSS 订阅" aria-label="RSS 订阅" target="_blank"></a><link rel="stylesheet" href="/jingtine-agent-site/css/custom.css"><script src="/jingtine-agent-site/js/accessibility.js" defer></script><link rel="preload" href="//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2" as="font"><p>//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2</p>';
+  const output = filters.get('after_render:html')(html);
+  assert.match(output, /<a href="\/jingtine-agent-site\/" id="logo">404<\/a>/);
+  assert.match(output, /<a href="\/jingtine-agent-site\/" id="subtitle">back<\/a>/);
+  assert.doesNotMatch(output, /nav-rss-link/);
+  assert.match(output, /<link rel="stylesheet" href="\/jingtine-agent-site\/css\/custom\.css\?v=[0-9a-f]{10}">/);
+  assert.match(output, /<script src="\/jingtine-agent-site\/js\/accessibility\.js\?v=[0-9a-f]{10}" defer><\/script>/);
+  assert.match(output, /<link rel="preload" href="https:\/\/at\.alicdn\.com\/t\/c\/font_4552607_ex15nbittbh\.woff2" as="font">/);
+  assert.match(output, /<p>\/\/at\.alicdn\.com\/t\/c\/font_4552607_ex15nbittbh\.woff2<\/p>/);
+  const versions = [...output.matchAll(/\?v=([0-9a-f]{10})"/g)].map(match => match[1]);
+  assert.equal(versions.length, 2, 'both injected assets are versioned');
+  assert.equal(versions[0], versions[1], 'assets share one build version');
   assert.equal(filters.get('after_render:css')('@font-face{src:url("//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2")}'), '@font-face{src:url("https://at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2")}');
 });
 
@@ -44,7 +58,9 @@ test('cloud_tags emits palette chips with stable colors and escaped names', asyn
     return this.shuffled ? items.reverse() : items;
   };
   vm.runInNewContext(await readFile('scripts/tags.js', 'utf8'), {
+    require,
     hexo: {
+      base_dir: process.cwd(),
       config: { root: '/jingtine-agent-site/' },
       theme: { config: { icon_font: '4552607_ex15nbittbh' } },
       locals: { get: () => collection },

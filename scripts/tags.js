@@ -6,6 +6,25 @@
  * built-in helper with the matching site collection.
  */
 
+const { createHash } = require("crypto");
+const { readFileSync } = require("fs");
+const path = require("path");
+
+// GitHub Pages and the theme service worker both cache the injected assets.
+// A content fingerprint in the URL keeps a stale custom.css or accessibility.js
+// from being paired with freshly generated HTML after a deploy.
+let assetVersion;
+const getAssetVersion = () => {
+  if (!assetVersion) {
+    const hash = createHash("sha256");
+    for (const file of ["source/css/custom.css", "source/js/accessibility.js"]) {
+      hash.update(readFileSync(path.join(hexo.base_dir, file)));
+    }
+    assetVersion = hash.digest("hex").slice(0, 10);
+  }
+  return assetVersion;
+};
+
 const parseArgs = (args) => {
   const options = {};
   for (const arg of args) {
@@ -81,9 +100,12 @@ hexo.extend.tag.register("cloud_tags", function () {
 // These supported output filters touch only the exact generated attributes/URL.
 hexo.extend.filter.register("after_render:html", function (html) {
   const iconFontUrl = `//at.alicdn.com/t/c/font_${hexo.theme.config.icon_font}.woff2`;
+  const version = getAssetVersion();
   return html
     .replace(/<a href="\/" id="(logo|subtitle)">/g, (_, id) => `<a href="${hexo.config.root}" id="${id}">`)
     .replace(/<a id="nav-rss-link"[^>]*><\/a>\s*/g, "")
+    .replaceAll(`href="${hexo.config.root}css/custom.css"`, `href="${hexo.config.root}css/custom.css?v=${version}"`)
+    .replaceAll(`src="${hexo.config.root}js/accessibility.js"`, `src="${hexo.config.root}js/accessibility.js?v=${version}"`)
     .replaceAll(`href="${iconFontUrl}"`, `href="https:${iconFontUrl}"`);
 });
 hexo.extend.filter.register("after_render:css", function (css) {
