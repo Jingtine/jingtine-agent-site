@@ -1,3 +1,12 @@
++++
+title = "From UI to Product"
+date = 2026-07-13
+kind = "essay"
+category = "product-thinking"
+tags = ["产品思维", "设计"]
+summary = "从 UI 打磨到产品思维，设计个人网站过程中的反思。"
+draft = false
++++
 # From UI to Product
 
 > What I Learned While Designing My Personal Website

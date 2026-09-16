@@ -23,7 +23,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.11'
 
       - name: Aggregate feeds
         run: python scripts/aggregate-feeds.py
@@ -33,6 +33,9 @@ jobs:
 
       - name: Collect GitHub activity
         run: python scripts/collect_github_stats.py
+
+      - name: Build Writing index and feed
+        run: python scripts/build_articles.py
 
       - name: Quality check
         run: python scripts/check.py
@@ -45,6 +48,8 @@ jobs:
         with:
           commit_message: "chore: nightly refresh of feeds, papers, GitHub, and status"
           file_pattern: |
+            public/data/articles.json
+            feed.xml
             public/data/rss-items.json
             public/data/papers.json
             public/data/github-stats.json

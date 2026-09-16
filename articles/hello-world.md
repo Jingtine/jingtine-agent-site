@@ -1,3 +1,12 @@
++++
+title = "Hello World"
+date = 2026-07-10
+kind = "technical"
+category = "ai-agent"
+tags = ["个人网站", "AI Agent"]
+summary = "第一篇博客文章，关于这个网站的诞生与愿景。"
+draft = false
++++
 # Hello World
 
 这是我的个人技术博客的第一篇文章。

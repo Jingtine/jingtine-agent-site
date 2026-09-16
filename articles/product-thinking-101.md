@@ -1,3 +1,12 @@
++++
+title = "Product Thinking for Engineers"
+date = 2026-07-12
+kind = "essay"
+category = "product-thinking"
+tags = ["产品思维", "工程师"]
+summary = "工程师如何培养产品思维，从技术视角走向用户视角。"
+draft = false
++++
 # Product Thinking for Engineers
 
 工程师如何培养产品思维。

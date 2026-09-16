@@ -80,7 +80,7 @@ def check_file(path):
 def generate():
     base = os.path.join(PROJECT_DIR, "public", "data")
 
-    blog_articles = count_json_items(os.path.join(PROJECT_DIR, "articles", "index.json"))
+    blog_articles = count_json_items(os.path.join(PROJECT_DIR, "public", "data", "articles.json"))
     research_papers = count_json_items(os.path.join(base, "papers.json"), key="papers")
     wiki_pages = count_json_items(os.path.join(base, "wiki.json"), key="pages")
     rss_feeds = count_allowlisted_feeds()

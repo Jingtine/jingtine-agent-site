@@ -38,8 +38,8 @@
   function renderMonthly(data) {
     var panel = element('section', 'github-chart-panel github-monthly-panel');
     var heading = element('div', 'github-panel-heading');
-    heading.appendChild(element('h3', '', 'Monthly activity'));
-    heading.appendChild(element('span', '', 'contributions'));
+    heading.appendChild(element('h3', '', '月度活动'));
+    heading.appendChild(element('span', '', '贡献'));
     panel.appendChild(heading);
     var chart = element('div', 'github-month-chart');
     var months = Array.isArray(data.months) ? data.months : [];
@@ -60,9 +60,9 @@
   function renderCalendar(data) {
     var panel = element('section', 'github-chart-panel github-calendar-panel');
     var heading = element('div', 'github-panel-heading');
-    heading.appendChild(element('h3', '', 'Daily activity'));
+    heading.appendChild(element('h3', '', '每日活动'));
     var calendar = Array.isArray(data.calendar) ? data.calendar : [];
-    heading.appendChild(element('span', '', calendar.length ? calendar[0].date + ' — ' + calendar[calendar.length - 1].date : 'latest year'));
+    heading.appendChild(element('span', '', calendar.length ? calendar[0].date + ' — ' + calendar[calendar.length - 1].date : '最近一年'));
     panel.appendChild(heading);
     var scroll = element('div', 'github-calendar-scroll');
     var grid = element('div', 'github-calendar-grid');
@@ -81,19 +81,19 @@
     scroll.appendChild(grid);
     panel.appendChild(scroll);
     var legend = element('div', 'github-calendar-legend');
-    legend.appendChild(element('span', '', 'less'));
+    legend.appendChild(element('span', '', '少'));
     for (var level = 0; level <= 4; level += 1) {
       var sample = element('i');
       sample.setAttribute('data-level', String(level));
       legend.appendChild(sample);
     }
-    legend.appendChild(element('span', '', 'more'));
+    legend.appendChild(element('span', '', '多'));
     panel.appendChild(legend);
     return panel;
   }
   function renderRepositories(data) {
     var section = element('section', 'github-repositories');
-    section.appendChild(element('h3', '', 'Recently tended repositories'));
+    section.appendChild(element('h3', '', '最近维护的仓库'));
     var list = element('div', 'github-repo-list');
     (Array.isArray(data.repositories) ? data.repositories : []).slice(0, 4).forEach(function (repo) {
       var card = element('article', 'github-repo-card');
@@ -111,13 +111,13 @@
   }
   function createSiteHealth(data) {
     var bar = element('aside', 'site-health');
-    bar.appendChild(element('span', 'site-health-label', 'archive pulse →'));
-    var status = element('span', 'site-health-state', data.status === 'passing' ? 'site healthy' : 'site degraded');
+    bar.appendChild(element('span', 'site-health-label', '档案馆运行 →'));
+    var status = element('span', 'site-health-state', data.status === 'passing' ? '运行正常' : '部分异常');
     status.setAttribute('data-state', data.status === 'passing' ? 'passing' : 'degraded');
     bar.appendChild(status);
-    bar.appendChild(element('span', '', number(data.content && data.content.blogArticles) + ' articles'));
-    bar.appendChild(element('span', '', number(data.content && data.content.wikiPages) + ' wiki pages'));
-    bar.appendChild(element('span', '', String(data.quality && data.quality.result || 'checks unavailable')));
+    bar.appendChild(element('span', '', number(data.content && data.content.blogArticles) + ' 篇随笔'));
+    bar.appendChild(element('span', '', number(data.content && data.content.wikiPages) + ' 篇知识笔记'));
+    bar.appendChild(element('span', '', String(data.quality && data.quality.result || '检查数据暂不可用')));
     return bar;
   }
   function renderGitHub(container, data, siteData) {
@@ -125,17 +125,17 @@
     var poster = element('article', 'github-poster');
     var hero = element('header', 'github-poster-hero');
     var titleGroup = element('div');
-    titleGroup.appendChild(element('p', 'github-kicker', 'PUBLIC WORK / LATEST YEAR'));
-    titleGroup.appendChild(element('h2', '', 'GitHub, by the numbers.'));
-    titleGroup.appendChild(element('p', 'github-poster-note', 'A small field log of commits, experiments, and repositories.'));
+    titleGroup.appendChild(element('p', 'github-kicker', '公开实践 / 最近一年'));
+    titleGroup.appendChild(element('h2', '', 'GitHub 活动'));
+    titleGroup.appendChild(element('p', 'github-poster-note', '记录代码提交、实验，以及最近维护的项目。'));
     hero.appendChild(titleGroup);
     hero.appendChild(safeGitHubLink(data.profile && data.profile.url, '@' + String(data.profile && data.profile.login || 'Jingtine') + ' ↗', 'github-profile-link'));
     poster.appendChild(hero);
     var numbers = element('div', 'github-number-field');
-    addStat(numbers, 'contributions', data.summary && data.summary.totalContributions, 'contributions');
-    addStat(numbers, 'repositories', data.profile && data.profile.publicRepos, 'public repos');
-    addStat(numbers, 'stars', data.summary && data.summary.stars, 'stars received');
-    addStat(numbers, 'active-days', data.summary && data.summary.activeDays, 'active days');
+    addStat(numbers, 'contributions', data.summary && data.summary.totalContributions, '贡献');
+    addStat(numbers, 'repositories', data.profile && data.profile.publicRepos, '公开仓库');
+    addStat(numbers, 'stars', data.summary && data.summary.stars, '获得的星标');
+    addStat(numbers, 'active-days', data.summary && data.summary.activeDays, '活跃天数');
     poster.appendChild(numbers);
     poster.appendChild(renderMonthly(data));
     poster.appendChild(renderCalendar(data));
@@ -147,7 +147,7 @@
   function loadStatus() {
     var container = document.getElementById('status-dashboard');
     container.textContent = '';
-    container.appendChild(element('p', 'status-loading', 'Loading status...'));
+    container.appendChild(element('p', 'status-loading', '正在加载近况…'));
     fetchJSON('public/data/status.json').then(function (siteData) {
       if (!siteData || !siteData.build || !siteData.content || !siteData.quality) {
         container.textContent = '暂无完整状态数据。';
@@ -158,7 +158,7 @@
         renderGitHub(container, githubData, siteData);
       }).catch(function () {
         container.textContent = '';
-        container.appendChild(element('h2', 'status-section-title', 'GitHub activity'));
+        container.appendChild(element('h2', 'status-section-title', 'GitHub 活动'));
         container.appendChild(element('p', 'github-unavailable', 'GitHub 数据暂时不可用。'));
         container.appendChild(createSiteHealth(siteData));
       });

@@ -17,7 +17,7 @@
 | 其余 12 个根目录 HTML | 一致的九链接导航、当前页标记、跳转正文、main 地标、资源版本；About 双栏、Projects 详情锚点、工具表单标签 |
 | `js/nav.js` | 非模态菜单、Escape 关闭与焦点返回、1200px 断点；无 JS 时静态链接可用 |
 | `js/site-motion.js` | 保留原渲染器调用接口，内容默认可见，移除持续装饰动画 |
-| `js/blog.js` | 原排序和 Markdown 入口保留；文章列表改为 DOM 安全构造 |
+| `js/writing.js` / `js/article-page.js` | 随笔列表与 Markdown 详情入口；文章列表与正文均采用 DOM 安全构造 |
 | `js/reading.js` | 博客/Wiki 共用折叠目录、单一主 H1、代码/表格滚动与键盘焦点；Wiki 目录滚动保留其路由 hash |
 | `js/wiki.js` | 键盘打开条目、读取增强、空筛选清除与失败重试 |
 | `js/assistant.js` | 知识库加载/失败/空输入反馈、重试、来源真实链接；保留 TOP_K=5 与评分/摘录算法 |
@@ -68,7 +68,7 @@
 
 `articles/`、`content/`、`config/`、`public/data/`、`scripts/`、`feed.xml`、`subscriptions.opml`、部署工作流与依赖清单全部无 diff。未刷新远程数据，未改 JSON 字段，未新增或清除存储键。未引入前端框架、打包器、生产服务或第三方跟踪。
 
-配色和字体在 `styles.css` 顶部 `:root`；首页精选项目与简介在 `index.html`；完整项目在 `projects.html`；最新文章来自 `articles/index.json`，由 `js/home.js` 限制为三条。中文衬线标题使用系统回退字体，不请求字体 CDN。
+配色和字体在 `styles.css` 顶部 `:root`；首页精选项目与简介在 `index.html`；完整项目在 `projects.html`；最新文章来自 `public/data/articles.json`，由 `js/home.js` 限制为三条。中文衬线标题使用系统回退字体，不请求字体 CDN。
 
 ## 资源、限制与回退
 

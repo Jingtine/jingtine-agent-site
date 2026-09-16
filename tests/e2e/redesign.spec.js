@@ -1,39 +1,18 @@
 const {test, expect} = require('@playwright/test');
 const routes=['index','about','projects','blog','papers','wiki','reader','assistant','status','contact','knowledge','library','article'];
-test('homepage uses varied paper accents and hand-drawn editorial details',async({page})=>{
-  await page.goto('/index.html');
-  const backgrounds=await page.locator('.panel-profile,.panel-projects,.panel-posts,.panel-research,.panel-wiki,.panel-reader,.panel-tools').evaluateAll(els=>els.map(el=>getComputedStyle(el).backgroundColor));
-  expect(new Set(backgrounds).size).toBeGreaterThanOrEqual(5);
-  const details=await page.locator('.panel-posts,.panel-wiki,.panel-reader').evaluateAll(els=>els.map(el=>getComputedStyle(el,'::before').content));
-  expect(details.every(content=>content && content!=='none')).toBe(true);
-  const topOffsets=await page.locator('.panel-projects,.panel-posts').evaluateAll(els=>els.map(el=>el.getBoundingClientRect().top));
-  expect(Math.abs(topOffsets[0]-topOffsets[1])).toBeGreaterThanOrEqual(10);
-});
-test('small editorial labels retain readable contrast on colored paper',async({page})=>{
-  await page.goto('/index.html');
-  const ratio=await page.locator('.panel-wiki .panel-number').evaluate(el=>{
-    const parse=value=>value.match(/\d+/g).slice(0,3).map(Number);
-    const luminance=rgb=>rgb.map(value=>value/255).map(value=>value<=.04045?value/12.92:Math.pow((value+.055)/1.055,2.4)).reduce((sum,value,index)=>sum+value*[.2126,.7152,.0722][index],0);
-    const fg=luminance(parse(getComputedStyle(el).color));
-    const bg=luminance(parse(getComputedStyle(el.closest('.paper-panel')).backgroundColor));
-    return (Math.max(fg,bg)+.05)/(Math.min(fg,bg)+.05);
-  });
-  expect(ratio).toBeGreaterThanOrEqual(4.5);
-});
-test('About reads as a layered personal dossier',async({page})=>{
+test('About reads as a personal introduction with one education program',async({page})=>{
   await page.goto('/about.html');
   await expect(page.locator('.about-dossier')).toBeVisible();
   await expect(page.locator('.about-portrait img')).toHaveAttribute('src','assets/images/figure.jpg');
-  await expect(page.locator('.about-study-card')).toHaveCount(2);
+  await expect(page.locator('.about-study-card')).toHaveCount(1);
   await expect(page.locator('.about-capability-row')).toHaveCount(3);
   await expect(page.locator('.about-contact-strip a[href^="mailto:"]')).toBeVisible();
-  const backgrounds=await page.locator('.about-dossier-copy,.about-portrait,.about-study-card').evaluateAll(items=>items.map(item=>getComputedStyle(item).backgroundColor));
-  expect(new Set(backgrounds).size).toBeGreaterThanOrEqual(3);
+  await expect(page.locator('.about-stamp,.about-tape,.about-page .panel-number,.about-capability-number')).toHaveCount(0);
 });
 test('education summary stays concise while the dossier keeps program detail',async({page})=>{
   await page.goto('/index.html');
-  await expect(page.locator('.panel-profile p')).toContainText('南京大学商学院');
-  await expect(page.locator('.panel-profile p')).not.toContainText('软件工程与工商管理双学位班');
+  await expect(page.locator('.home-education')).toContainText('南京大学商学院');
+  await expect(page.locator('.home-education')).not.toContainText('软件工程与工商管理双学位班');
   await page.goto('/about.html');
   await expect(page.locator('.about-lead')).toHaveText('南京大学商学院软件工程（软工商业创新班）在读。');
   await expect(page.locator('.about-study')).toContainText('软件工程与工商管理双学位班');
@@ -45,7 +24,7 @@ test('social icons live below the sidebar while no-JS footer links remain availa
   await expect(links.first()).toHaveClass(/footer-icon-link/);
   await expect(links.first().locator('svg')).toHaveCount(1);
   await expect(links.first()).toHaveAttribute('aria-label','GitHub');
-  await expect(page.locator('.nav-links a')).toHaveCount(8);
+  await expect(page.locator('.nav-links a')).toHaveCount(10);
   await expect(page.locator('.nav-links a',{hasText:'Status'})).toHaveCount(0);
   await expect(page.locator('.footer .footer-links')).toHaveCount(0);
   await expect(page.locator('.nav-social-links a[aria-label="Status"]')).toHaveAttribute('href','status.html');
@@ -61,7 +40,7 @@ test('social icons live below the sidebar while no-JS footer links remain availa
   const fallback=await context.newPage();
   await fallback.goto('/index.html');
   await expect(fallback.locator('.footer-links')).toContainText('GitHub');
-  await expect(fallback.locator('#nav-links a')).toHaveCount(8);
+  await expect(fallback.locator('#nav-links a')).toHaveCount(10);
   await context.close();
 });
 test('failed Wiki navigation does not retain previous article TOC',async({page})=>{
@@ -99,7 +78,7 @@ test('reading TOC, keyboard Wiki, wide content and no-JS navigation',async({page
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   const context=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:800}});
   const fallback=await context.newPage();await fallback.goto('/index.html');
-  await expect(fallback.locator('#nav-links a')).toHaveCount(8);
+  await expect(fallback.locator('#nav-links a')).toHaveCount(10);
   await expect(fallback.locator('#nav-links a').last()).toBeVisible();
   await context.close();
   await page.goto('/wiki.html');
@@ -140,7 +119,14 @@ test('Status presents public GitHub activity and safe repository links',async({p
     repositories:[{name:'jingtine-agent-site',url:'https://github.com/Jingtine/jingtine-agent-site',description:'Personal knowledge archive',stars:7,forks:2,language:'JavaScript',updatedAt:'2026-09-09T00:00:00Z'}]
   }}));
   await page.goto('/status.html');
-  await expect(page.getByRole('heading',{name:'GitHub, by the numbers.'})).toBeVisible();
+  await expect(page.locator('h1')).toHaveText('近况 / Status');
+  await expect(page.locator('.page-header > p')).toHaveText('公开的 GitHub 活动，以及这座档案馆最近是否运转正常。');
+  for(const name of ['GitHub 活动','月度活动','每日活动','最近维护的仓库']) {
+    await expect(page.getByRole('heading',{name,exact:true})).toBeVisible();
+  }
+  for(const [key,label] of [['contributions','贡献'],['repositories','公开仓库'],['stars','获得的星标'],['active-days','活跃天数']]) {
+    await expect(page.locator(`[data-github-stat="${key}"] span`)).toHaveText(label);
+  }
   await expect(page.locator('[data-github-stat="repositories"]')).toContainText('12');
   await expect(page.locator('[data-github-stat="contributions"]')).toContainText('9');
   await expect(page.locator('.github-month-bar')).toHaveCount(2);
@@ -148,6 +134,59 @@ test('Status presents public GitHub activity and safe repository links',async({p
   const project=page.getByRole('link',{name:/jingtine-agent-site/});
   await expect(project).toHaveAttribute('href','https://github.com/Jingtine/jingtine-agent-site');
   await expect(project).toHaveAttribute('rel','noopener noreferrer');
+});
+
+test('Status treats repository metadata as text and rejects unsafe links',async({page})=>{
+  const data=require('../../public/data/github-stats.json');
+  const unsafeName='<img src=x onerror=alert(1)>';
+  await page.route('**/public/data/github-stats.json',route=>route.fulfill({json:{
+    ...data,
+    profile:{...data.profile,url:'javascript:alert(1)'},
+    repositories:['javascript:alert(1)','http://github.com/Jingtine/test','https://example.com/test'].map(url=>({
+      name:unsafeName,url,description:'<script>alert(1)</script>',stars:0,forks:0,language:'JavaScript'
+    }))
+  }}));
+  await page.goto('/status.html');
+  await expect(page.locator('.github-repo-name')).toHaveCount(3);
+  for(const link of await page.locator('.github-repo-name,.github-profile-link').all()) {
+    await expect(link).not.toHaveAttribute('href');
+  }
+  await expect(page.locator('.github-repo-name').first()).toHaveText(unsafeName+' ↗');
+  await expect(page.locator('.github-repo-card img,.github-repo-card script')).toHaveCount(0);
+});
+
+test('Status retains site health when GitHub data fails',async({page})=>{
+  await page.route('**/public/data/github-stats.json',route=>route.abort());
+  await page.goto('/status.html');
+  await expect(page.locator('.github-unavailable')).toHaveText('GitHub 数据暂时不可用。');
+  await expect(page.locator('.site-health')).toBeVisible();
+  await expect(page.locator('.site-health-state')).toHaveAttribute('data-state',/passing|degraded/);
+});
+
+test('Status repository cards stack on a narrow screen',async({page})=>{
+  const statusData={
+    build:{version:'test',generated:'2026-09-12 00:00'},
+    content:{blogArticles:0,wikiPages:0},
+    quality:{result:'test',passing:true},
+    status:'passing'
+  };
+  await page.route('**/public/data/status.json',route=>route.fulfill({json:statusData}));
+  await page.route('**/public/data/github-stats.json',route=>route.fulfill({json:{
+    profile:{login:'Jingtine',url:'https://github.com/Jingtine',publicRepos:2},
+    summary:{totalContributions:2,activeDays:1,stars:0},
+    months:[],calendar:[],
+    repositories:[
+      {name:'first-repository',url:'https://github.com/Jingtine/first-repository',description:'First fixed test repository',stars:0,forks:0,language:'JavaScript'},
+      {name:'second-repository',url:'https://github.com/Jingtine/second-repository',description:'Second fixed test repository',stars:0,forks:0,language:'Python'}
+    ]
+  }}));
+  await page.setViewportSize({width:390,height:900});
+  await page.goto('/status.html');
+  const cards=page.locator('.github-repo-card');
+  await expect(cards).toHaveCount(2);
+  const first=await cards.first().boundingBox();
+  const second=await cards.nth(1).boundingBox();
+  expect(second.y).toBeGreaterThanOrEqual(first.y+first.height);
 });
 for(const kind of ['empty','failure']) test(`Status and Reader ${kind} states`,async({page})=>{
   for(const [route,file,target] of [['status','status','#status-dashboard'],['reader','rss-items','#source-cards']]){
@@ -175,9 +214,9 @@ test('menu is accessible on mobile and tablet and Escape preserves unrelated foc
     await expect(toggle).toHaveAttribute('aria-expanded','false');
     await expect(page.locator('#nav-links')).toBeHidden();
     await toggle.click();
-    await expect(page.locator('#nav-links a')).toHaveCount(8);
+    await expect(page.locator('#nav-links a')).toHaveCount(10);
     await expect(page.locator('.nav-social-links')).toBeVisible();
-    await expect(page.locator('[aria-current="page"]')).toHaveText('Assistant');
+    await expect(page.locator('[aria-current="page"]')).toHaveText('问答助手');
     await page.keyboard.press('Escape');
     await expect(toggle).toBeFocused();
     await expect(page.locator('#nav-links')).toBeHidden();

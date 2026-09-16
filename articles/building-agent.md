@@ -1,3 +1,12 @@
++++
+title = "Building My First AI Agent"
+date = 2026-07-11
+kind = "technical"
+category = "ai-agent"
+tags = ["AI Agent", "实践"]
+summary = "从零构建一个自主 Agent 的实践记录与思考。"
+draft = false
++++
 # Building My First AI Agent
 
 记录我构建第一个自主 AI Agent 的过程。

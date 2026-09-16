@@ -13,9 +13,18 @@ const PAGES = [
   { name: 'reader', path: '/reader.html', title: 'Jingtine' },
   { name: 'assistant', path: '/assistant.html', title: 'Jingtine' },
   { name: 'status', path: '/status.html', title: 'Jingtine' },
+  { name: 'links', path: '/links.html', title: '不驚茶坊' },
+  { name: 'guestbook', path: '/guestbook.html', title: '不驚茶坊' },
 ];
 
-const NAV_ITEMS = ['Home', 'About', 'Projects', 'Blog', 'Research', 'Wiki', 'Reader', 'Assistant'];
+const LEGACY_PAGES = [
+  { name: 'article', path: '/article.html' },
+  { name: 'knowledge', path: '/knowledge.html' },
+  { name: 'library', path: '/library.html' },
+  { name: 'contact', path: '/contact.html' },
+];
+
+const ROOT_NAV_PAGES = [...PAGES, ...LEGACY_PAGES];
 
 /* ================================================================
    TC01 — 所有页面可正常访问 (F1)
@@ -36,7 +45,17 @@ test.describe('TC01 — 所有页面可正常访问', () => {
    ================================================================ */
 test('TC02 — 导航栏链接可跳转', async ({ page }) => {
   await page.goto('/index.html');
-  const navMap = { 'About': '/about.html', 'Projects': '/projects.html', 'Blog': '/blog.html', 'Research': '/papers.html', 'Wiki': '/wiki.html', 'Reader': '/reader.html', 'Assistant': '/assistant.html' };
+  const navMap = {
+    '关于': '/about.html',
+    '作品': '/projects.html',
+    '随笔': '/blog.html',
+    '研究': '/papers.html',
+    '知识库': '/wiki.html',
+    '订阅阅读': '/reader.html',
+    '问答助手': '/assistant.html',
+    '友链': '/links.html',
+    '留言簿': '/guestbook.html'
+  };
   for (const [label, expectedPath] of Object.entries(navMap)) {
     await page.click(`.nav-links a:has-text("${label}")`);
     await page.waitForLoadState('networkidle');
@@ -51,14 +70,16 @@ test('TC02 — 导航栏链接可跳转', async ({ page }) => {
    TC03 — 当前页面导航高亮与 aria-current (F1/F13)
    ================================================================ */
 const navActiveMap = {
-  '/index.html': 'Home',
-  '/about.html': 'About',
-  '/projects.html': 'Projects',
-  '/blog.html': 'Blog',
-  '/papers.html': 'Research',
-  '/wiki.html': 'Wiki',
-  '/reader.html': 'Reader',
-  '/assistant.html': 'Assistant',
+  '/index.html': '首页',
+  '/about.html': '关于',
+  '/projects.html': '作品',
+  '/blog.html': '随笔',
+  '/papers.html': '研究',
+  '/wiki.html': '知识库',
+  '/reader.html': '订阅阅读',
+  '/assistant.html': '问答助手',
+  '/links.html': '友链',
+  '/guestbook.html': '留言簿',
 };
 
 test.describe('TC03 — 导航高亮', () => {
@@ -73,25 +94,38 @@ test.describe('TC03 — 导航高亮', () => {
   }
 });
 
+test('TC01 legacy routes return 200', async ({ request }) => {
+  for (const legacyPage of LEGACY_PAGES) {
+    const res = await request.get(legacyPage.path);
+    expect(res.status()).toBe(200);
+  }
+});
+
+test('navigation exposes the visitor group on every root page', async ({ page }) => {
+  for (const sitePage of ROOT_NAV_PAGES) {
+    await page.goto(sitePage.path);
+    const links = page.locator('#nav-links');
+    await expect(links.locator('.nav-group-label').last()).toHaveText('来坐坐');
+    const directoryLink = links.locator('a[href="links.html"]').last();
+    await expect(directoryLink).toHaveText('友链');
+    await expect(directoryLink).toBeVisible();
+    const guestbookLink = links.locator('a[href="guestbook.html"]').last();
+    await expect(guestbookLink).toHaveText('留言簿');
+    await expect(guestbookLink).toBeVisible();
+  }
+});
+
 /* ================================================================
    TC04 — 首页个人信息完整性 (F2)
    ================================================================ */
 test('TC04 — 首页个人信息完整性', async ({ page }) => {
   await page.goto('/index.html');
-  // Title
   const title = await page.title();
-  expect(title).toContain('Jingtine');
-  // Name
-  await expect(page.locator('body')).toContainText('Jingtine');
-  // Avatar image
-  const avatar = page.locator('img[src*="figure.jpg"]').first();
-  await expect(avatar).toBeVisible();
-  const naturalWidth = await avatar.evaluate(img => img.naturalWidth);
-  expect(naturalWidth).toBeGreaterThan(0);
-  // Tags
-  await expect(page.locator('body')).toContainText('Software Engineering');
-  await expect(page.locator('body')).toContainText('AI Agent');
-  await expect(page.locator('body')).toContainText('Product Innovation');
+  expect(title).toBe('不驚茶坊 — Jingtine 的个人网站');
+  await expect(page.locator('h1')).toHaveText('你好，我是不驚醴。');
+  await expect(page.locator('.home-now')).toContainText('南京大学商学院软件工程（软工商业创新班）在读。');
+  await expect(page.locator('main > section')).toHaveCount(4);
+  await expect(page.locator('.home-making')).toContainText('NoteWhale');
   // Email in the sidebar shortcut row
   const emailLink = page.locator('.nav-social-links a[href*="mailto:"]');
   await expect(emailLink).toBeVisible();
@@ -101,11 +135,11 @@ test('TC04 — 首页个人信息完整性', async ({ page }) => {
    TC05 — 博客文章列表渲染 (F4)
    ================================================================ */
 test('TC05 — 博客文章列表渲染', async ({ page }) => {
+  const articles = await (await page.request.get('/public/data/articles.json')).json();
+  expect(articles.length).toBeGreaterThan(0);
   await page.goto('/blog.html');
-  await page.waitForSelector('.article-card', { timeout: 5000 });
   const cards = page.locator('.article-card');
-  const count = await cards.count();
-  expect(count).toBeGreaterThanOrEqual(9);
+  await expect(cards).toHaveCount(articles.length);
   const firstCard = cards.first();
   await expect(firstCard.locator('.article-category')).toBeVisible();
   await expect(firstCard.locator('.article-date')).toBeVisible();
@@ -119,6 +153,7 @@ test('TC06 — 博客文章详情页', async ({ page }) => {
   await page.goto('/article.html?slug=hello-world');
   await page.waitForSelector('.article-detail', { timeout: 5000 });
   await expect(page.locator('.article-detail')).toBeVisible();
+  await expect(page.locator('#article-body')).toHaveAttribute('aria-busy', 'false');
   const text = await page.locator('.article-detail').textContent();
   expect(text.length).toBeGreaterThan(50);
 });
@@ -183,7 +218,8 @@ test('TC09 — RSS item 字段完整性', async ({ page }) => {
     return { count: items.length, issues };
   }, xmlText);
   expect(result.error).toBeUndefined();
-  expect(result.count).toBeGreaterThanOrEqual(9);
+  const articles = await (await page.request.get('/public/data/articles.json')).json();
+  expect(result.count).toBe(articles.length);
   expect(result.issues).toEqual([]);
 });
 
@@ -355,15 +391,115 @@ test('TC18 — 导航栏在所有页面中结构一致', async ({ page }) => {
    TC19 — 文章数量与渲染一致性 (F4 边界)
    ================================================================ */
 test('TC19 — 文章数量与渲染一致性', async ({ page }) => {
-  const resp = await page.request.get('/articles/index.json');
-  const indexData = await resp.json();
-  // index.json is a bare array of articles
-  const articles = Array.isArray(indexData) ? indexData : (indexData.articles || indexData.items || []);
+  const response = await page.request.get('/public/data/articles.json');
+  expect(response.status()).toBe(200);
+  const articles = await response.json();
+  expect(Array.isArray(articles)).toBe(true);
   const expectedCount = articles.length;
   await page.goto('/blog.html');
   await page.waitForSelector('.article-card', { timeout: 5000 });
   const cardCount = await page.locator('.article-card').count();
   expect(cardCount).toBe(expectedCount);
+});
+
+test('TC19 生成文章数据模块读取索引和写作配置', async ({ page }) => {
+  const articles = await (await page.request.get('/public/data/articles.json')).json();
+  const config = await (await page.request.get('/config/writing.json')).json();
+  expect(articles.length).toBeGreaterThan(0);
+  const fields = ['slug', 'title', 'date', 'kind', 'category', 'tags', 'summary', 'cover', 'coverAlt', 'wordCount', 'readingMinutes'].sort();
+  expect(new Set(articles.map(article => article.slug)).size).toBe(articles.length);
+  for (const article of articles) {
+    expect(Object.keys(article).sort()).toEqual(fields);
+    expect(article.slug).toEqual(expect.any(String));
+    expect(article.date).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    expect(['essay', 'note', 'technical']).toContain(article.kind);
+    expect(Array.isArray(article.tags)).toBe(true);
+    expect(Number.isInteger(article.wordCount)).toBe(true);
+    expect(article.wordCount).toBeGreaterThanOrEqual(0);
+    expect(Number.isInteger(article.readingMinutes)).toBe(true);
+    expect(article.readingMinutes).toBeGreaterThanOrEqual(1);
+  }
+  expect(articles.map(article => article.date)).toEqual(articles.map(article => article.date).sort().reverse());
+  for (let index = 1; index < articles.length; index += 1) {
+    if (articles[index - 1].date === articles[index].date) {
+      // Compare Unicode code points, matching Python's stable slug ordering.
+      const previous = Array.from(articles[index - 1].slug, char => char.codePointAt(0));
+      const current = Array.from(articles[index].slug, char => char.codePointAt(0));
+      const differing = previous.findIndex((point, offset) => point !== current[offset]);
+      expect(differing < 0 ? previous.length < current.length : previous[differing] < (current[differing] ?? -1)).toBe(true);
+    }
+  }
+  await page.goto('/index.html');
+  const result = await page.evaluate(async () => ({
+    articles: await window.ArticleData.load(),
+    config: await window.ArticleData.loadConfig(),
+    date: window.ArticleData.formatDate('2026-02-28'),
+    invalidDate: window.ArticleData.formatDate('2026-02-29'),
+    href: window.ArticleData.articleHref('hello world/测试'),
+  }));
+  expect(result).toEqual({
+    articles,
+    config,
+    date: '2026-02-28',
+    invalidDate: '',
+    href: 'article.html?slug=hello%20world%2F%E6%B5%8B%E8%AF%95',
+  });
+});
+
+test('TC19 旧索引返回 404 且博客只读取生成文章', async ({ page }) => {
+  const response = await page.request.get('/articles/index.json');
+  expect(response.status()).toBe(404);
+  const articles = await (await page.request.get('/public/data/articles.json')).json();
+  const oldRequests = [];
+  page.on('request', request => {
+    if (new URL(request.url()).pathname === '/articles/index.json') oldRequests.push(request.url());
+  });
+  await page.goto('/blog.html');
+  await expect(page.locator('.article-card')).toHaveCount(articles.length);
+  expect(oldRequests).toEqual([]);
+});
+
+// Published URL compatibility is intentionally a fixed historical contract.
+for (const slug of ['hello-world', 'building-agent', 'why-se-matters', 'product-thinking-101',
+  'notewhale-why-started', 'building-digital-garden', 'opencode-superpowers-workflow',
+  'github-pages-dev-notes', 'from-ui-to-product']) {
+  test(`TC19 published article URL remains readable: ${slug}`, async ({ page }) => {
+    const errors = [];
+    page.on('pageerror', error => errors.push(error.message));
+    const response = await page.goto(`/article.html?slug=${slug}`);
+    expect(response.status()).toBe(200);
+    await expect(page.locator('#article-body')).toHaveAttribute('aria-busy', 'false');
+    await expect(page.locator('#article-body')).not.toHaveAttribute('role', 'alert');
+    await expect(page.locator('#article-body h2').first()).toBeVisible();
+    expect((await page.locator('#article-body').innerText()).trim().length).toBeGreaterThan(50);
+    expect(errors).toEqual([]);
+  });
+}
+
+test('TC19 首页在生成文章索引第一次失败后可重试', async ({ page }) => {
+  const response = await page.request.get('/public/data/articles.json');
+  const articles = await response.json();
+  let generatedIndexRequests = 0;
+
+  await page.route('**/public/data/articles.json', async route => {
+    generatedIndexRequests += 1;
+    if (generatedIndexRequests === 1) {
+      await route.fulfill({ status: 500, body: 'temporary failure' });
+      return;
+    }
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify(articles),
+    });
+  });
+
+  await page.goto('/index.html');
+  const retry = page.locator('#latest-posts button:has-text("重试")');
+  await expect(retry).toBeVisible();
+  await retry.click();
+  await expect(page.locator('#latest-posts .article-card')).toHaveCount(Math.min(3, articles.length));
+  expect(generatedIndexRequests).toBe(2);
 });
 
 /* ================================================================
@@ -414,7 +550,7 @@ test.describe('TC21 — 移动端汉堡菜单', () => {
     await expect(page.locator('html')).not.toHaveClass(/nav-open/);
 
     await toggle.click();
-    await page.locator('#nav-links a:has-text("Blog")').click();
+    await page.locator('#nav-links a:has-text("随笔")').click();
     await page.waitForLoadState('networkidle');
     const url = new URL(page.url());
     expect(url.pathname).toBe('/blog.html');
@@ -426,7 +562,7 @@ test.describe('TC21 — 移动端汉堡菜单', () => {
     const toggle = page.locator('.nav-toggle');
     await toggle.click();
     await expect(page.locator('html')).toHaveClass(/nav-open/);
-    await page.mouse.click(180, 600);
+    await page.locator('main').click({ position: { x: 10, y: 10 } });
     await expect(page.locator('html')).not.toHaveClass(/nav-open/);
     const urlAfterOutside = new URL(page.url());
     expect(urlAfterOutside.pathname).toBe('/index.html');
@@ -457,7 +593,7 @@ test.describe('TC22 — 375px 全页面无横向溢出', () => {
     '/index.html', '/about.html', '/projects.html', '/blog.html',
     '/papers.html', '/wiki.html', '/reader.html', '/assistant.html',
     '/status.html', '/article.html?slug=hello-world', '/knowledge.html',
-    '/library.html', '/contact.html',
+    '/library.html', '/contact.html', '/links.html', '/guestbook.html',
   ];
   for (const path of paths) {
     test(`TC22 ${path} 375px 无溢出`, async ({ browser }) => {

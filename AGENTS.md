@@ -26,7 +26,7 @@ Markdown 博客、数字花园 Wiki、arXiv 论文库、RSS 阅读器、站内�
 ### 内容与数据脚本
 
 - 仓库自动化及数据生成脚本统一放在 `scripts/`。
-- 脚本必须使用 Python 3，并且只能依赖标准库。
+- 脚本必须使用 Python 3.11 或更新版本，并且只能依赖标准库。
 - 不得添加第三方 pip 依赖。
 - 脚本成功时退出码为 0，失败时退出码为 1。
 - 简洁的执行摘要输出到 stdout，可操作的错误信息输出到 stderr。
@@ -47,7 +47,7 @@ my-agent-site/
 ├── *.html               静态页面与应用入口
 ├── styles.css           全站共享样式表
 ├── js/                  浏览器逻辑及 vendored marked.min.js
-├── articles/            博客 Markdown 与 index.json 元数据
+├── articles/            博客 Markdown（含 TOML front matter）
 ├── content/wiki/        按主题组织的 Wiki Markdown
 ├── content/templates/   内容写作模板
 ├── config/              RSS 白名单、订阅源及论文主题配置
@@ -64,16 +64,20 @@ my-agent-site/
 
 必须明确区分人工维护的源内容和脚本生成的输出：
 
-- 博客源内容：`articles/*.md` 和 `articles/index.json`。
+- 博客源内容：`articles/*.md`（文件开头的 TOML front matter 与正文）。
+- 写作配置：`config/writing.json`（精选文章、分类和文章类型的显示名称）。
 - Wiki 源内容：`content/wiki/**/*.md`。
 - RSS 配置：`config/feeds.json` 和 `config/allowlist.json`。
 - 论文配置：`config/papers.json`。
-- 生成输出：`feed.xml`、`subscriptions.opml` 以及 `public/data/` 下的文件。
+- 友链配置：`config/links.json`。
+- 评论配置：`config/comments.json`（人工维护的 GitHub Discussions/Giscus 公开集成配置）。
+- 文章生成输出：`public/data/articles.json` 和 `feed.xml`，由 `python scripts/build_articles.py` 生成；禁止手工编辑文章索引。
+- 其他生成输出：`subscriptions.opml` 以及 `public/data/` 下的文件。
 
 修改时应先更新源内容或配置，再运行对应生成脚本。除非任务明确涉及生成器的
 预期输出或测试固件，否则不要手工编辑生成文件。
 
-GitHub Actions 每晚刷新 RSS、arXiv 论文、状态数据和 OPML 导出。工作流提交的
+GitHub Actions 使用 Python 3.11，每晚构建文章索引与 Feed，并刷新 RSS、arXiv 论文、状态数据和 OPML 导出。工作流提交的
 生成数据必须具有足够的确定性，确保可以通过普通 Git diff 审查。
 
 ## 浏览器安全规则
@@ -89,6 +93,7 @@ GitHub Actions 每晚刷新 RSS、arXiv 论文、状态数据和 OPML 导出。�
 5. HTML 中不得添加 `onclick`、`onload` 等内联事件处理器；应在 JavaScript 中
    使用 `addEventListener` 注册事件。
 6. 禁止使用 `javascript:` URL，以及不安全的动态脚本或样式注入。
+7. `config/links.json` 是人工维护的源；其中的外部 URL 必须使用 HTTPS，配置文本按不可信数据用 `textContent` 渲染，头像只能引用 `assets/images/` 下不可逃逸的本地文件。
 
 ## GitHub Pages 路径规则
 
@@ -125,10 +130,15 @@ GitHub Actions 每晚刷新 RSS、arXiv 论文、状态数据和 OPML 导出。�
   `subscriptions.opml` 中。
 - 订阅源 ID 必须保持稳定，因为生成数据和界面筛选可能引用这些 ID。
 - 所有远程订阅源 URL 必须使用 HTTPS。
+- `config/comments.json` 是人工维护的公开源，只能保存启用状态、仓库、Discussion 分类及其公开 ID、主题和语言；不得写入令牌、Cookie、邮箱或机器路径。Giscus 客户端地址固定为 `https://giscus.app/client.js`，不得由配置覆盖。本站代码不得创建或管理会话、凭据、邮箱或 IP 数据；不要把 Giscus 可能自行管理的浏览器 OAuth `giscus-session` 值描述为本站会话状态。
 
 ## 本地验证
 
-每次提交前都必须运行基于 Python 标准库的质量检查：
+文章修改后先运行 `python scripts/build_articles.py`，提交 Markdown 源文件与两个生成输出。
+作者模板为 `content/templates/article-template.md`。`draft=true` 仅控制公开索引与 Feed，
+不能隐藏公开仓库或静态服务器上的 Markdown；不要写入秘密。
+
+每次提交前都必须运行基于 Python 3.11+ 标准库的质量检查：
 
 ```powershell
 python scripts/check.py
@@ -138,10 +148,10 @@ python scripts/check.py
 Python 3 可执行文件，例如：
 
 ```powershell
-py -3 scripts/check.py
+py -3.11 scripts/check.py
 ```
 
-检查范围包括：必要页面、内部链接、RSS 与 OPML 解析、文章与 Feed 数量一致性、
+检查范围包括：必要页面、内部链接、RSS 与 OPML 解析、文章源文件与生成索引精确一致性、写作配置、封面与 Feed 数量一致性、
 生成 JSON 的结构、RSS HTTPS 链接、论文评分、Wiki 元数据与路由、博客和 Wiki
 关联关系、知识助手数据及状态数据。合并前要求退出码为 0。
 

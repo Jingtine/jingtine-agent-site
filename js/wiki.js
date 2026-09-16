@@ -345,24 +345,10 @@
   }
 
   // ── Related Blog Articles ───────────────────────────
-  var articleIndexCache = null;
-  var articleIndexLoaded = false;
-
   function loadArticleIndex() {
-    if (articleIndexLoaded) return Promise.resolve(articleIndexCache);
-    articleIndexLoaded = true;
-    return fetch('articles/index.json')
-      .then(function (res) {
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        return res.json();
-      })
-      .then(function (articles) {
-        articleIndexCache = articles;
-        return articles;
-      })
+    return ArticleData.load()
       .catch(function (err) {
-        console.warn('Failed to load articles/index.json:', err.message);
-        articleIndexCache = [];
+        console.warn('Failed to load generated article index:', err.message);
         return [];
       });
   }
@@ -393,7 +379,13 @@
   }
 
   function loadRelatedArticles(targetPage, detailContainer) {
-    loadArticleIndex().then(function (articles) {
+    Promise.all([
+      loadArticleIndex(),
+      ArticleData.loadConfig().catch(function () { return {}; })
+    ]).then(function (values) {
+      var articles = values[0];
+      var config = values[1];
+      var categories = config && typeof config.categories === 'object' ? config.categories : {};
       if (!articles || articles.length === 0) return;
 
       var promises = articles.map(function (article) {
@@ -429,7 +421,7 @@
         list.className = 'article-list';
 
         for (var i = 0; i < related.length; i++) {
-          list.appendChild(createRelatedCard(related[i]));
+          list.appendChild(createRelatedCard(related[i], categories));
         }
 
         section.appendChild(list);
@@ -444,21 +436,23 @@
     });
   }
 
-  function createRelatedCard(article) {
+  function createRelatedCard(article, categories) {
     var card = document.createElement('a');
     card.className = 'article-card';
-    card.href = 'article.html?slug=' + encodeURIComponent(article.slug);
+    card.href = ArticleData.articleHref(article.slug);
 
     var header = document.createElement('div');
     header.className = 'article-card-header';
 
     var cat = document.createElement('span');
     cat.className = 'article-category';
-    cat.textContent = (typeof CATEGORY_MAP !== 'undefined' && CATEGORY_MAP[article.category]) || article.category || '';
+    cat.textContent = categories && Object.prototype.hasOwnProperty.call(categories, article.category)
+      && typeof categories[article.category] === 'string' && categories[article.category]
+      ? categories[article.category] : article.category || '';
 
     var date = document.createElement('span');
     date.className = 'article-date';
-    date.textContent = (typeof formatDate !== 'undefined') ? formatDate(article.date) : article.date;
+    date.textContent = ArticleData.formatDate(article.date);
 
     header.appendChild(cat);
     header.appendChild(date);
