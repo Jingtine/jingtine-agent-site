@@ -30,6 +30,65 @@ test('site filters fix only exact theme 404 and iconfont URLs', async () => {
   assert.equal(filters.get('after_render:css')('@font-face{src:url("//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2")}'), '@font-face{src:url("https://at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2")}');
 });
 
+test('cloud_tags emits palette chips with stable colors and escaped names', async () => {
+  const registered = new Map();
+  const helpers = new Map();
+  const collection = [
+    { name: 'AI Agent', path: 'tags/AI-Agent/', length: 2 },
+    { name: 'AI', path: 'tags/AI/', length: 1 },
+    { name: '设计', path: 'tags/%E8%AE%BE%E8%AE%A1/', length: 1 },
+    { name: '<script>', path: 'tags/script/', length: 1 },
+  ];
+  collection.random = function () {
+    const items = [...this];
+    return this.shuffled ? items.reverse() : items;
+  };
+  vm.runInNewContext(await readFile('scripts/tags.js', 'utf8'), {
+    hexo: {
+      config: { root: '/jingtine-agent-site/' },
+      theme: { config: { icon_font: '4552607_ex15nbittbh' } },
+      locals: { get: () => collection },
+      extend: {
+        tag: { register(name, handler) { registered.set(name, handler); } },
+        helper: {
+          register(name, handler) { helpers.set(name, handler); },
+          get(name) { return helpers.get(name); },
+        },
+        filter: { register() {} },
+      },
+    },
+  });
+  helpers.set('url_for', path => `/jingtine-agent-site/${path}`);
+  const render = registered.get('cloud_tags');
+  assert.equal(typeof render, 'function');
+
+  const parse = html => [...html.matchAll(/<a href="([^"]+)" class="tag-cloud-item" style="font-size: ([^;]+); background-color: (#[0-9a-f]{6});">([^<]*)<\/a>/g)]
+    .map(match => ({ href: match[1], fontSize: match[2], color: match[3], name: match[4] }));
+  const palette = ['#6d4fc4', '#3b6fc9', '#2f7d7a', '#b23a7a', '#b5542f', '#3f7f4f', '#5a5fc7', '#4a6b8a'];
+
+  const first = parse(render.call({}));
+  assert.equal(first.length, 4);
+  for (const chip of first) {
+    assert.ok(chip.href.startsWith('/jingtine-agent-site/tags/'), chip.href);
+    assert.ok(palette.includes(chip.color), chip.color);
+    assert.ok(['1.2em', '1.5em'].includes(chip.fontSize), chip.fontSize);
+  }
+  assert.equal(first.find(chip => chip.name === 'AI Agent').fontSize, '1.5em');
+  assert.equal(first.find(chip => chip.name === 'AI').fontSize, '1.2em');
+  assert.ok(first.some(chip => chip.name === '&lt;script&gt;'), 'tag names are escaped');
+
+  collection.shuffled = true;
+  const second = parse(render.call({}));
+  assert.notDeepEqual(first.map(chip => chip.name), second.map(chip => chip.name));
+  assert.deepEqual(
+    Object.fromEntries(first.map(chip => [chip.name, chip.color])),
+    Object.fromEntries(second.map(chip => [chip.name, chip.color])),
+  );
+
+  collection.length = 0;
+  assert.equal(render.call({}), '');
+});
+
 test('generates retained routes, nine posts, and an Atom feed', async () => {
   for (const route of ['index.html', 'archives/index.html', 'categories/index.html', 'tags/index.html', 'about/index.html', 'projects/index.html', 'friend/index.html', 'atom.xml']) {
     assert.equal(existsSync(`public/${route}`), true, route);
@@ -42,17 +101,21 @@ test('generates retained routes, nine posts, and an Atom feed', async () => {
   assert.match(feed, /https:\/\/jingtine\.github\.io\/jingtine-agent-site\/posts\//);
 });
 
-test('renders the tags page as a chip cloud', async () => {
+test('renders the tags page as a Butterfly-style cloud', async () => {
+  const palette = ['#6d4fc4', '#3b6fc9', '#2f7d7a', '#b23a7a', '#b5542f', '#3f7f4f', '#5a5fc7', '#4a6b8a'];
   const tags = await readFile('public/tags/index.html', 'utf8');
   const cloud = /<div class="tag-cloud-list">([\s\S]*?)<\/div>/.exec(tags);
   assert.ok(cloud, 'tag cloud container exists');
-  const chips = [...cloud[1].matchAll(/<a href="([^"]+)" style="font-size: [^"]*" class="tag-chip-(\d+)">/g)];
+  assert.doesNotMatch(cloud[1], /tag-chip-/);
+  const chips = [...cloud[1].matchAll(/<a href="([^"]+)" class="tag-cloud-item" style="font-size: ([^;]+); background-color: (#[0-9a-f]{6});">([^<]*)<\/a>/g)];
   assert.equal(chips.length, 16);
-  assert.equal(chips[0][2], '10', 'the most-used tag renders first with the hottest class');
-  for (const [, href] of chips) assert.ok(href.startsWith('/jingtine-agent-site/tags/'), href);
-  assert.match(cloud[1], /class="tag-chip-10"/);
-  assert.match(cloud[1], /class="tag-chip-0"/);
-  assert.doesNotMatch(cloud[1], /background-color/);
+  assert.equal(new Set(chips.map(chip => chip[4])).size, 16);
+  for (const [, href, fontSize, color] of chips) {
+    assert.ok(href.startsWith('/jingtine-agent-site/tags/'), href);
+    assert.ok(['1.2em', '1.5em'].includes(fontSize), fontSize);
+    assert.ok(palette.includes(color), color);
+  }
+  assert.ok(chips.some(chip => chip[2] === '1.5em'), 'the most-used tags render larger');
 });
 
 test('uses the default campus cover for lazy-loaded home cards', async () => {

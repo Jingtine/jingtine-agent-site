@@ -217,17 +217,18 @@ test('retained page and taxonomy navigation resolves without 404s', async ({ pag
   }
 });
 
-test('tags page renders a centered chip cloud with accessible focus states', async ({ page, isMobile }) => {
+test('tags page renders a Butterfly-style multicolor cloud', async ({ page, isMobile }) => {
+  const palette = ['#6d4fc4', '#3b6fc9', '#2f7d7a', '#b23a7a', '#b5542f', '#3f7f4f', '#5a5fc7', '#4a6b8a']
+    .map(hex => {
+      const value = parseInt(hex.slice(1), 16);
+      return `rgb(${value >> 16 & 255}, ${value >> 8 & 255}, ${value & 255})`;
+    });
   await page.goto('./tags/');
   const chips = page.locator('.tag-cloud-list a');
-  const cool = page.locator('.tag-cloud-list a.tag-chip-0').first();
-  const hot = page.locator('.tag-cloud-list a.tag-chip-10').first();
   await expect(chips).toHaveCount(16);
-  expect(await page.locator('.tag-cloud-list').evaluate(element => getComputedStyle(element).justifyContent)).toBe('center');
-  await expect(page.locator('.tag-cloud-list a.tag-chip-10')).toHaveCount(3);
   await expect(chips.first()).toHaveAttribute('href', new RegExp(`^${root}tags/`));
 
-  const coolStyle = await cool.evaluate(element => {
+  const styles = await chips.evaluateAll(elements => elements.map(element => {
     const css = getComputedStyle(element);
     const luminance = color => {
       const channels = color.match(/[\d.]+/g).slice(0, 3).map(Number).map(value => {
@@ -240,24 +241,23 @@ test('tags page renders a centered chip cloud with accessible focus states', asy
     const background = luminance(css.backgroundColor);
     return {
       radius: parseFloat(css.borderRadius),
+      color: css.color,
       background: css.backgroundColor,
       fontSize: parseFloat(css.fontSize),
-      after: getComputedStyle(element, '::after').content,
       contrast: (Math.max(foreground, background) + 0.05) / (Math.min(foreground, background) + 0.05),
+      after: getComputedStyle(element, '::after').content,
+      shine: getComputedStyle(element, '::before').backgroundImage,
     };
-  });
-  expect(coolStyle.radius).toBeGreaterThanOrEqual(20);
-  expect(coolStyle.background).not.toBe('rgba(0, 0, 0, 0)');
-  expect(coolStyle.after).toBe('none');
-  expect(coolStyle.contrast, 'cool chip contrast').toBeGreaterThanOrEqual(4.5);
-
-  const hotStyle = await hot.evaluate(element => {
-    const css = getComputedStyle(element);
-    return { backgroundImage: css.backgroundImage, fontSize: parseFloat(css.fontSize), color: css.color };
-  });
-  expect(hotStyle.backgroundImage).not.toBe('none');
-  expect(hotStyle.fontSize).toBeGreaterThan(coolStyle.fontSize);
-  expect(hotStyle.color).toBe('rgb(255, 255, 255)');
+  }));
+  for (const style of styles) {
+    expect(style.radius, `radius for ${style.background}`).toBe(7);
+    expect(style.color, `text color for ${style.background}`).toBe('rgb(255, 255, 255)');
+    expect(palette, `palette membership for ${style.background}`).toContain(style.background);
+    expect(style.contrast, `contrast for ${style.background}`).toBeGreaterThanOrEqual(4.5);
+    expect(style.after).toBe('none');
+    expect(style.shine).toContain('gradient');
+  }
+  expect(new Set(styles.map(style => style.fontSize)).size).toBe(2);
 
   // The enabled sidebar widgets push the first chip to tab stop 44 on desktop.
   const tabBudget = 60;
@@ -265,6 +265,8 @@ test('tags page renders a centered chip cloud with accessible focus states', asy
     await page.keyboard.press('Tab');
   }
   await expect(chips.first()).toBeFocused();
+  // `transition: all` animates the focus ring, so wait for it to settle first.
+  await expect.poll(() => chips.first().evaluate(element => parseFloat(getComputedStyle(element).outlineWidth))).toBeGreaterThanOrEqual(2);
   const outline = await chips.first().evaluate(element => ({
     style: getComputedStyle(element).outlineStyle,
     width: parseFloat(getComputedStyle(element).outlineWidth),
@@ -274,6 +276,15 @@ test('tags page renders a centered chip cloud with accessible focus states', asy
 
   if (isMobile) {
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    const scaled = await chips.first().evaluate(element => ({
+      zoom: getComputedStyle(document.querySelector('.tag-cloud-list')).zoom,
+      shine: getComputedStyle(element, '::before').display,
+    }));
+    expect(scaled.zoom).toBe('0.85');
+    expect(scaled.shine).toBe('none');
+  } else {
+    await chips.first().hover();
+    await expect.poll(() => chips.first().evaluate(element => getComputedStyle(element).filter)).toContain('brightness');
   }
 });
 
