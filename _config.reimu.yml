@@ -40,14 +40,12 @@ open_graph:
     default_og_image: https://jingtine.github.io/jingtine-agent-site/images/default-campus-cover.webp
 
 sidebar:
-  position: right
+  position: left
   menu: true
   article:
     show_common: true
 widgets:
   - recent_posts
-  - category
-  - tag
 toc: true
 toc_options:
   list_number: true

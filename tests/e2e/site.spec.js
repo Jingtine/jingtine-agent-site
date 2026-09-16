@@ -80,6 +80,18 @@ test('Home shows its identity, author avatar, nine cards and retained links', as
   await expect(sidebar.getByRole('link', { name: 'rss', exact: true })).toHaveAttribute('href', `${root}atom.xml`);
 });
 
+test('sidebar renders left without taxonomy cards', async ({ page, isMobile }) => {
+  await page.goto('./');
+  await expect(page.locator('#content')).toHaveClass(/sidebar-left/);
+  const titles = await page.locator('#sidebar .sidebar-widget .widget-title').allTextContents();
+  expect(titles.map(title => title.trim())).toEqual(['最新文章']);
+  if (!isMobile) {
+    const sidebarBox = await page.locator('#sidebar').boundingBox();
+    const mainBox = await page.locator('#main').boundingBox();
+    expect(sidebarBox.x).toBeLessThan(mainBox.x);
+  }
+});
+
 test('navigation excludes all retired experiences', async ({ page, isMobile }) => {
   await page.goto('./');
   const nav = await navigation(page, isMobile);

@@ -41,3 +41,14 @@ test('configures the sidebar contact links', async () => {
   const config = await read('_config.reimu.yml');
   assert.match(config, /social:\r?\n\s+github: https:\/\/github\.com\/jingtine\r?\n\s+email: mailto:jingtineli@smail\.nju\.edu\.cn\r?\n\s+rss: \/jingtine-agent-site\/atom\.xml/);
 });
+
+test('moves the sidebar left and drops the taxonomy cards', async () => {
+  const config = await read('_config.reimu.yml');
+  assert.match(config, /^sidebar:\r?\n\s+position: left$/m);
+  const widgets = /^widgets:\r?\n((?:\s+- .*\r?\n?)+)/m.exec(config);
+  assert.ok(widgets, 'the widgets list exists');
+  assert.deepEqual(
+    widgets[1].split(/\r?\n/).map(line => line.trim()).filter(Boolean),
+    ['- recent_posts'],
+  );
+});
