@@ -1,0 +1,99 @@
+theme_version_check: true
+theme_config_check: true
+
+menu:
+  - name: home
+    url: /
+    icon: false
+  - name: archives
+    url: /archives
+    icon: false
+  - name: categories
+    url: /categories
+    icon: false
+  - name: tags
+    url: /tags
+    icon: false
+  - name: 项目
+    url: /projects
+    icon: false
+  - name: about
+    url: /about
+    icon: false
+  - name: friend
+    url: /friend
+    icon: false
+
+avatar: avatar.jpg
+banner: /jingtine-agent-site/images/banner-placeholder.svg
+cover: /jingtine-agent-site/images/default-campus-cover.webp
+rss: atom.xml
+
+sidebar:
+  position: right
+  menu: true
+  article:
+    show_common: true
+widgets:
+  - recent_posts
+  - category
+  - tag
+toc: true
+toc_options:
+  list_number: true
+  min_depth: 2
+  max_depth: 4
+generator_search:
+  enable: true
+  field: post
+  content: true
+
+dark_mode:
+  button: true
+  type: auto
+animation:
+  enable: true
+pjax:
+  enable: true
+pace:
+  enable: true
+top:
+  enable: true
+  position: right
+firework:
+  enable: false
+live2d:
+  enable: false
+live2d_widgets:
+  enable: false
+reimu_cursor:
+  enable: false
+material_theme:
+  enable: false
+
+player:
+  position: before_sidebar
+  disable_on_mobile: true
+  aplayer:
+    enable: false
+    options:
+      audio: []
+  meting:
+    enable: false
+
+giscus:
+  enable: false
+waline:
+  enable: false
+valine:
+  enable: false
+twikoo:
+  enable: false
+gitalk:
+  enable: false
+disqus:
+  enable: false
+utterances:
+  enable: false
+beaudar:
+  enable: false

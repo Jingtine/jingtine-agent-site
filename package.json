@@ -1,0 +1,32 @@
+{
+  "name": "jingtine-agent-site",
+  "version": "2.0.0",
+  "private": true,
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "clean": "hexo clean",
+    "build": "hexo generate",
+    "server": "hexo server --port 8081",
+    "test:unit": "node --test tests/unit/*.test.mjs",
+    "test:e2e": "playwright test --config tests/playwright.config.js"
+  },
+  "hexo": {
+    "version": "8.1.2"
+  },
+  "dependencies": {
+    "hexo": "8.1.2",
+    "hexo-generator-archive": "2.0.0",
+    "hexo-generator-category": "2.0.0",
+    "hexo-generator-feed": "3.0.0",
+    "hexo-generator-index": "4.0.0",
+    "hexo-generator-tag": "2.0.0",
+    "hexo-renderer-ejs": "2.0.0",
+    "hexo-renderer-marked": "7.0.1",
+    "hexo-renderer-stylus": "3.0.1",
+    "hexo-server": "3.0.0",
+    "hexo-theme-reimu": "1.12.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0"
+  }
+}

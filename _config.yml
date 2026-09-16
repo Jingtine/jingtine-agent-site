@@ -1,0 +1,55 @@
+title: 不驚茶坊
+subtitle: 在学习与创造之间，记下一些想法，也留住日常的发现。
+description: 不驚醴的个人茶坊：记录学习、写作、软件、产品与日常观察。
+keywords: 软件工程, AI Agent, 产品思考, 个人博客
+author: 不驚醴 / Jingtine
+language: zh-CN
+timezone: Asia/Shanghai
+
+url: https://jingtine.github.io/jingtine-agent-site
+root: /jingtine-agent-site/
+permalink: posts/:title/
+pretty_urls:
+  trailing_index: false
+  trailing_html: false
+
+source_dir: source
+public_dir: public
+new_post_name: :title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+archive_generator:
+  per_page: 20
+  yearly: true
+  monthly: false
+category_generator:
+  per_page: 20
+tag_generator:
+  per_page: 20
+feed:
+  type: atom
+  path: atom.xml
+  limit: 0
+  content: true
+  order_by: -date
+
+theme: reimu

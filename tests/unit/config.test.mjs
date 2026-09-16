@@ -1,0 +1,30 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+
+const read = path => readFile(path, 'utf8');
+
+test('pins the approved Hexo and Reimu toolchain', async () => {
+  const pkg = JSON.parse(await read('package.json'));
+  assert.equal(pkg.engines.node, '>=22');
+  assert.equal(pkg.dependencies.hexo, '8.1.2');
+  assert.equal(pkg.dependencies['hexo-theme-reimu'], '1.12.5');
+  assert.equal(pkg.devDependencies['@playwright/test'], '1.63.0');
+});
+
+test('uses the GitHub Pages project root and clean post URLs', async () => {
+  const config = await read('_config.yml');
+  assert.match(config, /^url: https:\/\/jingtine\.github\.io\/jingtine-agent-site$/m);
+  assert.match(config, /^root: \/jingtine-agent-site\/$/m);
+  assert.match(config, /^permalink: posts\/:title\/$/m);
+  assert.match(config, /^theme: reimu$/m);
+});
+
+test('disables comments and unwanted effects', async () => {
+  const config = await read('_config.reimu.yml');
+  for (const key of ['valine', 'waline', 'twikoo', 'gitalk', 'giscus', 'disqus', 'utterances', 'beaudar', 'live2d', 'live2d_widgets', 'reimu_cursor', 'firework', 'material_theme']) {
+    assert.match(config, new RegExp(`${key}:\\r?\\n\\s+enable: false`));
+  }
+  assert.match(config, /aplayer:\r?\n\s+enable: false/);
+  assert.match(config, /meting:\r?\n\s+enable: false/);
+});

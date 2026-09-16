@@ -30,7 +30,6 @@ docs/
 
 # Node / npm
 node_modules/
-package-lock.json
 
 # Video output (large binaries)
 videos/
