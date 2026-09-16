@@ -859,7 +859,8 @@ a.article-card h3 {
   background:var(--surface)
 }
 .comments-load:hover { text-decoration:underline }
-.comments-fallback,.comments-status { margin:0 0 12px; color:var(--muted) }
+.comments-fallback,.comments-status,.comments-direct { margin:0 0 12px; color:var(--muted) }
+.comments-load[aria-disabled="true"] { cursor:default; opacity:.72 }
 .site-background-ready .comments-section {
   padding-inline:clamp(18px,3vw,30px);
   background:var(--reading-surface)

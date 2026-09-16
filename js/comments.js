@@ -3,7 +3,9 @@
 
   var DISCUSSIONS_URL = 'https://github.com/Jingtine/jingtine-agent-site/discussions';
   var GISCUS_CLIENT = 'https://giscus.app/client.js';
+  var GISCUS_ORIGIN = 'https://giscus.app';
   var CONFIG_URL = 'config/comments.json';
+  var WIDGET_READY_TIMEOUT = 10000;
   var REQUIRED_KEYS = ['enabled', 'repo', 'repoId', 'category', 'categoryId', 'theme', 'lang'];
   var THEMES = ['light', 'dark', 'preferred_color_scheme'];
   var LANGUAGES = ['zh-CN', 'en'];
@@ -58,25 +60,111 @@
     return button;
   }
 
-  function createFallback(mount, message, retry) {
-    mount.removeAttribute('aria-busy');
-    var paragraph = document.createElement('p');
-    paragraph.className = 'comments-fallback';
-    paragraph.setAttribute('role', 'status');
-    paragraph.appendChild(document.createTextNode(message + ' '));
+  function createDiscussionsLink() {
     var link = document.createElement('a');
     link.href = DISCUSSIONS_URL;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     link.textContent = '前往 GitHub Discussions 留言';
-    paragraph.appendChild(link);
-    mount.replaceChildren(paragraph);
-    if (retry) mount.appendChild(createButton('重试加载留言', 'comments-load', retry));
+    return link;
   }
 
-  function appendGiscus(mount, config, term, record) {
+  function setStatus(record, message) {
+    record.status.textContent = message;
+  }
+
+  function setControl(record, label, disabled) {
+    record.control.textContent = label;
+    record.control.setAttribute('aria-disabled', disabled ? 'true' : 'false');
+  }
+
+  function clearWidgetWatch(record) {
+    if (record.widgetTimer) {
+      window.clearTimeout(record.widgetTimer);
+      record.widgetTimer = null;
+    }
+    if (record.widgetObserver) {
+      record.widgetObserver.disconnect();
+      record.widgetObserver = null;
+    }
+    if (record.messageListener) {
+      window.removeEventListener('message', record.messageListener);
+      record.messageListener = null;
+    }
+    if (record.frame) {
+      record.frame.removeEventListener('load', record.frameLoad);
+      record.frame.removeEventListener('error', record.frameError);
+      record.frame = null;
+      record.frameLoad = null;
+      record.frameError = null;
+    }
+  }
+
+  function settle(record, result) {
+    if (record.resolveWidget) {
+      var resolve = record.resolveWidget;
+      record.resolveWidget = null;
+      resolve(result);
+    }
+  }
+
+  function failWidget(record, message, retryable) {
+    if (record.state !== 'loading') return;
+    clearWidgetWatch(record);
+    record.widget.replaceChildren();
+    record.mount.removeAttribute('aria-busy');
+    record.state = 'failed';
+    record.retryable = retryable;
+    record.mount.dataset.commentsState = 'failed';
+    setStatus(record, message);
+    setControl(record, retryable ? '重试加载留言' : '留言功能暂未启用', !retryable);
+    settle(record, { status: retryable ? 'error' : 'disabled' });
+  }
+
+  function finishWidget(record) {
+    if (record.state !== 'loading') return;
+    clearWidgetWatch(record);
+    record.mount.removeAttribute('aria-busy');
+    record.state = 'loaded';
+    record.retryable = false;
+    record.mount.dataset.commentsState = 'loaded';
+    setStatus(record, '留言已加载。');
+    setControl(record, '留言已加载', true);
+    settle(record, { status: 'loaded' });
+  }
+
+  function watchForFrame(record) {
+    if (record.frame) return;
+    var frame = record.widget.querySelector('iframe.giscus-frame');
+    if (!frame) return;
+    record.frame = frame;
+    record.frameLoad = function () { finishWidget(record); };
+    record.frameError = function () { failWidget(record, '留言组件加载失败。', true); };
+    frame.addEventListener('load', record.frameLoad, { once: true });
+    frame.addEventListener('error', record.frameError, { once: true });
+  }
+
+  function beginWidgetWatch(record) {
+    record.widgetObserver = new MutationObserver(function () { watchForFrame(record); });
+    record.widgetObserver.observe(record.widget, { childList: true, subtree: true });
+    record.messageListener = function (event) {
+      if (event.origin !== GISCUS_ORIGIN
+        || !event.data || typeof event.data !== 'object'
+        || !event.data.giscus || typeof event.data.giscus !== 'object'
+        || typeof event.data.giscus.error !== 'string') return;
+      failWidget(record, '留言组件加载失败。', true);
+    };
+    window.addEventListener('message', record.messageListener);
+    record.widgetTimer = window.setTimeout(function () {
+      failWidget(record, '留言组件未能就绪。', true);
+    }, WIDGET_READY_TIMEOUT);
+    watchForFrame(record);
+  }
+
+  function appendGiscus(config, record) {
     return new Promise(function (resolve) {
       var script = document.createElement('script');
+      record.resolveWidget = resolve;
       script.src = GISCUS_CLIENT;
       script.async = true;
       script.crossOrigin = 'anonymous';
@@ -85,61 +173,45 @@
       script.setAttribute('data-category', config.category);
       script.setAttribute('data-category-id', config.categoryId);
       script.setAttribute('data-mapping', 'specific');
-      script.setAttribute('data-term', term);
+      script.setAttribute('data-term', record.term);
       script.setAttribute('data-strict', '1');
       script.setAttribute('data-reactions-enabled', '1');
       script.setAttribute('data-emit-metadata', '0');
       script.setAttribute('data-input-position', 'top');
       script.setAttribute('data-theme', config.theme);
       script.setAttribute('data-lang', config.lang);
-      script.addEventListener('load', function () {
-        var status = mount.querySelector('.comments-status');
-        if (status) status.remove();
-        mount.removeAttribute('aria-busy');
-        mount.dataset.commentsState = 'loaded';
-        record.state = 'loaded';
-        resolve({ status: 'loaded' });
-      }, { once: true });
+      script.addEventListener('load', function () { watchForFrame(record); }, { once: true });
       script.addEventListener('error', function () {
-        record.state = 'failed';
-        mount.dataset.commentsState = 'failed';
-        createFallback(mount, '留言组件加载失败。', function () { beginLoading(mount, record); });
-        resolve({ status: 'error' });
+        failWidget(record, '留言组件加载失败。', true);
       }, { once: true });
-      mount.appendChild(script);
+      beginWidgetWatch(record);
+      record.widget.appendChild(script);
     });
   }
 
-  function showLoading(mount) {
-    var status = document.createElement('p');
-    status.className = 'comments-status';
-    status.setAttribute('role', 'status');
-    status.textContent = '正在加载留言…';
-    mount.setAttribute('aria-busy', 'true');
-    mount.replaceChildren(status);
-  }
-
-  function beginLoading(mount, record) {
+  function beginLoading(record) {
     if (record.state === 'loading' || record.state === 'loaded') return record.loading;
+    if (record.state === 'failed' && !record.retryable) return record.loading;
     record.state = 'loading';
-    mount.dataset.commentsState = 'loading';
+    record.retryable = false;
+    record.mount.dataset.commentsState = 'loading';
     if (record.observer) {
       record.observer.disconnect();
       record.observer = null;
     }
-    showLoading(mount);
+    clearWidgetWatch(record);
+    record.widget.replaceChildren();
+    record.mount.setAttribute('aria-busy', 'true');
+    setStatus(record, '正在加载留言…');
+    setControl(record, '正在加载留言…', true);
     record.loading = loadConfig().then(function (config) {
       if (!config.enabled) {
-        record.state = 'failed';
-        mount.dataset.commentsState = 'failed';
-        createFallback(mount, '留言功能暂未启用。');
+        failWidget(record, '留言功能暂未启用。', false);
         return { status: 'disabled' };
       }
-      return appendGiscus(mount, config, record.term, record);
+      return appendGiscus(config, record);
     }).catch(function () {
-      record.state = 'failed';
-      mount.dataset.commentsState = 'failed';
-      createFallback(mount, '留言功能暂时不可用。', function () { beginLoading(mount, record); });
+      failWidget(record, '留言功能暂时不可用。', true);
       return { status: 'error' };
     });
     return record.loading;
@@ -154,14 +226,37 @@
       return existing.term === term ? existing.ready : Promise.resolve({ status: 'invalid' });
     }
 
-    var record = { term: term, state: 'ready', observer: null, loading: null };
+    var record = {
+      term: term,
+      mount: element,
+      state: 'ready',
+      observer: null,
+      loading: null,
+      retryable: false,
+      widgetTimer: null,
+      widgetObserver: null,
+      messageListener: null,
+      frame: null,
+      frameLoad: null,
+      frameError: null,
+      resolveWidget: null,
+    };
     record.ready = Promise.resolve({ status: 'ready' });
     records.set(element, record);
     element.dataset.commentsState = 'ready';
-    var start = function () { beginLoading(element, record); };
-    var button = createButton('加载留言', 'comments-load', start);
-    button.addEventListener('focus', start, { once: true });
-    element.replaceChildren(button);
+    var start = function () { beginLoading(record); };
+    record.control = createButton('加载留言', 'comments-load', start);
+    record.control.addEventListener('focus', start, { once: true });
+    record.status = document.createElement('p');
+    record.status.className = 'comments-status';
+    record.status.setAttribute('role', 'status');
+    record.direct = document.createElement('p');
+    record.direct.className = 'comments-direct';
+    record.direct.appendChild(document.createTextNode('也可直接 '));
+    record.direct.appendChild(createDiscussionsLink());
+    record.widget = document.createElement('div');
+    record.widget.className = 'comments-widget';
+    element.replaceChildren(record.control, record.status, record.direct, record.widget);
 
     if (typeof window.IntersectionObserver === 'function') {
       record.observer = new IntersectionObserver(function (entries) {

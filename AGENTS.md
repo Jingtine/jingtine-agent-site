@@ -130,7 +130,7 @@ GitHub Actions 使用 Python 3.11，每晚构建文章索引与 Feed，并刷新
   `subscriptions.opml` 中。
 - 订阅源 ID 必须保持稳定，因为生成数据和界面筛选可能引用这些 ID。
 - 所有远程订阅源 URL 必须使用 HTTPS。
-- `config/comments.json` 是人工维护的公开源，只能保存启用状态、仓库、Discussion 分类及其公开 ID、主题和语言；不得写入令牌、Cookie、邮箱或机器路径。Giscus 客户端地址固定为 `https://giscus.app/client.js`，不得由配置覆盖。
+- `config/comments.json` 是人工维护的公开源，只能保存启用状态、仓库、Discussion 分类及其公开 ID、主题和语言；不得写入令牌、Cookie、邮箱或机器路径。Giscus 客户端地址固定为 `https://giscus.app/client.js`，不得由配置覆盖。本站代码不得创建或管理会话、凭据、邮箱或 IP 数据；不要把 Giscus 可能自行管理的浏览器 OAuth `giscus-session` 值描述为本站会话状态。
 
 ## 本地验证
 

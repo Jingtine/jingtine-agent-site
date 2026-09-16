@@ -61,4 +61,4 @@
 
 留言功能由 GitHub Discussions 与 Giscus 提供。读者需要登录 GitHub 才能发表留言或反应；发布后的讨论和留言默认公开可见。站内“茶客留言簿”使用 `guestbook` 作为固定讨论映射词，每篇文章使用稳定的 `article:<slug>` 映射词，因此已发布文章的 slug 不应随意修改。
 
-GitHub 中实际使用的 Discussion 分类是 `General`，站内仍将它称为“茶客留言簿”。站点维护者应在仓库的 [Discussions](https://github.com/Jingtine/jingtine-agent-site/discussions) 中删除不当留言或锁定讨论；这些操作会同步反映在站内嵌入组件。`config/comments.json` 只保存公开的仓库与分类 ID，不得写入令牌、Cookie、邮箱或机器路径。
+GitHub 中实际使用的 Discussion 分类是 `General`，站内仍将它称为“茶客留言簿”。站点维护者应在仓库的 [Discussions](https://github.com/Jingtine/jingtine-agent-site/discussions) 中删除不当留言或锁定讨论；这些操作会同步反映在站内嵌入组件。`config/comments.json` 只保存公开的仓库与分类 ID，不得写入令牌、Cookie、邮箱或机器路径。本站不会收集或保存凭据、邮箱、IP 地址或本站自有的会话；Giscus 的 GitHub OAuth 流程可能在浏览器中自行管理 `giscus-session` 值。

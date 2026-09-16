@@ -12,6 +12,15 @@ const validConfig = {
   lang: 'en',
 };
 
+const giscusWidgetFixture = `
+  (() => {
+    const frame = document.createElement('iframe');
+    frame.className = 'giscus-frame';
+    document.currentScript.parentNode.appendChild(frame);
+    window.setTimeout(() => frame.dispatchEvent(new Event('load')), 0);
+  })();
+`;
+
 async function disableAutomaticLoading(page) {
   await page.addInitScript(() => {
     Object.defineProperty(window, 'IntersectionObserver', { value: undefined, configurable: true });
@@ -25,7 +34,7 @@ async function routeConfig(page, value = validConfig) {
 async function routeGiscus(page, handler) {
   await page.route('https://giscus.app/client.js', handler || (route => route.fulfill({
     contentType: 'application/javascript',
-    body: 'window.__giscusFixtureLoaded = true;',
+    body: giscusWidgetFixture,
   })));
 }
 
@@ -36,6 +45,49 @@ async function expectDiscussionsFallback(page, mountSelector) {
 }
 
 test.describe('guestbook', () => {
+  test('guestbook keeps a fixed Discussions link while the Giscus widget becomes ready', async ({ page }) => {
+    await disableAutomaticLoading(page);
+    await routeConfig(page);
+    await routeGiscus(page, async route => {
+      await new Promise(resolve => setTimeout(resolve, 150));
+      await route.fulfill({ contentType: 'application/javascript', body: giscusWidgetFixture });
+    });
+    await page.goto('/guestbook.html');
+
+    await expectDiscussionsFallback(page, '#guestbook-comments');
+    await page.getByRole('button', { name: '加载留言' }).focus();
+    await expect(page.locator('#guestbook-comments')).toHaveAttribute('data-comments-state', 'loading');
+    await expectDiscussionsFallback(page, '#guestbook-comments');
+    await expect(page.locator('#guestbook-comments iframe.giscus-frame')).toBeVisible();
+    await expect(page.locator('#guestbook-comments')).toHaveAttribute('data-comments-state', 'loaded');
+    await expectDiscussionsFallback(page, '#guestbook-comments');
+  });
+
+  test('guestbook preserves the focused load control through widget timeout and retry state', async ({ page }) => {
+    await page.addInitScript(() => {
+      const setTimeout = window.setTimeout.bind(window);
+      window.setTimeout = (callback, delay, ...args) => setTimeout(callback, Math.min(delay, 25), ...args);
+    });
+    await disableAutomaticLoading(page);
+    await routeConfig(page);
+    await routeGiscus(page, route => route.fulfill({
+      contentType: 'application/javascript',
+      body: 'window.__giscusFixtureLoaded = true;',
+    }));
+    await page.goto('/guestbook.html');
+
+    const loadControl = page.locator('#guestbook-comments .comments-load');
+    await expect(loadControl).toHaveText('加载留言');
+    await loadControl.focus();
+    await expect(loadControl).toBeFocused();
+    await expect(page.locator('#guestbook-comments')).toHaveAttribute('data-comments-state', 'loading');
+    await expectDiscussionsFallback(page, '#guestbook-comments');
+    await expect(loadControl).toHaveText('重试加载留言');
+    await expect(loadControl).toBeFocused();
+    await expect(page.locator('#guestbook-comments')).toHaveAttribute('data-comments-state', 'failed');
+    await expectDiscussionsFallback(page, '#guestbook-comments');
+  });
+
   test('guestbook passes the committed production configuration to Giscus', async ({ page }) => {
     await disableAutomaticLoading(page);
     await routeGiscus(page);
@@ -139,7 +191,7 @@ test.describe('guestbook', () => {
     await routeConfig(page);
     await routeGiscus(page, async route => {
       await new Promise(resolve => setTimeout(resolve, 400));
-      await route.fulfill({ contentType: 'application/javascript', body: '' });
+      await route.fulfill({ contentType: 'application/javascript', body: giscusWidgetFixture });
     });
     await page.goto('/guestbook.html');
 
@@ -199,7 +251,7 @@ test.describe('guestbook', () => {
     let attempts = 0;
     await routeGiscus(page, route => ++attempts === 1
       ? route.abort('failed')
-      : route.fulfill({ contentType: 'application/javascript', body: '' }));
+      : route.fulfill({ contentType: 'application/javascript', body: giscusWidgetFixture }));
     await page.goto('/guestbook.html');
     await page.getByRole('button', { name: '加载留言' }).focus();
 

@@ -18,7 +18,15 @@ async function useManualComments(page) {
   });
   await page.route('**/config/comments.json', route => route.fulfill({ json: commentsConfig }));
   await page.route('https://giscus.app/client.js', route => route.fulfill({
-    contentType: 'application/javascript', body: '',
+    contentType: 'application/javascript',
+    body: `
+      (() => {
+        const frame = document.createElement('iframe');
+        frame.className = 'giscus-frame';
+        document.currentScript.parentNode.appendChild(frame);
+        window.setTimeout(() => frame.dispatchEvent(new Event('load')), 0);
+      })();
+    `,
   }));
 }
 
