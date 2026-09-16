@@ -48,6 +48,24 @@ test('uses the default campus cover for lazy-loaded home cards', async () => {
   assert.doesNotMatch(home, /data-src="\/jingtine-agent-site\/images\/banner-placeholder.svg"/);
 });
 
+test('keeps social preview images on the deployed project root without theme artwork', async () => {
+  const pages = (await readdir('public', { recursive: true })).filter(file => file.endsWith('.html'));
+  assert.ok(pages.length > 0, 'generated HTML exists');
+  let seen = 0;
+  for (const page of pages) {
+    const html = await readFile(path.join('public', page), 'utf8');
+    for (const meta of html.matchAll(/<meta[^>]+>/g)) {
+      if (!/property="og:image"|name="twitter:image"/.test(meta[0])) continue;
+      const content = /content="([^"]*)"/.exec(meta[0]);
+      assert.ok(content, `${page}: social image meta has content`);
+      assert.ok(content[1].startsWith('https://jingtine.github.io/jingtine-agent-site/'), `${page}: ${content[1]}`);
+      assert.doesNotMatch(content[1], /banner\.webp/, `${page}: ${content[1]}`);
+      seen += 1;
+    }
+  }
+  assert.ok(seen > 0, 'social preview images are emitted');
+});
+
 test('maps project-root and encoded local references without escaping public', async () => {
   const { resolveLocalTarget } = await checker();
   for (const [url, expected] of [

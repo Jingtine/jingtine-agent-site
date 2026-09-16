@@ -29,6 +29,11 @@ banner: /images/banner-placeholder.svg
 cover: /images/default-campus-cover.webp
 rss: atom.xml
 
+open_graph:
+  enable: true
+  options:
+    default_og_image: https://jingtine.github.io/jingtine-agent-site/images/default-campus-cover.webp
+
 sidebar:
   position: right
   menu: true
