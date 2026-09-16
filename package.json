@@ -4,11 +4,13 @@
   "private": true,
   "engines": { "node": ">=22" },
   "scripts": {
-    "clean": "hexo clean",
-    "build": "hexo generate",
-    "server": "hexo server --port 8081",
+    "clean": "node hexo-runner.cjs clean",
+    "build": "node hexo-runner.cjs generate",
+    "server": "node hexo-runner.cjs server --port 8081",
     "test:unit": "node --test tests/unit/*.test.mjs",
-    "test:e2e": "playwright test --config tests/playwright.config.js"
+    "test:e2e": "playwright test --config tests/playwright.config.js",
+    "check": "npm run clean && npm run build && node scripts/check-site.mjs",
+    "test": "npm run test:unit && npm run check && npm run test:e2e"
   },
   "hexo": {
     "version": "8.1.2"

@@ -48,3 +48,17 @@ hexo.extend.tag.register("list_categories", function (args) {
 hexo.extend.tag.register("tagcloud", function (args) {
   return renderHelper("tagcloud", "tags", args);
 });
+
+// Reimu 1.12.5 hardcodes host-root 404 links and a protocol-relative icon font.
+// These supported output filters touch only the exact generated attributes/URL.
+hexo.extend.filter.register("after_render:html", function (html) {
+  const iconFontUrl = `//at.alicdn.com/t/c/font_${hexo.theme.config.icon_font}.woff2`;
+  return html
+    .replace(/<a href="\/" id="(logo|subtitle)">/g, (_, id) => `<a href="${hexo.config.root}" id="${id}">`)
+    .replaceAll(`href="${iconFontUrl}"`, `href="https:${iconFontUrl}"`);
+});
+hexo.extend.filter.register("after_render:css", function (css) {
+  const iconFontUrl = `//at.alicdn.com/t/c/font_${hexo.theme.config.icon_font}.woff2`;
+  return css.replaceAll(`url("${iconFontUrl}")`, `url("https:${iconFontUrl}")`)
+    .replaceAll(`url('${iconFontUrl}')`, `url('https:${iconFontUrl}')`);
+});

@@ -124,6 +124,6 @@ injector:
   head_end: '<link rel="stylesheet" href="/jingtine-agent-site/css/custom.css">'
   head_begin:
   body_begin:
-  body_end:
+  body_end: '<script src="/jingtine-agent-site/js/accessibility.js" defer></script>'
   sidebar_begin:
   sidebar_end:

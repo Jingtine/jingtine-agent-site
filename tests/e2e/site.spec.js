@@ -1,0 +1,208 @@
+const { test: base, expect, devices } = require('@playwright/test');
+
+const root = '/jingtine-agent-site/';
+const origin = 'http://127.0.0.1:8081';
+
+async function observeLocalSite(context) {
+  const failures = [];
+  const external = new Set();
+  const externalErrors = [];
+  // Optional CDN fonts, analytics and enhancements must not make local tests flaky.
+  // Do not replace them with fake implementations; assert local resources directly.
+  await context.route('**/*', route => {
+    const url = route.request().url();
+    if (new URL(url).origin === origin) return route.continue();
+    external.add(url);
+    return route.abort('blockedbyclient');
+  });
+  context.on('page', page => {
+    page.on('pageerror', error => {
+      // Reimu eagerly imports its optional lightbox without a rejection handler.
+      // Classify only this observed CDN failure; local fetch failures still fail.
+      if (error.message === 'Failed to fetch' && error.stack?.includes('safeImport') && external.has('https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js')) {
+        externalErrors.push(error.stack);
+      } else failures.push(`Runtime: ${error.stack || error.message}`);
+    });
+    page.on('response', response => {
+      if (response.url().startsWith(origin) && response.status() >= 400) failures.push(`${response.status()}: ${response.url()}`);
+    });
+    page.on('requestfailed', request => {
+      if (request.url().startsWith(origin) && request.failure()?.errorText !== 'net::ERR_ABORTED') failures.push(`${request.failure()?.errorText}: ${request.url()}`);
+    });
+    page.on('console', message => {
+      if (message.type() === 'error' && message.location().url?.startsWith(origin)) failures.push(`Console: ${message.text()}`);
+    });
+  });
+  return { failures, external, externalErrors };
+}
+
+const test = base.extend({
+  context: async ({ context }, use, testInfo) => {
+    const diagnostics = await observeLocalSite(context);
+    await use(context);
+    await testInfo.attach('network-diagnostics', {
+      body: JSON.stringify({ localFailures: diagnostics.failures, blockedExternalUrls: [...diagnostics.external].sort(), expectedExternalErrors: diagnostics.externalErrors }, null, 2),
+      contentType: 'application/json',
+    });
+    expect(diagnostics.failures, 'No local resource, base-path, console or runtime failures').toEqual([]);
+  },
+});
+
+async function navigation(page, isMobile) {
+  if (isMobile) {
+    await page.locator('#main-nav-toggle').click();
+    await expect(page.locator('body')).toHaveClass(/mobile-nav-on/);
+    return page.locator('#mobile-nav');
+  }
+  return page.getByRole('navigation', { name: 'Primary navigation' });
+}
+
+test('Home shows its identity, author avatar, nine cards and retained links', async ({ page, request, isMobile }) => {
+  await page.goto('./');
+  await expect(page.getByRole('heading', { name: '不驚茶坊', exact: true })).toBeVisible();
+  await expect(page.locator('.post-wrapper')).toHaveCount(9);
+  await expect(page.getByRole('heading', { name: 'Building My Digital Garden', exact: true })).toBeVisible();
+  const nav = await navigation(page, isMobile);
+  for (const [name, route] of [['归档', 'archives'], ['项目', 'projects'], ['关于', 'about'], ['友链', 'friend']]) {
+    await expect(nav.getByRole('link', { name, exact: true })).toHaveAttribute('href', `${root}${route}`);
+    await expect(nav.getByRole('link', { name, exact: true })).toBeVisible();
+  }
+  const author = page.locator(isMobile ? '#mobile-nav .sidebar-author img' : '#sidebar .sidebar-author img');
+  await expect(author).toHaveAttribute('alt', '不驚醴 / Jingtine');
+  await expect(author).toHaveAttribute('data-src', `${root}avatar/avatar.jpg`);
+  expect((await request.get(`${root}avatar/avatar.jpg`)).status()).toBe(200);
+});
+
+test('navigation excludes all retired experiences', async ({ page, isMobile }) => {
+  await page.goto('./');
+  const nav = await navigation(page, isMobile);
+  await expect(nav.getByRole('link', { name: /论文|研究|Wiki|知识库|订阅阅读|问答助手|Status|留言/i })).toHaveCount(0);
+});
+
+test('post retains campus cover, reading controls and no comments', async ({ page, request, isMobile }) => {
+  await page.goto('./');
+  const card = page.locator('.post-wrap').filter({ has: page.getByRole('link', { name: 'GitHub Pages Development Notes', exact: true }) });
+  const cover = card.getByRole('img', { name: 'GitHub Pages Development Notes', exact: true });
+  await expect(cover).toHaveAttribute('data-src', `${root}images/default-campus-cover.webp`);
+  await expect(cover).toHaveClass(/lazyload/);
+  const coverResponse = await request.get(await cover.getAttribute('data-src'));
+  expect(coverResponse.status()).toBe(200);
+  expect(coverResponse.headers()['content-type']).toMatch(/^image\/webp/);
+  await card.getByRole('link', { name: 'GitHub Pages Development Notes', exact: true }).click();
+  await expect(page).toHaveURL(`${origin}${root}posts/github-pages-dev-notes/`);
+  await expect(page.getByRole('heading', { name: 'GitHub Pages Development Notes', exact: true })).toBeVisible();
+  await expect(page.locator('#header > img')).toHaveAttribute('src', `${root}images/default-campus-cover.webp`);
+  await expect.poll(() => page.locator('#header > img').evaluate(img => img.complete && img.naturalWidth > 0)).toBe(true);
+  if (!isMobile) {
+    await expect(page.getByRole('complementary', { name: 'Sidebar' })).toBeVisible();
+    await expect(page.locator('#sidebar .toc')).toBeVisible();
+  } else {
+    await expect(page.locator('#mobile-nav .toc')).toBeAttached();
+  }
+  await expect(page.locator('#article-nav').getByRole('link', { name: /^前一篇:/ })).toHaveAttribute('href', /^\/jingtine-agent-site\/posts\//);
+  await expect(page.locator('#article-nav').getByRole('link', { name: /^后一篇:/ })).toHaveAttribute('href', /^\/jingtine-agent-site\/posts\//);
+  await expect(page.locator('figure.highlight.html .code-copy')).toBeVisible();
+  await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(500);
+  await expect(page.locator('.sidebar-top')).toHaveCSS('opacity', '1');
+  await page.locator('.sidebar-top').click();
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeLessThan(5);
+  const commentPattern = /giscus|waline|valine|twikoo|gitalk|disqus|utterances|beaudar/i;
+  expect(await page.locator('script[src]').evaluateAll(scripts => scripts.map(script => script.src).join('\n'))).not.toMatch(commentPattern);
+  await expect(page.locator('#comments, #comment, .comments, .comment-container, [data-repo-id], [id*="giscus"], [class*="giscus"], [id*="waline"], [id*="valine"], [id*="twikoo"], [id*="gitalk"], #disqus_thread, .utterances, .beaudar')).toHaveCount(0);
+});
+
+test('local search finds Agent posts beneath the project root', async ({ page }) => {
+  await page.goto('./');
+  await page.locator('#nav-search-btn').click();
+  const input = page.locator('#search-text');
+  await expect(input).toBeVisible();
+  await input.fill('Agent');
+  await input.press('Enter');
+  const result = page.locator('#reimu-hits').getByRole('link', { name: 'Building My First AI Agent', exact: true });
+  await expect(result).toBeVisible();
+  await expect(result).toHaveAttribute('href', /^\/jingtine-agent-site\/posts\//);
+  await result.click();
+  await expect(page.getByRole('heading', { name: 'Building My First AI Agent', exact: true })).toBeVisible();
+});
+
+test('light and dark contexts use different readable theme tokens', async ({ browser, isMobile }) => {
+  const tokens = [];
+  for (const colorScheme of ['light', 'dark']) {
+    const context = await browser.newContext({ ...devices[isMobile ? 'Pixel 7' : 'Desktop Chrome'], colorScheme });
+    const diagnostics = await observeLocalSite(context);
+    try {
+      const page = await context.newPage();
+      await page.goto(`${origin}${root}posts/github-pages-dev-notes/`);
+      await expect(page.getByRole('heading', { name: 'GitHub Pages Development Notes', exact: true })).toBeVisible();
+      // Reimu fades .article-inner for 0.3s after script.js applies the color scheme.
+      // Wait for that transition to settle so the sampled colors are the final theme values.
+      await page.waitForFunction(() => {
+        const inner = document.querySelector('.article-inner');
+        return inner && inner.getAnimations().every(animation => animation.playState !== 'running');
+      });
+      const style = await page.locator('.article-entry').evaluate(element => {
+        const css = getComputedStyle(element);
+        const rootStyle = getComputedStyle(document.documentElement);
+        const luminance = color => {
+          const channels = color.match(/[\d.]+/g).slice(0, 3).map(Number).map(value => {
+            const channel = value / 255;
+            return channel <= 0.04045 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4;
+          });
+          return channels[0] * 0.2126 + channels[1] * 0.7152 + channels[2] * 0.0722;
+        };
+        const foreground = luminance(css.color);
+        const background = luminance(getComputedStyle(element.closest('.article-inner')).backgroundColor);
+        return { token: rootStyle.getPropertyValue('--red-1').trim(), contrast: (Math.max(foreground, background) + 0.05) / (Math.min(foreground, background) + 0.05), fontSize: parseFloat(css.fontSize) };
+      });
+      expect(style.token).not.toBe('');
+      expect(style.contrast, `${colorScheme} body-text contrast`).toBeGreaterThanOrEqual(4.5);
+      expect(style.fontSize).toBeGreaterThanOrEqual(14);
+      tokens.push(style.token);
+      expect(diagnostics.failures).toEqual([]);
+    } finally { await context.close(); }
+  }
+  expect(tokens[0]).not.toBe(tokens[1]);
+});
+
+test('retained page and taxonomy navigation resolves without 404s', async ({ page, isMobile }) => {
+  for (const [name, route] of [['项目', 'projects'], ['关于', 'about'], ['友链', 'friend'], ['归档', 'archives'], ['分类', 'categories'], ['标签', 'tags']]) {
+    await page.goto('./');
+    const nav = await navigation(page, isMobile);
+    await nav.getByRole('link', { name, exact: true }).click();
+    await expect(page).toHaveURL(new RegExp(`${root}${route}/?$`));
+    await expect(page.locator('#main')).toBeVisible();
+    await expect(page.getByRole('heading', { name: /4\s*0\s*4/ })).toHaveCount(0);
+    await expect(page.locator('#main')).not.toBeEmpty();
+  }
+});
+
+test('Pixel viewport has no horizontal overflow and keyboard-reachable navigation', async ({ page }) => {
+  await page.setViewportSize(devices['Pixel 7'].viewport);
+  await page.goto('./');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  let focusedId;
+  for (let step = 0; step < 16 && focusedId !== 'main-nav-toggle'; step++) {
+    await page.keyboard.press('Tab');
+    focusedId = await page.evaluate(() => document.activeElement.id);
+  }
+  expect(focusedId, 'Mobile menu toggle must be reachable with Tab').toBe('main-nav-toggle');
+  await page.keyboard.press('Enter');
+  await expect(page.locator('body')).toHaveClass(/mobile-nav-on/);
+  const about = page.locator('#mobile-nav').getByRole('link', { name: '关于', exact: true });
+  for (let step = 0; step < 30 && !await about.evaluate(link => link === document.activeElement); step++) await page.keyboard.press('Tab');
+  await expect(about).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(page).toHaveURL(new RegExp(`${root}about/?$`));
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+});
+
+test('reduced motion limits animated article elements to 0.01ms', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('posts/github-pages-dev-notes/');
+  const article = page.locator('.article-inner[data-aos="fade-up"]');
+  await expect(article).toBeVisible();
+  const durations = await article.evaluate(element => getComputedStyle(element).animationDuration.split(',').map(value => parseFloat(value) * (value.trim().endsWith('ms') ? 1 : 1000)));
+  expect(durations.length).toBeGreaterThan(0);
+  for (const duration of durations) expect(duration).toBeLessThanOrEqual(0.01);
+});

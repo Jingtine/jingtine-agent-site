@@ -14,6 +14,14 @@
 
 .project-card h3 { margin-top: 0; }
 
+/* Reimu 1.12.5 does not emit these internal_theme.dark tokens. */
+[data-theme='dark']:root {
+  --red-0: #9aa8f3;
+  --red-1: #aab4f5;
+  --red-2: #bcc4f8;
+  --red-3: #cdd3fa;
+}
+
 .reimu-bg {
   display: none !important;
 }
