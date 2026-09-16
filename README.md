@@ -42,14 +42,12 @@ npm run server
 按变更范围运行以下命令：
 
 ```powershell
-npm run test:unit
-npm run clean
-npm run build
 npm run check
+npm run test:unit
 npm run test:e2e
 ```
 
-单元测试和干净的 Hexo 构建是每次变更的基础门禁；涉及行为、导航、可访问性或响应式布局时还必须运行 Playwright。
+`npm run check` 会先执行 `npm run clean` 与 `npm run build`，再运行质量门禁；单元测试读取生成的 `public/`，因此必须在构建之后运行。完整门禁可用 `npm test` 依次运行以上三步。涉及行为、导航、可访问性或响应式布局时还必须运行 Playwright。
 
 ## 部署
 
