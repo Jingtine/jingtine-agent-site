@@ -26,3 +26,11 @@ test('defines a blue-purple Reimu palette and local stylesheet', async () => {
   assert.match(css, /\.project-grid/);
   assert.match(css, /\.reimu-bg\s*\{[^}]*display:\s*none\s*!important;/s);
 });
+
+test('ships a local multi-size favicon', async () => {
+  const favicon = await readFile('source/images/site-favicon.ico');
+  assert.equal(favicon.readUInt16LE(0), 0, 'reserved field');
+  assert.equal(favicon.readUInt16LE(2), 1, 'icon type');
+  assert.ok(favicon.readUInt16LE(4) >= 3, 'multiple sizes embedded');
+  assert.ok(favicon.length < 100_000, `favicon is ${favicon.length} bytes`);
+});

@@ -27,6 +27,7 @@ menu:
 avatar: avatar.jpg
 banner: /images/banner-illustration.webp
 cover: /images/default-campus-cover.webp
+favicon: /images/site-favicon.ico
 rss: atom.xml
 
 social:

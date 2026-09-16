@@ -273,3 +273,11 @@ test('renders the friend card with safe external attributes', async () => {
   assert.match(friend, /<div class="friend-name">\s*江畔絮语\s*<\/div>/);
   assert.match(friend, /一位文院学生思考的存档地/);
 });
+
+test('serves the site favicon from the project root', async () => {
+  const home = await readFile('public/index.html', 'utf8');
+  assert.match(home, /<link rel="shortcut icon" href="\/jingtine-agent-site\/images\/site-favicon\.ico">/);
+  const source = await readFile('source/images/site-favicon.ico');
+  const published = await readFile('public/images/site-favicon.ico');
+  assert.deepEqual(published, source, 'the site favicon is published unchanged');
+});

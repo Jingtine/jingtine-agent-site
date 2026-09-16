@@ -123,6 +123,12 @@ test('friend page shows the classmate card', async ({ page }) => {
   await expect(card.locator('a')).toHaveAttribute('rel', 'noopener nofollow noreferrer');
 });
 
+test('serves the site favicon', async ({ page, request }) => {
+  await page.goto('./');
+  await expect(page.locator('link[rel="shortcut icon"]')).toHaveAttribute('href', `${root}images/site-favicon.ico`);
+  expect((await request.get(`${root}images/site-favicon.ico`)).status()).toBe(200);
+});
+
 test('navigation excludes all retired experiences', async ({ page, isMobile }) => {
   await page.goto('./');
   const nav = await navigation(page, isMobile);
