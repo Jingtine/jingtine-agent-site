@@ -55,6 +55,7 @@ hexo.extend.filter.register("after_render:html", function (html) {
   const iconFontUrl = `//at.alicdn.com/t/c/font_${hexo.theme.config.icon_font}.woff2`;
   return html
     .replace(/<a href="\/" id="(logo|subtitle)">/g, (_, id) => `<a href="${hexo.config.root}" id="${id}">`)
+    .replace(/<a id="nav-rss-link"[^>]*><\/a>\s*/g, "")
     .replaceAll(`href="${iconFontUrl}"`, `href="https:${iconFontUrl}"`);
 });
 hexo.extend.filter.register("after_render:css", function (css) {

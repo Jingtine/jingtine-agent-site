@@ -25,7 +25,7 @@ test('site filters fix only exact theme 404 and iconfont URLs', async () => {
   });
   assert.equal(typeof filters.get('after_render:html'), 'function');
   assert.equal(typeof filters.get('after_render:css'), 'function');
-  const html = '<a href="/" id="logo">404</a><a href="/" id="subtitle">back</a><a href="/">body</a><link rel="preload" href="//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2" as="font"><p>//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2</p>';
+  const html = '<a href="/" id="logo">404</a><a href="/" id="subtitle">back</a><a href="/">body</a><a id="nav-rss-link" class="nav-icon" href="/jingtine-agent-site/atom.xml" title="RSS 订阅" aria-label="RSS 订阅" target="_blank"></a><link rel="preload" href="//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2" as="font"><p>//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2</p>';
   assert.equal(filters.get('after_render:html')(html), '<a href="/jingtine-agent-site/" id="logo">404</a><a href="/jingtine-agent-site/" id="subtitle">back</a><a href="/">body</a><link rel="preload" href="https://at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2" as="font"><p>//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2</p>');
   assert.equal(filters.get('after_render:css')('@font-face{src:url("//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2")}'), '@font-face{src:url("https://at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2")}');
 });

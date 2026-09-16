@@ -26,6 +26,43 @@
   display: none !important;
 }
 
+.sidebar-follow-github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  width: 74%;
+  margin: 0.8rem auto 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--red-0), var(--red-2));
+  box-shadow: 0 0.65rem 1.5rem color-mix(in srgb, var(--red-1) 24%, transparent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sidebar-follow-github:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 0.8rem 1.8rem color-mix(in srgb, var(--red-1) 34%, transparent);
+}
+
+.sidebar-follow-github-icon::before {
+  font-family: 'iconfont';
+  content: '\e619';
+}
+
+.sidebar-social .icon-rss::before {
+  font-family: 'iconfont';
+  content: '\e61f';
+}
+
+.sidebar-social .icon-rss {
+  color: var(--red-1);
+}
+
 :focus-visible {
   outline: 3px solid var(--red-1);
   outline-offset: 3px;

@@ -59,6 +59,7 @@ async function navigation(page, isMobile) {
 
 test('Home shows its identity, author avatar, nine cards and retained links', async ({ page, request, isMobile }) => {
   await page.goto('./');
+  await expect(page.locator('#loader .loading-word')).toHaveText('茶香氤氲时...');
   await expect(page.getByRole('heading', { name: '不驚茶坊', exact: true })).toBeVisible();
   await expect(page.locator('.post-wrapper')).toHaveCount(9);
   await expect(page.getByRole('heading', { name: 'Building My Digital Garden', exact: true })).toBeVisible();
@@ -67,10 +68,16 @@ test('Home shows its identity, author avatar, nine cards and retained links', as
     await expect(nav.getByRole('link', { name, exact: true })).toHaveAttribute('href', `${root}${route}`);
     await expect(nav.getByRole('link', { name, exact: true })).toBeVisible();
   }
-  const author = page.locator(isMobile ? '#mobile-nav .sidebar-author img' : '#sidebar .sidebar-author img');
-  await expect(author).toHaveAttribute('alt', '不驚醴 / Jingtine');
+  const sidebar = page.locator(isMobile ? '#mobile-nav' : '#sidebar');
+  const author = sidebar.locator('.sidebar-author img');
+  await expect(author).toHaveAttribute('alt', '不驚醴');
   await expect(author).toHaveAttribute('data-src', `${root}avatar/avatar.jpg`);
   expect((await request.get(`${root}avatar/avatar.jpg`)).status()).toBe(200);
+  await expect(page.locator('#nav-rss-link')).toHaveCount(0);
+  await expect(sidebar.getByRole('link', { name: 'Follow Me On GitHub', exact: true })).toHaveAttribute('href', 'https://github.com/jingtine');
+  await expect(sidebar.getByRole('link', { name: 'github', exact: true })).toHaveAttribute('href', 'https://github.com/jingtine');
+  await expect(sidebar.getByRole('link', { name: 'email', exact: true })).toHaveAttribute('href', 'mailto:jingtineli@smail.nju.edu.cn');
+  await expect(sidebar.getByRole('link', { name: 'rss', exact: true })).toHaveAttribute('href', `${root}atom.xml`);
 });
 
 test('navigation excludes all retired experiences', async ({ page, isMobile }) => {

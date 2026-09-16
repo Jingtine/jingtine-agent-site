@@ -14,6 +14,8 @@ test('pins the approved Hexo and Reimu toolchain', async () => {
 
 test('uses the GitHub Pages project root and clean post URLs', async () => {
   const config = await read('_config.yml');
+  assert.match(config, /^author: 不驚醴$/m);
+  assert.doesNotMatch(config, /Jingtine/);
   assert.match(config, /^url: https:\/\/jingtine\.github\.io\/jingtine-agent-site$/m);
   assert.match(config, /^root: \/jingtine-agent-site\/$/m);
   assert.match(config, /^permalink: posts\/:title\/$/m);
@@ -33,4 +35,9 @@ test('uses the tea-house loading message', async () => {
   const config = await read('_config.reimu.yml');
   assert.match(config, /preloader:\r?\n\s+enable: true\r?\n\s+text:\r?\n\s+zh-CN: 茶香氤氲时\.\.\./);
   assert.doesNotMatch(config, /少女祈祷中/);
+});
+
+test('configures the sidebar contact links', async () => {
+  const config = await read('_config.reimu.yml');
+  assert.match(config, /social:\r?\n\s+github: https:\/\/github\.com\/jingtine\r?\n\s+email: mailto:jingtineli@smail\.nju\.edu\.cn\r?\n\s+rss: \/jingtine-agent-site\/atom\.xml/);
 });

@@ -29,6 +29,11 @@ banner: /images/banner-placeholder.svg
 cover: /images/default-campus-cover.webp
 rss: atom.xml
 
+social:
+  github: https://github.com/jingtine
+  email: mailto:jingtineli@smail.nju.edu.cn
+  rss: /jingtine-agent-site/atom.xml
+
 open_graph:
   enable: true
   options:

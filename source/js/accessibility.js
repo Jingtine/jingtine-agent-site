@@ -69,3 +69,27 @@
     }
   });
 })();
+
+// Add a prominent GitHub action while keeping Reimu's native social links.
+(() => {
+  const enhanceSidebars = () => {
+    document.querySelectorAll('.sidebar-social').forEach(social => {
+      if (social.previousElementSibling?.classList.contains('sidebar-follow-github')) return;
+      const github = social.querySelector('.icon-github a');
+      if (!github || github.protocol !== 'https:') return;
+      const follow = document.createElement('a');
+      follow.className = 'sidebar-follow-github';
+      follow.href = github.href;
+      follow.target = '_blank';
+      follow.rel = 'noopener noreferrer';
+      follow.setAttribute('aria-label', 'Follow Me On GitHub');
+      const icon = document.createElement('span');
+      icon.className = 'sidebar-follow-github-icon';
+      icon.setAttribute('aria-hidden', 'true');
+      follow.append(icon, document.createTextNode('Follow Me On GitHub'));
+      social.before(follow);
+    });
+  };
+  enhanceSidebars();
+  window.addEventListener('pjax:complete', enhanceSidebars);
+})();
