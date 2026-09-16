@@ -56,11 +56,11 @@ Visual reference: `https://water1i1y.org/tags/` (Butterfly theme chip cloud). On
 
 | Tier | Classes | Background | Text |
 | --- | --- | --- | --- |
-| Cool | `tag-chip-0` … `tag-chip-4` | `var(--red-5)` with `color-mix` border | `var(--red-0)` |
-| Medium | `tag-chip-5` … `tag-chip-7` | `var(--red-4)` | `var(--red-0)` |
+| Cool | `tag-chip-0` … `tag-chip-4` | `var(--red-5)` with `color-mix` border | `color-mix(in srgb, var(--red-0) 72%, #14141b)` |
+| Medium | `tag-chip-5` … `tag-chip-7` | `var(--red-4)` | `color-mix(in srgb, var(--red-0) 72%, #14141b)` |
 | Hot | `tag-chip-8` … `tag-chip-10` | `linear-gradient(135deg, var(--red-0), var(--red-1))` | `#fff` |
 
-Hot chips render at `1.6em` (large text), so the white-on-purple gradient clears the 3:1 large-text contrast threshold; the deep end (`--red-0`) is about 4.7:1 against white.
+The darkened text mix reaches roughly 5.9:1 on `--red-5` and 4.8:1 on `--red-4`, so the small tiers meet WCAG AA for 15px text. Hot chips render at `1.6em` (24px bold, WCAG large text), so the white-on-purple gradient clears the 3:1 large-text threshold; the deep end (`--red-0`) is about 4.7:1 against white.
 
 ### Dark theme
 
