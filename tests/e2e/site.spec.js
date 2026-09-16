@@ -90,6 +90,8 @@ test('sidebar renders left without taxonomy cards', async ({ page, isMobile }) =
     const mainBox = await page.locator('#main').boundingBox();
     expect(sidebarBox.x).toBeLessThan(mainBox.x);
   }
+  await page.goto('./about/');
+  await expect(page.locator('#content')).toHaveClass(/sidebar-left/);
 });
 
 test('footer credits the 2026 site year to Jingtine', async ({ page }) => {

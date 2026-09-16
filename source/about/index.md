@@ -2,7 +2,6 @@
 title: 关于
 date: 2026-09-16 12:00:00
 comments: false
-sidebar: right
 ---
 
 南京大学商学院软件工程（软工商业创新班）在读。
