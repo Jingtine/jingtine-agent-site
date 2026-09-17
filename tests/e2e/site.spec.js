@@ -167,6 +167,13 @@ test('home subtitle types the tea poems and respects reduced motion', async ({ p
   await expect(page.locator('#subtitle')).toContainText('山中何事？松花酿酒，春水煎茶。');
 });
 
+test('home sidebar hosts the audio player and song', async ({ page, request }) => {
+  await page.goto('./');
+  await expect(page.locator('#sidebar #aplayer')).toHaveCount(1);
+  expect((await request.get(`${root}audio/yi-jian-ru-gu.mp3`)).status()).toBe(200);
+  expect((await request.get(`${root}audio/yi-jian-ru-gu.webp`)).status()).toBe(200);
+});
+
 test('navigation excludes all retired experiences', async ({ page, isMobile }) => {
   await page.goto('./');
   const nav = await navigation(page, isMobile);

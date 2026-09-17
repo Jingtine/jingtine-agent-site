@@ -341,3 +341,13 @@ test('typing guard stills the subtitle under reduced motion', async () => {
   normal.window.Typed = RealTyped;
   assert.equal(new normal.window.Typed() instanceof RealTyped, true, 'the vendor class passes through');
 });
+
+test('mounts the sidebar audio player with the song', async () => {
+  const home = await readFile('public/index.html', 'utf8');
+  assert.match(home, /<div id="aplayer"/);
+  assert.match(home, /"name":"一见如故","artist":"许嵩"/);
+  assert.match(home, /"url":"\/jingtine-agent-site\/audio\/yi-jian-ru-gu\.mp3"/);
+  assert.match(home, /"cover":"\/jingtine-agent-site\/audio\/yi-jian-ru-gu\.webp"/);
+  assert.match(home, /aplayer@1\.10\.1\/dist\/APlayer\.min\.js/);
+  assert.doesNotMatch(home, /meting@2\.0\.1/);
+});

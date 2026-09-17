@@ -27,8 +27,6 @@ test('disables comments and unwanted effects', async () => {
   for (const key of ['valine', 'waline', 'twikoo', 'gitalk', 'giscus', 'disqus', 'utterances', 'beaudar', 'live2d', 'live2d_widgets', 'reimu_cursor', 'material_theme']) {
     assert.match(config, new RegExp(`${key}:\\r?\\n\\s+enable: false`));
   }
-  assert.match(config, /aplayer:\r?\n\s+enable: false/);
-  assert.match(config, /meting:\r?\n\s+enable: false/);
 });
 
 test('uses the tea-house loading message', async () => {
@@ -83,4 +81,15 @@ test('rotates the tea-poem subtitle on the home page', async () => {
       '野泉烟火白云间，坐饮香茶爱此山。',
     ],
   );
+});
+
+test('plays the self-hosted song in the sidebar player', async () => {
+  const config = await read('_config.reimu.yml');
+  assert.match(config, /aplayer:\r?\n\s+enable: true/);
+  assert.match(config, /meting:\r?\n\s+enable: false/);
+  assert.match(config, /name: 一见如故/);
+  assert.match(config, /artist: 许嵩/);
+  assert.match(config, /url: \/jingtine-agent-site\/audio\/yi-jian-ru-gu\.mp3/);
+  assert.match(config, /cover: \/jingtine-agent-site\/audio\/yi-jian-ru-gu\.webp/);
+  assert.match(config, /preload: none/);
 });

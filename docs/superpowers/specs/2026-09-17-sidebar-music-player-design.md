@@ -20,7 +20,7 @@ Add a self-hosted single-song APlayer to the sidebar for 许嵩《一见如故�
 ## Tests
 
 - Unit (`tests/unit/config.test.mjs`): aplayer enabled, meting disabled, the song entry fields, and `preload: none`.
-- Unit (`tests/unit/assets.test.mjs`): the MP3 starts with a valid MPEG frame sync and stays under 4 MB; the cover is a WebP under 150 KB.
+- Unit (`tests/unit/assets.test.mjs`): the MP3 carries a valid header (an ID3v2 tag or an MPEG frame sync) and stays under 4 MB; the cover is a WebP under 150 KB.
 - Unit (`tests/unit/generated-site.test.mjs`): the home page mounts `#aplayer`, embeds the audio JSON with the project-root URLs, loads the APlayer vendor, and does not load MetingJS.
 - E2E (`tests/e2e/site.spec.js`): the sidebar player element exists and both the MP3 and cover respond 200.
 

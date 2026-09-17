@@ -135,9 +135,14 @@ player:
   position: before_sidebar
   disable_on_mobile: true
   aplayer:
-    enable: false
+    enable: true
     options:
-      audio: []
+      audio:
+        - name: 一见如故
+          artist: 许嵩
+          url: /jingtine-agent-site/audio/yi-jian-ru-gu.mp3
+          cover: /jingtine-agent-site/audio/yi-jian-ru-gu.webp
+      preload: none
   meting:
     enable: false
 
