@@ -7,7 +7,7 @@
  */
 
 const { createHash } = require("crypto");
-const { readFileSync } = require("fs");
+const { readFileSync, readdirSync } = require("fs");
 const path = require("path");
 
 // GitHub Pages and the theme service worker both cache the injected assets.
@@ -23,6 +23,34 @@ const getAssetVersion = () => {
     assetVersion = hash.digest("hex").slice(0, 10);
   }
   return assetVersion;
+};
+
+// The theme compiles style.css, loader.css, script.js and pjax_script.js from
+// its own sources against the merged theme config. Reimu only emits the
+// config-dependent CSS blocks (e.g. article_copyright) at build time, and these
+// URLs carry no version, so browsers and caches reuse the pre-change files.
+// Hashing the theme config plus the theme asset sources versions them all.
+const listFiles = dir =>
+  readdirSync(dir, { recursive: true, withFileTypes: true })
+    .filter(entry => entry.isFile())
+    .map(entry => path.join(entry.parentPath, entry.name))
+    .sort();
+
+let themeAssetVersion;
+const getThemeAssetVersion = () => {
+  if (!themeAssetVersion) {
+    const hash = createHash("sha256");
+    hash.update(JSON.stringify(hexo.theme.config));
+    for (const dir of ["source/css", "source/js"]) {
+      const root = path.join(hexo.base_dir, "node_modules/hexo-theme-reimu", dir);
+      for (const file of listFiles(root)) {
+        hash.update(path.relative(hexo.base_dir, file));
+        hash.update(readFileSync(file));
+      }
+    }
+    themeAssetVersion = hash.digest("hex").slice(0, 10);
+  }
+  return themeAssetVersion;
 };
 
 const parseArgs = (args) => {
@@ -101,12 +129,17 @@ hexo.extend.tag.register("cloud_tags", function () {
 hexo.extend.filter.register("after_render:html", function (html) {
   const iconFontUrl = `//at.alicdn.com/t/c/font_${hexo.theme.config.icon_font}.woff2`;
   const version = getAssetVersion();
+  const themeVersion = getThemeAssetVersion();
   return html
     .replace(/<a href="\/" id="(logo|subtitle)">/g, (_, id) => `<a href="${hexo.config.root}" id="${id}">`)
     .replace(/<a id="nav-rss-link"[^>]*><\/a>\s*/g, "")
     .replace(/(<span class="footer-info-sep[^>]*><\/span>\s*)[^<]+?(\s*<\/div>)/g, "$1Jingtine$2")
     .replaceAll(`href="${hexo.config.root}css/custom.css"`, `href="${hexo.config.root}css/custom.css?v=${version}"`)
     .replaceAll(`src="${hexo.config.root}js/accessibility.js"`, `src="${hexo.config.root}js/accessibility.js?v=${version}"`)
+    .replaceAll(`href="${hexo.config.root}css/style.css"`, `href="${hexo.config.root}css/style.css?v=${themeVersion}"`)
+    .replaceAll(`href="${hexo.config.root}css/loader.css"`, `href="${hexo.config.root}css/loader.css?v=${themeVersion}"`)
+    .replaceAll(`src="${hexo.config.root}js/script.js"`, `src="${hexo.config.root}js/script.js?v=${themeVersion}"`)
+    .replaceAll(`src="${hexo.config.root}js/pjax_script.js"`, `src="${hexo.config.root}js/pjax_script.js?v=${themeVersion}"`)
     .replaceAll(`href="${iconFontUrl}"`, `href="https:${iconFontUrl}"`);
 });
 hexo.extend.filter.register("after_render:css", function (css) {

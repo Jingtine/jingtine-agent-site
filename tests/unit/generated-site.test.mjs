@@ -294,6 +294,14 @@ test('injects the firework guard before the vendor script', async () => {
   assert.ok(home.indexOf('firework-guard.js') < home.indexOf('mouse-firework@0.2.0'), 'guard loads first');
 });
 
+test('versions the theme stylesheets and scripts for cache-safe deploys', async () => {
+  const home = await readFile('public/index.html', 'utf8');
+  assert.match(home, /href="\/jingtine-agent-site\/css\/style\.css\?v=[0-9a-f]{10}"/);
+  assert.match(home, /href="\/jingtine-agent-site\/css\/loader\.css\?v=[0-9a-f]{10}"/);
+  assert.match(home, /src="\/jingtine-agent-site\/js\/script\.js\?v=[0-9a-f]{10}"/);
+  assert.match(home, /src="\/jingtine-agent-site\/js\/pjax_script\.js\?v=[0-9a-f]{10}"/);
+});
+
 test('firework guard honors reduced motion', async () => {
   const code = await readFile('source/js/firework-guard.js', 'utf8');
   const loadGuard = matches => {
@@ -389,4 +397,11 @@ test('appends the by-nc-sa copyright declaration to posts', async () => {
   assert.match(post, /本文版权：/);
   assert.match(post, /href="https:\/\/creativecommons\.org\/licenses\/by-nc-sa\/4\.0\/deed\.zh"/);
   assert.match(post, /rel="noopener nofollow noreferrer"/);
+});
+
+test('shows the copyright declaration on every post page', async () => {
+  for (const slug of slugs) {
+    const page = await readFile(`public/posts/${slug}/index.html`, 'utf8');
+    assert.match(page, /class="article-copyright"/, slug);
+  }
 });
