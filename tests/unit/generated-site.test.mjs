@@ -373,7 +373,7 @@ test('renders the two-level categories page', async () => {
 test('features the engineering category and pins the refactor story', async () => {
   const home = await readFile('public/index.html', 'utf8');
   assert.equal((home.match(/class="post-categories-wrap"/g) || []).length, 1);
-  assert.match(home, /category-bloom\.webp/);
+  assert.match(home, /category-cover\.webp/);
   assert.match(home, />工程</);
   const badgeIndex = home.indexOf('post-sticky');
   const firstCardIndex = home.indexOf('post-wrapper');
