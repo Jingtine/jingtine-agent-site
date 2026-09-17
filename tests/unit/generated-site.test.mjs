@@ -370,10 +370,13 @@ test('renders the two-level categories page', async () => {
   }
 });
 
-test('features the category cards on the home page', async () => {
+test('features the engineering category and pins the refactor story', async () => {
   const home = await readFile('public/index.html', 'utf8');
-  assert.equal((home.match(/class="post-categories-wrap"/g) || []).length, 2);
+  assert.equal((home.match(/class="post-categories-wrap"/g) || []).length, 1);
   assert.match(home, /category-bloom\.webp/);
   assert.match(home, />工程</);
-  assert.match(home, />产品</);
+  const badgeIndex = home.indexOf('post-sticky');
+  const firstCardIndex = home.indexOf('post-wrapper');
+  const secondCardIndex = home.indexOf('post-wrapper', firstCardIndex + 1);
+  assert.ok(badgeIndex > firstCardIndex && badgeIndex < secondCardIndex, 'the pinned badge is on the first card');
 });

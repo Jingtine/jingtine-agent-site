@@ -188,7 +188,8 @@ test('categories page shows the taxonomy and nested links resolve', async ({ pag
   await expect(page.locator('#main')).not.toBeEmpty();
   if (!isMobile) {
     await page.goto('./');
-    await expect(page.locator('.post-categories-wrap')).toHaveCount(2);
+    await expect(page.locator('.post-categories-wrap')).toHaveCount(1);
+    await expect(page.locator('.post-wrapper').first().locator('.post-sticky')).toHaveText('置顶');
   }
 });
 

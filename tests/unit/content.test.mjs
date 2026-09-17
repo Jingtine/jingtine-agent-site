@@ -105,3 +105,8 @@ test('assigns the two-level category taxonomy to every post', async () => {
     assert.deepEqual(names, expected, slug);
   }
 });
+
+test('pins the refactor story to the top', async () => {
+  const text = await readFile('source/_posts/rebuilding-the-tea-house.md', 'utf8');
+  assert.match(text, /^sticky: true$/m);
+});

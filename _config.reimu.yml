@@ -56,8 +56,6 @@ home_categories:
   content:
     - categories: 工程
       cover: /images/category-bloom.webp
-    - categories: 产品
-      cover: /images/category-bloom.webp
 
 social:
   github: https://github.com/jingtine

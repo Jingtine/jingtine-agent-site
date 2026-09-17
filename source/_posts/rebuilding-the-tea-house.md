@@ -2,6 +2,7 @@
 title: "把网站重构了一遍"
 date: 2026-09-17 20:00:00
 slug: rebuilding-the-tea-house
+sticky: true
 description: "从手写站点换到 Hexo + Reimu 的琐碎记录。"
 categories:
   - 工程
