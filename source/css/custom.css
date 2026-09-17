@@ -63,6 +63,13 @@
   color: var(--red-1);
 }
 
+/* Reimu's sticky sidebar is a flex column; without this the player shrinks
+   under the taller common sidebar and clips its own content. */
+.sidebar-wrapper-container > #aplayer {
+  flex-shrink: 0;
+  width: 100%;
+}
+
 .tag-cloud-list {
   margin: 1rem 0 0.25rem;
   text-align: center;

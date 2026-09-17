@@ -25,6 +25,7 @@ test('defines a blue-purple Reimu palette and local stylesheet', async () => {
   assert.match(css, /prefers-reduced-motion: reduce/);
   assert.match(css, /\.project-grid/);
   assert.match(css, /\.reimu-bg\s*\{[^}]*display:\s*none\s*!important;/s);
+  assert.match(css, /\.sidebar-wrapper-container > #aplayer\s*\{[^}]*flex-shrink:\s*0;/s);
 });
 
 test('ships a local multi-size favicon', async () => {
