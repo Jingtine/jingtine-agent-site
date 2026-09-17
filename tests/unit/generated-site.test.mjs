@@ -380,3 +380,13 @@ test('features the engineering category and pins the refactor story', async () =
   const secondCardIndex = home.indexOf('post-wrapper', firstCardIndex + 1);
   assert.ok(badgeIndex > firstCardIndex && badgeIndex < secondCardIndex, 'the pinned badge is on the first card');
 });
+
+test('appends the by-nc-sa copyright declaration to posts', async () => {
+  const post = await readFile('public/posts/rebuilding-the-tea-house/index.html', 'utf8');
+  assert.match(post, /class="article-copyright"/);
+  assert.match(post, /本文作者：/);
+  assert.match(post, /本文链接：/);
+  assert.match(post, /本文版权：/);
+  assert.match(post, /href="https:\/\/creativecommons\.org\/licenses\/by-nc-sa\/4\.0\/deed\.zh"/);
+  assert.match(post, /rel="noopener nofollow noreferrer"/);
+});

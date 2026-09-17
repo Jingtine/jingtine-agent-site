@@ -82,6 +82,13 @@ toc_options:
   list_number: true
   min_depth: 2
   max_depth: 4
+article_copyright:
+  enable: true
+  content:
+    author: true
+    link: true
+    license: true
+    license_type: by-nc-sa
 generator_search:
   enable: true
   field: post

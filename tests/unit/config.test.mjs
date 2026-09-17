@@ -56,6 +56,11 @@ test('pins the footer copyright to the 2026 site year', async () => {
   assert.match(config, /^footer:\r?\n\s+since: 2026$/m);
 });
 
+test('shows the by-nc-sa article copyright declaration', async () => {
+  const config = await read('_config.reimu.yml');
+  assert.match(config, /article_copyright:\r?\n\s+enable: true\r?\n\s+content:\r?\n\s+author: true\r?\n\s+link: true\r?\n\s+license: true\r?\n\s+license_type: by-nc-sa/);
+});
+
 test('enables the green click firework', async () => {
   const config = await read('_config.reimu.yml');
   assert.match(config, /firework:\r?\n\s+enable: true/);
