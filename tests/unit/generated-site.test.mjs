@@ -360,3 +360,20 @@ test('mounts the sidebar audio player with the playlist', async () => {
     assert.match(entry.cover, /^\/jingtine-agent-site\/audio\/[a-z-]+\.webp$/);
   }
 });
+
+test('renders the two-level categories page', async () => {
+  const page = await readFile('public/categories/index.html', 'utf8');
+  assert.match(page, /<ul class="category-list">/);
+  assert.match(page, /category-list-child/);
+  for (const name of ['工程', '产品', '站点建设', '工具与流程', 'AI 与 Agent', '软件工程', '方法论', '设计', '项目复盘']) {
+    assert.ok(page.includes(`>${name}</a>`), name);
+  }
+});
+
+test('features the category cards on the home page', async () => {
+  const home = await readFile('public/index.html', 'utf8');
+  assert.equal((home.match(/class="post-categories-wrap"/g) || []).length, 2);
+  assert.match(home, /category-bloom\.webp/);
+  assert.match(home, />工程</);
+  assert.match(home, />产品</);
+});

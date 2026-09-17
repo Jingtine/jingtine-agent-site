@@ -4,7 +4,8 @@ date: 2026-07-12 12:00:00
 slug: opencode-superpowers-workflow
 description: "使用 OpenCode 和 Superpowers 技能系统规划后再编码的工作流。"
 categories:
-  - software-engineering
+  - 工程
+  - 工具与流程
 tags:
   - OpenCode
   - Superpowers

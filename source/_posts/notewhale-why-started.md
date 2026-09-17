@@ -4,7 +4,8 @@ date: 2026-07-13 12:00:00
 slug: notewhale-why-started
 description: "从学生痛点出发，构建一个 AI 驱动的知识管理平台。"
 categories:
-  - product-thinking
+  - 产品
+  - 项目复盘
 tags:
   - NoteWhale
   - 知识管理

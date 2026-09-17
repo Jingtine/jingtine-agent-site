@@ -158,6 +158,76 @@
   }
 }
 
+.article-entry .category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.25rem 0 0.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+.article-entry .category-list > .category-list-item {
+  flex: 1 1 16rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--red-2) 28%, transparent);
+  border-radius: 1rem;
+  background: linear-gradient(135deg, var(--red-5), var(--red-6));
+  box-shadow: 0 1rem 2.5rem color-mix(in srgb, var(--red-1) 10%, transparent);
+}
+
+.article-entry .category-list > .category-list-item > .category-list-link {
+  color: var(--red-0);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.article-entry .category-list > .category-list-item > .category-list-count {
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--red-2) 30%, transparent);
+  color: var(--red-0);
+  font-size: 0.78rem;
+}
+
+.article-entry .category-list-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.7rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.article-entry .category-list-child .category-list-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.18rem 0.7rem;
+  border: 1px solid color-mix(in srgb, var(--red-2) 35%, transparent);
+  border-radius: 999px;
+  background: #fff;
+}
+
+.article-entry .category-list-child .category-list-link {
+  color: color-mix(in srgb, var(--red-0) 72%, #14141b);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.article-entry .category-list-child .category-list-count {
+  color: color-mix(in srgb, var(--red-0) 55%, #14141b);
+  font-size: 0.75rem;
+}
+
+/* Reimu appends an iconfont arrow to article links; it both clutters the
+   category cards and lands in each link's accessible name. */
+.article-entry .category-list a::after {
+  content: none !important;
+}
+
 :focus-visible {
   outline: 3px solid var(--red-1);
   outline-offset: 3px;

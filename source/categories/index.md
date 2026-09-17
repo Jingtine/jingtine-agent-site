@@ -6,4 +6,4 @@ comments: false
 
 站内文章按主题分类整理，完整分类列表如下：
 
-{% list_categories show_count:true %}
+{% list_categories show_count:true depth:2 %}

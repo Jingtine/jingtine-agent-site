@@ -4,7 +4,8 @@ date: 2026-07-12 12:00:00
 slug: product-thinking-101
 description: "工程师如何培养产品思维，从技术视角走向用户视角。"
 categories:
-  - product-thinking
+  - 产品
+  - 方法论
 tags:
   - 产品思维
   - 工程师

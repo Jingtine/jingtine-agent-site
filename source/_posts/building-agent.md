@@ -4,7 +4,8 @@ date: 2026-07-11 12:00:00
 slug: building-agent
 description: "从零构建一个自主 Agent 的实践记录与思考。"
 categories:
-  - ai-agent
+  - 工程
+  - AI 与 Agent
 tags:
   - AI Agent
   - 实践

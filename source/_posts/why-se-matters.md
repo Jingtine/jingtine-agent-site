@@ -4,7 +4,8 @@ date: 2026-07-11 12:00:00
 slug: why-se-matters
 description: "软件工程实践如何影响 AI 项目的质量与可维护性。"
 categories:
-  - software-engineering
+  - 工程
+  - 软件工程
 tags:
   - 软件工程
   - AI

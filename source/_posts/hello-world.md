@@ -4,7 +4,8 @@ date: 2026-07-10 12:00:00
 slug: hello-world
 description: "第一篇博客文章，关于这个网站的诞生与愿景。"
 categories:
-  - ai-agent
+  - 工程
+  - 站点建设
 tags:
   - 个人网站
   - AI Agent

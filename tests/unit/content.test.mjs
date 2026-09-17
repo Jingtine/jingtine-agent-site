@@ -82,3 +82,26 @@ test('lists the friend links', async () => {
   assert.match(data, /- name: MellowBlog\r?\n\s+url: https:\/\/mellowwinds\.com\/\r?\n\s+desc: 纪念的螺壳里，仍存在着那年夏天的海\r?\n\s+image: https:\/\/mellowwinds\.com\/icon\/icon128\.png/);
   assert.doesNotMatch(data, /http:\/\//);
 });
+
+const taxonomy = {
+  'building-agent': ['工程', 'AI 与 Agent'],
+  'building-digital-garden': ['工程', '站点建设'],
+  'from-ui-to-product': ['产品', '设计'],
+  'github-pages-dev-notes': ['工程', '工具与流程'],
+  'hello-world': ['工程', '站点建设'],
+  'notewhale-why-started': ['产品', '项目复盘'],
+  'opencode-superpowers-workflow': ['工程', '工具与流程'],
+  'product-thinking-101': ['产品', '方法论'],
+  'rebuilding-the-tea-house': ['工程', '站点建设'],
+  'why-se-matters': ['工程', '软件工程'],
+};
+
+test('assigns the two-level category taxonomy to every post', async () => {
+  for (const [slug, expected] of Object.entries(taxonomy)) {
+    const text = await readFile(`source/_posts/${slug}.md`, 'utf8');
+    const block = /^categories:\r?\n((?:\s+- .*\r?\n?)+)/m.exec(text);
+    assert.ok(block, `${slug}: categories block`);
+    const names = block[1].split(/\r?\n/).map(line => line.trim().replace(/^- /, '')).filter(Boolean);
+    assert.deepEqual(names, expected, slug);
+  }
+});

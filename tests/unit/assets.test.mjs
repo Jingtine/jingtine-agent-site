@@ -13,6 +13,10 @@ test('ships local avatar, banner, and optimized WebP cover', async () => {
   assert.equal(cover.subarray(0, 4).toString('ascii'), 'RIFF');
   assert.equal(cover.subarray(8, 12).toString('ascii'), 'WEBP');
   assert.ok(cover.length < 450_000, `cover is ${cover.length} bytes`);
+  const categoryCover = await readFile('source/images/category-bloom.webp');
+  assert.equal(categoryCover.subarray(0, 4).toString('ascii'), 'RIFF');
+  assert.equal(categoryCover.subarray(8, 12).toString('ascii'), 'WEBP');
+  assert.ok(categoryCover.length < 450_000, `category cover is ${categoryCover.length} bytes`);
 });
 
 test('defines a blue-purple Reimu palette and local stylesheet', async () => {

@@ -4,7 +4,8 @@ date: 2026-07-13 12:00:00
 slug: from-ui-to-product
 description: "从 UI 打磨到产品思维，设计个人网站过程中的反思。"
 categories:
-  - product-thinking
+  - 产品
+  - 设计
 tags:
   - 产品思维
   - 设计

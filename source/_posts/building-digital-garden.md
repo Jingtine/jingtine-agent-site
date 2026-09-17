@@ -4,7 +4,8 @@ date: 2026-07-13 12:00:00
 slug: building-digital-garden
 description: "为什么我选择构建数字花园而不是传统作品集。"
 categories:
-  - software-engineering
+  - 工程
+  - 站点建设
 tags:
   - 数字花园
   - 个人网站

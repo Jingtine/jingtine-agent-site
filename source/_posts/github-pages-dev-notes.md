@@ -4,7 +4,8 @@ date: 2026-07-12 12:00:00
 slug: github-pages-dev-notes
 description: "在 GitHub Pages 上部署静态站点的技术笔记：缓存、资源路径与页面样式。"
 categories:
-  - software-engineering
+  - 工程
+  - 工具与流程
 tags:
   - GitHub Pages
   - 静态网站

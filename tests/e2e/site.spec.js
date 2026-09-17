@@ -176,6 +176,22 @@ test('home sidebar hosts the playlist assets', async ({ page, request }) => {
   }
 });
 
+test('categories page shows the taxonomy and nested links resolve', async ({ page, isMobile }) => {
+  await page.goto('./categories/');
+  await expect(page.locator('.category-list')).toBeVisible();
+  await expect(page.getByRole('link', { name: '工程', exact: true })).toBeVisible();
+  const child = page.getByRole('link', { name: '站点建设', exact: true });
+  await expect(child).toBeVisible();
+  await child.click();
+  await expect(page).toHaveURL(new RegExp(`${root}categories/`));
+  await expect(page.getByRole('heading', { name: /4\s*0\s*4/ })).toHaveCount(0);
+  await expect(page.locator('#main')).not.toBeEmpty();
+  if (!isMobile) {
+    await page.goto('./');
+    await expect(page.locator('.post-categories-wrap')).toHaveCount(2);
+  }
+});
+
 test('navigation excludes all retired experiences', async ({ page, isMobile }) => {
   await page.goto('./');
   const nav = await navigation(page, isMobile);

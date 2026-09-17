@@ -4,7 +4,8 @@ date: 2026-09-17 20:00:00
 slug: rebuilding-the-tea-house
 description: "从手写站点换到 Hexo + Reimu 的琐碎记录。"
 categories:
-  - software-engineering
+  - 工程
+  - 站点建设
 tags:
   - 个人网站
   - 重构
