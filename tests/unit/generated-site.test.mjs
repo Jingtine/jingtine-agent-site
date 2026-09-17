@@ -405,3 +405,10 @@ test('shows the copyright declaration on every post page', async () => {
     assert.match(page, /class="article-copyright"/, slug);
   }
 });
+
+test('keeps the copyright declaration off standalone pages', async () => {
+  for (const name of ['about', 'categories', 'friend', 'projects', 'tags']) {
+    const page = await readFile(`public/${name}/index.html`, 'utf8');
+    assert.ok(!page.includes('article-copyright'), name);
+  }
+});
