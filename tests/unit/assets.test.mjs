@@ -35,14 +35,17 @@ test('ships a local multi-size favicon', async () => {
   assert.ok(favicon.length < 100_000, `favicon is ${favicon.length} bytes`);
 });
 
-test('ships the self-hosted song and its cover', async () => {
-  const mp3 = await readFile('source/audio/yi-jian-ru-gu.mp3');
-  const hasId3 = mp3.subarray(0, 3).toString('ascii') === 'ID3';
-  const hasFrameSync = mp3[0] === 0xFF && (mp3[1] & 0xE0) === 0xE0;
-  assert.ok(hasId3 || hasFrameSync, 'valid mp3 header (ID3v2 tag or frame sync)');
-  assert.ok(mp3.length < 4_000_000, `mp3 is ${mp3.length} bytes`);
-  const cover = await readFile('source/audio/yi-jian-ru-gu.webp');
-  assert.equal(cover.subarray(0, 4).toString('ascii'), 'RIFF');
-  assert.equal(cover.subarray(8, 12).toString('ascii'), 'WEBP');
-  assert.ok(cover.length < 150_000, `cover is ${cover.length} bytes`);
+test('ships the self-hosted playlist and covers', async () => {
+  const slugs = ['yi-jian-ru-gu', 'laoge', 'yumu', 'sudi', 'rumi', 'shanshui', 'qingming', 'qiandu', 'huanting', 'wenquan', 'mingzhi', 'ruyue'];
+  for (const slug of slugs) {
+    const mp3 = await readFile(`source/audio/${slug}.mp3`);
+    const hasId3 = mp3.subarray(0, 3).toString('ascii') === 'ID3';
+    const hasFrameSync = mp3[0] === 0xFF && (mp3[1] & 0xE0) === 0xE0;
+    assert.ok(hasId3 || hasFrameSync, `${slug}: valid mp3 header`);
+    assert.ok(mp3.length < 4_000_000, `${slug}: mp3 is ${mp3.length} bytes`);
+    const cover = await readFile(`source/audio/${slug}.webp`);
+    assert.equal(cover.subarray(0, 4).toString('ascii'), 'RIFF', slug);
+    assert.equal(cover.subarray(8, 12).toString('ascii'), 'WEBP', slug);
+    assert.ok(cover.length < 150_000, `${slug}: cover is ${cover.length} bytes`);
+  }
 });

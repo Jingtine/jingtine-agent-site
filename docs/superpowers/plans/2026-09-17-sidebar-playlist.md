@@ -91,7 +91,7 @@ test('mounts the sidebar audio player with the playlist', async () => {
   assert.match(home, /<div id="aplayer"/);
   assert.match(home, /aplayer@1\.10\.1\/dist\/APlayer\.min\.js/);
   assert.doesNotMatch(home, /meting@2\.0\.1/);
-  const embedded = /audio: (\[[\s\S]*?\]),/.exec(home);
+  const embedded = /audio: (\[[\s\S]*?\])(?: \|\| \[\])?,/.exec(home);
   assert.ok(embedded, 'the audio list is embedded');
   const entries = JSON.parse(embedded[1]);
   assert.deepEqual(entries.map(entry => entry.name), [

@@ -83,13 +83,23 @@ test('rotates the tea-poem subtitle on the home page', async () => {
   );
 });
 
-test('plays the self-hosted song in the sidebar player', async () => {
+test('plays the self-hosted playlist in the sidebar player', async () => {
   const config = await read('_config.reimu.yml');
   assert.match(config, /aplayer:\r?\n\s+enable: true/);
   assert.match(config, /meting:\r?\n\s+enable: false/);
-  assert.match(config, /name: 一见如故/);
-  assert.match(config, /artist: 许嵩/);
-  assert.match(config, /url: \/jingtine-agent-site\/audio\/yi-jian-ru-gu\.mp3/);
-  assert.match(config, /cover: \/jingtine-agent-site\/audio\/yi-jian-ru-gu\.webp/);
   assert.match(config, /preload: none/);
+  assert.match(config, /listFolded: true/);
+  assert.match(config, /loop: all/);
+  const audioBlock = /audio:\r?\n([\s\S]*?)\r?\n\s+preload: none/.exec(config);
+  assert.ok(audioBlock, 'the audio block exists');
+  const names = [...audioBlock[1].matchAll(/- name: (.+)/g)].map(match => match[1].trim());
+  assert.deepEqual(names, [
+    '一见如故', '老歌', '雨幕', '天龙八部之宿敌', '如谜', '山水之间',
+    '清明雨上', '千百度', '幻听', '温泉', '明智之举', '如约而至',
+  ]);
+  for (const slug of ['laoge', 'yumu', 'sudi', 'rumi', 'shanshui', 'qingming', 'qiandu', 'huanting', 'wenquan', 'mingzhi', 'ruyue']) {
+    assert.match(config, new RegExp(`url: /jingtine-agent-site/audio/${slug}\\.mp3`));
+    assert.match(config, new RegExp(`cover: /jingtine-agent-site/audio/${slug}\\.webp`));
+  }
+  assert.match(config, /artist: 许嵩/);
 });

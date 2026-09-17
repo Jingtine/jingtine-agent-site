@@ -342,12 +342,21 @@ test('typing guard stills the subtitle under reduced motion', async () => {
   assert.equal(new normal.window.Typed() instanceof RealTyped, true, 'the vendor class passes through');
 });
 
-test('mounts the sidebar audio player with the song', async () => {
+test('mounts the sidebar audio player with the playlist', async () => {
   const home = await readFile('public/index.html', 'utf8');
   assert.match(home, /<div id="aplayer"/);
-  assert.match(home, /"name":"一见如故","artist":"许嵩"/);
-  assert.match(home, /"url":"\/jingtine-agent-site\/audio\/yi-jian-ru-gu\.mp3"/);
-  assert.match(home, /"cover":"\/jingtine-agent-site\/audio\/yi-jian-ru-gu\.webp"/);
   assert.match(home, /aplayer@1\.10\.1\/dist\/APlayer\.min\.js/);
   assert.doesNotMatch(home, /meting@2\.0\.1/);
+  const embedded = /audio: (\[[\s\S]*?\])(?: \|\| \[\])?,/.exec(home);
+  assert.ok(embedded, 'the audio list is embedded');
+  const entries = JSON.parse(embedded[1]);
+  assert.deepEqual(entries.map(entry => entry.name), [
+    '一见如故', '老歌', '雨幕', '天龙八部之宿敌', '如谜', '山水之间',
+    '清明雨上', '千百度', '幻听', '温泉', '明智之举', '如约而至',
+  ]);
+  for (const entry of entries) {
+    assert.equal(entry.artist, '许嵩');
+    assert.match(entry.url, /^\/jingtine-agent-site\/audio\/[a-z-]+\.mp3$/);
+    assert.match(entry.cover, /^\/jingtine-agent-site\/audio\/[a-z-]+\.webp$/);
+  }
 });

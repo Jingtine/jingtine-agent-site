@@ -142,7 +142,53 @@ player:
           artist: 许嵩
           url: /jingtine-agent-site/audio/yi-jian-ru-gu.mp3
           cover: /jingtine-agent-site/audio/yi-jian-ru-gu.webp
+        - name: 老歌
+          artist: 许嵩
+          url: /jingtine-agent-site/audio/laoge.mp3
+          cover: /jingtine-agent-site/audio/laoge.webp
+        - name: 雨幕
+          artist: 许嵩
+          url: /jingtine-agent-site/audio/yumu.mp3
+          cover: /jingtine-agent-site/audio/yumu.webp
+        - name: 天龙八部之宿敌
+          artist: 许嵩
+          url: /jingtine-agent-site/audio/sudi.mp3
+          cover: /jingtine-agent-site/audio/sudi.webp
+        - name: 如谜
+          artist: 许嵩
+          url: /jingtine-agent-site/audio/rumi.mp3
+          cover: /jingtine-agent-site/audio/rumi.webp
+        - name: 山水之间
+          artist: 许嵩
+          url: /jingtine-agent-site/audio/shanshui.mp3
+          cover: /jingtine-agent-site/audio/shanshui.webp
+        - name: 清明雨上
+          artist: 许嵩
+          url: /jingtine-agent-site/audio/qingming.mp3
+          cover: /jingtine-agent-site/audio/qingming.webp
+        - name: 千百度
+          artist: 许嵩
+          url: /jingtine-agent-site/audio/qiandu.mp3
+          cover: /jingtine-agent-site/audio/qiandu.webp
+        - name: 幻听
+          artist: 许嵩
+          url: /jingtine-agent-site/audio/huanting.mp3
+          cover: /jingtine-agent-site/audio/huanting.webp
+        - name: 温泉
+          artist: 许嵩
+          url: /jingtine-agent-site/audio/wenquan.mp3
+          cover: /jingtine-agent-site/audio/wenquan.webp
+        - name: 明智之举
+          artist: 许嵩
+          url: /jingtine-agent-site/audio/mingzhi.mp3
+          cover: /jingtine-agent-site/audio/mingzhi.webp
+        - name: 如约而至
+          artist: 许嵩
+          url: /jingtine-agent-site/audio/ruyue.mp3
+          cover: /jingtine-agent-site/audio/ruyue.webp
       preload: none
+      listFolded: true
+      loop: all
   meting:
     enable: false
 
