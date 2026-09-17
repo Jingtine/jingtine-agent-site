@@ -4,7 +4,7 @@ import { pathToFileURL } from 'node:url';
 
 const projectRoot = '/jingtine-agent-site/';
 const canonicalRoot = `https://jingtine.github.io${projectRoot}`;
-const approvedSlugs = ['building-agent', 'building-digital-garden', 'from-ui-to-product', 'github-pages-dev-notes', 'hello-world', 'notewhale-why-started', 'opencode-superpowers-workflow', 'product-thinking-101', 'why-se-matters'];
+const approvedSlugs = ['building-agent', 'building-digital-garden', 'from-ui-to-product', 'github-pages-dev-notes', 'hello-world', 'notewhale-why-started', 'opencode-superpowers-workflow', 'product-thinking-101', 'rebuilding-the-tea-house', 'why-se-matters'];
 const routes = ['index.html', 'archives/index.html', 'categories/index.html', 'tags/index.html', 'about/index.html', 'projects/index.html', 'friend/index.html', 'atom.xml'];
 const forbidden = /article\.html\?slug=|(?:reader|papers|wiki|assistant|status|guestbook)\.html|giscus\.app|@waline|valine|twikoo|gitalk|disqus|utterances|beaudar|data-repo-id/gi;
 
@@ -82,15 +82,15 @@ async function main() {
   }
   const postFiles = files.map(file => file.replaceAll('\\', '/')).filter(file => /^public\/posts\/[^/]+\/index\.html$/.test(file));
   const actualSlugs = postFiles.map(file => file.split('/')[2]).sort();
-  if (JSON.stringify(actualSlugs) !== JSON.stringify(approvedSlugs)) errors.push(`Expected exactly nine approved post slugs; found: ${actualSlugs.join(', ') || '(none)'}.`);
+  if (JSON.stringify(actualSlugs) !== JSON.stringify(approvedSlugs)) errors.push(`Expected exactly ten approved post slugs; found: ${actualSlugs.join(', ') || '(none)'}.`);
 
   if (await isFile('public/atom.xml')) {
     const feed = await readFile('public/atom.xml', 'utf8');
     const entries = [...feed.matchAll(/<entry\b[^>]*>([\s\S]*?)<\/entry\s*>/g)];
-    if (entries.length !== 9 || (feed.match(/<entry\b/g) || []).length !== 9) errors.push(`public/atom.xml: expected 9 Atom entries, found ${entries.length}.`);
+    if (entries.length !== 10 || (feed.match(/<entry\b/g) || []).length !== 10) errors.push(`public/atom.xml: expected 10 Atom entries, found ${entries.length}.`);
     const postUrls = new Set(approvedSlugs.map(slug => `${canonicalRoot}posts/${slug}/`));
     const entryIds = entries.map(entry => entry[1].match(/<id>([^<]+)<\/id>/)?.[1]);
-    if (entryIds.length !== postUrls.size || new Set(entryIds).size !== postUrls.size || entryIds.some(id => !postUrls.has(id))) errors.push('public/atom.xml: entries must use the nine project-root canonical post URLs.');
+    if (entryIds.length !== postUrls.size || new Set(entryIds).size !== postUrls.size || entryIds.some(id => !postUrls.has(id))) errors.push('public/atom.xml: entries must use the ten project-root canonical post URLs.');
     for (const match of feed.matchAll(/<id>([^<]+)<\/id>|<link\b[^>]*\bhref=["']([^"']+)["']/g)) {
       if (!(match[1] || match[2]).startsWith(canonicalRoot)) errors.push(`public/atom.xml: URL is outside canonical project root: ${match[1] || match[2]}`);
     }
@@ -126,7 +126,7 @@ async function main() {
     console.error(errors.map(error => `FAIL: ${error}`).join('\n'));
     process.exitCode = 1;
   } else {
-    console.log(`PASS: ${routes.length} routes, 9 posts, 9 Atom entries; ${htmlFiles.length} HTML files and ${referenceCount} local references checked.`);
+    console.log(`PASS: ${routes.length} routes, 10 posts, 10 Atom entries; ${htmlFiles.length} HTML files and ${referenceCount} local references checked.`);
   }
 }
 

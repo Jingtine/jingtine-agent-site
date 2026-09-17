@@ -9,7 +9,7 @@ import { createRequire } from 'node:module';
 import vm from 'node:vm';
 
 const require = createRequire(import.meta.url);
-const slugs = ['building-agent', 'building-digital-garden', 'from-ui-to-product', 'github-pages-dev-notes', 'hello-world', 'notewhale-why-started', 'opencode-superpowers-workflow', 'product-thinking-101', 'why-se-matters'];
+const slugs = ['building-agent', 'building-digital-garden', 'from-ui-to-product', 'github-pages-dev-notes', 'hello-world', 'notewhale-why-started', 'opencode-superpowers-workflow', 'product-thinking-101', 'rebuilding-the-tea-house', 'why-se-matters'];
 
 async function checker() {
   assert.equal(existsSync('scripts/check-site.mjs'), true, 'generated artifact checker exists');
@@ -120,15 +120,15 @@ test('cloud_tags emits palette chips with stable colors and escaped names', asyn
   assert.equal(render.call({}), '');
 });
 
-test('generates retained routes, nine posts, and an Atom feed', async () => {
+test('generates retained routes, ten posts, and an Atom feed', async () => {
   for (const route of ['index.html', 'archives/index.html', 'categories/index.html', 'tags/index.html', 'about/index.html', 'projects/index.html', 'friend/index.html', 'atom.xml']) {
     assert.equal(existsSync(`public/${route}`), true, route);
   }
   const posts = (await readdir('public/posts', { withFileTypes: true })).filter(item => item.isDirectory());
-  assert.equal(posts.length, 9);
+  assert.equal(posts.length, 10);
   assert.deepEqual(posts.map(item => item.name).sort(), slugs);
   const feed = await readFile('public/atom.xml', 'utf8');
-  assert.equal((feed.match(/<entry>/g) || []).length, 9);
+  assert.equal((feed.match(/<entry>/g) || []).length, 10);
   assert.match(feed, /https:\/\/jingtine\.github\.io\/jingtine-agent-site\/posts\//);
 });
 
@@ -139,11 +139,11 @@ test('renders the tags page as a Butterfly-style cloud', async () => {
   assert.ok(cloud, 'tag cloud container exists');
   assert.doesNotMatch(cloud[1], /tag-chip-/);
   const chips = [...cloud[1].matchAll(/<a href="([^"]+)" class="tag-cloud-item" style="font-size: ([^;]+); background-color: (#[0-9a-f]{6});">([^<]*)<\/a>/g)];
-  assert.equal(chips.length, 16);
-  assert.equal(new Set(chips.map(chip => chip[4])).size, 16);
+  assert.equal(chips.length, 18);
+  assert.equal(new Set(chips.map(chip => chip[4])).size, 18);
   for (const [, href, fontSize, color] of chips) {
     assert.ok(href.startsWith('/jingtine-agent-site/tags/'), href);
-    assert.ok(['1.2em', '1.5em'].includes(fontSize), fontSize);
+    assert.ok(['1.2em', '1.35em', '1.5em'].includes(fontSize), fontSize);
     assert.ok(palette.includes(color), color);
   }
   assert.ok(chips.some(chip => chip[2] === '1.5em'), 'the most-used tags render larger');
@@ -238,7 +238,7 @@ test('CLI rejects missing routes, wrong slugs/feed, nested forbidden clients and
       ['about/index.html', '<script src="https://giscus.app/client.js"></script>', /about\/index.html.*giscus/i],
       ['about/index.html', '<a href="../missing/">Missing</a>', /about\/index.html.*missing/],
       ['about/index.html', '<img src="/images/bad.webp">', /project root|base path/i],
-      ['atom.xml', '<feed></feed>', /nine|9.*entr/i],
+      ['atom.xml', '<feed></feed>', /ten|10.*entr/i],
       ['atom.xml', feed.replace('https://jingtine.github.io/jingtine-agent-site/posts/', 'https://jingtine.github.io/posts/'), /canonical|project.root/i],
     ]) {
       const original = await readFile(path.join(fixture, 'public', name), 'utf8');

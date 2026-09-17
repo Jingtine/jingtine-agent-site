@@ -57,11 +57,11 @@ async function navigation(page, isMobile) {
   return page.getByRole('navigation', { name: 'Primary navigation' });
 }
 
-test('Home shows its identity, author avatar, nine cards and retained links', async ({ page, request, isMobile }) => {
+test('Home shows its identity, author avatar, ten cards and retained links', async ({ page, request, isMobile }) => {
   await page.goto('./');
   await expect(page.locator('#loader .loading-word')).toHaveText('茶香氤氲时...');
   await expect(page.getByRole('heading', { name: '不驚茶坊', exact: true })).toBeVisible();
-  await expect(page.locator('.post-wrapper')).toHaveCount(9);
+  await expect(page.locator('.post-wrapper')).toHaveCount(10);
   await expect(page.getByRole('heading', { name: 'Building My Digital Garden', exact: true })).toBeVisible();
   const nav = await navigation(page, isMobile);
   for (const [name, route] of [['归档', 'archives'], ['项目', 'projects'], ['关于', 'about'], ['友链', 'friend']]) {
@@ -321,7 +321,7 @@ test('tags page renders a Butterfly-style multicolor cloud', async ({ page, isMo
     });
   await page.goto('./tags/');
   const chips = page.locator('.tag-cloud-list a');
-  await expect(chips).toHaveCount(16);
+  await expect(chips).toHaveCount(18);
   await expect(chips.first()).toHaveAttribute('href', new RegExp(`^${root}tags/`));
 
   const styles = await chips.evaluateAll(elements => elements.map(element => {
@@ -353,7 +353,7 @@ test('tags page renders a Butterfly-style multicolor cloud', async ({ page, isMo
     expect(style.after).toBe('none');
     expect(style.shine).toContain('gradient');
   }
-  expect(new Set(styles.map(style => style.fontSize)).size).toBe(2);
+  expect(new Set(styles.map(style => style.fontSize)).size).toBe(3);
 
   // The enabled sidebar widgets push the first chip to tab stop 44 on desktop.
   const tabBudget = 60;

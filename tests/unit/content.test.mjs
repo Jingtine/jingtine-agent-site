@@ -5,10 +5,11 @@ import { readdir, readFile } from 'node:fs/promises';
 const expectedSlugs = [
   'building-agent', 'building-digital-garden', 'from-ui-to-product',
   'github-pages-dev-notes', 'hello-world', 'notewhale-why-started',
-  'opencode-superpowers-workflow', 'product-thinking-101', 'why-se-matters'
+  'opencode-superpowers-workflow', 'product-thinking-101',
+  'rebuilding-the-tea-house', 'why-se-matters'
 ];
 
-test('migrates exactly the nine public posts to YAML front matter', async () => {
+test('migrates exactly the ten public posts to YAML front matter', async () => {
   const files = (await readdir('source/_posts')).filter(name => name.endsWith('.md')).sort();
   assert.deepEqual(files, expectedSlugs.map(slug => `${slug}.md`).sort());
   for (const file of files) {
