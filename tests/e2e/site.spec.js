@@ -112,7 +112,7 @@ test('home header shows the banner illustration', async ({ page, request }) => {
   expect((await request.get(`${root}images/banner-illustration.webp`)).status()).toBe(200);
 });
 
-test('friend page shows the classmate card', async ({ page }) => {
+test('friend page shows the friend cards', async ({ page }) => {
   await page.goto('./friend/');
   const card = page.locator('.friend-item-wrap').first();
   await expect(card.locator('.friend-name')).toHaveText('江畔絮语');
@@ -121,6 +121,12 @@ test('friend page shows the classmate card', async ({ page }) => {
   await expect(card.locator('a')).toHaveAttribute('href', 'https://water1i1y.org/');
   await expect(card.locator('a')).toHaveAttribute('target', '_blank');
   await expect(card.locator('a')).toHaveAttribute('rel', 'noopener nofollow noreferrer');
+  const mellow = page.locator('.friend-item-wrap').filter({ hasText: 'MellowBlog' });
+  await expect(mellow.locator('.friend-name')).toHaveText('MellowBlog');
+  await expect(mellow.locator('.friend-desc')).toContainText('纪念的螺壳里，仍存在着那年夏天的海');
+  await expect(mellow.locator('img')).toHaveAttribute('data-src', 'https://mellowwinds.com/icon/icon128.png');
+  await expect(mellow.locator('a')).toHaveAttribute('href', 'https://mellowwinds.com/');
+  await expect(mellow.locator('a')).toHaveAttribute('rel', 'noopener nofollow noreferrer');
 });
 
 test('serves the site favicon', async ({ page, request }) => {

@@ -75,7 +75,9 @@ for (const [id, details] of Object.entries(retainedProjects)) {
   });
 }
 
-test('lists the classmate blog as a friend link', async () => {
+test('lists the friend links', async () => {
   const data = await readFile('source/friend/_data.yml', 'utf8');
   assert.match(data, /- name: 江畔絮语\r?\n\s+url: https:\/\/water1i1y\.org\/\r?\n\s+desc: 一位文院学生思考的存档地\r?\n\s+image: https:\/\/water1i1y\.org\/img\/dia\.jpg/);
+  assert.match(data, /- name: MellowBlog\r?\n\s+url: https:\/\/mellowwinds\.com\/\r?\n\s+desc: 纪念的螺壳里，仍存在着那年夏天的海\r?\n\s+image: https:\/\/mellowwinds\.com\/icon\/icon128\.png/);
+  assert.doesNotMatch(data, /http:\/\//);
 });

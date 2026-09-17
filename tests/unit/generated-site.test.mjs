@@ -272,6 +272,11 @@ test('renders the friend card with safe external attributes', async () => {
   assert.match(friend, /<img class="no-lightbox" src="https:\/\/water1i1y\.org\/img\/dia\.jpg" alt="江畔絮语">/);
   assert.match(friend, /<div class="friend-name">\s*江畔絮语\s*<\/div>/);
   assert.match(friend, /一位文院学生思考的存档地/);
+  assert.match(friend, /<a href="https:\/\/mellowwinds\.com\/" rel="noopener nofollow noreferrer" target="_blank"><\/a>/);
+  assert.match(friend, /<img class="no-lightbox" src="https:\/\/mellowwinds\.com\/icon\/icon128\.png" alt="MellowBlog">/);
+  assert.match(friend, /<div class="friend-name">\s*MellowBlog\s*<\/div>/);
+  assert.match(friend, /纪念的螺壳里，仍存在着那年夏天的海/);
+  assert.equal((friend.match(/friend-item-wrap/g) || []).length, 2);
 });
 
 test('serves the site favicon from the project root', async () => {
