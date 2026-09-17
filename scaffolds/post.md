@@ -1,11 +1,10 @@
 ---
 title: {{ title }}
 date: {{ date }}
-updated: {{ date }}
+slug: {{ slug }}
 description:
 categories:
 tags: []
 comments: false
 toc: true
 ---
-

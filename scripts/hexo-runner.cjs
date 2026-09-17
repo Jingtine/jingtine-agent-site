@@ -18,13 +18,27 @@ async function stop() {
 process.once('SIGINT', stop);
 process.once('SIGTERM', stop);
 
+const usage = [
+  'Usage: node scripts/hexo-runner.cjs clean|generate|server [--port PORT] [--ip IP] [--static]',
+  '       node scripts/hexo-runner.cjs new <slug> "<title>"',
+].join('\n');
+
 async function main() {
   const { positionals, values } = parseArgs({
     allowPositionals: true,
     options: { port: { type: 'string', short: 'p' }, ip: { type: 'string', short: 'i' }, static: { type: 'boolean', short: 's' } },
   });
   const command = positionals[0];
-  if (!['clean', 'generate', 'server'].includes(command) || positionals.length !== 1) throw new Error('Usage: node scripts/hexo-runner.cjs clean|generate|server [--port PORT] [--ip IP] [--static]');
+  if (!['clean', 'generate', 'server', 'new'].includes(command)) throw new Error(usage);
+  if (command === 'new') {
+    const [slug, ...titleParts] = positionals.slice(1);
+    if (!slug || !/^[a-z0-9-]+$/.test(slug) || titleParts.length === 0) throw new Error(usage);
+    await hexo.init();
+    await hexo.call('new', { _: [titleParts.join(' ')], slug });
+    await hexo.exit();
+    return;
+  }
+  if (positionals.length !== 1) throw new Error(usage);
   await hexo.init();
   await hexo.loadPlugin(path.join(siteRoot, 'scripts', 'tags.js'));
   server = await hexo.call(command, values);
