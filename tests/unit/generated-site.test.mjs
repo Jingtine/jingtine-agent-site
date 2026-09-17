@@ -312,3 +312,32 @@ test('firework guard honors reduced motion', async () => {
   normal.firework({});
   assert.equal(normalCalled, true, 'the effect stays enabled without the preference');
 });
+
+test('wires the home subtitle typing to the tea poems', async () => {
+  const home = await readFile('public/index.html', 'utf8');
+  assert.match(home, /<span id="subtitle"><span><\/span><\/span>/);
+  assert.match(home, /typed\.js@2\.1\.0\/dist\/typed\.umd\.js/);
+  assert.match(home, /window\.subtitleTypingConfig/);
+  assert.match(home, /山中何事？松花酿酒，春水煎茶。/);
+  assert.match(home, /<script src="\/jingtine-agent-site\/js\/typing-guard\.js"><\/script>/);
+  assert.ok(home.indexOf('typing-guard.js') < home.indexOf('typed.js@2.1.0'), 'guard loads first');
+});
+
+test('typing guard stills the subtitle under reduced motion', async () => {
+  const code = await readFile('source/js/typing-guard.js', 'utf8');
+  const loadGuard = matches => {
+    const target = { textContent: '' };
+    const document = { readyState: 'complete', querySelector: () => target, addEventListener() {} };
+    const window = { matchMedia: () => ({ matches }), subtitleTypingConfig: { strings: ['第一句', '第二句'] } };
+    vm.runInNewContext(code, { window, document });
+    return { window, target };
+  };
+  const reduced = loadGuard(true);
+  const instance = new reduced.window.Typed('#subtitle span', { strings: ['第一句', '第二句'] });
+  assert.equal(reduced.target.textContent, '第一句');
+  assert.equal(typeof instance.destroy, 'function');
+  const normal = loadGuard(false);
+  class RealTyped { constructor() { this.animated = true; } }
+  normal.window.Typed = RealTyped;
+  assert.equal(new normal.window.Typed() instanceof RealTyped, true, 'the vendor class passes through');
+});

@@ -157,6 +157,16 @@ test('click firework respects reduced motion', async ({ page }) => {
   expect(normal).toBe(true);
 });
 
+test('home subtitle types the tea poems and respects reduced motion', async ({ page }) => {
+  await page.goto('./');
+  await expect(page.locator('script[src*="typed.js"]')).toHaveCount(1);
+  const strings = await page.evaluate(() => window.subtitleTypingConfig?.strings ?? []);
+  expect(strings.length).toBe(7);
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.reload();
+  await expect(page.locator('#subtitle')).toContainText('山中何事？松花酿酒，春水煎茶。');
+});
+
 test('navigation excludes all retired experiences', async ({ page, isMobile }) => {
   await page.goto('./');
   const nav = await navigation(page, isMobile);

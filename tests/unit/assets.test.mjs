@@ -20,7 +20,7 @@ test('defines a blue-purple Reimu palette and local stylesheet', async () => {
   assert.match(theme, /internal_theme:/);
   assert.match(theme, /--red-1: "#6f7fe8"/);
   assert.match(theme, /--red-2: "#8795ee"/);
-  assert.match(theme, /head_end: '<link rel="stylesheet" href="\/jingtine-agent-site\/css\/custom\.css"><script src="\/jingtine-agent-site\/js\/firework-guard\.js"><\/script>'/);
+  assert.match(theme, /head_end: '<link rel="stylesheet" href="\/jingtine-agent-site\/css\/custom\.css"><script src="\/jingtine-agent-site\/js\/firework-guard\.js"><\/script><script src="\/jingtine-agent-site\/js\/typing-guard\.js"><\/script>'/);
   const css = await readFile('source/css/custom.css', 'utf8');
   assert.match(css, /prefers-reduced-motion: reduce/);
   assert.match(css, /\.project-grid/);

@@ -30,6 +30,27 @@ cover: /images/default-campus-cover.webp
 favicon: /images/site-favicon.ico
 rss: atom.xml
 
+subtitle:
+  typing:
+    enable: true
+    strings:
+      - 山中何事？松花酿酒，春水煎茶。
+      - 今日鬓丝禅榻畔，茶烟轻飏落花风。
+      - 井放辘轳闲浸酒，笼开鹦鹉报煎茶。
+      - 被酒莫惊春睡重，赌书消得泼茶香。
+      - 雪沫乳花浮午盏，蓼茸蒿笋试春盘。
+      - 竹下忘言对紫茶，全胜羽客醉流霞。
+      - 野泉烟火白云间，坐饮香茶爱此山。
+    typeSpeed: 100
+    backSpeed: 50
+    backDelay: 2600
+    startDelay: 300
+    loop: true
+    shuffle: false
+    showCursor: true
+    cursorChar: "|"
+    smartBackspace: false
+
 social:
   github: https://github.com/jingtine
   email: mailto:jingtineli@smail.nju.edu.cn
@@ -160,7 +181,7 @@ internal_theme:
     --red-6: "rgba(89, 104, 216, 0.22)"
 
 injector:
-  head_end: '<link rel="stylesheet" href="/jingtine-agent-site/css/custom.css"><script src="/jingtine-agent-site/js/firework-guard.js"></script>'
+  head_end: '<link rel="stylesheet" href="/jingtine-agent-site/css/custom.css"><script src="/jingtine-agent-site/js/firework-guard.js"></script><script src="/jingtine-agent-site/js/typing-guard.js"></script>'
   head_begin:
   body_begin:
   body_end: '<script src="/jingtine-agent-site/js/accessibility.js" defer></script>'
