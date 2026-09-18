@@ -1,0 +1,24 @@
+- name: 安娜的档案
+  url: https://annas-archive.pk/
+  desc: 电子书的大书库，找不到纸本时来这里翻。
+  image: /jingtine-agent-site/images/link-placeholder.png
+- name: 南软佛脚玩乐指南
+  url: https://costg.gitbook.io/njuse
+  desc: 学长学姐整理的课程笔记与考卷，抱佛脚也抱得安心。
+  image: "https://costg.gitbook.io/njuse/~gitbook/icon?size=medium&theme=light&border=false"
+- name: 小百合图书馆
+  url: https://lilybre.lilystudio.space/
+  desc: 南哪助手开的一间线上书房，书目与书单都在这里。
+  image: /jingtine-agent-site/images/link-placeholder.png
+- name: 音游档案馆
+  url: https://rhythmarchive.github.io/
+  desc: 收录音游曲绘与立绘的档案馆，翻素材常来。
+  image: https://rhythmarchive.github.io/brand-mark.svg
+- name: 洛谷
+  url: https://www.luogu.com.cn/
+  desc: 算法题的老地方，刷题与评测都在这儿。
+  image: https://www.luogu.com.cn/favicon.ico
+- name: NJU LaTeX
+  url: https://tex.nju.edu.cn/
+  desc: 南大的在线 LaTeX 平台，写论文排版时来。
+  image: https://tex.nju.edu.cn/favicon.ico

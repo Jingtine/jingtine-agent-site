@@ -266,8 +266,10 @@ test('does not generate retired routes or comment clients', async () => {
   assert.doesNotMatch(home, /giscus\.app|@waline|valine|twikoo|gitalk|disqus|utterances|beaudar|guestbook|reader\.html|papers\.html|wiki\.html/i);
 });
 
-test('renders the friend card with safe external attributes', async () => {
+test('renders the friend cards with safe external attributes in two groups', async () => {
   const friend = await readFile('public/friend/index.html', 'utf8');
+  assert.match(friend, /故友茶席/);
+  assert.match(friend, /常去之处/);
   assert.match(friend, /<a href="https:\/\/water1i1y\.org\/" rel="noopener nofollow noreferrer" target="_blank"><\/a>/);
   assert.match(friend, /<img class="no-lightbox" src="https:\/\/water1i1y\.org\/img\/dia\.jpg" alt="江畔絮语">/);
   assert.match(friend, /<div class="friend-name">\s*江畔絮语\s*<\/div>/);
@@ -276,7 +278,12 @@ test('renders the friend card with safe external attributes', async () => {
   assert.match(friend, /<img class="no-lightbox" src="https:\/\/mellowwinds\.com\/icon\/icon128\.png" alt="MellowBlog">/);
   assert.match(friend, /<div class="friend-name">\s*MellowBlog\s*<\/div>/);
   assert.match(friend, /纪念的螺壳里，仍存在着那年夏天的海/);
-  assert.equal((friend.match(/friend-item-wrap/g) || []).length, 2);
+  assert.match(friend, /<a href="https:\/\/annas-archive\.pk\/" rel="noopener nofollow noreferrer" target="_blank"><\/a>/);
+  assert.match(friend, /<img class="no-lightbox" src="\/jingtine-agent-site\/images\/link-placeholder\.png" alt="安娜的档案">/);
+  assert.match(friend, /<div class="friend-name">\s*洛谷\s*<\/div>/);
+  assert.match(friend, /算法题的老地方，刷题与评测都在这儿。/);
+  assert.match(friend, /<img class="no-lightbox" src="https:\/\/www\.luogu\.com\.cn\/favicon\.ico" alt="洛谷">/);
+  assert.equal((friend.match(/friend-item-wrap/g) || []).length, 8);
 });
 
 test('serves the site favicon from the project root', async () => {

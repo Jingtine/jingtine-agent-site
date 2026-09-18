@@ -83,6 +83,27 @@ test('lists the friend links', async () => {
   assert.doesNotMatch(data, /http:\/\//);
 });
 
+const recommendedSites = [
+  ['安娜的档案', 'https://annas-archive.pk/', '电子书的大书库，找不到纸本时来这里翻。', '/jingtine-agent-site/images/link-placeholder.png'],
+  ['南软佛脚玩乐指南', 'https://costg.gitbook.io/njuse', '学长学姐整理的课程笔记与考卷，抱佛脚也抱得安心。', 'https://costg.gitbook.io/njuse/~gitbook/icon?size=medium&theme=light&border=false'],
+  ['小百合图书馆', 'https://lilybre.lilystudio.space/', '南哪助手开的一间线上书房，书目与书单都在这里。', '/jingtine-agent-site/images/link-placeholder.png'],
+  ['音游档案馆', 'https://rhythmarchive.github.io/', '收录音游曲绘与立绘的档案馆，翻素材常来。', 'https://rhythmarchive.github.io/brand-mark.svg'],
+  ['洛谷', 'https://www.luogu.com.cn/', '算法题的老地方，刷题与评测都在这儿。', 'https://www.luogu.com.cn/favicon.ico'],
+  ['NJU LaTeX', 'https://tex.nju.edu.cn/', '南大的在线 LaTeX 平台，写论文排版时来。', 'https://tex.nju.edu.cn/favicon.ico'],
+];
+
+test('lists the recommended sites for the second friend-page group', async () => {
+  const data = (await readFile('source/friend/_sites.yml', 'utf8')).replace(/\r?\n/g, '\n');
+  assert.doesNotMatch(data, /http:\/\//);
+  assert.equal((data.match(/^- name:/gm) || []).length, recommendedSites.length);
+  for (const [name, url, desc, image] of recommendedSites) {
+    assert.ok(data.includes(`- name: ${name}`), `Missing site: ${name}`);
+    assert.ok(data.includes(`  url: ${url}`), `Missing URL: ${url}`);
+    assert.ok(data.includes(`  desc: ${desc}`), `Missing description: ${desc}`);
+    assert.ok(data.includes(image), `Missing image: ${image}`);
+  }
+});
+
 const taxonomy = {
   'building-agent': ['工程', 'AI 与 Agent'],
   'building-digital-garden': ['工程', '站点建设'],
