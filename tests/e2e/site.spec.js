@@ -112,8 +112,11 @@ test('home header shows the banner illustration', async ({ page, request }) => {
   expect((await request.get(`${root}images/banner-illustration.webp`)).status()).toBe(200);
 });
 
-test('friend page shows the friend cards', async ({ page }) => {
+test('friend page shows both link groups with safe external attributes', async ({ page }) => {
   await page.goto('./friend/');
+  await expect(page.locator('h2', { hasText: '故友茶席' })).toBeVisible();
+  await expect(page.locator('h2', { hasText: '常去之处' })).toBeVisible();
+  await expect(page.locator('.friend-item-wrap')).toHaveCount(8);
   const card = page.locator('.friend-item-wrap').first();
   await expect(card.locator('.friend-name')).toHaveText('江畔絮语');
   await expect(card.locator('.friend-desc')).toContainText('一位文院学生思考的存档地');
@@ -127,6 +130,15 @@ test('friend page shows the friend cards', async ({ page }) => {
   await expect(mellow.locator('img')).toHaveAttribute('data-src', 'https://mellowwinds.com/icon/icon128.png');
   await expect(mellow.locator('a')).toHaveAttribute('href', 'https://mellowwinds.com/');
   await expect(mellow.locator('a')).toHaveAttribute('rel', 'noopener nofollow noreferrer');
+  const luogu = page.locator('.friend-item-wrap').filter({ hasText: '洛谷' });
+  await expect(luogu.locator('.friend-name')).toHaveText('洛谷');
+  await expect(luogu.locator('.friend-desc')).toContainText('算法题的老地方，刷题与评测都在这儿。');
+  await expect(luogu.locator('img')).toHaveAttribute('data-src', 'https://www.luogu.com.cn/favicon.ico');
+  await expect(luogu.locator('a')).toHaveAttribute('href', 'https://www.luogu.com.cn/');
+  await expect(luogu.locator('a')).toHaveAttribute('rel', 'noopener nofollow noreferrer');
+  const placeholder = page.locator('.friend-item-wrap').filter({ hasText: '小百合图书馆' });
+  await expect(placeholder.locator('img')).toHaveAttribute('data-src', /\/jingtine-agent-site\/images\/link-placeholder\.png$/);
+  await expect(placeholder.locator('a')).toHaveAttribute('href', 'https://lilybre.lilystudio.space/');
 });
 
 test('serves the site favicon', async ({ page, request }) => {
