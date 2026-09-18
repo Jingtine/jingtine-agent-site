@@ -17,6 +17,8 @@ test('documents the authoring workflows and ships the post scaffold', async () =
   const readme = await readFile('README.md', 'utf8');
   assert.match(readme, /npm run new -- /);
   assert.match(readme, /source\/friend\/_data\.yml/);
+  assert.match(readme, /source\/friend\/_sites\.yml/);
+  assert.match(readme, /link-placeholder\.png/);
   assert.match(readme, /banner-illustration\.webp/);
   assert.doesNotMatch(readme, /banner-placeholder/);
   const scaffold = await readFile('scaffolds/post.md', 'utf8');

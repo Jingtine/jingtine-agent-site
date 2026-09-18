@@ -57,7 +57,7 @@ npm run server
 
 ## 添加友链
 
-编辑 `source/friend/_data.yml` 追加条目：
+朋友的博客编辑 `source/friend/_data.yml`，常去与推荐的站点编辑 `source/friend/_sites.yml`，两者格式相同，追加条目：
 
 ```yaml
 - name: 显示名
@@ -65,6 +65,8 @@ npm run server
   desc: 一句话简介
   image: https://example.com/avatar.jpg
 ```
+
+没有合适图标的条目使用默认图标 `/jingtine-agent-site/images/link-placeholder.png`。
 
 `image` 可用外链（建议 https）；本地图片请放进 `source/images/`，并写完整站点路径 `/jingtine-agent-site/images/xxx.jpg`——友链数据原样嵌入 HTML，不会自动补前缀。改完运行 `npm test`，通过后提交推送即可。
 
