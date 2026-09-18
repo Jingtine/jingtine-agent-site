@@ -16,8 +16,8 @@ test('keeps the root to config and docs with build scripts under scripts/', asyn
 test('documents the authoring workflows and ships the post scaffold', async () => {
   const readme = await readFile('README.md', 'utf8');
   assert.match(readme, /npm run new -- /);
-  assert.match(readme, /source\/friend\/_data\.yml/);
-  assert.match(readme, /source\/friend\/_sites\.yml/);
+  assert.match(readme, /source\/link\/_data\.yml/);
+  assert.match(readme, /source\/link\/_sites\.yml/);
   assert.match(readme, /link-placeholder\.png/);
   assert.match(readme, /banner-illustration\.webp/);
   assert.doesNotMatch(readme, /banner-placeholder/);

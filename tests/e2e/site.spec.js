@@ -64,7 +64,7 @@ test('Home shows its identity, author avatar, ten cards and retained links', asy
   await expect(page.locator('.post-wrapper')).toHaveCount(10);
   await expect(page.getByRole('heading', { name: 'Building My Digital Garden', exact: true })).toBeVisible();
   const nav = await navigation(page, isMobile);
-  for (const [name, route] of [['归档', 'archives'], ['项目', 'projects'], ['关于', 'about'], ['友链', 'friend']]) {
+  for (const [name, route] of [['归档', 'archives'], ['项目', 'projects'], ['关于', 'about'], ['友链', 'link']]) {
     await expect(nav.getByRole('link', { name, exact: true })).toHaveAttribute('href', `${root}${route}`);
     await expect(nav.getByRole('link', { name, exact: true })).toBeVisible();
   }
@@ -113,7 +113,7 @@ test('home header shows the banner illustration', async ({ page, request }) => {
 });
 
 test('friend page shows both link groups with safe external attributes', async ({ page }) => {
-  await page.goto('./friend/');
+  await page.goto('./link/');
   await expect(page.locator('h2', { hasText: '故友茶席' })).toBeVisible();
   await expect(page.locator('h2', { hasText: '常去之处' })).toBeVisible();
   await expect(page.locator('.friend-item-wrap')).toHaveCount(8);
@@ -334,7 +334,7 @@ test('light and dark contexts use different readable theme tokens', async ({ bro
 });
 
 test('retained page and taxonomy navigation resolves without 404s', async ({ page, isMobile }) => {
-  for (const [name, route] of [['项目', 'projects'], ['关于', 'about'], ['友链', 'friend'], ['归档', 'archives'], ['分类', 'categories'], ['标签', 'tags']]) {
+  for (const [name, route] of [['项目', 'projects'], ['关于', 'about'], ['友链', 'link'], ['归档', 'archives'], ['分类', 'categories'], ['标签', 'tags']]) {
     await page.goto('./');
     const nav = await navigation(page, isMobile);
     await nav.getByRole('link', { name, exact: true }).click();

@@ -11,7 +11,7 @@ Jingtine 的个人作品集与写作站点，使用 Hexo 8 和 Reimu 生成，�
 - 分类与标签：`/jingtine-agent-site/categories/`、`/jingtine-agent-site/tags/`
 - 项目：`/jingtine-agent-site/projects/`
 - 关于：`/jingtine-agent-site/about/`
-- 友链：`/jingtine-agent-site/friend/`
+- 友链：`/jingtine-agent-site/link/`
 - Feed：`/jingtine-agent-site/atom.xml`
 
 ## 环境要求
@@ -57,7 +57,7 @@ npm run server
 
 ## 添加友链
 
-朋友的博客编辑 `source/friend/_data.yml`，常去与推荐的站点编辑 `source/friend/_sites.yml`，两者格式相同，追加条目：
+朋友的博客编辑 `source/link/_data.yml`，常去与推荐的站点编辑 `source/link/_sites.yml`，两者格式相同，追加条目：
 
 ```yaml
 - name: 显示名
