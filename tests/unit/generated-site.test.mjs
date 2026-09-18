@@ -262,6 +262,7 @@ test('does not generate retired routes or comment clients', async () => {
   for (const route of ['reader', 'papers', 'wiki', 'assistant', 'status', 'guestbook']) {
     assert.equal(existsSync(`public/${route}`), false, route);
   }
+  assert.equal(existsSync('public/friend'), false, 'the abandoned /friend/ route stays unpublished');
   const home = await readFile('public/index.html', 'utf8');
   assert.doesNotMatch(home, /giscus\.app|@waline|valine|twikoo|gitalk|disqus|utterances|beaudar|guestbook|reader\.html|papers\.html|wiki\.html/i);
 });
