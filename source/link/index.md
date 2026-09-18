@@ -11,10 +11,10 @@ copyright: false
 
 一盏茶的距离，听听他们最近写了什么。
 
-{% friendsLink friend/_data.yml %}
+{% friendsLink link/_data.yml %}
 
 ## 常去之处
 
 读书、刷题、找乐子的落脚点。
 
-{% friendsLink friend/_sites.yml %}
+{% friendsLink link/_sites.yml %}

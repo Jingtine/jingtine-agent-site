@@ -121,7 +121,7 @@ test('cloud_tags emits palette chips with stable colors and escaped names', asyn
 });
 
 test('generates retained routes, ten posts, and an Atom feed', async () => {
-  for (const route of ['index.html', 'archives/index.html', 'categories/index.html', 'tags/index.html', 'about/index.html', 'projects/index.html', 'friend/index.html', 'atom.xml']) {
+  for (const route of ['index.html', 'archives/index.html', 'categories/index.html', 'tags/index.html', 'about/index.html', 'projects/index.html', 'link/index.html', 'atom.xml']) {
     assert.equal(existsSync(`public/${route}`), true, route);
   }
   const posts = (await readdir('public/posts', { withFileTypes: true })).filter(item => item.isDirectory());
@@ -227,7 +227,7 @@ test('CLI rejects missing routes, wrong slugs/feed, nested forbidden clients and
   };
   const run = () => spawnSync(process.execPath, [script], { cwd: fixture, encoding: 'utf8' });
   try {
-    for (const route of ['index.html', 'archives/index.html', 'categories/index.html', 'tags/index.html', 'about/index.html', 'projects/index.html', 'friend/index.html', ...slugs.map(slug => `posts/${slug}/index.html`)]) await put(route);
+    for (const route of ['index.html', 'archives/index.html', 'categories/index.html', 'tags/index.html', 'about/index.html', 'projects/index.html', 'link/index.html', ...slugs.map(slug => `posts/${slug}/index.html`)]) await put(route);
     const feed = `<feed><id>https://jingtine.github.io/jingtine-agent-site/</id>${slugs.map(slug => `<entry><id>https://jingtine.github.io/jingtine-agent-site/posts/${slug}/</id><link href="https://jingtine.github.io/jingtine-agent-site/posts/${slug}/"/></entry>`).join('')}</feed>`;
     await put('atom.xml', feed);
     const good = run();
@@ -267,7 +267,7 @@ test('does not generate retired routes or comment clients', async () => {
 });
 
 test('renders the friend cards with safe external attributes in two groups', async () => {
-  const friend = await readFile('public/friend/index.html', 'utf8');
+  const friend = await readFile('public/link/index.html', 'utf8');
   assert.match(friend, /<h2 id="故友茶席">/);
   assert.match(friend, /<h2 id="常去之处">/);
   assert.match(friend, /<a href="https:\/\/water1i1y\.org\/" rel="noopener nofollow noreferrer" target="_blank"><\/a>/);
@@ -414,7 +414,7 @@ test('shows the copyright declaration on every post page', async () => {
 });
 
 test('keeps the copyright declaration off standalone pages', async () => {
-  for (const name of ['about', 'categories', 'friend', 'projects', 'tags']) {
+  for (const name of ['about', 'categories', 'link', 'projects', 'tags']) {
     const page = await readFile(`public/${name}/index.html`, 'utf8');
     assert.ok(!page.includes('article-copyright'), name);
   }

@@ -5,7 +5,7 @@ import { pathToFileURL } from 'node:url';
 const projectRoot = '/jingtine-agent-site/';
 const canonicalRoot = `https://jingtine.github.io${projectRoot}`;
 const approvedSlugs = ['building-agent', 'building-digital-garden', 'from-ui-to-product', 'github-pages-dev-notes', 'hello-world', 'notewhale-why-started', 'opencode-superpowers-workflow', 'product-thinking-101', 'rebuilding-the-tea-house', 'why-se-matters'];
-const routes = ['index.html', 'archives/index.html', 'categories/index.html', 'tags/index.html', 'about/index.html', 'projects/index.html', 'friend/index.html', 'atom.xml'];
+const routes = ['index.html', 'archives/index.html', 'categories/index.html', 'tags/index.html', 'about/index.html', 'projects/index.html', 'link/index.html', 'atom.xml'];
 const forbidden = /article\.html\?slug=|(?:reader|papers|wiki|assistant|status|guestbook)\.html|giscus\.app|@waline|valine|twikoo|gitalk|disqus|utterances|beaudar|data-repo-id/gi;
 
 // Sorted paths make both diagnostics and tests deterministic. Never follow symlinks.

@@ -21,7 +21,7 @@ menu:
     url: /about
     icon: false
   - name: friend
-    url: /friend
+    url: /link
     icon: false
 
 avatar: avatar.jpg

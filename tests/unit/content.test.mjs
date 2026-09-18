@@ -24,7 +24,7 @@ test('migrates exactly the ten public posts to YAML front matter', async () => {
 });
 
 test('creates retained standalone pages without comments', async () => {
-  for (const path of ['source/about/index.md', 'source/projects/index.md', 'source/friend/index.md', 'source/categories/index.md', 'source/tags/index.md']) {
+  for (const path of ['source/about/index.md', 'source/projects/index.md', 'source/link/index.md', 'source/categories/index.md', 'source/tags/index.md']) {
     const text = await readFile(path, 'utf8');
     assert.match(text, /^comments: false$/m);
   }
@@ -77,7 +77,7 @@ for (const [id, details] of Object.entries(retainedProjects)) {
 }
 
 test('lists the friend links', async () => {
-  const data = await readFile('source/friend/_data.yml', 'utf8');
+  const data = await readFile('source/link/_data.yml', 'utf8');
   assert.match(data, /- name: 江畔絮语\r?\n\s+url: https:\/\/water1i1y\.org\/\r?\n\s+desc: 一位文院学生思考的存档地\r?\n\s+image: https:\/\/water1i1y\.org\/img\/dia\.jpg/);
   assert.match(data, /- name: MellowBlog\r?\n\s+url: https:\/\/mellowwinds\.com\/\r?\n\s+desc: 纪念的螺壳里，仍存在着那年夏天的海\r?\n\s+image: https:\/\/mellowwinds\.com\/icon\/icon128\.png/);
   assert.doesNotMatch(data, /http:\/\//);
@@ -93,7 +93,7 @@ const recommendedSites = [
 ];
 
 test('lists the recommended sites for the second friend-page group', async () => {
-  const data = (await readFile('source/friend/_sites.yml', 'utf8')).replace(/\r?\n/g, '\n');
+  const data = (await readFile('source/link/_sites.yml', 'utf8')).replace(/\r?\n/g, '\n');
   assert.doesNotMatch(data, /http:\/\//);
   const entries = data.split(/^- name: /m).slice(1);
   assert.equal(entries.length, recommendedSites.length);
