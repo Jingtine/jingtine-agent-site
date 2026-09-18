@@ -95,13 +95,15 @@ const recommendedSites = [
 test('lists the recommended sites for the second friend-page group', async () => {
   const data = (await readFile('source/friend/_sites.yml', 'utf8')).replace(/\r?\n/g, '\n');
   assert.doesNotMatch(data, /http:\/\//);
-  assert.equal((data.match(/^- name:/gm) || []).length, recommendedSites.length);
-  for (const [name, url, desc, image] of recommendedSites) {
-    assert.ok(data.includes(`- name: ${name}`), `Missing site: ${name}`);
-    assert.ok(data.includes(`  url: ${url}`), `Missing URL: ${url}`);
-    assert.ok(data.includes(`  desc: ${desc}`), `Missing description: ${desc}`);
-    assert.ok(data.includes(image), `Missing image: ${image}`);
-  }
+  const entries = data.split(/^- name: /m).slice(1);
+  assert.equal(entries.length, recommendedSites.length);
+  recommendedSites.forEach(([name, url, desc, image], index) => {
+    const entry = entries[index];
+    assert.ok(entry.startsWith(`${name}\n`), `Expected entry ${index + 1} to be ${name}`);
+    assert.ok(entry.includes(`  url: ${url}`), `Missing URL for ${name}: ${url}`);
+    assert.ok(entry.includes(`  desc: ${desc}`), `Missing description for ${name}: ${desc}`);
+    assert.ok(entry.includes(image), `Missing image for ${name}: ${image}`);
+  });
 });
 
 const taxonomy = {

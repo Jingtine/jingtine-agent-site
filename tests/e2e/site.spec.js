@@ -135,10 +135,13 @@ test('friend page shows both link groups with safe external attributes', async (
   await expect(luogu.locator('.friend-desc')).toContainText('算法题的老地方，刷题与评测都在这儿。');
   await expect(luogu.locator('img')).toHaveAttribute('data-src', 'https://www.luogu.com.cn/favicon.ico');
   await expect(luogu.locator('a')).toHaveAttribute('href', 'https://www.luogu.com.cn/');
+  await expect(luogu.locator('a')).toHaveAttribute('target', '_blank');
   await expect(luogu.locator('a')).toHaveAttribute('rel', 'noopener nofollow noreferrer');
   const placeholder = page.locator('.friend-item-wrap').filter({ hasText: '小百合图书馆' });
   await expect(placeholder.locator('img')).toHaveAttribute('data-src', /\/jingtine-agent-site\/images\/link-placeholder\.png$/);
   await expect(placeholder.locator('a')).toHaveAttribute('href', 'https://lilybre.lilystudio.space/');
+  await expect(placeholder.locator('a')).toHaveAttribute('target', '_blank');
+  await expect(placeholder.locator('a')).toHaveAttribute('rel', 'noopener nofollow noreferrer');
 });
 
 test('serves the site favicon', async ({ page, request }) => {

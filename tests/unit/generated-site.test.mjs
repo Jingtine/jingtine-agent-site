@@ -268,8 +268,8 @@ test('does not generate retired routes or comment clients', async () => {
 
 test('renders the friend cards with safe external attributes in two groups', async () => {
   const friend = await readFile('public/friend/index.html', 'utf8');
-  assert.match(friend, /故友茶席/);
-  assert.match(friend, /常去之处/);
+  assert.match(friend, /<h2 id="故友茶席">/);
+  assert.match(friend, /<h2 id="常去之处">/);
   assert.match(friend, /<a href="https:\/\/water1i1y\.org\/" rel="noopener nofollow noreferrer" target="_blank"><\/a>/);
   assert.match(friend, /<img class="no-lightbox" src="https:\/\/water1i1y\.org\/img\/dia\.jpg" alt="江畔絮语">/);
   assert.match(friend, /<div class="friend-name">\s*江畔絮语\s*<\/div>/);
