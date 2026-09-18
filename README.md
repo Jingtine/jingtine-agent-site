@@ -68,7 +68,7 @@ npm run server
 
 没有合适图标的条目使用默认图标 `/jingtine-agent-site/images/link-placeholder.png`。
 
-`image` 可用外链（建议 https）；本地图片请放进 `source/images/`，并写完整站点路径 `/jingtine-agent-site/images/xxx.jpg`——友链数据原样嵌入 HTML，不会自动补前缀。改完运行 `npm test`，通过后提交推送即可。
+`image` 可用外链（必须使用 https）；本地图片请放进 `source/images/`，并写完整站点路径 `/jingtine-agent-site/images/xxx.jpg`——友链数据原样嵌入 HTML，不会自动补前缀。改完运行 `npm test`，通过后提交推送即可。
 
 ## 验证
 
