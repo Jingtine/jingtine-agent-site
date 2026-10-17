@@ -65,6 +65,3 @@ Jingtine-Agent-Site-v2.pptx
 
 # Large binary screenshots for local presentation
 assets/screenshots/
-
-# Original game binaries (too large for GitHub, 100MB file limit)
-original-game-files/*.apk
